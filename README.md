@@ -13,6 +13,9 @@ Or just open `index.html` directly in any modern browser — the file is self-co
 ## What's in it
 
 - **3,427 areas** across 18 geography types — parliamentary constituencies, towns, travel-to-work areas, integrated care boards, health boards, MSOAs, plus derived **Local Authority District** and **ITL region** aggregates and a UK national total
+- **126 Gateshead LSOAs** (Lower-layer Super Output Areas) from the ONS small-area GDHI release, with full per-LSOA time series
+- **GDHI per head** computed from ONS Mid-Year Population Estimates (NOMIS) — both **total population** and **working-age (16-64)** denominators
+- **Interactive choropleth map** of all 126 Gateshead LSOAs with five colour metrics (per-head, total GDHI, growth %, population)
 - **14 years** of data (2010-2023)
 - **17 income components** per area (compensation of employees, operating surplus, property income, taxes, social benefits, transfers, etc.)
 - **Specialty zones** from the ONS dataset — Central Activities Zone (central London), Northern Isle of Dogs, OPDC, Clyde River Region, Clyde River Gateway, Highlands & Islands, West Midlands Metro
@@ -21,18 +24,21 @@ Or just open `index.html` directly in any modern browser — the file is self-co
 
 | Tab | What it shows |
 |---|---|
-| **Gateshead** | Borough headline (£3.81bn in 2023, +54.2% since 2010), the four Westminster constituencies, share-of-borough by constituency, full income-component breakdown, all 27 Gateshead MSOAs, comparison with neighbouring boroughs |
+| **Gateshead** | Borough headline (£3.81bn / £18,988 per head in 2023), per-head trajectory vs NE and UK, the four Westminster constituencies, share-of-borough by constituency, full income-component breakdown, all 27 Gateshead MSOAs, comparison with neighbouring boroughs |
+| **LSOAs & Map** | Choropleth of 126 Gateshead LSOAs — switch between per-head GDHI (total or working-age), GDHI £m, growth %, or population. Pan/zoom, hover for detail, click to chart a single LSOA's trajectory. Distribution histogram + ranked league table. Inequality ratio (richest:poorest LSOA) shown alongside median and mean |
 | **North East** | All NE LADs / constituencies / towns / TTWAs / MSOAs ranked and tabled, switchable by geography type and sort metric |
 | **UK Context** | UK total, 12 ITL regions ranked, indexed growth trajectories, where Gateshead sits in the 350-LAD league table |
 | **Specialty Areas** | CAZ, NIOD, OPDC, Clyde, Highlands & Islands, West Midlands Metro — each compared with Gateshead and the UK total on an indexed basis |
 | **Compare** | Pick any combination of UK areas. Switch component, switch between £m / indexed-to-2010 / YoY %. Presets for Gateshead, NE big cities, NE boroughs, and UK regions |
 | **Explore** | Drill into any single area's full 17-component breakdown |
 
-## Data source
+## Data sources
 
-[ONS — GDHI estimates for other geographic areas, 2010 to 2023](https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome) (statistics in development, published 28 May 2026).
+- **GDHI**: [ONS — GDHI estimates for other geographic areas, 2010 to 2023](https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome) (statistics in development, published 28 May 2026). The companion "small-area" workbook supplies LSOA-level England/Wales, Data Zone Scotland, and SOA Northern Ireland figures.
+- **Population**: ONS Mid-Year Population Estimates via [NOMIS](https://www.nomisweb.co.uk/) — LAD-level by five-year age band (2010-2023) and small-area (LSOA) by single year of age (2011-2023). Three age bands (0-15, 16-64, 65+) are aggregated to compute total population for the per-head denominator; working-age GDHI per head uses the 16-64 band only.
+- **Boundaries**: Gateshead LSOA boundaries (2011 census geography) from [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) — super-generalised clipped polygons for fast web rendering.
 
-GDHI is the amount of money that all individuals in the household sector have available for spending or saving after direct and indirect taxes and direct benefits. The estimates apportion LSOA / Data Zone / SOA building blocks to wider geographies. All values are **£ millions in current prices** (not chained-volume measures, not per-resident).
+GDHI is the amount of money that all individuals in the household sector have available for spending or saving after direct and indirect taxes and direct benefits. The estimates apportion LSOA / Data Zone / SOA building blocks to wider geographies. All £-million values are **current prices**; per-head figures are £ of current-price GDHI per resident per year.
 
 ## Notes & caveats
 
