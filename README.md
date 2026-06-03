@@ -47,3 +47,45 @@ GDHI is the amount of money that all individuals in the household sector have av
 2. In the repo on github.com, go to **Settings → Pages**.
 3. Under "Build and deployment", set **Source: Deploy from a branch**, **Branch: main**, **Folder: / (root)**.
 4. Save. After a minute or two, your dashboard will be live at `https://<your-username>.github.io/<this-repo-name>/`.
+
+---
+
+# Companion dashboard — Gateshead Built-Up Areas (BUAs)
+
+A second self-contained dashboard, **`gateshead-bua-dashboard.html`**, profiling the **seven built-up areas inside Gateshead Metropolitan Borough** (Gateshead, Whickham, Blaydon, Birtley, Ryton, Crawcrook & Greenside, Rowlands Gill) and benchmarking them against the wider North East and all 1,395 England & Wales BUAs.
+
+Open `gateshead-bua-dashboard.html` directly, or — once GitHub Pages is on — at `https://<your-username>.github.io/<this-repo-name>/gateshead-bua-dashboard.html`.
+
+## What's in it
+
+| Section | What it shows |
+|---|---|
+| **Profile** | One scorecard per BUA — classification chips, 2021 population, house price, employment change, inactivity, ageing |
+| **Map** | The seven Gateshead BUAs plotted geographically (centroids from ONS Open Geography Portal). Filter by Combined classification / Income deprivation / Job density / Relative access / Coastal / Size / Visitor profile — marker colour updates to show the category, letter identifies the BUA |
+| **Population** | 2001 vs 2021 counts, % change vs national & NE averages, age-band shifts |
+| **House prices** | 2001 / 2011 / 2021 / 2023 median trends with national & NE reference lines, growth comparison |
+| **Employment** | 2015–2024 job change in counts and %, economic-inactivity composition |
+| **Visitor economy** | Deep-dive: per-BUA visitor ratios, hotspot-vs-spread scatter, NE peer benchmark (Newcastle / Durham / Tynemouth / Whitley Bay / Hexham / etc.), national distribution, visitor profile by classification, and interpretive callouts — with an honest caveat about the LSOA-to-BUA aggregation around the MetroCentre |
+| **Context** | Gateshead vs NE region vs class group vs England & Wales totals, distribution plots, classification breakdown |
+| **Takeaways** | Six narrative callouts on what the data says about Gateshead |
+
+## Data source
+
+ONS — *Understanding towns in England and Wales: investigating socioeconomic trends, May 2026*. Source workbook: `00combinedclassificationv5.xlsx`. BUA 2024 geography from Ordnance Survey, with centroids resolved from the [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) (`main_ONS_BUA_2024_EW_V2`).
+
+Inputs the dashboard draws on:
+
+- 2001, 2011 & 2021 Censuses (population totals + age structure)
+- Business Register and Employment Survey (BRES) 2015–2024
+- HM Land Registry 2001–2023 (median house prices)
+- English IMD 2025 / Welsh IMD 2025 (deprivation flags)
+- 2021 Rural Urban Classification (relative access)
+- O2 Motion People Counts, Nov 2024 – Nov 2025 (visitor-to-resident ratios — **research data, not official statistics**)
+
+## Notes & caveats
+
+- London is excluded (different BUA methodology).
+- Visitor-to-resident ratios are aggregated from LSOA to BUA via an ONS lookup table. Major destinations sitting in zero-resident commercial land (notably the **MetroCentre**) don't fall inside any of the 5,000+ BUA polygons — their footfall is attributed via whichever BUA the containing LSOA is assigned to, which is the most plausible explanation for Whickham's anomalously high max ratio of 16.8.
+- Net employment change across the seven Gateshead BUAs is **−900 jobs (2015→2024)**, despite the main Gateshead BUA gaining +5,000. The satellites collectively lost ~5,900.
+- House prices use median sale prices and don't control for accommodation type.
+- The map uses CARTO Light tiles and Leaflet — no API key required, but a network connection is needed for tiles. Everything else (data, charts) is embedded.
