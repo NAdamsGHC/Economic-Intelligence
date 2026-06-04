@@ -1,0 +1,93 @@
+# ============================================================
+# Gitignore — Economic Intelligence repo
+# Keeps source datasets, working files and OS junk out of git.
+# Dashboards are pure HTML with embedded data — anything else
+# is probably a working file you don't want in public history.
+# Use `git add -f <path>` to force-commit a specific ignored file.
+# ============================================================
+
+# --- OS noise ---
+Thumbs.db
+desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Source data (raw spreadsheets, datasets) ---
+# Inputs to a dashboard, not part of the published artefact.
+# JSON is intentionally NOT ignored — useful if you ever
+# externalise dashboard data into companion .json files.
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.arrow
+
+# --- Compressed archives ---
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+
+# --- Office docs / PDFs ---
+# Reports, drafts, source notes — usually working files.
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.pdf
+
+# --- Office lock / temp files ---
+~$*
+.~lock.*
+*.tmp
+
+# --- Secrets (defensive — cheap insurance) ---
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+secrets.json
+credentials.json
+credentials.txt
+
+# --- Backups ---
+*.bak
+*.backup
+*.old
+
+# --- Python (if scripts are used to prep data) ---
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+env/
+.ipynb_checkpoints/
+
+# --- R (if scripts are used) ---
+.Rhistory
+.RData
+.Rproj.user/
+
+# --- Node ---
+node_modules/
+
+# --- Logs ---
+*.log
+logs/
