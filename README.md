@@ -11,6 +11,7 @@ Each dashboard is a single self-contained HTML file — open it directly in any 
 | **Economy** | [GDHI 2010–2023](economy/gdhi.html) | Gross Disposable Household Income — UK regional accounts, LSOA choropleth, inequality | 9.1 MB |
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NECA local authorities | 92 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
+| **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | _no dashboards yet_ | | |
 
 ---
@@ -116,6 +117,41 @@ Inputs the dashboard draws on:
 - Net employment change across the seven Gateshead BUAs is **−900 jobs (2015→2024)**, despite the main Gateshead BUA gaining +5,000. The satellites collectively lost ~5,900.
 - House prices use median sale prices and don't control for accommodation type.
 - The map uses CARTO Light tiles and Leaflet — no API key required, but a network connection is needed for tiles. Everything else (data, charts) is embedded.
+
+---
+
+## People, population and community — Gateshead Deprivation (IMD 2025)
+
+[`people-population-community/indices-of-deprivation-2025.html`](people-population-community/indices-of-deprivation-2025.html)
+
+Ward, domain and neighbourhood breakdown of the **English Indices of Deprivation 2025 (IoD2025)** for Gateshead, built to **target social value commitments where need is deepest and reach is widest**.
+
+### What's in it
+
+| Tab | What it shows |
+|---|---|
+| Overview | Gateshead's national position (53rd most deprived of 296 LADs), the spread of its 126 neighbourhoods across national deprivation deciles, and headline indicators as real headcounts — 55,926 income-deprived residents, 14,697 children in income-deprived families, 22,563 employment-deprived, 12,466 older people |
+| Domains | The seven IoD domains ranked by Gateshead's **rank among all 296 English local authorities** (the only fair cross-domain comparison), a borough radar profile, and worst-decile neighbourhood counts per domain |
+| Wards | League table of all 22 wards by population-weighted IMD score, with per-ward indicator headcounts; click a ward for its domain radar and full profile |
+| Map | Leaflet choropleth of the 126 LSOAs or 22 wards, colourable by 10 measures (overall IMD, income, employment, child poverty, health, crime, older-people income deprivation, education, barriers, living environment) |
+| Priorities & targeting | Intensity-vs-reach priority matrix, three priority tiers, and targeting recommendations linking the borough's worst domains to the wards carrying the most need |
+
+### Key findings
+
+- **53rd most deprived of England's 296 local authorities** (top 18%). Worst on **Health & Disability (27th nationally)** and **Employment (36th)**; best on **Barriers to Housing & Services (273rd)** — i.e. good physical access.
+- **24 of 126 neighbourhoods (19%) in England's most-deprived 10%; 45 (36%) in the worst 20%** — yet 17 sit in the least-deprived 20%. Deprivation is concentrated, not uniform.
+- Five most deprived wards: **Felling, High Fell, Deckham, Saltwell, Bridges**. **Saltwell** carries the most income-deprived residents (4,539) and children in income-deprived families (1,629) — the gap between *intensity* and *reach*.
+- **42% of Gateshead's children** live in income-deprived families (England 37%).
+
+### Data sources
+
+- **IoD2025** — Ministry of Housing, Communities & Local Government, *File 7: All ranks, scores, deciles and population denominators* (LSOA 2021 geography). [gov.uk](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025)
+- **Geography** — ONS Open Geography Portal: LSOA (2021) → Ward (2024) → LAD (2024) best-fit lookup, plus 2024 ward and 2021 LSOA generalised boundaries (Gateshead's current 22 wards).
+
+### Notes & caveats
+
+- Ward scores are population-weighted averages of constituent LSOA scores; national domain ranks are computed against the same measure for all 296 English LADs (author's calculation from File 7). LSOA→ward assignment is best-fit, so ward edges are approximate.
+- **Comparability:** IoD2025's Income and Employment domains use **Universal Credit** data, which captures a broader population than IoD2019's legacy benefits. Absolute rates are therefore higher than 2019 and **must not be read as change over time** — the Indices are designed for *relative* ranking, which is exactly how this dashboard uses them.
 
 ---
 
