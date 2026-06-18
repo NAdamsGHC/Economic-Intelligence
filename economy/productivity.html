@@ -461,7 +461,7 @@ function ord(n){const s=['th','st','nd','rd'],v=n%100;return s[(v-20)%10]||s[v]|
 // ===== findings =====
 const findings = [
   {c:'alert',h:'Real growth has stalled',big:fPc(real10),p:`Real (inflation-adjusted) GVA over the last decade. Real output is still <b>below its ${cvmPeakYr} peak</b> of ${fM(cvmPeak)} — nominal growth of ${fPc(growth(cpTot,0,lastGva))} since 1998 is mostly price inflation.`},
-  {c:'alert',h:'A widening productivity gap',big:`£${(((ukPerJob-ghPerJob)*ghJobs)/1000).toFixed(2)}bn`,p:`Annual GVA "gap" if Gateshead matched UK output per job. The borough produces ${fJob(ghPerJob)} per job vs ${fJob(ukPerJob)} UK-wide — and ranks ${ghRankJob}/${nLAD}.`},
+  {c:'alert',h:'A widening productivity gap',big:`£${(((ukPerJob-ghPerJob)*ghJobs)/1e9).toFixed(2)}bn`,p:`Annual GVA "gap" if Gateshead matched UK output per job. The borough produces ${fJob(ghPerJob)} per job vs ${fJob(ukPerJob)} UK-wide — and ranks ${ghRankJob}/${nLAD}.`},
   {c:'warn',h:'Relative decline since the mid-2000s',big:`${Math.round(G.perHourIdx[0])}→${Math.round(ghHourIdx)}`,p:`GVA-per-hour index vs UK=100, ${HY[0]} to ${M.latestProdYear}. Gateshead has grown more slowly than the UK for two decades.`},
   {c:'warn',h:'Concentrated in public-facing services',big:pubShare.toFixed(0)+'%',p:`Public administration, education and health make up this share of GVA. The top three sectors alone are <b>${top3.toFixed(0)}%</b> of the economy.`},
   {c:'',h:'A small-firm economy',big:microPc.toFixed(0)+'%',p:`of Gateshead's ${fN(bizTotal)} businesses are micro firms (0–9 staff). Only ${fN(sz['Large (250+)'])} employ 250+, concentrating jobs in a handful of large (often public) employers.`},
