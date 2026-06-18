@@ -8,11 +8,55 @@ Each dashboard is a single self-contained HTML file — open it directly in any 
 
 | ONS topic | Dashboard | Theme | Size |
 |---|---|---|---|
+| **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
 | **Economy** | [GDHI 2010–2023](economy/gdhi.html) | Gross Disposable Household Income — UK regional accounts, LSOA choropleth, inequality | 9.1 MB |
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NECA local authorities | 92 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | _no dashboards yet_ | | |
+
+---
+
+## Economy — Productivity & GVA dashboard
+
+[`economy/productivity.html`](economy/productivity.html)
+
+Interactive dashboard of **Gateshead's productivity and gross value added**, built to answer where the borough's economy is growing, where it is at risk, what its biggest sectors are, and how it benchmarks against the North East, the UK and its statistical neighbours.
+
+### What's in it
+
+| Tab | What it shows |
+|---|---|
+| Overview | Headline scorecards (GVA £5.04bn current / £4.66bn real, £32.16 per hour, £49,663 per job, 96,600 jobs), the two-decade relative-decline chart (UK = 100), nominal-vs-real GVA, and six generated key-finding cards |
+| GVA & growth | Current prices vs chained-volume (real) GVA, real growth indexed against the NE and UK (1998 = 100), and growth by period — the "growth is mostly inflation" story (real GVA is still below its 2006 peak, +0.4% over the last decade) |
+| Sectors | Biggest sectors by GVA, real growth by sector, sector mix vs UK & NE, **sector value-per-job** (GVA ÷ BRES jobs vs England), concentration metrics (top-3 / top-5 share, HHI, public-facing share) and the UKBC business base by size and sector |
+| Productivity | GVA per hour and per filled job (£) vs NE average and UK, the UK = 100 index trajectories, jobs & total hours, and the productivity gap expressed in money (~£1.6bn/yr vs UK output-per-job) |
+| Benchmarking | ONS **economic** statistical nearest neighbours — productivity scatter (per hour vs per job), per-job ranking, and a sortable scorecard with UK and NE reference rows |
+| National & league | Gateshead's place in the national distribution of output-per-job (ranked ~315/361), fastest- and slowest-growing local authorities, and a searchable, region-filterable league table of all 360+ UK LADs |
+
+### Metrics
+
+- **GVA, current prices** — cash value added by industry (£m), includes inflation; for single-year area comparison.
+- **GVA, chained volume measures (CVM)** — real value added in 2022 money; for tracking growth over time.
+- **GVA per hour worked** and **GVA per filled job** — ONS smoothed, current-price subregional productivity.
+
+### Data sources
+
+- **GVA** — ONS, *Regional gross value added (balanced) by industry: local authorities by ITL1 region* (released 17 Apr 2025; 1998–2023). All twelve ITL1-region workbooks are used to build UK and England aggregates and the national league table.
+- **Productivity** — ONS, *Subregional productivity: labour productivity indices by local authority district* (released 19 Jun 2025; output per hour 2004–2023, per job 2002–2023), with the accompanying £-level, jobs and hours tables.
+- **Statistical neighbours** — ONS, *Clustering similar local authorities and statistical nearest neighbours in the UK, 2026* (released 18 Mar 2026) — the **economic** nearest-neighbour set.
+- **Employment / businesses** — NOMIS: *Business Register and Employment Survey (BRES)* employee jobs by SIC (2023–2024) and *UK Business Counts* (enterprises) by SIC and size band (2025).
+
+### Designed for the 2024 update
+
+GVA and productivity currently run to **2023**; ONS refreshes balanced GVA (spring) and subregional productivity (summer) annually, so 2024 is expected mid-2026. BRES already runs to **2024** and UKBC to **2025**. Every chart reads its latest year from the embedded data and the narrative text is generated from it, so a new vintage drops in by re-running the build — no design changes.
+
+### Notes & caveats
+
+- Current-price growth mixes real growth and inflation — don't read nominal GVA gains as real-terms gains.
+- Regional and national GVA aggregates are summed from local-authority building blocks; CVM money values are summed on ONS's 2022 reference-year basis.
+- Sector value-per-job divides ONS GVA by BRES employee jobs (Great Britain, excludes most self-employment) — read it as a cross-sector comparison, not a precise wage figure.
+- The UK = 100 index is relative: a falling index can coincide with rising absolute productivity if the UK grew faster.
 
 ---
 
