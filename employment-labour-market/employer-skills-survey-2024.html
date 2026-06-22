@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>North East Employer Skills &mdash; ESS 2024</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+:root{--navy:#0b2545;--teal:#13767a;--teal2:#1d9aa0;--amber:#e8a23d;--ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;--good:#1a7f37;--bad:#c0392b;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;padding:24px;}
+.wrap{max-width:1180px;margin:0 auto;}
+header{border-left:6px solid var(--teal);padding:4px 0 4px 16px;margin-bottom:8px;}
+header h1{font-size:25px;color:var(--navy);font-weight:700;}
+header p{color:var(--muted);font-size:14px;margin-top:5px;max-width:880px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px 0;}
+.chip{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:20px;background:#eef4f4;color:var(--teal);border:1px solid #d4e6e6;}
+.chip.amber{background:#fdf3e2;color:#8a6516;border-color:#f0d8a8;}
+
+/* caveat banner */
+.caveat{background:#fdf3e2;border:1px solid #f0d8a8;border-left:5px solid var(--amber);border-radius:9px;padding:12px 16px;margin:16px 0 20px;font-size:13px;color:#6b5320;}
+.caveat b{color:#8a6516;}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--line);margin-bottom:20px;position:sticky;top:0;background:var(--bg);z-index:20;padding-top:6px;}
+.tabs button{border:0;background:none;font:inherit;font-size:13.5px;font-weight:600;color:var(--muted);padding:10px 15px;border-radius:8px 8px 0 0;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;}
+.tabs button:hover{color:var(--navy);background:#fff;}
+.tabs button.active{color:var(--navy);border-bottom-color:var(--teal);background:#fff;}
+.tab{display:none;}
+.tab.active{display:block;animation:fade .25s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* kpi cards */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:4px 0 20px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;border-top:4px solid var(--teal);}
+.kpi.amber{border-top-color:var(--amber);}
+.kpi .v{font-size:27px;font-weight:700;color:var(--navy);}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:4px;}
+.kpi .s{font-size:12px;margin-top:7px;font-weight:600;color:var(--muted);}
+.rank{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;margin-top:7px;}
+.rank.top{background:#e4f3e9;color:var(--good);}
+.rank.bot{background:#fcebe9;color:var(--bad);}
+.rank.mid{background:#eef1f5;color:var(--muted);}
+
+/* panels */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:18px;}
+.panel h3{font-size:15px;color:var(--navy);margin-bottom:3px;}
+.panel .sub{font-size:12px;color:var(--muted);margin-bottom:12px;}
+.full{grid-column:1/-1;}
+.cwrap{position:relative;height:300px;}
+.cwrap.tall{height:360px;}
+
+/* finding cards */
+.findings{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.find{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:9px;padding:14px 16px;}
+.find.amber{border-left-color:var(--amber);}
+.find h4{font-size:13.5px;color:var(--navy);margin-bottom:5px;}
+.find p{font-size:12.8px;color:var(--ink);}
+.find .big{font-weight:700;color:var(--teal);}
+.find.amber .big{color:#b5791f;}
+
+/* at-a-glance strip */
+.glance{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.gl{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fafcfc;border:1px solid var(--line);border-radius:8px;padding:9px 13px;font-size:13px;}
+.gl .m{color:var(--ink);font-weight:600;}
+.gl .r{font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;white-space:nowrap;}
+
+/* matrix table */
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px;}
+table{border-collapse:collapse;width:100%;font-size:12.7px;}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+th{background:var(--navy);color:#fff;font-weight:600;cursor:pointer;position:sticky;top:0;user-select:none;font-size:12px;}
+th:first-child,td:first-child{text-align:left;}
+th:hover{background:#16335c;}
+tbody tr:hover{background:#f0f6f6;}
+tr.ne td{background:#fdf3e2;font-weight:700;color:var(--navy);}
+tr.ne:hover td{background:#fbecd2;}
+tr.eng td{background:#eef4f4;font-style:italic;color:var(--teal);}
+.legend{font-size:11.5px;color:var(--muted);margin-top:8px;}
+
+/* notes / about */
+.note{background:#fff7ea;border:1px solid #f0d8a8;border-radius:8px;padding:12px 14px;font-size:12.5px;color:#6b5320;margin-top:6px;}
+.note b{color:#8a6516;}
+.about{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;font-size:13.3px;}
+.about h3{color:var(--navy);font-size:15px;margin:16px 0 7px;}
+.about h3:first-child{margin-top:0;}
+.about p{margin-bottom:9px;}
+.about ul{margin:0 0 9px 20px;}
+.about li{margin-bottom:5px;}
+.about a{color:var(--teal);}
+footer{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);}
+footer a{color:var(--teal);text-decoration:none;}
+@media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.findings,.glance{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>North East Employer Skills &amp; Training &mdash; ESS 2024</h1>
+  <p>How North East employers compare with England&rsquo;s nine regions on vacancies, skills gaps, training, apprenticeships, future skill needs and AI &mdash; from the Department for Education&rsquo;s <b>Employer Skills Survey 2024</b>. The North East is the finest geography in this data pack, used here as the closest available proxy for Gateshead.</p>
+  <div class="chips">
+    <span class="chip">61,239 NE employers surveyed</span>
+    <span class="chip">342 NE interviews</span>
+    <span class="chip amber">Highest apprenticeship engagement in England</span>
+    <span class="chip amber">Highest upskilling need in England</span>
+    <span class="chip">Lowest AI adoption in England</span>
+  </div>
+</header>
+
+<div class="caveat">
+  <b>Read this first &mdash; geography.</b> The Employer Skills Survey <b>regional</b> data tables go down only to the nine English regions. There is <b>no Gateshead-, local-authority- or NECA-level data in this workbook</b>. Everything below describes the <b>North East region</b>. DfE does publish ESS local-authority estimates separately (see the <b>About</b> tab) &mdash; this dashboard can be extended to absorb them when needed.
+</div>
+
+<div class="tabs" id="tabs"></div>
+
+<!-- ===================== OVERVIEW ===================== -->
+<section class="tab active" data-tab="Overview">
+  <div class="kpis" id="kOverview"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h3>North East at a glance</h3>
+      <div class="sub">Where the North East ranks among England&rsquo;s 9 regions on each headline measure (1 = highest)</div>
+      <div class="glance" id="glance"></div>
+    </div>
+    <div class="panel">
+      <h3>The shape of demand</h3>
+      <div class="sub">Selected NE measures vs the England employer-weighted average (%)</div>
+      <div class="cwrap"><canvas id="cRadarish"></canvas></div>
+    </div>
+  </div>
+
+  <div class="panel full">
+    <h3>Key findings</h3>
+    <div class="sub">Generated from the ESS 2024 regional tables &mdash; North East focus</div>
+    <div class="findings" id="findings"></div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="tab" data-tab="Skills shortages &amp; gaps">
+  <div class="kpis" id="kSkills"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h3>Any skills deficiency, by region</h3>
+      <div class="sub">Employers with a skills gap <i>or</i> a skill-shortage vacancy (% of all sites) &middot; Table 139</div>
+      <div class="cwrap"><canvas id="cDeficiency"></canvas></div>
+    </div>
+    <div class="panel">
+      <h3>Vacancies: incidence &amp; hard-to-fill, by region</h3>
+      <div class="sub">% of employers with at least one vacancy / hard-to-fill vacancy &middot; Table 13</div>
+      <div class="cwrap"><canvas id="cVacancy"></canvas></div>
+    </div>
+  </div>
+
+  <div class="panel full">
+    <h3>Where the North East&rsquo;s skills gaps sit</h3>
+    <div class="sub">% of all NE employers reporting a skills gap in each occupation group &middot; Table 134. Skilled trades stands out &mdash; significantly higher than most other regions.</div>
+    <div class="cwrap tall"><canvas id="cOccGaps"></canvas></div>
+  </div>
+
+  <div class="note"><b>What &ldquo;skills gap&rdquo; vs &ldquo;skill-shortage vacancy&rdquo; mean.</b> A <b>skill-shortage vacancy (SSV)</b> is a post an employer can&rsquo;t fill because applicants lack the skills, qualifications or experience &mdash; an <i>external</i> recruitment problem. A <b>skills gap</b> is existing staff not being fully proficient &mdash; an <i>internal</i> problem. The North East&rsquo;s overall deficiency rate (16%) is mid-pack, but its <b>skilled-trades</b> gap (4% of all employers) is the highest of any region.</div>
+</section>
+
+<!-- ===================== TRAINING ===================== -->
+<section class="tab" data-tab="Training &amp; apprenticeships">
+  <div class="kpis" id="kTraining"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h3>Apprenticeship engagement, by region</h3>
+      <div class="sub">% of employers currently offering or having offered apprenticeships in the last 3 years &middot; Table 204</div>
+      <div class="cwrap"><canvas id="cApprentice"></canvas></div>
+    </div>
+    <div class="panel">
+      <h3>Training incidence, by region</h3>
+      <div class="sub">% of employers funding or arranging any training in the last 12 months &middot; Table 160</div>
+      <div class="cwrap"><canvas id="cTraining"></canvas></div>
+    </div>
+  </div>
+
+  <div class="panel full">
+    <h3>What North East employers train on</h3>
+    <div class="sub">% of NE training employers providing each type of training &middot; Table 163</div>
+    <div class="cwrap tall"><canvas id="cTrainTypes"></canvas></div>
+  </div>
+
+  <div class="note"><b>The standout positive.</b> The North East has the <b>highest apprenticeship engagement of any English region</b> &mdash; 38% currently offer or have offered apprenticeships in the last three years (England employer-weighted average ~26%), and 17% currently have apprentices on site. Yet training incidence overall (59%) is only mid-table, and 41% of NE employers funded no training at all in the last year.</div>
+</section>
+
+<!-- ===================== FUTURE / AI ===================== -->
+<section class="tab" data-tab="Future skills, AI &amp; quals">
+  <div class="kpis" id="kFuture"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h3>Expect to need new skills in the next 12 months</h3>
+      <div class="sub">% of employers anticipating a need for upskilling &middot; Table 159</div>
+      <div class="cwrap"><canvas id="cUpskill"></canvas></div>
+    </div>
+    <div class="panel">
+      <h3>What&rsquo;s driving the North East&rsquo;s future skill needs</h3>
+      <div class="sub">% of NE employers citing each reason &middot; Table 159</div>
+      <div class="cwrap"><canvas id="cDrivers"></canvas></div>
+    </div>
+    <div class="panel">
+      <h3>AI: current use &amp; planned adoption, by region</h3>
+      <div class="sub">% using AI now / planning to adopt (non-users) &middot; Tables 222 &amp; 224</div>
+      <div class="cwrap"><canvas id="cAI"></canvas></div>
+    </div>
+    <div class="panel">
+      <h3>T-Level awareness, by region</h3>
+      <div class="sub">% of employers aware of T-Levels with at least some knowledge &middot; Table 117</div>
+      <div class="cwrap"><canvas id="cTlevel"></canvas></div>
+    </div>
+  </div>
+
+  <div class="note"><b>The digital paradox.</b> The North East has both the <b>lowest current AI use (11%)</b> and the <b>lowest planned adoption among non-users (6%)</b> of any region &mdash; yet the few NE employers who <i>have</i> adopted AI are the <b>most committed to embedding it further</b> (92% plan to, the highest of any region). Set against the highest upskilling need in England (68%) and the second-highest rate of over-qualified staff (49%), the picture is of latent capacity and demand that current take-up isn&rsquo;t meeting.</div>
+</section>
+
+<!-- ===================== REGIONAL MATRIX ===================== -->
+<section class="tab" data-tab="Regional comparison">
+  <div class="panel full">
+    <h3>All nine regions, all headline measures</h3>
+    <div class="sub">Click any column header to sort. North East is highlighted; the England row is the employer-weighted average across the nine regions (this pack has no England total column).</div>
+    <div class="tablewrap"><table id="matrix"><thead></thead><tbody></tbody></table></div>
+    <div class="legend">All figures are % of the relevant employer base unless labelled. &ldquo;Employers&rdquo; is the weighted count of establishments. Cells are shaded relative to the regional range &mdash; darker = higher.</div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="tab" data-tab="About">
+  <div class="about">
+    <h3>About this dashboard</h3>
+    <p>Built from the Department for Education&rsquo;s <b>Employer Skills Survey (ESS) 2024 &mdash; England regional data tables</b>, the largest UK survey of employer demand for skills. Fieldwork by IFF Research; the 2024 wave covers tens of thousands of establishment interviews across England, weighted to the full employer population. This dashboard reads the nine English regions and foregrounds the <b>North East</b>.</p>
+
+    <h3>Why there is no Gateshead data here</h3>
+    <p>This particular workbook is the <b>regional</b> table pack &mdash; its smallest geography is the nine Government Office Regions. It contains <b>no local-authority, combined-authority or borough breakdowns</b>, so Gateshead cannot be isolated from it. The North East region (here, 61,239 employers / ~1.08m employees) is the closest available stand-in.</p>
+    <p>If you need Gateshead specifically, DfE publishes <b>ESS local-authority-district estimates</b> separately on the <a href="https://explore-education-statistics.service.gov.uk/find-statistics/employer-skills-survey" target="_blank" rel="noopener">Explore Education Statistics</a> platform (key measures such as vacancy density, skill-shortage and skills-gap density at LAD level). Those tables drop straight into this same structure when you want a Gateshead build.</p>
+
+    <h3>How to read it</h3>
+    <ul>
+      <li><b>Skill-shortage vacancy (SSV)</b> &mdash; a vacancy left hard to fill because applicants lack the right skills, qualifications or experience (an external/recruitment problem).</li>
+      <li><b>Skills gap</b> &mdash; existing staff who are not fully proficient at their job (an internal/workforce problem).</li>
+      <li><b>Employer base vs employment base</b> &mdash; most measures here are the % of <i>employers</i> reporting something. &ldquo;Staff trained&rdquo; and &ldquo;staff with skills gaps&rdquo; are counts of <i>people</i>.</li>
+      <li><b>England (weighted)</b> rows/lines are computed in-browser as the employer-count-weighted mean of the nine regions &mdash; the pack provides no England total.</li>
+    </ul>
+
+    <h3>Notes &amp; caveats</h3>
+    <ul>
+      <li>The North East has the <b>smallest unweighted sample</b> of the nine regions (342 employer interviews on the core base; fewer on module questions &mdash; e.g. ~84&ndash;93 on the apprenticeship and T-Level modules). Treat North East figures, especially module-based ones, as more uncertain, and small differences between regions as indicative rather than precise.</li>
+      <li>Percentages are rounded to whole numbers; ranks and the weighted England average are computed from those rounded values, so ties and ±1 differences should be read loosely.</li>
+      <li>ESS is a point-in-time survey of establishments (sites), not enterprises &mdash; a large multi-site employer counts once per site.</li>
+      <li>Statistical-significance flags in the source tables (95% level) informed the &ldquo;highest/lowest in England&rdquo; callouts; the underlying tables carry the full significance lettering.</li>
+    </ul>
+
+    <h3>Source</h3>
+    <p><b>Department for Education &mdash; Employer Skills Survey 2024</b>, England regional data tables (<code>Employer_Skills_Survey_2024_England_regional_data_tables.xlsx</code>), research conducted by IFF Research. Tables used: 1, 3, 4, 13, 117, 134, 139, 156, 159, 160, 163, 204, 222, 224, 225.</p>
+  </div>
+</section>
+
+<footer>
+  Source: <a href="https://www.gov.uk/government/collections/employer-skills-survey" target="_blank" rel="noopener">DfE Employer Skills Survey 2024</a> (IFF Research). North East region used as proxy &mdash; no Gateshead-level data in this pack. Part of <a href="https://github.com/NAdamsGHC/Economic-Intelligence">Economic Intelligence</a>, maintained by <a href="https://github.com/NAdamsGHC">NAdamsGHC</a>.
+</footer>
+
+</div>
+
+<script>
+/* ---------- data (ESS 2024 regional tables) ---------- */
+const REG = ["East Midlands","East of England","London","North East","North West","South East","South West","West Midlands","Yorkshire & Humber"];
+const SHORT = ["E Mids","E of Eng","London","North East","North West","South East","South West","W Mids","Yorks & H"];
+const NE = 3; // North East column index
+
+const SITES = [134891,188871,322982,61239,197020,277175,181738,162380,148525]; // T1 employer base
+
+const M = {
+  vacancy:    {label:"Have a vacancy",            data:[16,17,17,14,18,18,18,15,15], tbl:"T13", hi:"high"},
+  hardToFill: {label:"Have a hard-to-fill vacancy",data:[8,9,7,8,8,10,8,6,7],         tbl:"T13", hi:"high"},
+  ssv:        {label:"Skill-shortage vacancy",    data:[6,6,6,6,6,8,6,4,5],           tbl:"T139",hi:"high"},
+  skillsGap:  {label:"Any skills gap",            data:[12,12,11,12,11,11,12,11,14],  tbl:"T139",hi:"high"},
+  deficiency: {label:"Any skills deficiency",     data:[17,15,15,16,16,17,17,15,17],  tbl:"T139",hi:"high"},
+  training:   {label:"Funded any training",       data:[57,58,59,59,58,62,60,55,58],  tbl:"T160",hi:"high"},
+  apprentice: {label:"Offer / recently offered apprenticeships",data:[24,26,17,38,33,29,28,22,27],tbl:"T204",hi:"high"},
+  apprentNow: {label:"Currently have apprentices",data:[10,15,7,17,13,12,16,10,14],   tbl:"T204",hi:"high"},
+  upskill:    {label:"Expect to need new skills (12m)",data:[53,67,58,68,53,59,63,63,53],tbl:"T159",hi:"high"},
+  aiUse:      {label:"Use AI now",                data:[14,14,19,11,15,15,13,13,14],  tbl:"T222",hi:"high"},
+  aiPlan:     {label:"Plan to adopt AI (non-users)",data:[7,7,15,6,7,9,8,8,9],         tbl:"T224",hi:"high"},
+  overqual:   {label:"Have over-qualified staff", data:[38,33,35,49,50,43,44,39,43],  tbl:"T156",hi:"high"},
+  tlevel:     {label:"T-Level aware (some knowledge)",data:[23,14,19,26,27,18,21,26,22],tbl:"T117",hi:"high"}
+};
+
+// NE breakdowns
+const OCC = { // T134 skills gap by occupation, % of all NE employers
+  labels:["Skilled trades","Elementary","Sales & customer service","Admin / secretarial","Caring & leisure","Process & machine ops","Managers","Associate professionals","Professionals"],
+  data:[4,3,2,1,1,1,1,1,1]
+};
+const TTYPES = { // T163 types of training, % of NE training employers
+  labels:["Job-specific","Health & safety / first aid","Basic induction","Training in new technology","Management","Supervisory","More extensive induction"],
+  data:[81,71,64,47,32,30,31]
+};
+const DRIVERS = { // T159 reasons for future skill need, % of NE employers
+  labels:["New products / services","New legislation / regulation","New working practices","New technology / equipment","Competitive pressure"],
+  data:[48,48,44,44,29]
+};
+const EMP = {total:1075343, trained:646504, trainedPct:60, gapStaff:48321, gapStaffPct:4}; // T3 NE employment base
+
+/* ---------- helpers ---------- */
+const wmean = arr => Math.round(arr.reduce((s,v,i)=>s+v*SITES[i],0)/SITES.reduce((a,b)=>a+b,0));
+function rankOf(key){ // 1 = highest value
+  const d=M[key].data, v=d[NE];
+  const sorted=[...d].sort((a,b)=>b-a);
+  return sorted.indexOf(v)+1;
+}
+function rankClass(r){return r<=3?"top":r>=7?"bot":"mid";}
+const TEAL="#13767a", AMBER="#e8a23d", TEAL_SOFT="#9fc6c8", GREY="#cfd8e0";
+Chart.defaults.font.family="'Segoe UI',Arial,sans-serif";
+Chart.defaults.font.size=12;
+Chart.defaults.color="#5d6b7a";
+Chart.defaults.plugins.legend.labels.boxWidth=12;
+
+function neColors(n){return Array.from({length:n},(_,i)=>i===NE?AMBER:TEAL_SOFT);}
+
+// sorted horizontal bar comparing regions, NE highlighted, England ref line
+function regionBar(id,key){
+  const m=M[key];
+  const idx=[...m.data.keys()].sort((a,b)=>m.data[b]-m.data[a]);
+  const labels=idx.map(i=>SHORT[i]);
+  const vals=idx.map(i=>m.data[i]);
+  const cols=idx.map(i=>i===NE?AMBER:TEAL_SOFT);
+  const eng=wmean(m.data);
+  new Chart(document.getElementById(id),{
+    type:"bar",
+    data:{labels,datasets:[{data:vals,backgroundColor:cols,borderRadius:4,barPercentage:.82}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:c=>c.parsed.x+"%"+(idx[c.dataIndex]===NE?"  (North East)":"")}},
+        subtitle:{display:true,text:"England weighted avg: "+eng+"%",position:"bottom",align:"end",color:"#9aa7b4",font:{size:11}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>v+"%"},grid:{color:"#eef2f6"}},y:{grid:{display:false}}},
+      // england reference line
+      }
+  });
+}
+
+// generic horizontal bar (NE breakdowns), single colour, first bar amber
+function simpleBar(id,obj,colorFirst){
+  new Chart(document.getElementById(id),{
+    type:"bar",
+    data:{labels:obj.labels,datasets:[{data:obj.data,
+      backgroundColor:obj.data.map((_,i)=>colorFirst&&i===0?AMBER:TEAL),borderRadius:4,barPercentage:.8}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+"%"}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>v+"%"},grid:{color:"#eef2f6"}},y:{grid:{display:false}}}}
+  });
+}
+
+/* ---------- tabs ---------- */
+const sections=[...document.querySelectorAll(".tab")];
+const nav=document.getElementById("tabs");
+let built={};
+sections.forEach((s,i)=>{
+  const b=document.createElement("button");
+  b.innerHTML=s.dataset.tab;
+  if(i===0)b.classList.add("active");
+  b.onclick=()=>{
+    document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));
+    sections.forEach(x=>x.classList.remove("active"));
+    b.classList.add("active"); s.classList.add("active");
+    buildTab(s.dataset.tab);
+  };
+  nav.appendChild(b);
+});
+
+/* ---------- KPI builder ---------- */
+function kpi(v,l,s,rankKey,amber){
+  let r="";
+  if(rankKey){const rk=rankOf(rankKey);r=`<span class="rank ${rankClass(rk)}">${rk===1?"Highest in England":rk===9?"Lowest in England":"Rank "+rk+" of 9"}</span>`;}
+  else if(s){r=`<div class="s">${s}</div>`;}
+  return `<div class="kpi ${amber?'amber':''}"><div class="v">${v}</div><div class="l">${l}</div>${r}</div>`;
+}
+
+function buildTab(name){
+  if(built[name])return; built[name]=true;
+  if(name==="Overview"){
+    document.getElementById("kOverview").innerHTML=
+      kpi("61,239","NE employers (sites)","Employment ~1.08m")+
+      kpi("14%","Have a vacancy",null,"vacancy")+
+      kpi("16%","Skills gap or shortage","Mid-pack of 9")+
+      kpi("59%","Funded any training","England avg ~58%")+
+      kpi("38%","Offer apprenticeships",null,"apprentice",true)+
+      kpi("11%","Use AI now",null,"aiUse");
+    // glance strip
+    const keys=["apprentice","upskill","overqual","ssv","training","vacancy","aiUse","aiPlan"];
+    document.getElementById("glance").innerHTML=keys.map(k=>{
+      const rk=rankOf(k),cls=rankClass(rk);
+      const tag=rk===1?"#1 of 9":rk===9?"9th of 9":rk+" of 9";
+      const bg=cls==="top"?"background:#e4f3e9;color:#1a7f37":cls==="bot"?"background:#fcebe9;color:#c0392b":"background:#eef1f5;color:#5d6b7a";
+      return `<div class="gl"><span class="m">${M[k].label} <b>${M[k].data[NE]}%</b></span><span class="r" style="${bg}">${tag}</span></div>`;
+    }).join("");
+    // radarish (NE vs England weighted)
+    const rk=["apprentice","upskill","training","deficiency","aiUse","overqual"];
+    new Chart(document.getElementById("cRadarish"),{
+      type:"bar",
+      data:{labels:rk.map(k=>M[k].label),
+        datasets:[
+          {label:"North East",data:rk.map(k=>M[k].data[NE]),backgroundColor:AMBER,borderRadius:4},
+          {label:"England (weighted)",data:rk.map(k=>wmean(M[k].data)),backgroundColor:GREY,borderRadius:4}
+        ]},
+      options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:"top"},tooltip:{callbacks:{label:c=>c.dataset.label+": "+c.parsed.x+"%"}}},
+        scales:{x:{beginAtZero:true,ticks:{callback:v=>v+"%"},grid:{color:"#eef2f6"}},y:{grid:{display:false}}}}
+    });
+    // findings
+    const F=[
+      ["amber","Apprenticeships are the North East&rsquo;s strength","<span class='big'>38%</span> of NE employers offer or have recently offered apprenticeships &mdash; the <b>highest of any English region</b> (England ~26%). 17% currently have apprentices on site, joint-highest."],
+      ["amber","Biggest appetite for upskilling in England","<span class='big'>68%</span> expect to need new skills in the next 12 months &mdash; <b>top of all nine regions</b> &mdash; driven by new products/services and regulation (both 48%)."],
+      ["","Softest labour demand&hellip;","Just <span class='big'>14%</span> of NE employers have a vacancy &mdash; the <b>lowest incidence in England</b> &mdash; and the fewest vacancies relative to staff."],
+      ["","&hellip;but a real skilled-trades pinch","Overall skills deficiency (16%) is mid-pack, yet the NE&rsquo;s <span class='big'>skilled-trades skills gap (4%)</span> is the highest of any region (statistically significant)."],
+      ["","Lowest digital take-up","Only <span class='big'>11%</span> use AI (England&rsquo;s lowest) and 6% plan to adopt &mdash; though NE&rsquo;s AI adopters are the most committed to embedding it further (92%)."],
+      ["","Talent under-used","<span class='big'>49%</span> of NE employers report staff who are over-qualified for their role &mdash; the second-highest rate in England &mdash; a sign of under-utilised skills."]
+    ];
+    document.getElementById("findings").innerHTML=F.map(f=>`<div class="find ${f[0]}"><h4>${f[1]}</h4><p>${f[2]}</p></div>`).join("");
+  }
+  if(name==="Skills shortages & gaps"){
+    document.getElementById("kSkills").innerHTML=
+      kpi("16%","Skills gap or shortage","England avg ~16%")+
+      kpi("6%","Skill-shortage vacancy",null,"ssv")+
+      kpi("12%","Have a skills gap",null,"skillsGap")+
+      kpi("8%","Hard-to-fill vacancy",null,"hardToFill")+
+      kpi("48,321","Staff not fully proficient","4% of NE workforce")+
+      kpi("4%","Skilled-trades gap","Highest in England",null,true);
+    regionBar("cDeficiency","deficiency");
+    // vacancy + hardToFill grouped
+    const idx=[...M.vacancy.data.keys()].sort((a,b)=>M.vacancy.data[b]-M.vacancy.data[a]);
+    new Chart(document.getElementById("cVacancy"),{
+      type:"bar",
+      data:{labels:idx.map(i=>SHORT[i]),datasets:[
+        {label:"Any vacancy",data:idx.map(i=>M.vacancy.data[i]),backgroundColor:idx.map(i=>i===NE?AMBER:TEAL_SOFT),borderRadius:3},
+        {label:"Hard-to-fill",data:idx.map(i=>M.hardToFill.data[i]),backgroundColor:idx.map(i=>i===NE?"#b5791f":TEAL),borderRadius:3}
+      ]},
+      options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:"top"},tooltip:{callbacks:{label:c=>c.dataset.label+": "+c.parsed.x+"%"}}},
+        scales:{x:{beginAtZero:true,ticks:{callback:v=>v+"%"},grid:{color:"#eef2f6"}},y:{grid:{display:false}}}}
+    });
+    simpleBar("cOccGaps",OCC,true);
+  }
+  if(name==="Training & apprenticeships"){
+    document.getElementById("kTraining").innerHTML=
+      kpi("59%","Funded any training",null,"training")+
+      kpi("38%","Offer apprenticeships",null,"apprentice",true)+
+      kpi("17%","Currently have apprentices",null,"apprentNow",true)+
+      kpi("646,504","Staff trained (12m)","60% of NE workforce")+
+      kpi("27%","Both on- &amp; off-job training","Quality of training mix")+
+      kpi("41%","Funded no training","England avg ~42%");
+    regionBar("cApprentice","apprentice");
+    regionBar("cTraining","training");
+    simpleBar("cTrainTypes",TTYPES,false);
+  }
+  if(name==="Future skills, AI & quals"){
+    document.getElementById("kFuture").innerHTML=
+      kpi("68%","Expect to need new skills",null,"upskill",true)+
+      kpi("11%","Use AI now",null,"aiUse")+
+      kpi("6%","Plan to adopt AI",null,"aiPlan")+
+      kpi("92%","AI users embedding further","Highest in England",null,true)+
+      kpi("49%","Have over-qualified staff",null,"overqual")+
+      kpi("26%","T-Level aware (some knowledge)",null,"tlevel");
+    regionBar("cUpskill","upskill");
+    simpleBar("cDrivers",DRIVERS,true);
+    // AI use vs plan
+    const idx=[...M.aiUse.data.keys()].sort((a,b)=>M.aiUse.data[b]-M.aiUse.data[a]);
+    new Chart(document.getElementById("cAI"),{
+      type:"bar",
+      data:{labels:idx.map(i=>SHORT[i]),datasets:[
+        {label:"Use AI now",data:idx.map(i=>M.aiUse.data[i]),backgroundColor:idx.map(i=>i===NE?AMBER:TEAL_SOFT),borderRadius:3},
+        {label:"Plan to adopt (non-users)",data:idx.map(i=>M.aiPlan.data[i]),backgroundColor:idx.map(i=>i===NE?"#b5791f":TEAL),borderRadius:3}
+      ]},
+      options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:"top"},tooltip:{callbacks:{label:c=>c.dataset.label+": "+c.parsed.x+"%"}}},
+        scales:{x:{beginAtZero:true,ticks:{callback:v=>v+"%"},grid:{color:"#eef2f6"}},y:{grid:{display:false}}}}
+    });
+    regionBar("cTlevel","tlevel");
+  }
+  if(name==="Regional comparison"){ buildMatrix(); }
+}
+
+/* ---------- matrix ---------- */
+const COLS=[
+  {key:"region",label:"Region",pct:false},
+  {key:"sites",label:"Employers",pct:false},
+  {key:"vacancy",label:"Vacancy",pct:true},
+  {key:"hardToFill",label:"Hard-to-fill",pct:true},
+  {key:"skillsGap",label:"Skills gap",pct:true},
+  {key:"deficiency",label:"Any deficiency",pct:true},
+  {key:"training",label:"Training",pct:true},
+  {key:"apprentice",label:"Apprenticeships",pct:true},
+  {key:"aiUse",label:"AI use",pct:true},
+  {key:"upskill",label:"Upskilling need",pct:true},
+  {key:"overqual",label:"Over-qualified",pct:true}
+];
+let sortKey="region",sortDir=1;
+function buildMatrix(){
+  const rows=REG.map((r,i)=>{
+    const o={region:r,sites:SITES[i],_i:i};
+    COLS.forEach(c=>{if(c.pct)o[c.key]=M[c.key].data[i];});
+    return o;
+  });
+  const head=document.querySelector("#matrix thead");
+  head.innerHTML="<tr>"+COLS.map(c=>`<th data-k="${c.key}">${c.label}</th>`).join("")+"</tr>";
+  head.querySelectorAll("th").forEach(th=>th.onclick=()=>{
+    const k=th.dataset.k; if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=(k==="region")?1:-1;}
+    renderMatrix(rows);
+  });
+  renderMatrix(rows);
+}
+function shade(key,val){
+  if(key==="region"||key==="sites")return "";
+  const d=M[key].data,mn=Math.min(...d),mx=Math.max(...d);
+  const t=(val-mn)/((mx-mn)||1);
+  const a=0.06+t*0.34; // 0.06 - 0.40 alpha teal
+  return `background:rgba(19,118,122,${a.toFixed(2)})`;
+}
+function renderMatrix(rows){
+  const eng={region:"England (weighted)",sites:SITES.reduce((a,b)=>a+b,0),_eng:true};
+  COLS.forEach(c=>{if(c.pct)eng[c.key]=wmean(M[c.key].data);});
+  const sorted=[...rows].sort((a,b)=>{
+    if(sortKey==="region")return a.region.localeCompare(b.region)*sortDir;
+    return (a[sortKey]-b[sortKey])*sortDir;
+  });
+  const body=document.querySelector("#matrix tbody");
+  const fmt=(c,o)=>c.key==="region"?o.region:c.key==="sites"?o.sites.toLocaleString():o[c.key]+"%";
+  let html=sorted.map(o=>`<tr class="${o._i===NE?'ne':''}">`+COLS.map(c=>{
+    const st=o._i===NE?"":shade(c.key,o[c.key]);
+    return `<td style="${st}">${fmt(c,o)}</td>`;
+  }).join("")+"</tr>").join("");
+  html+=`<tr class="eng">`+COLS.map(c=>`<td>${fmt(c,eng)}</td>`).join("")+"</tr>";
+  body.innerHTML=html;
+}
+
+/* init */
+buildTab("Overview");
+</script>
+</body>
+</html>

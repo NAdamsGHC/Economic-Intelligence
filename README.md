@@ -13,7 +13,7 @@ Each dashboard is a single self-contained HTML file — open it directly in any 
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NECA local authorities | 92 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
-| **Employment and labour market** | _no dashboards yet_ | | |
+| **Employment and labour market** | [Employer Skills Survey 2024](employment-labour-market/employer-skills-survey-2024.html) | DfE ESS 2024 — North East vs England's 9 regions: vacancies, skills gaps, training, apprenticeships, future skill needs, AI | 36 KB |
 
 ---
 
@@ -196,6 +196,43 @@ Ward, domain and neighbourhood breakdown of the **English Indices of Deprivation
 
 - Ward scores are population-weighted averages of constituent LSOA scores; national domain ranks are computed against the same measure for all 296 English LADs (author's calculation from File 7). LSOA→ward assignment is best-fit, so ward edges are approximate.
 - **Comparability:** IoD2025's Income and Employment domains use **Universal Credit** data, which captures a broader population than IoD2019's legacy benefits. Absolute rates are therefore higher than 2019 and **must not be read as change over time** — the Indices are designed for *relative* ranking, which is exactly how this dashboard uses them.
+
+---
+
+## Employment and labour market — Employer Skills Survey 2024
+
+[`employment-labour-market/employer-skills-survey-2024.html`](employment-labour-market/employer-skills-survey-2024.html)
+
+Dashboard of the **Department for Education Employer Skills Survey (ESS) 2024**, benchmarking the **North East** against England's nine regions on the demand for, and supply of, workforce skills.
+
+### What's in it
+
+| Tab | What it shows |
+|---|---|
+| Overview | North East headline scorecards (61,239 employers, 14% with a vacancy, 16% with a skills deficiency, 59% training, 38% apprenticeships, 11% using AI), a rank-of-9 "at a glance" strip, NE-vs-England-weighted comparison, and six generated key-finding cards |
+| Skills shortages & gaps | Any-deficiency and vacancy incidence by region, the North East's skills gaps broken down by occupation (skilled trades stands out), and the SSV-vs-skills-gap explainer |
+| Training & apprenticeships | Apprenticeship engagement by region (NE is **#1 in England**), training incidence by region, and the mix of training types NE employers provide |
+| Future skills, AI & quals | Anticipated upskilling need by region (NE **#1 at 68%**), the drivers behind it, AI current-use vs planned-adoption (NE lowest), and T-Level awareness |
+| Regional comparison | Sortable, colour-shaded matrix of all nine regions across eleven measures, with the North East highlighted and an employer-weighted England reference row |
+| About | Methodology, the **no-Gateshead-data** caveat, definitions, base sizes and caveats |
+
+### Key findings (North East)
+
+- **Highest apprenticeship engagement in England** — 38% currently offer or have offered apprenticeships in the last three years (England ~26%); 17% currently have apprentices on site (joint-highest).
+- **Highest anticipated need for upskilling in England** — 68% expect to need new skills in the next 12 months, driven by new products/services and regulation (both 48%).
+- **Lowest AI adoption in England** — 11% use AI now and just 6% of non-users plan to adopt; yet NE's AI adopters are the **most committed to embedding it further** (92%, England's highest).
+- **Softest labour demand but a skilled-trades pinch** — lowest vacancy incidence (14%), but the **highest skilled-trades skills gap** of any region (4%, statistically significant).
+- **High talent under-utilisation** — 49% report over-qualified staff, the second-highest rate in England.
+
+### Data source
+
+**Department for Education — Employer Skills Survey 2024**, England regional data tables (`Employer_Skills_Survey_2024_England_regional_data_tables.xlsx`), fieldwork by IFF Research. Tables used: 1, 3, 4, 13, 117, 134, 139, 156, 159, 160, 163, 204, 222, 224, 225. All figures are embedded in the HTML; the England reference figures are computed in-browser as the employer-count-weighted mean of the nine regions.
+
+### Notes & caveats
+
+- **Geography.** This is the **regional** table pack — its finest geography is the nine Government Office Regions. It carries **no Gateshead, local-authority or combined-authority breakdown**; the North East region is used as the closest proxy. DfE publishes ESS **local-authority-district** estimates separately on [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/find-statistics/employer-skills-survey), which can be slotted into the same dashboard structure for a true Gateshead build.
+- The North East has the **smallest unweighted sample** of the nine regions (342 core interviews; ~84–93 on the apprenticeship and T-Level modules), so its figures — especially module-based ones — carry wider margins of error. Small inter-regional differences are indicative, not definitive.
+- ESS surveys **establishments (sites)**, not enterprises; percentages are rounded to whole numbers before ranks and the weighted England average are computed.
 
 ---
 
