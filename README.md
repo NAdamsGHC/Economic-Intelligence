@@ -10,6 +10,7 @@ Each dashboard is a single self-contained HTML file — open it directly in any 
 |---|---|---|---|
 | **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
 | **Economy** | [GDHI 2010–2023](economy/gdhi.html) | Gross Disposable Household Income — UK regional accounts, LSOA choropleth, inequality | 9.1 MB |
+| **Business, industry and trade** | [Gateshead Business Map](business-industry-trade/gateshead-business-map.html) ⭐ | Every Companies House business in the borough + IMD 2025, sector churn, FSA premises, BRES jobs, UKRI innovation; intervention/investment scores by LSOA & ward | ~2.9 MB |
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NECA local authorities | 92 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
@@ -119,6 +120,35 @@ Baseline dashboard of the **DCMS Creative Industries** across the seven local au
 ### Data source
 
 **DCMS Creative Industries Sector Economic Estimates** — business counts, employment and GVA by SIC subclasses defined as "creative industries" by DCMS. The underlying business and employment counts come from the ONS Inter-Departmental Business Register (IDBR) and Business Register and Employment Survey (BRES).
+
+---
+
+## Business, industry and trade — Gateshead Business Map
+
+[`business-industry-trade/gateshead-business-map.html`](business-industry-trade/gateshead-business-map.html)
+
+An interactive map of **every company registered in Gateshead borough** (~11,200 from the Companies House Free Company Data Product), geocoded and filtered to LAD **E08000037**, then enriched to help an economic-development team spot where to **intervene** and where to **invest**.
+
+### What's in it
+
+| Tab | What it shows |
+|---|---|
+| Overview | Borough headline — companies, active vs. in-distress, FSA premises, BRES jobs, residents — with an auto-written narrative and top intervention/investment wards |
+| Map | Leaflet map: company points (clustered, coloured by SIC section), FSA food premises, and an LSOA choropleth switchable between **intervention score**, **investment score**, **IMD 2025 decile** and **business density**; ward overlay; filters by sector / status / mass-registration address |
+| Sectors & saturation | Bubble chart of businesses-per-1,000-residents (supply) vs. ONS industry death rate (churn) — the "too many that keep failing" lens — plus a full SIC-section table |
+| Intervention & investment | Ward league tables for each composite score, with signal composition notes |
+| Innovation | UKRI Gateway to Research projects (incl. Innovate UK) associated with Gateshead, by funder |
+| About & caveats | Sources, vintages, scoring weights and the honest caveats (registered office ≠ trading address, national-by-industry churn, etc.) |
+
+### Scoring (editable in [`build/gateshead-business-map/config.py`](build/gateshead-business-map/config.py))
+
+- **Intervention** = deprivation (IMD 2025) + live business distress (CH liquidation/administration) + sector fragility (local mix × ONS death rates). *Vacancy omitted until council NNDR data is wired.*
+- **Investment** = growth sectors + dynamism (recent incorporations) + agglomeration (business density) + underserved demand (residents per consumer premise). *Per-LSOA innovation omitted until geocoded.*
+- Each signal is normalised 0–1 across the 126 LSOAs; weights re-normalise when a signal is unavailable. LSOA scores roll up to ward, population-weighted.
+
+### Data sources (all free + **no API key**)
+
+Companies House Free Company Data Product · postcodes.io (geocoding) · IMD 2025 / IoD2025 (MHCLG) · ONS Business Demography 2024 (industry birth/death rates) · Nomis BRES (employment) · Food Standards Agency · UKRI Gateway to Research · ONS Open Geography Portal (LSOA 2021 + Ward 2024 boundaries).
 
 ---
 
@@ -233,6 +263,16 @@ Dashboard of the **Department for Education Employer Skills Survey (ESS) 2024**,
 - **Geography.** This is the **regional** table pack — its finest geography is the nine Government Office Regions. It carries **no Gateshead, local-authority or combined-authority breakdown**; the North East region is used as the closest proxy. DfE publishes ESS **local-authority-district** estimates separately on [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/find-statistics/employer-skills-survey), which can be slotted into the same dashboard structure for a true Gateshead build.
 - The North East has the **smallest unweighted sample** of the nine regions (342 core interviews; ~84–93 on the apprenticeship and T-Level modules), so its figures — especially module-based ones — carry wider margins of error. Small inter-regional differences are indicative, not definitive.
 - ESS surveys **establishments (sites)**, not enterprises; percentages are rounded to whole numbers before ranks and the weighted England average are computed.
+
+---
+
+## Build pipeline & monthly refresh
+
+Unlike the other (hand-built) dashboards, the Business Map is **generated** by a Python pipeline and refreshed automatically.
+
+- Tooling lives in [`build/gateshead-business-map/`](build/gateshead-business-map/): `config.py` (study area, vintages, weights, source URLs), `fetch_ch.py` (downloads the CH bulk file to a gitignored cache), `pipeline.py` (fetch → filter to Gateshead → geocode → enrich → score → `.cache/dashboard_data.json`), `render.py` (bakes the self-contained HTML), and `build.py` (orchestrator).
+- **Run locally:** `pip install -r requirements.txt` then `python build.py` (use `python build.py --render` to re-render from cached data).
+- **Monthly:** the [`.github/workflows/refresh-business-map.yml`](.github/workflows/refresh-business-map.yml) GitHub Action runs on the 6th of each month (after the CH snapshot publishes), rebuilds, and commits the regenerated HTML. **No secrets** are required — every source is keyless.
 
 ---
 

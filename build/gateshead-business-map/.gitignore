@@ -1,0 +1,5 @@
+# Downloaded source data + intermediates — never committed (regenerated each run)
+.cache/
+*.zip
+*.csv
+__pycache__/

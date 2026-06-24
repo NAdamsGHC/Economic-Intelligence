@@ -1,0 +1,50 @@
+name: Refresh Gateshead Business Map
+
+# Rebuilds business-industry-trade/gateshead-business-map.html from live open data
+# and commits the result. No secrets required — every source is free and keyless.
+
+on:
+  schedule:
+    # 06:00 UTC on the 6th of each month — after the Companies House monthly
+    # snapshot publishes (within 5 working days of month-end). If the newest
+    # snapshot isn't up yet, the pipeline falls back to the previous month.
+    - cron: "0 6 6 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-business-map
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r build/gateshead-business-map/requirements.txt
+
+      - name: Build dashboard
+        run: python build/gateshead-business-map/build.py
+
+      - name: Commit regenerated dashboard
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add business-industry-trade/gateshead-business-map.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-refresh Gateshead Business Map ($(date -u +%Y-%m-%d))"
+            git push
+          fi
