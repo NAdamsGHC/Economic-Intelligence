@@ -812,7 +812,7 @@ details.calc p{margin:6px 0}
       </tr></thead><tbody></tbody></table>
       <p class="note">Weights in the overall index: Income 22.5%, Employment 22.5%, Education 13.5%, Health 13.5%, Crime 9.3%, Barriers 9.3%, Living Environment 9.3%.</p>
       <details class="calc"><summary>How rank, percentile and severity are derived</summary>
-        <p><b>Rank</b> = MHCLG's official <i>rank of average score</i> local-authority summary (File 10): Gateshead's population-weighted mean LSOA score on each domain, ranked against all 296 English local authorities. This dashboard reproduces the measure from the LSOA file — including MHCLG's convention of weighting the Employment domain by working-age (18–66) population rather than total population.</p>
+        <p><b>Rank</b> = MHCLG's official <i>rank of average score</i> local-authority summary (<a href="https://assets.publishing.service.gov.uk/media/6917412ebc34c86ce4e6e7fc/File_10_-_IoD2025_Local_Authority_District_Summaries__lower-tier__v2.xlsx" target="_blank" rel="noopener">File 10</a>): Gateshead's population-weighted mean LSOA score on each domain, ranked against all 296 English local authorities. This dashboard reproduces the measure from the LSOA file — including MHCLG's convention of weighting the Employment domain by working-age (18–66) population rather than total population.</p>
         <p><b>Percentile</b> = rank ÷ 296 × 100 (lower = more deprived).</p>
         <p><b>Severity</b> bands are this dashboard's own labels, cut at fixed percentiles: <b>Acute</b> = worst 15% of councils, <b>High</b> = 15–33%, <b>Moderate</b> = 33–60%, <b>Relative strength</b> = above the 60th percentile.</p>
       </details>
@@ -912,8 +912,8 @@ details.calc p{margin:6px 0}
   <div class="panel">
     <h3>Data</h3>
     <ul class="small">
-      <li><b>English Indices of Deprivation 2025 (IoD2025)</b>, Ministry of Housing, Communities &amp; Local Government — <i>File 7: All ranks, scores, deciles and population denominators</i> (LSOA level, 2021 boundaries; population denominators are mid-2022). <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025" target="_blank" rel="noopener">gov.uk source</a></li>
-      <li><b>File 10: Local Authority District Summaries (lower-tier), v2</b> — the official LAD summary measures. The borough and domain ranks shown here equal its <i>rank of average score</i> measure, reproduced independently from File 7 (verified 2026-07). The Overview tab's income and employment headcounts quote its official <i>Income scale</i> and <i>Employment scale</i> directly.</li>
+      <li><b>English Indices of Deprivation 2025 (IoD2025)</b>, Ministry of Housing, Communities &amp; Local Government — <i>File 7: All ranks, scores, deciles and population denominators</i> (LSOA level, 2021 boundaries; population denominators are mid-2022). <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025" target="_blank" rel="noopener">Release page</a> · <a href="https://assets.publishing.service.gov.uk/media/691ded56d140bbbaa59a2a7d/File_7_IoD2025_All_Ranks_Scores_Deciles_Population_Denominators.csv" target="_blank" rel="noopener">File 7 (CSV)</a></li>
+      <li><b>File 10: Local Authority District Summaries (lower-tier), v2</b> — the official LAD summary measures. <a href="https://assets.publishing.service.gov.uk/media/6917412ebc34c86ce4e6e7fc/File_10_-_IoD2025_Local_Authority_District_Summaries__lower-tier__v2.xlsx" target="_blank" rel="noopener">File 10 (XLSX)</a>. The borough and domain ranks shown here equal its <i>rank of average score</i> measure, reproduced independently from File 7 (verified 2026-07). The Overview tab's income and employment headcounts quote its official <i>Income scale</i> and <i>Employment scale</i> directly.</li>
       <li><b>Geography:</b> ONS Open Geography Portal — <i>LSOA (2021) → Electoral Ward (2024) → LAD (2024) best-fit lookup</i>, plus 2024 ward and 2021 LSOA generalised boundaries. Wards are Gateshead's current 22 electoral wards.</li>
     </ul>
   </div>
@@ -5582,6 +5582,11 @@ const ord = n => { const s=["th","st","nd","rd"], v=n%100; return n + (s[(v-20)%
 const $ = s => document.querySelector(s);
 const el = (t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 const M = DATA.meta, B = DATA.borough;
+/* exact MHCLG source files quoted in this dashboard */
+const SRC_F7='https://assets.publishing.service.gov.uk/media/691ded56d140bbbaa59a2a7d/File_7_IoD2025_All_Ranks_Scores_Deciles_Population_Denominators.csv';
+const SRC_F10='https://assets.publishing.service.gov.uk/media/6917412ebc34c86ce4e6e7fc/File_10_-_IoD2025_Local_Authority_District_Summaries__lower-tier__v2.xlsx';
+const F7L=`<a href="${SRC_F7}" target="_blank" rel="noopener">File 7</a>`;
+const F10L=`<a href="${SRC_F10}" target="_blank" rel="noopener">File 10</a>`;
 const WARDS = DATA.wards.slice().sort((a,b)=>a.imd_ward_rank-b.imd_ward_rank);
 const LSOAS = DATA.lsoas;
 
@@ -5660,16 +5665,18 @@ $('#about-gen').textContent = `Generated ${M.generated} from IoD2025 File 7. Eng
   ];
   const iw=$('#ov-ind');
   ind.forEach(([k,ppl,rate,eng,den])=>{
+    const official = ppl===B.inc_scale||ppl===B.emp_scale;
     const c=el('div','card');
     c.append(el('div','k',k),el('div','v',fmt(ppl)),
-      el('div','s bad',`${fmt1(rate)}% ${den} · England ${fmt1(eng)}%`));
+      el('div','s bad',`${fmt1(rate)}% ${den} · England ${fmt1(eng)}%`),
+      el('div','s',official?`Quoted: MHCLG official count (${F10L})`:`Our estimate from published ${F7L} rates`));
     iw.append(c);
   });
 
   // transparency: exact arithmetic behind the four KPI cards
   const dec1cut = M.n_lsoa_england/10;
   $('#calc-ov').innerHTML =
-    `<p><b>National IMD rank</b> — MHCLG's official <i>rank of average score</i> summary measure (File 10): each council's population-weighted mean LSOA IMD score, ranked across all ${M.n_lad_england} English local authorities. This dashboard reproduces it independently from the LSOA file:</p>`+
+    `<p><b>National IMD rank</b> — quoted from MHCLG's official <i>rank of average score</i> summary measure (${F10L}): each council's population-weighted mean LSOA IMD score, ranked across all ${M.n_lad_england} English local authorities. This dashboard reproduces it independently from the LSOA file (${F7L}):</p>`+
     `<div class="fml">score ${fmt1(M.imd_lad_score)} = Σ(LSOA IMD score × LSOA population) ÷ ${fmt(B.pop_total)}, across all ${M.n_lsoa_gateshead} Gateshead LSOAs<br>`+
     `"top ${M.imd_lad_pctile}%" = rank ${M.imd_lad_rank} ÷ ${M.n_lad_england} councils</div>`+
     `<p><b>Neighbourhood counts</b> — an LSOA is in the "worst 10%" when its national IMD decile is 1, i.e. it ranks in the most deprived tenth (~${fmt(Math.floor(dec1cut))}) of England's ${fmt(M.n_lsoa_england)} LSOAs (deciles are assigned nationally by MHCLG, not by this dashboard):</p>`+
@@ -5680,9 +5687,9 @@ $('#about-gen').textContent = `Generated ${M.generated} from IoD2025 File 7. Eng
   // official File 10 counts quoted where they exist; File 7 column headings quoted verbatim elsewhere
   $('#calc-ind').innerHTML =
     `<p><b>Quoted directly from IoD2025</b> — all quoted column headings are MHCLG's own. The income and employment counts are the official “scale” measures (the number of people deprived), and all four rates are the official average scores, which for these measures are themselves rates (the proportion of the denominator that is deprived — Technical Report §3.5):</p>`+
-    `<div class="fml"><b>Income-deprived residents</b>: ${fmt(B.inc_scale)} = official “Income scale” (File 10) · ${fmt1(B.inc_rate)}% = official “Income - Average score” · England ${fmt1(B.eng_inc_rate)}% = Σ numerator ÷ Σ denominator over all ${fmt(M.n_lsoa_england)} LSOAs (our calculation from File 7)</div>`+
-    `<div class="fml"><b>Employment-deprived</b>: ${fmt(B.emp_scale)} = official “Employment scale” (File 10) · ${fmt1(B.emp_rate)}% = official “Employment - Average score” · England ${fmt1(B.eng_emp_rate)}% as above</div>`+
-    `<p><b>Our estimates where no official count exists</b> — MHCLG publishes no IDACI or IDAOPI scale, so these multiply the published rate back by its published denominator, both quoted from File 7:</p>`+
+    `<div class="fml"><b>Income-deprived residents</b>: ${fmt(B.inc_scale)} = official “Income scale” (${F10L}) · ${fmt1(B.inc_rate)}% = official “Income - Average score” · England ${fmt1(B.eng_inc_rate)}% = Σ numerator ÷ Σ denominator over all ${fmt(M.n_lsoa_england)} LSOAs (our calculation from ${F7L})</div>`+
+    `<div class="fml"><b>Employment-deprived</b>: ${fmt(B.emp_scale)} = official “Employment scale” (${F10L}) · ${fmt1(B.emp_rate)}% = official “Employment - Average score” · England ${fmt1(B.eng_emp_rate)}% as above</div>`+
+    `<p><b>Our estimates where no official count exists</b> — MHCLG publishes no IDACI or IDAOPI scale, so these multiply the published rate back by its published denominator, both quoted from ${F7L}:</p>`+
     `<div class="fml"><b>Children in income-deprived families</b>: ${fmt(B.idaci_people)} = Σ( “Income Deprivation Affecting Children Index (IDACI) Score (rate)” × “Dependent Children aged 0-15: mid 2022” ) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(B.idaci_rate)}% = official “IDACI - Average score”</div>`+
     `<div class="fml"><b>Older people income-deprived</b>: ${fmt(B.idaopi_people)} = Σ( “Income Deprivation Affecting Older People (IDAOPI) Score (rate)” × “Older population aged 60 and over: mid 2022” ) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(B.idaopi_rate)}% = official “IDAOPI - Average score”</div>`+
     `<p><b>Reconciliation:</b> the same multiply-back method applied to income and employment gives ${fmt(B.inc_people)} (+${fmt1(100*(B.inc_people-B.inc_scale)/B.inc_scale)}%) and ${fmt(B.emp_people)} (+${fmt1(100*(B.emp_people-B.emp_scale)/B.emp_scale)}%) against the official scales — the gap comes from rounding in the published LSOA scores (and shrinkage in the employment score), while the scales are built from unrounded numerators. Ward-level counts on the Wards and Priorities tabs use the multiply-back method (no official ward figures exist), so ward sums reconcile to ${fmt(B.inc_people)} and ${fmt(B.emp_people)}, not to the official scales. All counts describe people in families receiving income-related benefits — estimates for targeting, not statutory poverty statistics.</p>`;
