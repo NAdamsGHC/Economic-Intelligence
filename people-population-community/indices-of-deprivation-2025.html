@@ -795,7 +795,7 @@ details.calc p{margin:6px 0}
   <div class="panel">
     <h3>Headline indicators — real people behind the scores</h3>
     <div class="cards" id="ov-ind"></div>
-    <p class="note">Counts derived by applying each IoD2025 rate to the matched mid-2022 population denominator published alongside it in File 7, summed across Gateshead's 126 LSOAs. England comparators are population-weighted means across all 33,755 LSOAs.</p>
+    <p class="note">Income and employment counts are MHCLG's official "scale" measures, quoted from File 10. Children and older-people counts are estimates: each published rate applied to its matched mid-2022 denominator, summed across Gateshead's 126 LSOAs (no official count is published). England comparators are population-weighted means across all 33,755 LSOAs.</p>
     <details class="calc"><summary>Exact calculation behind each headcount</summary><div id="calc-ind"></div></details>
   </div>
 </section>
@@ -913,7 +913,7 @@ details.calc p{margin:6px 0}
     <h3>Data</h3>
     <ul class="small">
       <li><b>English Indices of Deprivation 2025 (IoD2025)</b>, Ministry of Housing, Communities &amp; Local Government — <i>File 7: All ranks, scores, deciles and population denominators</i> (LSOA level, 2021 boundaries; population denominators are mid-2022). <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025" target="_blank" rel="noopener">gov.uk source</a></li>
-      <li><b>File 10: Local Authority District Summaries (lower-tier), v2</b> — the official LAD summary measures. The borough and domain ranks shown here equal its <i>rank of average score</i> measure, reproduced independently from File 7 (verified 2026-07).</li>
+      <li><b>File 10: Local Authority District Summaries (lower-tier), v2</b> — the official LAD summary measures. The borough and domain ranks shown here equal its <i>rank of average score</i> measure, reproduced independently from File 7 (verified 2026-07). The Overview tab's income and employment headcounts quote its official <i>Income scale</i> and <i>Employment scale</i> directly.</li>
       <li><b>Geography:</b> ONS Open Geography Portal — <i>LSOA (2021) → Electoral Ward (2024) → LAD (2024) best-fit lookup</i>, plus 2024 ward and 2021 LSOA generalised boundaries. Wards are Gateshead's current 22 electoral wards.</li>
     </ul>
   </div>
@@ -924,7 +924,7 @@ details.calc p{margin:6px 0}
     <ul class="small">
       <li><b>Ward IMD scores</b> = Σ(LSOA score × LSOA mid-2022 total population) ÷ ward population, over each ward's constituent LSOAs. Ward ranks 1–22 order the wards by that score — a borough-internal ranking, not a national statistic.</li>
       <li><b>Borough and domain LAD ranks</b> = the same population-weighted mean computed for every English local authority from the LSOA file, then ranked (1 = most deprived of 296). This equals MHCLG's official <i>rank of average score</i> summary in File 10 for the overall IMD and all seven domains (the Employment domain is weighted by working-age 18–66 population, following MHCLG's method).</li>
-      <li><b>Indicator headcounts</b> = Σ(LSOA rate × matched denominator): income → total population; employment → working-age 18–66; children in poverty (IDACI) → children 0–15; older income-deprived (IDAOPI) → residents 60+. Modelled estimates for targeting, not claimant counts.</li>
+      <li><b>Indicator headcounts</b>: the borough income and employment counts are quoted from File 10's official <i>scale</i> measures. Everything else (IDACI, IDAOPI, and all ward-level counts) = Σ(LSOA rate × matched mid-2022 denominator): income → total population; employment → working-age 18–66; children in poverty (IDACI) → children 0–15; older income-deprived (IDAOPI) → residents 60+. These reproduce the official scales within ~0.1–0.3% (the published scores are rounded and shrinkage-adjusted); all are modelled estimates for targeting, not claimant counts.</li>
       <li><b>England comparator rates</b> = national Σ(rate × denominator) ÷ national Σ(denominator) across all 33,755 LSOAs.</li>
       <li>LSOAs are assigned to wards on a <b>best-fit</b> basis (ONS lookup), so ward boundaries are approximate at the edges.</li>
     </ul>
@@ -993,6 +993,7 @@ const DATA = {
                     "emp_rate":  18.4,
                     "pop_total":  197922,
                     "inc_people":  55926,
+                    "inc_scale":  55875,
                     "eng_idaci_rate":  36.7,
                     "eng_inc_rate":  23.2,
                     "idaopi_rate":  23.4,
@@ -1000,6 +1001,7 @@ const DATA = {
                     "idaci_rate":  42.2,
                     "pop_wa":  122859,
                     "emp_people":  22563,
+                    "emp_scale":  22497.5,
                     "eng_idaopi_rate":  16.9,
                     "idaopi_people":  12466,
                     "inc_rate":  28.3,
@@ -5651,9 +5653,9 @@ $('#about-gen').textContent = `Generated ${M.generated} from IoD2025 File 7. Eng
 
   // indicator cards
   const ind=[
-    ['Income-deprived residents',B.inc_people,B.inc_rate,B.eng_inc_rate,'of all residents'],
+    ['Income-deprived residents',B.inc_scale,B.inc_rate,B.eng_inc_rate,'of all residents'],
     ['Children in income-deprived families',B.idaci_people,B.idaci_rate,B.eng_idaci_rate,'of under-16s'],
-    ['Employment-deprived',B.emp_people,B.emp_rate,B.eng_emp_rate,'of working-age 18–66'],
+    ['Employment-deprived',B.emp_scale,B.emp_rate,B.eng_emp_rate,'of working-age 18–66'],
     ['Older people income-deprived',B.idaopi_people,B.idaopi_rate,B.eng_idaopi_rate,'of 60+']
   ];
   const iw=$('#ov-ind');
@@ -5675,18 +5677,15 @@ $('#about-gen').textContent = `Generated ${M.generated} from IoD2025 File 7. Eng
     `worst 20% (deciles 1–2): ${M.n_lsoa_dec12} = ${fmt1(100*M.n_lsoa_dec12/M.n_lsoa_gateshead)}% · least-deprived 20% (deciles 9–10): ${M.n_lsoa_dec910} = ${fmt1(100*M.n_lsoa_dec910/M.n_lsoa_gateshead)}%</div>`;
 
   // transparency: exact arithmetic behind each headcount card
-  // File 7 column headings quoted verbatim so every input is traceable to the source
-  const indCalc=[
-    ['Income-deprived residents','Income Score (rate)','Total population: mid 2022',B.inc_people,B.pop_total,B.inc_rate,B.eng_inc_rate],
-    ['Children in income-deprived families','Income Deprivation Affecting Children Index (IDACI) Score (rate)','Dependent Children aged 0-15: mid 2022',B.idaci_people,B.pop_child,B.idaci_rate,B.eng_idaci_rate],
-    ['Employment-deprived','Employment Score (rate)','Working age population 18-66 (for use with Employment Deprivation Domain): mid 2022',B.emp_people,B.pop_wa,B.emp_rate,B.eng_emp_rate],
-    ['Older people income-deprived','Income Deprivation Affecting Older People (IDAOPI) Score (rate)','Older population aged 60 and over: mid 2022',B.idaopi_people,B.pop_older,B.idaopi_rate,B.eng_idaopi_rate]
-  ];
+  // official File 10 counts quoted where they exist; File 7 column headings quoted verbatim elsewhere
   $('#calc-ind').innerHTML =
-    `<p>Both inputs of each multiplication are quoted directly from File 7 — the quoted column headings below are MHCLG's own. For these four measures the published <i>score</i> is itself the rate: the proportion of the denominator that is deprived. Only the multiplication back to people, and the sum across LSOAs, are this dashboard's calculation.</p>`+
-    indCalc.map(([k,rate,den,ppl,dpop,r,er])=>
-      `<div class="fml"><b>${k}</b>: ${fmt(ppl)} = Σ( “${rate}” × “${den}” ) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(r)}% = ${fmt(ppl)} ÷ ${fmt(dpop)} · England ${fmt1(er)}% = same sum over all ${fmt(M.n_lsoa_england)} LSOAs</div>`).join('')+
-    `<p>The headcounts are therefore modelled estimates for targeting — not counts of benefit claimants.</p>`;
+    `<p><b>Quoted directly from IoD2025</b> — all quoted column headings are MHCLG's own. The income and employment counts are the official “scale” measures (the number of people deprived), and all four rates are the official average scores, which for these measures are themselves rates (the proportion of the denominator that is deprived — Technical Report §3.5):</p>`+
+    `<div class="fml"><b>Income-deprived residents</b>: ${fmt(B.inc_scale)} = official “Income scale” (File 10) · ${fmt1(B.inc_rate)}% = official “Income - Average score” · England ${fmt1(B.eng_inc_rate)}% = Σ numerator ÷ Σ denominator over all ${fmt(M.n_lsoa_england)} LSOAs (our calculation from File 7)</div>`+
+    `<div class="fml"><b>Employment-deprived</b>: ${fmt(B.emp_scale)} = official “Employment scale” (File 10) · ${fmt1(B.emp_rate)}% = official “Employment - Average score” · England ${fmt1(B.eng_emp_rate)}% as above</div>`+
+    `<p><b>Our estimates where no official count exists</b> — MHCLG publishes no IDACI or IDAOPI scale, so these multiply the published rate back by its published denominator, both quoted from File 7:</p>`+
+    `<div class="fml"><b>Children in income-deprived families</b>: ${fmt(B.idaci_people)} = Σ( “Income Deprivation Affecting Children Index (IDACI) Score (rate)” × “Dependent Children aged 0-15: mid 2022” ) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(B.idaci_rate)}% = official “IDACI - Average score”</div>`+
+    `<div class="fml"><b>Older people income-deprived</b>: ${fmt(B.idaopi_people)} = Σ( “Income Deprivation Affecting Older People (IDAOPI) Score (rate)” × “Older population aged 60 and over: mid 2022” ) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(B.idaopi_rate)}% = official “IDAOPI - Average score”</div>`+
+    `<p><b>Reconciliation:</b> the same multiply-back method applied to income and employment gives ${fmt(B.inc_people)} (+${fmt1(100*(B.inc_people-B.inc_scale)/B.inc_scale)}%) and ${fmt(B.emp_people)} (+${fmt1(100*(B.emp_people-B.emp_scale)/B.emp_scale)}%) against the official scales — the gap comes from rounding in the published LSOA scores (and shrinkage in the employment score), while the scales are built from unrounded numerators. Ward-level counts on the Wards and Priorities tabs use the multiply-back method (no official ward figures exist), so ward sums reconcile to ${fmt(B.inc_people)} and ${fmt(B.emp_people)}, not to the official scales. All counts describe people in families receiving income-related benefits — estimates for targeting, not statutory poverty statistics.</p>`;
 })();
 
 /* =================== DOMAINS =================== */

@@ -204,7 +204,7 @@ Ward, domain and neighbourhood breakdown of the **English Indices of Deprivation
 
 | Tab | What it shows |
 |---|---|
-| Overview | Gateshead's national position (53rd most deprived of 296 LADs), the spread of its 126 neighbourhoods across national deprivation deciles, and headline indicators as real headcounts — 55,926 income-deprived residents, 14,697 children in income-deprived families, 22,563 employment-deprived, 12,466 older people |
+| Overview | Gateshead's national position (53rd most deprived of 296 LADs), the spread of its 126 neighbourhoods across national deprivation deciles, and headline indicators as real headcounts — 55,875 income-deprived residents, 14,697 children in income-deprived families, 22,498 employment-deprived, 12,466 older people |
 | Domains | The seven IoD domains ranked by Gateshead's **rank among all 296 English local authorities** (the only fair cross-domain comparison), a borough radar profile, and worst-decile neighbourhood counts per domain |
 | Wards | League table of all 22 wards by population-weighted IMD score, with per-ward indicator headcounts; click a ward for its domain radar and full profile |
 | Map | Leaflet choropleth of the 126 LSOAs or 22 wards, colourable by 10 measures (overall IMD, income, employment, child poverty, health, crime, older-people income deprivation, education, barriers, living environment) |
