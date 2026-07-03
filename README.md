@@ -276,6 +276,16 @@ Unlike the other (hand-built) dashboards, the Business Map is **generated** by a
 
 ---
 
+## Briefings
+
+Written briefings from the Economic Intelligence team sit in [`briefs/`](briefs/), filed by date (`YYYY-MM-topic`), each as a branded Word document with a Markdown companion.
+
+| Date | Briefing | What it covers |
+|---|---|---|
+| July 2026 | [Policy update](briefs/2026-07-policy-update/) | New and changed government and regional policy affecting Gateshead's economy — UC restructure, Northern Growth Strategy £120m/MDZ, devolution architecture, IS-8 definitions, sector notes |
+
+---
+
 ## Adding a new dashboard
 
 1. Identify which **ONS topic** the dashboard's primary data sits under (see [ons.gov.uk](https://www.ons.gov.uk/)).
