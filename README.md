@@ -212,7 +212,7 @@ Ward, domain and neighbourhood breakdown of the **English Indices of Deprivation
 
 ### Key findings
 
-- **53rd most deprived of England's 296 local authorities** (top 18%). Worst on **Health & Disability (27th nationally)** and **Employment (36th)**; best on **Barriers to Housing & Services (273rd)** — i.e. good physical access.
+- **53rd most deprived of England's 296 local authorities** (top 18%). Worst on **Health & Disability (27th nationally)** and **Employment (35th)**; best on **Barriers to Housing & Services (273rd)** — i.e. good physical access.
 - **24 of 126 neighbourhoods (19%) in England's most-deprived 10%; 45 (36%) in the worst 20%** — yet 17 sit in the least-deprived 20%. Deprivation is concentrated, not uniform.
 - Five most deprived wards: **Felling, High Fell, Deckham, Saltwell, Bridges**. **Saltwell** carries the most income-deprived residents (4,539) and children in income-deprived families (1,629) — the gap between *intensity* and *reach*.
 - **42% of Gateshead's children** live in income-deprived families (England 37%).

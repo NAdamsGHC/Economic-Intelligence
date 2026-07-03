@@ -745,6 +745,11 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
 .pri-rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 .pri-rec .card .v{font-size:17px}
 .hl{background:#fff6cf;padding:0 3px;border-radius:3px}
+details.calc{margin-top:10px;font-size:12.5px;color:var(--muted)}
+details.calc summary{cursor:pointer;font-weight:600;color:var(--accent2);user-select:none}
+details.calc summary:hover{text-decoration:underline}
+details.calc .fml{font-family:Consolas,ui-monospace,monospace;font-size:11.5px;background:#f3f7f9;border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin:7px 0;overflow-x:auto;line-height:1.6}
+details.calc p{margin:6px 0}
 </style>
 </head>
 <body>
@@ -775,6 +780,7 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
   <h2 class="sec">Where Gateshead stands</h2>
   <p class="lede" id="ov-lede"></p>
   <div class="cards" id="ov-cards"></div>
+  <details class="calc"><summary>How these four figures are calculated</summary><div id="calc-ov"></div></details>
   <div class="grid-3-2">
     <div class="panel">
       <div class="flex-between"><h3>Neighbourhoods by national deprivation decile</h3><span class="note">126 LSOAs · decile 1 = most deprived 10% in England</span></div>
@@ -789,7 +795,8 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
   <div class="panel">
     <h3>Headline indicators — real people behind the scores</h3>
     <div class="cards" id="ov-ind"></div>
-    <p class="note">Counts derived by applying each IoD2025 rate to the matched mid-2022 population denominator and summing across Gateshead's 126 LSOAs. England comparators are population-weighted means across all 33,755 LSOAs.</p>
+    <p class="note">Counts derived by applying each IoD2025 rate to the matched mid-2022 population denominator published alongside it in File 7, summed across Gateshead's 126 LSOAs. England comparators are population-weighted means across all 33,755 LSOAs.</p>
+    <details class="calc"><summary>Exact calculation behind each headcount</summary><div id="calc-ind"></div></details>
   </div>
 </section>
 
@@ -804,6 +811,11 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
         <th>Domain</th><th class="num">National rank<br>(of 296)</th><th class="num">National<br>percentile</th><th>Severity</th>
       </tr></thead><tbody></tbody></table>
       <p class="note">Weights in the overall index: Income 22.5%, Employment 22.5%, Education 13.5%, Health 13.5%, Crime 9.3%, Barriers 9.3%, Living Environment 9.3%.</p>
+      <details class="calc"><summary>How rank, percentile and severity are derived</summary>
+        <p><b>Rank</b> = MHCLG's official <i>rank of average score</i> local-authority summary (File 10): Gateshead's population-weighted mean LSOA score on each domain, ranked against all 296 English local authorities. This dashboard reproduces the measure from the LSOA file — including MHCLG's convention of weighting the Employment domain by working-age (18–66) population rather than total population.</p>
+        <p><b>Percentile</b> = rank ÷ 296 × 100 (lower = more deprived).</p>
+        <p><b>Severity</b> bands are this dashboard's own labels, cut at fixed percentiles: <b>Acute</b> = worst 15% of councils, <b>High</b> = 15–33%, <b>Moderate</b> = 33–60%, <b>Relative strength</b> = above the 60th percentile.</p>
+      </details>
     </div>
     <div class="panel">
       <h3>Borough domain profile</h3>
@@ -833,6 +845,7 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
       <th class="num" data-sort="idaci_people">Children in<br>poverty</th>
       <th class="num" data-sort="pop_total">Population</th>
     </tr></thead><tbody></tbody></table>
+    <details class="calc"><summary>How the ward figures are calculated (worked example)</summary><div id="calc-ward"></div></details>
   </div>
   <div class="grid2">
     <div class="panel">
@@ -879,7 +892,7 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
     <div class="panel">
       <h3>Priority tiers</h3>
       <div id="pri-tiers"></div>
-      <p class="note">Tiers split the 22 wards into thirds by IMD score. Tier&nbsp;1 wards also contain the borough's only neighbourhoods in the national worst 10%.</p>
+      <p class="note" id="pri-tier-note"></p>
     </div>
   </div>
   <div class="panel">
@@ -899,17 +912,21 @@ footer code{background:#e8eef1;padding:1px 5px;border-radius:4px}
   <div class="panel">
     <h3>Data</h3>
     <ul class="small">
-      <li><b>English Indices of Deprivation 2025 (IoD2025)</b>, Ministry of Housing, Communities &amp; Local Government — <i>File 7: All ranks, scores, deciles and population denominators</i> (LSOA level, 2021 boundaries). <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025" target="_blank" rel="noopener">gov.uk source</a></li>
+      <li><b>English Indices of Deprivation 2025 (IoD2025)</b>, Ministry of Housing, Communities &amp; Local Government — <i>File 7: All ranks, scores, deciles and population denominators</i> (LSOA level, 2021 boundaries; population denominators are mid-2022). <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025" target="_blank" rel="noopener">gov.uk source</a></li>
+      <li><b>File 10: Local Authority District Summaries (lower-tier), v2</b> — the official LAD summary measures. The borough and domain ranks shown here equal its <i>rank of average score</i> measure, reproduced independently from File 7 (verified 2026-07).</li>
       <li><b>Geography:</b> ONS Open Geography Portal — <i>LSOA (2021) → Electoral Ward (2024) → LAD (2024) best-fit lookup</i>, plus 2024 ward and 2021 LSOA generalised boundaries. Wards are Gateshead's current 22 electoral wards.</li>
     </ul>
   </div>
   <div class="panel">
     <h3>How figures are derived</h3>
+    <p class="small" style="margin-top:0"><b>Taken directly from the published IoD2025 LSOA file (no calculation):</b> every LSOA's score, national rank and national decile on the overall IMD and each domain, plus the population denominators. Deciles are assigned nationally by MHCLG — decile 1 means that LSOA is in the most deprived 10% of England's 33,755 LSOAs.</p>
+    <p class="small"><b>Author's calculations from those published values</b> (each is shown with its arithmetic in the "how calculated" expanders on the relevant tab):</p>
     <ul class="small">
-      <li><b>Ward scores</b> are population-weighted averages of their constituent LSOA scores (weighted by mid-2022 total population).</li>
-      <li><b>National domain ranks</b> rank Gateshead's population-weighted domain score against the same measure computed for all 296 English local authorities (author's calculation from File 7).</li>
-      <li><b>Indicator headcounts</b> apply each rate to its matched denominator: income → total population; employment → working-age 18–66; children in poverty (IDACI) → children 0–15; older income-deprived (IDAOPI) → residents 60+.</li>
-      <li>LSOAs are assigned to wards on a <b>best-fit</b> basis, so ward boundaries are approximate at the edges.</li>
+      <li><b>Ward IMD scores</b> = Σ(LSOA score × LSOA mid-2022 total population) ÷ ward population, over each ward's constituent LSOAs. Ward ranks 1–22 order the wards by that score — a borough-internal ranking, not a national statistic.</li>
+      <li><b>Borough and domain LAD ranks</b> = the same population-weighted mean computed for every English local authority from the LSOA file, then ranked (1 = most deprived of 296). This equals MHCLG's official <i>rank of average score</i> summary in File 10 for the overall IMD and all seven domains (the Employment domain is weighted by working-age 18–66 population, following MHCLG's method).</li>
+      <li><b>Indicator headcounts</b> = Σ(LSOA rate × matched denominator): income → total population; employment → working-age 18–66; children in poverty (IDACI) → children 0–15; older income-deprived (IDAOPI) → residents 60+. Modelled estimates for targeting, not claimant counts.</li>
+      <li><b>England comparator rates</b> = national Σ(rate × denominator) ÷ national Σ(denominator) across all 33,755 LSOAs.</li>
+      <li>LSOAs are assigned to wards on a <b>best-fit</b> basis (ONS lookup), so ward boundaries are approximate at the edges.</li>
     </ul>
   </div>
   <div class="panel">
@@ -960,7 +977,7 @@ const DATA = {
                  "imd_lad_score":  28.128,
                  "n_lsoa_dec12":  45,
                  "lad_cd":  "E08000037",
-                 "generated":  "2026-06-18",
+                 "generated":  "2026-07-03",
                  "lad":  "Gateshead",
                  "source":  "English Indices of Deprivation 2025 (IoD2025), File 7",
                  "imd_lad_pctile":  17.9,
@@ -1000,10 +1017,10 @@ const DATA = {
                     {
                         "key":  "employment",
                         "label":  "Employment",
-                        "gh_score":  0.1823,
-                        "lad_rank":  36,
+                        "gh_score":  0.1837,
+                        "lad_rank":  35,
                         "lad_total":  296,
-                        "lad_pctile":  12.2
+                        "lad_pctile":  11.8
                     },
                     {
                         "key":  "education",
@@ -1193,7 +1210,7 @@ const DATA = {
                       "imd_score":  34.608,
                       "imd_rank_avg":  8523,
                       "most_deprived_lsoa_rank":  1459,
-                      "n_dec1":  null,
+                      "n_dec1":  1,
                       "n_dec12":  4,
                       "inc_people":  3192,
                       "emp_people":  1289,
@@ -1247,7 +1264,7 @@ const DATA = {
                       "imd_score":  31.879,
                       "imd_rank_avg":  10422,
                       "most_deprived_lsoa_rank":  2066,
-                      "n_dec1":  null,
+                      "n_dec1":  1,
                       "n_dec12":  3,
                       "inc_people":  2603,
                       "emp_people":  1089,
@@ -1301,7 +1318,7 @@ const DATA = {
                       "imd_score":  28.326,
                       "imd_rank_avg":  11666,
                       "most_deprived_lsoa_rank":  2251,
-                      "n_dec1":  null,
+                      "n_dec1":  1,
                       "n_dec12":  2,
                       "inc_people":  3170,
                       "emp_people":  1236,
@@ -1355,8 +1372,8 @@ const DATA = {
                       "imd_score":  26.48,
                       "imd_rank_avg":  13183,
                       "most_deprived_lsoa_rank":  1641,
-                      "n_dec1":  null,
-                      "n_dec12":  null,
+                      "n_dec1":  1,
+                      "n_dec12":  1,
                       "inc_people":  2664,
                       "emp_people":  1039,
                       "idaci_people":  710,
@@ -5646,6 +5663,28 @@ $('#about-gen').textContent = `Generated ${M.generated} from IoD2025 File 7. Eng
       el('div','s bad',`${fmt1(rate)}% ${den} · England ${fmt1(eng)}%`));
     iw.append(c);
   });
+
+  // transparency: exact arithmetic behind the four KPI cards
+  const dec1cut = M.n_lsoa_england/10;
+  $('#calc-ov').innerHTML =
+    `<p><b>National IMD rank</b> — MHCLG's official <i>rank of average score</i> summary measure (File 10): each council's population-weighted mean LSOA IMD score, ranked across all ${M.n_lad_england} English local authorities. This dashboard reproduces it independently from the LSOA file:</p>`+
+    `<div class="fml">score ${fmt1(M.imd_lad_score)} = Σ(LSOA IMD score × LSOA population) ÷ ${fmt(B.pop_total)}, across all ${M.n_lsoa_gateshead} Gateshead LSOAs<br>`+
+    `"top ${M.imd_lad_pctile}%" = rank ${M.imd_lad_rank} ÷ ${M.n_lad_england} councils</div>`+
+    `<p><b>Neighbourhood counts</b> — an LSOA is in the "worst 10%" when its national IMD decile is 1, i.e. it ranks in the most deprived tenth (~${fmt(Math.floor(dec1cut))}) of England's ${fmt(M.n_lsoa_england)} LSOAs (deciles are assigned nationally by MHCLG, not by this dashboard):</p>`+
+    `<div class="fml">worst 10%: ${M.n_lsoa_dec1} of ${M.n_lsoa_gateshead} LSOAs = ${fmt1(100*M.n_lsoa_dec1/M.n_lsoa_gateshead)}% (a borough matching England would have ~10%)<br>`+
+    `worst 20% (deciles 1–2): ${M.n_lsoa_dec12} = ${fmt1(100*M.n_lsoa_dec12/M.n_lsoa_gateshead)}% · least-deprived 20% (deciles 9–10): ${M.n_lsoa_dec910} = ${fmt1(100*M.n_lsoa_dec910/M.n_lsoa_gateshead)}%</div>`;
+
+  // transparency: exact arithmetic behind each headcount card
+  const indCalc=[
+    ['Income-deprived residents','Income-domain rate','total population',B.inc_people,B.pop_total,B.inc_rate,B.eng_inc_rate],
+    ['Children in income-deprived families','IDACI rate','children aged 0–15',B.idaci_people,B.pop_child,B.idaci_rate,B.eng_idaci_rate],
+    ['Employment-deprived','Employment-domain rate','working-age adults 18–66',B.emp_people,B.pop_wa,B.emp_rate,B.eng_emp_rate],
+    ['Older people income-deprived','IDAOPI rate','residents aged 60+',B.idaopi_people,B.pop_older,B.idaopi_rate,B.eng_idaopi_rate]
+  ];
+  $('#calc-ind').innerHTML =
+    indCalc.map(([k,rate,den,ppl,dpop,r,er])=>
+      `<div class="fml"><b>${k}</b>: ${fmt(ppl)} = Σ(LSOA ${rate} × LSOA ${den}) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(r)}% = ${fmt(ppl)} ÷ ${fmt(dpop)} · England ${fmt1(er)}% = the same sum over all ${fmt(M.n_lsoa_england)} English LSOAs</div>`).join('')+
+    `<p>Rates and denominators are both published in the IoD2025 LSOA file; the headcounts multiply them back together, so they are modelled estimates for targeting — not counts of benefit claimants.</p>`;
 })();
 
 /* =================== DOMAINS =================== */
@@ -5749,6 +5788,17 @@ function indCard(k,ppl,rate,den){
   WARDS.forEach(w=>{const o=el('option');o.value=w.ward_cd;o.textContent=`${w.imd_ward_rank}. ${w.ward_nm}`;sel.append(o);});
   sel.onchange=()=>selectWard(sel.value);
   renderWardTable(); selectWard(WARDS[0].ward_cd);
+
+  // transparency: worked example of the ward aggregation, generated from the data
+  const wx=WARDS[0], wls=wardLsoas[wx.ward_cd].slice().sort((a,b)=>a.imd_rank-b.imd_rank);
+  $('#calc-ward').innerHTML =
+    `<p><b>IMD score</b> is the population-weighted mean of the ward's LSOA scores — the average deprivation score experienced by a resident of that ward. Worked example for <b>${wx.ward_nm}</b> (${wx.n_lsoa} LSOAs):</p>`+
+    `<div class="fml">${wls.map(l=>`${l.lsoa_cd} (${l.lsoa_nm}): score ${fmt1(l.imd_score)} × pop ${fmt(l.pop_total)}`).join('<br>')}<br>`+
+    `→ (${wls.map(l=>`${fmt1(l.imd_score)}×${fmt(l.pop_total)}`).join(' + ')}) ÷ ${fmt(wx.pop_total)} = <b>${fmt1(wx.imd_score)}</b></div>`+
+    `<p><b>#</b> orders the 22 wards by that score (1 = most deprived — a borough-internal ranking, not a national statistic). `+
+    `<b>LSOAs in worst 10%</b> counts the ward's neighbourhoods whose national IMD decile is 1. `+
+    `The <b>people columns</b> apply each LSOA's IoD2025 rate to its matched denominator (income → all residents; employment → 18–66; children → under-16s) and sum across the ward. `+
+    `Wards are built from LSOAs on a best-fit basis, so counts at ward edges are approximate.</p>`;
 })();
 
 /* =================== MAP =================== */
@@ -5846,6 +5896,12 @@ function indCard(k,ppl,rate,den){
       `<div class="small">`+list.map(w=>`${w.ward_nm}`).join(' · ')+`</div>`);
     tw.append(block);
   });
+  const t1dec1=WARDS.filter(w=>w.imd_ward_rank<=7).reduce((s,w)=>s+w.n_dec1,0);
+  const t2dec1w=WARDS.filter(w=>w.imd_ward_rank>7&&w.imd_ward_rank<=14&&w.n_dec1>0);
+  $('#pri-tier-note').innerHTML =
+    `Tiers split the 22 wards into near-thirds by ward IMD rank (1–7, 8–14, 15–22). `+
+    `Tier&nbsp;1 wards hold <b>${t1dec1}</b> of the borough's ${M.n_lsoa_dec1} worst-10% neighbourhoods; `+
+    `the other ${M.n_lsoa_dec1-t1dec1} sit in Tier&nbsp;2 (${t2dec1w.map(w=>`${w.ward_nm} ${w.n_dec1}`).join(', ')}).`;
 
   // recommended targeting cards
   const byInc=WARDS.slice().sort((a,b)=>b.inc_people-a.inc_people);
