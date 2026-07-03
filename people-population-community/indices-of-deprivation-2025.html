@@ -919,7 +919,7 @@ details.calc p{margin:6px 0}
   </div>
   <div class="panel">
     <h3>How figures are derived</h3>
-    <p class="small" style="margin-top:0"><b>Taken directly from the published IoD2025 LSOA file (no calculation):</b> every LSOA's score, national rank and national decile on the overall IMD and each domain, plus the population denominators. Deciles are assigned nationally by MHCLG — decile 1 means that LSOA is in the most deprived 10% of England's 33,755 LSOAs.</p>
+    <p class="small" style="margin-top:0"><b>Taken directly from the published IoD2025 LSOA file (no calculation):</b> every LSOA's score, national rank and national decile on the overall IMD and each domain, plus the population denominators. Deciles are assigned nationally by MHCLG — decile 1 means that LSOA is in the most deprived 10% of England's 33,755 LSOAs. The deprivation <i>rates</i> used in the headcounts are also quoted, not derived: for Income, Employment, IDACI and IDAOPI the published score is itself the rate — File 7's column headings read <i>"Income Score (rate)"</i> etc. The other five domain scores (Education, Health, Crime, Barriers, Living Environment) are constructed indices, not rates, and are never presented as rates here.</p>
     <p class="small"><b>Author's calculations from those published values</b> (each is shown with its arithmetic in the "how calculated" expanders on the relevant tab):</p>
     <ul class="small">
       <li><b>Ward IMD scores</b> = Σ(LSOA score × LSOA mid-2022 total population) ÷ ward population, over each ward's constituent LSOAs. Ward ranks 1–22 order the wards by that score — a borough-internal ranking, not a national statistic.</li>
@@ -5675,16 +5675,18 @@ $('#about-gen').textContent = `Generated ${M.generated} from IoD2025 File 7. Eng
     `worst 20% (deciles 1–2): ${M.n_lsoa_dec12} = ${fmt1(100*M.n_lsoa_dec12/M.n_lsoa_gateshead)}% · least-deprived 20% (deciles 9–10): ${M.n_lsoa_dec910} = ${fmt1(100*M.n_lsoa_dec910/M.n_lsoa_gateshead)}%</div>`;
 
   // transparency: exact arithmetic behind each headcount card
+  // File 7 column headings quoted verbatim so every input is traceable to the source
   const indCalc=[
-    ['Income-deprived residents','Income-domain rate','total population',B.inc_people,B.pop_total,B.inc_rate,B.eng_inc_rate],
-    ['Children in income-deprived families','IDACI rate','children aged 0–15',B.idaci_people,B.pop_child,B.idaci_rate,B.eng_idaci_rate],
-    ['Employment-deprived','Employment-domain rate','working-age adults 18–66',B.emp_people,B.pop_wa,B.emp_rate,B.eng_emp_rate],
-    ['Older people income-deprived','IDAOPI rate','residents aged 60+',B.idaopi_people,B.pop_older,B.idaopi_rate,B.eng_idaopi_rate]
+    ['Income-deprived residents','Income Score (rate)','Total population: mid 2022',B.inc_people,B.pop_total,B.inc_rate,B.eng_inc_rate],
+    ['Children in income-deprived families','Income Deprivation Affecting Children Index (IDACI) Score (rate)','Dependent Children aged 0-15: mid 2022',B.idaci_people,B.pop_child,B.idaci_rate,B.eng_idaci_rate],
+    ['Employment-deprived','Employment Score (rate)','Working age population 18-66 (for use with Employment Deprivation Domain): mid 2022',B.emp_people,B.pop_wa,B.emp_rate,B.eng_emp_rate],
+    ['Older people income-deprived','Income Deprivation Affecting Older People (IDAOPI) Score (rate)','Older population aged 60 and over: mid 2022',B.idaopi_people,B.pop_older,B.idaopi_rate,B.eng_idaopi_rate]
   ];
   $('#calc-ind').innerHTML =
+    `<p>Both inputs of each multiplication are quoted directly from File 7 — the quoted column headings below are MHCLG's own. For these four measures the published <i>score</i> is itself the rate: the proportion of the denominator that is deprived. Only the multiplication back to people, and the sum across LSOAs, are this dashboard's calculation.</p>`+
     indCalc.map(([k,rate,den,ppl,dpop,r,er])=>
-      `<div class="fml"><b>${k}</b>: ${fmt(ppl)} = Σ(LSOA ${rate} × LSOA ${den}) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(r)}% = ${fmt(ppl)} ÷ ${fmt(dpop)} · England ${fmt1(er)}% = the same sum over all ${fmt(M.n_lsoa_england)} English LSOAs</div>`).join('')+
-    `<p>Rates and denominators are both published in the IoD2025 LSOA file; the headcounts multiply them back together, so they are modelled estimates for targeting — not counts of benefit claimants.</p>`;
+      `<div class="fml"><b>${k}</b>: ${fmt(ppl)} = Σ( “${rate}” × “${den}” ) over ${M.n_lsoa_gateshead} LSOAs · ${fmt1(r)}% = ${fmt(ppl)} ÷ ${fmt(dpop)} · England ${fmt1(er)}% = same sum over all ${fmt(M.n_lsoa_england)} LSOAs</div>`).join('')+
+    `<p>The headcounts are therefore modelled estimates for targeting — not counts of benefit claimants.</p>`;
 })();
 
 /* =================== DOMAINS =================== */
@@ -5797,7 +5799,7 @@ function indCard(k,ppl,rate,den){
     `→ (${wls.map(l=>`${fmt1(l.imd_score)}×${fmt(l.pop_total)}`).join(' + ')}) ÷ ${fmt(wx.pop_total)} = <b>${fmt1(wx.imd_score)}</b></div>`+
     `<p><b>#</b> orders the 22 wards by that score (1 = most deprived — a borough-internal ranking, not a national statistic). `+
     `<b>LSOAs in worst 10%</b> counts the ward's neighbourhoods whose national IMD decile is 1. `+
-    `The <b>people columns</b> apply each LSOA's IoD2025 rate to its matched denominator (income → all residents; employment → 18–66; children → under-16s) and sum across the ward. `+
+    `The <b>people columns</b> multiply each LSOA's published “Score (rate)” by its matched published mid-2022 denominator (income → all residents; employment → 18–66; children → under-16s) and sum across the ward — both inputs quoted from File 7, the multiplication ours. `+
     `Wards are built from LSOAs on a best-fit basis, so counts at ward edges are approximate.</p>`;
 })();
 
