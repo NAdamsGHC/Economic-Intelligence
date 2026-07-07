@@ -10,6 +10,8 @@ Each dashboard is a single self-contained HTML file — open it directly in any 
 |---|---|---|---|
 | **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
 | **Economy** | [GDHI 2010–2023](economy/gdhi.html) | Gross Disposable Household Income — UK regional accounts, LSOA choropleth, inequality | 9.1 MB |
+| **Economy** | [GDHI per head — benchmarked](economy/gdhi-per-head.html) | ONS-published GDHI per head 1997–2023 (ELS extract) — Gateshead vs NECA 7, ONS economic statistical neighbours, NE / England / UK, full 361-LAD league table | 104 KB |
+| **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, NECA 7 and statistical neighbours, with per-indicator Explore view | 290 KB |
 | **Business, industry and trade** | [Gateshead Business Map](business-industry-trade/gateshead-business-map.html) ⭐ | Every Companies House business in the borough + IMD 2025, sector churn, FSA premises, BRES jobs, UKRI innovation; intervention/investment scores by LSOA & ward | ~2.9 MB |
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NECA local authorities | 92 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
@@ -102,6 +104,63 @@ GDHI is the amount of money that all individuals in the household sector have av
 - Don't sum across geography types (e.g. PCs + Towns). They overlap.
 - The four Gateshead-named Westminster constituencies extend into Consett (County Durham) and Washington (Sunderland borough), so their sum (£7.33bn) overstates Gateshead borough. The proper borough figure (£3.81bn) is the LAD aggregate, derived from summing all 27 Gateshead MSOAs.
 - The UK total in this dataset excludes Northern Ireland (NI uses a different geography that isn't apportioned in the same way for these "other geographic areas" tables).
+- Per-head figures here are **author's calculations** (GDHI ÷ MYPE population, as described above). ONS's own published GDHI per head for Gateshead in 2023 is **£19,127** (regional GDHI, LAD table, via the Explore Local Statistics compendium); the £18,988 shown differs because of the MYPE denominator construction. Where a single official per-head figure is needed (e.g. in reports), quote the ONS £19,127 and label the dashboard figure as derived.
+
+---
+
+## Economy — GDHI per head benchmarking dashboard
+
+[`economy/gdhi-per-head.html`](economy/gdhi-per-head.html)
+
+Focused benchmarking companion to the GDHI dashboard above: **ONS-published GDHI per head** (current prices, all-ages resident denominator) for Gateshead against the team's standard comparator sets, 1997–2023. Built from the ONS **Explore Local Statistics** extract of the regional GDHI release (published 10 September 2025) — so every £ level is the official published figure, including the £19,127 (2023) noted in the caveats above.
+
+### Tabs
+
+| Tab | What it shows |
+|---|---|
+| Overview | £19,127 per head (2023), the £5,709 gap to the UK average, rank 329 of 361 UK LADs (bottom decile), UK = 100 trajectory, and six generated key findings |
+| Trends & growth | Rank among UK LADs over time (313th → 329th since 1997), nominal growth by period vs NE / UK, and the widening £ gap to the UK |
+| NECA & neighbours | The NECA seven ranked (Gateshead 6th of 7), UK = 100 trajectories, all 20 ONS economic statistical neighbours (Gateshead above only 1), and a sortable comparator scorecard |
+| National league | Distribution histogram plus a searchable, nation-filterable league table of all 361 UK local authorities with UK / England / NE reference rows |
+| About & notes | Exact definition, sources, caveats, author's-calculations flags and the refresh plan |
+
+### Notes & caveats
+
+- £ levels are ONS-published figures quoted directly; the UK = 100 index, growth rates, gaps, ranks and medians are author's calculations from those published values.
+- Current prices throughout — no real-terms claims anywhere; the UK = 100 index and rank trajectory are the inflation-free reads.
+- GDHI LAD values are modelled apportionments of regional totals and are revised back through the whole series at each release; 2024 data (with revisions) expected autumn 2026 — rebuild by re-downloading the ELS workbook and re-running the build scripts.
+
+---
+
+## Economy — ELS scorecard (all local indicators)
+
+[`economy/els-scorecard.html`](economy/els-scorecard.html)
+
+**Every indicator in the ONS Explore Local Statistics service that covers Gateshead** — 88 of the 108 ELS tables, spanning 10 domains (population, work & income, economy & productivity, business, housing, education & skills, health & wellbeing, environment & energy, connectivity & transport, amenities & culture) — benchmarked in one product against England/UK/GB, the North East, the NECA seven, the ONS economic statistical neighbours (2026 economic set) and the full distribution of UK local authorities.
+
+### Tabs
+
+| Tab | What it shows |
+|---|---|
+| Overview | Six headline KPIs, quartile mix by domain (Gateshead's Q1–Q4 position on 70 ranked indicators), the twelve indicators furthest above/below the national benchmark, and six generated key findings |
+| Scorecard | All 88 indicators in one sortable, searchable, domain-filterable table — Gateshead vs benchmark vs North East, rank (1 = best on the indicator's stated direction) and quartile chip; click any row to open it in Explore |
+| Explore | Any single indicator in depth: value with 95% CI where published, trend vs benchmark and NE, NECA seven bar, statistical-neighbours bar (with coverage note), national distribution histogram, source and direction statement |
+| About & notes | Methodology, per-indicator source/period/coverage table, caveats, refresh plan |
+
+### Headline findings (as built, July 2026)
+
+- Bottom UK quartile on **11** ranked indicators, top quartile on **9**: deficits cluster in pay, household income, productivity and health; strengths in learning, connectivity and affordability.
+- **Skills pipeline is a top-quartile strength** — FE achievements +53% vs England, participation, apprenticeship starts and achievements all top-quartile.
+- **Employment matches England (within the CI) but the work is low-value** — GVA per hour, median pay and GDHI per head all bottom-quartile.
+- **Health carries the cost**: adult and child obesity, preventable CVD mortality and healthy life expectancy all adverse.
+- **Affordability (4.8× earnings vs England 7.6×) and connectivity (4G ranked 1st of 361, gigabit above England) are assets.**
+
+### Notes & caveats
+
+- A compendium, not a snapshot: reference periods run September 2021 to April 2026 and are labelled on every row.
+- 18 context indicators (population structure, house prices, energy use, traffic, ecosystem values etc.) are shown without a better/worse direction and are not ranked.
+- 25 indicators are survey estimates with 95% CIs (marked ≈) — ranks are soft; Gateshead's CI is shown in Explore.
+- All values quoted directly from the ELS workbook; ranks, quartiles and benchmark comparisons are author's calculations. Rebuild by re-downloading the workbook and re-running the build scripts.
 
 ---
 
