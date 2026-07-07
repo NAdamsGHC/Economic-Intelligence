@@ -46,6 +46,20 @@ These are **descriptive monitoring and benchmarking products**: they answer *"wh
 | A10 | **Values quoted as published** (rounded to ≤4 significant figures for embedding); no deflation applied anywhere — money values are current prices except GDP per head CVM (real, as published) and ecosystem values (2024 prices, as published). | Definitions discipline: nominal never presented as real. |
 | A11 | **Reference periods differ by indicator** (Sept 2021 – Apr 2026) and are labelled on every row; the scorecard is a compendium, not a snapshot. | The single biggest misreading risk; flagged in the header caveat. |
 
+### Business Map — high streets & centres (added 7 July 2026)
+
+| # | Assumption / judgement | Basis and risk |
+|---|---|---|
+| C1 | **Centre definitions are the statutory Local Plan designations** (MSGP Policy 6) fetched live from Gateshead Council's public GIS server: Primary Shopping Area ("Gateshead town centre"), 8 District and 15 Local Shopping Centres. | The most defensible definition available; changes when the council revises the policies map. |
+| C2 | **Centre membership** = registered-office/premises point inside the designated polygon or within **150m** of its boundary (walkable fringe — judgement). MetroCentre and Retail World are published as label points, approximated by **500m/350m circles** (judgement) and treated as out-of-centre context, excluded from high-street aggregates. | Buffer widens centres slightly; stated on the dashboard. |
+| C3 | **Registered office ≠ trading address** (inherited caveat): company counts per centre include firms registered at accountants/home addresses inside the centre; FSA-rated premises are the trading ground truth and drive the composition, takeaway and independents measures. | |
+| C4 | **Start-ups** = incorporations of *currently-live* companies (the free CH product is live-only), so older quarters undercount (survivorship). Read recent levels, not long slopes — stated on the chart. | |
+| C5 | **Openings/closures** are month-on-month diffs of CH snapshots via a persistent register (`build/gateshead-business-map/data/company_register.json`, committed so the Action accumulates history). "Gone" = dissolved, moved or de-registered — not necessarily a shopfront closure. Register seeded 1 July 2026; history builds from August 2026. | |
+| C6 | **Independents vs chains** is a heuristic on FSA-rated premises: national brand list (~120 names) + any name at 3+ Gateshead premises. Applied to food-rated premises only; non-food chains (e.g. betting shops without food rating) may be missed. | Judgement; flagged on the dashboard. |
+| C7 | **Walk-in catchment** = residents of LSOAs whose (boundary-approximated) centroid lies within **800m** of the centre centroid; income-deprivation from IMD 2025 (share of catchment population in England's most-deprived 30% of LSOAs). | Centroid-based, so edge LSOAs may be in/excluded; adequate for comparative context. |
+| C8 | **Footfall** is the ONS/BT experimental index for the **North East region by site type** — no per-town footfall is published free anywhere; presented as regional context only, never as a Gateshead measurement. | |
+| C9 | **VOA rating-list data was investigated and deliberately not used**: the bulk download is keyless but under a restricted (non-OGL) licence unsuitable for republication on a public site, and it still lacks a vacancy flag. The intervention score's vacancy signal therefore remains unwired; the recommended route is the council's internal NNDR empty-property data. | |
+
 ### GDHI per head dashboard
 
 | # | Assumption / judgement | Basis and risk |

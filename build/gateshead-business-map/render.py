@@ -87,6 +87,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
 
 <nav class="tabs"><div class="tabs-inner">
   <a href="#mapview" class="active">Map</a>
+  <a href="#highstreets">High streets</a>
   <a href="#overview">Overview</a>
   <a href="#sectors">Sectors &amp; saturation</a>
   <a href="#scores">Intervention &amp; investment</a>
@@ -101,6 +102,36 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
   <div class="lede">Every company registered in Gateshead at its <b>postcode location</b> &mdash; zoom in to street level to see individual firms. FSA food premises are shown at their exact location. Switch the area shading, filter by sector or status, and hide mass-registration addresses where many unrelated firms share one registered office.</div>
   <div id="map"></div>
   <div class="note" id="mapNote"></div>
+</section>
+
+<section id="highstreets">
+  <h2>High streets &amp; centres</h2>
+  <div class="lede">Gateshead's <b>designated centres</b> from the Local Plan policies map (MSGP Policy 6): the town centre, 8 district centres and 15 local centres, plus MetroCentre and Retail World as out-of-centre context. A business belongs to a centre when it sits inside the designated boundary or within <span id="hsBuf"></span>m of it. Pick a centre to see who trades there, how independent it is, where start-ups are appearing, and who its walk-in catchment serves.</div>
+  <div class="card">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <select id="hsSel" style="font:inherit;font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;max-width:320px;"></select>
+      <span class="chip" id="hsTier"></span>
+      <span style="font-size:12.5px;color:var(--muted);" id="hsCatch"></span>
+    </div>
+    <div class="kbox" id="hsKpis" style="margin-top:12px;"></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3 style="margin:0 0 4px;font-size:15px;">Premises mix vs all-centre average</h3>
+      <div class="note" style="margin:0 0 8px;">FSA-rated premises only &mdash; the trading ground truth for food-related high-street uses. Bars below the diamond = thinner provision than the average across Gateshead's centres.</div>
+      <div class="chartwrap" style="height:290px;"><canvas id="hsMix"></canvas></div></div>
+    <div class="card"><h3 style="margin:0 0 4px;font-size:15px;">Start-up activity</h3>
+      <div class="note" style="margin:0 0 8px;" id="hsStartNote"></div>
+      <div class="chartwrap" style="height:290px;"><canvas id="hsStart"></canvas></div></div>
+  </div>
+  <div class="card"><h3 style="margin:0 0 8px;font-size:15px;">All centres compared</h3>
+    <div style="max-height:430px;overflow:auto;"><table id="hsTable"></table></div>
+    <div class="note">Independent share needs &ge;5 FSA premises to display. Start-ups = incorporations of currently-live companies (registered-office based). Catchment = residents within <span id="hsCat2"></span>m of the centre; income-deprived = living in an LSOA in England's most-deprived 30% (IMD 2025).</div></div>
+  <div class="grid2">
+    <div class="card"><h3 style="margin:0 0 4px;font-size:15px;">Openings &amp; closures</h3><div id="hsChanges" style="max-height:330px;overflow:auto;"></div></div>
+    <div class="card"><h3 style="margin:0 0 4px;font-size:15px;">Retail footfall context &mdash; North East region</h3>
+      <div class="note" style="margin:0 0 8px;">ONS/BT experimental footfall index by <b>site type across the whole North East</b> &mdash; no per-town footfall is published, so this is regional context, not a Gateshead measurement. 100 = pre-period baseline.</div>
+      <div class="chartwrap" style="height:280px;"><canvas id="hsFoot"></canvas></div></div>
+  </div>
 </section>
 
 <section id="overview">
@@ -159,6 +190,8 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
       <li><b>Food Standards Agency</b> &mdash; food premises &amp; hygiene ratings (real trading locations).</li>
       <li><b>UKRI Gateway to Research</b> &mdash; innovation/R&amp;D projects.</li>
       <li><b>ONS Open Geography Portal</b> &mdash; LSOA 2021 + Ward 2024 boundaries and lookup.</li>
+      <li><b>Gateshead Council Local Plan policies map</b> (public GIS server) &mdash; designated centres: Primary Shopping Area, District and Local Shopping Centres (MSGP Policy 6), MetroCentre and Retail World reference points.</li>
+      <li><b>ONS / BT Active Intelligence</b> &mdash; UK retail footfall (experimental): regional site-type indices only.</li>
     </ul>
   </div>
   <div class="grid2">
@@ -167,7 +200,11 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
         <li><b>Registered office &ne; trading address.</b> Companies House locates where a firm is <i>registered</i>, often an accountant or home. Mass-registration addresses are flagged and can be hidden on the map. FSA premises are the ground-truth trading locations.</li>
         <li><b>Sector churn is national by industry.</b> ONS publishes birth/death rates by broad industry, applied to Gateshead's local sector mix &mdash; not street-level survival.</li>
         <li><b>Employees</b> are a borough total (BRES), not per-area.</li>
-        <li><b>Closures</b> use ONS death rates, not enumerated dissolutions (the free CH product is live-only).</li>
+        <li><b>Closures</b>: sector fragility uses ONS death rates; the High streets tab's openings/closures instead diff monthly CH snapshots &mdash; "gone" means dissolved, moved or de-registered, not necessarily a shopfront closing.</li>
+        <li><b>Start-ups</b> count incorporations of <i>currently-live</i> companies &mdash; older quarters undercount because dissolved firms drop out (survivorship).</li>
+        <li><b>Centre assignment</b>: inside the designated polygon or within 150m (judgement); MetroCentre/Retail World are label points approximated by 500m/350m circles; catchment = residents within 800m of the centre. These are analytical judgements &mdash; see the repository's <a class="src" href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>.</li>
+        <li><b>Independents vs chains</b> is a heuristic (national brand list + same name at 3+ Gateshead premises) applied to FSA-rated premises only.</li>
+        <li><b>Footfall</b> is a North East regional index by site type &mdash; no per-town footfall is published anywhere free.</li>
         <li><b>Vacancy</b> (council NNDR) and <b>per-LSOA innovation</b> are not yet wired; those score signals are omitted and weights re-normalised.</li>
       </ul>
     </div>
@@ -229,13 +266,14 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
 
 const RAMPS={intervention:['#fee5d9','#fcae91','#fb6a4a','#de2d26','#a50f15'],
   investment:['#edf8e9','#bae4b3','#74c476','#31a354','#006d2c'],
-  density:['#eff3ff','#bdd7e7','#6baed6','#3182bd','#08519c']};
+  density:['#eff3ff','#bdd7e7','#6baed6','#3182bd','#08519c'],
+  s12:['#f2f0f7','#cbc9e2','#9e9ac8','#756bb1','#54278f']};
 const IMD=['#a50026','#d73027','#f46d43','#fdae61','#fee08b','#d9ef8b','#a6d96a','#66bd63','#1a9850','#006837'];
 function metricVal(cd,m){const s=D.lsoa_scores[cd];if(!s)return null;
-  if(m==='imd')return s.imd_decile;if(m==='density')return s.density;return s[m];}
+  if(m==='imd')return s.imd_decile;if(m==='density')return s.density;if(m==='s12')return s.s12;return s[m];}
 const breaks={};
-['intervention','investment','density'].forEach(m=>{
-  const vs=Object.values(D.lsoa_scores).map(s=>m==='density'?s.density:s[m]).filter(v=>v!=null);
+['intervention','investment','density','s12'].forEach(m=>{
+  const vs=Object.values(D.lsoa_scores).map(s=>m==='density'?s.density:(m==='s12'?s.s12:s[m])).filter(v=>v!=null);
   const lo=Math.min.apply(null,vs),hi=Math.max.apply(null,vs);
   breaks[m]=[0,1,2,3,4].map(i=>lo+(hi-lo)*i/5);
 });
@@ -255,6 +293,17 @@ map.fitBounds(lsoaLayer.getBounds(),{padding:[10,10]});
 const wardLayer=L.geoJSON(D.boundaries.ward,{style:{fill:false,color:'#134e4a',weight:1.6,opacity:.7,dashArray:'4 3'},
   onEachFeature:(f,l)=>{const cd=f.properties.WD24CD,s=D.ward_scores[cd]||{};
     l.bindPopup('<b>'+esc(f.properties.WD24NM)+'</b><br>Intervention <b>'+(s.intervention!=null?s.intervention.toFixed(1):'&ndash;')+'</b> &middot; Investment <b>'+(s.investment!=null?s.investment.toFixed(1):'&ndash;')+'</b><br>Companies: '+fmt(s.n)+' &middot; residents: '+fmt(s.pop));}});
+
+const HSD=D.highstreets||{centres:[],events:[],avg_share:{},trend:[],register:{snapshots:[],seeded:true},footfall:{available:false},tier_labels:{}};
+const centreById={};HSD.centres.forEach(c=>centreById[c.id]=c);
+const centreLayer=L.geoJSON(D.boundaries.centres,{
+  style:f=>({color:f.properties.tier==='destination'?'#b45309':'#7c2d12',weight:2,dashArray:'5 4',fillColor:'#d97706',fillOpacity:.06}),
+  onEachFeature:(f,l)=>{const c=centreById[f.properties.id]||{};
+    l.bindPopup('<b>'+esc(f.properties.name)+'</b><br>'+esc(HSD.tier_labels[f.properties.tier]||f.properties.tier)+
+      '<br>Businesses: '+fmt(c.n)+' &middot; food premises: '+fmt(c.fsa)+
+      (c.ind!=null?'<br>Independents: <b>'+c.ind+'%</b> of rated premises':'')+
+      (c.s12?'<br>Start-ups (12m): <b>'+fmt(c.s12)+'</b>':''));}});
+centreLayer.addTo(map);
 
 // companies (clustered)
 const compLayer=L.markerClusterGroup({chunkedLoading:true,maxClusterRadius:50,disableClusteringAtZoom:15,spiderfyOnMaxZoom:true});
@@ -291,9 +340,11 @@ ctl.onAdd=function(){
    '<label><input type="radio" name="m" value="investment"> Investment score</label>'+
    '<label><input type="radio" name="m" value="imd"> IMD 2025 decile</label>'+
    '<label><input type="radio" name="m" value="density"> Business density</label>'+
+   '<label><input type="radio" name="m" value="s12"> Start-ups (12m)</label>'+
    '<div class="ctl-h">Layers</div>'+
    '<label><input type="checkbox" id="ckBiz" checked> Businesses</label>'+
    '<label><input type="checkbox" id="ckFsa"> Food premises</label>'+
+   '<label><input type="checkbox" id="ckCtr" checked> Centres (Local Plan)</label>'+
    '<label><input type="checkbox" id="ckWard"> Ward boundaries</label>'+
    '<label><input type="checkbox" id="ckLsoa" checked> Area shading</label>'+
    '<div class="ctl-h">Business filters</div>'+
@@ -309,7 +360,7 @@ ctl.addTo(map);
 const legend=L.control({position:'bottomright'});
 legend.onAdd=function(){this._div=L.DomUtil.create('div','legend');this.update();return this._div;};
 legend.update=function(){
-  let html='<div class="lt">'+({intervention:'Intervention score',investment:'Investment score',imd:'IMD 2025 decile',density:'Businesses / 1k residents'}[metric])+'</div>';
+  let html='<div class="lt">'+({intervention:'Intervention score',investment:'Investment score',imd:'IMD 2025 decile',density:'Businesses / 1k residents',s12:'Start-ups, last 12m'}[metric])+'</div>';
   if(metric==='imd'){html+='<div><i style="background:'+IMD[0]+'"></i>1 most deprived</div><div><i style="background:'+IMD[4]+'"></i>5</div><div><i style="background:'+IMD[9]+'"></i>10 least deprived</div>';}
   else{const b=breaks[metric],r=RAMPS[metric];for(let i=0;i<r.length;i++){html+='<div><i style="background:'+r[i]+'"></i>'+Math.round(b[i])+'+'+'</div>';}}
   this._div.innerHTML=html;};
@@ -321,12 +372,109 @@ document.querySelectorAll('input[name=m]').forEach(r=>r.addEventListener('change
 document.getElementById('ckBiz').addEventListener('change',e=>{e.target.checked?compLayer.addTo(map):map.removeLayer(compLayer);});
 document.getElementById('ckFsa').addEventListener('change',e=>{e.target.checked?fsaLayer.addTo(map):map.removeLayer(fsaLayer);});
 document.getElementById('ckWard').addEventListener('change',e=>{e.target.checked?wardLayer.addTo(map):map.removeLayer(wardLayer);});
+document.getElementById('ckCtr').addEventListener('change',e=>{e.target.checked?centreLayer.addTo(map):map.removeLayer(centreLayer);});
 document.getElementById('ckLsoa').addEventListener('change',e=>{e.target.checked?lsoaLayer.addTo(map):map.removeLayer(lsoaLayer);});
 ['fSec','fStatus','fHideCl'].forEach(id=>document.getElementById(id).addEventListener('change',rebuildCompanies));
 // map-first: the container is sized after init, so fix the size, refit, THEN cluster
 function initMapContent(){ map.invalidateSize(); map.fitBounds(lsoaLayer.getBounds(),{padding:[10,10]}); rebuildCompanies(); }
 if(document.readyState==='complete'){ setTimeout(initMapContent,60); } else { window.addEventListener('load',function(){ setTimeout(initMapContent,60); }); }
 window.GBM={map:map,companies:compLayer,fsa:fsaLayer,rebuild:rebuildCompanies};   // handle for debugging / power users
+
+// ---------- high streets ----------
+(function(){
+if(!HSD.centres.length)return;
+document.getElementById('hsBuf').textContent=HSD.buffer_m||150;
+document.getElementById('hsCat2').textContent=HSD.catchment_m||800;
+const GROUPS=['Cafes & restaurants','Takeaways','Pubs & bars','Supermarkets','Food retail (other)','Accommodation','Other catering'];
+const hsSel=document.getElementById('hsSel');
+const tiers=[['town','Town centre'],['district','District centres'],['local','Local centres'],['destination','Out-of-centre (context)']];
+hsSel.innerHTML='<option value="__all">Whole borough (all centres)</option>'+tiers.map(t=>{
+  const opts=HSD.centres.filter(c=>c.tier===t[0]).map(c=>'<option value="'+c.id+'">'+esc(c.name)+'</option>').join('');
+  return opts?'<optgroup label="'+t[1]+'">'+opts+'</optgroup>':'';}).join('');
+let mixChart=null,startChart=null;
+function shares(c){const tot=Object.values(c.gr||{}).reduce((a,b)=>a+b,0);
+  return GROUPS.map(g=>tot?+(100*(c.gr[g]||0)/tot).toFixed(1):0);}
+function renderCentre(id){
+  const all=id==='__all';
+  const c=all?null:centreById[id];
+  const hsCentres=HSD.centres.filter(x=>x.tier!=='destination');
+  const sum=k=>hsCentres.reduce((a,x)=>a+(x[k]||0),0);
+  document.getElementById('hsTier').textContent=all?'All designated centres':(HSD.tier_labels[c.tier]||c.tier);
+  document.getElementById('hsCatch').innerHTML=all?
+    (fmt(sum('n'))+' businesses and '+fmt(sum('fsa'))+' food premises across '+hsCentres.length+' designated centres'):
+    (c.pop!=null?('Walk-in catchment: <b>'+fmt(c.pop)+'</b> residents'+(c.dep30!=null?', <b>'+c.dep30+'%</b> in England’s most income-deprived 30% of areas (IMD 2025)':'')):'');
+  const noHist=HSD.register.seeded||(HSD.register.snapshots||[]).length<2;
+  const k=[];
+  if(all){
+    k.push(['Businesses in centres',fmt(sum('n'))],['Food premises',fmt(sum('fsa'))],
+      ['Start-ups (12m)',fmt(sum('s12'))],['Start-ups (24m)',fmt(sum('s24'))],
+      ['Opened (12m)',noHist?'&mdash;':fmt(sum('op'))],['Closed (12m)',noHist?'&mdash;':fmt(sum('cl'))]);
+  }else{
+    k.push(['Businesses',fmt(c.n)],['Food premises',fmt(c.fsa)],
+      ['Independents',c.ind!=null?c.ind+'%':'&mdash;'],['Takeaway share',c.tk!=null?c.tk+'%':'&mdash;'],
+      ['Start-ups (12m)',fmt(c.s12)],['In distress',fmt(c.distress)],
+      ['Opened (12m)',noHist?'&mdash;':fmt(c.op)],['Closed (12m)',noHist?'&mdash;':fmt(c.cl)]);
+  }
+  document.getElementById('hsKpis').innerHTML=k.map(x=>'<div class="k"><b>'+x[1]+'</b>'+x[0]+'</div>').join('');
+  // mix chart
+  const avg=GROUPS.map(g=>HSD.avg_share[g]||0);
+  const cur=all?avg:shares(c);
+  if(mixChart)mixChart.destroy();
+  mixChart=new Chart(document.getElementById('hsMix'),{type:'bar',
+    data:{labels:GROUPS,datasets:[
+      {label:all?'All-centre average':esc(all?'':c.name),data:cur,backgroundColor:'#134e4a'},
+      {label:'All-centre average',data:avg,type:'scatter',pointStyle:'rectRot',pointRadius:6,pointBackgroundColor:'#d97706',showLine:false}]},
+    options:{plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}},
+      tooltip:{callbacks:{label:x=>x.dataset.label+': '+x.parsed.y+'%'}}},
+      scales:{y:{title:{display:true,text:'% of FSA-rated premises'}},x:{ticks:{font:{size:10},maxRotation:45,minRotation:30}}}}});
+  // startup chart
+  const trend=all?HSD.trend:null;
+  const labels=all?trend.map(t=>t.q):HSD.trend.slice(-8).map(t=>t.q);
+  const vals=all?trend.map(t=>t.n):c.sq;
+  document.getElementById('hsStartNote').innerHTML=(all?
+    'Incorporations of <b>currently-live</b> companies registered in Gateshead, by quarter. ':
+    'Incorporations of currently-live companies registered in this centre, by quarter. ')+
+    'Dissolved companies are absent from the free CH product, so older quarters undercount &mdash; read the recent level, not the long slope.';
+  if(startChart)startChart.destroy();
+  startChart=new Chart(document.getElementById('hsStart'),{type:'bar',
+    data:{labels:labels,datasets:[{label:'Incorporations',data:vals,backgroundColor:'#756bb1'}]},
+    options:{plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:'Companies incorporated'},beginAtZero:true},x:{ticks:{font:{size:10}}}}}});
+  // zoom map to centre
+  if(!all&&window.GBM){try{GBM.map.setView([c.lat,c.lon],15);}catch(e){}}
+}
+hsSel.addEventListener('change',()=>renderCentre(hsSel.value));
+renderCentre('__all');
+// comparison table
+const tierRank={town:0,district:1,local:2,destination:3};
+const rows=HSD.centres.slice().sort((a,b)=>tierRank[a.tier]-tierRank[b.tier]||b.n-a.n);
+document.getElementById('hsTable').innerHTML='<tr><th>Centre</th><th>Tier</th><th class="num">Businesses</th><th class="num">Food premises</th><th class="num">Independents</th><th class="num">Takeaway share</th><th class="num">Start-ups 12m</th><th class="num">Catchment pop</th><th class="num">Income-deprived</th></tr>'+
+  rows.map(c=>'<tr'+(c.tier==='destination'?' style="color:var(--muted);font-style:italic;"':'')+'><td><a href="#highstreets" onclick="document.getElementById(\'hsSel\').value=\''+c.id+'\';document.getElementById(\'hsSel\').dispatchEvent(new Event(\'change\'));return false;" class="src">'+esc(c.name)+'</a></td><td>'+esc(HSD.tier_labels[c.tier]||c.tier)+'</td><td class="num">'+fmt(c.n)+'</td><td class="num">'+fmt(c.fsa)+'</td><td class="num">'+(c.ind!=null?c.ind+'%':'&ndash;')+'</td><td class="num">'+(c.tk!=null?c.tk+'%':'&ndash;')+'</td><td class="num">'+fmt(c.s12)+'</td><td class="num">'+(c.pop!=null?fmt(c.pop):'&ndash;')+'</td><td class="num">'+(c.dep30!=null?c.dep30+'%':'&ndash;')+'</td></tr>').join('');
+// changes feed
+const chg=document.getElementById('hsChanges');
+if(HSD.register.seeded||HSD.register.snapshots.length<2){
+  chg.innerHTML='<div class="warnbox">The openings &amp; closures register was <b>seeded from the '+esc(M.ch_snapshot)+' snapshot</b>. Month-on-month changes appear from the next monthly refresh onwards &mdash; the free Companies House product lists live companies only, so change is measured by comparing snapshots. A disappearance means dissolved, moved away, or de-registered.</div>';
+}else{
+  const evs=HSD.events.slice().reverse();
+  chg.innerHTML='<table><tr><th>Month</th><th></th><th>Business</th><th>Sector</th><th>Centre</th></tr>'+
+    evs.slice(0,120).map(e=>'<tr><td>'+esc(e.m)+'</td><td>'+(e.t==='new'?'<span class="chip" style="background:#dcfce7;color:#166534;">opened</span>':'<span class="chip" style="background:#fee2e2;color:#991b1b;">gone</span>')+'</td><td>'+esc(e.n)+'</td><td>'+esc(secLabel(e.sec))+'</td><td>'+esc(e.ct&&centreById[e.ct]?centreById[e.ct].name:'&ndash;')+'</td></tr>').join('')+'</table>'+
+    '<div class="note">"Gone" = no longer in the live register (dissolved, moved or de-registered) &mdash; not necessarily a shopfront closure.</div>';
+}
+// footfall
+const ffCard=document.getElementById('hsFoot').closest('.card');
+if(HSD.footfall&&HSD.footfall.available){
+  const F=HSD.footfall;
+  new Chart(document.getElementById('hsFoot'),{type:'line',
+    data:{labels:F.months,datasets:[
+      {label:'NE district & local centres',data:F.ne['District or local centres'],borderColor:'#134e4a',borderWidth:2.2,pointRadius:0,tension:.25},
+      {label:'NE town & city centres',data:F.ne['Town and city centres'],borderColor:'#2a8d83',borderWidth:1.6,pointRadius:0,tension:.25},
+      {label:'NE retail parks',data:F.ne['Retail parks'],borderColor:'#d97706',borderWidth:1.6,pointRadius:0,tension:.25},
+      {label:'UK town & city centres',data:F.uk['Town and city centres'],borderColor:'#9ca3af',borderDash:[5,3],borderWidth:1.4,pointRadius:0,tension:.25}]},
+    options:{plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:10.5}}}},
+      scales:{y:{title:{display:true,text:'Footfall index'}},x:{ticks:{font:{size:10},maxTicksLimit:12}}}}});
+}else{
+  ffCard.querySelector('.chartwrap').innerHTML='<div class="warnbox">ONS/BT retail footfall could not be fetched on this build &mdash; see build notes.</div>';
+}
+})();
 
 // ---------- charts ----------
 const topSecs=D.sectors.slice(0,12);

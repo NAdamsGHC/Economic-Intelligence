@@ -17,6 +17,8 @@ import csv, io, json, re, sys, time, zipfile, hashlib, datetime as dt
 from collections import defaultdict, Counter
 import requests
 import config as C
+import centres as CN
+import highstreets as HS
 
 csv.field_size_limit(1 << 24)
 S = requests.Session(); S.headers.update(C.HTTP_HEADERS)
@@ -134,10 +136,13 @@ def build_company_points(companies, geo):
         if not g or not g["lsoa"]:
             dropped += 1; continue
         sec = C.sic_section(c["sic_raw"])
-        inc_year = None
+        inc_year = inc_ym = None
         m = re.match(r"(\d{2})/(\d{2})/(\d{4})", c["inc"]) or re.match(r"(\d{4})-(\d{2})-(\d{2})", c["inc"])
         if m:
-            inc_year = int(m.group(3)) if "/" in c["inc"] else int(m.group(1))
+            if "/" in c["inc"]:
+                inc_year, inc_ym = int(m.group(3)), f"{m.group(3)}-{m.group(2)}"
+            else:
+                inc_year, inc_ym = int(m.group(1)), f"{m.group(1)}-{m.group(2)}"
         lat, lon = _jitter(c["num"], g["lat"], g["lon"])
         status_l = c["status"].lower()
         distress = any(k in status_l for k in ("liquidation", "administration", "receiver", "voluntary arrangement"))
@@ -146,7 +151,7 @@ def build_company_points(companies, geo):
             "sic": re.match(r"\d+", c["sic_raw"]).group(0) if re.match(r"\d+", c["sic_raw"]) else "",
             "desc": re.sub(r"^\d+\s*-\s*", "", c["sic_raw"])[:60],
             "st": c["status"], "ds": 1 if distress else 0,
-            "iy": inc_year, "lat": lat, "lon": lon,
+            "iy": inc_year, "im": inc_ym, "lat": lat, "lon": lon,
             "lsoa": g["lsoa"], "wd": g["ward"],
             "cl": 1 if (c["addr1"].upper(), c["pc"]) in cluster_addrs else 0,
         })
@@ -506,6 +511,32 @@ def main():
     total_pop = sum((imd.get(ls) or {}).get("pop") or 0 for ls in (set(lsoa_ward) | set(imd)))
     sectors = sector_summary(company_pts, total_pop)
 
+    # ---- high streets (Local Plan centres) ----
+    log("\n[10] High streets (Local Plan centres)")
+    centres = CN.load_centres(S)
+    cidx = CN.CentreIndex(centres)
+    n_ct = 0
+    for c in company_pts:
+        c["ct"] = cidx.assign(c["lat"], c["lon"])
+        n_ct += 1 if c["ct"] else 0
+    n_ct_f = 0
+    for p in fsa_pts:
+        p["ct"] = cidx.assign(p["lat"], p["lon"])
+        n_ct_f += 1 if p["ct"] else 0
+    log(f"    {len(centres)} centres; {n_ct:,} companies + {n_ct_f:,} FSA premises inside a centre (+{CN.BUFFER_M:.0f}m)")
+    n_chain, n_multi = HS.flag_chains(fsa_pts)
+    log(f"    chain heuristic: {n_chain} of {len(fsa_pts)} premises flagged ({n_multi} multi-site names)")
+    events, reg_meta = HS.update_register(company_pts, snapshot, warn)
+    now = dt.date.today()
+    hs_rows, avg_share = HS.centre_rollups(centres, company_pts, fsa_pts, imd, lsoa_feats, events, now, warn)
+    borough_trend = HS.startup_series(company_pts, now, 12)
+    footfall = HS.load_footfall(S, warn)
+    for d in per_lsoa.values():
+        d["s12"] = 0
+    for c in company_pts:
+        if c.get("im") and HS._months_ago(c["im"], now) < 12 and c["lsoa"] in per_lsoa:
+            per_lsoa[c["lsoa"]]["s12"] += 1
+
     active = sum(1 for c in company_pts if "active" in c["st"].lower())
     distress_total = sum(c["ds"] for c in company_pts)
     data = {
@@ -529,8 +560,17 @@ def main():
         "ward_names": ward_nm,
         "sectors": sectors,
         "innovation": innovation,
+        "highstreets": {
+            "centres": hs_rows, "avg_share": avg_share,
+            "trend": borough_trend, "footfall": footfall,
+            "events": events[-400:],
+            "register": {"snapshots": reg_meta["snapshots"], "seeded": reg_meta["seeded"]},
+            "buffer_m": CN.BUFFER_M, "catchment_m": HS.CATCHMENT_M,
+            "tier_labels": CN.TIER_LABEL,
+        },
         "boundaries": {"lsoa": {"type": "FeatureCollection", "features": lsoa_feats},
-                       "ward": {"type": "FeatureCollection", "features": ward_feats}},
+                       "ward": {"type": "FeatureCollection", "features": ward_feats},
+                       "centres": CN.centres_geojson(centres)},
         "section_labels": C.SECTION_LABELS,
     }
     outp = C.CACHE_DIR / "dashboard_data.json"
