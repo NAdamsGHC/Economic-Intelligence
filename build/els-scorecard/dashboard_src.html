@@ -100,7 +100,7 @@ footer a{color:var(--teal);text-decoration:none;}
   <div class="chips" id="chips"></div>
 </header>
 
-<div class="caveat"><b>Read this first.</b> Indicators come from many producers with <b>different reference periods</b> (noted on every row) — this is a compendium, not a single snapshot. Survey-based indicators (marked ≈) carry <b>95% confidence intervals</b>; for a borough of Gateshead's size these are wide, so treat their ranks as soft. Money values are <b>current prices</b> unless marked otherwise. Ranks compare Gateshead only with local authorities that have data, and "better/worse" follows the stated direction of each indicator; context indicators (population size, house prices, traffic) are shown without a better/worse reading.</div>
+<div class="caveat"><b>Read this first.</b> This is an <b>experimental analytical product, not official statistics</b> — values are quoted from published official statistics, but ranks, quartiles and better/worse directions are analytical judgements; treat with caution and verify against source releases before using in decisions (assumptions and limitations: <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md" style="color:#8a6516">analytical assurance note</a>). Indicators come from many producers with <b>different reference periods</b> (noted on every row) — this is a compendium, not a single snapshot. Survey-based indicators (marked ≈) carry <b>95% confidence intervals</b>; for a borough of Gateshead's size these are wide, so treat their ranks as soft. Money values are <b>current prices</b> unless marked otherwise. Ranks compare Gateshead only with local authorities that have data; context indicators (population size, house prices, traffic) are shown without a better/worse reading.</div>
 
 <div class="tabs" id="tabs"></div>
 
@@ -442,8 +442,8 @@ exSel.value = TIDS.includes("11") ? "11" : TIDS[0];
 <li><b>Excluded tables</b>: 20 of the 108 ELS tables have no Gateshead data (Northern Ireland/Wales/Scotland-specific variants, region-level FDI and R&D, value of UK exports (ITL), travel-time-to-employment tables, and homicide, which is police-force-area level). The population-by-age-and-sex detail table is summarised by the five population-structure indicators instead.</li>
 <li><b>Trends for monthly series</b> (average house price) are downsampled to one point per year plus the latest month.</li>
 </ul>
-<h3>Author's calculations</h3>
-<p>All values are official published figures quoted directly from the ELS workbook. Ranks, quartiles, medians, the direction-adjusted %-vs-benchmark measure, and the domain quartile mix are author's calculations from those published values. The better/worse direction assigned to each indicator is an analytical judgement, stated on every Explore page.</p>
+<h3>Author's calculations and assurance</h3>
+<p>All values are official published figures quoted directly from the ELS workbook. Ranks, quartiles, medians, the direction-adjusted %-vs-benchmark measure, and the domain quartile mix are author's calculations from those published values. The better/worse direction assigned to each indicator is an analytical judgement, stated on every Explore page. This is an experimental analytical product assured to the Aqua Book's dashboard tier — the full assumptions log, verification record and known limitations are in the repository's <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>; it has not had independent assurance and is not sufficient evidence for Green Book business cases without step-up.</p>
 <h3>Indicator sources and periods</h3>
 <div class="tablewrap" style="max-height:420px"><table><thead><tr><th>Domain</th><th>Indicator</th><th>Latest period</th><th>Coverage</th><th>Source</th></tr></thead><tbody>${srcRows}</tbody></table></div>
 <h3>Next refresh</h3>

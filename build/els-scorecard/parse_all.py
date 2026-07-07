@@ -208,7 +208,7 @@ def parse(workbook_path):
         "elsGenerated": els_generated,
         "gh": GH,
         "neca": NECA, "neigh": NEIGH,
-        "names": {c: names.get(c, c) for c in set(NECA) | set(NEIGH)},
+        "names": {c: names.get(c, c) for c in sorted(set(NECA) | set(NEIGH))},
         "domains": [{"name": d, "tables": [t for t in ts if t in ind]} for d, ts in DOMAINS],
         "ind": ind,
     }

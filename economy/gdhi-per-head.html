@@ -83,7 +83,7 @@ footer a{color:var(--teal);text-decoration:none;}
   <div class="chips" id="chips"></div>
 </header>
 
-<div class="caveat"><b>Read this first.</b> All figures are <b>current prices (nominal)</b> — growth over time includes inflation, so a rising £ line is not a rising standard of living. For position over time use the <b>UK&nbsp;=&nbsp;100 index</b>, which strips out UK-wide price and income growth. "Per head" divides by <b>all residents of every age</b>, not just adults or workers.</div>
+<div class="caveat"><b>Read this first.</b> This is an <b>experimental analytical product, not official statistics</b> — £ levels are quoted from published official statistics, but indices, ranks and gaps are analytical calculations; treat with caution and verify against source releases before using in decisions (<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md" style="color:#8a6516">analytical assurance note</a>). All figures are <b>current prices (nominal)</b> — growth over time includes inflation, so a rising £ line is not a rising standard of living. For position over time use the <b>UK&nbsp;=&nbsp;100 index</b>, which strips out UK-wide price and income growth. "Per head" divides by <b>all residents of every age</b>, not just adults or workers.</div>
 
 <div class="tabs" id="tabs"></div>
 
@@ -403,8 +403,8 @@ el("about").innerHTML = `
 <li><b>Tiny-population areas</b> (City of London, Isles of Scilly) produce extreme, volatile per-head values.</li>
 <li>Rankings use the ${rk.n} UK local authorities in the workbook (2023 boundaries). Regions, counties and combined authorities in the source file are excluded from ranks.</li>
 </ul>
-<h3>Author's calculations</h3>
-<p>£ levels are ONS-published figures quoted directly. The UK = 100 index, growth rates, gaps, medians, deciles and ranks are author's calculations from those published figures.</p>
+<h3>Author's calculations and assurance</h3>
+<p>£ levels are ONS-published figures quoted directly. The UK = 100 index, growth rates, gaps, medians, deciles and ranks are author's calculations from those published figures. This is an experimental analytical product assured to the Aqua Book's dashboard tier — assumptions log, verification record and limitations are in the repository's <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>; it has not had independent assurance and is not sufficient evidence for Green Book business cases without step-up.</p>
 <h3>Next refresh</h3>
 <p>ONS regional accounts for 2024 (GVA, GDHI) are expected around <b>autumn 2026</b>; the release will also revise the back series, so every figure here — including ranks — should be re-derived, not appended. Rebuild = re-download the ELS workbook, re-run <code>parse.py</code> + <code>analysis.py</code>, and swap the embedded data object.</p>`;
 

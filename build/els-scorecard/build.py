@@ -7,8 +7,9 @@ dashboard with today's build date. When nothing changed, the previous JSON is
 left untouched so the git working tree stays clean and the Action skips the
 commit.
 
-Usage: python build/els-scorecard/build.py [existing-workbook.xlsx]
-Passing a workbook path skips the download (local dev).
+Usage: python build/els-scorecard/build.py [existing-workbook.xlsx] [--force]
+Passing a workbook path skips the download (local dev); --force re-renders
+even when the data is unchanged (e.g. after a template edit).
 """
 import datetime
 import json
@@ -30,10 +31,12 @@ def comparable(d):
     return d
 
 def main():
+    force = "--force" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--force"]
     data_dir = BASE / "data"
     data_dir.mkdir(exist_ok=True)
-    if len(sys.argv) > 1:
-        wb = Path(sys.argv[1])
+    if args:
+        wb = Path(args[0])
         print(f"Using local workbook {wb}")
     else:
         wb = data_dir / "all-datasets.xlsx"
@@ -47,7 +50,7 @@ def main():
     print(f"Parsed {len(new['ind'])} indicators (workbook generated {new['elsGenerated']})")
 
     json_path = data_dir / "scorecard_data.json"
-    if json_path.exists():
+    if json_path.exists() and not force:
         old = json.loads(json_path.read_text(encoding="utf-8"))
         if comparable(old) == comparable(new):
             print("No data changes — leaving dashboard as is.")

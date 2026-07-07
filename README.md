@@ -4,6 +4,8 @@ Interactive HTML dashboards exploring open ONS datasets for **Gateshead borough*
 
 Each dashboard is a single self-contained HTML file — open it directly in any modern browser, or browse the live versions via [GitHub Pages](#enabling-github-pages) once enabled. The site's landing page is [`index.html`](index.html).
 
+> **⚠ Experimental analytical products — not official statistics.** These dashboards are built from published official statistics, but the derived measures (ranks, quartiles, indices, better/worse directions) are the author's analytical judgements and the models are experimental. Treat with caution and verify figures against the source releases before using them to inform decisions. Assumptions, verification records and known limitations: [ANALYTICAL-ASSURANCE.md](ANALYTICAL-ASSURANCE.md).
+
 ## Catalogue
 
 | ONS topic | Dashboard | Theme | Size |
