@@ -160,7 +160,8 @@ Focused benchmarking companion to the GDHI dashboard above: **ONS-published GDHI
 - A compendium, not a snapshot: reference periods run September 2021 to April 2026 and are labelled on every row.
 - 18 context indicators (population structure, house prices, energy use, traffic, ecosystem values etc.) are shown without a better/worse direction and are not ranked.
 - 25 indicators are survey estimates with 95% CIs (marked ≈) — ranks are soft; Gateshead's CI is shown in Explore.
-- All values quoted directly from the ELS workbook; ranks, quartiles and benchmark comparisons are author's calculations. Rebuild by re-downloading the workbook and re-running the build scripts.
+- All values quoted directly from the ELS workbook; ranks, quartiles and benchmark comparisons are author's calculations.
+- **Auto-refreshes monthly**: a GitHub Action (`.github/workflows/refresh-els-scorecard.yml`) re-downloads the workbook on the 2nd of each month, rebuilds via `build/els-scorecard/`, and commits only when the data actually changed (the workbook's own regeneration date is ignored). Run it on demand from the Actions tab (workflow_dispatch), or locally: `python build/els-scorecard/build.py`.
 
 ---
 

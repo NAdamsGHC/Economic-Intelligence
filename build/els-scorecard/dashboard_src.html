@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gateshead local indicators — ELS scorecard — Gateshead Economic Intelligence</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+:root{--navy:#0b2545;--teal:#13767a;--teal2:#1d9aa0;--amber:#e8a23d;--ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;--good:#1a7f37;--bad:#c0392b;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;padding:24px;}
+.wrap{max-width:1180px;margin:0 auto;}
+header{border-left:6px solid var(--teal);padding:4px 0 4px 16px;margin-bottom:8px;}
+header h1{font-size:25px;color:var(--navy);font-weight:700;}
+header p{color:var(--muted);font-size:14px;margin-top:5px;max-width:880px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px 0;}
+.chip{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:20px;background:#eef4f4;color:var(--teal);border:1px solid #d4e6e6;}
+.chip.amber{background:#fdf3e2;color:#8a6516;border-color:#f0d8a8;}
+.caveat{background:#fdf3e2;border:1px solid #f0d8a8;border-left:5px solid var(--amber);border-radius:9px;padding:12px 16px;margin:16px 0 20px;font-size:13px;color:#6b5320;}
+.caveat b{color:#8a6516;}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--line);margin-bottom:20px;position:sticky;top:0;background:var(--bg);z-index:20;padding-top:6px;}
+.tabs button{border:0;background:none;font:inherit;font-size:13.5px;font-weight:600;color:var(--muted);padding:10px 15px;border-radius:8px 8px 0 0;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;}
+.tabs button:hover{color:var(--navy);background:#fff;}
+.tabs button.active{color:var(--navy);border-bottom-color:var(--teal);background:#fff;}
+.tab{display:none;}
+.tab.active{display:block;animation:fade .25s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:4px 0 20px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;border-top:4px solid var(--teal);}
+.kpi.amber{border-top-color:var(--amber);}
+.kpi .v{font-size:27px;font-weight:700;color:var(--navy);}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:4px;}
+.kpi .s{font-size:12px;margin-top:7px;font-weight:600;color:var(--muted);}
+.rank{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;margin-top:7px;}
+.rank.top{background:#e4f3e9;color:var(--good);}
+.rank.bot{background:#fcebe9;color:var(--bad);}
+.rank.mid{background:#eef1f5;color:var(--muted);}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:18px;}
+.panel h3{font-size:15px;color:var(--navy);margin-bottom:3px;}
+.panel .sub{font-size:12px;color:var(--muted);margin-bottom:12px;}
+.full{grid-column:1/-1;}
+.cwrap{position:relative;height:300px;}
+.cwrap.tall{height:400px;}
+.findings{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.find{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:9px;padding:14px 16px;}
+.find.amber{border-left-color:var(--amber);}
+.find h4{font-size:13.5px;color:var(--navy);margin-bottom:5px;}
+.find p{font-size:12.8px;color:var(--ink);}
+.find .big{font-weight:700;color:var(--teal);}
+.find.amber .big{color:#b5791f;}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:640px;}
+table{border-collapse:collapse;width:100%;font-size:12.7px;}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+th{background:var(--navy);color:#fff;font-weight:600;cursor:pointer;position:sticky;top:0;user-select:none;font-size:12px;z-index:5;}
+th:first-child,td:first-child{text-align:left;}
+td.iname{text-align:left;max-width:330px;white-space:normal;}
+tbody tr:hover{background:#f0f6f6;cursor:pointer;}
+tr.ne td{background:#fdf3e2;font-weight:700;color:var(--navy);}
+tr.eng td{background:#eef4f4;font-style:italic;color:var(--teal);}
+.q{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:10px;}
+.q1{background:#e4f3e9;color:var(--good);}
+.q2{background:#eef4f4;color:var(--teal);}
+.q3{background:#eef1f5;color:var(--muted);}
+.q4{background:#fcebe9;color:var(--bad);}
+.q0{background:#f2f2f2;color:#98a3ad;}
+.legend{font-size:11.5px;color:var(--muted);margin-top:8px;}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;align-items:center;}
+.controls input,.controls select,.controls label{font:inherit;font-size:13px;}
+.controls input,.controls select{padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
+.controls input[type=search]{min-width:220px;}
+.controls label{color:var(--muted);display:flex;align-items:center;gap:5px;}
+.detail{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:18px;}
+.detail h2{font-size:19px;color:var(--navy);}
+.detail .unitline{font-size:13px;color:var(--muted);margin:2px 0 12px;max-width:900px;}
+.dfacts{display:flex;flex-wrap:wrap;gap:26px;margin-top:4px;}
+.dfact .v{font-size:23px;font-weight:700;color:var(--navy);}
+.dfact .l{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;}
+.srcline{font-size:11.5px;color:var(--muted);margin-top:12px;border-top:1px solid var(--line);padding-top:8px;}
+.note{background:#fff7ea;border:1px solid #f0d8a8;border-radius:8px;padding:12px 14px;font-size:12.5px;color:#6b5320;margin-top:6px;}
+.about{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;font-size:13.3px;}
+.about h3{color:var(--navy);font-size:15px;margin:16px 0 7px;}
+.about h3:first-child{margin-top:0;}
+.about p{margin-bottom:9px;}
+.about ul{margin:0 0 9px 20px;}
+.about a{color:var(--teal);}
+.about table{font-size:11.8px;}
+.about td.iname{max-width:260px;}
+footer{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);}
+footer a{color:var(--teal);text-decoration:none;}
+@media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.findings{grid-template-columns:1fr}.dfacts{gap:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Gateshead local indicators — ELS scorecard</h1>
+  <p>Every ONS Explore Local Statistics indicator with Gateshead data — <span id="hdrN"></span> indicators across <span id="hdrD"></span> domains — benchmarked against England or the UK, the North East, the NECA seven, the ONS economic statistical neighbours, and every UK local authority. Use the Scorecard for the full table, Explore for any single indicator in depth.</p>
+  <div class="chips" id="chips"></div>
+</header>
+
+<div class="caveat"><b>Read this first.</b> Indicators come from many producers with <b>different reference periods</b> (noted on every row) — this is a compendium, not a single snapshot. Survey-based indicators (marked ≈) carry <b>95% confidence intervals</b>; for a borough of Gateshead's size these are wide, so treat their ranks as soft. Money values are <b>current prices</b> unless marked otherwise. Ranks compare Gateshead only with local authorities that have data, and "better/worse" follows the stated direction of each indicator; context indicators (population size, house prices, traffic) are shown without a better/worse reading.</div>
+
+<div class="tabs" id="tabs"></div>
+
+<section class="tab" data-tab="Overview">
+  <div class="kpis" id="kpisOverview"></div>
+  <div class="grid">
+    <div class="panel"><h3>Quartile mix by domain</h3><p class="sub" id="subQuart"></p><div class="cwrap tall"><canvas id="cQuart"></canvas></div></div>
+    <div class="panel"><h3>Furthest above and below the national benchmark</h3><p class="sub" id="subRel"></p><div class="cwrap tall"><canvas id="cRel"></canvas></div></div>
+  </div>
+  <div class="findings" id="findings"></div>
+</section>
+
+<section class="tab" data-tab="Scorecard">
+  <div class="controls">
+    <select id="scDomain" aria-label="Filter by domain"><option value="">All domains</option></select>
+    <input id="scSearch" type="search" placeholder="Search indicators…" aria-label="Search indicators">
+    <label><input type="checkbox" id="scRanked"> ranked indicators only</label>
+  </div>
+  <div class="panel full" style="padding:0;border:0;background:none;">
+    <div class="tablewrap"><table id="tblScore"></table></div>
+    <p class="legend">Click a row to open the indicator in Explore; click a column heading to sort. Rank: 1 = best on the indicator's stated direction, among UK local authorities with data. Quartile chips: <span class="q q1">Q1 best</span> <span class="q q2">Q2</span> <span class="q q3">Q3</span> <span class="q q4">Q4 worst</span> <span class="q q0">context</span> · ≈ survey estimate with 95% CI.</p>
+  </div>
+</section>
+
+<section class="tab" data-tab="Explore">
+  <div class="controls">
+    <select id="exSel" aria-label="Choose indicator"></select>
+  </div>
+  <div class="detail" id="exDetail"></div>
+  <div class="grid">
+    <div class="panel"><h3>Trend</h3><p class="sub" id="subTrend"></p><div class="cwrap"><canvas id="cTrend"></canvas></div></div>
+    <div class="panel"><h3>The NECA seven</h3><p class="sub" id="subNeca"></p><div class="cwrap"><canvas id="cNeca"></canvas></div></div>
+    <div class="panel"><h3>ONS economic statistical neighbours</h3><p class="sub" id="subNeigh"></p><div class="cwrap tall"><canvas id="cNeigh"></canvas></div></div>
+    <div class="panel"><h3>National distribution</h3><p class="sub" id="subDist"></p><div class="cwrap tall"><canvas id="cDist"></canvas></div></div>
+  </div>
+</section>
+
+<section class="tab" data-tab="About &amp; notes">
+  <div class="about" id="about"></div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<script>
+/* ================= DATA (embedded — never fetched at runtime) ================ */
+const D = __DATA__;
+
+/* ================= HELPERS ================ */
+const el = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const NAVY = "#0b2545", TEAL = "#13767a", AMBER = "#e8a23d", GOOD = "#1a7f37", BAD = "#c0392b",
+      MUTED = "rgba(93,107,122,.55)", GREY = "rgba(93,107,122,.30)";
+const IND = D.ind, TIDS = Object.keys(IND);
+const domOf = {};
+D.domains.forEach(d => d.tables.forEach(t => domOf[t] = d.name));
+const nm = c => D.names[c] || c;
+const ukDate = iso => new Date(iso).toLocaleDateString("en-GB", {day:"numeric", month:"long", year:"numeric"});
+
+const latest = i => i.gh[i.gh.length - 1];
+const benchLatest = i => i.bench ? i.bench[i.bench.length - 1] : null;
+const neLatest = i => i.ne ? i.ne[i.ne.length - 1] : null;
+
+function rankBest(i){          // 1 = best on the indicator's stated direction
+  const gh = latest(i);
+  if (i.pol >= 0) return 1 + i.ladSorted.filter(v => v > gh).length;
+  return 1 + i.ladSorted.filter(v => v < gh).length;
+}
+const quart = i => i.pol === 0 ? 0 : Math.ceil(4 * rankBest(i) / i.n);
+function rel(i){               // signed % vs benchmark; + = performing better
+  const b = benchLatest(i);
+  if (i.pol === 0 || b == null || b === 0) return null;
+  return i.pol * (latest(i) / b - 1) * 100;
+}
+function fmtVal(i, v){
+  if (v == null) return "—";
+  const u = (i.unitShort || "").toLowerCase();
+  if (u.includes("£") || u.includes("£")) return Math.abs(v) >= 1000 ? "£" + Math.round(v).toLocaleString("en-GB") : "£" + v.toFixed(2);
+  if (u === "%") return v.toFixed(1) + "%";
+  if (u.startsWith("score")) return v.toFixed(2);
+  if (u === "yrs" || u === "years") return v.toFixed(1) + " yrs";
+  if (u === "ratio") return v.toFixed(1);
+  if (Math.abs(v) >= 1000) return Math.round(v).toLocaleString("en-GB");
+  return String(Math.round(v * 100) / 100);
+}
+const pct = (n, dp=1) => (n > 0 ? "+" : "") + n.toFixed(dp) + "%";
+const ord = n => n + (n%10==1&&n%100!=11?"st":n%10==2&&n%100!=12?"nd":n%10==3&&n%100!=13?"rd":"th");
+
+const nRanked = TIDS.filter(t => IND[t].pol !== 0).length;
+const qCount = q => TIDS.filter(t => quart(IND[t]) === q).length;
+
+el("hdrN").textContent = TIDS.length;
+el("hdrD").textContent = D.domains.length;
+
+/* ================= TABS ================ */
+const sections = [...document.querySelectorAll("section.tab")];
+const tabBar = el("tabs");
+function activateTab(idx){
+  sections.forEach(x => x.classList.remove("active"));
+  [...tabBar.children].forEach(x => x.classList.remove("active"));
+  sections[idx].classList.add("active");
+  tabBar.children[idx].classList.add("active");
+}
+sections.forEach((s, i) => {
+  const b = document.createElement("button");
+  b.textContent = s.dataset.tab;
+  b.onclick = () => activateTab(i);
+  tabBar.appendChild(b);
+});
+activateTab(0);
+
+/* ================= BUILDERS ================ */
+function chips(items){ el("chips").innerHTML = items.map(c=>`<span class="chip${c.amber?" amber":""}">${c.text}</span>`).join(""); }
+function kpis(id, items){ el(id).innerHTML = items.map(k=>`<div class="kpi${k.amber?" amber":""}"><div class="v">${k.v}</div><div class="l">${k.l}</div>${k.s?`<div class="s">${k.s}</div>`:""}${k.rank?`<span class="rank ${k.rank.cls}">${k.rank.txt}</span>`:""}</div>`).join(""); }
+function findings(id, items){ el(id).innerHTML = items.map(f=>`<div class="find${f.amber?" amber":""}"><h4>${f.h}</h4><p>${f.p}</p></div>`).join(""); }
+const chartRefs = {};
+function mkChart(id, cfg){ if (chartRefs[id]) chartRefs[id].destroy(); chartRefs[id] = new Chart(el(id), cfg); }
+
+/* ================= HEADER ================ */
+chips([
+  {text:`${TIDS.length} indicators · ${D.domains.length} domains`},
+  {text:`${qCount(1)} in the best quartile of UK areas`},
+  {text:`${qCount(4)} in the worst quartile`, amber:true},
+  {text:`${nRanked} ranked · ${TIDS.length - nRanked} context-only`},
+  {text:`Reference periods vary by indicator`, amber:true}
+]);
+
+/* ================= OVERVIEW ================ */
+function kpiFor(t, opts={}){
+  const i = IND[t]; if (!i) return null;
+  const r = rankBest(i), q = quart(i);
+  const cls = q === 1 ? "top" : q === 4 ? "bot" : "mid";
+  return {
+    v: fmtVal(i, latest(i)),
+    l: `${opts.label || i.name} (${i.latest})`,
+    s: `${i.benchCode || "benchmark"} ${fmtVal(i, benchLatest(i))}${i.ghCI ? ` · 95% CI ${fmtVal(i, i.ghCI[0])}–${fmtVal(i, i.ghCI[1])}` : ""}`,
+    rank: i.pol === 0 ? null : {cls, txt:`${ord(r)} of ${i.n}`},
+    amber: q === 4
+  };
+}
+kpis("kpisOverview", [ kpiFor(11, {label:"Employment rate, 16–64"}), kpiFor(20), kpiFor(15, {label:"GDHI per head"}),
+                       kpiFor(18, {label:"Children in relative poverty (AHC)"}), kpiFor(79), kpiFor(90) ].filter(Boolean));
+
+el("subQuart").textContent = `Ranked indicators per domain by Gateshead's quartile among UK local authorities with data (Q1 = best quartile on the indicator's stated direction)`;
+const qByDom = D.domains.map(d => {
+  const qs = d.tables.map(t => quart(IND[t])).filter(q => q > 0);
+  return {name:d.name, c:[1,2,3,4].map(q => qs.filter(x => x === q).length)};
+}).filter(d => d.c.some(x => x));
+mkChart("cQuart", {type:"bar", data:{labels:qByDom.map(d=>d.name), datasets:[
+  {label:"Q1 (best)", data:qByDom.map(d=>d.c[0]), backgroundColor:"rgba(26,127,55,.75)"},
+  {label:"Q2", data:qByDom.map(d=>d.c[1]), backgroundColor:"rgba(19,118,122,.45)"},
+  {label:"Q3", data:qByDom.map(d=>d.c[2]), backgroundColor:"rgba(93,107,122,.35)"},
+  {label:"Q4 (worst)", data:qByDom.map(d=>d.c[3]), backgroundColor:"rgba(192,57,43,.65)"}
+]}, options:{responsive:true, maintainAspectRatio:false, indexAxis:"y",
+  plugins:{legend:{position:"bottom", labels:{boxWidth:14, font:{size:11}}}},
+  scales:{x:{stacked:true, title:{display:true, text:"Number of indicators", font:{size:11}}, ticks:{stepSize:1, font:{size:11}}},
+          y:{stacked:true, ticks:{font:{size:11}}}}}});
+
+const relRows = TIDS.map(t => ({t, r: rel(IND[t])})).filter(x => x.r != null).sort((a,b) => b.r - a.r);
+const relPick = [...relRows.slice(0,6), ...relRows.slice(-6)];
+el("subRel").textContent = `Gateshead relative to ${IND[relPick[0].t].benchCode || "the national benchmark"}-level value, adjusted for each indicator's direction (+ = performing better than the benchmark); six best and six worst`;
+mkChart("cRel", {type:"bar", data:{labels:relPick.map(x=>IND[x.t].name.length>42?IND[x.t].name.slice(0,40)+"…":IND[x.t].name),
+  datasets:[{label:"% vs benchmark", data:relPick.map(x=>+x.r.toFixed(1)), backgroundColor:relPick.map(x=>x.r>=0?"rgba(26,127,55,.7)":"rgba(192,57,43,.65)")}]},
+  options:{responsive:true, maintainAspectRatio:false, indexAxis:"y",
+  plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>pct(c.parsed.x)}}},
+  scales:{x:{title:{display:true, text:"% better (+) / worse (−) than national benchmark", font:{size:11}}, ticks:{callback:v=>v+"%", font:{size:10}}},
+          y:{ticks:{font:{size:10}}}}}});
+
+/* generated findings */
+(function(){
+  const f = [];
+  f.push({h:`${qCount(4)} bottom-quartile indicators, ${qCount(1)} top-quartile`,
+    p:`Across <span class="big">${nRanked}</span> ranked indicators Gateshead sits in the worst UK quartile on <span class="big">${qCount(4)}</span> and the best on <span class="big">${qCount(1)}</span> — the deficits cluster in pay, household income, productivity and health; the strengths in learning, connectivity and affordability.`, amber:true});
+  const fe = IND[46], ap = IND[59];
+  if (fe && ap) f.push({h:"The skills pipeline is a genuine top-quartile strength",
+    p:`FE and skills achievements run at <span class="big">${fmtVal(fe, latest(fe))}</span> per 100,000 adults (${IND[46].benchCode} ${fmtVal(fe, benchLatest(fe))}, ${ord(rankBest(fe))} of ${fe.n}), with participation, apprenticeship starts and achievements all top-quartile too — every education & skills indicator ranks in the top half.`});
+  const emp = IND[11], gvah = IND[20], gdhi = IND[15], pay = IND[16];
+  if (emp && gvah && gdhi) f.push({h:"People work — the work doesn't pay enough",
+    p:`The employment rate (<span class="big">${fmtVal(emp, latest(emp))}</span>, ${emp.latest}) is statistically indistinguishable from ${emp.benchCode} (${fmtVal(emp, benchLatest(emp))}; CI ${fmtVal(emp, emp.ghCI[0])}–${fmtVal(emp, emp.ghCI[1])}), yet GVA per hour (<span class="big">${fmtVal(gvah, latest(gvah))}</span>), median weekly pay (${fmtVal(pay, latest(pay))}) and GDHI per head (${fmtVal(gdhi, latest(gdhi))}) are all bottom-quartile — a low-value-work problem, not a worklessness problem.`, amber:true});
+  const ob = IND[73], cvd = IND[75], hleM = IND[79], hleF = IND[78];
+  if (ob && cvd && hleM) f.push({h:"Health carries the cost of low income",
+    p:`Adult obesity <span class="big">${fmtVal(ob, latest(ob))}</span> (${ob.benchCode} ${fmtVal(ob, benchLatest(ob))}), preventable cardiovascular mortality <span class="big">${fmtVal(cvd, latest(cvd))}</span> per 100,000 (${cvd.benchCode} ${fmtVal(cvd, benchLatest(cvd))}), and healthy life expectancy of ${fmtVal(hleM, latest(hleM))} years (male) / ${fmtVal(hleF, latest(hleF))} (female) against ${hleM.benchCode} ${fmtVal(hleM, benchLatest(hleM))} / ${fmtVal(hleF, benchLatest(hleF))} — all survey/registration measures with CIs, but the direction is consistent across the domain.`, amber:true});
+  const aff = IND[42], gig = IND[90], fourg = IND[91];
+  if (aff && gig) f.push({h:"Affordability and connectivity are assets to build on",
+    p:`Homes cost <span class="big">${fmtVal(aff, latest(aff))}×</span> median earnings against ${aff.benchCode}'s ${fmtVal(aff, benchLatest(aff))}× (${ord(rankBest(aff))} most affordable of ${aff.n}), 4G coverage ranks <span class="big">${ord(rankBest(fourg))}</span> of ${fourg.n}, and gigabit broadband (${fmtVal(gig, latest(gig))}) beats ${gig.benchCode} (${fmtVal(gig, benchLatest(gig))}).`});
+  const nCI = TIDS.filter(t => IND[t].surveyCI).length;
+  f.push({h:"How to read this honestly",
+    p:`<span class="big">${nCI}</span> of ${TIDS.length} indicators are survey estimates with 95% CIs (marked ≈) — for a borough of ~200,000 their ranks are soft. Reference periods span ${IND[101] ? IND[101].latest : "2021"} to ${IND[41] ? IND[41].latest : "2026"} depending on the source, and money values are current prices. Every rank counts only areas with data.`});
+  findings("findings", f);
+})();
+
+/* ================= SCORECARD ================ */
+const scSel = el("scDomain");
+D.domains.forEach(d => { const o = document.createElement("option"); o.textContent = d.name; scSel.appendChild(o); });
+let scSort = {k:null, desc:false};
+function scoreRows(){
+  const q = el("scSearch").value.trim().toLowerCase();
+  const dom = scSel.value;
+  const rankedOnly = el("scRanked").checked;
+  let rows = TIDS.filter(t => (!dom || domOf[t] === dom) && (!q || IND[t].name.toLowerCase().includes(q)) && (!rankedOnly || IND[t].pol !== 0));
+  const get = {
+    dom:t=>domOf[t], name:t=>IND[t].name, per:t=>IND[t].latest, gh:t=>latest(IND[t]),
+    bench:t=>benchLatest(IND[t]) ?? -Infinity, ne:t=>neLatest(IND[t]) ?? -Infinity,
+    rank:t=>IND[t].pol===0?1e9:rankBest(IND[t])/IND[t].n, q:t=>quart(IND[t])||9
+  };
+  if (scSort.k) rows.sort((a,b)=>{const x=get[scSort.k](a),y=get[scSort.k](b);return (typeof x==="string"?x.localeCompare(y):x-y)*(scSort.desc?-1:1);});
+  return rows;
+}
+function renderScore(){
+  const rows = scoreRows();
+  el("tblScore").innerHTML = `<thead><tr><th data-k="dom">Domain</th><th data-k="name">Indicator</th><th data-k="per">Period</th>
+    <th data-k="gh">Gateshead</th><th data-k="bench">Benchmark</th><th data-k="ne">North East</th><th data-k="rank">Rank (1 = best)</th><th data-k="q">Quartile</th></tr></thead><tbody>` +
+    rows.map(t => {
+      const i = IND[t], qv = quart(i);
+      return `<tr data-t="${t}"><td>${domOf[t]}</td><td class="iname">${esc(i.name)}${i.surveyCI ? " ≈" : ""}</td><td>${i.latest}</td>
+        <td><b>${fmtVal(i, latest(i))}</b></td><td>${fmtVal(i, benchLatest(i))}${i.benchCode ? ` <span style="color:var(--muted);font-size:10.5px">${i.benchCode}</span>` : ""}</td>
+        <td>${fmtVal(i, neLatest(i))}</td><td>${i.pol === 0 ? "—" : `${rankBest(i)} of ${i.n}`}</td>
+        <td><span class="q q${qv}">${qv ? "Q" + qv : "context"}</span></td></tr>`;
+    }).join("") + "</tbody>";
+  el("tblScore").querySelectorAll("th").forEach(th => th.onclick = () => {
+    const k = th.dataset.k; scSort = {k, desc: scSort.k === k ? !scSort.desc : false}; renderScore();
+  });
+  el("tblScore").querySelectorAll("tbody tr").forEach(tr => tr.onclick = () => selectInd(tr.dataset.t));
+}
+el("scSearch").oninput = renderScore;
+scSel.onchange = renderScore;
+el("scRanked").onchange = renderScore;
+renderScore();
+
+/* ================= EXPLORE ================ */
+const exSel = el("exSel");
+D.domains.forEach(d => {
+  const g = document.createElement("optgroup"); g.label = d.name;
+  d.tables.forEach(t => { const o = document.createElement("option"); o.value = t; o.textContent = IND[t].name; g.appendChild(o); });
+  exSel.appendChild(g);
+});
+exSel.onchange = () => renderExplore(exSel.value);
+
+function selectInd(t){
+  exSel.value = t;
+  activateTab(2);
+  renderExplore(t);
+}
+
+function niceBins(arr){
+  const mn = Math.min(...arr), mx = Math.max(...arr);
+  const raw = (mx - mn) / 14 || 1;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const w = [1,2,2.5,5,10].map(m=>m*mag).find(s=>s>=raw) || 10*mag;
+  const lo = Math.floor(mn / w) * w;
+  const bins = [];
+  for (let b = lo; b <= mx; b += w) bins.push({lo:b, hi:b+w, count:0});
+  arr.forEach(v => { const i = Math.min(bins.length-1, Math.floor((v-lo)/w)); bins[i].count++; });
+  return bins;
+}
+
+function renderExplore(t){
+  const i = IND[t], gh = latest(i), r = rankBest(i), qv = quart(i);
+  const relv = rel(i);
+  el("exDetail").innerHTML = `
+    <h2>${esc(i.name)}${i.surveyCI ? " <span style='font-size:13px;color:var(--muted)'>≈ survey estimate</span>" : ""}</h2>
+    <div class="unitline">${esc(i.unit)}. Coverage: ${i.cov} · latest period: ${i.latest} · domain: ${domOf[t]}</div>
+    <div class="dfacts">
+      <div class="dfact"><div class="v">${fmtVal(i, gh)}</div><div class="l">Gateshead, ${i.latest}</div></div>
+      ${i.ghCI ? `<div class="dfact"><div class="v" style="font-size:17px;padding-top:6px">${fmtVal(i, i.ghCI[0])}–${fmtVal(i, i.ghCI[1])}</div><div class="l">95% confidence interval</div></div>` : ""}
+      ${benchLatest(i) != null ? `<div class="dfact"><div class="v">${fmtVal(i, benchLatest(i))}</div><div class="l">${i.benchCode}</div></div>` : ""}
+      ${neLatest(i) != null ? `<div class="dfact"><div class="v">${fmtVal(i, neLatest(i))}</div><div class="l">North East</div></div>` : ""}
+      <div class="dfact"><div class="v">${i.pol === 0 ? "—" : ord(r)}</div><div class="l">${i.pol === 0 ? "Context — not ranked" : `of ${i.n} UK areas (1 = best)`}</div></div>
+      ${qv ? `<div class="dfact"><div class="v"><span class="q q${qv}" style="font-size:14px;padding:4px 12px">Q${qv}</span></div><div class="l">Quartile</div></div>` : ""}
+      ${relv != null ? `<div class="dfact"><div class="v" style="color:${relv >= 0 ? GOOD : BAD}">${pct(relv)}</div><div class="l">vs ${i.benchCode}, direction-adjusted</div></div>` : ""}
+    </div>
+    <div class="srcline">Source: ${esc(i.src)}${i.pol === -1 ? " · Lower values are better for this indicator." : i.pol === 1 ? " · Higher values are better for this indicator." : " · Context indicator: no better/worse direction is asserted."}${i.surveyCI ? " · Survey estimate — the rank is soft; differences inside the CI are not meaningful." : ""}</div>`;
+
+  el("subTrend").textContent = `${i.unitShort || i.unit} — Gateshead vs ${i.benchCode || "benchmark"}${i.ne ? " and North East" : ""}${i.labels.length < (i.gh||[]).length ? "" : ""}`;
+  const ds = [{label:"Gateshead", data:i.gh, borderColor:NAVY, backgroundColor:NAVY, borderWidth:2.5, pointRadius:i.gh.length<3?3:0, tension:.25}];
+  if (i.ne) ds.push({label:"North East", data:i.ne, borderColor:"rgba(19,118,122,.7)", backgroundColor:"rgba(19,118,122,.7)", borderWidth:1.5, pointRadius:0, tension:.25});
+  if (i.bench) ds.push({label:i.benchCode, data:i.bench, borderColor:MUTED, backgroundColor:MUTED, borderWidth:1.5, borderDash:[5,3], pointRadius:0, tension:.25});
+  mkChart("cTrend", {type:"line", data:{labels:i.labels, datasets:ds},
+    options:{responsive:true, maintainAspectRatio:false, interaction:{mode:"index", intersect:false},
+    plugins:{legend:{position:"bottom", labels:{boxWidth:14, font:{size:11}}},
+      tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${fmtVal(i, c.parsed.y)}`}}},
+    scales:{y:{ticks:{callback:v=>fmtVal(i, v), font:{size:10}}},
+            x:{ticks:{font:{size:10}, maxTicksLimit:12}}}}});
+
+  const necaPairs = D.neca.filter(c => i.neca[c] != null).map(c => [c, i.neca[c]]).sort((a,b) => b[1] - a[1]);
+  el("subNeca").textContent = `Latest (${i.latest}) — Gateshead in teal`;
+  mkChart("cNeca", {type:"bar", data:{labels:necaPairs.map(p=>nm(p[0])),
+    datasets:[{data:necaPairs.map(p=>p[1]), backgroundColor:necaPairs.map(p=>p[0]===D.gh?TEAL:GREY)}]},
+    options:{responsive:true, maintainAspectRatio:false, indexAxis:"y",
+    plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>fmtVal(i, c.parsed.x)}}},
+    scales:{x:{ticks:{callback:v=>fmtVal(i, v), font:{size:10}}}, y:{ticks:{font:{size:10.5}}}}}});
+
+  const covered = D.neigh.filter(c => i.neigh[c] != null);
+  const npairs = covered.map(c => [c, i.neigh[c]]);
+  if (!npairs.some(p => p[0] === D.gh)) npairs.push([D.gh, gh]);
+  npairs.sort((a,b) => b[1] - a[1]);
+  el("subNeigh").textContent = `Latest (${i.latest}) — ${covered.length} of ${D.neigh.length} neighbours covered${covered.length < D.neigh.length ? ` (${i.cov}-only source: Welsh/Scottish/NI neighbours drop out)` : ""} — Gateshead in navy`;
+  mkChart("cNeigh", {type:"bar", data:{labels:npairs.map(p=>nm(p[0])),
+    datasets:[{data:npairs.map(p=>p[1]), backgroundColor:npairs.map(p=>p[0]===D.gh?NAVY:GREY)}]},
+    options:{responsive:true, maintainAspectRatio:false, indexAxis:"y",
+    plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>fmtVal(i, c.parsed.x)}}},
+    scales:{x:{ticks:{callback:v=>fmtVal(i, v), font:{size:10}}}, y:{ticks:{font:{size:10}}}}}});
+
+  const bins = niceBins(i.ladSorted);
+  const ghBin = Math.max(0, bins.findIndex(b => gh >= b.lo && gh < b.hi));
+  el("subDist").textContent = `Distribution across ${i.n} UK local authorities with data, latest (${i.latest}) — Gateshead's band in navy`;
+  mkChart("cDist", {type:"bar", data:{labels:bins.map(b=>fmtVal(i, b.lo)),
+    datasets:[{data:bins.map(b=>b.count), backgroundColor:bins.map((b,ix)=>ix===ghBin?NAVY:GREY)}]},
+    options:{responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>`${c.parsed.y} areas${c.dataIndex===ghBin?` — includes Gateshead (${fmtVal(i, gh)})`:""}`}}},
+    scales:{y:{title:{display:true, text:"Local authorities", font:{size:11}}, ticks:{font:{size:10}}},
+            x:{title:{display:true, text:i.unitShort || "", font:{size:11}}, ticks:{font:{size:9}, maxTicksLimit:16}}}}});
+}
+renderExplore(TIDS.includes("11") ? "11" : TIDS[0]);
+exSel.value = TIDS.includes("11") ? "11" : TIDS[0];
+
+/* ================= ABOUT ================ */
+(function(){
+  const srcRows = D.domains.map(d => d.tables.map(t => {
+    const i = IND[t];
+    return `<tr><td>${d.name}</td><td class="iname">${esc(i.name)}${i.surveyCI ? " ≈" : ""}</td><td>${i.latest}</td><td>${i.cov}</td><td class="iname" style="max-width:340px">${esc(i.src)}</td></tr>`;
+  }).join("")).join("");
+  el("about").innerHTML = `
+<h3>What this dashboard answers</h3>
+<p>Where Gateshead stands on <b>every indicator in the ONS Explore Local Statistics (ELS) service that covers the borough</b> — ${TIDS.length} indicators across ${D.domains.length} domains — against the team's standard comparator sets: a national benchmark (England where the source is England-only, otherwise the UK or Great Britain), the North East, the <b>NECA seven</b>, the <b>ONS economic statistical neighbours (2026, economic set)</b>, and the full distribution of UK local authorities.</p>
+<h3>How the benchmarking works</h3>
+<ul>
+<li><b>Rank</b>: Gateshead's position among UK local authorities with data on that indicator, where 1 = best on the indicator's stated direction (higher-is-better or lower-is-better, set out on each Explore page). Quartiles follow the same direction. <b>Context indicators</b> (population size and structure, house prices, energy use, traffic, ecosystem values, short-term lets, active-business counts, food outlets) have no defensible better/worse direction and are not ranked.</li>
+<li><b>Survey estimates (≈)</b>: ${TIDS.filter(t=>IND[t].surveyCI).length} indicators (APS/ASHE-based labour market, qualifications, smoking, child measurement, wellbeing, cancer staging, mortality rates, healthy life expectancy, cultural participation) publish 95% confidence intervals; Gateshead's interval is shown in Explore. Differences inside the CI — including small rank differences — are not meaningful.</li>
+<li><b>Coverage</b>: England-only sources (DfE, DLUHC, OHID) drop the Welsh, Scottish and Northern Irish statistical neighbours; each Explore page says how many of the 20 are covered rather than silently shrinking the set.</li>
+</ul>
+<h3>Sources</h3>
+<p>ONS, <a href="https://www.ons.gov.uk/explore-local-statistics/">Explore Local Statistics</a> — "all datasets" workbook, generated ${ukDate(D.elsGenerated)}, retrieved ${ukDate(D.built)}. Each indicator carries its own producer and publication date (table below). Comparator sets: ONS, <i>Clustering similar local authorities and statistical nearest neighbours in the UK, 2026</i> (economic set); NECA seven per the North East devolution geography.</p>
+<h3>Caveats that matter</h3>
+<ul>
+<li><b>This is a compendium, not a snapshot.</b> Reference periods run from September 2021 (museums) to ${IND[41] ? IND[41].latest : "2026"} (house prices) — every figure is labelled with its period; do not read the scorecard as a single point in time.</li>
+<li><b>Money values are current prices</b> (GDHI, pay, GVA, GDP per head at market prices, house prices) unless stated — GDP per head in chained volume measures is the only real-terms series. Ecosystem-service values are in 2024 prices.</li>
+<li><b>Different geographies of "best".</b> Amenity rates per head (museums, supermarkets, sports facilities) structurally favour small rural authorities and city centres; Gateshead's residents also use Newcastle's amenities across the river, which no per-LAD rate captures.</li>
+<li><b>Excluded tables</b>: 20 of the 108 ELS tables have no Gateshead data (Northern Ireland/Wales/Scotland-specific variants, region-level FDI and R&D, value of UK exports (ITL), travel-time-to-employment tables, and homicide, which is police-force-area level). The population-by-age-and-sex detail table is summarised by the five population-structure indicators instead.</li>
+<li><b>Trends for monthly series</b> (average house price) are downsampled to one point per year plus the latest month.</li>
+</ul>
+<h3>Author's calculations</h3>
+<p>All values are official published figures quoted directly from the ELS workbook. Ranks, quartiles, medians, the direction-adjusted %-vs-benchmark measure, and the domain quartile mix are author's calculations from those published values. The better/worse direction assigned to each indicator is an analytical judgement, stated on every Explore page.</p>
+<h3>Indicator sources and periods</h3>
+<div class="tablewrap" style="max-height:420px"><table><thead><tr><th>Domain</th><th>Indicator</th><th>Latest period</th><th>Coverage</th><th>Source</th></tr></thead><tbody>${srcRows}</tbody></table></div>
+<h3>Next refresh</h3>
+<p>ELS refreshes continuously as each producer publishes. A scheduled GitHub Action re-downloads the "all datasets" workbook on the 2nd of each month (06:00 UTC), rebuilds, and commits only when the data has actually changed — every chart, rank and sentence recomputes from the embedded data. The pipeline lives in <code>build/els-scorecard/</code> in the repository and can also be run manually.</p>`;
+})();
+
+el("foot").innerHTML = `Source: ONS Explore Local Statistics — all-datasets workbook (generated ${ukDate(D.elsGenerated)}, retrieved ${ukDate(D.built)}), original producers per indicator · Ranks, quartiles and benchmark comparisons are author's calculations from published values · Built ${ukDate(D.built)}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+name: Refresh ELS scorecard
+
+# Rebuilds economy/els-scorecard.html from the live ONS Explore Local
+# Statistics all-datasets workbook and commits the result — only when the
+# data actually changed. No secrets required: the source is free and keyless.
+
+on:
+  schedule:
+    # 06:00 UTC on the 2nd of each month. ELS refreshes continuously as each
+    # producer publishes, so monthly is a sampling cadence, not a release date.
+    - cron: "0 6 2 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-els-scorecard
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r build/els-scorecard/requirements.txt
+
+      - name: Download workbook, parse, rebuild if changed
+        run: python build/els-scorecard/build.py
+
+      - name: Commit regenerated dashboard
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add economy/els-scorecard.html build/els-scorecard/data/scorecard_data.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-refresh ELS scorecard ($(date -u +%Y-%m-%d))"
+            git push
+          fi
