@@ -222,6 +222,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
 <script>
 (function(){
 const D = window.DATA, H = D.headline, M = D.meta;
+// charts must fill their fixed-height .chartwrap, never their own aspect ratio —
+// with the default (true), canvases overflow the cards below ~980px viewports
+Chart.defaults.responsive = true;
+Chart.defaults.maintainAspectRatio = false;
 const SEC_COLORS={A:'#8c6d31',B:'#7b4173',C:'#3182bd',D:'#e6550d',E:'#2ca25f',F:'#fd8d3c',G:'#e7298a',H:'#1f78b4',I:'#d62728',J:'#6a3d9a',K:'#b15928',L:'#17becf',M:'#2c7fb8',N:'#756bb1',O:'#969696',P:'#66a61e',Q:'#1b9e77',R:'#e6ab02',S:'#a6761d',T:'#777',U:'#777',X:'#bbb'};
 const SECL = D.section_labels;
 const fmt = n => (n==null?'&ndash;':Number(n).toLocaleString());
