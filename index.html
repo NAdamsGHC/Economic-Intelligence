@@ -3,179 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Economic Intelligence &mdash; Gateshead &amp; the North East</title>
-<style>
-:root{
-  --navy:#0b2545;--teal:#13767a;--teal2:#1d9aa0;--amber:#e8a23d;
-  --ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;padding:32px 24px;}
-.wrap{max-width:1100px;margin:0 auto;}
-header{border-left:6px solid var(--teal);padding:6px 0 6px 18px;margin-bottom:28px;}
-header h1{font-size:28px;color:var(--navy);font-weight:700;}
-header p{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:760px;}
-.topic{margin-bottom:30px;}
-.topic-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px;}
-.topic-head h2{font-size:17px;color:var(--navy);font-weight:600;}
-.topic-head .ons{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
-.card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:18px;text-decoration:none;color:inherit;display:block;transition:transform .12s ease,box-shadow .12s ease;}
-.card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(11,37,69,.08);border-left-color:var(--teal2);}
-.card h3{font-size:15px;color:var(--navy);margin-bottom:6px;font-weight:700;}
-.card p{font-size:13px;color:var(--ink);margin-bottom:10px;}
-.card .meta{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
-.card .meta .sep{margin:0 6px;color:var(--line);}
-.empty{font-size:13px;color:var(--muted);font-style:italic;padding:10px 4px;}
-.topic.pinned{background:linear-gradient(180deg,#fffdf7,#fff);border:1px solid var(--line);border-radius:14px;padding:18px 20px 20px;margin-bottom:34px;}
-.topic.pinned .topic-head{border-bottom-color:#f0e2c5;}
-.topic.pinned .topic-head h2{display:flex;align-items:center;gap:8px;}
-.pin-star{color:var(--amber);}
-.card.pin{border-left-color:var(--amber);}
-.card.pin:hover{border-left-color:#caa53a;}
-.pin-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--amber);border:1px solid #eccd8e;border-radius:999px;padding:1px 8px;margin-bottom:8px;}
-.card.todo{border-left-color:var(--muted);}
-.card.todo .meta{color:var(--amber);}
-footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);}
-footer a{color:var(--teal);text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-@media(max-width:640px){body{padding:20px 14px;}header h1{font-size:22px;}}
-.disclaimer{background:#fdf3e2;border:1px solid #f0d8a8;border-left:5px solid #e8a23d;border-radius:9px;padding:11px 15px;margin:14px 0 4px;font-size:12.8px;color:#6b5320;}
-.disclaimer b{color:#8a6516;}
-.disclaimer a{color:#8a6516;}
-</style>
+<title>Economic Intelligence &mdash; Gateshead Council</title>
+<meta name="description" content="Gateshead Council Economic Intelligence — interactive dashboards and briefings on the local and North East economy, built from published official statistics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ei.css">
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <h1>Economic Intelligence</h1>
-  <p>Interactive dashboards exploring open ONS datasets for <b>Gateshead</b> and the <b>North East of England</b>. Catalogued by ONS topic.</p>
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead Council<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="https://www.gateshead.gov.uk/" target="_blank" rel="noopener">gateshead.gov.uk &rsaquo;</a>
+  </div>
 </header>
 
-<div class="disclaimer"><b>Experimental analytical products &mdash; not official statistics.</b> These dashboards are built from published official statistics, but the derived measures (ranks, quartiles, indices, better/worse directions) are the author&rsquo;s analytical judgements and models are experimental. Treat with caution and verify figures against the source releases before using them to inform decisions. See the <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>.</div>
-
-<section class="topic pinned">
-  <div class="topic-head">
-    <h2><span class="pin-star">&#9733;</span> Featured</h2>
-    <span class="ons">Pinned dashboards &amp; briefings</span>
-  </div>
-  <div class="cards">
-    <a class="card pin" href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/briefs/2026-07-policy-update/Gateshead%20Policy%20Update%20-%20July%202026.md">
-      <div class="pin-badge">Pinned</div>
-      <h3>Policy Update &mdash; July 2026</h3>
-      <p>What changed in government and regional policy for Gateshead&rsquo;s economy: the April 2026 Universal Credit restructure (a structural break in claimant data), &pound;120m Northern Growth Strategy funding and the proposed Newcastle&ndash;Gateshead Mayoral Development Zone (views close 31 July), the live devolution funding architecture, and IS-8 definition changes.</p>
-      <div class="meta">Briefing &middot; gov.uk &middot; parliament.uk &middot; ONS <span class="sep">&middot;</span> 3 July 2026</div>
-    </a>
-    <a class="card pin" href="business-industry-trade/gateshead-business-map.html">
-      <div class="pin-badge">Pinned</div>
-      <h3>Gateshead Business Map</h3>
-      <p>Every company registered in Gateshead borough, mapped from Companies House and enriched with IMD 2025 deprivation, sector churn, FSA food premises and UKRI innovation. Toggle intervention &amp; investment scores by LSOA and ward, and explore sector saturation.</p>
-      <div class="meta">Companies House &middot; IMD 2025 &middot; ONS &middot; FSA &middot; UKRI <span class="sep">&middot;</span> refreshed monthly</div>
-    </a>
-    <a class="card pin" href="people-population-community/indices-of-deprivation-2025.html">
-      <div class="pin-badge">Pinned</div>
-      <h3>IMD 2025 Deprivation Dashboard</h3>
-      <p>Gateshead deprivation across the seven IoD2025 domains at LSOA 2021 level &mdash; ranks, deciles and the supplementary IDACI / IDAOPI indices.</p>
-      <div class="meta">English Indices of Deprivation 2025 (MHCLG)</div>
-    </a>
+<section class="gc-hero">
+  <div class="gc-inner">
+    <h1>The Gateshead &amp; North East economy, in one place</h1>
+    <p class="lede">Interactive dashboards and briefings built from published official statistics &mdash; the economic evidence base for policy advisers, members, businesses and residents.</p>
+    <div class="gc-searchwrap">
+      <input id="gc-search" type="search" autocomplete="off" placeholder="Search dashboards &mdash; try &ldquo;deprivation&rdquo;, &ldquo;GVA&rdquo;, &ldquo;skills&rdquo;, &ldquo;wards&rdquo;&hellip;" aria-label="Search dashboards and briefings">
+      <div id="gc-searchmeta" class="gc-searchmeta" aria-live="polite"></div>
+    </div>
   </div>
 </section>
 
-<section class="topic">
-  <div class="topic-head">
-    <h2>Economy</h2>
-    <span class="ons">ONS topic &middot; regional accounts, GDP, GVA, prices</span>
+<main class="gc-wrap">
+  <div class="gc-disclaimer">
+    <b>Experimental analytical products &mdash; not official statistics.</b> These dashboards are built from published official statistics, but the derived measures (ranks, quartiles, indices, better/worse directions) are the author&rsquo;s analytical judgements and models are experimental. Treat with caution and verify figures against the source releases before using them to inform decisions. See the <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>.
   </div>
-  <div class="cards">
-    <a class="card" href="economy/productivity.html">
-      <h3>Gateshead Productivity &amp; GVA</h3>
-      <p>The borough's &pound;5bn economy &mdash; GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Built to absorb the imminent 2024 data.</p>
-      <div class="meta">0.49 MB <span class="sep">&middot;</span> ONS balanced GVA &amp; subregional productivity &middot; NOMIS</div>
-    </a>
-    <a class="card" href="economy/gdhi.html">
-      <h3>GDHI &mdash; Gateshead &amp; the North East</h3>
-      <p>Household income in one place. Official GDHI per head benchmarking, 1997&ndash;2023 &mdash; &pound;19,127 in 2023, &pound;5,709 below the UK average, 329th of 361 UK local authorities, vs the NECA seven and statistical neighbours &mdash; plus the small-area explorer across 3,427 UK areas (2010&ndash;2023): choropleth of all 126 Gateshead LSOAs, inequality ratios and full income-component breakdowns.</p>
-      <div class="meta">9.4 MB <span class="sep">&middot;</span> ONS GDHI estimates &middot; ELS regional GDHI per head 1997&ndash;2023</div>
-    </a>
-    <a class="card pin" href="economy/els-scorecard.html">
-      <h3>ELS scorecard &mdash; all local indicators</h3>
-      <p>Every ONS Explore Local Statistics indicator covering Gateshead &mdash; 88 indicators across 10 domains &mdash; ranked against all UK local authorities and benchmarked vs England/UK, the North East, NECA and statistical neighbours. Sortable scorecard plus per-indicator Explore view with trends, CIs and distributions.</p>
-      <div class="meta">290 KB <span class="sep">&middot;</span> ONS Explore Local Statistics &middot; 88 indicators &middot; 10 domains</div>
-    </a>
-  </div>
-</section>
 
-<section class="topic">
-  <div class="topic-head">
-    <h2>Business, industry and trade</h2>
-    <span class="ons">ONS topic &middot; sectors, business activity</span>
+  <div id="gc-vbar" class="gc-vbar">
+    <span class="stat">Loading&hellip;</span>
+    <span class="grow"></span>
+    <button id="gc-export" class="gc-vbtn" type="button" title="Download catalog.json with your verified ticks baked in, ready to commit">Export verified state</button>
+    <button id="gc-clearverify" class="gc-vbtn ghost" type="button" title="Discard local ticks and show the published state">Reset</button>
   </div>
-  <div class="cards">
-    <a class="card" href="business-industry-trade/gateshead-business-map.html">
-      <h3>Gateshead Business Map</h3>
-      <p>11,000+ companies registered in Gateshead borough, mapped from Companies House and enriched with IMD 2025 deprivation, ONS sector churn, FSA food premises, BRES jobs and UKRI innovation. Intervention &amp; investment scores per LSOA and ward, plus a sector-saturation lens.</p>
-      <div class="meta">Companies House + IMD 2025 + ONS + FSA + UKRI <span class="sep">&middot;</span> rebuilt monthly</div>
-    </a>
-    <a class="card" href="business-industry-trade/creative-industries.html">
-      <h3>North East Creative Industries (CCIS)</h3>
-      <p>DCMS creative sector business counts, employment and GVA across the seven North East Combined Authority local authorities. Companion to the CCIS Framework Data &amp; Evidence consultation.</p>
-      <div class="meta">92 KB <span class="sep">&middot;</span> DCMS Creative Industries Sector Economic Estimates</div>
-    </a>
-  </div>
-</section>
 
-<section class="topic">
-  <div class="topic-head">
-    <h2>People, population and community</h2>
-    <span class="ons">ONS topic &middot; population, housing, deprivation, health</span>
-  </div>
-  <div class="cards">
-    <a class="card" href="people-population-community/built-up-areas.html">
-      <h3>Gateshead Built-Up Areas</h3>
-      <p>Profile of the seven built-up areas inside Gateshead borough &mdash; Gateshead, Whickham, Blaydon, Birtley, Ryton, Crawcrook &amp; Greenside, Rowlands Gill. Population, house prices, employment, visitor economy, benchmarked against 1,395 England &amp; Wales BUAs.</p>
-      <div class="meta">1.35 MB <span class="sep">&middot;</span> ONS &ldquo;Understanding towns&rdquo;, May 2026</div>
-    </a>
-    <a class="card" href="people-population-community/indices-of-deprivation-2025.html">
-      <h3>Gateshead Deprivation &mdash; IMD 2025</h3>
-      <p>English Indices of Deprivation 2025 for Gateshead. All 22 wards and 126 neighbourhoods ranked, the seven domains ranked by national standing, an interactive deprivation map, and a social-value targeting matrix that separates depth of need from reach.</p>
-      <div class="meta">0.66 MB <span class="sep">&middot;</span> MHCLG IoD2025 &middot; ONS geography</div>
-    </a>
-  </div>
-</section>
+  <div id="gc-catalog"><!-- topics + cards rendered from catalog.json --></div>
+</main>
 
-<section class="topic">
-  <div class="topic-head">
-    <h2>Employment and labour market</h2>
-    <span class="ons">ONS topic &middot; jobs, earnings, skills</span>
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Open data from <a href="https://www.ons.gov.uk/">ONS</a>, <a href="https://www.nomisweb.co.uk/">NOMIS</a>, <a href="https://geoportal.statistics.gov.uk/">ONS Open Geography Portal</a>, <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-local-government">MHCLG</a>, HM Land Registry, DfE and DCMS. Produced by Economic Intelligence, Gateshead Council &middot; maintained by <a href="https://github.com/NAdamsGHC">NAdamsGHC</a>. The verified tick is a manual reviewer check, held in your browser until exported and committed &mdash; it is not an official-statistics kitemark.
   </div>
-  <div class="cards">
-    <a class="card" href="employment-labour-market/employer-skills-survey-2024.html">
-      <h3>North East Employer Skills &mdash; ESS 2024</h3>
-      <p>DfE Employer Skills Survey 2024: how North East employers compare with England&rsquo;s nine regions on vacancies, skills gaps, training, apprenticeships, future skill needs and AI. The North East tops England on apprenticeship engagement (38%) and upskilling need (68%) but sits bottom on AI adoption (11%). Regional pack &mdash; no Gateshead-level data, North East used as proxy.</p>
-      <div class="meta">36 KB <span class="sep">&middot;</span> DfE Employer Skills Survey 2024 (IFF Research)</div>
-    </a>
-  </div>
-</section>
-
-<section class="topic">
-  <div class="topic-head">
-    <h2>Policy</h2>
-    <span class="ons">Briefings &middot; government &amp; regional policy for the local economy</span>
-  </div>
-  <div class="cards">
-    <a class="card" href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/briefs/2026-07-policy-update/Gateshead%20Policy%20Update%20-%20July%202026.md">
-      <h3>Policy Update &mdash; July 2026</h3>
-      <p>New and changed government and regional policy affecting Gateshead&rsquo;s economy, checked against the team baseline on 3 July 2026: Universal Credit restructure and its claimant-series structural break, &pound;120m Northern Growth Strategy / Newcastle&ndash;Gateshead MDZ, the devolution funding architecture now live, IS-8 digital definition change, Code of Practice for Statistics 3.0, and sector notes on green, creative, AI and visitor economy. Word document and Markdown in <code>briefs/</code>.</p>
-      <div class="meta">Briefing &middot; Word + Markdown <span class="sep">&middot;</span> gov.uk &middot; parliament.uk &middot; ONS &middot; NE MSA</div>
-    </a>
-  </div>
-</section>
-
-<footer>
-  Open data from <a href="https://www.ons.gov.uk/">ONS</a>, <a href="https://www.nomisweb.co.uk/">NOMIS</a>, <a href="https://geoportal.statistics.gov.uk/">ONS Open Geography Portal</a>, <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-local-government">MHCLG</a>, HM Land Registry, and DCMS. Maintained by <a href="https://github.com/NAdamsGHC">NAdamsGHC</a>.
 </footer>
 
-</div>
+<script src="assets/ei.js"></script>
 </body>
 </html>

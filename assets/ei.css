@@ -1,0 +1,164 @@
+/* Gateshead Council · Economic Intelligence — shared brand system
+   Modelled on gateshead.gov.uk: PT Sans, #045a90 blue, #252525 masthead,
+   square corners, #404040 footer. Used by the landing page; the compact
+   inline variant (see the gateshead-dashboard skill) rethemes each product. */
+
+:root{
+  --gc-masthead:#252525;
+  --gc-blue:#045a90;
+  --gc-blue-dark:#0F3B5B;
+  --gc-blue-light:#0772b4;
+  --gc-green:#266427;
+  --gc-green-hover:#2f7e2f;
+  --gc-ink:#111;
+  --gc-text:#333;
+  --gc-bg:#ffffff;
+  --gc-panel:#f5f5f5;
+  --gc-line:#e5e5e5;
+  --gc-line-2:#cccccc;
+  --gc-footer:#404040;
+  --gc-verify:#2e7d32;
+  /* site theme accents (tags/chips) */
+  --gc-pink:#ED277C; --gc-yellow:#fcd94a; --gc-orange:#fec577;
+  --gc-purple:#7f0eba; --gc-lime:#95c11f; --gc-red:#d50000;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  color:var(--gc-text);background:var(--gc-bg);line-height:1.6;
+}
+a{color:var(--gc-blue);}
+a:hover{color:var(--gc-blue-dark);}
+:focus-visible{outline:2px solid var(--gc-blue);outline-offset:2px;}
+
+/* ---- Masthead (near-black corporate header) ---- */
+.gc-masthead{background:var(--gc-masthead);color:#fff;}
+.gc-masthead .gc-inner{
+  max-width:1200px;margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.gc-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;}
+.gc-logo .mark{
+  width:38px;height:38px;flex:0 0 38px;background:var(--gc-blue);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:19px;color:#fff;
+}
+.gc-logo .word{font-size:19px;font-weight:700;line-height:1.1;letter-spacing:.2px;}
+.gc-logo .word small{display:block;font-size:12px;font-weight:400;color:#cfd6dc;letter-spacing:.3px;}
+.gc-masthead .spacer{flex:1 1 auto;}
+.gc-masthead a.gc-home{color:#cfd6dc;text-decoration:none;font-size:13px;}
+.gc-masthead a.gc-home:hover{color:#fff;text-decoration:underline;}
+
+/* ---- Hero (Quays photo background + search) ---- */
+.gc-hero{
+  position:relative;color:#fff;
+  background:linear-gradient(180deg,rgba(9,20,36,.30),rgba(9,20,36,.78)),
+             url('assets/gateshead-quays.jpg') center 42%/cover no-repeat;
+}
+.gc-hero .gc-inner{max-width:1200px;margin:0 auto;padding:52px 24px 44px;}
+.gc-hero h1{font-size:34px;font-weight:700;line-height:1.15;text-shadow:0 1px 3px rgba(0,0,0,.5);max-width:900px;}
+.gc-hero p.lede{margin-top:10px;font-size:16px;max-width:760px;color:#eaf0f5;text-shadow:0 1px 2px rgba(0,0,0,.5);}
+.gc-searchwrap{margin-top:26px;max-width:680px;position:relative;}
+.gc-searchwrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:#5d6b7a;}
+#gc-search{
+  width:100%;font-family:inherit;font-size:16px;padding:15px 16px 15px 44px;
+  border:2px solid #fff;border-radius:0;color:var(--gc-ink);background:#fff;
+}
+#gc-search::placeholder{color:#6a7784;}
+.gc-searchmeta{margin-top:8px;font-size:13px;color:#dfe6ec;min-height:18px;text-shadow:0 1px 2px rgba(0,0,0,.5);}
+
+/* ---- Page body ---- */
+.gc-wrap{max-width:1200px;margin:0 auto;padding:30px 24px 10px;}
+.gc-disclaimer{
+  background:#fbf6e9;border:1px solid #e7d9b4;border-left:5px solid var(--gc-orange);
+  padding:12px 16px;font-size:13px;color:#4a3f24;margin-bottom:26px;
+}
+.gc-disclaimer a{color:var(--gc-blue);}
+
+.gc-topic{margin-bottom:30px;scroll-margin-top:16px;}
+.gc-topic-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
+  border-bottom:2px solid var(--gc-blue);padding-bottom:8px;margin-bottom:16px;
+}
+.gc-topic-head h2{font-size:20px;color:var(--gc-blue);font-weight:700;}
+.gc-topic-head .note{font-size:11px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;}
+.gc-topic-head .count{margin-left:auto;font-size:12px;color:#6a7784;}
+
+.gc-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;}
+.gc-card{
+  background:#fff;border:1px solid var(--gc-line);border-top:4px solid var(--gc-blue);
+  border-radius:0;padding:18px 18px 16px;display:flex;flex-direction:column;position:relative;
+  transition:box-shadow .12s ease,transform .12s ease;
+}
+.gc-card:hover{box-shadow:0 6px 20px rgba(4,90,144,.12);transform:translateY(-2px);}
+.gc-card.pinned{border-top-color:var(--gc-pink);}
+.gc-card .titlerow{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;padding-right:2px;}
+.gc-card h3{font-size:16px;color:var(--gc-blue);font-weight:700;line-height:1.25;flex:1;}
+.gc-card h3 a{color:inherit;text-decoration:none;}
+.gc-card h3 a:hover{text-decoration:underline;}
+.gc-card p.desc{font-size:13.5px;color:var(--gc-text);margin-bottom:12px;flex:1;}
+.gc-card .meta{font-size:11px;color:#6a7784;text-transform:uppercase;letter-spacing:.4px;margin-top:auto;}
+.gc-card .meta .sep{margin:0 6px;color:var(--gc-line-2);}
+.gc-pin-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  color:var(--gc-pink);border:1px solid #f3b7d3;padding:1px 8px;margin-bottom:8px;}
+.gc-card .actions{display:flex;align-items:center;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid var(--gc-line);}
+.gc-card .actions .grow{flex:1;}
+.gc-open{font-size:12.5px;font-weight:700;color:var(--gc-blue);text-decoration:none;text-transform:uppercase;letter-spacing:.4px;}
+.gc-open:hover{text-decoration:underline;}
+
+/* ---- Verified checkmark toggle ---- */
+.gc-verify{
+  display:inline-flex;align-items:center;gap:5px;cursor:pointer;user-select:none;
+  border:1px solid var(--gc-line-2);background:#fff;border-radius:0;
+  padding:3px 8px 3px 6px;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;
+  color:#6a7784;line-height:1;
+}
+.gc-verify svg{width:15px;height:15px;}
+.gc-verify:hover{border-color:var(--gc-verify);color:var(--gc-verify);}
+.gc-verify[aria-pressed="true"]{background:var(--gc-verify);border-color:var(--gc-verify);color:#fff;}
+.gc-verify[aria-pressed="true"]:hover{background:#256a29;}
+
+/* ---- Copy-link button (chain icon) ---- */
+.gc-copy{
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
+  width:30px;height:30px;border:1px solid var(--gc-line-2);background:#fff;border-radius:0;color:#5d6b7a;
+}
+.gc-copy svg{width:16px;height:16px;}
+.gc-copy:hover{border-color:var(--gc-blue);color:var(--gc-blue);}
+.gc-copy.copied{border-color:var(--gc-verify);color:var(--gc-verify);}
+.gc-toast{
+  position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(12px);
+  background:var(--gc-masthead);color:#fff;padding:10px 18px;font-size:13.5px;border-radius:0;
+  opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;z-index:50;
+}
+.gc-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ---- Verification toolbar ---- */
+.gc-vbar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+  background:var(--gc-panel);border:1px solid var(--gc-line);padding:10px 14px;margin-bottom:22px;font-size:13px;
+}
+.gc-vbar .stat{color:var(--gc-text);}
+.gc-vbar .stat b{color:var(--gc-verify);}
+.gc-vbar .grow{flex:1;}
+.gc-vbtn{
+  font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer;border-radius:0;
+  padding:7px 12px;border:1px solid var(--gc-blue);background:#fff;color:var(--gc-blue);
+}
+.gc-vbtn:hover{background:var(--gc-blue);color:#fff;}
+.gc-vbtn.ghost{border-color:var(--gc-line-2);color:#6a7784;}
+.gc-vbtn.ghost:hover{background:#e9edf1;color:var(--gc-text);}
+
+.gc-noresults{padding:30px 6px;color:#6a7784;font-style:italic;}
+
+/* ---- Footer ---- */
+.gc-footer{background:var(--gc-footer);color:#e6e9ec;margin-top:34px;}
+.gc-footer .gc-inner{max-width:1200px;margin:0 auto;padding:22px 24px;font-size:12.5px;}
+.gc-footer a{color:#bfe0f5;}
+.gc-footer a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .gc-hero h1{font-size:26px;}
+  .gc-cards{grid-template-columns:1fr;}
+}

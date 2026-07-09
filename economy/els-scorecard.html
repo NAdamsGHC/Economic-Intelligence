@@ -6,7 +6,7 @@
 <title>Gateshead local indicators — ELS scorecard — Gateshead Economic Intelligence</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
-:root{--navy:#0b2545;--teal:#13767a;--teal2:#1d9aa0;--amber:#e8a23d;--ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;--good:#1a7f37;--bad:#c0392b;}
+:root{--navy:#045a90;--teal:#045a90;--teal2:#0772b4;--amber:#e8a23d;--ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;--good:#1a7f37;--bad:#c0392b;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;padding:24px;}
 .wrap{max-width:1180px;margin:0 auto;}
@@ -92,6 +92,81 @@ footer a{color:var(--teal);text-decoration:none;}
 </style>
 </head>
 <body>
+<!-- Gateshead Council · Economic Intelligence brand bar (self-contained; portable) -->
+<style>
+.gcbar{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:#252525;color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap;
+  border-bottom:3px solid #045a90;position:relative;z-index:2000;}
+.gcbar *{box-sizing:border-box;}
+.gcbar a.gcbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+.gcbar .gcbar-mark{width:32px;height:32px;background:#045a90;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:16px;color:#fff;}
+.gcbar .gcbar-word{font-size:16px;font-weight:700;line-height:1.05;letter-spacing:.2px;}
+.gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
+.gcbar .gcbar-spacer{flex:1 1 auto;}
+.gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
+.gcbar .gcbar-verify{display:inline-flex;align-items:center;gap:5px;border:1px solid #6a7784;
+  background:transparent;color:#cfd6dc;padding:5px 9px 5px 7px;font-size:11px;font-weight:700;
+  letter-spacing:.3px;text-transform:uppercase;}
+.gcbar .gcbar-verify svg{width:14px;height:14px;}
+.gcbar .gcbar-verify:hover{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-verify[aria-pressed="true"]{background:#2e7d32;border-color:#2e7d32;color:#fff;}
+.gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
+.gcbar .gcbar-copy svg{width:15px;height:15px;}
+.gcbar .gcbar-copy:hover{border-color:#0772b4;color:#8fd0f5;}
+.gcbar .gcbar-copy.gcbar-copied{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-home{color:#cfd6dc;text-decoration:none;font-size:12px;}
+.gcbar .gcbar-home:hover{color:#fff;text-decoration:underline;}
+.gcbar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.gcbar-toast.gcbar-show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media print{.gcbar,.gcbar-toast{display:none !important;}}
+</style>
+<div class="gcbar" data-id="els-scorecard">
+  <a class="gcbar-logo" href="../index.html" title="Back to the Economic Intelligence landing page">
+    <span class="gcbar-mark">G</span>
+    <span class="gcbar-word">Gateshead Council<small>Economic Intelligence</small></span>
+  </a>
+  <span class="gcbar-spacer"></span>
+  <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
+  <button class="gcbar-verify" type="button" aria-pressed="false" title="Toggle once you have manually verified this product">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Unverified</span>
+  </button>
+  <button class="gcbar-copy" type="button" aria-label="Copy direct link to this dashboard" title="Copy direct link to this dashboard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var bar=document.currentScript.previousElementSibling;
+  while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
+  if(!bar)return;
+  var id=bar.getAttribute('data-id'),KEY='ei-verified-v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return{};}}
+  function save(o){try{localStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
+  var vbtn=bar.querySelector('.gcbar-verify'),span=vbtn.querySelector('span');
+  function paint(){var o=load(),on=o[id]&&o[id].verified;vbtn.setAttribute('aria-pressed',on?'true':'false');
+    span.textContent=on?('Verified'+(o[id].date?' '+o[id].date:'')):'Unverified';}
+  paint();
+  window.addEventListener('storage',function(e){if(e.key===KEY)paint();});
+  vbtn.addEventListener('click',function(){var o=load(),on=!(o[id]&&o[id].verified);
+    o[id]={verified:on,date:on?new Date().toISOString().slice(0,10):null};save(o);paint();});
+  var toast;
+  function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
+    toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
+  bar.querySelector('.gcbar-copy').addEventListener('click',function(){
+    var btn=this,url=location.origin+location.pathname;
+    var ok=function(){btn.classList.add('gcbar-copied');say('Link copied — opens this dashboard directly');setTimeout(function(){btn.classList.remove('gcbar-copied');},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){leg(url);ok();});}else{leg(url);ok();}
+    function leg(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+<!-- /Gateshead brand bar -->
+
+
 <div class="wrap">
 
 <header>
