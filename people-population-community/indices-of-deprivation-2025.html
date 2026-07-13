@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 <title>Gateshead Deprivation Intelligence — IMD 2025</title>
 <style>
 /* required styles */
@@ -668,23 +669,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 
 :root{
-  --ink:#0b2230; --ink2:#13384c; --panel:#ffffff; --bg:#eef2f5; --line:#dde5ea;
-  --muted:#5d7280; --accent:#0e7c86; --accent2:#0a5b63; --warn:#c0392b;
+  --ink:#1c2733; --ink2:#13384c; --panel:#ffffff; --bg:#f4f6f9; --line:#e2e8ee;
+  --muted:#5d6b7a; --accent:#045a90; --accent2:#03466f; --warn:#c0392b;
   --d1:#7f0000;--d2:#b30016;--d3:#e8453c;--d4:#f88c5a;--d5:#fdca7f;
   --d6:#d7e88a;--d7:#9fd06a;--d8:#56b35d;--d9:#2a8a4f;--d10:#0d6b3f;
   --shadow:0 1px 2px rgba(11,34,48,.06),0 4px 16px rgba(11,34,48,.06);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45;font-size:15px}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45;font-size:15px}
 a{color:var(--accent)}
 .wrap{max-width:1240px;margin:0 auto;padding:0 18px}
-header.top{background:linear-gradient(135deg,#0b2230,#13384c 60%,#0e6b73);color:#fff;padding:26px 0 20px}
+header.top{background:linear-gradient(135deg,#1c2733,#13384c 60%,#0e6b73);color:#fff;padding:26px 0 20px}
 header.top h1{margin:0 0 4px;font-size:25px;font-weight:700;letter-spacing:.2px}
 header.top .sub{color:#bcd6dc;font-size:14px;max-width:780px}
 header.top .pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#eaf6f7;
   border-radius:999px;padding:3px 11px;font-size:12px;margin-top:10px;margin-right:6px}
-nav.tabs{position:sticky;top:0;z-index:500;background:#0b2230;border-bottom:1px solid #1d4258}
+nav.tabs{position:sticky;top:0;z-index:500;background:#1c2733;border-bottom:1px solid #1d4258}
 nav.tabs .wrap{display:flex;gap:2px;overflow-x:auto}
 nav.tabs button{background:transparent;border:0;color:#9fc0cb;font-size:14px;font-weight:600;padding:13px 16px;cursor:pointer;
   border-bottom:3px solid transparent;white-space:nowrap}
@@ -711,7 +712,7 @@ th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}
 th{font-size:11.5px;text-transform:uppercase;letter-spacing:.3px;color:var(--muted);cursor:pointer;user-select:none;white-space:nowrap}
 th.num,td.num{text-align:right}
 tbody tr:hover{background:#f5f9fb}
-.bar{height:9px;border-radius:5px;background:#eef2f5;overflow:hidden;min-width:60px}
+.bar{height:9px;border-radius:5px;background:#f4f6f9;overflow:hidden;min-width:60px}
 .bar>span{display:block;height:100%;border-radius:5px}
 .rankchip{display:inline-block;min-width:24px;text-align:center;font-weight:700;border-radius:6px;padding:1px 6px;color:#fff;font-size:12px}
 .dec{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:5px;color:#fff;font-weight:700;font-size:12px}
@@ -766,12 +767,6 @@ details.calc p{margin:6px 0}
 .gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
 .gcbar .gcbar-spacer{flex:1 1 auto;}
 .gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
-.gcbar .gcbar-verify{display:inline-flex;align-items:center;gap:5px;border:1px solid #6a7784;
-  background:transparent;color:#cfd6dc;padding:5px 9px 5px 7px;font-size:11px;font-weight:700;
-  letter-spacing:.3px;text-transform:uppercase;}
-.gcbar .gcbar-verify svg{width:14px;height:14px;}
-.gcbar .gcbar-verify:hover{border-color:#4caf50;color:#a5d6a7;}
-.gcbar .gcbar-verify[aria-pressed="true"]{background:#2e7d32;border-color:#2e7d32;color:#fff;}
 .gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
   border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
 .gcbar .gcbar-copy svg{width:15px;height:15px;}
@@ -792,9 +787,6 @@ details.calc p{margin:6px 0}
   </a>
   <span class="gcbar-spacer"></span>
   <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
-  <button class="gcbar-verify" type="button" aria-pressed="false" title="Toggle once you have manually verified this product">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Unverified</span>
-  </button>
   <button class="gcbar-copy" type="button" aria-label="Copy direct link to this dashboard" title="Copy direct link to this dashboard">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
   </button>
@@ -804,16 +796,6 @@ details.calc p{margin:6px 0}
   var bar=document.currentScript.previousElementSibling;
   while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
   if(!bar)return;
-  var id=bar.getAttribute('data-id'),KEY='ei-verified-v1';
-  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return{};}}
-  function save(o){try{localStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
-  var vbtn=bar.querySelector('.gcbar-verify'),span=vbtn.querySelector('span');
-  function paint(){var o=load(),on=o[id]&&o[id].verified;vbtn.setAttribute('aria-pressed',on?'true':'false');
-    span.textContent=on?('Verified'+(o[id].date?' '+o[id].date:'')):'Unverified';}
-  paint();
-  window.addEventListener('storage',function(e){if(e.key===KEY)paint();});
-  vbtn.addEventListener('click',function(){var o=load(),on=!(o[id]&&o[id].verified);
-    o[id]={verified:on,date:on?new Date().toISOString().slice(0,10):null};save(o);paint();});
   var toast;
   function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
     toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
@@ -5857,7 +5839,7 @@ function selectWard(cd){
   if(wardRadarChart)wardRadarChart.destroy();
   wardRadarChart=new Chart($('#wardRadar'),{type:'radar',data:{labels,datasets:[
     {label:w.ward_nm,data:wd,backgroundColor:'rgba(192,57,43,.2)',borderColor:'#c0392b',pointBackgroundColor:'#c0392b',borderWidth:2},
-    {label:'Borough avg',data:bd,backgroundColor:'rgba(14,124,134,.08)',borderColor:'#0e7c86',borderDash:[5,4],pointRadius:0,borderWidth:1.5}
+    {label:'Borough avg',data:bd,backgroundColor:'rgba(4,90,144,.08)',borderColor:'#045a90',borderDash:[5,4],pointRadius:0,borderWidth:1.5}
   ]},options:{plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}},
     tooltip:{callbacks:{label:c=>c.dataset.label+': avg decile '+fmt1(10-c.parsed.r)}}},
     scales:{r:{min:0,max:10,ticks:{display:false},pointLabels:{font:{size:10}}}}}});
@@ -5914,7 +5896,7 @@ function indCard(k,ppl,rate,den){
     let dec;
     if(geo==='lsoa'){dec=lsoaData[f.properties.LSOA21CD][metric];}
     else{dec=wardData[f.properties.WD24CD].dec[wardDecKey[metric]];}
-    return {fillColor:colorOf(dec),weight:geo==='ward'?1.6:0.7,color:geo==='ward'?'#0b2230':'#7f8c95',fillOpacity:.82};
+    return {fillColor:colorOf(dec),weight:geo==='ward'?1.6:0.7,color:geo==='ward'?'#1c2733':'#7f8c95',fillOpacity:.82};
   }
   function onEach(f,lyr){
     let html;
@@ -5962,7 +5944,7 @@ function indCard(k,ppl,rate,den){
     options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const p=c.raw;return `${p.nm}: IMD ${fmt1(p.y)}, ${fmt(p.x)} income-deprived`;}}}},
       scales:{x:{title:{display:true,text:'income-deprived residents (reach) →'},beginAtZero:true},
         y:{title:{display:true,text:'IMD score (intensity) →'},beginAtZero:true}}},
-    plugins:[{afterDatasetsDraw(chart){const ctx=chart.ctx;ctx.font='10px Segoe UI';ctx.fillStyle='#0b2230';
+    plugins:[{afterDatasetsDraw(chart){const ctx=chart.ctx;ctx.font='10px Segoe UI';ctx.fillStyle='#1c2733';
       chart.getDatasetMeta(0).data.forEach((pt,i)=>{const p=pts[i];if(p.rank<=8||p.x>4000){ctx.fillText(p.nm,pt.x+pt.options.radius+2,pt.y+3);}});}}]});
 
   // tiers

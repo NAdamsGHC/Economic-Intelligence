@@ -54,7 +54,7 @@ a:hover{color:var(--gc-blue-dark);}
 .gc-hero{
   position:relative;color:#fff;
   background:linear-gradient(180deg,rgba(9,20,36,.30),rgba(9,20,36,.78)),
-             url('assets/gateshead-quays.jpg') center 42%/cover no-repeat;
+             url('gateshead-quays.jpg') center 42%/cover no-repeat;
 }
 .gc-hero .gc-inner{max-width:1200px;margin:0 auto;padding:52px 24px 44px;}
 .gc-hero h1{font-size:34px;font-weight:700;line-height:1.15;text-shadow:0 1px 3px rgba(0,0,0,.5);max-width:900px;}
@@ -77,6 +77,9 @@ a:hover{color:var(--gc-blue-dark);}
 .gc-disclaimer a{color:var(--gc-blue);}
 
 .gc-topic{margin-bottom:30px;scroll-margin-top:16px;}
+.gc-topic-pinned .gc-topic-head{border-bottom-color:var(--gc-pink);}
+.gc-topic-pinned .gc-topic-head h2{color:var(--gc-pink);}
+.gc-topic-pinned .gc-card{border-top-color:var(--gc-pink);}
 .gc-topic-head{
   display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
   border-bottom:2px solid var(--gc-blue);padding-bottom:8px;margin-bottom:16px;
@@ -107,18 +110,6 @@ a:hover{color:var(--gc-blue-dark);}
 .gc-open{font-size:12.5px;font-weight:700;color:var(--gc-blue);text-decoration:none;text-transform:uppercase;letter-spacing:.4px;}
 .gc-open:hover{text-decoration:underline;}
 
-/* ---- Verified checkmark toggle ---- */
-.gc-verify{
-  display:inline-flex;align-items:center;gap:5px;cursor:pointer;user-select:none;
-  border:1px solid var(--gc-line-2);background:#fff;border-radius:0;
-  padding:3px 8px 3px 6px;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;
-  color:#6a7784;line-height:1;
-}
-.gc-verify svg{width:15px;height:15px;}
-.gc-verify:hover{border-color:var(--gc-verify);color:var(--gc-verify);}
-.gc-verify[aria-pressed="true"]{background:var(--gc-verify);border-color:var(--gc-verify);color:#fff;}
-.gc-verify[aria-pressed="true"]:hover{background:#256a29;}
-
 /* ---- Copy-link button (chain icon) ---- */
 .gc-copy{
   display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
@@ -133,22 +124,6 @@ a:hover{color:var(--gc-blue-dark);}
   opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;z-index:50;
 }
 .gc-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-
-/* ---- Verification toolbar ---- */
-.gc-vbar{
-  display:flex;flex-wrap:wrap;align-items:center;gap:12px;
-  background:var(--gc-panel);border:1px solid var(--gc-line);padding:10px 14px;margin-bottom:22px;font-size:13px;
-}
-.gc-vbar .stat{color:var(--gc-text);}
-.gc-vbar .stat b{color:var(--gc-verify);}
-.gc-vbar .grow{flex:1;}
-.gc-vbtn{
-  font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer;border-radius:0;
-  padding:7px 12px;border:1px solid var(--gc-blue);background:#fff;color:var(--gc-blue);
-}
-.gc-vbtn:hover{background:var(--gc-blue);color:#fff;}
-.gc-vbtn.ghost{border-color:var(--gc-line-2);color:#6a7784;}
-.gc-vbtn.ghost:hover{background:#e9edf1;color:var(--gc-text);}
 
 .gc-noresults{padding:30px 6px;color:#6a7784;font-style:italic;}
 

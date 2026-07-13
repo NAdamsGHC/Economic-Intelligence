@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 <title>Gateshead local indicators — ELS scorecard — Gateshead Economic Intelligence</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
 :root{--navy:#045a90;--teal:#045a90;--teal2:#0772b4;--amber:#e8a23d;--ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;--good:#1a7f37;--bad:#c0392b;}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;padding:24px;}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;padding:24px;}
 .wrap{max-width:1180px;margin:0 auto;}
 header{border-left:6px solid var(--teal);padding:4px 0 4px 16px;margin-bottom:8px;}
 header h1{font-size:25px;color:var(--navy);font-weight:700;}
@@ -105,12 +106,6 @@ footer a{color:var(--teal);text-decoration:none;}
 .gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
 .gcbar .gcbar-spacer{flex:1 1 auto;}
 .gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
-.gcbar .gcbar-verify{display:inline-flex;align-items:center;gap:5px;border:1px solid #6a7784;
-  background:transparent;color:#cfd6dc;padding:5px 9px 5px 7px;font-size:11px;font-weight:700;
-  letter-spacing:.3px;text-transform:uppercase;}
-.gcbar .gcbar-verify svg{width:14px;height:14px;}
-.gcbar .gcbar-verify:hover{border-color:#4caf50;color:#a5d6a7;}
-.gcbar .gcbar-verify[aria-pressed="true"]{background:#2e7d32;border-color:#2e7d32;color:#fff;}
 .gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
   border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
 .gcbar .gcbar-copy svg{width:15px;height:15px;}
@@ -131,9 +126,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </a>
   <span class="gcbar-spacer"></span>
   <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
-  <button class="gcbar-verify" type="button" aria-pressed="false" title="Toggle once you have manually verified this product">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Unverified</span>
-  </button>
   <button class="gcbar-copy" type="button" aria-label="Copy direct link to this dashboard" title="Copy direct link to this dashboard">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
   </button>
@@ -143,16 +135,6 @@ footer a{color:var(--teal);text-decoration:none;}
   var bar=document.currentScript.previousElementSibling;
   while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
   if(!bar)return;
-  var id=bar.getAttribute('data-id'),KEY='ei-verified-v1';
-  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return{};}}
-  function save(o){try{localStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
-  var vbtn=bar.querySelector('.gcbar-verify'),span=vbtn.querySelector('span');
-  function paint(){var o=load(),on=o[id]&&o[id].verified;vbtn.setAttribute('aria-pressed',on?'true':'false');
-    span.textContent=on?('Verified'+(o[id].date?' '+o[id].date:'')):'Unverified';}
-  paint();
-  window.addEventListener('storage',function(e){if(e.key===KEY)paint();});
-  vbtn.addEventListener('click',function(){var o=load(),on=!(o[id]&&o[id].verified);
-    o[id]={verified:on,date:on?new Date().toISOString().slice(0,10):null};save(o);paint();});
   var toast;
   function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
     toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}

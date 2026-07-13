@@ -17,9 +17,7 @@
       "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Built to absorb the imminent 2024 data.",
       "sources": "ONS balanced GVA & subregional productivity · NOMIS",
       "keywords": ["gva", "productivity", "output", "economy", "sectors", "benchmarking"],
-      "pinned": false,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": false
     },
     {
       "id": "gdhi",
@@ -29,9 +27,7 @@
       "description": "Household income in one place. Official GDHI per head benchmarking, 1997–2023 — £19,127 in 2023, £5,709 below the UK average, 329th of 361 UK local authorities, vs the NECA seven and statistical neighbours — plus the small-area explorer across 3,427 UK areas (2010–2023): choropleth of all 126 Gateshead LSOAs, inequality ratios and full income-component breakdowns.",
       "sources": "ONS GDHI estimates · ELS regional GDHI per head 1997–2023",
       "keywords": ["gdhi", "income", "household", "disposable", "lsoa", "inequality"],
-      "pinned": false,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": false
     },
     {
       "id": "els-scorecard",
@@ -41,9 +37,7 @@
       "description": "Every ONS Explore Local Statistics indicator covering Gateshead — 88 indicators across 10 domains — ranked against all UK local authorities and benchmarked vs England/UK, the North East, NECA and statistical neighbours. Sortable scorecard plus per-indicator Explore view with trends, CIs and distributions.",
       "sources": "ONS Explore Local Statistics · 88 indicators · 10 domains",
       "keywords": ["els", "scorecard", "indicators", "benchmarking", "rank"],
-      "pinned": false,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": false
     },
     {
       "id": "business-map",
@@ -53,9 +47,7 @@
       "description": "11,000+ companies registered in Gateshead borough, mapped from Companies House and enriched with IMD 2025 deprivation, ONS sector churn, FSA food premises, BRES jobs and UKRI innovation. Intervention & investment scores per LSOA and ward, high-streets lens on Local Plan centres, plus sector saturation.",
       "sources": "Companies House · IMD 2025 · ONS · FSA · UKRI · rebuilt monthly",
       "keywords": ["business", "companies", "map", "high street", "sectors", "churn", "startups"],
-      "pinned": true,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": true
     },
     {
       "id": "creative-industries",
@@ -65,9 +57,7 @@
       "description": "DCMS creative sector business counts, employment and GVA across the seven North East Combined Authority local authorities. Companion to the CCIS Framework Data & Evidence consultation.",
       "sources": "DCMS Creative Industries Sector Economic Estimates",
       "keywords": ["creative", "culture", "dcms", "ccis", "sectors"],
-      "pinned": false,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": false
     },
     {
       "id": "built-up-areas",
@@ -77,9 +67,7 @@
       "description": "Profile of the seven built-up areas inside Gateshead borough — Gateshead, Whickham, Blaydon, Birtley, Ryton, Crawcrook & Greenside, Rowlands Gill. Population, house prices, employment, visitor economy, benchmarked against 1,395 England & Wales BUAs.",
       "sources": "ONS \"Understanding towns\", May 2026",
       "keywords": ["towns", "bua", "built-up", "place", "house prices", "whickham", "blaydon", "birtley"],
-      "pinned": false,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": false
     },
     {
       "id": "imd-2025",
@@ -89,9 +77,7 @@
       "description": "English Indices of Deprivation 2025 for Gateshead. All 22 wards and 126 neighbourhoods ranked, the seven domains ranked by national standing, an interactive deprivation map, and a social-value targeting matrix that separates depth of need from reach. Includes the supplementary IDACI / IDAOPI indices.",
       "sources": "MHCLG IoD2025 · ONS geography",
       "keywords": ["imd", "deprivation", "iod", "wards", "lsoa", "idaci", "idaopi"],
-      "pinned": true,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": true
     },
     {
       "id": "employer-skills-2024",
@@ -101,9 +87,7 @@
       "description": "DfE Employer Skills Survey 2024: how North East employers compare with England's nine regions on vacancies, skills gaps, training, apprenticeships, future skill needs and AI. The North East tops England on apprenticeship engagement (38%) and upskilling need (68%) but sits bottom on AI adoption (11%). Regional pack — no Gateshead-level data, North East used as proxy.",
       "sources": "DfE Employer Skills Survey 2024 (IFF Research)",
       "keywords": ["skills", "employers", "training", "apprenticeships", "vacancies", "ai"],
-      "pinned": false,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": false
     },
     {
       "id": "policy-2026-07",
@@ -114,9 +98,7 @@
       "description": "What changed in government and regional policy for Gateshead's economy, checked against the team baseline on 3 July 2026: the April 2026 Universal Credit restructure (a structural break in claimant data), £120m Northern Growth Strategy funding and the proposed Newcastle–Gateshead Mayoral Development Zone (views close 31 July), the live devolution funding architecture, IS-8 definition changes, and Code of Practice for Statistics 3.0. Word document and Markdown in briefs/.",
       "sources": "Briefing · Word + Markdown · gov.uk · parliament.uk · ONS · NE MSA",
       "keywords": ["policy", "briefing", "devolution", "universal credit", "mdz", "growth strategy"],
-      "pinned": true,
-      "verified": false,
-      "verifiedDate": null
+      "pinned": true
     }
   ]
 }
