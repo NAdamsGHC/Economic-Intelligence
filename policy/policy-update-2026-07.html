@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Policy update — July 2026 — Gateshead Economic Intelligence</title>
+<style>
+/* Gateshead Council · Economic Intelligence — policy update, document skin.
+   Corporate tokens (PT Sans, #045a90, #252525 masthead, square corners) on a
+   PDF-viewer canvas: grey surround, white sheet, print-clean. Self-contained. */
+:root{
+  --gc-masthead:#252525; --gc-blue:#045a90; --gc-blue-dark:#0F3B5B; --gc-blue-light:#0772b4;
+  --gc-ink:#111; --gc-text:#333; --gc-panel:#f5f5f5; --gc-line:#e5e5e5; --gc-line-2:#ccc;
+  --gc-red:#d50000; --gc-canvas:#525659;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:var(--gc-canvas);color:var(--gc-text);line-height:1.6;}
+a{color:var(--gc-blue);}
+a:hover{color:var(--gc-blue-dark);}
+:focus-visible{outline:2px solid var(--gc-blue);outline-offset:2px;}
+
+.canvas{padding:28px 16px 56px;}
+.sheet{
+  max-width:880px;margin:0 auto;background:#fff;border-radius:0;
+  box-shadow:0 1px 3px rgba(0,0,0,.35),0 12px 40px rgba(0,0,0,.30);
+  padding:58px 68px 46px;
+}
+@media(max-width:720px){.sheet{padding:34px 22px 30px;}.canvas{padding:14px 6px 40px;}}
+
+.kicker{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gc-blue);}
+h1{font-size:31px;color:var(--gc-blue);line-height:1.15;margin:6px 0 10px;}
+.docmeta{font-size:13px;color:#5d6b7a;border-bottom:2px solid var(--gc-blue);padding-bottom:14px;margin-bottom:18px;}
+.docmeta b{color:var(--gc-ink);}
+.lede{font-size:14.5px;color:var(--gc-text);margin-bottom:8px;}
+
+h2{font-size:20px;color:var(--gc-blue);margin:34px 0 10px;line-height:1.25;scroll-margin-top:70px;}
+h3{font-size:15.5px;color:var(--gc-ink);margin:20px 0 6px;}
+p{font-size:15px;margin:0 0 12px;}
+strong{color:var(--gc-ink);}
+ul,ol{margin:0 0 12px 22px;font-size:15px;}
+li{margin-bottom:6px;}
+.small{font-size:12.5px;color:#5d6b7a;}
+
+/* Executive summary — 1.5 spacing, bold lead phrases link to sections */
+.execsum li{line-height:1.75;margin-bottom:10px;}
+.execsum a.lead{font-weight:700;text-decoration:underline;}
+
+/* Colour convention: red marks an item with an action AND a deadline — nothing else. */
+.deadline,a.deadline{color:var(--gc-red);font-weight:700;}
+.key{border:1px solid #f3b7b7;border-left:5px solid var(--gc-red);background:#fdf3f3;
+  padding:12px 16px;margin:14px 0 18px;font-size:14px;color:#4a2424;}
+.key b,.key strong{color:var(--gc-red);}
+
+/* Neutral caveat / note panel */
+.note{background:var(--gc-panel);border:1px solid var(--gc-line);border-left:5px solid var(--gc-blue);
+  padding:12px 16px;margin:14px 0 18px;font-size:14px;}
+.note b{color:var(--gc-ink);}
+
+/* Implications block */
+.lens{background:var(--gc-panel);border:1px solid var(--gc-line);padding:16px 18px;margin:16px 0 20px;}
+.lens h4{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gc-blue);margin:0 0 8px;}
+.lens ul{margin-bottom:0;}
+.lens li{font-size:14px;}
+
+/* Objective tags */
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;border:1px solid var(--gc-line-2);
+  color:var(--gc-blue-dark);background:#fff;padding:1px 7px;margin-left:4px;vertical-align:middle;white-space:nowrap;}
+
+table{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:14px;}
+th{background:var(--gc-panel);color:var(--gc-ink);text-align:left;font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;}
+th,td{border:1px solid var(--gc-line);padding:8px 12px;vertical-align:top;}
+td.num{text-align:right;}
+caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding-top:6px;}
+
+.docfoot{border-top:2px solid var(--gc-blue);margin-top:34px;padding-top:14px;font-size:12.5px;color:#5d6b7a;}
+.sources li{font-size:13.5px;margin-bottom:4px;}
+
+@media print{
+  body{background:#fff;}
+  .canvas{padding:0;}
+  .sheet{box-shadow:none;max-width:none;padding:0;}
+  a{color:var(--gc-blue);text-decoration:none;}
+  h2{page-break-after:avoid;}
+  table,.lens,.note,.key{page-break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- Gateshead Council · Economic Intelligence brand bar (self-contained; portable) -->
+<style>
+.gcbar{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:#252525;color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap;
+  border-bottom:3px solid #045a90;position:relative;z-index:2000;}
+.gcbar *{box-sizing:border-box;}
+.gcbar a.gcbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+.gcbar .gcbar-mark{width:32px;height:32px;background:#045a90;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:16px;color:#fff;}
+.gcbar .gcbar-word{font-size:16px;font-weight:700;line-height:1.05;letter-spacing:.2px;}
+.gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
+.gcbar .gcbar-spacer{flex:1 1 auto;}
+.gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
+.gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
+.gcbar .gcbar-copy svg{width:15px;height:15px;}
+.gcbar .gcbar-copy:hover{border-color:#0772b4;color:#8fd0f5;}
+.gcbar .gcbar-copy.gcbar-copied{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-home{color:#cfd6dc;text-decoration:none;font-size:12px;}
+.gcbar .gcbar-home:hover{color:#fff;text-decoration:underline;}
+.gcbar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.gcbar-toast.gcbar-show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media print{.gcbar,.gcbar-toast{display:none !important;}}
+</style>
+<div class="gcbar" data-id="policy-2026-07">
+  <a class="gcbar-logo" href="../index.html" title="Back to the Economic Intelligence landing page">
+    <span class="gcbar-mark">G</span>
+    <span class="gcbar-word">Gateshead Council<small>Economic Intelligence</small></span>
+  </a>
+  <span class="gcbar-spacer"></span>
+  <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
+  <button class="gcbar-copy" type="button" aria-label="Copy direct link to this document" title="Copy direct link to this document">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var bar=document.currentScript.previousElementSibling;
+  while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
+  if(!bar)return;
+  var toast;
+  function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
+    toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
+  bar.querySelector('.gcbar-copy').addEventListener('click',function(){
+    var btn=this,url=location.origin+location.pathname;
+    var ok=function(){btn.classList.add('gcbar-copied');say('Link copied — opens this document directly');setTimeout(function(){btn.classList.remove('gcbar-copied');},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){leg(url);ok();});}else{leg(url);ok();}
+    function leg(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+<!-- /Gateshead brand bar -->
+
+<div class="canvas">
+<main class="sheet">
+
+<div class="kicker">Gateshead Council &middot; Economic Intelligence</div>
+<h1>Policy update — July 2026</h1>
+<div class="docmeta">
+  <b>Second edition &middot; 13 July 2026</b> &middot; PUBLIC — compiled entirely from published official sources &middot; replaces the 3 July 2026 edition (retained in <a href="https://github.com/NAdamsGHC/Economic-Intelligence/tree/main/briefs/2026-07-policy-update">briefs/</a>)
+</div>
+
+<p class="lede">New and changed government and regional policy affecting Gateshead's economy. Findings are checked against the strategy and guidance documents the team holds as current — the recorded policy landscape, with edition dates — listed with their status in <a href="#s9">section 9</a>. Sourced from gov.uk, parliament.uk, ONS and North East Mayoral Strategic Authority publications unless labelled otherwise; items reported only in the press are flagged. Re-verify dates before quoting in anything published.</p>
+<p class="lede small">Colour convention: <span class="deadline">red</span> marks an item with an action <em>and</em> a deadline — nothing else. Objective tags (<span class="tag">L-O1</span> <span class="tag">D-O2</span> <span class="tag">V-O2</span>…) reference the Policy Advisors' 2026 Local, Digital and Visitor objectives.</p>
+
+<h2 id="exec">Executive summary</h2>
+<ul class="execsum">
+  <li><a class="lead deadline" href="#s2">Eighteen days to respond to named money for Gateshead.</a> The Northern Growth Strategy commits £120m to the North East MSA working with Newcastle and Gateshead councils, anchored on the proposed Newcastle–Gateshead Mayoral Development Zone (Gateshead Quays, Forth Yards). The invitation for views <span class="deadline">closes 31 July 2026</span>; the MDZ itself remains proposed, with boundaries yet to be formally defined.</li>
+  <li><a class="lead" href="#s1">The structural break in our claimant data stands.</a> Universal Credit changed shape on 6 April 2026 — the health element roughly halved and frozen for most new claims (£217.26 per assessment period, against £429.80 protected) — so post-April movement in Gateshead's health-related caseload may be policy-driven, not labour-market-driven. Still the biggest interpretive caveat on our 2026 series.</li>
+  <li><a class="lead" href="#s1">Gateshead Council is a named partner in the North East Pathfinder.</a> Employment support is being rebuilt around jobcentres: the National Careers Service merges into Jobcentre Plus on 1 October 2026, WorkWell goes England-wide from November, and the youth package went live 29–30 June. The Pathfinder's partner list names Gateshead Council directly — early delivery data is ours to ask for.</li>
+  <li><a class="lead" href="#s4">The skills baseline moved: a new North East LSIP for 2026–2029.</a> Published in the 10 July national batch of 39 refreshed plans, it merges the two previous footprints into one plan for all seven North East MSA authorities. It supersedes the edition the Local Economic Assessment cites — construction-retrofit and digital/AI claims should be re-cited from the new text.</li>
+  <li><a class="lead" href="#s5">The Industrial Strategy quarterly update landed on 8 July,</a> with a 66-page year-one report and a new AI Growth Zone Delivery Unit. This closes the "due July" item from the last edition; its indicator set remains UK-level only, so local IS-8 tracking is still this team's open niche.</li>
+  <li><a class="lead" href="#s3">The devolution funding plumbing is live and unchanged.</a> Royal Assent 29 April; North East MSA named since 18 May; the Integrated Settlement operating from April; Local Growth Fund allocations of £22m–£28m a year to 2029/30.</li>
+  <li><a class="lead" href="#s6">Evidence base: one item closed, one new risk.</a> The IS-8 digital re-run flagged last edition is done — Gateshead's digital sector is ~3,200 employees and ~255 enterprises on the revised basket, superseding the old ~5,800-employee figure. New risk: the transition of headline labour market statistics to the Transformed LFS has slipped into 2027, and ONS is reassessing quarterly regional GDP this month.</li>
+</ul>
+
+<h2 id="s1">1. Labour market: the system is rebuilt around jobcentres — and our data has a break</h2>
+
+<h3>1.1 Universal Credit restructure, in force since 6 April 2026</h3>
+<p>The Universal Credit Act 2025 took effect on 6 April 2026. For most new determinations, the limited capability for work and work-related activity (LCWRA) health element is roughly halved and frozen — <strong>£217.26 per assessment period in 2026/27</strong>, against <strong>£429.80</strong> for pre-2026 claimants, people meeting the Severe Conditions Criteria and the terminally ill, who are protected — while the standard allowance rises above inflation for four years. DWP's <a href="https://assets.publishing.service.gov.uk/media/69d527fc4d39faba1f3b27c8/adm-04-26-memo.pdf">ADM Memo 04/26</a> is the authoritative operational source. New and existing claimants now face materially different incentives.</p>
+<p>Gateshead's economic inactivity problem is concentrated in long-term sickness, so this lands squarely on our patch: any post-April change in health-related UC inflows, work capability assessment outcomes or inactivity flows may reflect the policy change, not labour demand.</p>
+<div class="note"><b>Series caveat.</b> Treat April 2026 as a structural break in the UC health caseload. Every 2026 series touching health-related claims or inactivity carries this caveat in the same paragraph as the number.</div>
+
+<h3>1.2 Jobs and Careers Service: Gateshead Council is a named Pathfinder partner</h3>
+<p>DWP's <a href="https://www.gov.uk/government/publications/get-britain-working-an-update-on-the-jobs-and-careers-service/get-britain-working-an-update-on-the-jobs-and-careers-service">update on the Jobs and Careers Service</a> (2 July 2026) confirms the National Careers Service merges into Jobcentre Plus in England on <strong>1 October 2026</strong> (existing NCS contracts expire 30 September); the Youth Guarantee reached all jobcentres by end June; <a href="https://www.gov.uk/government/publications/workwell-pilot">WorkWell</a> expands across England from November 2026; and contracted employment support is reformed from early 2028 to target need rather than claim duration.</p>
+<p>The North East is one of three Pathfinder regions (with Wakefield and Nottingham) — and the published partner list <strong>names Gateshead Council directly</strong>, alongside the North East MSA, North Tyneside and South Tyneside. Seventeen Economic Inactivity and Youth Guarantee Trailblazers share £245m over 2025/26–2026/27. The update's Annex A publishes an evidence review of employment support, with randomised controlled trial results promised later in 2026.</p>
+
+<h3>1.3 Youth employment package, live from 29–30 June 2026</h3>
+<p>The <a href="https://www.gov.uk/government/news/funding-for-businesses-who-give-youngsters-a-chance-as-government-ramps-up-youth-jobs-drive">Youth Jobs Grant</a> (launched 30 June) pays employers £3,000 — £1,800 up front, £1,200 after 18 weeks — for hiring 18–24s unemployed on Universal Credit for six months or more. A Jobs Guarantee (a six-month fully funded job for 18–24s on UC for 18 months) has piloted in six areas since April 2026 — none in the North East — with national rollout to follow. An expanded jobcentre youth offer is national from 29 June: an Employment and Skills Review at week two and a Gateway meeting at week 13, mandatory for those on Intensive Work Search.</p>
+
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>Flag the discontinuities.</strong> April 2026 for health-related UC and inactivity series; July 2026 onward for youth claimant series.</li>
+  <li><strong>Use the named seat.</strong> Gateshead Council is a listed Pathfinder partner — establish internally who holds that relationship and ask what management information the Pathfinder will share. Early delivery data is a Gateshead evidence asset, and it bears directly on the live NEET thread (strong at 16–17, exposed at 18–24). <span class="tag">D-O2</span></li>
+  <li><strong>Employer comms line.</strong> The £3,000 Youth Jobs Grant is a concrete offer for Business Gateshead communications.</li>
+  <li><strong>Diarise the evidence.</strong> DWP's employment-support evidence review and RCT results (due late 2026) bear directly on Magenta-Book-compliant design of any local employment-support evaluation.</li>
+</ul></div>
+
+<h2 id="s2">2. Funding for Gateshead: £120m and the proposed MDZ — <span class="deadline">views close 31 July</span></h2>
+<div class="key"><b>Deadline in 18 days.</b> The <a class="deadline" href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change/northern-growth-strategy-next-steps">Northern Growth Strategy invitation for views closes 31 July 2026</a>. An evidence-based submission drawing on the Local Economic Assessment 2025 is a realistic, dated ask — a decision on whether to submit is needed this week.</div>
+<p><a href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change/northern-growth-strategy-next-steps">Northern Growth Strategy: Next Steps</a> (19 March 2026, with written ministerial statement <a href="https://questions-statements.parliament.uk/written-statements/detail/2026-03-19/hcws1423">HCWS1423</a>) commits £120m of grant funding to the North East Mayoral Strategic Authority, working with Newcastle City Council and Gateshead Council, directed at the proposed <strong>Newcastle–Gateshead Mayoral Development Zone</strong> with Gateshead Quays and Forth Yards as flagship anchors. It sits within £2.3bn of City Investment Funds (up to £1.7bn for northern city regions), alongside a fiscal devolution roadmap and consideration of the Leamside Line business case. A further update is due in autumn 2026.</p>
+<p>The MDZ remains <strong>proposed, not confirmed</strong>. The <a href="https://www.northeast-ca.gov.uk/mayoral-development-zone">North East MSA's MDZ page</a> notes boundaries are yet to be formally defined and a Strategic Regeneration Framework is being commissioned; its original MDZ announcement (23 September 2025) pre-dates the Northern Growth Strategy proposal — read the two as one evolving proposition, not two zones.</p>
+
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>Baseline now.</strong> Assemble MDZ baseline evidence before delivery starts — Quays footfall, land values, the development pipeline, employment on the affected sites. Evaluation-ready baselines are captured before launch, and this team is the baseline-keeper. <span class="tag">V-O1</span> <span class="tag">V-O3</span></li>
+  <li><strong>Decide on the submission.</strong> The views window closes 31 July; drafting from LEA 2025 evidence is roughly one to two days' work.</li>
+  <li><strong>Displacement honesty.</strong> Any MDZ case must state which geography benefits are net over: activity moving between Newcastle and Gateshead is not net growth for the North East, and Green Book appraisal will expect that treatment.</li>
+</ul></div>
+
+<h2 id="s3">3. The devolution architecture: live, and unchanged this edition</h2>
+<p>The <a href="https://www.legislation.gov.uk/ukpga/2026/23">English Devolution and Community Empowerment Act 2026</a> (Royal Assent 29 April 2026) formalises Strategic Authorities; NECA formally became the <strong>North East Mayoral Strategic Authority</strong> on 18 May 2026 — use that name in anything published. The Act also bans upward-only rent reviews in new and renewal commercial leases, creates a community right to buy, introduces gambling impact assessments for high streets, and gives Mayoral Strategic Authorities the power to introduce overnight visitor levies (see <a href="#s7">section 7</a>).</p>
+<p>The North East <a href="https://www.gov.uk/government/collections/integrated-settlements-for-mayoral-combined-authorities">Integrated Settlement</a> has operated since April 2026 — Autumn Budget 2025 confirmed at least £13bn via Integrated Settlements for seven mayoral strategic authorities over 2026/27–2029/30. The <a href="https://www.gov.uk/government/publications/local-growth-fund-england-policy-statement/local-growth-fund-england-policy-statement">Local Growth Fund</a> (launched April 2026) allocates £900m+ over four years across 11 northern and midlands authorities on productivity catch-up criteria, aligned to Local Growth Plans, with accountability via the English Devolution Accountability Framework.</p>
+<table>
+  <tr><th>Local Growth Fund — North East allocation</th><th>2026/27</th><th>2027/28</th><th>2028/29</th><th>2029/30</th></tr>
+  <tr><td>Allocation</td><td class="num">£22m</td><td class="num">£23m</td><td class="num">£28m</td><td class="num">£24m</td></tr>
+  <caption>Source: MHCLG (2025) Local Growth Fund (England) policy statement, 26 November 2025.</caption>
+</table>
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>One pot, one mark scheme.</strong> Gateshead's route to growth funding runs through a single North East MSA settlement with its own accountability framework — bid evidence is marked against Green Book, Magenta Book and Aqua Book standards.</li>
+  <li><strong>Town-centre variables.</strong> The upward-only rent review ban and community right to buy are new factors for high-street and town-centre evidence. <span class="tag">V-O2</span> <span class="tag">V-O3</span></li>
+</ul></div>
+
+<h2 id="s4">4. The skills baseline moved: a new North East LSIP for 2026–2029</h2>
+<p>Skills England and DfE published <a href="https://www.gov.uk/government/news/skills-plans-to-train-local-people-for-local-jobs">39 refreshed Local Skills Improvement Plans on 10 July 2026</a> — including a new <a href="https://nelsip.com/">North East LSIP 2026–2029</a> covering the full North East MSA area. It merges the former North of Tyne and NELSIP footprints into one plan for all seven authorities including Gateshead, with the North East Automotive Alliance reappointed as Employer Representative Body. Priority sectors: advanced manufacturing, construction, creative, digital/tech/AI, defence/security/space, offshore wind and social care. The national release explicitly links LSIPs to jobcentres and tackling youth unemployment.</p>
+<p class="small">Dating caveat: the plan itself is dated "July 2026" on nelsip.com; treat it as published with the 10 July national batch unless the PDF front matter says otherwise.</p>
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>Re-cite before reuse.</strong> The LEA leans on the previous LSIP for its construction-upskilling (retrofit, decarbonisation) argument — those claims and the digital/AI skills framing should be re-cited from the 2026–29 text before the August LEA interim update. <span class="tag">D-O2</span></li>
+  <li><strong>NEET thread.</strong> The plan's youth-unemployment and jobcentre linkage plugs directly into the live NEET analysis (Gateshead exposed at 18–24) and the North East Pathfinder — one coherent evidence story across sections 1 and 4.</li>
+</ul></div>
+
+<h2 id="s5">5. Industrial Strategy: the quarterly update landed — with a new AI delivery unit</h2>
+<p>The <a href="https://www.gov.uk/government/publications/industrial-strategy-quarterly-update-april-to-june-2026">Industrial Strategy Quarterly Update, April–June 2026</a> published on 8 July 2026 — closing the "due July" item from the last edition — alongside a 66-page companion, <a href="https://www.gov.uk/government/publications/the-uks-modern-industrial-strategy-year-one">The UK's Modern Industrial Strategy: year one</a>. The package includes economic indicators by IS-8 sector, an announcements spreadsheet, an exports mapping and a methodology note; the year-one report confirms a new <strong>AI Growth Zone Delivery Unit</strong> to accelerate data-centre build-out — directly relevant to the North East zone. <span class="tag">D-O3</span></p>
+<p>The indicator set (business investment, GVA, employment and wages, productivity, exports by IS-8 sector) remains UK-level only, with no regional breakdowns — <strong>local IS-8 tracking remains this team's open niche</strong>; Commons Library briefing <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10439/">CBP-10439</a> (regional IS-8 contributions, June 2026) is the neutral benchmark for our estimates.</p>
+<div class="note"><b>Not yet read in full.</b> The scan verified the publication pages but could not extract the quarterly PDF body or announcements spreadsheet — read both for North East and Gateshead entries before quoting specifics (logged as a work item below).</div>
+
+<h3>5.1 Digital definition re-run: done — new figures supersede the old</h3>
+<p>Last edition flagged that the 5 June 2026 revision of the <a href="https://www.gov.uk/government/publications/industrial-strategy/industrial-strategy-sector-definitions-list">IS-8 Sector Definitions List</a> (video games and broadcasting moved from Digital and Technologies to Creative Industries) invalidated our quoted digital figures. <strong>That re-run is complete</strong> (July 2026, workbook in the team's <code>digital-sic-rerun</code> folder): on the revised basket Gateshead's digital sector is <strong>~3,200 employees (BRES 2024) and ~255 enterprises (UK Business Counts 2025)</strong>, concentrated in programming, consultancy and IT services, with scientific R&amp;D newly in-basket and growing. The previously quoted ~5,800 employees and ~£525m turnover do not reproduce on either basket — superseded; do not reuse.</p>
+
+<h2 id="s6">6. Evidence-base housekeeping: one new risk, two standing notes</h2>
+<h3>6.1 New: the Transformed LFS slips into 2027 — and quarterly regional GDP is in the balance</h3>
+<p>ONS has stated the earliest transition of headline labour market statistics from the LFS to the <a href="https://www.ons.gov.uk/news/news/transformingthelabourforcesurveythewayahead">Transformed Labour Force Survey</a> has moved from November 2026 into 2027, with the first evidence-led readiness assessment happening this month and the next no later than January 2027. The <a href="https://www.ons.gov.uk/aboutus/ourstrategyandplans/onsimprovementplans/onseconomicstatisticsandsurveysimprovementplan/onseconomicstatisticsandsurveysimprovementplanquarterlyprogressupdateapril2026">ONS economic statistics improvement update</a> due this July carries a "waiting room" decision list on which quarterly regional GDP's reinstatement is explicitly being reassessed. Practical read: every product with an LFS dependency keeps its current basis longer, and the regional GDP decision is the one to watch for regional-accounts users. (Commons Library <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-9366/">CBP-9366</a>, 18 June 2026, is the neutral summary.)</p>
+<h3>6.2 Standing: Code of Practice 3.0 and the coming SIC 2026 break</h3>
+<p>The <a href="https://code.statisticsauthority.gov.uk/code-of-practice-for-statistics-3-0-what-has-changed/">Code of Practice for Statistics Edition 3.0</a> (30 October 2025) remains the edition to cite — 10 Code Principles, statement-of-compliance requirement, and new Standards for the Public Use of Statistics applying to anyone communicating statistics publicly, policy and comms colleagues included. <a href="https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2026guidance">UK SIC 2026</a> (finalised April 2026) rolls out slowly — Statistical Business Register first, business surveys like BRES resampled afterwards, National Accounts at Blue Book 2031 at the earliest — so every BRES-by-SIC series we maintain faces a break in the coming years; note it in dashboard design and provenance conventions now.</p>
+
+<h2 id="s7">7. Theme notes: the full watch frame</h2>
+<p class="small">Every watch theme reported, including the quiet ones — quiet is a finding.</p>
+<ul>
+  <li><strong>Procurement &amp; social value — quiet.</strong> The National Procurement Policy Statement (February 2025) and <a href="https://www.gov.uk/government/publications/ppn-002-taking-account-of-social-value-in-the-award-of-contracts/procurement-policy-note-002-the-social-value-model-html">PPN 002</a> (social value model) unchanged; no new PPNs in the window. <span class="tag">L-O3</span></li>
+  <li><strong>Community wealth building &amp; anchors — quiet.</strong> No new CLES, LGA or departmental items surfaced in the window. <span class="tag">L-O1</span> <span class="tag">L-O2</span></li>
+  <li><strong>AI &amp; digital inclusion.</strong> The QTS (Blackstone) Cambois AI Growth Zone campus is proceeding — piling from spring 2026, <a href="https://www.northeast-ca.gov.uk/downloads/6909/ai-growth-zone-prospectus-final.pdf">prospectus published May 2026</a>, up to £10bn and 720MW across ten facilities, first opening due 2028 — now with a national Delivery Unit behind it (section 5). The regional AI skills package (12 May 2026) keeps its measurable targets: 80,000 students trained by 2029, 1,000 teachers supported, 150 work placements. <span class="tag">D-O1</span> <span class="tag">D-O3</span>
+    <div class="note" style="margin-top:8px;"><b>Press-reported only.</b> OpenAI is still reported to have paused its North East data-centre plans (April 2026; Place North East, Bdaily) with no primary confirmation — label it press-reported and keep the AI Growth Zone narrative two-sided.</div></li>
+  <li><strong>Skills.</strong> The new NELSIP 2026–2029 — the edition change of the month (section 4). <span class="tag">D-O2</span></li>
+  <li><strong>Productivity &amp; regional data.</strong> TLFS slippage and the regional-GDP waiting room (section 6); subregional productivity data for 2024 is expected 5 November 2026, with GVA 2024 around September.</li>
+  <li><strong>Local business.</strong> The £3,000 Youth Jobs Grant is the live employer-facing offer (section 1); nothing else new in the window.</li>
+  <li><strong>Visitor economy.</strong> The National Visitor Economy Strategy remains unpublished (expected autumn 2026). Visitor-levy powers sit with Mayoral Strategic Authorities under the Devolution Act — realistic earliest implementation 2027–28 (<a href="https://www.local.gov.uk/parliament/briefings-and-responses/visitor-levy-england">LGA briefing</a>) — and Edinburgh's levy goes live 24 July 2026, a working comparator for any North East levy evidence. The <a href="https://committees.parliament.uk/work/9732/tourism/">CMS Committee tourism inquiry</a> (including levy powers) is still live. Pre-position the Quays visitor evidence base for the autumn. <span class="tag">V-O1</span></li>
+  <li><strong>High streets &amp; placemaking.</strong> Gateshead's <a href="https://www.gov.uk/government/publications/pride-in-place-programme-prospectus/pride-in-place-programme-prospectus">Pride in Place</a> neighbourhood board (Wrekenton &amp; Beacon Lough, £20m over 10 years, chair appointed January 2026) confirms membership and boundaries on 17 July 2026 — hyperlocal baseline evidence is the obvious team offer to the new board. Add the Act's rent-review ban and community right to buy (section 3). <span class="tag">V-O2</span> <span class="tag">V-O3</span></li>
+  <li><strong>Green — quiet.</strong> The <a href="https://www.gov.uk/government/publications/warm-homes-plan">Warm Homes Plan</a> (21 January 2026) unchanged; Warm Homes Fund design detail still due later in 2026 — the retrofit demand pipeline behind the LEA's construction-upskilling argument now pairs with the new LSIP's construction priority (section 4).</li>
+  <li><strong>Creative — quiet.</strong> The <a href="https://www.gov.uk/government/news/six-regions-receive-25-million-to-bolster-creative-industries">Creative Places Growth Fund</a> (£25m to the North East over three years from FY2026) unchanged; allocation mechanics and monitoring data still worth chasing for PROTO and the digital-creative urban core.</li>
+</ul>
+
+<h2 id="s8">8. Dates to diarise</h2>
+<table>
+  <tr><th>When</th><th>What</th></tr>
+  <tr><td>17 July 2026</td><td>Pride in Place: Wrekenton &amp; Beacon Lough neighbourhood board confirms membership and boundaries</td></tr>
+  <tr><td>July 2026 (this month)</td><td>ONS: first TLFS readiness assessment; quarterly improvement update incl. regional-GDP "waiting room" decision</td></tr>
+  <tr><td>24 July 2026</td><td>Edinburgh visitor levy goes live (comparator evidence)</td></tr>
+  <tr><td><span class="deadline">31 July 2026</span></td><td><a class="deadline" href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change/northern-growth-strategy-next-steps">Northern Growth Strategy invitation for views closes</a></td></tr>
+  <tr><td>30 Sep / 1 Oct 2026</td><td>National Careers Service contracts end; merger into Jobcentre Plus</td></tr>
+  <tr><td>~October 2026</td><td>Next Industrial Strategy quarterly update (Jul–Sep 2026)</td></tr>
+  <tr><td>November 2026</td><td>WorkWell England-wide rollout; subregional productivity 2024 data (5 Nov)</td></tr>
+  <tr><td>Autumn 2026</td><td>National Visitor Economy Strategy expected; Northern Growth Strategy further update. Budget 2026 date not yet announced (mid-November is press speculation only)</td></tr>
+  <tr><td>Late 2026</td><td>DWP employment-support evidence review RCT results; Warm Homes Fund design detail</td></tr>
+</table>
+
+<h2 id="s85">Work items arising</h2>
+<ol>
+  <li><strong>Read the Industrial Strategy quarterly PDF and announcements spreadsheet</strong> for North East / Gateshead entries before anything quotes them (~1 hour).</li>
+  <li><strong>Check the LEA's LSIP citations against NELSIP 2026–2029</strong> — construction-retrofit and digital/AI claims — before the August interim update (~half a day).</li>
+  <li><strong>Decide on a Northern Growth Strategy views submission</strong> — drafting from LEA 2025 evidence is 1–2 days; the window closes <span class="deadline">31 July</span>.</li>
+</ol>
+<p class="small">Closed since last edition: the IS-8 digital SIC re-run (section 5.1).</p>
+
+<h2 id="s9">9. Checked and unchanged — the full reference set</h2>
+<ul>
+  <li><strong>Green Book 2026 edition</strong> (5 February 2026) — unchanged; the promised independent discount-rate review and place-based business-case work have not yet published.</li>
+  <li><strong>Magenta Book</strong> (15 May 2026 update) — unchanged.</li>
+  <li><strong>Aqua Book 2025 edition</strong> — unchanged.</li>
+  <li><strong>Code of Practice for Statistics 3.0</strong> (30 October 2025) — unchanged; cite Edition 3.0.</li>
+  <li><strong>Industrial Strategy</strong> — Sector Definitions List (5 June 2026 revision) still current; <em>changed:</em> quarterly update and year-one report published 8 July (section 5).</li>
+  <li><strong>North East Local Growth Plan 2025–2035</strong> (12 March 2025) — no new edition; implementation news only.</li>
+  <li><strong>Get Britain Working White Paper</strong> (November 2024) — not superseded; the 2 July update builds on it.</li>
+  <li><strong>North East LSIP</strong> — <em>changed:</em> replaced by NELSIP 2026–2029 (section 4).</li>
+  <li><strong>Procurement baseline</strong> — NPPS (February 2025) and PPN 002 unchanged.</li>
+  <li><strong>Gateshead corporate documents</strong> — Thrive, Corporate Plan 2023–28, Economic Development Strategy 2021, Local Economic Assessment 2025: all unchanged.</li>
+</ul>
+
+<h2 id="s10">10. Sources</h2>
+<ul class="sources">
+  <li><a href="https://www.gov.uk/government/publications/industrial-strategy-quarterly-update-april-to-june-2026">Industrial Strategy Quarterly Update: April–June 2026 (DBT, 8 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/the-uks-modern-industrial-strategy-year-one">The UK's Modern Industrial Strategy: year one (8 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/skills-plans-to-train-local-people-for-local-jobs">Skills plans to train local people for local jobs (Skills England/DfE, 10 July 2026)</a></li>
+  <li><a href="https://nelsip.com/">North East Local Skills Improvement Plan 2026–2029 (nelsip.com, July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/get-britain-working-an-update-on-the-jobs-and-careers-service/get-britain-working-an-update-on-the-jobs-and-careers-service">Get Britain Working: an update on the Jobs and Careers Service (DWP, 2 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/funding-for-businesses-who-give-youngsters-a-chance-as-government-ramps-up-youth-jobs-drive">Youth jobs drive announcement (gov.uk, 29 June 2026)</a></li>
+  <li><a href="https://assets.publishing.service.gov.uk/media/69d527fc4d39faba1f3b27c8/adm-04-26-memo.pdf">DWP ADM Memo 04/26 — UC health element rates (PDF)</a></li>
+  <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10358/">Universal Credit rate changes from April 2026 (Commons Library CBP-10358)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change/northern-growth-strategy-next-steps">Northern Growth Strategy: Next Steps (19 March 2026)</a></li>
+  <li><a href="https://questions-statements.parliament.uk/written-statements/detail/2026-03-19/hcws1423">Written ministerial statement HCWS1423 (19 March 2026)</a></li>
+  <li><a href="https://www.northeast-ca.gov.uk/mayoral-development-zone">Newcastle–Gateshead Mayoral Development Zone (North East MSA)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/local-growth-fund-england-policy-statement/local-growth-fund-england-policy-statement">Local Growth Fund (England) policy statement (MHCLG, 26 November 2025)</a></li>
+  <li><a href="https://www.gov.uk/government/collections/integrated-settlements-for-mayoral-combined-authorities">Integrated Settlements for mayoral combined authorities (collection)</a></li>
+  <li><a href="https://www.legislation.gov.uk/ukpga/2026/23">English Devolution and Community Empowerment Act 2026 (c. 23)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/industrial-strategy/industrial-strategy-sector-definitions-list">Industrial Strategy Sector Definitions List (updated 5 June 2026)</a></li>
+  <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10439/">IS-8 sectors by country and region (Commons Library CBP-10439, June 2026)</a></li>
+  <li><a href="https://www.ons.gov.uk/news/news/transformingthelabourforcesurveythewayahead">Transforming the Labour Force Survey — the way ahead (ONS)</a></li>
+  <li><a href="https://www.ons.gov.uk/aboutus/ourstrategyandplans/onsimprovementplans/onseconomicstatisticsandsurveysimprovementplan/onseconomicstatisticsandsurveysimprovementplanquarterlyprogressupdateapril2026">ONS economic statistics improvement plan — April 2026 progress update</a></li>
+  <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-9366/">Labour Force Survey transformation (Commons Library CBP-9366, 18 June 2026)</a></li>
+  <li><a href="https://code.statisticsauthority.gov.uk/code-of-practice-for-statistics-3-0-what-has-changed/">Code of Practice for Statistics 3.0 — what has changed (UKSA, 30 October 2025)</a></li>
+  <li><a href="https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2026guidance">UK SIC 2026 guidance (ONS, April 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/pride-in-place-programme-prospectus/pride-in-place-programme-prospectus">Pride in Place programme prospectus (MHCLG)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/ppn-002-taking-account-of-social-value-in-the-award-of-contracts/procurement-policy-note-002-the-social-value-model-html">PPN 002 — the Social Value Model</a></li>
+  <li><a href="https://www.gov.uk/government/publications/warm-homes-plan">Warm Homes Plan (DESNZ, 21 January 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/six-regions-receive-25-million-to-bolster-creative-industries">Creative Places Growth Fund: six regions receive £25m (29 September 2025)</a></li>
+  <li><a href="https://www.gov.uk/government/news/north-east-ai-drive-to-boost-local-skills-and-business-growth-opportunities">North East AI skills drive (gov.uk, 12 May 2026)</a></li>
+  <li><a href="https://www.northeast-ca.gov.uk/downloads/6909/ai-growth-zone-prospectus-final.pdf">North East AI Growth Zone prospectus (North East MSA, May 2026)</a></li>
+  <li><a href="https://www.placenortheast.co.uk/qts-doubles-down-as-openai-pauses-north-east-data-centre-ambitions/">OpenAI pause reports (Place North East, April 2026 — press, unverified)</a></li>
+  <li><a href="https://www.local.gov.uk/parliament/briefings-and-responses/visitor-levy-england">Visitor levy in England (LGA briefing)</a></li>
+  <li><a href="https://committees.parliament.uk/work/9732/tourism/">CMS Committee tourism inquiry (parliament.uk)</a></li>
+</ul>
+
+<div class="docfoot">
+Prepared by Economic Intelligence, Gateshead Council. Policy scan run 13 July 2026 against the team's recorded policy landscape (edition dates as listed in section 9); free public official sources only. Summaries are not legal advice — check source documents before citing. Second edition, replacing the 3 July 2026 edition.
+</div>
+
+</main>
+</div>
+</body>
+</html>

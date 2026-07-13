@@ -320,11 +320,11 @@ Unlike the other (hand-built) dashboards, the Business Map is **generated** by a
 
 ## Briefings
 
-Written briefings from the Economic Intelligence team sit in [`briefs/`](briefs/), filed by date (`YYYY-MM-topic`), each as a branded Word document with a Markdown companion.
+Written briefings from the Economic Intelligence team sit in [`briefs/`](briefs/) (Word/Markdown, filed by date `YYYY-MM-topic`) and, from July 2026, as branded HTML documents in [`policy/`](policy/) — catalogued on the landing page like the dashboards, styled to read like a document.
 
 | Date | Briefing | What it covers |
 |---|---|---|
-| July 2026 | [Policy update](briefs/2026-07-policy-update/) | New and changed government and regional policy affecting Gateshead's economy — UC restructure, Northern Growth Strategy £120m/MDZ, devolution architecture, IS-8 definitions, sector notes |
+| July 2026 | [Policy update — 2nd edition, 13 July](policy/policy-update-2026-07.html) | New and changed government and regional policy affecting Gateshead's economy — NGS £120m/MDZ views closing 31 July, Gateshead a named NE Pathfinder partner, new NE LSIP 2026–2029, Industrial Strategy quarterly + year one, UC structural break, TLFS slippage. Replaces the [3 July edition](briefs/2026-07-policy-update/) (retained for the record) |
 
 ---
 
