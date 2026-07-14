@@ -23,7 +23,7 @@ These are **descriptive monitoring and benchmarking products**: they answer *"wh
 
 | Role | Who | Notes |
 |---|---|---|
-| Commissioner | N. Adams (Gateshead Council economic intelligence) | Set the requirement: all ELS indicators, house comparator sets |
+| Commissioner | N. Adams (author, personal capacity) | Set the requirement: all ELS indicators, house comparator sets |
 | Analyst | Claude (AI-assisted build), sessions of 7 July 2026 | Built pipeline, dashboards and this log; self-assured |
 | Assurer | **Not yet independently assured** | Structured self-review performed (§4); an independent review by a colleague (or a separate structured AI-assisted review session) is recommended before high-stakes use |
 | Approver | N. Adams | Publication to the repository constitutes approval of the products as *experimental* |

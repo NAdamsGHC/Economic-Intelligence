@@ -1,6 +1,6 @@
 # Policy update — July 2026
 
-**Economic Intelligence · Gateshead Council** · 3 July 2026 · PUBLIC — compiled entirely from published official sources
+**Gateshead Economic Intelligence** · 3 July 2026 · PUBLIC — compiled entirely from published official sources
 
 New and changed government and regional policy affecting Gateshead's economy. Findings checked against the team's policy baseline as recorded on 3 July 2026; sourced from gov.uk, parliament.uk, ONS and North East Mayoral Strategic Authority publications unless labelled otherwise. Items reported only in the press are flagged. Re-verify dates before quoting in anything published.
 
@@ -141,4 +141,4 @@ The revised UK Standard Industrial Classification was finalised in April 2026, w
 
 ---
 
-*Prepared by Economic Intelligence, Gateshead Council. Policy scan run 3 July 2026 against the team's recorded policy baseline; free public official sources only.*
+*Prepared by Nathaniel Adams (unofficial, independent product). Policy scan run 3 July 2026 against the team's recorded policy baseline; free public official sources only.*

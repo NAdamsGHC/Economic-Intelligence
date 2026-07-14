@@ -1,4 +1,4 @@
-/* Gateshead Council · Economic Intelligence — landing page engine
+/* Gateshead Economic Intelligence — landing page engine
    Renders the product catalogue from catalog.json: a Pinned section first,
    then the ONS-topic sections, with live search and copy-deep-link buttons.
    Zero dependencies, zero network beyond catalog.json. */
