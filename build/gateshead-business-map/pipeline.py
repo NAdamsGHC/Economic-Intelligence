@@ -14,6 +14,7 @@ Design notes:
 """
 from __future__ import annotations
 import csv, io, json, re, sys, time, zipfile, hashlib, datetime as dt
+from pathlib import Path
 from collections import defaultdict, Counter
 import requests
 import config as C
@@ -529,6 +530,17 @@ def main():
     events, reg_meta = HS.update_register(company_pts, snapshot, warn)
     now = dt.date.today()
     hs_rows, avg_share = HS.centre_rollups(centres, company_pts, fsa_pts, imd, lsoa_feats, events, now, warn)
+    # official employment/age context (publish-safe subset exported by the
+    # retail-centres analysis; disclosure rules applied at export)
+    ctx_path = Path(__file__).resolve().parent / "data" / "centre_context.json"
+    centre_ctx = {"meta": None, "centres": {}}
+    if ctx_path.exists():
+        centre_ctx = json.loads(ctx_path.read_text(encoding="utf-8"))
+        for r in hs_rows:
+            r["ctx"] = centre_ctx["centres"].get(r["name"])
+        log(f"    official context attached for {sum(1 for r in hs_rows if r.get('ctx'))} centres")
+    else:
+        warn("centre_context.json missing — high-street official context omitted")
     borough_trend = HS.startup_series(company_pts, now, 12)
     footfall = HS.load_footfall(S, warn)
     for d in per_lsoa.values():
@@ -567,6 +579,7 @@ def main():
             "register": {"snapshots": reg_meta["snapshots"], "seeded": reg_meta["seeded"]},
             "buffer_m": CN.BUFFER_M, "catchment_m": HS.CATCHMENT_M,
             "tier_labels": CN.TIER_LABEL,
+            "context_meta": centre_ctx.get("meta"),
         },
         "boundaries": {"lsoa": {"type": "FeatureCollection", "features": lsoa_feats},
                        "ward": {"type": "FeatureCollection", "features": ward_feats},

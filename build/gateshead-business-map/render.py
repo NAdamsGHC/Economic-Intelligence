@@ -114,6 +114,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
       <span style="font-size:12.5px;color:var(--muted);" id="hsCatch"></span>
     </div>
     <div class="kbox" id="hsKpis" style="margin-top:12px;"></div>
+    <div id="hsCtx" style="margin-top:10px;"></div>
   </div>
   <div class="grid2">
     <div class="card"><h3 style="margin:0 0 4px;font-size:15px;">Premises mix vs all-centre average</h3>
@@ -191,6 +192,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
       <li><b>UKRI Gateway to Research</b> &mdash; innovation/R&amp;D projects.</li>
       <li><b>ONS Open Geography Portal</b> &mdash; LSOA 2021 + Ward 2024 boundaries and lookup.</li>
       <li><b>Gateshead Council Local Plan policies map</b> (public GIS server) &mdash; designated centres: Primary Shopping Area, District and Local Shopping Centres (MSGP Policy 6), MetroCentre and Retail World reference points.</li>
+      <li><b>ONS / NOMIS official centre context</b> &mdash; BRES employment (NM_189_1, 2015&ndash;2024, LSOA, published disclosure-controlled cells) and Census 2021 age (TS007B, Output Area) linked to centres with the ONS high-streets method (OS/ONS "High streets and retail areas", March 2026: population-weighted centroid within 200m). Employment figures are for the LSOAs containing and surrounding each centre; values are shown only where the underlying cells support them &mdash; district centres carry direction only and local centres none, to avoid false precision and misattribution.</li>
       <li><b>ONS / BT Active Intelligence</b> &mdash; UK retail footfall (experimental): regional site-type indices only.</li>
     </ul>
   </div>
@@ -420,6 +422,29 @@ function renderCentre(id){
       ['Opened (12m)',noHist?'&mdash;':fmt(c.op)],['Closed (12m)',noHist?'&mdash;':fmt(c.cl)]);
   }
   document.getElementById('hsKpis').innerHTML=k.map(x=>'<div class="k"><b>'+x[1]+'</b>'+x[0]+'</div>').join('');
+  // official employment & population context (ONS/NOMIS, disclosure-safe subset)
+  const cm=HSD.context_meta,ctx=all?null:(c.ctx||null);
+  let ch='';
+  const pc=v=>v>0?'+'+v+'%':v+'%';
+  if(cm&&all){
+    ch='<b>Official context (2015&ndash;2024):</b> '+esc(cm.borough.label)+' &mdash; against '+esc(cm.gb.label).replace('GB central','GB’s central')+
+       '. Gateshead has the national retail decline without the national hospitality offset.';
+  }else if(ctx){
+    const bits=[];
+    if(ctx.emp&&ctx.emp.kind==='values'){
+      const bench=c.tier==='destination'?'GB central shopping centres: retail &minus;31%; retail parks &minus;2%':'GB central high streets: retail &minus;19%, hospitality +18%';
+      bits.push('centre-area retail employment '+fmt(ctx.emp.retail_2015)+' &rarr; '+fmt(ctx.emp.retail_2024)+
+                ' (<b>'+pc(ctx.emp.retail_chg)+'</b>), hospitality <b>'+pc(ctx.emp.hosp_chg)+'</b> ('+bench+')');
+    }else if(ctx.emp&&ctx.emp.kind==='direction'){
+      bits.push('centre-area retail employment <b>'+esc(ctx.emp.retail)+'</b>, hospitality <b>'+esc(ctx.emp.hosp)+'</b> since 2015 (direction only &mdash; values too small-area to quote)');
+    }
+    if(ctx.age){
+      bits.push('residents within 200m: <b>'+fmt(ctx.age.pop)+'</b> ('+ctx.age.y1624+'% aged 16&ndash;24, '+ctx.age.o65+'% aged 65+)');
+    }
+    if(bits.length)ch='<b>Official context:</b> '+bits.join('; ')+'.';
+  }
+  document.getElementById('hsCtx').innerHTML=ch?('<div class="note" style="margin:0;">'+ch+
+    (cm?' <span style="opacity:.75;">'+esc(cm.basis)+'</span>':'')+'</div>'):'';
   // mix chart
   const avg=GROUPS.map(g=>HSD.avg_share[g]||0);
   const cur=all?avg:shares(c);

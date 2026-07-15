@@ -1,0 +1,256 @@
+{
+ "meta": {
+  "source": "ONS 'High streets and retail areas' (Mar 2026); NOMIS BRES (NM_189_1, employment, 2015-2024); Census 2021 TS007B (OA); analysis Jul 2026",
+  "basis": "Employment change is for the LSOAs containing and surrounding each centre ('centre area'), 2015-2024, from published disclosure-controlled BRES cells. Age profile is residents of Census Output Areas whose population-weighted centroid lies within 200m of the centre boundary (the ONS high-streets rule).",
+  "gb": {
+   "retail_chg": -19,
+   "hosp_chg": 18,
+   "label": "GB central high streets 2015-2024: retail -19%, accommodation & food +18%"
+  },
+  "borough": {
+   "retail_chg": -16.7,
+   "hosp_chg": -11.9,
+   "label": "Gateshead 2015-2024: retail -16.7%, hospitality -11.9%"
+  }
+ },
+ "centres": {
+  "Gateshead town centre": {
+   "age": {
+    "pop": 1496,
+    "y1624": 50.2,
+    "o65": 14.2
+   },
+   "emp": {
+    "kind": "values",
+    "retail_2015": 1125.0,
+    "retail_2024": 880.0,
+    "retail_chg": -21.8,
+    "hosp_chg": 0.6
+   }
+  },
+  "Birtley": {
+   "age": {
+    "pop": 1042,
+    "y1624": 8.8,
+    "o65": 26.7
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "up",
+    "hosp": "up"
+   }
+  },
+  "Blaydon": {
+   "age": {
+    "pop": 729,
+    "y1624": 9.7,
+    "o65": 24.8
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "down",
+    "hosp": "down"
+   }
+  },
+  "Coatsworth Road": {
+   "age": {
+    "pop": 3616,
+    "y1624": 14.8,
+    "o65": 11.9
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "up",
+    "hosp": "down"
+   }
+  },
+  "Felling": {
+   "age": {
+    "pop": 1911,
+    "y1624": 8.6,
+    "o65": 23.0
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "up",
+    "hosp": "down"
+   }
+  },
+  "Low Fell": {
+   "age": {
+    "pop": 2252,
+    "y1624": 7.1,
+    "o65": 21.4
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "broadly flat",
+    "hosp": "down"
+   }
+  },
+  "Ryton": {
+   "age": {
+    "pop": 1421,
+    "y1624": 9.0,
+    "o65": 26.0
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "down",
+    "hosp": "down"
+   }
+  },
+  "Whickham": {
+   "age": {
+    "pop": 1536,
+    "y1624": 8.7,
+    "o65": 22.3
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "up",
+    "hosp": "down"
+   }
+  },
+  "Wrekenton": {
+   "age": {
+    "pop": 1162,
+    "y1624": 7.8,
+    "o65": 25.0
+   },
+   "emp": {
+    "kind": "direction",
+    "retail": "up",
+    "hosp": "down"
+   }
+  },
+  "Askew Road": {
+   "age": {
+    "pop": 1253,
+    "y1624": 10.5,
+    "o65": 15.5
+   }
+  },
+  "Chopwell": {
+   "age": {
+    "pop": 664,
+    "y1624": 8.7,
+    "o65": 20.2
+   }
+  },
+  "Crawcrook": {
+   "age": {
+    "pop": 2047,
+    "y1624": 8.5,
+    "o65": 24.0
+   }
+  },
+  "Ellison Road": {
+   "age": {
+    "pop": 1193,
+    "y1624": 8.8,
+    "o65": 17.9
+   }
+  },
+  "Fewster Square": {
+   "age": {
+    "pop": 1462,
+    "y1624": 10.2,
+    "o65": 21.0
+   }
+  },
+  "High Spen": {
+   "age": {
+    "pop": 569,
+    "y1624": 8.6,
+    "o65": 15.5
+   }
+  },
+  "Old Durham Road": {
+   "age": {
+    "pop": 2314,
+    "y1624": 10.7,
+    "o65": 20.0
+   }
+  },
+  "Pelaw": {
+   "age": {
+    "pop": 1817,
+    "y1624": 9.6,
+    "o65": 15.9
+   }
+  },
+  "Ravensworth Road": {
+   "age": {
+    "pop": 1406,
+    "y1624": 8.7,
+    "o65": 21.2
+   }
+  },
+  "Rowlands Gill": {
+   "age": {
+    "pop": 770,
+    "y1624": 7.0,
+    "o65": 36.8
+   }
+  },
+  "Saltwell Road": {
+   "age": {
+    "pop": 2506,
+    "y1624": 10.7,
+    "o65": 9.1
+   }
+  },
+  "Sheriffs Highway": {
+   "age": {
+    "pop": 2180,
+    "y1624": 8.1,
+    "o65": 24.0
+   }
+  },
+  "Sunniside": {
+   "age": {
+    "pop": 1059,
+    "y1624": 7.8,
+    "o65": 25.2
+   }
+  },
+  "Swalwell": {
+   "age": {
+    "pop": 1347,
+    "y1624": 10.4,
+    "o65": 12.6
+   }
+  },
+  "Winlaton": {
+   "age": {
+    "pop": 1764,
+    "y1624": 9.8,
+    "o65": 21.4
+   }
+  },
+  "MetroCentre": {
+   "age": {
+    "pop": 261,
+    "y1624": 7.3,
+    "o65": 27.6
+   },
+   "emp": {
+    "kind": "values",
+    "retail_2015": 6070.0,
+    "retail_2024": 4145.0,
+    "retail_chg": -31.7,
+    "hosp_chg": -7.8
+   }
+  },
+  "Retail World (Team Valley)": {
+   "emp": {
+    "kind": "values",
+    "retail_2015": 1000.0,
+    "retail_2024": 900.0,
+    "retail_chg": -10.0,
+    "hosp_chg": -13.5
+   }
+  }
+ }
+}
