@@ -66,7 +66,7 @@
   function card(p, opts) {
     opts = opts || {};
     var el = document.createElement("article");
-    el.className = "gc-card" + (p.pinned ? " pinned" : "");
+    el.className = "gc-card" + (p.pinned ? " pinned" : "") + (p.featured ? " featured" : "");
     el.setAttribute("data-id", p.id);
     var url = absUrl(p);
     var hay = (p.title + " " + p.description + " " + p.sources + " " + (p.keywords || []).join(" ") + " " + p.topic).toLowerCase();
@@ -149,14 +149,18 @@
   }
 
   // ---- publication schedule (rendered from catalog.schedule) ----
+  var SCHED_KEY = "gc-sched-collapsed";
   function scheduleSection(sch) {
     var sec = document.createElement("section");
     sec.className = "gc-topic gc-sched";
     sec.id = "publication-schedule";
     var head =
       '<div class="gc-topic-head"><h2>Publication schedule</h2>' +
-      '<span class="note">What&rsquo;s coming and when &middot; updated ' + esc(sch.updated || "") + "</span></div>";
-    var html = '<div class="gc-sched-scroll"><table class="gc-sched-table"><thead><tr><th class="prod">Product</th>';
+      '<span class="note">What&rsquo;s coming and when &middot; updated ' + esc(sch.updated || "") + "</span>" +
+      '<button class="gc-sched-toggle" type="button" aria-expanded="true" aria-controls="gc-sched-body">' +
+      '<span class="chev" aria-hidden="true">&#9662;</span><span class="lbl">Hide</span></button></div>';
+    var html = '<div class="gc-sched-body" id="gc-sched-body">' +
+      '<div class="gc-sched-scroll"><table class="gc-sched-table"><thead><tr><th class="prod">Product</th>';
     sch.months.forEach(function (m) { html += "<th>" + esc(m.label) + "</th>"; });
     html += "</tr></thead><tbody>";
     sch.rows.forEach(function (row) {
@@ -177,8 +181,24 @@
     });
     html += "</tbody></table></div>" +
       '<div class="gc-sched-key"><span><i class="k released"></i>Released &mdash; click to open</span>' +
-      "<span><i class=\"k next\"></i>Next up</span><span><i class=\"k planned\"></i>Planned</span></div>";
+      "<span><i class=\"k next\"></i>Next up</span><span><i class=\"k planned\"></i>Planned</span></div></div>";
     sec.innerHTML = head + html;
+
+    // Collapse toggle — state remembered per browser via localStorage.
+    var btn = sec.querySelector(".gc-sched-toggle");
+    var setState = function (collapsed) {
+      sec.classList.toggle("collapsed", collapsed);
+      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      btn.querySelector(".lbl").textContent = collapsed ? "Show" : "Hide";
+    };
+    var saved = null;
+    try { saved = localStorage.getItem(SCHED_KEY); } catch (e) {}
+    setState(saved === "1");
+    btn.addEventListener("click", function () {
+      var collapsed = !sec.classList.contains("collapsed");
+      setState(collapsed);
+      try { localStorage.setItem(SCHED_KEY, collapsed ? "1" : "0"); } catch (e) {}
+    });
     return sec;
   }
 
@@ -199,11 +219,14 @@
       bySeries[s].forEach(function (p, i) { p.pinned = i === 0; p._archived = i > 0; });
     });
 
-    // Pinned section first — flagged products plus each series' latest.
+    // Publication schedule first — the public year view (collapsible).
+    if (cat.schedule) root.appendChild(scheduleSection(cat.schedule));
+
+    // Pinned section — the latest edition of each recurring update series.
     // Pinned products appear here ONLY (not repeated in their topic section).
     var pinnedProds = cat.products.filter(function (p) { return p.pinned; });
     if (pinnedProds.length) {
-      var psec = topicSection("Pinned", "The latest editions and the products the team reaches for most", "topic-pinned");
+      var psec = topicSection("Pinned", "The latest updates — new editions land here first", "topic-pinned");
       psec.classList.add("gc-topic-pinned");
       var pgrid = psec.querySelector(".gc-cards");
       pinnedProds.forEach(function (p) { pgrid.appendChild(card(p, { inPinned: true })); });
@@ -211,11 +234,19 @@
       root.appendChild(psec);
     }
 
-    // Publication schedule — the public year view (published products only).
-    if (cat.schedule) root.appendChild(scheduleSection(cat.schedule));
+    // Featured section — recently published ad hoc analysis (featured flag).
+    var featuredProds = cat.products.filter(function (p) { return p.featured && !p.pinned && !p._archived; });
+    if (featuredProds.length) {
+      var fsec = topicSection("Featured", "Recently published ad hoc analysis", "topic-featured");
+      fsec.classList.add("gc-topic-featured");
+      var fgrid = fsec.querySelector(".gc-cards");
+      featuredProds.forEach(function (p) { fgrid.appendChild(card(p, { inPinned: true })); });
+      fsec.querySelector(".count").textContent = featuredProds.length + (featuredProds.length === 1 ? " product" : " products");
+      root.appendChild(fsec);
+    }
 
     cat.topics.forEach(function (t) {
-      var prods = cat.products.filter(function (p) { return p.topic === t.name && !p.pinned && !p._archived; });
+      var prods = cat.products.filter(function (p) { return p.topic === t.name && !p.pinned && !p.featured && !p._archived; });
       if (!prods.length) return;
       var sec = topicSection(t.name, t.note, "topic-" + t.name.toLowerCase().replace(/[^a-z]+/g, "-"));
       var grid = sec.querySelector(".gc-cards");

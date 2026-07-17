@@ -157,7 +157,7 @@
         "churn",
         "startups"
       ],
-      "pinned": true
+      "featured": true
     },
     {
       "id": "creative-industries",
@@ -210,7 +210,7 @@
         "idaci",
         "idaopi"
       ],
-      "pinned": true
+      "featured": true
     },
     {
       "id": "employer-skills-2024",
@@ -249,8 +249,7 @@
         "skills",
         "industrial strategy",
         "pathfinder"
-      ],
-      "pinned": true
+      ]
     }
   ]
 }

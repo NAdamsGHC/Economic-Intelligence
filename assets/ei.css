@@ -80,6 +80,10 @@ a:hover{color:var(--gc-blue-dark);}
 .gc-topic-pinned .gc-topic-head{border-bottom-color:var(--gc-pink);}
 .gc-topic-pinned .gc-topic-head h2{color:var(--gc-pink);}
 .gc-topic-pinned .gc-card{border-top-color:var(--gc-pink);}
+.gc-topic-featured .gc-topic-head{border-bottom-color:var(--gc-purple);}
+.gc-topic-featured .gc-topic-head h2{color:var(--gc-purple);}
+.gc-topic-featured .gc-card{border-top-color:var(--gc-purple);}
+.gc-topic-featured .gc-pin-badge{color:var(--gc-purple);border-color:#d9b8ef;}
 .gc-topic-head{
   display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
   border-bottom:2px solid var(--gc-blue);padding-bottom:8px;margin-bottom:16px;
@@ -128,6 +132,15 @@ a:hover{color:var(--gc-blue-dark);}
 .gc-noresults{padding:30px 6px;color:#6a7784;font-style:italic;}
 
 /* ---- Publication schedule (public year view) ---- */
+.gc-sched-toggle{
+  margin-left:auto;display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+  color:var(--gc-blue);background:#fff;border:1px solid var(--gc-line-2);padding:4px 10px;border-radius:0;
+}
+.gc-sched-toggle:hover{border-color:var(--gc-blue);}
+.gc-sched-toggle .chev{display:inline-block;transition:transform .15s ease;}
+.gc-sched.collapsed .gc-sched-toggle .chev{transform:rotate(-90deg);}
+.gc-sched.collapsed .gc-sched-body{display:none;}
 .gc-sched-scroll{overflow-x:auto;border:1px solid var(--gc-line);}
 .gc-sched-table{border-collapse:collapse;width:100%;min-width:1050px;font-size:12px;}
 .gc-sched-table th,.gc-sched-table td{border:1px solid var(--gc-line);padding:5px 6px;vertical-align:top;text-align:center;}
