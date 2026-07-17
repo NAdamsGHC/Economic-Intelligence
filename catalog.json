@@ -22,7 +22,10 @@
         "name": "What's New",
         "cadence": "weekly · Mondays",
         "entries": {
-          "2026-07": [ { "label": "from Mon 20", "status": "next" } ],
+          "2026-07": [
+            { "label": "placeholder", "status": "released", "href": "briefs/whats-new-2026-07-17.html" },
+            { "label": "Mon 20", "status": "next" }
+          ],
           "2026-08": [ { "label": "every Mon" } ], "2026-09": [ { "label": "every Mon" } ],
           "2026-10": [ { "label": "every Mon" } ], "2026-11": [ { "label": "every Mon" } ],
           "2026-12": [ { "label": "every Mon" } ], "2027-01": [ { "label": "every Mon" } ],
@@ -91,6 +94,25 @@
     }
   ],
   "products": [
+    {
+      "id": "whats-new-2026-07-17",
+      "title": "What's New — placeholder (17 July 2026)",
+      "path": "briefs/whats-new-2026-07-17.html",
+      "topic": "What's New",
+      "description": "First edition of the weekly round-up. The week ahead: UK Labour Market (21 Jul, sets up the 30 Jul Quarterly Economy Monitor), June CPI (22 Jul), and the AI adoption survey (20 Jul — watch-theme check on the North East's 11% adoption rate). Live deadline: Northern Growth Strategy views close 31 July. Every item says why it matters to Gateshead.",
+      "sources": "Weekly round-up · ONS release calendar · gov.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-07-17",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "labour market",
+        "cpi",
+        "ai adoption"
+      ]
+    },
     {
       "id": "productivity",
       "title": "Gateshead Productivity & GVA",
