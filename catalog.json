@@ -1,6 +1,73 @@
 {
   "site": "https://nadamsghc.github.io/Economic-Intelligence",
-  "updated": "2026-07-13",
+  "updated": "2026-07-17",
+  "schedule": {
+    "updated": "17 July 2026",
+    "months": [
+      { "id": "2026-07", "label": "Jul 26" },
+      { "id": "2026-08", "label": "Aug 26" },
+      { "id": "2026-09", "label": "Sep 26" },
+      { "id": "2026-10", "label": "Oct 26" },
+      { "id": "2026-11", "label": "Nov 26" },
+      { "id": "2026-12", "label": "Dec 26" },
+      { "id": "2027-01", "label": "Jan 27" },
+      { "id": "2027-02", "label": "Feb 27" },
+      { "id": "2027-03", "label": "Mar 27" },
+      { "id": "2027-04", "label": "Apr 27" },
+      { "id": "2027-05", "label": "May 27" },
+      { "id": "2027-06", "label": "Jun 27" }
+    ],
+    "rows": [
+      {
+        "name": "What's New",
+        "cadence": "weekly · Mondays",
+        "entries": {
+          "2026-07": [ { "label": "from Mon 20", "status": "next" } ],
+          "2026-08": [ { "label": "every Mon" } ], "2026-09": [ { "label": "every Mon" } ],
+          "2026-10": [ { "label": "every Mon" } ], "2026-11": [ { "label": "every Mon" } ],
+          "2026-12": [ { "label": "every Mon" } ], "2027-01": [ { "label": "every Mon" } ],
+          "2027-02": [ { "label": "every Mon" } ], "2027-03": [ { "label": "every Mon" } ],
+          "2027-04": [ { "label": "every Mon" } ], "2027-05": [ { "label": "every Mon" } ],
+          "2027-06": [ { "label": "every Mon" } ]
+        }
+      },
+      {
+        "name": "Economic Update",
+        "cadence": "monthly · small, small, BIG (quarterly, on APS releases)",
+        "entries": {
+          "2026-07": [ { "label": "BIG · Thu 30", "status": "next", "kind": "big" } ],
+          "2026-08": [ { "label": "Thu 20" } ], "2026-09": [ { "label": "Thu 17" } ],
+          "2026-10": [ { "label": "BIG · Thu 29", "kind": "big" } ],
+          "2026-11": [ { "label": "Thu 19" } ], "2026-12": [ { "label": "Thu 17" } ],
+          "2027-01": [ { "label": "BIG · Thu 28", "kind": "big" } ],
+          "2027-02": [ { "label": "Thu 18" } ], "2027-03": [ { "label": "Thu 18" } ],
+          "2027-04": [ { "label": "BIG · Thu 29", "kind": "big" } ],
+          "2027-05": [ { "label": "Thu 20" } ], "2027-06": [ { "label": "Thu 17" } ]
+        }
+      },
+      {
+        "name": "Policy Update",
+        "cadence": "monthly · first Friday",
+        "entries": {
+          "2026-07": [ { "label": "Jul edition", "status": "released", "href": "policy/policy-update-2026-07.html" } ],
+          "2026-08": [ { "label": "Fri 7", "status": "next" } ],
+          "2026-09": [ { "label": "Fri 4" } ], "2026-10": [ { "label": "Fri 2" } ],
+          "2026-11": [ { "label": "Fri 6" } ], "2026-12": [ { "label": "Fri 4" } ],
+          "2027-01": [ { "label": "Fri 8" } ], "2027-02": [ { "label": "Fri 5" } ],
+          "2027-03": [ { "label": "Fri 5" } ], "2027-04": [ { "label": "Fri 2" } ],
+          "2027-05": [ { "label": "Fri 7" } ], "2027-06": [ { "label": "Fri 4" } ]
+        }
+      },
+      {
+        "name": "Local Economic Assessment",
+        "cadence": "annual · December (2026 adds a one-off interim)",
+        "entries": {
+          "2026-08": [ { "label": "Interim · Fri 28", "kind": "big" } ],
+          "2026-12": [ { "label": "Full · Fri 18", "kind": "big" } ]
+        }
+      }
+    ]
+  },
   "topics": [
     {
       "name": "Economy",
@@ -169,6 +236,8 @@
       "topic": "Policy",
       "description": "What changed in government and regional policy for Gateshead's economy — second edition, scan run 13 July 2026: the Northern Growth Strategy views window closing 31 July (£120m, proposed Newcastle–Gateshead MDZ), Gateshead named a North East Pathfinder partner, the new North East LSIP 2026–2029, the Industrial Strategy quarterly and year-one reports (8 July), the April 2026 Universal Credit structural break, and the Transformed LFS transition timetable under assessment. Reads like a document; replaces the 3 July edition.",
       "sources": "Briefing · HTML · gov.uk · parliament.uk · ONS · NE MSA",
+      "series": "policy-update",
+      "date": "2026-07-13",
       "keywords": [
         "policy",
         "briefing",

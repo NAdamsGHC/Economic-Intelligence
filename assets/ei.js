@@ -7,6 +7,17 @@
 
   var SITE = ""; // filled from catalog.site
 
+  // Recurring publication series. The newest product in each series is pinned
+  // automatically; earlier editions collect in an archive section at the foot
+  // of the page.
+  var SERIES = {
+    "whats-new":       { archive: "What's New",            note: "Weekly round-up — earlier editions, newest first" },
+    "economic-update": { archive: "Past Economic Updates", note: "Earlier editions, newest first" },
+    "policy-update":   { archive: "Past Policy Updates",   note: "Earlier editions, newest first" },
+    "lea-update":      { archive: "Past LEA Updates",      note: "Earlier editions, newest first" }
+  };
+  var SERIES_ORDER = ["whats-new", "economic-update", "policy-update", "lea-update"];
+
   // ---- SVG icons (chain link + search) ----
   var ICON_LINK =
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
@@ -97,6 +108,11 @@
       var shown = 0, shownIds = {}, allIds = {};
       document.querySelectorAll(".gc-topic").forEach(function (topic) {
         var vis = 0;
+        if (!topic.querySelectorAll(".gc-card").length) {
+          // card-less sections (the publication schedule) hide during search
+          topic.style.display = q ? "none" : "";
+          return;
+        }
         topic.querySelectorAll(".gc-card").forEach(function (c) {
           allIds[c.getAttribute("data-id")] = 1;
           var hay = c.getAttribute("data-search");
@@ -132,16 +148,62 @@
     return sec;
   }
 
+  // ---- publication schedule (rendered from catalog.schedule) ----
+  function scheduleSection(sch) {
+    var sec = document.createElement("section");
+    sec.className = "gc-topic gc-sched";
+    sec.id = "publication-schedule";
+    var head =
+      '<div class="gc-topic-head"><h2>Publication schedule</h2>' +
+      '<span class="note">What&rsquo;s coming and when &middot; updated ' + esc(sch.updated || "") + "</span></div>";
+    var html = '<div class="gc-sched-scroll"><table class="gc-sched-table"><thead><tr><th class="prod">Product</th>';
+    sch.months.forEach(function (m) { html += "<th>" + esc(m.label) + "</th>"; });
+    html += "</tr></thead><tbody>";
+    sch.rows.forEach(function (row) {
+      html += '<tr><td class="prod">' + esc(row.name) + '<span class="cad">' + esc(row.cadence || "") + "</span></td>";
+      sch.months.forEach(function (m) {
+        html += "<td>";
+        (row.entries[m.id] || []).forEach(function (e) {
+          var cls = "gc-chip " + (e.status || "planned") + (e.kind ? " " + e.kind : "");
+          if (e.href) {
+            html += '<a class="' + cls + '" href="' + esc(e.href) + '">' + esc(e.label) + "</a>";
+          } else {
+            html += '<span class="' + cls + '">' + esc(e.label) + "</span>";
+          }
+        });
+        html += "</td>";
+      });
+      html += "</tr>";
+    });
+    html += "</tbody></table></div>" +
+      '<div class="gc-sched-key"><span><i class="k released"></i>Released &mdash; click to open</span>' +
+      "<span><i class=\"k next\"></i>Next up</span><span><i class=\"k planned\"></i>Planned</span></div>";
+    sec.innerHTML = head + html;
+    return sec;
+  }
+
   function render(cat) {
     SITE = cat.site || "";
     var root = document.getElementById("gc-catalog");
     if (!root) return;
     root.innerHTML = "";
 
-    // Pinned section first — the products flagged pinned in catalog.json.
+    // Series resolution: newest edition of each series is pinned; the rest
+    // are archived out of the topic sections into the foot-of-page sections.
+    var bySeries = {};
+    cat.products.forEach(function (p) {
+      if (p.series && SERIES[p.series]) (bySeries[p.series] = bySeries[p.series] || []).push(p);
+    });
+    Object.keys(bySeries).forEach(function (s) {
+      bySeries[s].sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+      bySeries[s].forEach(function (p, i) { p.pinned = i === 0; p._archived = i > 0; });
+    });
+
+    // Pinned section first — flagged products plus each series' latest.
+    // Pinned products appear here ONLY (not repeated in their topic section).
     var pinnedProds = cat.products.filter(function (p) { return p.pinned; });
     if (pinnedProds.length) {
-      var psec = topicSection("Pinned", "The products the team reaches for most", "topic-pinned");
+      var psec = topicSection("Pinned", "The latest editions and the products the team reaches for most", "topic-pinned");
       psec.classList.add("gc-topic-pinned");
       var pgrid = psec.querySelector(".gc-cards");
       pinnedProds.forEach(function (p) { pgrid.appendChild(card(p, { inPinned: true })); });
@@ -149,14 +211,27 @@
       root.appendChild(psec);
     }
 
+    // Publication schedule — the public year view (published products only).
+    if (cat.schedule) root.appendChild(scheduleSection(cat.schedule));
+
     cat.topics.forEach(function (t) {
-      var prods = cat.products.filter(function (p) { return p.topic === t.name; });
+      var prods = cat.products.filter(function (p) { return p.topic === t.name && !p.pinned && !p._archived; });
       if (!prods.length) return;
-      prods.sort(function (a, b) { return (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0); });
       var sec = topicSection(t.name, t.note, "topic-" + t.name.toLowerCase().replace(/[^a-z]+/g, "-"));
       var grid = sec.querySelector(".gc-cards");
       prods.forEach(function (p) { grid.appendChild(card(p)); });
       sec.querySelector(".count").textContent = prods.length + (prods.length === 1 ? " product" : " products");
+      root.appendChild(sec);
+    });
+
+    // Series archives at the foot of the page.
+    SERIES_ORDER.forEach(function (s) {
+      var arr = (bySeries[s] || []).filter(function (p) { return p._archived; });
+      if (!arr.length) return;
+      var sec = topicSection(SERIES[s].archive, SERIES[s].note, "series-" + s);
+      var grid = sec.querySelector(".gc-cards");
+      arr.forEach(function (p) { grid.appendChild(card(p)); });
+      sec.querySelector(".count").textContent = arr.length + (arr.length === 1 ? " edition" : " editions");
       root.appendChild(sec);
     });
 
