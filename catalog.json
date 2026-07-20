@@ -1,8 +1,8 @@
 {
   "site": "https://nadamsghc.github.io/Economic-Intelligence",
-  "updated": "2026-07-17",
+  "updated": "2026-07-20",
   "schedule": {
-    "updated": "17 July 2026",
+    "updated": "20 July 2026",
     "months": [
       { "id": "2026-07", "label": "Jul 26" },
       { "id": "2026-08", "label": "Aug 26" },
@@ -24,7 +24,8 @@
         "entries": {
           "2026-07": [
             { "label": "placeholder", "status": "released", "href": "briefs/whats-new-2026-07-17.html" },
-            { "label": "Mon 20", "status": "next" }
+            { "label": "Mon 20", "status": "released", "href": "briefs/whats-new-2026-07-20.html" },
+            { "label": "Mon 27", "status": "next" }
           ],
           "2026-08": [ { "label": "every Mon" } ], "2026-09": [ { "label": "every Mon" } ],
           "2026-10": [ { "label": "every Mon" } ], "2026-11": [ { "label": "every Mon" } ],
@@ -94,6 +95,27 @@
     }
   ],
   "products": [
+    {
+      "id": "whats-new-2026-07-20",
+      "title": "What's New — 20 July 2026",
+      "path": "briefs/whats-new-2026-07-20.html",
+      "topic": "What's New",
+      "description": "First full edition of the weekly round-up. A big data week ahead: UK Labour Market with local claimant count and PAYE RTI (21 Jul), June CPI (22 Jul), and the confirmed mid-2025 population estimates with revised back series (29 Jul) — all feeding the 30 Jul Quarterly Economy Monitor. Policy: the Commons HCLG Committee's Revitalising High Streets inquiry (evidence closes 7 Sep), a change of Prime Minister, and Skills England's move to DWP. Live deadline: Northern Growth Strategy views close 31 July.",
+      "sources": "Weekly round-up · ONS release calendar · gov.uk · parliament.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-07-20",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "labour market",
+        "claimant count",
+        "population estimates",
+        "high streets",
+        "cpi"
+      ]
+    },
     {
       "id": "whats-new-2026-07-17",
       "title": "What's New — placeholder (17 July 2026)",
