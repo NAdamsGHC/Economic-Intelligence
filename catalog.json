@@ -1,21 +1,57 @@
 {
   "site": "https://nadamsghc.github.io/Economic-Intelligence",
-  "updated": "2026-07-20",
+  "updated": "28 July 2026",
   "schedule": {
-    "updated": "20 July 2026",
+    "updated": "28 July 2026",
     "months": [
-      { "id": "2026-07", "label": "Jul 26" },
-      { "id": "2026-08", "label": "Aug 26" },
-      { "id": "2026-09", "label": "Sep 26" },
-      { "id": "2026-10", "label": "Oct 26" },
-      { "id": "2026-11", "label": "Nov 26" },
-      { "id": "2026-12", "label": "Dec 26" },
-      { "id": "2027-01", "label": "Jan 27" },
-      { "id": "2027-02", "label": "Feb 27" },
-      { "id": "2027-03", "label": "Mar 27" },
-      { "id": "2027-04", "label": "Apr 27" },
-      { "id": "2027-05", "label": "May 27" },
-      { "id": "2027-06", "label": "Jun 27" }
+      {
+        "id": "2026-07",
+        "label": "Jul 26"
+      },
+      {
+        "id": "2026-08",
+        "label": "Aug 26"
+      },
+      {
+        "id": "2026-09",
+        "label": "Sep 26"
+      },
+      {
+        "id": "2026-10",
+        "label": "Oct 26"
+      },
+      {
+        "id": "2026-11",
+        "label": "Nov 26"
+      },
+      {
+        "id": "2026-12",
+        "label": "Dec 26"
+      },
+      {
+        "id": "2027-01",
+        "label": "Jan 27"
+      },
+      {
+        "id": "2027-02",
+        "label": "Feb 27"
+      },
+      {
+        "id": "2027-03",
+        "label": "Mar 27"
+      },
+      {
+        "id": "2027-04",
+        "label": "Apr 27"
+      },
+      {
+        "id": "2027-05",
+        "label": "May 27"
+      },
+      {
+        "id": "2027-06",
+        "label": "Jun 27"
+      }
     ],
     "rows": [
       {
@@ -23,51 +59,239 @@
         "cadence": "weekly · Mondays",
         "entries": {
           "2026-07": [
-            { "label": "placeholder", "status": "released", "href": "briefs/whats-new-2026-07-17.html" },
-            { "label": "Mon 20", "status": "released", "href": "briefs/whats-new-2026-07-20.html" },
-            { "label": "Mon 27", "status": "next" }
+            {
+              "label": "placeholder",
+              "status": "released",
+              "href": "briefs/whats-new-2026-07-17.html"
+            },
+            {
+              "label": "Mon 20",
+              "status": "released",
+              "href": "briefs/whats-new-2026-07-20.html"
+            },
+            {
+              "label": "Mon 27",
+              "status": "released",
+              "href": "briefs/whats-new-2026-07-28.html"
+            }
           ],
-          "2026-08": [ { "label": "every Mon" } ], "2026-09": [ { "label": "every Mon" } ],
-          "2026-10": [ { "label": "every Mon" } ], "2026-11": [ { "label": "every Mon" } ],
-          "2026-12": [ { "label": "every Mon" } ], "2027-01": [ { "label": "every Mon" } ],
-          "2027-02": [ { "label": "every Mon" } ], "2027-03": [ { "label": "every Mon" } ],
-          "2027-04": [ { "label": "every Mon" } ], "2027-05": [ { "label": "every Mon" } ],
-          "2027-06": [ { "label": "every Mon" } ]
+          "2026-08": [
+            {
+              "label": "Mon 3",
+              "status": "next"
+            },
+            {
+              "label": "then every Mon"
+            }
+          ],
+          "2026-09": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2026-10": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2026-11": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-01": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-02": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-03": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-04": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-05": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-06": [
+            {
+              "label": "every Mon"
+            }
+          ]
         }
       },
       {
         "name": "Economic Update",
         "cadence": "monthly · small, small, BIG (quarterly, on APS releases)",
         "entries": {
-          "2026-07": [ { "label": "BIG · Thu 30", "status": "next", "kind": "big" } ],
-          "2026-08": [ { "label": "Thu 20" } ], "2026-09": [ { "label": "Thu 17" } ],
-          "2026-10": [ { "label": "BIG · Thu 29", "kind": "big" } ],
-          "2026-11": [ { "label": "Thu 19" } ], "2026-12": [ { "label": "Thu 17" } ],
-          "2027-01": [ { "label": "BIG · Thu 28", "kind": "big" } ],
-          "2027-02": [ { "label": "Thu 18" } ], "2027-03": [ { "label": "Thu 18" } ],
-          "2027-04": [ { "label": "BIG · Thu 29", "kind": "big" } ],
-          "2027-05": [ { "label": "Thu 20" } ], "2027-06": [ { "label": "Thu 17" } ]
+          "2026-07": [
+            {
+              "label": "BIG · Thu 30",
+              "status": "next",
+              "kind": "big"
+            }
+          ],
+          "2026-08": [
+            {
+              "label": "Thu 20"
+            }
+          ],
+          "2026-09": [
+            {
+              "label": "Thu 17"
+            }
+          ],
+          "2026-10": [
+            {
+              "label": "BIG · Thu 29",
+              "kind": "big"
+            }
+          ],
+          "2026-11": [
+            {
+              "label": "Thu 19"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "Thu 17"
+            }
+          ],
+          "2027-01": [
+            {
+              "label": "BIG · Thu 28",
+              "kind": "big"
+            }
+          ],
+          "2027-02": [
+            {
+              "label": "Thu 18"
+            }
+          ],
+          "2027-03": [
+            {
+              "label": "Thu 18"
+            }
+          ],
+          "2027-04": [
+            {
+              "label": "BIG · Thu 29",
+              "kind": "big"
+            }
+          ],
+          "2027-05": [
+            {
+              "label": "Thu 20"
+            }
+          ],
+          "2027-06": [
+            {
+              "label": "Thu 17"
+            }
+          ]
         }
       },
       {
         "name": "Policy Update",
         "cadence": "monthly · first Friday",
         "entries": {
-          "2026-07": [ { "label": "Jul edition", "status": "released", "href": "policy/policy-update-2026-07.html" } ],
-          "2026-08": [ { "label": "Fri 7", "status": "next" } ],
-          "2026-09": [ { "label": "Fri 4" } ], "2026-10": [ { "label": "Fri 2" } ],
-          "2026-11": [ { "label": "Fri 6" } ], "2026-12": [ { "label": "Fri 4" } ],
-          "2027-01": [ { "label": "Fri 8" } ], "2027-02": [ { "label": "Fri 5" } ],
-          "2027-03": [ { "label": "Fri 5" } ], "2027-04": [ { "label": "Fri 2" } ],
-          "2027-05": [ { "label": "Fri 7" } ], "2027-06": [ { "label": "Fri 4" } ]
+          "2026-07": [
+            {
+              "label": "Jul edition",
+              "status": "released",
+              "href": "policy/policy-update-2026-07.html"
+            }
+          ],
+          "2026-08": [
+            {
+              "label": "Fri 7",
+              "status": "next"
+            }
+          ],
+          "2026-09": [
+            {
+              "label": "Fri 4"
+            }
+          ],
+          "2026-10": [
+            {
+              "label": "Fri 2"
+            }
+          ],
+          "2026-11": [
+            {
+              "label": "Fri 6"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "Fri 4"
+            }
+          ],
+          "2027-01": [
+            {
+              "label": "Fri 8"
+            }
+          ],
+          "2027-02": [
+            {
+              "label": "Fri 5"
+            }
+          ],
+          "2027-03": [
+            {
+              "label": "Fri 5"
+            }
+          ],
+          "2027-04": [
+            {
+              "label": "Fri 2"
+            }
+          ],
+          "2027-05": [
+            {
+              "label": "Fri 7"
+            }
+          ],
+          "2027-06": [
+            {
+              "label": "Fri 4"
+            }
+          ]
         }
       },
       {
         "name": "Local Economic Assessment",
         "cadence": "annual · December (2026 adds a one-off interim)",
         "entries": {
-          "2026-08": [ { "label": "Interim · Fri 28", "kind": "big" } ],
-          "2026-12": [ { "label": "Full · Fri 18", "kind": "big" } ]
+          "2026-08": [
+            {
+              "label": "Interim · Fri 28",
+              "kind": "big"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "Full · Fri 18",
+              "kind": "big"
+            }
+          ]
         }
       }
     ]
@@ -95,6 +319,28 @@
     }
   ],
   "products": [
+    {
+      "id": "whats-new-2026-07-28",
+      "title": "What's New — 28 July 2026",
+      "path": "briefs/whats-new-2026-07-28.html",
+      "topic": "What's New",
+      "description": "The Monday 27 July edition, covering 20–28 July. The month's biggest data drop landed on 21 July — claimant count to June 2026 and a new Annual Population Survey window (Apr 2025–Mar 2026) that the Quarterly Economy Monitor must be built on. MHCLG's local-authority business rates and reliefs data is the easy-to-miss one. Policy: local economic growth policy moved out of MHCLG and HM Treasury to No.10 North on 22 July, DSIT abolished, and a 14+ technical education announcement aimed at NEETs — an intention, not yet policy. Two deadlines close Friday 31 July: the Northern Growth Strategy views window and the Productivity Institute call for papers.",
+      "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-07-28",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "labour market",
+        "aps",
+        "claimant count",
+        "machinery of government",
+        "neet",
+        "northern growth strategy"
+      ]
+    },
     {
       "id": "whats-new-2026-07-20",
       "title": "What's New — 20 July 2026",
@@ -140,7 +386,7 @@
       "title": "Gateshead Productivity & GVA",
       "path": "economy/productivity.html",
       "topic": "Economy",
-      "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Built to absorb the imminent 2024 data.",
+      "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Built to absorb the 2024 data when it lands (ONS: GVA around September 2026, productivity 5 November 2026).",
       "sources": "ONS balanced GVA & subregional productivity · NOMIS",
       "keywords": [
         "gva",
@@ -208,8 +454,8 @@
       "title": "North East Creative Industries (CCIS)",
       "path": "business-industry-trade/creative-industries.html",
       "topic": "Business, industry and trade",
-      "description": "DCMS creative sector business counts, employment and GVA across the seven North East Combined Authority local authorities. Companion to the CCIS Framework Data & Evidence consultation.",
-      "sources": "DCMS Creative Industries Sector Economic Estimates",
+      "description": "Creative sector business counts, employment and a GVA proxy across the seven North East Combined Authority local authorities, built by applying the DCMS creative-industries SIC definition to ONS data. Companion to the CCIS Framework Data & Evidence consultation.",
+      "sources": "ONS UK Business Counts & BRES on the DCMS creative SIC definition · ONS regional GVA (balanced)",
       "keywords": [
         "creative",
         "culture",
