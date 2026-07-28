@@ -342,17 +342,23 @@ def load_innovation():
 # --------------------------------------------------------------------------- #
 def load_employment():
     log("\n[8] Nomis employment (best effort)")
-    # BRES employment, Gateshead LAD. Try GSS code directly.
+    # BRES employees, Gateshead LAD, latest year. Try GSS code directly.
+    # date=latest is required: without it Nomis returns the whole series from 2015
+    # and obs[0] is the FIRST year, not the current one.
+    # employment_status=1 is employees (matches the "Employees" label); 4 would be
+    # employment, which also counts working proprietors.
     for geo_param in (C.LAD_CODE, "1811939341"):
         try:
             url = f"{C.NOMIS_BASE}/NM_189_1.data.json"
-            js = http_json(url, params={"geography": geo_param, "employment_status": "4",
-                                        "measure": "1", "measures": "20100", "industry": "37748736"}, retries=1)
+            js = http_json(url, params={"geography": geo_param, "employment_status": "1",
+                                        "measure": "1", "measures": "20100", "industry": "37748736",
+                                        "date": "latest"}, retries=1)
             obs = js.get("obs", [])
             if obs:
                 val = obs[0]["obs_value"]["value"]
-                log(f"    BRES employees (geo {geo_param}): {val}")
-                return {"available": True, "employees": val}
+                year = obs[0].get("time", {}).get("description")
+                log(f"    BRES employees (geo {geo_param}, {year}): {val}")
+                return {"available": True, "employees": val, "employees_year": year}
         except Exception:
             continue
     warn("Nomis employment unavailable")

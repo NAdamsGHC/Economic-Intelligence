@@ -201,7 +201,8 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
       <ul style="margin:0 0 0 18px;font-size:13px;line-height:1.65;">
         <li><b>Registered office &ne; trading address.</b> Companies House locates where a firm is <i>registered</i>, often an accountant or home. Mass-registration addresses are flagged and can be hidden on the map. FSA premises are the ground-truth trading locations.</li>
         <li><b>Sector churn is national by industry.</b> ONS publishes birth/death rates by broad industry, applied to Gateshead's local sector mix &mdash; not street-level survival.</li>
-        <li><b>Employees</b> are a borough total (BRES), not per-area.</li>
+        <li><b>Employees</b> are the published borough total &mdash; Gateshead's Business Register and Employment Survey employee count for 2024 is 95,000 (NOMIS, dataset NM_189_1), quoted as published rather than summed from the disclosure-controlled small-area cells. It is not available per-area here, and it counts <i>workplace</i> employees of every kind of employer, so it is a wider base than the Companies House register this map is built on.</li>
+        <li><b>&ldquo;Active&rdquo; companies</b> follow Companies House status, which counts a company as Active until it is struck off. That includes 821 companies with a live proposal to strike off &mdash; an exit signal, but one that also sits outside the distress count. On the strict reading (excluding proposed strike-offs) 10,198 companies are active, 91% of the register.</li>
         <li><b>Closures</b>: sector fragility uses ONS death rates; the High streets tab's openings/closures instead diff monthly CH snapshots &mdash; "gone" means dissolved, moved or de-registered, not necessarily a shopfront closing.</li>
         <li><b>Start-ups</b> count incorporations of <i>currently-live</i> companies &mdash; older quarters undercount because dissolved firms drop out (survivorship).</li>
         <li><b>Centre assignment</b>: inside the designated polygon or within 150m (judgement); MetroCentre/Retail World are label points approximated by 500m/350m circles; catchment = residents within 800m of the centre. These are analytical judgements &mdash; see the repository's <a class="src" href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>.</li>
@@ -237,9 +238,9 @@ const secLabel = s => SECL[s]||s;
 // ---------- header ----------
 document.getElementById('sourceLine').innerHTML =
   'Companies House snapshot <code>'+esc(M.ch_snapshot)+'</code> &middot; '+esc(M.imd_vintage)+' &middot; wards '+esc(M.ward_vintage)+' &middot; built '+esc(M.generated);
-const hs=[['Companies',fmt(H.companies),'registered in borough'],['Active',fmt(H.active),(100*H.active/H.companies).toFixed(0)+'% of total'],
+const hs=[['Companies',fmt(H.companies),'registered in borough'],['Active',fmt(H.active),(100*H.active/H.companies).toFixed(0)+'% of total &middot; incl. strike-off proposed'],
   ['In distress',fmt(H.distress),'liquidation / administration'],['Food premises',fmt(H.fsa),'FSA-rated'],
-  ['Employees',fmt(H.employees),'BRES (borough)'],['Residents',fmt(H.population),H.lsoas+' LSOAs / '+H.wards+' wards']];
+  ['Employees',fmt(H.employees),'BRES 2024, borough'],['Residents',fmt(H.population),H.lsoas+' LSOAs / '+H.wards+' wards']];
 document.getElementById('heroStats').innerHTML = hs.map(s=>'<div class="stat"><div class="label">'+s[0]+'</div><div class="value">'+s[1]+'</div><div class="sub">'+s[2]+'</div></div>').join('');
 
 // ---------- overview ----------
@@ -248,7 +249,7 @@ const topI = wards.filter(w=>w.intervention!=null).slice().sort((a,b)=>b.interve
 const topV = wards.filter(w=>w.investment!=null).slice().sort((a,b)=>b.investment-a.investment);
 const secI = D.sectors.find(s=>s.sec==='I')||{};
 document.getElementById('overviewLede').innerHTML =
-  'Gateshead has <b>'+fmt(H.companies)+'</b> registered companies supporting around <b>'+fmt(H.employees)+'</b> jobs across <b>'+H.wards+'</b> wards. '+
+  'Gateshead has <b>'+fmt(H.companies)+'</b> companies registered to a borough address across <b>'+H.wards+'</b> wards. The borough&rsquo;s workplaces employ <b>'+fmt(H.employees)+'</b> people (BRES 2024) &mdash; a wider base that also counts public-sector and non-corporate employers outside the Companies House register. '+
   'The UK 2024 business death rate is '+H.uk.death_rate+'% and five-year survival '+H.uk.survival_5yr+'%. '+
   'Highest intervention need centres on <b>'+esc(topI[0].name)+'</b>; the strongest investment signal is in <b>'+esc(topV[0].name)+'</b>. '+
   (secI.count? 'Accommodation &amp; food runs '+fmt(secI.count)+' firms ('+secI.per_1k+' per 1,000 residents) against a '+secI.death+'% industry death rate &mdash; the over-supply-and-churn pattern.':'');

@@ -99,7 +99,7 @@ footer a{color:var(--teal);}
 <div class="wrap">
 <header>
   <h1>North East Creative Industries &mdash; CCIS Baseline Dashboard</h1>
-  <p>DCMS creative sector business counts, employment and Gross Value Added across the seven North East Combined Authority local authorities. Companion to the CCIS Framework Data &amp; Evidence consultation.</p>
+  <p>Creative sector business counts, employment and a Gross Value Added proxy across the seven North East Combined Authority local authorities, built by applying the DCMS creative-industries SIC definition to ONS data. Companion to the CCIS Framework Data &amp; Evidence consultation.</p>
 </header>
 
 <div class="kpis" id="kpis"></div>
@@ -149,7 +149,8 @@ footer a{color:var(--teal);}
 
 <div class="note">
   <b>Data notes &amp; caveats.</b>
-  Sources: ONS UK Business Counts (businesses, 2010&ndash;2025), ONS Business Register &amp; Employment Survey (employees, 2015&ndash;2024) on the DCMS creative-sector basis; ONS Regional GVA (balanced) by local authority, 2023 release.
+  Sources: ONS UK Business Counts (enterprises, 2010&ndash;2025), ONS Business Register &amp; Employment Survey (employees, 2015&ndash;2024) on the DCMS creative-sector basis; ONS Regional GVA (balanced) by industry for local authorities, April 2025 release, data to 2023. <b>These are ONS figures queried on the DCMS creative definition &mdash; they are not DCMS's own published Sector Economic Estimates</b>, which are not produced at local-authority level.
+  &bull; <b>The SIC 2007 basket used here</b> (DCMS creative industries): 32.12, 58.11, 58.21, 59.11, 59.12, 59.13, 59.14, 59.20, 60.10, 60.20, 62.01, 62.02, 63.91, 70.21, 71.11, 73.11, 73.12, 74.10, 74.20, 74.30, 85.52, 90.01, 90.02, 90.03, 90.04, 91.01, 91.02. DCMS counts only a <i>share</i> of some codes &mdash; notably 62.01 and 62.02 (computer programming and consultancy) &mdash; but that split cannot be applied at local-authority level, so those codes are included in full here and the local totals overstate the DCMS measure to that extent. Queried at 4-digit SIC class level and summed; "businesses" are <b>enterprises</b>, not local units.
   &bull; The "North East" area is the Combined Authority total (the 7 LAs); selecting it and an individual LA are alternative views &mdash; do not add them together.
   &bull; "All creative" is the DCMS creative-industries total and already includes every sector shown &mdash; sectors are sub-totals of it, not additions to it.
   &bull; Business and employee figures are rounded by ONS (businesses to the nearest 5, employees more coarsely), so small sectors such as Crafts and Museums are imprecise and constituent-LA sums need not equal the CA total.
@@ -159,7 +160,7 @@ footer a{color:var(--teal);}
 <footer>
   Built for the NE MSA CCIS Framework Data &amp; Evidence consultation. DCMS sector definitions per
   <a href="https://www.gov.uk/government/publications/dcms-sectors-economic-estimates-methodology/dcms-sector-economic-estimates-methodology" target="_blank">DCMS Sectors Economic Estimates Methodology</a>;
-  regional GVA per <a href="https://www.gov.uk/government/statistics/regional-gross-value-added-balanced-by-industry-by-local-authority-in-the-uk" target="_blank">ONS Regional GVA (balanced) by local authority</a>.
+  regional GVA per <a href="https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region" target="_blank" rel="noopener">ONS Regional gross value added (balanced) by industry: local authorities by ITL1 region</a>.
 </footer>
 </div>
 

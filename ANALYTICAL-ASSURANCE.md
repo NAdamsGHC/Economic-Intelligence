@@ -1,13 +1,14 @@
-# Analytical assurance note — ELS scorecard & GDHI per head dashboards
+# Analytical assurance note — ELS scorecard, GDHI and productivity dashboards
 
 **Status: experimental analytical products, not official statistics.** Built from published official statistics, but the derived measures (ranks, quartiles, indices, better/worse directions) are the author's analytical judgements. Treat with caution and verify figures against the source releases before using them to inform decisions.
 
 This note applies the **Aqua Book (2025)** framework — proportionate quality assurance, verification vs validation, an assumptions log, and named roles — to:
 
 - [`economy/els-scorecard.html`](economy/els-scorecard.html) — all 88 ONS Explore Local Statistics indicators covering Gateshead
-- [`economy/gdhi-per-head.html`](economy/gdhi-per-head.html) — GDHI per head benchmarking, 1997–2023
+- [`economy/gdhi.html`](economy/gdhi.html) — GDHI per head benchmarking, 1997–2023, and the small-area GDHI explorer, 2010–2023 (the per-head benchmarking previously sat in a separate `gdhi-per-head.html`, merged into this product in July 2026)
+- [`economy/productivity.html`](economy/productivity.html) — GVA and productivity position, 1998–2023, with the statistical-neighbour scorecard and UK league table
 
-Last updated: 7 July 2026.
+Last updated: 28 July 2026.
 
 ---
 
@@ -68,6 +69,22 @@ These are **descriptive monitoring and benchmarking products**: they answer *"wh
 | B2 | **UK = 100 index** used as the inflation-free read of relative position (no LAD-level real GDHI exists); nominal growth always labelled nominal. | A falling index can coincide with rising real income — stated in the dashboard. |
 | B3 | Ranks among the 361 UK LADs in the workbook (2023 boundaries), 1 = highest income; National Accounts estimates carry **no CIs but are revised through the whole back series each release** — nearby ranks treated as equivalent. | 2024 release (~autumn 2026) will revise history; rebuild, don't append. |
 | B4 | Comparator sets as A7. | — |
+
+### GDHI small-area explorer (added 28 July 2026)
+
+| # | Assumption / judgement | Basis and risk |
+|---|---|---|
+| C1 | The **LAD, ITL-region and national aggregates in the explorer are derived by the build**, not published by ONS: they sum the LSOA / Data Zone / SOA building blocks in the "other geographic areas" release. | Sums of modelled apportionments; use the per-head tab's published series for any quoted LAD figure. |
+| C2 | Those derived aggregates cover **Great Britain, not the UK** — the building blocks are English and Welsh LSOAs and Scottish Data Zones, so Northern Ireland's 11 districts are absent. The national row is labelled Great Britain (2023 total £1,656,256m against an official UK £1,695,436m; the £39,180m difference is Northern Ireland). | Corrected 28 July 2026 after the July verification pass found the row labelled United Kingdom. Coverage is stated in the About tab and on the affected chart descriptions. |
+| C3 | Area counts quoted in the interface are **3,425 areas, 350 GB local authorities and 11 ITL regions**, after two source header rows ingested as areas were removed from the data. | Corrected 28 July 2026 (the counts previously read 3,427 / 351 / 12, and one panel carried a stale 1,946 from an earlier build). |
+
+### Productivity & GVA dashboard (added 28 July 2026)
+
+| # | Assumption / judgement | Basis and risk |
+|---|---|---|
+| D1 | GVA and productivity series quoted **exactly as published** by ONS — regional GVA (balanced) by industry for local authorities (April 2025 release, data to 2023) and subregional productivity by local authority district (19 June 2025 release, data to 2023). No re-derivation where an official figure exists. | Next vintages: LAD GVA 2024 around September 2026, subregional productivity 2024 on 5 November 2026, both with back-series revisions — rebuild, don't append. |
+| D2 | The **business base total is the published UKBC figure** (5,580 enterprises, 2025), not the sum of the disclosure-rounded size bands (5,575). Size-band shares are computed on the band sum, so they remain internally consistent. | Corrected 28 July 2026; the difference is disclosure rounding, not error. |
+| D3 | The statistical-neighbour scorecard resolves **all 20 economic neighbours**, including Barnsley (E08000016) and Newry, Mourne and Down (N09000010), both added from source on 28 July 2026 after the July verification pass found Barnsley carried a non-existent code (E08000038) and Newry missing from the areas dictionary. | Newry's 2023 per-job and jobs values are suppressed at source; the series ends 2022 for those two measures and the table shows the last published value. |
 
 ## 4. Verification and validation record
 
