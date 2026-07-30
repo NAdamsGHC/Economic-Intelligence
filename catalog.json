@@ -1,6 +1,6 @@
 {
   "site": "https://nadamsghc.github.io/Economic-Intelligence",
-  "updated": "28 July 2026",
+  "updated": "30 July 2026",
   "schedule": {
     "updated": "28 July 2026",
     "months": [
@@ -316,6 +316,10 @@
     {
       "name": "Policy",
       "note": "Briefings · government & regional policy for the local economy"
+    },
+    {
+      "name": "Performance and outcomes",
+      "note": "National outcome frameworks — where Gateshead sits, and against whom"
     }
   ],
   "products": [
@@ -540,6 +544,37 @@
         "industrial strategy",
         "pathfinder"
       ]
+    },
+    {
+      "id": "lgof-comparator",
+      "title": "Local Outcomes Framework comparator",
+      "path": "performance-outcomes/lgof-comparator.html",
+      "topic": "Performance and outcomes",
+      "description": "Where Gateshead sits on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) across all 16 outcomes, against six switchable comparator groups — MHCLG's statistical neighbours, NECA 7, the North East 12, the ONS economic neighbours, and the national median with and without London. MHCLG publishes no dataset for the framework and its digital tool is not yet live, so each of the 112 live metrics is assembled from the original publication the framework names, across 12 publishing organisations, and rendered as 137 series (49 with published 95% confidence intervals). Group median, rank, quintile band and a better/worse reading per metric against all 132 English single-tier authorities, with a ranked comparator chart, trends, and a data-currency panel driven by the quarterly vintage sweep. A comparator tool, not an assessment of council performance: where a rank would mislead, none is given, and the 3 metrics MHCLG has not yet confirmed show as visible awaiting-data rows.",
+      "sources": "MHCLG Local Outcomes Framework · assembled from OHID, ONS, NOMIS, DfE, DHSC/ASCOF, MHCLG, DfT, Defra, DCMS, DWP, NDTMS, Sport England, Skills for Care",
+      "keywords": [
+        "lgof",
+        "local outcomes framework",
+        "mhclg",
+        "outcomes",
+        "performance",
+        "statistical neighbours",
+        "comparator",
+        "benchmarking",
+        "rank",
+        "quintile",
+        "adult social care",
+        "children's social care",
+        "ascof",
+        "homelessness",
+        "housing",
+        "health",
+        "neighbourhoods",
+        "transport",
+        "child poverty",
+        "deprivation"
+      ],
+      "pinned": true
     }
   ]
 }

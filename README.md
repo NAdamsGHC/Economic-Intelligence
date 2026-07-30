@@ -20,6 +20,7 @@ The site wears **one civic-style skin** (PT Sans, `#045a90` blue, `#252525` mast
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | [Employer Skills Survey 2024](employment-labour-market/employer-skills-survey-2024.html) | DfE ESS 2024 — North East vs England's 9 regions: vacancies, skills gaps, training, apprenticeships, future skill needs, AI | 36 KB |
+| **Performance and outcomes** | [Local Outcomes Framework comparator](performance-outcomes/lgof-comparator.html) ⭐ | Gateshead on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) — all 16 outcomes, 112 live metrics assembled from 12 publishers' own releases into 137 series, against six switchable comparator groups. Median, rank, quintile and a CI-based better/worse reading per metric across all 132 English single-tier authorities; ranked comparator charts with confidence whiskers, trends, and a data-currency panel from the quarterly vintage sweep. A comparator, not a performance assessment | 1.05 MB |
 
 ---
 
