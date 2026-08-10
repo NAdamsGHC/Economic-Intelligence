@@ -37,6 +37,13 @@ Tees Valley authorities and England.
   JSON were validated programmatically and every query was run against the live
   API, but no visual has been seen rendering. A chart that opens empty is a
   re-bind, not a rebuild.
+- **The first build of this template would not open at all.** It was missing the
+  `DataMashup` part. A modern `.pbix` no longer has one — the M lives in the
+  model's TMSL partitions — but Desktop's *template* reader still requires it
+  and rejects the file as corrupt without it. It is now generated per
+  [MS-QDEFF](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-qdeff/27b1dd1e-7de8-45d9-9c84-dfcc7a802e37)
+  from the same query definitions the partitions are built from, so the two
+  copies of the M cannot drift.
 - **BRES totals don't reconcile by design.** Open-access BRES is disclosure-
   rounded; summing the 21 SIC sections gives 93,130 employee jobs for Gateshead
   2024 against 95,000 from the API's own `Total` code. The model uses the
