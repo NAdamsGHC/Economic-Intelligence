@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "3 August 2026",
+ "updated": "10 August 2026",
  "schedule": {
-  "updated": "3 August 2026",
+  "updated": "10 August 2026",
   "months": [
    {
     "id": "2026-07",
@@ -83,6 +83,11 @@
       },
       {
        "label": "Mon 10",
+       "status": "released",
+       "href": "briefs/whats-new-2026-08-10.html"
+      },
+      {
+       "label": "Mon 17",
        "status": "next"
       },
       {
@@ -228,12 +233,14 @@
      "2026-08": [
       {
        "label": "Fri 7",
-       "status": "next"
+       "status": "released",
+       "href": "policy/policy-update-2026-08.html"
       }
      ],
      "2026-09": [
       {
-       "label": "Fri 4"
+       "label": "Fri 4",
+       "status": "next"
       }
      ],
      "2026-10": [
@@ -330,6 +337,55 @@
   }
  ],
  "products": [
+  {
+   "id": "policy-2026-08",
+   "title": "Policy Update — August 2026",
+   "path": "policy/policy-update-2026-08.html",
+   "topic": "Policy",
+   "description": "What changed in government and regional policy for Gateshead's economy — third edition, scan run 10 August 2026 covering 13 July to 10 August. Four weeks that changed the framework: mayors get a share of business rates from April 2027 and of income tax from 2028, explicitly replacing central grant, with the equalisation design still undefined and the detail due at the Budget on 28 October. Local growth and devolution policy left MHCLG and the Treasury for No10 North in Manchester on 23 July. A 20% business rates discount for pubs, social clubs and live music venues from April 2027 lands on premises in the priority local centres the team holds no baseline for. VAT comes off domestic electricity on 1 October and the £2 bus fare cap returns in January 2027. The high streets select committee inquiry closes to written evidence on 7 September. Plus: the Transformed Labour Force Survey readiness assessment, quarterly regional GDP returning at ITL1 only, and a component-based rebuild of the headline productivity statistic timed for the same month as our 2024 local figure.",
+   "sources": "Briefing · HTML · gov.uk · parliament.uk · ONS · NE MSA",
+   "series": "policy-update",
+   "date": "2026-08-10",
+   "keywords": [
+    "policy",
+    "briefing",
+    "fiscal devolution",
+    "income tax",
+    "business rates",
+    "no10 north",
+    "high streets",
+    "visitor levy",
+    "cost of living",
+    "bus fare cap",
+    "tlfs",
+    "productivity",
+    "budget"
+   ]
+  },
+  {
+   "id": "whats-new-2026-08-10",
+   "title": "What's New — 10 August 2026",
+   "path": "briefs/whats-new-2026-08-10.html",
+   "topic": "What's New",
+   "description": "Covering 3 to 10 August. No local statistics landed, but a date we were relying on came off the calendar and the machinery behind two core measures is being changed in the open. Regional gross disposable household income, 1997 to 2024 no longer carries a confirmed day — the ONS release page now reads provisional August 2026, where last week it read 19 August. The ONS improvement plan confirms an August readiness assessment for moving to the Transformed Labour Force Survey as the headline labour market measure in 2027, and names a new component-based method for the headline productivity statistic, timed for November alongside the 5 November subregional productivity release. Also: the Employment Rights Act timeline (electronic and workplace balloting from 25 August), reissued Youth Jobs Grant guidance, quarterly public service productivity and UK R&D spend for 2024 with no regional breakdown. The high streets inquiry closes to written evidence on 7 September.",
+   "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · parliament.uk · team mailbox",
+   "series": "whats-new",
+   "date": "2026-08-10",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "gdhi",
+    "tlfs",
+    "labour force survey",
+    "productivity",
+    "high streets",
+    "employment rights act",
+    "neet",
+    "youth jobs grant"
+   ]
+  },
   {
    "id": "whats-new-2026-08-03",
    "title": "What's New — 3 August 2026",

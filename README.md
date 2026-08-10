@@ -325,6 +325,7 @@ Written briefings from the Economic Intelligence team sit in [`briefs/`](briefs/
 
 | Date | Briefing | What it covers |
 |---|---|---|
+| August 2026 | [Policy update — 3rd edition, 10 August](policy/policy-update-2026-08.html) | Scan covering 13 July to 10 August. Fiscal devolution becomes a dated programme — business rates share from April 2027, Overnight Visitor Levy power from spring 2027, income tax share from 2028 replacing central grant, with the equalisation design undefined and the detail split between the 28 October Budget and an undated Spending Review. Local growth and devolution policy move to No10 North. A 20% business rates discount for pubs, clubs and live music venues from April 2027; VAT off domestic electricity from 1 October; the £2 bus fare cap back in January 2027. The high streets select committee inquiry closes 7 September. Replaces the [13 July edition](policy/policy-update-2026-07.html) |
 | July 2026 | [Policy update — 2nd edition, 13 July](policy/policy-update-2026-07.html) | New and changed government and regional policy affecting Gateshead's economy — NGS £120m/MDZ views closing 31 July, Gateshead a named NE Pathfinder partner, new NE LSIP 2026–2029, Industrial Strategy quarterly + year one, UC structural break, TLFS slippage. Replaces the [3 July edition](briefs/2026-07-policy-update/) (retained for the record) |
 
 ---

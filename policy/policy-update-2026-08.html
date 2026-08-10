@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Policy update — August 2026 — Gateshead Economic Intelligence</title>
+<style>
+/* Gateshead Economic Intelligence — policy update, document skin.
+   Corporate tokens (PT Sans, #045a90, #252525 masthead, square corners) on a
+   PDF-viewer canvas: grey surround, white sheet, print-clean. Self-contained. */
+:root{
+  --gc-masthead:#252525; --gc-blue:#045a90; --gc-blue-dark:#0F3B5B; --gc-blue-light:#0772b4;
+  --gc-ink:#111; --gc-text:#333; --gc-panel:#f5f5f5; --gc-line:#e5e5e5; --gc-line-2:#ccc;
+  --gc-red:#d50000; --gc-canvas:#525659;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:var(--gc-canvas);color:var(--gc-text);line-height:1.6;}
+a{color:var(--gc-blue);}
+a:hover{color:var(--gc-blue-dark);}
+:focus-visible{outline:2px solid var(--gc-blue);outline-offset:2px;}
+
+.canvas{padding:28px 16px 56px;}
+.sheet{
+  max-width:880px;margin:0 auto;background:#fff;border-radius:0;
+  box-shadow:0 1px 3px rgba(0,0,0,.35),0 12px 40px rgba(0,0,0,.30);
+  padding:58px 68px 46px;
+}
+@media(max-width:720px){.sheet{padding:34px 22px 30px;}.canvas{padding:14px 6px 40px;}}
+
+.kicker{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gc-blue);}
+h1{font-size:31px;color:var(--gc-blue);line-height:1.15;margin:6px 0 10px;}
+.docmeta{font-size:13px;color:#5d6b7a;border-bottom:2px solid var(--gc-blue);padding-bottom:14px;margin-bottom:18px;}
+.docmeta b{color:var(--gc-ink);}
+.lede{font-size:14.5px;color:var(--gc-text);margin-bottom:8px;}
+
+h2{font-size:20px;color:var(--gc-blue);margin:34px 0 10px;line-height:1.25;scroll-margin-top:70px;}
+h3{font-size:15.5px;color:var(--gc-ink);margin:20px 0 6px;}
+p{font-size:15px;margin:0 0 12px;}
+strong{color:var(--gc-ink);}
+ul,ol{margin:0 0 12px 22px;font-size:15px;}
+li{margin-bottom:6px;}
+.small{font-size:12.5px;color:#5d6b7a;}
+
+/* Executive summary — 1.5 spacing, bold lead phrases link to sections */
+.execsum li{line-height:1.75;margin-bottom:10px;}
+.execsum a.lead{font-weight:700;text-decoration:underline;}
+
+/* Colour convention: red marks an item with an action AND a deadline — nothing else. */
+.deadline,a.deadline{color:var(--gc-red);font-weight:700;}
+.key{border:1px solid #f3b7b7;border-left:5px solid var(--gc-red);background:#fdf3f3;
+  padding:12px 16px;margin:14px 0 18px;font-size:14px;color:#4a2424;}
+.key b,.key strong{color:var(--gc-red);}
+
+/* Neutral caveat / note panel */
+.note{background:var(--gc-panel);border:1px solid var(--gc-line);border-left:5px solid var(--gc-blue);
+  padding:12px 16px;margin:14px 0 18px;font-size:14px;}
+.note b{color:var(--gc-ink);}
+
+/* Implications block */
+.lens{background:var(--gc-panel);border:1px solid var(--gc-line);padding:16px 18px;margin:16px 0 20px;}
+.lens h4{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gc-blue);margin:0 0 8px;}
+.lens ul{margin-bottom:0;}
+.lens li{font-size:14px;}
+
+/* Objective tags */
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;border:1px solid var(--gc-line-2);
+  color:var(--gc-blue-dark);background:#fff;padding:1px 7px;margin-left:4px;vertical-align:middle;white-space:nowrap;}
+
+table{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:14px;}
+th{background:var(--gc-panel);color:var(--gc-ink);text-align:left;font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;}
+th,td{border:1px solid var(--gc-line);padding:8px 12px;vertical-align:top;}
+td.num{text-align:right;}
+caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding-top:6px;}
+
+.docfoot{border-top:2px solid var(--gc-blue);margin-top:34px;padding-top:14px;font-size:12.5px;color:#5d6b7a;}
+.sources li{font-size:13.5px;margin-bottom:4px;}
+
+@media print{
+  body{background:#fff;}
+  .canvas{padding:0;}
+  .sheet{box-shadow:none;max-width:none;padding:0;}
+  a{color:var(--gc-blue);text-decoration:none;}
+  h2{page-break-after:avoid;}
+  table,.lens,.note,.key{page-break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- Gateshead · Economic Intelligence brand bar (self-contained; portable) -->
+<style>
+.gcbar{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:#252525;color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap;
+  border-bottom:3px solid #045a90;position:relative;z-index:2000;}
+.gcbar *{box-sizing:border-box;}
+.gcbar a.gcbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+.gcbar .gcbar-mark{width:32px;height:32px;background:#045a90;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:16px;color:#fff;}
+.gcbar .gcbar-word{font-size:16px;font-weight:700;line-height:1.05;letter-spacing:.2px;}
+.gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
+.gcbar .gcbar-spacer{flex:1 1 auto;}
+.gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
+.gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
+.gcbar .gcbar-copy svg{width:15px;height:15px;}
+.gcbar .gcbar-copy:hover{border-color:#0772b4;color:#8fd0f5;}
+.gcbar .gcbar-copy.gcbar-copied{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-home{color:#cfd6dc;text-decoration:none;font-size:12px;}
+.gcbar .gcbar-home:hover{color:#fff;text-decoration:underline;}
+.gcbar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.gcbar-toast.gcbar-show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media print{.gcbar,.gcbar-toast{display:none !important;}}
+</style>
+<div class="gcbar" data-id="policy-2026-08">
+  <a class="gcbar-logo" href="../index.html" title="Back to the Economic Intelligence landing page">
+    <span class="gcbar-mark">G</span>
+    <span class="gcbar-word">Gateshead<small>Economic Intelligence</small></span>
+  </a>
+  <span class="gcbar-spacer"></span>
+  <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
+  <button class="gcbar-copy" type="button" aria-label="Copy direct link to this document" title="Copy direct link to this document">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var bar=document.currentScript.previousElementSibling;
+  while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
+  if(!bar)return;
+  var toast;
+  function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
+    toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
+  bar.querySelector('.gcbar-copy').addEventListener('click',function(){
+    var btn=this,url=location.origin+location.pathname;
+    var ok=function(){btn.classList.add('gcbar-copied');say('Link copied — opens this document directly');setTimeout(function(){btn.classList.remove('gcbar-copied');},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){leg(url);ok();});}else{leg(url);ok();}
+    function leg(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+<!-- /Gateshead brand bar -->
+
+<div class="canvas">
+<main class="sheet">
+
+<div class="kicker">Gateshead Economic Intelligence</div>
+<h1>Policy update — August 2026</h1>
+<div class="docmeta">
+  <b>Third edition &middot; 10 August 2026</b> &middot; PUBLIC — compiled entirely from published official sources &middot; scan covers 13 July to 10 August 2026 &middot; replaces the 13 July 2026 edition (retained in <a href="policy-update-2026-07.html">policy/</a>)
+</div>
+
+<p class="lede">New and changed government and regional policy affecting Gateshead's economy. Findings are checked against the strategy and guidance documents the team holds as current — the recorded policy landscape, with edition dates — listed with their status in <a href="#s9">section 9</a>. Sourced from gov.uk, parliament.uk, ONS and North East Mayoral Strategic Authority publications unless labelled otherwise; items reported only in the press are flagged. Re-verify dates before quoting in anything published.</p>
+<p class="lede small">Colour convention: <span class="deadline">red</span> marks an item with an action <em>and</em> a deadline — nothing else. Objective tags (<span class="tag">L-O1</span> <span class="tag">D-O2</span> <span class="tag">V-O2</span>…) reference the Policy Advisors' 2026 Local, Digital and Visitor objectives.</p>
+
+<div class="note"><b>An unusual month.</b> There was a change of Prime Minister on 20 July 2026 and a machinery-of-government reorganisation the following week. Four weeks produced more change to the framework Gateshead's economy sits inside than the previous four months: the department that owns local growth policy, the tax base councils and mayors will be funded from, the business rates bill on a whole class of high-street premises, and the survey behind our labour market statistics. Most of it is announced rather than legislated, and the detail arrives at the Budget on 28 October.</div>
+
+<h2 id="exec">Executive summary</h2>
+<ul class="execsum">
+  <li><a class="lead" href="#s1">Fiscal devolution is now a dated programme, and the mechanism is still missing.</a> Mayors retain a share of business rates from April 2027 and receive a share of income tax from 2028, "replacing grants from central government". That substitution is the whole question: it is not additional money, and for a low-tax-base authority the equalisation design decides whether it is a gain or a loss. The Government has said only that it "will consider how these growth incentives can be balanced with the need for fairness between places". The detail lands at the <strong>Budget on Wednesday 28 October</strong>.</li>
+  <li><a class="lead" href="#s2">Local growth policy has left MHCLG and the Treasury.</a> No10 North opened at Heron House, Manchester on 23 July, taking local economic growth and devolution strategy out of the Ministry of Housing, Communities and Local Government and local growth policy out of HM Treasury, and reviving the National Economic Council with mayors at the table. The Northern Growth Strategy — which carries the £120m for the Newcastle–Gateshead Mayoral Development Zone — was a Treasury and MHCLG product; its autumn update now comes from a different owner.</li>
+  <li><a class="lead deadline" href="#s4">Twenty-eight days to submit on high streets.</a> The Housing, Communities and Local Government Committee's <em>Revitalising High Streets</em> inquiry <span class="deadline">closes to written evidence at 11.59pm on 7 September 2026</span>. Business rates, High Street Rental Auctions, compulsory purchase, the community right to buy, unwanted retail uses and Pride in Place are all in scope — the closest fit to the visitor and placemaking objectives of anything on the current watch. A draft evidence pack already exists.</li>
+  <li><a class="lead" href="#s3">A 20% business rates cut lands on premises we have no baseline for.</a> From April 2027 pubs, social clubs and live music venues in England get a 20% discount, on top of a real-terms freeze for 2027/28 and 2028/29. It is the first policy change aimed squarely at the priority local centres, and the team cannot currently say how many qualifying hereditaments Felling, Winlaton and Chopwell contain. Part of the funding comes from reviewing reliefs for businesses judged less beneficial to communities, vape shops named among them — which is the same argument the high streets inquiry is running.</li>
+  <li><a class="lead" href="#s3">Two household measures with a measurable inflation effect.</a> VAT on domestic electricity goes from 5% to zero on 1 October 2026, worth around £45 on the October price cap and around 0.10 percentage points off CPI. The £2 bus fare cap returns in January 2027 across England outside London, backed by £400m. Both feed the cost-of-living index directly; the bus cap is also a real change in the cost of reaching Gateshead's centres.</li>
+  <li><a class="lead" href="#s6">Two open evidence items from July are now closed, and a new one opens.</a> The Transformed Labour Force Survey readiness assessment publishes on 11 August. Quarterly regional GDP is being reinstated, but at ITL1 — the North East as a whole, not Gateshead. Newly opened: ONS intends to rebuild the headline productivity statistic on a component-based method, timed for November, the same month our 2024 subregional productivity figure arrives.</li>
+  <li><a class="lead" href="#s5">Employment Rights Act commencements have started to bite.</a> Electronic and workplace balloting for statutory trade union ballots takes effect on 25 August 2026 — narrow in itself, but the first commencement inside our reporting window on a timetable that runs through 2027.</li>
+</ul>
+
+<h2 id="s1">1. Fiscal devolution: dated, substantive, and still missing the mechanism</h2>
+
+<p>On 30 July 2026 the Prime Minister <a href="https://www.gov.uk/government/news/pm-hands-mayors-share-of-income-tax-to-make-lives-better-in-every-postcode">announced that mayors will receive a share of income tax</a>, with the direction set out the following day in the Cabinet Statement <a href="https://www.gov.uk/government/publications/rewiring-the-state-cabinet-statement/rewiring-the-state-cabinet-statement-html"><em>Rewiring the State</em></a> (31 July 2026). The dated commitments are:</p>
+<table>
+  <tr><th>From</th><th>What</th></tr>
+  <tr><td>April 2027</td><td>Mayors begin retaining a share of business rates</td></tr>
+  <tr><td>Spring 2027</td><td>Strategic authorities gain the power to introduce an Overnight Visitor Levy; plans for how revenues will be invested due by March 2028</td></tr>
+  <tr><td>2028</td><td>A share of local income tax for every mayor, "replacing grants from central government"</td></tr>
+  <tr><td>28 October 2026</td><td>Budget, with the fiscal devolution roadmap and the autumn devolution white paper</td></tr>
+</table>
+
+<div class="key"><b>Read the substitution, not the headline.</b> The statement's own words are that this begins "by replacing grants from central government with a share of local income tax for every mayor beginning in 2028". This is not new money layered on top of the existing settlement — it exchanges a needs-assessed grant for a locally-raised revenue share. Retention-based systems reward a buoyant tax base and low service demand. Gateshead has neither, so the question of whether this helps or hurts turns entirely on the equalisation design, and the equalisation design does not yet exist.</div>
+
+<p>On fairness the statement commits only to a consideration: the Government "will consider how these growth incentives can be balanced with the need for fairness between places, recognising that there will be different starting points". No formula, no baseline, no reset period, and no statement of which areas are in the first wave. On the income tax share it is not yet established whether mayors receive assigned revenue against a fixed baseline, a growth increment only, or genuine rate-setting powers — three designs with materially different consequences for a place whose tax base grows slowly. The Institute for Fiscal Studies' <a href="https://ifs.org.uk/articles/government-plans-tax-revenue-sharing-englands-mayors-ifs-response">response</a> and the Commons Library briefing <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10937/">CBP-10937</a> are the neutral summaries.</p>
+
+<div class="note"><b>Spending Review, not Budget, for the income tax detail.</b> The roadmap published at the Budget covers the overall approach to revenue assignment and rates retention and the business rates share. The detailed arrangements for retained income tax are confirmed at the Spending Review, whose date has not been announced. Two reads are therefore needed, not one.</div>
+
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>Derive the tax-base position before the Budget, not after.</strong> The single most useful number the team can hold on 28 October is Gateshead's income tax base per taxpayer against the North East Mayoral Strategic Authority and UK averages, from HMRC's Survey of Personal Incomes, together with the borough's share of the NECA-area total on both a basic-rate-only and an all-income-tax basis. The team has a working estimate from the Budget watch; it needs re-deriving from source and dating before it goes anywhere. Logged as a work item.</li>
+  <li><strong>The Overnight Visitor Levy is now a dated power, not a possibility.</strong> Spring 2027 for the power, March 2028 for revenue plans. Any Quays visitor evidence intended to inform a North East levy case needs a baseline captured well before then. <span class="tag">V-O1</span></li>
+  <li><strong>Business rates retention interacts with section 3.</strong> Cutting the rates bill on pubs, clubs and live music venues from April 2027 and giving mayors a share of rates income from April 2027 are the same reform arriving from two directions. Who bears the cost of the relief once retention starts is a question worth asking early.</li>
+</ul></div>
+
+<h2 id="s2">2. Who owns local growth policy: it moved to Manchester</h2>
+
+<p>A machinery-of-government change was announced on 21 July 2026 (written statement <a href="https://questions-statements.parliament.uk/written-statements/detail/2026-07-21/hlws298">HLWS298</a>), and <a href="https://www.gov.uk/government/news/no10-north-open-for-business-as-the-governments-new-situation-room-for-making-britain-better">No10 North opened at Heron House in central Manchester on 23 July 2026</a>. Local economic growth and devolution strategy move out of the Ministry of Housing, Communities and Local Government, and local growth policy out of HM Treasury, into the new office; an Office for the Prime Minister and the Cabinet is created to house No10, No10 North and the Cabinet Office teams serving the Prime Minister and Cabinet. The National Economic Council is revived, bringing senior ministers and regional mayors together.</p>
+
+<p>The practical consequence for this team is one of provenance rather than policy. The <a href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change/northern-growth-strategy-next-steps">Northern Growth Strategy</a> — which commits £120m to the North East Mayoral Strategic Authority working with Newcastle and Gateshead councils, anchored on the proposed Newcastle–Gateshead Mayoral Development Zone — was a Treasury and MHCLG product, and its invitation for views closed on 31 July 2026. The promised autumn update now issues from a different owner. Whether it survives in the form consulted on is the open question, and it was already on the watch list before the move.</p>
+
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>Re-check departmental attributions before citing.</strong> Any product citing MHCLG or HM Treasury as the owner of a local growth document should be re-checked at the point of publication; landing pages are being re-badged.</li>
+  <li><strong>Mayors are inside the machine now.</strong> The North East Mayor at a revived National Economic Council changes the route by which Gateshead evidence can travel upward — it runs through the Mayoral Strategic Authority more than before, not less. <span class="tag">L-O2</span></li>
+  <li><strong>The £120m and the Mayoral Development Zone remain proposed.</strong> Boundaries are still not formally defined. The baseline-capture argument made in the July edition stands and gets more urgent, not less, with an owner change in the middle of it. <span class="tag">V-O1</span> <span class="tag">V-O3</span></li>
+</ul></div>
+
+<h2 id="s3">3. Business rates and household costs: three measures with a Gateshead incidence</h2>
+
+<h3>3.1 A 20% business rates discount for pubs, social clubs and live music venues</h3>
+<p>Announced on 23 July 2026 (<a href="https://www.gov.uk/government/news/burnham-means-business-pm-slashes-business-rates-bills-for-pubs-clubs-and-live-music-venues">gov.uk</a>), taking effect for the 2027/28 rates year from <strong>April 2027</strong>. The Government's figures are a benefit to nearly 32,000 venues in England, a saving of around £1,100 in the first year for a typical pub, and a cost to the Exchequer of roughly £100m a year. It sits on top of the 15% relief announced in January 2026 for 2026/27 and a real-terms freeze in bills for qualifying pubs and live music venues in 2027/28 and 2028/29. The very largest live music venues are excluded, and the Government has not yet said where that line falls. Funding comes partly from a review of reliefs available to businesses it judges less beneficial to local communities, with vape shops named.</p>
+
+<div class="note"><b>The baseline we do not hold.</b> This is the first policy change since the visitor objectives were set that lands directly on premises in the priority local centres, and the team cannot presently say how many qualifying hereditaments Felling, Winlaton and Chopwell contain, nor what proportion of their rateable value they represent. The Valuation Office Agency rating list gives this at property level and is free. Establishing it before April 2027 turns an announcement into a measurable local effect. <span class="tag">V-O2</span></div>
+
+<h3>3.2 VAT removed from domestic electricity, 1 October 2026</h3>
+<p>VAT on household electricity falls from 5% to zero from <strong>1 October 2026</strong> (<a href="https://www.gov.uk/government/news/new-pm-cuts-tax-on-household-electricity-bills-to-give-breathing-space-on-cost-of-living">gov.uk</a>), timed for the October Ofgem price cap. The Government's estimates are around £45 off the annual cap, around 0.10 percentage points off CPI and around 0.14 off RPI, with suppliers expected to pass it through to fixed-tariff customers as well.</p>
+<p class="small">Duration caveat, carried from the July edition and still unresolved: the gov.uk announcement does not state an end date. Reports of a six-month cut ending in March 2027 come from tax-practitioner and press sources — do not publish an end date as fact.</p>
+
+<h3>3.3 The £2 bus fare cap returns, January 2027</h3>
+<p>From <strong>January 2027</strong> a £2 single-fare cap applies on participating services across England outside London, backed by £400m, replacing the £3 cap — a reduction of a third in the maximum fare (<a href="https://www.gov.uk/government/news/cheaper-travel-for-millions-with-a-third-off-fares">gov.uk</a>).</p>
+
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>Cost-of-living index inputs, both dated.</strong> The VAT change is a step reduction in the electricity component from October and the bus cap a step reduction in transport from January. Both belong in the index's forward path with their announcement dates recorded, and both are policy effects rather than market movements — label them as such so the index is not read as demand easing.</li>
+  <li><strong>The bus cap is an access measure as much as a cost measure.</strong> In a borough where a material share of trips to the centres are by bus, a third off the maximum single fare is a change in the effective catchment of Gateshead's centres. It is testable against footfall if a baseline exists. <span class="tag">V-O2</span></li>
+  <li><strong>Watch the relief review.</strong> Funding the pub relief by reviewing support to "less beneficial" businesses puts national policy behind the same proposition the high streets inquiry is testing (section 4). If the review produces a defined class of use, it becomes a planning and rates lever the Council can plan around. <span class="tag">V-O3</span></li>
+</ul></div>
+
+<h2 id="s4">4. High streets: a live inquiry that fits the objectives almost exactly — <span class="deadline">closes 7 September</span></h2>
+
+<div class="key"><b>Twenty-eight days.</b> The Housing, Communities and Local Government Committee's <a class="deadline" href="https://committees.parliament.uk/work/9923/revitalising-high-streets/">Revitalising High Streets inquiry closes to written evidence at 11.59pm on Monday 7 September 2026</a>. A draft evidence pack already exists in the team's working folder. The decision needed is whether it is submitted, by whom, and in whose name.</div>
+
+<p>The inquiry, launched in July 2026, covers the proliferation of unwanted retail and service uses — betting shops, vape shops and so-called fake barbers are named — and their effect on high streets and community pride; approaches to regeneration including design codes, street furniture and pedestrianisation; the effectiveness of local authority powers, specifically High Street Rental Auctions, compulsory purchase orders and the community right to buy; the impact of business rates changes on high street businesses; and the Pride in Place programme.</p>
+
+<p>Every one of those touches something the team already holds evidence on. The community right to buy and the ban on upward-only rent reviews arrived in the <a href="https://www.legislation.gov.uk/ukpga/2026/23">English Devolution and Community Empowerment Act 2026</a>, covered in the July edition. The business rates change is section 3.1 above. Pride in Place is live in Gateshead through the Wrekenton and Beacon Lough neighbourhood board, which confirmed its membership and boundaries on 17 July 2026.</p>
+
+<div class="lens"><h4>What this means from an economic policy lens</h4>
+<ul>
+  <li><strong>This is the best-fitting external opportunity on the current watch.</strong> It maps onto the visitor objectives more precisely than any funding call — measurable footfall, occupancy and business performance in priority local centres is exactly what the Committee is asking about. <span class="tag">V-O2</span> <span class="tag">V-O3</span></li>
+  <li><strong>Submitting evidence is a different act from publishing analysis.</strong> Written evidence to a select committee is a formal submission on the Council's behalf; the decision on whether it goes in the Council's name sits above this team.</li>
+  <li><strong>The honest gap is the same one section 3.1 names.</strong> Any submission arguing the priority-centre case is stronger with a hereditament and vacancy baseline than without, and weaker if it asserts an effect it cannot measure. Say what is not held.</li>
+</ul></div>
+
+<h2 id="s5">5. Labour market and skills: commencements, guidance and one announcement without a document</h2>
+
+<h3>5.1 Employment Rights Act: electronic and workplace balloting from 25 August 2026</h3>
+<p>The <a href="https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act">implementation timeline</a> was updated on 7 August 2026 to confirm that electronic and workplace balloting for statutory trade union ballots takes effect on <strong>25 August 2026</strong>. Narrow in itself, and the timeline page is the thing to watch rather than this measure: the phased commencements running through 2027 include the items with a real employer-cost dimension.</p>
+
+<h3>5.2 Youth Jobs Grant guidance reissued</h3>
+<p>DWP reissued the <a href="https://www.gov.uk/government/publications/youth-jobs-grant">Youth Jobs Grant</a> employer guidance on 7 August 2026, correcting errors, aligning it to the Find a Grant application form and moving the employer FAQ from PDF to HTML. Delivery detail rather than policy change, but the grant is the concrete £3,000 employer-facing offer identified in the July edition, so the current version is the one Business Gateshead communications should point at. Separately, DWP has given a provisional August 2026 date for a report titled <em>Young People and Work: Rapid Attitudinal Polling</em> — attitudinal evidence on the 18–24 cohort is thin and the team currently relies on administrative counts, so it is worth reading on publication. <span class="tag">D-O2</span></p>
+
+<h3>5.3 14+ technical education pathways: still an announcement with no document</h3>
+<p>The 27 July 2026 announcement of 14+ technical education pathways, co-designed with mayors and with a rollout ambition from September 2028, remains exactly that — no white paper, no consultation, no new funding and no named co-design process. It is carried forward on the watch unchanged. The 2028 start sits after the North East AI and skills pilot window that closes in early 2027, so it is not a substitute for near-term action on the 18–24 cohort.</p>
+
+<h2 id="s6">6. Evidence base: two items closed, one opened</h2>
+
+<h3>6.1 Closed: the Transformed Labour Force Survey readiness assessment has a date</h3>
+<p>ONS publishes <a href="https://www.ons.gov.uk/releases/labourmarkettransformationupdateonprogressandplansaugust2026">Labour market transformation — update on progress and plans</a> on <strong>11 August 2026</strong>, building on previous engagement on the Transformed Labour Force Survey and the labour market administrative data project. The <a href="https://www.ons.gov.uk/aboutus/ourstrategyandplans/onsimprovementplans/onssurveyimprovementandenhancement/onssurveysandeconomicstatisticsimprovementplanquarterlyprogressupdatejuly2026">July quarterly progress update</a> reports improved response rates and fewer partial returns following the April design changes, and sets up an assessment of readiness to transition to the TLFS as the headline labour market measure in 2027. The July edition flagged a slip into 2027 as a live risk; 2027 is now the stated target, and the 11 August document is where the evidence for it is set out.</p>
+
+<h3>6.2 Closed: quarterly regional GDP returns, but not at a useful geography</h3>
+<p>ONS confirmed on 31 July 2026 that quarterly regional GDP estimates are being reinstated for England and Wales at ITL1 — the North East as a whole. No timetable was given for lower geographies. This closes the "waiting room" item carried in the July edition, and closes it unhelpfully: there is no Gateshead read, and the risk now is misreporting rather than absence.</p>
+
+<h3>6.3 New: the headline productivity statistic is being rebuilt, in the month our local figure lands</h3>
+<p>The same ONS improvement plan names, among its objectives, "moving in line with international best practice for productivity statistics by making the new 'component-based' approach our method underpinning our headline statistic". The covering note circulated to North region contacts places an explanatory article in September 2026 and migration in November 2026. <strong>Regional and subregional labour productivity for 2024 publishes on 5 November 2026.</strong> If the headline method changes in the same month the 2024 GVA-per-hour figure for Gateshead arrives, any comparison drawn against 2023 needs its basis stated explicitly.</p>
+<p class="small">Attribution caveat: the September and November timings come from the ONS Local North covering note circulated on 20 July 2026, not from the published improvement plan page, which names the change as an objective without dating it. Treat the dates as indicative until ONS publishes them.</p>
+
+<div class="note"><b>Also new since the last edition.</b> Regional gross disposable household income, 1997 to 2024 no longer carries a confirmed release date. As at 10 August the ONS release page reads "Provisional release date: August 2026"; a week earlier it read 19 August. It matters because it is the next new local income series.</div>
+
+<h2 id="s7">7. Theme notes: the full watch frame</h2>
+<p class="small">Every watch theme reported, including the quiet ones — quiet is a finding.</p>
+<ul>
+  <li><strong>Procurement &amp; social value — quiet.</strong> The National Procurement Policy Statement (February 2025) and PPN 002 unchanged; no new procurement policy notes in the window. <span class="tag">L-O3</span></li>
+  <li><strong>Community wealth building &amp; anchors — quiet.</strong> No new CLES, LGA or departmental items in the window. The revived National Economic Council (section 2) is the only structural change touching the anchor agenda, and only indirectly. <span class="tag">L-O1</span> <span class="tag">L-O2</span></li>
+  <li><strong>AI &amp; digital inclusion — quiet on policy, unresolved on ownership.</strong> The North East AI Growth Zone position is unchanged from July. The July watch item on where sponsorship of the zone landed after the abolition of the Department for Science, Innovation and Technology is <em>still</em> unresolved, and the 21 July machinery-of-government change adds a second layer to it. Establishing the responsible department is now a month overdue. <span class="tag">D-O1</span> <span class="tag">D-O3</span></li>
+  <li><strong>Skills.</strong> No change to the North East Local Skills Improvement Plan 2026–2029 published on 10 July. The 14+ pathways announcement is section 5.3. <span class="tag">D-O2</span></li>
+  <li><strong>Productivity &amp; regional data.</strong> The component-based method change and the ITL1-only regional GDP reinstatement are section 6. GVA for 2024 at local authority level is confirmed for 23 September; subregional productivity for 2024 for 5 November.</li>
+  <li><strong>Local business.</strong> The pub, club and live music venue rates discount (section 3.1) is the substantive item. A new innovation grant scheme launched for Sunderland businesses on 7 August does not extend to Gateshead.</li>
+  <li><strong>Visitor economy.</strong> The Overnight Visitor Levy now has dates — power from spring 2027, revenue plans by March 2028 (section 1). The National Visitor Economy Strategy remains unpublished, still expected autumn 2026. <span class="tag">V-O1</span></li>
+  <li><strong>High streets &amp; placemaking.</strong> The select committee inquiry (section 4) and the rates discount (section 3.1) make this the month's busiest theme. Pride in Place at Wrekenton and Beacon Lough confirmed membership and boundaries on 17 July. <span class="tag">V-O2</span> <span class="tag">V-O3</span></li>
+  <li><strong>Green — quiet.</strong> The Warm Homes Plan unchanged; Warm Homes Fund design detail still due later in 2026. The electricity VAT cut (section 3.2) is a price measure, not a decarbonisation one, and should not be reported as the latter.</li>
+  <li><strong>Creative — quiet.</strong> Creative Places Growth Fund unchanged.</li>
+</ul>
+
+<h2 id="s8">8. Current consultations and calls for evidence</h2>
+<table>
+  <tr><th>Consultation</th><th>Who</th><th>Why it matters here</th><th>Closes</th></tr>
+  <tr>
+    <td><a href="https://committees.parliament.uk/work/9923/revitalising-high-streets/">Revitalising High Streets</a></td>
+    <td>Housing, Communities and Local Government Committee</td>
+    <td>Business rates, rental auctions, compulsory purchase, community right to buy, unwanted retail uses, Pride in Place. Draft evidence pack already exists; the team may answer.</td>
+    <td><span class="deadline">7 Sep 2026, 11.59pm</span></td>
+  </tr>
+  <tr>
+    <td><a href="https://committees.parliament.uk/work/9732/tourism/">Tourism (including visitor levy powers)</a></td>
+    <td>Culture, Media and Sport Committee</td>
+    <td>Still live. Now materially more relevant with Overnight Visitor Levy powers dated to spring 2027.</td>
+    <td>Check before relying — no closing date confirmed in this scan</td>
+  </tr>
+  <tr>
+    <td>Northern Growth Strategy — invitation for views</td>
+    <td>Formerly HM Treasury / MHCLG, now No10 North</td>
+    <td><em>Closed 31 July 2026.</em> Listed for completeness; the autumn update is the next opportunity.</td>
+    <td>Closed</td>
+  </tr>
+</table>
+
+<h2 id="s85">Work items arising</h2>
+<ol>
+  <li><strong>Decide on the high streets submission.</strong> The draft pack exists; the decision is whether it goes, in whose name, and what it claims. Window closes <span class="deadline">7 September</span>.</li>
+  <li><strong>Derive Gateshead's income tax base position from HMRC's Survey of Personal Incomes</strong> — per taxpayer against the North East Mayoral Strategic Authority and UK, and the borough's share of the NECA-area total on basic-rate-only and all-income-tax bases. Needed in hand before the Budget read on 29 October. The existing working estimate is not source-dated and should not be published until it is.</li>
+  <li><strong>Establish the qualifying-hereditament baseline for Felling, Winlaton and Chopwell</strong> from the Valuation Office Agency rating list, ahead of the April 2027 rates discount. <span class="tag">V-O2</span></li>
+  <li><strong>Resolve which department now sponsors the North East AI Growth Zone.</strong> Carried from July, unresolved, and complicated further by the 21 July machinery-of-government change. <span class="tag">D-O3</span></li>
+  <li><strong>Read the 11 August labour market transformation update</strong> and record what it means for the confidence-interval caveats carried on every Annual Population Survey estimate the team publishes.</li>
+</ol>
+<p class="small">Closed since the last edition: the Industrial Strategy quarterly PDF read; the LSIP re-citation check for the LEA interim update; the Northern Growth Strategy views decision (window closed 31 July). Two evidence-base risks closed in section 6.</p>
+
+<h2 id="s9">9. Checked and unchanged — the full reference set</h2>
+<ul>
+  <li><strong>Green Book 2026 edition</strong> (5 February 2026) — unchanged; the independent discount-rate review and place-based business-case work have still not published.</li>
+  <li><strong>Magenta Book</strong> (15 May 2026 update) — unchanged.</li>
+  <li><strong>Aqua Book 2025 edition</strong> — unchanged.</li>
+  <li><strong>Code of Practice for Statistics 3.0</strong> (30 October 2025) — unchanged; cite Edition 3.0.</li>
+  <li><strong>Industrial Strategy</strong> — Sector Definitions List (5 June 2026 revision) and the 8 July quarterly update and year-one report both current. Next quarterly update expected around October.</li>
+  <li><strong>English Devolution and Community Empowerment Act 2026</strong> — unchanged; the fiscal announcements in section 1 sit outside it and will need their own legislative vehicle.</li>
+  <li><strong>North East Local Growth Plan 2025–2035</strong> (12 March 2025) — no new edition.</li>
+  <li><strong>North East LSIP 2026–2029</strong> (10 July 2026) — current, one month old.</li>
+  <li><strong>Get Britain Working White Paper</strong> (November 2024) and the 2 July 2026 Jobs and Careers Service update — unchanged. National Careers Service merges into Jobcentre Plus on 1 October 2026 as previously reported.</li>
+  <li><strong>Northern Growth Strategy: Next Steps</strong> (19 March 2026) — document unchanged; <em>owner changed</em> (section 2), autumn update pending.</li>
+  <li><strong>Procurement baseline</strong> — National Procurement Policy Statement (February 2025) and PPN 002 unchanged.</li>
+  <li><strong>UK SIC 2026</strong> (April 2026) — unchanged; the BRES-by-SIC break remains a future risk to note in dashboard provenance.</li>
+  <li><strong>Gateshead corporate documents</strong> — Thrive, Corporate Plan 2023–28, Economic Development Strategy 2021, Local Economic Assessment 2025: all unchanged.</li>
+  <li><strong>Not verified in this scan:</strong> the North East Mayoral Strategic Authority Corporate Plan 2026–30, which surfaced as a committee paper during the scan and has not been dated or read. Flagged rather than reported.</li>
+</ul>
+
+<h2 id="s10">10. Sources</h2>
+<ul class="sources">
+  <li><a href="https://www.gov.uk/government/publications/rewiring-the-state-cabinet-statement/rewiring-the-state-cabinet-statement-html">Rewiring the State: Cabinet Statement (31 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/pm-hands-mayors-share-of-income-tax-to-make-lives-better-in-every-postcode">PM hands mayors share of income tax (gov.uk, 30 July 2026)</a></li>
+  <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10937/">Fiscal devolution to English mayors (Commons Library CBP-10937)</a></li>
+  <li><a href="https://ifs.org.uk/articles/government-plans-tax-revenue-sharing-englands-mayors-ifs-response">Government plans tax revenue sharing for England's mayors — IFS response</a></li>
+  <li><a href="https://www.gov.uk/government/publications/chancellor-letter-to-the-treasury-select-committee-tsc-budget-2026-date">Chancellor's letter to the Treasury Select Committee — Budget 2026 date (31 July 2026)</a></li>
+  <li><a href="https://questions-statements.parliament.uk/written-statements/detail/2026-07-21/hlws298">Machinery of Government Changes — written statement HLWS298 (21 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/no10-north-open-for-business-as-the-governments-new-situation-room-for-making-britain-better">No10 North open for business (gov.uk, 23 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/burnham-means-business-pm-slashes-business-rates-bills-for-pubs-clubs-and-live-music-venues">20% business rates cut for pubs, clubs and live music venues (gov.uk, 23 July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/new-pm-cuts-tax-on-household-electricity-bills-to-give-breathing-space-on-cost-of-living">VAT removed from household electricity bills (gov.uk, July 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/news/cheaper-travel-for-millions-with-a-third-off-fares">£2 bus fare cap from January 2027 (gov.uk)</a></li>
+  <li><a href="https://committees.parliament.uk/work/9923/revitalising-high-streets/">Revitalising High Streets inquiry (HCLG Committee, parliament.uk)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act">Implementing the Plan to Make Work Pay and Employment Rights Act (updated 7 August 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/youth-jobs-grant">Youth Jobs Grant — employer guidance (DWP, reissued 7 August 2026)</a></li>
+  <li><a href="https://www.ons.gov.uk/aboutus/ourstrategyandplans/onsimprovementplans/onssurveyimprovementandenhancement/onssurveysandeconomicstatisticsimprovementplanquarterlyprogressupdatejuly2026">ONS Surveys and Economic Statistics Improvement Plan — July 2026 quarterly progress update</a></li>
+  <li><a href="https://www.ons.gov.uk/releases/labourmarkettransformationupdateonprogressandplansaugust2026">Labour market transformation — update on progress and plans, August 2026 (ONS, due 11 August 2026)</a></li>
+  <li><a href="https://www.ons.gov.uk/releases/regionalgrossdisposablehouseholdincomeuk1997to2024">Regional gross disposable household income, UK: 1997 to 2024 (ONS, provisional August 2026)</a></li>
+  <li><a href="https://www.legislation.gov.uk/ukpga/2026/23">English Devolution and Community Empowerment Act 2026 (c. 23)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change/northern-growth-strategy-next-steps">Northern Growth Strategy: Next Steps (19 March 2026)</a></li>
+  <li><a href="https://www.gov.uk/government/publications/pride-in-place-programme-prospectus/pride-in-place-programme-prospectus">Pride in Place programme prospectus (MHCLG)</a></li>
+  <li><a href="https://committees.parliament.uk/work/9732/tourism/">CMS Committee tourism inquiry (parliament.uk)</a></li>
+</ul>
+
+<div class="docfoot">
+Prepared by Nathaniel Adams. This is an independent, unofficial product, not a Gateshead Council publication. Policy scan run 10 August 2026, covering 13 July to 10 August 2026, against the team's recorded policy landscape (edition dates as listed in section 9); free public official sources only. Summaries are not legal advice — check source documents before citing. Third edition, replacing the 13 July 2026 edition.
+</div>
+
+</main>
+</div>
+</body>
+</html>
