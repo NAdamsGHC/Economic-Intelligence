@@ -145,11 +145,11 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_17_5.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS4-latest",
-            [variable] = "18,45,83",
-            [measures] = "20599,21001,21002,21003",
-            [select] = "date_name,geography_name,geography_code,variable_name,measures_name,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS4-latest",
+            #"variable" = "18,45,83",
+            #"measures" = "20599,21001,21002,21003",
+            #"select" = "date_name,geography_name,geography_code,variable_name,measures_name,obs_value"
                 ]
             ]
         ),
@@ -182,13 +182,13 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_162_1.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS36-latest",
-            [gender] = "0",
-            [age] = "0",
-            [measure] = "1",
-            [measures] = "20100",
-            [select] = "date_name,geography_name,geography_code,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS36-latest",
+            #"gender" = "0",
+            #"age" = "0",
+            #"measure" = "1",
+            #"measures" = "20100",
+            #"select" = "date_name,geography_name,geography_code,obs_value"
                 ]
             ]
         ),
@@ -221,13 +221,13 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_30_1.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS2-latest",
-            [sex] = "5,6,7",
-            [item] = "2",
-            [pay] = "1,7",
-            [measures] = "20100,20701",
-            [select] = "date_name,geography_name,geography_code,sex_name,pay_name,measures_name,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS2-latest",
+            #"sex" = "5,6,7",
+            #"item" = "2",
+            #"pay" = "1,7",
+            #"measures" = "20100,20701",
+            #"select" = "date_name,geography_name,geography_code,sex_name,pay_name,measures_name,obs_value"
                 ]
             ]
         ),
@@ -259,13 +259,13 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_99_1.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS2-latest",
-            [sex] = "5,6,7",
-            [item] = "2",
-            [pay] = "1,7",
-            [measures] = "20100,20701",
-            [select] = "date_name,geography_name,geography_code,sex_name,pay_name,measures_name,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS2-latest",
+            #"sex" = "5,6,7",
+            #"item" = "2",
+            #"pay" = "1,7",
+            #"measures" = "20100,20701",
+            #"select" = "date_name,geography_name,geography_code,sex_name,pay_name,measures_name,obs_value"
                 ]
             ]
         ),
@@ -298,13 +298,13 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_189_1.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS4-latest",
-            [industry] = "150994945,150994946,150994947,150994948,150994949,150994950,150994951,150994952,150994953,150994954,150994955,150994956,150994957,150994958,150994959,150994960,150994961,150994962,150994963,150994964,150994965",
-            [employment_status] = "1",
-            [measure] = "1",
-            [measures] = "20100",
-            [select] = "date_name,geography_name,geography_code,industry_name,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS4-latest",
+            #"industry" = "150994945,150994946,150994947,150994948,150994949,150994950,150994951,150994952,150994953,150994954,150994955,150994956,150994957,150994958,150994959,150994960,150994961,150994962,150994963,150994964,150994965",
+            #"employment_status" = "1",
+            #"measure" = "1",
+            #"measures" = "20100",
+            #"select" = "date_name,geography_name,geography_code,industry_name,obs_value"
                 ]
             ]
         ),
@@ -337,13 +337,13 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_142_1.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS4-latest",
-            [industry] = "37748736",
-            [employment_sizeband] = "0",
-            [legal_status] = "0",
-            [measures] = "20100",
-            [select] = "date_name,geography_name,geography_code,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS4-latest",
+            #"industry" = "37748736",
+            #"employment_sizeband" = "0",
+            #"legal_status" = "0",
+            #"measures" = "20100",
+            #"select" = "date_name,geography_name,geography_code,obs_value"
                 ]
             ]
         ),
@@ -376,12 +376,12 @@ let
             [
                 RelativePath = "api/v01/dataset/NM_31_1.data.csv",
                 Query = [
-            [geography] = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
-            [date] = "latestMINUS4-latest",
-            [sex] = "7",
-            [age] = "0,22",
-            [measures] = "20100",
-            [select] = "date_name,geography_name,geography_code,age_name,obs_value"
+            #"geography" = "E08000037,E06000047,E08000021,E08000022,E06000057,E08000023,E08000024,E06000005,E06000001,E06000002,E06000003,E06000004,E92000001",
+            #"date" = "latestMINUS4-latest",
+            #"sex" = "7",
+            #"age" = "0,22",
+            #"measures" = "20100",
+            #"select" = "date_name,geography_name,geography_code,age_name,obs_value"
                 ]
             ]
         ),
