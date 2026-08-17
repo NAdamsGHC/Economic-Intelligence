@@ -28,33 +28,293 @@ NEIGH = ["E08000036", "E08000013", "E08000016", "E06000047", "E08000014",
          "E06000005", "E08000017", "E08000027", "E06000066", "N09000010"]
 LAD_RE = re.compile(r"^(E06|E07|E08|E09|W06|S12|N09)")
 
+# Indicators are keyed by NAME, not by ELS sheet number. ONS renumbers the
+# all-datasets sheets between workbook generations (it did so between the
+# 26/06/2026 and 23/07/2026 editions, shifting most sheets by +1), which
+# silently dropped seven indicators and mis-assigned polarity on twenty more
+# when these maps were keyed by number. Names are resolved to whatever sheet
+# currently holds them, so a future renumbering is a no-op. If ONS renames an
+# indicator the build fails loudly rather than shipping a wrong one.
+
 # polarity: +1 higher is better, -1 lower is better, 0 context/neutral
-POL = {1:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0,
-       9:-1, 11:1, 13:-1, 14:-1, 15:1, 16:1, 17:-1, 18:-1,
-       20:1, 21:1, 22:1, 23:1,
-       28:0, 29:1, 30:-1, 31:1, 32:1, 33:1, 34:1, 35:1, 36:1,
-       37:0, 38:1, 41:0, 42:-1, 43:1, 44:0, 45:0,
-       46:1, 47:1, 48:1, 49:1, 51:1, 52:-1, 53:1, 54:1, 55:1,
-       56:-1, 57:-1, 58:-1, 59:1, 60:1,
-       64:-1, 65:1, 66:1, 67:-1, 68:-1, 69:-1, 70:-1, 71:-1, 72:-1,
-       73:-1, 74:1, 75:-1, 78:1, 79:1, 80:-1, 81:1, 82:1, 83:1,
-       84:0, 85:0, 86:-1, 87:0, 88:0, 89:0,
-       90:1, 91:1, 92:1, 93:-1, 94:0, 95:1,
-       99:1, 100:1, 101:1, 102:1, 103:1, 104:1, 105:1, 106:1, 107:1}
+POL = {
+    "Total population": 0,
+    "Population density": 0,
+    "Five-year population change": 0,
+    "Median age": 0,
+    "Population aged 0 to 15": 0,
+    "Population aged 16 to 64": 0,
+    "Population aged 65 and over": 0,
+    "Employment rate (Great Britain)": 1,
+    "Modelled unemployment rate": -1,
+    "Economic inactivity rate (Great Britain)": -1,
+    "Claimant Count": -1,
+    "Gross median weekly pay": 1,
+    "Gross disposable household income per head": 1,
+    "Children in relative poverty before housing costs": -1,
+    "Children in relative poverty after housing costs": -1,
+    "Fuel poverty (England)": -1,
+    "Gross value added per hour worked": 1,
+    "Gross value added per job filled": 1,
+    "Gross domestic product per head at current market prices": 1,
+    "Gross domestic product per head in chained volume measures": 1,
+    "Active businesses": 0,
+    "Business births": 1,
+    "Business deaths": -1,
+    "High growth businesses": 1,
+    "One-year business survival rate": 1,
+    "Two-year business survival rate": 1,
+    "Three-year business survival rate": 1,
+    "Four-year business survival rate": 1,
+    "Five-year business survival rate": 1,
+    "Net additions to the housing stock (England)": 1,
+    "Average house price": 0,
+    "Housing affordability ratio (residence-based)": -1,
+    "First-time buyer mortgage sales": 1,
+    "Communication and language skills by end of early years foundation stage": 1,
+    "Literacy skills by end of early years foundation stage": 1,
+    "Maths skills by end of early years foundation stage": 1,
+    "Pupils meeting the expected standard in reading, writing and maths at the end of Key Stage 2": 1,
+    "GCSEs in English and Maths": 1,
+    "Persistent absences for all pupils": -1,
+    "Persistent absences for pupils eligible for free school meals": -1,
+    "Persistent absences for pupils looked after by local authorities": -1,
+    "Further education and skills learner achievements": 1,
+    "Further education and skills participation": 1,
+    "Apprenticeship achievements (England)": 1,
+    "Apprenticeship starts (England)": 1,
+    "Level 3 or above qualifications (Great Britain)": 1,
+    "No qualifications": -1,
+    "Female healthy life expectancy": 1,
+    "Male healthy life expectancy": 1,
+    "Cigarette smokers": -1,
+    "Adult obesity prevalence": -1,
+    "Healthy weight prevalence in children at reception age": 1,
+    "Healthy weight prevalence in children at Year 6 age": 1,
+    "Obesity prevalence in children at reception age": -1,
+    "Obesity prevalence in children at Year 6 age": -1,
+    # NCMP bands are mutually exclusive, so a low "overweight" share is a
+    # by-product of a high "obese" share, not a strength. Context-only.
+    "Overweight prevalence in children at reception age": 0,
+    "Overweight prevalence in children at Year 6 age": 0,
+    "Underweight prevalence in children at reception age": -1,
+    "Underweight prevalence in children at Year 6 age": -1,
+    "Cancer diagnosis at stage 1 and 2": 1,
+    "Preventable cardiovascular mortality (England)": -1,
+    "Anxiety": -1,
+    "Feeling life is worthwhile": 1,
+    "Happiness": 1,
+    "Life satisfaction": 1,
+    "Greenhouse gas emissions": -1,
+    "Domestic electricity consumption": 0,
+    "Domestic gas consumption": 0,
+    "Air pollution regulating": 0,
+    "Greenhouse gas regulating": 0,
+    "Urban heat regulating": 0,
+    "Gigabit capable broadband": 1,
+    "Premises below 30Mbps": -1,
+    "4G coverage": 1,
+    "5G coverage": 1,
+    "Public electric vehicle chargers": 1,
+    "Motor vehicle flow": 0,
+    "Food outlets": 0,
+    "Supermarkets": 1,
+    "Sports facilities": 1,
+    "Museums": 1,
+    "Residents within a 30 minute walk of their nearest library": 1,
+    "Residents within a 30 minute walk of their nearest railway station": 1,
+    "Engaged with the arts": 1,
+    "Visited a heritage site": 1,
+    "Visited a museum or gallery": 1,
+    "Visited a public library": 1,
+    "Average length of short-term let stay": 0,
+    "Number of guest nights at a short-term let": 0,
+}
 
 DOMAINS = [
-    ("Population", [1, 3, 4, 5, 6, 7, 8]),
-    ("Work & income", [11, 13, 9, 14, 16, 15, 17, 18]),
-    ("Economy & productivity", [20, 21, 22, 23]),
-    ("Business", [28, 29, 30, 31, 32, 33, 34, 35, 36]),
-    ("Housing", [38, 41, 42, 43]),
-    ("Education & skills", [53, 54, 55, 51, 48, 56, 57, 58, 46, 47, 59, 60, 49, 52]),
-    ("Health & wellbeing", [78, 79, 64, 73, 65, 66, 67, 68, 69, 70, 71, 72, 74, 75, 80, 81, 82, 83]),
-    ("Environment & energy", [86, 84, 85, 87, 88, 89]),
-    ("Connectivity & transport", [90, 93, 91, 92, 95, 94]),
-    ("Amenities & culture", [37, 99, 100, 101, 102, 103, 104, 105, 106, 107, 44, 45]),
+    ("Population", [
+        "Total population",
+        "Population density",
+        "Five-year population change",
+        "Median age",
+        "Population aged 0 to 15",
+        "Population aged 16 to 64",
+        "Population aged 65 and over",
+    ]),
+    ("Work & income", [
+        "Employment rate (Great Britain)",
+        "Modelled unemployment rate",
+        "Economic inactivity rate (Great Britain)",
+        "Claimant Count",
+        "Gross median weekly pay",
+        "Gross disposable household income per head",
+        "Children in relative poverty before housing costs",
+        "Children in relative poverty after housing costs",
+        "Fuel poverty (England)",
+    ]),
+    ("Economy & productivity", [
+        "Gross value added per hour worked",
+        "Gross value added per job filled",
+        "Gross domestic product per head at current market prices",
+        "Gross domestic product per head in chained volume measures",
+    ]),
+    ("Business", [
+        "Active businesses",
+        "Business births",
+        "Business deaths",
+        "High growth businesses",
+        "One-year business survival rate",
+        "Two-year business survival rate",
+        "Three-year business survival rate",
+        "Four-year business survival rate",
+        "Five-year business survival rate",
+    ]),
+    ("Housing", [
+        "Net additions to the housing stock (England)",
+        "Average house price",
+        "Housing affordability ratio (residence-based)",
+        "First-time buyer mortgage sales",
+    ]),
+    ("Education & skills", [
+        "Communication and language skills by end of early years foundation stage",
+        "Literacy skills by end of early years foundation stage",
+        "Maths skills by end of early years foundation stage",
+        "Pupils meeting the expected standard in reading, writing and maths at the end of Key Stage 2",
+        "GCSEs in English and Maths",
+        "Persistent absences for all pupils",
+        "Persistent absences for pupils eligible for free school meals",
+        "Persistent absences for pupils looked after by local authorities",
+        "Further education and skills learner achievements",
+        "Further education and skills participation",
+        "Apprenticeship achievements (England)",
+        "Apprenticeship starts (England)",
+        "Level 3 or above qualifications (Great Britain)",
+        "No qualifications",
+    ]),
+    ("Health & wellbeing", [
+        "Female healthy life expectancy",
+        "Male healthy life expectancy",
+        "Cigarette smokers",
+        "Adult obesity prevalence",
+        "Healthy weight prevalence in children at reception age",
+        "Healthy weight prevalence in children at Year 6 age",
+        "Obesity prevalence in children at reception age",
+        "Obesity prevalence in children at Year 6 age",
+        "Overweight prevalence in children at reception age",
+        "Overweight prevalence in children at Year 6 age",
+        "Underweight prevalence in children at reception age",
+        "Underweight prevalence in children at Year 6 age",
+        "Cancer diagnosis at stage 1 and 2",
+        "Preventable cardiovascular mortality (England)",
+        "Anxiety",
+        "Feeling life is worthwhile",
+        "Happiness",
+        "Life satisfaction",
+    ]),
+    ("Environment & energy", [
+        "Greenhouse gas emissions",
+        "Domestic electricity consumption",
+        "Domestic gas consumption",
+        "Air pollution regulating",
+        "Greenhouse gas regulating",
+        "Urban heat regulating",
+    ]),
+    ("Connectivity & transport", [
+        "Gigabit capable broadband",
+        "Premises below 30Mbps",
+        "4G coverage",
+        "5G coverage",
+        "Public electric vehicle chargers",
+        "Motor vehicle flow",
+    ]),
+    ("Amenities & culture", [
+        "Food outlets",
+        "Supermarkets",
+        "Sports facilities",
+        "Museums",
+        "Residents within a 30 minute walk of their nearest library",
+        "Residents within a 30 minute walk of their nearest railway station",
+        "Engaged with the arts",
+        "Visited a heritage site",
+        "Visited a museum or gallery",
+        "Visited a public library",
+        "Average length of short-term let stay",
+        "Number of guest nights at a short-term let",
+    ]),
 ]
-INCLUDE = [t for _, ts in DOMAINS for t in ts]
+
+# indicator whose ONS header says (%) but whose measure is a ratio
+RATIO_UNIT_INDICATOR = "Housing affordability ratio (residence-based)"
+
+# Sheets deliberately excluded: not single-value LA indicators.
+SKIP_SHEETS = {"population by age and sex"}
+
+
+def sheet_index(wb):
+    """Map normalised indicator title -> sheet name, for every numbered sheet."""
+    idx = {}
+    for s in wb.sheetnames:
+        if not s.isdigit():
+            continue
+        for i, r in enumerate(wb[s].iter_rows(values_only=True)):
+            if i > 3:
+                break
+            if r and r[0]:
+                key = re.sub(r"\s*\[note \d+\]\s*", "", str(r[0])).strip().lower()
+                idx.setdefault(key, s)
+                break
+    return idx
+
+
+def resolve(wb):
+    """Resolve the configured indicator names to current sheet numbers."""
+    idx = sheet_index(wb)
+    order, missing = [], []
+    for _, names in DOMAINS:
+        for n in names:
+            s = idx.get(n.strip().lower())
+            if s is None:
+                missing.append(n)
+            else:
+                order.append((int(s), n))
+    if missing:
+        raise SystemExit(
+            "ELS workbook no longer contains %d configured indicator(s):\n  "
+            % len(missing)
+            + "\n  ".join(missing)
+            + "\nONS may have renamed or withdrawn them. Update DOMAINS/POL in "
+              "parse_all.py deliberately - do not let the build drop them silently."
+        )
+    # The other half of the guard: an ELS sheet that carries Gateshead data but
+    # is not configured is a silent omission, and the product claims to cover
+    # every ELS indicator for the borough. Nation-specific sheets with no
+    # Gateshead row are ignored - they are excluded correctly and by design.
+    configured = {n.strip().lower() for _, names in DOMAINS for n in names}
+    extra = []
+    for title, s in idx.items():
+        if title in configured or title in SKIP_SHEETS:
+            continue
+        if has_gateshead(wb[s]):
+            extra.append("%s (sheet %s)" % (title, s))
+    if extra:
+        print(
+            "WARNING: %d ELS sheet(s) carry Gateshead data but are not "
+            "configured in DOMAINS, so they are being excluded:\n  " % len(extra)
+            + "\n  ".join(sorted(extra))
+            + "\nAdd to DOMAINS/POL deliberately, or to SKIP_SHEETS to record "
+              "that the exclusion is intended."
+        )
+    return order
+
+
+def has_gateshead(ws):
+    # No row cap: the population-by-age-and-sex sheet is ~22,000 rows and
+    # Gateshead first appears at ~14,150, so an early cut-off reports that
+    # sheet as having no Gateshead data and understates the coverage count.
+    for r in ws.iter_rows(values_only=True):
+        if r and r[0] is not None and str(r[0]).strip() == GH:
+            return True
+    return False
 
 MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
@@ -109,7 +369,7 @@ def parse(workbook_path):
     names = {}
     ind = {}
 
-    for t in INCLUDE:
+    for t, cfg_name in resolve(wb):
         ws = wb[str(t)]
         rows = ws.iter_rows(values_only=True)
         title = unit = src = ""
@@ -123,7 +383,11 @@ def parse(workbook_path):
                 continue
             low = c0.lower()
             if low.startswith("source"):
-                src = c0
+                # Some sheets publish several source lines (e.g. "Source 1: ONS",
+                # "Source 2: NISRA"). Source 1 is the England/GB producer we use;
+                # keeping the last one mis-attributed median pay to NISRA.
+                if not src:
+                    src = re.sub(r"^Source\s*\d*\s*:\s*", "", c0)
             elif low.startswith(("this worksheet", "some shorthand")):
                 pass
             elif not title:
@@ -139,7 +403,7 @@ def parse(workbook_path):
 
         um = re.search(r"\(([^)]*)\)\s*$", heads[0]) if heads else None
         unit_short = um.group(1) if um else ""
-        if t == 42:
+        if title == RATIO_UNIT_INDICATOR:
             unit_short = "ratio"   # ONS header says (%) but the measure is a ratio
 
         data = {}
@@ -190,7 +454,7 @@ def parse(workbook_path):
 
         ind[t] = {
             "name": title, "unit": unit, "unitShort": unit_short,
-            "src": src.replace("Source: ", ""), "pol": POL[t],
+            "src": src.replace("Source: ", ""), "pol": POL[cfg_name],
             "labels": [labels[i] for i in keep],
             "latest": labels[li],
             "gh": pick(data[GH]),
@@ -204,12 +468,19 @@ def parse(workbook_path):
             "n": n, "rankHigh": rank_high, "cov": cov,
         }
 
+    byname = {v["name"]: k for k, v in ind.items()}
+
+    numbered = [s for s in wb.sheetnames if s.isdigit()]
+    gh_sheets = sum(1 for s in numbered if has_gateshead(wb[s]))
+
     return {
         "elsGenerated": els_generated,
+        "sheetCount": len(numbered),
+        "ghSheetCount": gh_sheets,
         "gh": GH,
         "neca": NECA, "neigh": NEIGH,
         "names": {c: names.get(c, c) for c in sorted(set(NECA) | set(NEIGH))},
-        "domains": [{"name": d, "tables": [t for t in ts if t in ind]} for d, ts in DOMAINS],
+        "domains": [{"name": d, "tables": [byname[n] for n in ts if n in byname]} for d, ts in DOMAINS],
         "ind": ind,
     }
 
