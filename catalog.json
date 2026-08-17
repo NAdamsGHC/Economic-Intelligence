@@ -1,688 +1,721 @@
 {
- "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "10 August 2026",
- "schedule": {
-  "updated": "10 August 2026",
-  "months": [
-   {
-    "id": "2026-07",
-    "label": "Jul 26"
-   },
-   {
-    "id": "2026-08",
-    "label": "Aug 26"
-   },
-   {
-    "id": "2026-09",
-    "label": "Sep 26"
-   },
-   {
-    "id": "2026-10",
-    "label": "Oct 26"
-   },
-   {
-    "id": "2026-11",
-    "label": "Nov 26"
-   },
-   {
-    "id": "2026-12",
-    "label": "Dec 26"
-   },
-   {
-    "id": "2027-01",
-    "label": "Jan 27"
-   },
-   {
-    "id": "2027-02",
-    "label": "Feb 27"
-   },
-   {
-    "id": "2027-03",
-    "label": "Mar 27"
-   },
-   {
-    "id": "2027-04",
-    "label": "Apr 27"
-   },
-   {
-    "id": "2027-05",
-    "label": "May 27"
-   },
-   {
-    "id": "2027-06",
-    "label": "Jun 27"
-   }
+  "site": "https://nadamsghc.github.io/Economic-Intelligence",
+  "updated": "17 August 2026",
+  "schedule": {
+    "updated": "17 August 2026",
+    "months": [
+      {
+        "id": "2026-07",
+        "label": "Jul 26"
+      },
+      {
+        "id": "2026-08",
+        "label": "Aug 26"
+      },
+      {
+        "id": "2026-09",
+        "label": "Sep 26"
+      },
+      {
+        "id": "2026-10",
+        "label": "Oct 26"
+      },
+      {
+        "id": "2026-11",
+        "label": "Nov 26"
+      },
+      {
+        "id": "2026-12",
+        "label": "Dec 26"
+      },
+      {
+        "id": "2027-01",
+        "label": "Jan 27"
+      },
+      {
+        "id": "2027-02",
+        "label": "Feb 27"
+      },
+      {
+        "id": "2027-03",
+        "label": "Mar 27"
+      },
+      {
+        "id": "2027-04",
+        "label": "Apr 27"
+      },
+      {
+        "id": "2027-05",
+        "label": "May 27"
+      },
+      {
+        "id": "2027-06",
+        "label": "Jun 27"
+      }
+    ],
+    "rows": [
+      {
+        "name": "What's New",
+        "cadence": "weekly · Mondays",
+        "entries": {
+          "2026-07": [
+            {
+              "label": "placeholder",
+              "status": "released",
+              "href": "briefs/whats-new-2026-07-17.html"
+            },
+            {
+              "label": "Mon 20",
+              "status": "released",
+              "href": "briefs/whats-new-2026-07-20.html"
+            },
+            {
+              "label": "Mon 27",
+              "status": "released",
+              "href": "briefs/whats-new-2026-07-28.html"
+            }
+          ],
+          "2026-08": [
+            {
+              "label": "Mon 3",
+              "status": "released",
+              "href": "briefs/whats-new-2026-08-03.html"
+            },
+            {
+              "label": "Mon 10",
+              "status": "released",
+              "href": "briefs/whats-new-2026-08-10.html"
+            },
+            {
+              "label": "Mon 17",
+              "status": "released",
+              "href": "briefs/whats-new-2026-08-17.html"
+            },
+            {
+              "label": "Mon 24",
+              "status": "next"
+            },
+            {
+              "label": "then every Mon"
+            }
+          ],
+          "2026-09": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2026-10": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2026-11": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-01": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-02": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-03": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-04": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-05": [
+            {
+              "label": "every Mon"
+            }
+          ],
+          "2027-06": [
+            {
+              "label": "every Mon"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Economic Update",
+        "cadence": "monthly · small, small, BIG (quarterly, on APS releases)",
+        "entries": {
+          "2026-07": [
+            {
+              "label": "BIG · Thu 30",
+              "status": "released",
+              "kind": "big",
+              "href": "briefs/economic-update-2026-07.html"
+            }
+          ],
+          "2026-08": [
+            {
+              "label": "Thu 20",
+              "status": "next"
+            }
+          ],
+          "2026-09": [
+            {
+              "label": "Thu 17"
+            }
+          ],
+          "2026-10": [
+            {
+              "label": "BIG · Thu 29",
+              "kind": "big"
+            }
+          ],
+          "2026-11": [
+            {
+              "label": "Thu 19"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "Thu 17"
+            }
+          ],
+          "2027-01": [
+            {
+              "label": "BIG · Thu 28",
+              "kind": "big"
+            }
+          ],
+          "2027-02": [
+            {
+              "label": "Thu 18"
+            }
+          ],
+          "2027-03": [
+            {
+              "label": "Thu 18"
+            }
+          ],
+          "2027-04": [
+            {
+              "label": "BIG · Thu 29",
+              "kind": "big"
+            }
+          ],
+          "2027-05": [
+            {
+              "label": "Thu 20"
+            }
+          ],
+          "2027-06": [
+            {
+              "label": "Thu 17"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Policy Update",
+        "cadence": "monthly · first Friday",
+        "entries": {
+          "2026-07": [
+            {
+              "label": "Jul edition",
+              "status": "released",
+              "href": "policy/policy-update-2026-07.html"
+            }
+          ],
+          "2026-08": [
+            {
+              "label": "Fri 7",
+              "status": "released",
+              "href": "policy/policy-update-2026-08.html"
+            }
+          ],
+          "2026-09": [
+            {
+              "label": "Fri 4",
+              "status": "next"
+            }
+          ],
+          "2026-10": [
+            {
+              "label": "Fri 2"
+            }
+          ],
+          "2026-11": [
+            {
+              "label": "Fri 6"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "Fri 4"
+            }
+          ],
+          "2027-01": [
+            {
+              "label": "Fri 8"
+            }
+          ],
+          "2027-02": [
+            {
+              "label": "Fri 5"
+            }
+          ],
+          "2027-03": [
+            {
+              "label": "Fri 5"
+            }
+          ],
+          "2027-04": [
+            {
+              "label": "Fri 2"
+            }
+          ],
+          "2027-05": [
+            {
+              "label": "Fri 7"
+            }
+          ],
+          "2027-06": [
+            {
+              "label": "Fri 4"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Local Economic Assessment",
+        "cadence": "annual · December (2026 adds a one-off interim)",
+        "entries": {
+          "2026-08": [
+            {
+              "label": "Interim · Fri 28",
+              "kind": "big"
+            }
+          ],
+          "2026-12": [
+            {
+              "label": "Full · Fri 18",
+              "kind": "big"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "topics": [
+    {
+      "name": "Economy",
+      "note": "ONS topic · regional accounts, GDP, GVA, prices"
+    },
+    {
+      "name": "Business, industry and trade",
+      "note": "ONS topic · sectors, business activity"
+    },
+    {
+      "name": "People, population and community",
+      "note": "ONS topic · population, housing, deprivation, health"
+    },
+    {
+      "name": "Employment and labour market",
+      "note": "ONS topic · jobs, earnings, skills"
+    },
+    {
+      "name": "Policy",
+      "note": "Briefings · government & regional policy for the local economy"
+    },
+    {
+      "name": "Performance and outcomes",
+      "note": "National outcome frameworks — where Gateshead sits, and against whom"
+    }
   ],
-  "rows": [
-   {
-    "name": "What's New",
-    "cadence": "weekly · Mondays",
-    "entries": {
-     "2026-07": [
-      {
-       "label": "placeholder",
-       "status": "released",
-       "href": "briefs/whats-new-2026-07-17.html"
-      },
-      {
-       "label": "Mon 20",
-       "status": "released",
-       "href": "briefs/whats-new-2026-07-20.html"
-      },
-      {
-       "label": "Mon 27",
-       "status": "released",
-       "href": "briefs/whats-new-2026-07-28.html"
-      }
-     ],
-     "2026-08": [
-      {
-       "label": "Mon 3",
-       "status": "released",
-       "href": "briefs/whats-new-2026-08-03.html"
-      },
-      {
-       "label": "Mon 10",
-       "status": "released",
-       "href": "briefs/whats-new-2026-08-10.html"
-      },
-      {
-       "label": "Mon 17",
-       "status": "next"
-      },
-      {
-       "label": "then every Mon"
-      }
-     ],
-     "2026-09": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2026-10": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2026-11": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2026-12": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2027-01": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2027-02": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2027-03": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2027-04": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2027-05": [
-      {
-       "label": "every Mon"
-      }
-     ],
-     "2027-06": [
-      {
-       "label": "every Mon"
-      }
-     ]
+  "products": [
+    {
+      "id": "whats-new-2026-08-17",
+      "title": "What's New — 17 August 2026",
+      "path": "briefs/whats-new-2026-08-17.html",
+      "topic": "What's New",
+      "description": "Covering 10 to 17 August. No local statistics landed, but the statistical status of the survey behind every Gateshead employment figure was settled. On 11 August the ONS confirmed to the regulator that Labour Force Survey and Annual Population Survey outputs move from official statistics in development to official statistics, and that it will not seek reaccreditation for them — regional GDHI excepted. The same letter names reductions in the APS sample boost, with quality advice due alongside the September dataset. The first Transformed Labour Force Survey readiness assessment concluded now is not the right time to transition; the LFS remains the lead source, with a decision point in July 2027 and transition planned for November 2027. Separately, a national high street package would require planning permission for vape shops and adult gaming centres, revoke the Gambling Act aim to permit duty and double closure orders to 12 months — four weeks before the high streets inquiry closes to evidence on 7 September. Three corrections to our own record: GDHI is confirmed for 19 August after losing its date, the productivity method paper is 28 September rather than November, and UK Business Counts is 24 September rather than the autumn. New local authority breakdowns in the Community and Engagement Survey are the only genuinely new local data.",
+      "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · parliament.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-08-17",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "aps",
+        "labour force survey",
+        "tlfs",
+        "accreditation",
+        "gdhi",
+        "high streets",
+        "vape shops",
+        "betting shops",
+        "productivity",
+        "neet",
+        "business counts",
+        "zero hours"
+      ]
+    },
+    {
+      "id": "policy-2026-08",
+      "title": "Policy Update — August 2026",
+      "path": "policy/policy-update-2026-08.html",
+      "topic": "Policy",
+      "description": "What changed in government and regional policy for Gateshead's economy — third edition, scan run 10 August 2026 covering 13 July to 10 August. Four weeks that changed the framework: mayors get a share of business rates from April 2027 and of income tax from 2028, explicitly replacing central grant, with the equalisation design still undefined and the detail due at the Budget on 28 October. Local growth and devolution policy left MHCLG and the Treasury for No10 North in Manchester on 23 July. A 20% business rates discount for pubs, social clubs and live music venues from April 2027 lands on premises in the priority local centres the team holds no baseline for. VAT comes off domestic electricity on 1 October and the £2 bus fare cap returns in January 2027. The high streets select committee inquiry closes to written evidence on 7 September. Plus: the Transformed Labour Force Survey readiness assessment, quarterly regional GDP returning at ITL1 only, and a component-based rebuild of the headline productivity statistic timed for the same month as our 2024 local figure.",
+      "sources": "Briefing · HTML · gov.uk · parliament.uk · ONS · NE MSA",
+      "series": "policy-update",
+      "date": "2026-08-10",
+      "keywords": [
+        "policy",
+        "briefing",
+        "fiscal devolution",
+        "income tax",
+        "business rates",
+        "no10 north",
+        "high streets",
+        "visitor levy",
+        "cost of living",
+        "bus fare cap",
+        "tlfs",
+        "productivity",
+        "budget"
+      ]
+    },
+    {
+      "id": "whats-new-2026-08-10",
+      "title": "What's New — 10 August 2026",
+      "path": "briefs/whats-new-2026-08-10.html",
+      "topic": "What's New",
+      "description": "Covering 3 to 10 August. No local statistics landed, but a date we were relying on came off the calendar and the machinery behind two core measures is being changed in the open. Regional gross disposable household income, 1997 to 2024 no longer carries a confirmed day — the ONS release page now reads provisional August 2026, where last week it read 19 August. The ONS improvement plan confirms an August readiness assessment for moving to the Transformed Labour Force Survey as the headline labour market measure in 2027, and names a new component-based method for the headline productivity statistic, timed for November alongside the 5 November subregional productivity release. Also: the Employment Rights Act timeline (electronic and workplace balloting from 25 August), reissued Youth Jobs Grant guidance, quarterly public service productivity and UK R&D spend for 2024 with no regional breakdown. The high streets inquiry closes to written evidence on 7 September.",
+      "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · parliament.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-08-10",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "gdhi",
+        "tlfs",
+        "labour force survey",
+        "productivity",
+        "high streets",
+        "employment rights act",
+        "neet",
+        "youth jobs grant"
+      ]
+    },
+    {
+      "id": "whats-new-2026-08-03",
+      "title": "What's New — 3 August 2026",
+      "path": "briefs/whats-new-2026-08-03.html",
+      "topic": "What's New",
+      "description": "Covering 28 July to 3 August. Two releases that change what we can measure and one date that fixes the autumn. New mid-2025 population estimates (29 Jul) reset the denominator under every per-head rate we publish. Workless households 2025 carries local authority tables, giving us the only LA-level measure of children in workless households. The Budget is confirmed for Wednesday 28 October, which is when the fiscal devolution roadmap and devolution white paper land and the mechanism behind mayoral income tax and business rates retention finally becomes visible. Also: DWP's first Get Britain Working labour market insights, MHCLG council tax and business rates collection rates at billing authority level, and MSOA health state life expectancy. Autumn dates now firm for GDHI (19 Aug), UK Business Counts (24 Sep) and subregional productivity (5 Nov); GVA 2024 remains provisional for September 2026 with no day confirmed.",
+      "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-08-03",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "population estimates",
+        "workless households",
+        "budget",
+        "fiscal devolution",
+        "gdhi",
+        "gva",
+        "neet"
+      ]
+    },
+    {
+      "id": "economic-update-2026-07",
+      "title": "Quarterly Economic Update — July 2026",
+      "path": "briefs/economic-update-2026-07.html",
+      "topic": "Employment and labour market",
+      "description": "The quarterly economic update, data to June 2026. Both administrative series softened over the quarter. The claimant count rose 60 to 5,090 in June 2026 (4.0% of residents aged 16-64) and payrolled employees fell 405 to 86,312 in May 2026, though over the year both are lower. The payroll fall of 0.4% sits alongside 0.4% for the North East and 0.3% for England, and those gaps are smaller than the revisions the source makes between consecutive editions, so no ranking should be read into them. None of the four headline Annual Population Survey measures moved far enough to clear its own confidence interval, on the quarter or the year, and Gateshead is not statistically distinguishable from the North East or England on any of them. Gateshead has been above the North East on the claimant proportion in every one of the last fifteen months and within two tenths of a point of England throughout. House prices are up 6.3% on the year against England 2.3%. Real regular pay growth has narrowed to about a third of a point, from 1.2 points a year ago. Includes the standing indicator table with confidence intervals on every survey estimate.",
+      "sources": "NOMIS (Claimant Count NM_162_1, Annual Population Survey NM_17_5) - ONS and HMRC PAYE RTI (June and July 2026 editions) - HM Land Registry UK HPI - ONS consumer prices, national accounts, vacancies, producer prices and BICS",
+      "series": "economic-update",
+      "date": "2026-07-30",
+      "keywords": [
+        "economic update",
+        "quarterly",
+        "labour market",
+        "claimant count",
+        "annual population survey",
+        "payrolled employees",
+        "confidence intervals",
+        "house prices",
+        "cost of living",
+        "inactivity"
+      ]
+    },
+    {
+      "id": "whats-new-2026-07-28",
+      "title": "What's New — 28 July 2026",
+      "path": "briefs/whats-new-2026-07-28.html",
+      "topic": "What's New",
+      "description": "The Monday 27 July edition, covering 20–28 July. The month's biggest data drop landed on 21 July — claimant count to June 2026 and a new Annual Population Survey window (Apr 2025–Mar 2026) that the Quarterly Economy Monitor must be built on. MHCLG's local-authority business rates and reliefs data is the easy-to-miss one. Policy: local economic growth policy moved out of MHCLG and HM Treasury to No.10 North on 22 July, DSIT abolished, and a 14+ technical education announcement aimed at NEETs — an intention, not yet policy. Two deadlines close Friday 31 July: the Northern Growth Strategy views window and the Productivity Institute call for papers.",
+      "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-07-28",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "labour market",
+        "aps",
+        "claimant count",
+        "machinery of government",
+        "neet",
+        "northern growth strategy"
+      ]
+    },
+    {
+      "id": "whats-new-2026-07-20",
+      "title": "What's New — 20 July 2026",
+      "path": "briefs/whats-new-2026-07-20.html",
+      "topic": "What's New",
+      "description": "First full edition of the weekly round-up. A big data week ahead: UK Labour Market with local claimant count and PAYE RTI (21 Jul), June CPI (22 Jul), and the confirmed mid-2025 population estimates with revised back series (29 Jul) — all feeding the 30 Jul Quarterly Economy Monitor. Policy: the Commons HCLG Committee's Revitalising High Streets inquiry (evidence closes 7 Sep), a change of Prime Minister, and Skills England's move to DWP. Live deadline: Northern Growth Strategy views close 31 July.",
+      "sources": "Weekly round-up · ONS release calendar · gov.uk · parliament.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-07-20",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "labour market",
+        "claimant count",
+        "population estimates",
+        "high streets",
+        "cpi"
+      ]
+    },
+    {
+      "id": "whats-new-2026-07-17",
+      "title": "What's New — placeholder (17 July 2026)",
+      "path": "briefs/whats-new-2026-07-17.html",
+      "topic": "What's New",
+      "description": "First edition of the weekly round-up. The week ahead: UK Labour Market (21 Jul, sets up the 30 Jul Quarterly Economy Monitor), June CPI (22 Jul), and the AI adoption survey (20 Jul — watch-theme check on the North East's 11% adoption rate). Live deadline: Northern Growth Strategy views close 31 July. Every item says why it matters to Gateshead.",
+      "sources": "Weekly round-up · ONS release calendar · gov.uk · team mailbox",
+      "series": "whats-new",
+      "date": "2026-07-17",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "labour market",
+        "cpi",
+        "ai adoption"
+      ]
+    },
+    {
+      "id": "productivity",
+      "title": "Gateshead Productivity & GVA",
+      "path": "economy/productivity.html",
+      "topic": "Economy",
+      "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Built to absorb the 2024 data when it lands (ONS: GVA around September 2026, productivity 5 November 2026).",
+      "sources": "ONS balanced GVA & subregional productivity · NOMIS",
+      "keywords": [
+        "gva",
+        "productivity",
+        "output",
+        "economy",
+        "sectors",
+        "benchmarking"
+      ],
+      "pinned": false
+    },
+    {
+      "id": "gdhi",
+      "title": "GDHI — Gateshead & the North East",
+      "path": "economy/gdhi.html",
+      "topic": "Economy",
+      "description": "Household income in one place. Official GDHI per head benchmarking, 1997–2023 — £19,127 in 2023, £5,709 below the UK average, 329th of 361 UK local authorities, vs the NECA seven and statistical neighbours — plus the small-area explorer across 3,427 UK areas (2010–2023): choropleth of all 126 Gateshead LSOAs, inequality ratios and full income-component breakdowns.",
+      "sources": "ONS GDHI estimates · ELS regional GDHI per head 1997–2023",
+      "keywords": [
+        "gdhi",
+        "income",
+        "household",
+        "disposable",
+        "lsoa",
+        "inequality"
+      ],
+      "pinned": false
+    },
+    {
+      "id": "els-scorecard",
+      "title": "ELS scorecard — all local indicators",
+      "path": "economy/els-scorecard.html",
+      "topic": "Economy",
+      "description": "Every ONS Explore Local Statistics indicator covering Gateshead — 89 indicators across 10 domains — ranked against all UK local authorities and benchmarked vs England/UK, the North East, NECA and statistical neighbours. Sortable scorecard plus per-indicator Explore view with trends, CIs and distributions.",
+      "sources": "ONS Explore Local Statistics · 89 indicators · 10 domains",
+      "keywords": [
+        "els",
+        "scorecard",
+        "indicators",
+        "benchmarking",
+        "rank"
+      ],
+      "pinned": false
+    },
+    {
+      "id": "business-map",
+      "title": "Gateshead Business Map",
+      "path": "business-industry-trade/gateshead-business-map.html",
+      "topic": "Business, industry and trade",
+      "description": "11,000+ companies registered in Gateshead borough, mapped from Companies House and enriched with IMD 2025 deprivation, ONS sector churn, FSA food premises, BRES jobs and UKRI innovation. Intervention & investment scores per LSOA and ward, high-streets lens on Local Plan centres, plus sector saturation.",
+      "sources": "Companies House · IMD 2025 · ONS · FSA · UKRI · rebuilt monthly",
+      "keywords": [
+        "business",
+        "companies",
+        "map",
+        "high street",
+        "sectors",
+        "churn",
+        "startups"
+      ],
+      "featured": true
+    },
+    {
+      "id": "creative-industries",
+      "title": "North East Creative Industries (CCIS)",
+      "path": "business-industry-trade/creative-industries.html",
+      "topic": "Business, industry and trade",
+      "description": "Creative sector business counts, employment and a GVA proxy across the seven North East Combined Authority local authorities, built by applying the DCMS creative-industries SIC definition to ONS data. Companion to the CCIS Framework Data & Evidence consultation.",
+      "sources": "ONS UK Business Counts & BRES on the DCMS creative SIC definition · ONS regional GVA (balanced)",
+      "keywords": [
+        "creative",
+        "culture",
+        "dcms",
+        "ccis",
+        "sectors"
+      ],
+      "pinned": false
+    },
+    {
+      "id": "built-up-areas",
+      "title": "Gateshead Built-Up Areas",
+      "path": "people-population-community/built-up-areas.html",
+      "topic": "People, population and community",
+      "description": "Profile of the seven built-up areas inside Gateshead borough — Gateshead, Whickham, Blaydon, Birtley, Ryton, Crawcrook & Greenside, Rowlands Gill. Population, house prices, employment, visitor economy, benchmarked against 1,395 England & Wales BUAs.",
+      "sources": "ONS \"Understanding towns\", May 2026",
+      "keywords": [
+        "towns",
+        "bua",
+        "built-up",
+        "place",
+        "house prices",
+        "whickham",
+        "blaydon",
+        "birtley"
+      ],
+      "pinned": false
+    },
+    {
+      "id": "imd-2025",
+      "title": "Gateshead Deprivation — IMD 2025",
+      "path": "people-population-community/indices-of-deprivation-2025.html",
+      "topic": "People, population and community",
+      "description": "English Indices of Deprivation 2025 for Gateshead. All 22 wards and 126 neighbourhoods ranked, the seven domains ranked by national standing, an interactive deprivation map, and a social-value targeting matrix that separates depth of need from reach. Includes the supplementary IDACI / IDAOPI indices.",
+      "sources": "MHCLG IoD2025 · ONS geography",
+      "keywords": [
+        "imd",
+        "deprivation",
+        "iod",
+        "wards",
+        "lsoa",
+        "idaci",
+        "idaopi"
+      ],
+      "featured": true
+    },
+    {
+      "id": "employer-skills-2024",
+      "title": "North East Employer Skills — ESS 2024",
+      "path": "employment-labour-market/employer-skills-survey-2024.html",
+      "topic": "Employment and labour market",
+      "description": "DfE Employer Skills Survey 2024: how North East employers compare with England's nine regions on vacancies, skills gaps, training, apprenticeships, future skill needs and AI. The North East tops England on apprenticeship engagement (38%) and upskilling need (68%) but sits bottom on AI adoption (11%). Regional pack — no Gateshead-level data, North East used as proxy.",
+      "sources": "DfE Employer Skills Survey 2024 (IFF Research)",
+      "keywords": [
+        "skills",
+        "employers",
+        "training",
+        "apprenticeships",
+        "vacancies",
+        "ai"
+      ],
+      "pinned": false
+    },
+    {
+      "id": "policy-2026-07",
+      "title": "Policy Update — July 2026",
+      "path": "policy/policy-update-2026-07.html",
+      "topic": "Policy",
+      "description": "What changed in government and regional policy for Gateshead's economy — second edition, scan run 13 July 2026: the Northern Growth Strategy views window closing 31 July (£120m, proposed Newcastle–Gateshead MDZ), Gateshead named a North East Pathfinder partner, the new North East LSIP 2026–2029, the Industrial Strategy quarterly and year-one reports (8 July), the April 2026 Universal Credit structural break, and the Transformed LFS transition timetable under assessment. Reads like a document; replaces the 3 July edition.",
+      "sources": "Briefing · HTML · gov.uk · parliament.uk · ONS · NE MSA",
+      "series": "policy-update",
+      "date": "2026-07-13",
+      "keywords": [
+        "policy",
+        "briefing",
+        "devolution",
+        "universal credit",
+        "mdz",
+        "growth strategy",
+        "lsip",
+        "skills",
+        "industrial strategy",
+        "pathfinder"
+      ]
+    },
+    {
+      "id": "lgof-comparator",
+      "title": "Local Outcomes Framework comparator",
+      "path": "performance-outcomes/lgof-comparator.html",
+      "topic": "Performance and outcomes",
+      "description": "Where Gateshead sits on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) across all 16 outcomes, against six switchable comparator groups — MHCLG's statistical neighbours, NECA 7, the North East 12, the ONS economic neighbours, and the national median with and without London. MHCLG publishes no dataset for the framework and its digital tool is not yet live, so each of the 112 live metrics is assembled from the original publication the framework names, across 12 publishing organisations, and rendered as 137 series (49 with published 95% confidence intervals). Group median, rank, quintile band and a better/worse reading per metric against all 132 English single-tier authorities, with a ranked comparator chart, trends, and a data-currency panel driven by the quarterly vintage sweep. A comparator tool, not an assessment of council performance: where a rank would mislead, none is given, and the 3 metrics MHCLG has not yet confirmed show as visible awaiting-data rows.",
+      "sources": "MHCLG Local Outcomes Framework · assembled from OHID, ONS, NOMIS, DfE, DHSC/ASCOF, MHCLG, DfT, Defra, DCMS, DWP, NDTMS, Sport England, Skills for Care",
+      "keywords": [
+        "lgof",
+        "local outcomes framework",
+        "mhclg",
+        "outcomes",
+        "performance",
+        "statistical neighbours",
+        "comparator",
+        "benchmarking",
+        "rank",
+        "quintile",
+        "adult social care",
+        "children's social care",
+        "ascof",
+        "homelessness",
+        "housing",
+        "health",
+        "neighbourhoods",
+        "transport",
+        "child poverty",
+        "deprivation"
+      ],
+      "featured": true
     }
-   },
-   {
-    "name": "Economic Update",
-    "cadence": "monthly · small, small, BIG (quarterly, on APS releases)",
-    "entries": {
-     "2026-07": [
-      {
-       "label": "BIG · Thu 30",
-       "status": "released",
-       "kind": "big",
-       "href": "briefs/economic-update-2026-07.html"
-      }
-     ],
-     "2026-08": [
-      {
-       "label": "Thu 20",
-       "status": "next"
-      }
-     ],
-     "2026-09": [
-      {
-       "label": "Thu 17"
-      }
-     ],
-     "2026-10": [
-      {
-       "label": "BIG · Thu 29",
-       "kind": "big"
-      }
-     ],
-     "2026-11": [
-      {
-       "label": "Thu 19"
-      }
-     ],
-     "2026-12": [
-      {
-       "label": "Thu 17"
-      }
-     ],
-     "2027-01": [
-      {
-       "label": "BIG · Thu 28",
-       "kind": "big"
-      }
-     ],
-     "2027-02": [
-      {
-       "label": "Thu 18"
-      }
-     ],
-     "2027-03": [
-      {
-       "label": "Thu 18"
-      }
-     ],
-     "2027-04": [
-      {
-       "label": "BIG · Thu 29",
-       "kind": "big"
-      }
-     ],
-     "2027-05": [
-      {
-       "label": "Thu 20"
-      }
-     ],
-     "2027-06": [
-      {
-       "label": "Thu 17"
-      }
-     ]
-    }
-   },
-   {
-    "name": "Policy Update",
-    "cadence": "monthly · first Friday",
-    "entries": {
-     "2026-07": [
-      {
-       "label": "Jul edition",
-       "status": "released",
-       "href": "policy/policy-update-2026-07.html"
-      }
-     ],
-     "2026-08": [
-      {
-       "label": "Fri 7",
-       "status": "released",
-       "href": "policy/policy-update-2026-08.html"
-      }
-     ],
-     "2026-09": [
-      {
-       "label": "Fri 4",
-       "status": "next"
-      }
-     ],
-     "2026-10": [
-      {
-       "label": "Fri 2"
-      }
-     ],
-     "2026-11": [
-      {
-       "label": "Fri 6"
-      }
-     ],
-     "2026-12": [
-      {
-       "label": "Fri 4"
-      }
-     ],
-     "2027-01": [
-      {
-       "label": "Fri 8"
-      }
-     ],
-     "2027-02": [
-      {
-       "label": "Fri 5"
-      }
-     ],
-     "2027-03": [
-      {
-       "label": "Fri 5"
-      }
-     ],
-     "2027-04": [
-      {
-       "label": "Fri 2"
-      }
-     ],
-     "2027-05": [
-      {
-       "label": "Fri 7"
-      }
-     ],
-     "2027-06": [
-      {
-       "label": "Fri 4"
-      }
-     ]
-    }
-   },
-   {
-    "name": "Local Economic Assessment",
-    "cadence": "annual · December (2026 adds a one-off interim)",
-    "entries": {
-     "2026-08": [
-      {
-       "label": "Interim · Fri 28",
-       "kind": "big"
-      }
-     ],
-     "2026-12": [
-      {
-       "label": "Full · Fri 18",
-       "kind": "big"
-      }
-     ]
-    }
-   }
   ]
- },
- "topics": [
-  {
-   "name": "Economy",
-   "note": "ONS topic · regional accounts, GDP, GVA, prices"
-  },
-  {
-   "name": "Business, industry and trade",
-   "note": "ONS topic · sectors, business activity"
-  },
-  {
-   "name": "People, population and community",
-   "note": "ONS topic · population, housing, deprivation, health"
-  },
-  {
-   "name": "Employment and labour market",
-   "note": "ONS topic · jobs, earnings, skills"
-  },
-  {
-   "name": "Policy",
-   "note": "Briefings · government & regional policy for the local economy"
-  },
-  {
-   "name": "Performance and outcomes",
-   "note": "National outcome frameworks — where Gateshead sits, and against whom"
-  }
- ],
- "products": [
-  {
-   "id": "policy-2026-08",
-   "title": "Policy Update — August 2026",
-   "path": "policy/policy-update-2026-08.html",
-   "topic": "Policy",
-   "description": "What changed in government and regional policy for Gateshead's economy — third edition, scan run 10 August 2026 covering 13 July to 10 August. Four weeks that changed the framework: mayors get a share of business rates from April 2027 and of income tax from 2028, explicitly replacing central grant, with the equalisation design still undefined and the detail due at the Budget on 28 October. Local growth and devolution policy left MHCLG and the Treasury for No10 North in Manchester on 23 July. A 20% business rates discount for pubs, social clubs and live music venues from April 2027 lands on premises in the priority local centres the team holds no baseline for. VAT comes off domestic electricity on 1 October and the £2 bus fare cap returns in January 2027. The high streets select committee inquiry closes to written evidence on 7 September. Plus: the Transformed Labour Force Survey readiness assessment, quarterly regional GDP returning at ITL1 only, and a component-based rebuild of the headline productivity statistic timed for the same month as our 2024 local figure.",
-   "sources": "Briefing · HTML · gov.uk · parliament.uk · ONS · NE MSA",
-   "series": "policy-update",
-   "date": "2026-08-10",
-   "keywords": [
-    "policy",
-    "briefing",
-    "fiscal devolution",
-    "income tax",
-    "business rates",
-    "no10 north",
-    "high streets",
-    "visitor levy",
-    "cost of living",
-    "bus fare cap",
-    "tlfs",
-    "productivity",
-    "budget"
-   ]
-  },
-  {
-   "id": "whats-new-2026-08-10",
-   "title": "What's New — 10 August 2026",
-   "path": "briefs/whats-new-2026-08-10.html",
-   "topic": "What's New",
-   "description": "Covering 3 to 10 August. No local statistics landed, but a date we were relying on came off the calendar and the machinery behind two core measures is being changed in the open. Regional gross disposable household income, 1997 to 2024 no longer carries a confirmed day — the ONS release page now reads provisional August 2026, where last week it read 19 August. The ONS improvement plan confirms an August readiness assessment for moving to the Transformed Labour Force Survey as the headline labour market measure in 2027, and names a new component-based method for the headline productivity statistic, timed for November alongside the 5 November subregional productivity release. Also: the Employment Rights Act timeline (electronic and workplace balloting from 25 August), reissued Youth Jobs Grant guidance, quarterly public service productivity and UK R&D spend for 2024 with no regional breakdown. The high streets inquiry closes to written evidence on 7 September.",
-   "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · parliament.uk · team mailbox",
-   "series": "whats-new",
-   "date": "2026-08-10",
-   "keywords": [
-    "whats new",
-    "weekly",
-    "round-up",
-    "releases",
-    "gdhi",
-    "tlfs",
-    "labour force survey",
-    "productivity",
-    "high streets",
-    "employment rights act",
-    "neet",
-    "youth jobs grant"
-   ]
-  },
-  {
-   "id": "whats-new-2026-08-03",
-   "title": "What's New — 3 August 2026",
-   "path": "briefs/whats-new-2026-08-03.html",
-   "topic": "What's New",
-   "description": "Covering 28 July to 3 August. Two releases that change what we can measure and one date that fixes the autumn. New mid-2025 population estimates (29 Jul) reset the denominator under every per-head rate we publish. Workless households 2025 carries local authority tables, giving us the only LA-level measure of children in workless households. The Budget is confirmed for Wednesday 28 October, which is when the fiscal devolution roadmap and devolution white paper land and the mechanism behind mayoral income tax and business rates retention finally becomes visible. Also: DWP's first Get Britain Working labour market insights, MHCLG council tax and business rates collection rates at billing authority level, and MSOA health state life expectancy. Autumn dates now firm for GDHI (19 Aug), GVA 2024 (23 Sep), UK Business Counts (24 Sep) and subregional productivity (5 Nov).",
-   "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · team mailbox",
-   "series": "whats-new",
-   "date": "2026-08-03",
-   "keywords": [
-    "whats new",
-    "weekly",
-    "round-up",
-    "releases",
-    "population estimates",
-    "workless households",
-    "budget",
-    "fiscal devolution",
-    "gdhi",
-    "gva",
-    "neet"
-   ]
-  },
-  {
-   "id": "economic-update-2026-07",
-   "title": "Quarterly Economic Update — July 2026",
-   "path": "briefs/economic-update-2026-07.html",
-   "topic": "Employment and labour market",
-   "description": "The quarterly economic update, data to June 2026. Both administrative series softened over the quarter. The claimant count rose 60 to 5,090 in June 2026 (4.0% of residents aged 16-64) and payrolled employees fell 405 to 86,312 in May 2026, though over the year both are lower. The payroll fall of 0.4% sits alongside 0.4% for the North East and 0.3% for England, and those gaps are smaller than the revisions the source makes between consecutive editions, so no ranking should be read into them. None of the four headline Annual Population Survey measures moved far enough to clear its own confidence interval, on the quarter or the year, and Gateshead is not statistically distinguishable from the North East or England on any of them. Gateshead has been above the North East on the claimant proportion in every one of the last fifteen months and within two tenths of a point of England throughout. House prices are up 6.3% on the year against England 2.3%. Real regular pay growth has narrowed to about a third of a point, from 1.2 points a year ago. Includes the standing indicator table with confidence intervals on every survey estimate.",
-   "sources": "NOMIS (Claimant Count NM_162_1, Annual Population Survey NM_17_5) - ONS and HMRC PAYE RTI (June and July 2026 editions) - HM Land Registry UK HPI - ONS consumer prices, national accounts, vacancies, producer prices and BICS",
-   "series": "economic-update",
-   "date": "2026-07-30",
-   "keywords": [
-    "economic update",
-    "quarterly",
-    "labour market",
-    "claimant count",
-    "annual population survey",
-    "payrolled employees",
-    "confidence intervals",
-    "house prices",
-    "cost of living",
-    "inactivity"
-   ]
-  },
-  {
-   "id": "whats-new-2026-07-28",
-   "title": "What's New — 28 July 2026",
-   "path": "briefs/whats-new-2026-07-28.html",
-   "topic": "What's New",
-   "description": "The Monday 27 July edition, covering 20–28 July. The month's biggest data drop landed on 21 July — claimant count to June 2026 and a new Annual Population Survey window (Apr 2025–Mar 2026) that the Quarterly Economy Monitor must be built on. MHCLG's local-authority business rates and reliefs data is the easy-to-miss one. Policy: local economic growth policy moved out of MHCLG and HM Treasury to No.10 North on 22 July, DSIT abolished, and a 14+ technical education announcement aimed at NEETs — an intention, not yet policy. Two deadlines close Friday 31 July: the Northern Growth Strategy views window and the Productivity Institute call for papers.",
-   "sources": "Weekly round-up · ONS release calendar · NOMIS · gov.uk · team mailbox",
-   "series": "whats-new",
-   "date": "2026-07-28",
-   "keywords": [
-    "whats new",
-    "weekly",
-    "round-up",
-    "releases",
-    "labour market",
-    "aps",
-    "claimant count",
-    "machinery of government",
-    "neet",
-    "northern growth strategy"
-   ]
-  },
-  {
-   "id": "whats-new-2026-07-20",
-   "title": "What's New — 20 July 2026",
-   "path": "briefs/whats-new-2026-07-20.html",
-   "topic": "What's New",
-   "description": "First full edition of the weekly round-up. A big data week ahead: UK Labour Market with local claimant count and PAYE RTI (21 Jul), June CPI (22 Jul), and the confirmed mid-2025 population estimates with revised back series (29 Jul) — all feeding the 30 Jul Quarterly Economy Monitor. Policy: the Commons HCLG Committee's Revitalising High Streets inquiry (evidence closes 7 Sep), a change of Prime Minister, and Skills England's move to DWP. Live deadline: Northern Growth Strategy views close 31 July.",
-   "sources": "Weekly round-up · ONS release calendar · gov.uk · parliament.uk · team mailbox",
-   "series": "whats-new",
-   "date": "2026-07-20",
-   "keywords": [
-    "whats new",
-    "weekly",
-    "round-up",
-    "releases",
-    "labour market",
-    "claimant count",
-    "population estimates",
-    "high streets",
-    "cpi"
-   ]
-  },
-  {
-   "id": "whats-new-2026-07-17",
-   "title": "What's New — placeholder (17 July 2026)",
-   "path": "briefs/whats-new-2026-07-17.html",
-   "topic": "What's New",
-   "description": "First edition of the weekly round-up. The week ahead: UK Labour Market (21 Jul, sets up the 30 Jul Quarterly Economy Monitor), June CPI (22 Jul), and the AI adoption survey (20 Jul — watch-theme check on the North East's 11% adoption rate). Live deadline: Northern Growth Strategy views close 31 July. Every item says why it matters to Gateshead.",
-   "sources": "Weekly round-up · ONS release calendar · gov.uk · team mailbox",
-   "series": "whats-new",
-   "date": "2026-07-17",
-   "keywords": [
-    "whats new",
-    "weekly",
-    "round-up",
-    "releases",
-    "labour market",
-    "cpi",
-    "ai adoption"
-   ]
-  },
-  {
-   "id": "productivity",
-   "title": "Gateshead Productivity & GVA",
-   "path": "economy/productivity.html",
-   "topic": "Economy",
-   "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Built to absorb the 2024 data when it lands (ONS: GVA around September 2026, productivity 5 November 2026).",
-   "sources": "ONS balanced GVA & subregional productivity · NOMIS",
-   "keywords": [
-    "gva",
-    "productivity",
-    "output",
-    "economy",
-    "sectors",
-    "benchmarking"
-   ],
-   "pinned": false
-  },
-  {
-   "id": "gdhi",
-   "title": "GDHI — Gateshead & the North East",
-   "path": "economy/gdhi.html",
-   "topic": "Economy",
-   "description": "Household income in one place. Official GDHI per head benchmarking, 1997–2023 — £19,127 in 2023, £5,709 below the UK average, 329th of 361 UK local authorities, vs the NECA seven and statistical neighbours — plus the small-area explorer across 3,427 UK areas (2010–2023): choropleth of all 126 Gateshead LSOAs, inequality ratios and full income-component breakdowns.",
-   "sources": "ONS GDHI estimates · ELS regional GDHI per head 1997–2023",
-   "keywords": [
-    "gdhi",
-    "income",
-    "household",
-    "disposable",
-    "lsoa",
-    "inequality"
-   ],
-   "pinned": false
-  },
-  {
-   "id": "els-scorecard",
-   "title": "ELS scorecard — all local indicators",
-   "path": "economy/els-scorecard.html",
-   "topic": "Economy",
-   "description": "Every ONS Explore Local Statistics indicator covering Gateshead — 88 indicators across 10 domains — ranked against all UK local authorities and benchmarked vs England/UK, the North East, NECA and statistical neighbours. Sortable scorecard plus per-indicator Explore view with trends, CIs and distributions.",
-   "sources": "ONS Explore Local Statistics · 88 indicators · 10 domains",
-   "keywords": [
-    "els",
-    "scorecard",
-    "indicators",
-    "benchmarking",
-    "rank"
-   ],
-   "pinned": false
-  },
-  {
-   "id": "business-map",
-   "title": "Gateshead Business Map",
-   "path": "business-industry-trade/gateshead-business-map.html",
-   "topic": "Business, industry and trade",
-   "description": "11,000+ companies registered in Gateshead borough, mapped from Companies House and enriched with IMD 2025 deprivation, ONS sector churn, FSA food premises, BRES jobs and UKRI innovation. Intervention & investment scores per LSOA and ward, high-streets lens on Local Plan centres, plus sector saturation.",
-   "sources": "Companies House · IMD 2025 · ONS · FSA · UKRI · rebuilt monthly",
-   "keywords": [
-    "business",
-    "companies",
-    "map",
-    "high street",
-    "sectors",
-    "churn",
-    "startups"
-   ],
-   "featured": true
-  },
-  {
-   "id": "creative-industries",
-   "title": "North East Creative Industries (CCIS)",
-   "path": "business-industry-trade/creative-industries.html",
-   "topic": "Business, industry and trade",
-   "description": "Creative sector business counts, employment and a GVA proxy across the seven North East Combined Authority local authorities, built by applying the DCMS creative-industries SIC definition to ONS data. Companion to the CCIS Framework Data & Evidence consultation.",
-   "sources": "ONS UK Business Counts & BRES on the DCMS creative SIC definition · ONS regional GVA (balanced)",
-   "keywords": [
-    "creative",
-    "culture",
-    "dcms",
-    "ccis",
-    "sectors"
-   ],
-   "pinned": false
-  },
-  {
-   "id": "built-up-areas",
-   "title": "Gateshead Built-Up Areas",
-   "path": "people-population-community/built-up-areas.html",
-   "topic": "People, population and community",
-   "description": "Profile of the seven built-up areas inside Gateshead borough — Gateshead, Whickham, Blaydon, Birtley, Ryton, Crawcrook & Greenside, Rowlands Gill. Population, house prices, employment, visitor economy, benchmarked against 1,395 England & Wales BUAs.",
-   "sources": "ONS \"Understanding towns\", May 2026",
-   "keywords": [
-    "towns",
-    "bua",
-    "built-up",
-    "place",
-    "house prices",
-    "whickham",
-    "blaydon",
-    "birtley"
-   ],
-   "pinned": false
-  },
-  {
-   "id": "imd-2025",
-   "title": "Gateshead Deprivation — IMD 2025",
-   "path": "people-population-community/indices-of-deprivation-2025.html",
-   "topic": "People, population and community",
-   "description": "English Indices of Deprivation 2025 for Gateshead. All 22 wards and 126 neighbourhoods ranked, the seven domains ranked by national standing, an interactive deprivation map, and a social-value targeting matrix that separates depth of need from reach. Includes the supplementary IDACI / IDAOPI indices.",
-   "sources": "MHCLG IoD2025 · ONS geography",
-   "keywords": [
-    "imd",
-    "deprivation",
-    "iod",
-    "wards",
-    "lsoa",
-    "idaci",
-    "idaopi"
-   ],
-   "featured": true
-  },
-  {
-   "id": "employer-skills-2024",
-   "title": "North East Employer Skills — ESS 2024",
-   "path": "employment-labour-market/employer-skills-survey-2024.html",
-   "topic": "Employment and labour market",
-   "description": "DfE Employer Skills Survey 2024: how North East employers compare with England's nine regions on vacancies, skills gaps, training, apprenticeships, future skill needs and AI. The North East tops England on apprenticeship engagement (38%) and upskilling need (68%) but sits bottom on AI adoption (11%). Regional pack — no Gateshead-level data, North East used as proxy.",
-   "sources": "DfE Employer Skills Survey 2024 (IFF Research)",
-   "keywords": [
-    "skills",
-    "employers",
-    "training",
-    "apprenticeships",
-    "vacancies",
-    "ai"
-   ],
-   "pinned": false
-  },
-  {
-   "id": "policy-2026-07",
-   "title": "Policy Update — July 2026",
-   "path": "policy/policy-update-2026-07.html",
-   "topic": "Policy",
-   "description": "What changed in government and regional policy for Gateshead's economy — second edition, scan run 13 July 2026: the Northern Growth Strategy views window closing 31 July (£120m, proposed Newcastle–Gateshead MDZ), Gateshead named a North East Pathfinder partner, the new North East LSIP 2026–2029, the Industrial Strategy quarterly and year-one reports (8 July), the April 2026 Universal Credit structural break, and the Transformed LFS transition timetable under assessment. Reads like a document; replaces the 3 July edition.",
-   "sources": "Briefing · HTML · gov.uk · parliament.uk · ONS · NE MSA",
-   "series": "policy-update",
-   "date": "2026-07-13",
-   "keywords": [
-    "policy",
-    "briefing",
-    "devolution",
-    "universal credit",
-    "mdz",
-    "growth strategy",
-    "lsip",
-    "skills",
-    "industrial strategy",
-    "pathfinder"
-   ]
-  },
-  {
-   "id": "lgof-comparator",
-   "title": "Local Outcomes Framework comparator",
-   "path": "performance-outcomes/lgof-comparator.html",
-   "topic": "Performance and outcomes",
-   "description": "Where Gateshead sits on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) across all 16 outcomes, against six switchable comparator groups — MHCLG's statistical neighbours, NECA 7, the North East 12, the ONS economic neighbours, and the national median with and without London. MHCLG publishes no dataset for the framework and its digital tool is not yet live, so each of the 112 live metrics is assembled from the original publication the framework names, across 12 publishing organisations, and rendered as 137 series (49 with published 95% confidence intervals). Group median, rank, quintile band and a better/worse reading per metric against all 132 English single-tier authorities, with a ranked comparator chart, trends, and a data-currency panel driven by the quarterly vintage sweep. A comparator tool, not an assessment of council performance: where a rank would mislead, none is given, and the 3 metrics MHCLG has not yet confirmed show as visible awaiting-data rows.",
-   "sources": "MHCLG Local Outcomes Framework · assembled from OHID, ONS, NOMIS, DfE, DHSC/ASCOF, MHCLG, DfT, Defra, DCMS, DWP, NDTMS, Sport England, Skills for Care",
-   "keywords": [
-    "lgof",
-    "local outcomes framework",
-    "mhclg",
-    "outcomes",
-    "performance",
-    "statistical neighbours",
-    "comparator",
-    "benchmarking",
-    "rank",
-    "quintile",
-    "adult social care",
-    "children's social care",
-    "ascof",
-    "homelessness",
-    "housing",
-    "health",
-    "neighbourhoods",
-    "transport",
-    "child poverty",
-    "deprivation"
-   ],
-   "featured": true
-  }
- ]
 }
