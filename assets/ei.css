@@ -131,6 +131,27 @@ a:hover{color:var(--gc-blue-dark);}
 
 .gc-noresults{padding:30px 6px;color:#6a7784;font-style:italic;}
 
+/* ---- Section folds: archive collapse + show-3-then-all ----
+   Both folds are suspended while the reader is searching (body.gc-searching),
+   so a matching card can never sit hidden behind one. */
+.gc-sec-toggle,.gc-showmore{
+  display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+  color:var(--gc-blue);background:#fff;border:1px solid var(--gc-line-2);padding:4px 10px;border-radius:0;
+}
+.gc-sec-toggle:hover,.gc-showmore:hover{border-color:var(--gc-blue);}
+.gc-sec-toggle{margin-left:10px;}
+.gc-showmore{margin-top:14px;}
+.gc-sec-toggle .chev,.gc-showmore .chev{display:inline-block;transition:transform .15s ease;}
+.gc-topic.gc-collapsed .gc-sec-toggle .chev,
+.gc-topic.gc-truncated .gc-showmore .chev{transform:rotate(-90deg);}
+/* Archive sections keep their heading visible when folded. */
+body:not(.gc-searching) .gc-topic.gc-collapsed .gc-cards,
+body:not(.gc-searching) .gc-topic.gc-collapsed .gc-showmore{display:none;}
+body:not(.gc-searching) .gc-topic.gc-truncated .gc-cards > .gc-card.gc-more{display:none;}
+body.gc-searching .gc-sec-toggle,
+body.gc-searching .gc-showmore{display:none;}
+
 /* ---- Publication schedule (public year view) ---- */
 .gc-sched-toggle{
   margin-left:auto;display:inline-flex;align-items:center;gap:6px;cursor:pointer;

@@ -18,6 +18,9 @@
   };
   var SERIES_ORDER = ["whats-new", "economic-update", "policy-update", "lea-update"];
 
+  // Cards shown before a section folds behind "Show all".
+  var CARD_LIMIT = 3;
+
   // ---- SVG icons (chain link + search) ----
   var ICON_LINK =
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
@@ -105,6 +108,10 @@
     var run = function () {
       var q = input.value.trim().toLowerCase();
       var terms = q ? q.split(/\s+/) : [];
+      // While searching, suspend the collapse and show-3 rules so a match can
+      // never be hidden behind a fold. The classes stay on the sections; the
+      // CSS that acts on them is scoped to body:not(.gc-searching).
+      document.body.classList.toggle("gc-searching", !!q);
       var shown = 0, shownIds = {}, allIds = {};
       document.querySelectorAll(".gc-topic").forEach(function (topic) {
         var vis = 0;
@@ -122,7 +129,8 @@
         });
         topic.style.display = vis ? "" : "none";
         var cnt = topic.querySelector(".count");
-        if (cnt) cnt.textContent = vis + (vis === 1 ? " product" : " products");
+        var noun = topic.getAttribute("data-noun") || "product";
+        if (cnt) cnt.textContent = vis + " " + noun + (vis === 1 ? "" : "s");
       });
       var nr = document.getElementById("gc-noresults");
       if (nr) nr.style.display = shown ? "none" : "";
@@ -136,16 +144,85 @@
   }
 
   // ---- render ----
-  function topicSection(name, note, id) {
+  function topicSection(name, note, id, noun) {
     var sec = document.createElement("section");
     sec.className = "gc-topic";
     sec.id = id;
+    sec.setAttribute("data-noun", noun || "product");
     sec.innerHTML =
       '<div class="gc-topic-head"><h2>' + esc(name) + "</h2>" +
       '<span class="note">' + esc(note || "") + "</span>" +
       '<span class="count"></span></div>' +
       '<div class="gc-cards"></div>';
     return sec;
+  }
+
+  function setCount(sec, n) {
+    var noun = sec.getAttribute("data-noun") || "product";
+    sec.querySelector(".count").textContent = n + " " + noun + (n === 1 ? "" : "s");
+  }
+
+  // ---- collapse / show-more ----
+  // Two folds, both suspended during search (see wireSearch):
+  //   collapsible(sec) — whole section folded away behind a Show/Hide button.
+  //     Used for the series archives, which start collapsed.
+  //   truncate(sec, n) — first n cards shown, the rest behind "Show all".
+  //     Used for every other card section.
+  // Both remember the reader's choice per browser, so an opened section stays
+  // open on the next visit; the default applies only until they choose.
+  var STORE = "gc-fold:";
+  function saved(key) { try { return localStorage.getItem(STORE + key); } catch (e) { return null; } }
+  function save(key, v) { try { localStorage.setItem(STORE + key, v); } catch (e) {} }
+
+  function collapsible(sec, startCollapsed) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "gc-sec-toggle";
+    btn.setAttribute("aria-controls", sec.id + "-cards");
+    sec.querySelector(".gc-cards").id = sec.id + "-cards";
+    btn.innerHTML = '<span class="chev" aria-hidden="true">&#9662;</span><span class="lbl"></span>';
+    sec.querySelector(".gc-topic-head").appendChild(btn);
+
+    var apply = function (collapsed) {
+      sec.classList.toggle("gc-collapsed", collapsed);
+      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      btn.querySelector(".lbl").textContent = collapsed ? "Show" : "Hide";
+    };
+    var s = saved(sec.id);
+    apply(s === null ? !!startCollapsed : s === "1");
+    btn.addEventListener("click", function () {
+      var collapsed = !sec.classList.contains("gc-collapsed");
+      apply(collapsed);
+      save(sec.id, collapsed ? "1" : "0");
+    });
+  }
+
+  function truncate(sec, limit) {
+    var cards = sec.querySelectorAll(".gc-cards > .gc-card");
+    if (cards.length <= limit) return;
+    for (var i = limit; i < cards.length; i++) cards[i].classList.add("gc-more");
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "gc-showmore";
+    btn.setAttribute("aria-controls", sec.id + "-cards");
+    sec.querySelector(".gc-cards").id = sec.id + "-cards";
+    sec.appendChild(btn);
+
+    var apply = function (truncated) {
+      sec.classList.toggle("gc-truncated", truncated);
+      btn.setAttribute("aria-expanded", truncated ? "false" : "true");
+      btn.innerHTML = truncated
+        ? '<span class="chev" aria-hidden="true">&#9662;</span>Show all ' + cards.length
+        : '<span class="chev" aria-hidden="true">&#9662;</span>Show fewer';
+    };
+    var s = saved(sec.id + ":more");
+    apply(s === null ? true : s !== "1");
+    btn.addEventListener("click", function () {
+      var truncated = !sec.classList.contains("gc-truncated");
+      apply(truncated);
+      save(sec.id + ":more", truncated ? "0" : "1");
+    });
   }
 
   // ---- publication schedule (rendered from catalog.schedule) ----
@@ -230,8 +307,9 @@
       psec.classList.add("gc-topic-pinned");
       var pgrid = psec.querySelector(".gc-cards");
       pinnedProds.forEach(function (p) { pgrid.appendChild(card(p, { inPinned: true })); });
-      psec.querySelector(".count").textContent = pinnedProds.length + (pinnedProds.length === 1 ? " product" : " products");
+      setCount(psec, pinnedProds.length);
       root.appendChild(psec);
+      truncate(psec, CARD_LIMIT);
     }
 
     // Featured section — recently published ad hoc analysis (featured flag).
@@ -241,8 +319,9 @@
       fsec.classList.add("gc-topic-featured");
       var fgrid = fsec.querySelector(".gc-cards");
       featuredProds.forEach(function (p) { fgrid.appendChild(card(p, { inPinned: true })); });
-      fsec.querySelector(".count").textContent = featuredProds.length + (featuredProds.length === 1 ? " product" : " products");
+      setCount(fsec, featuredProds.length);
       root.appendChild(fsec);
+      truncate(fsec, CARD_LIMIT);
     }
 
     cat.topics.forEach(function (t) {
@@ -251,19 +330,23 @@
       var sec = topicSection(t.name, t.note, "topic-" + t.name.toLowerCase().replace(/[^a-z]+/g, "-"));
       var grid = sec.querySelector(".gc-cards");
       prods.forEach(function (p) { grid.appendChild(card(p)); });
-      sec.querySelector(".count").textContent = prods.length + (prods.length === 1 ? " product" : " products");
+      setCount(sec, prods.length);
       root.appendChild(sec);
+      truncate(sec, CARD_LIMIT);
     });
 
-    // Series archives at the foot of the page.
+    // Series archives at the foot of the page — collapsed by default, because
+    // they are a back catalogue rather than something to browse on arrival.
     SERIES_ORDER.forEach(function (s) {
       var arr = (bySeries[s] || []).filter(function (p) { return p._archived; });
       if (!arr.length) return;
-      var sec = topicSection(SERIES[s].archive, SERIES[s].note, "series-" + s);
+      var sec = topicSection(SERIES[s].archive, SERIES[s].note, "series-" + s, "edition");
+      sec.classList.add("gc-topic-archive");
       var grid = sec.querySelector(".gc-cards");
       arr.forEach(function (p) { grid.appendChild(card(p)); });
-      sec.querySelector(".count").textContent = arr.length + (arr.length === 1 ? " edition" : " editions");
+      setCount(sec, arr.length);
       root.appendChild(sec);
+      collapsible(sec, true);
     });
 
     var nr = document.createElement("div");
