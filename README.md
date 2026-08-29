@@ -12,6 +12,7 @@ The site wears **one civic-style skin** (PT Sans, `#045a90` blue, `#252525` mast
 
 | ONS topic | Dashboard | Theme | Size |
 |---|---|---|---|
+| **Economy** | [NOMIS Quick Look](economy/nomis-quick-look.html) | The most-run NOMIS queries for Gateshead answered on one page - claimant count, BRES employees, jobs density, population estimates, UK Business Counts and the Annual Population Survey at their latest published vintage, with full breakdowns, confidence intervals drawn on every survey estimate, one-click copy in the house citation format, and a vintage flag on every dataset | 72 KB |
 | **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
 | **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NECA 7, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
 | **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, NECA 7 and statistical neighbours, with per-indicator Explore view | 290 KB |

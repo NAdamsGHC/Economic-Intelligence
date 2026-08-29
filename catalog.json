@@ -1,6 +1,6 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "25 August 2026",
+ "updated": "28 August 2026",
  "schedule": {
   "updated": "25 August 2026",
   "months": [
@@ -586,6 +586,46 @@
     "labour market",
     "cpi",
     "ai adoption"
+   ]
+  },
+  {
+   "id": "nomis-quick-look",
+   "title": "NOMIS Quick Look",
+   "path": "economy/nomis-quick-look.html",
+   "topic": "Economy",
+   "description": "The NOMIS queries that get run most often for Gateshead, answered on one page so a figure can be read and copied without going through the NOMIS query wizard and downloading a spreadsheet. Six datasets at their latest published vintage as at the snapshot date of 28 August 2026: the claimant count for July 2026 is 5,035 people, 4.0% of residents aged 16-64, with age and sex breakdowns and the last 24 months; BRES employees for 2024 is 95,000, broken down across the 21 SIC sections and the four employment-status bases; jobs density for 2024 is 0.82 jobs per resident aged 16-64 on 104,000 total jobs, with a ten-year series; the mid-2025 population estimate is 202,509, by broad and five-year age band and by sex; UK Business Counts for 2025 is 5,580 enterprises, by employment size band, SIC section and legal status; and the Annual Population Survey for Apr 2025-Mar 2026 gives an employment rate of 72.4% for those aged 16-64 (95% confidence interval 68.2 to 76.6), an unemployment rate of 6.6% (3.9 to 9.3) and an economic inactivity rate of 22.4% (18.5 to 26.3), with activity and inactivity, employment by sex, and highest qualification. As a survey, every APS estimate is shown with its 95% confidence interval - on the cards, in the tables, as error bars on the charts and a shaded band on the time series, and in the copied citation. Every figure carries its exact measure, its period and a one-click copy in the house citation format, and every breakdown states whether its rows sum to the published total or fall short of it through disclosure rounding. Each dataset shows whether NOMIS has published a newer period since the snapshot was taken, and a panel published on an older period than its dataset headline - the APS qualifications, Jan 2025-Dec 2025 - says so on its face. Gateshead only, no comparators and no ward breakdowns.",
+   "sources": "NOMIS - Claimant count by sex and age (NM_162_1); Business Register and Employment Survey, open access (NM_189_1); Jobs density (NM_57_1); Population estimates by five year age band (NM_31_1); UK Business Counts, enterprises (NM_142_1); Annual Population Survey, variables as percentages (NM_17_5). All figures as published by ONS through NOMIS, quoted verbatim; snapshot taken 28 August 2026.",
+   "keywords": [
+    "nomis",
+    "quick look",
+    "lookup",
+    "claimant count",
+    "bres",
+    "employees",
+    "jobs density",
+    "population estimates",
+    "mid-year estimates",
+    "uk business counts",
+    "ukbc",
+    "enterprises",
+    "sic sections",
+    "size band",
+    "breakdowns",
+    "latest figures",
+    "citation",
+    "copy",
+    "snapshot",
+    "vintage",
+    "annual population survey",
+    "aps",
+    "employment rate",
+    "unemployment rate",
+    "economic inactivity",
+    "qualifications",
+    "rqf",
+    "confidence intervals",
+    "error bars",
+    "survey estimates"
    ]
   },
   {

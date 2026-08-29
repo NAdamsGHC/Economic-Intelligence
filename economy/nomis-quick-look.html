@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOMIS Quick Look — Gateshead Council Economic Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+/* Gateshead Council brand tokens (gateshead.gov.uk): PT Sans, #045a90 blue, square corners */
+:root{--navy:#045a90;--teal:#045a90;--teal2:#0772b4;--amber:#e8a23d;--ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;--good:#1a7f37;--bad:#c0392b;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;}
+.wrap{max-width:1180px;margin:0 auto;padding:24px;}
+header{border-left:6px solid var(--teal);padding:4px 0 4px 16px;margin-bottom:8px;}
+header h1{font-size:25px;color:var(--navy);font-weight:700;}
+header p{color:var(--muted);font-size:14px;margin-top:5px;max-width:880px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px 0;}
+.chip{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:20px;background:#eef4f4;color:var(--teal);border:1px solid #d4e6e6;}
+.chip.amber{background:#fdf3e2;color:#8a6516;border-color:#f0d8a8;}
+.chip.good{background:#e4f3e9;color:var(--good);border-color:#bfe3cb;}
+.caveat{background:#fdf3e2;border:1px solid #f0d8a8;border-left:5px solid var(--amber);border-radius:9px;padding:12px 16px;margin:16px 0 20px;font-size:13px;color:#6b5320;}
+.caveat b{color:#8a6516;}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--line);margin-bottom:20px;position:sticky;top:0;background:var(--bg);z-index:20;padding-top:6px;}
+.tabs button{border:0;background:none;font:inherit;font-size:13.5px;font-weight:600;color:var(--muted);padding:10px 15px;border-radius:8px 8px 0 0;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;}
+.tabs button:hover{color:var(--navy);background:#fff;}
+.tabs button.active{color:var(--navy);border-bottom-color:var(--teal);background:#fff;}
+.tab{display:none;}
+.tab.active{display:block;animation:fade .25s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:4px 0 20px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;border-top:4px solid var(--teal);position:relative;}
+.kpi.amber{border-top-color:var(--amber);}
+.kpi .v{font-size:27px;font-weight:700;color:var(--navy);}
+.kpi .ci{font-size:12px;color:var(--muted);font-weight:600;margin-top:2px;}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:4px;}
+.kpi .s{font-size:12px;margin-top:7px;font-weight:600;color:var(--muted);}
+.kpi .m{font-size:11.5px;margin-top:7px;color:var(--muted);line-height:1.4;}
+.rank{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;margin-top:7px;}
+.rank.top{background:#e4f3e9;color:var(--good);}
+.rank.bot{background:#fcebe9;color:var(--bad);}
+.rank.mid{background:#eef1f5;color:var(--muted);}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:18px;}
+.panel h3{font-size:15px;color:var(--navy);margin-bottom:3px;}
+.panel .sub{font-size:12px;color:var(--muted);margin-bottom:12px;}
+.full{grid-column:1/-1;}
+.cwrap{position:relative;height:300px;}
+.cwrap.tall{height:420px;}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:460px;}
+table{border-collapse:collapse;width:100%;font-size:12.7px;}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+th{background:var(--navy);color:#fff;font-weight:600;cursor:pointer;position:sticky;top:0;user-select:none;font-size:12px;}
+th:first-child,td:first-child{text-align:left;white-space:normal;}
+tbody tr{cursor:copy;}
+tbody tr:hover{background:#f0f6f6;}
+tbody tr.copied{background:#e4f3e9;}
+tr.tot td{background:#eef4f4;font-weight:700;color:var(--navy);border-top:2px solid var(--line);}
+.legend{font-size:11.5px;color:var(--muted);margin-top:8px;}
+.note{background:#fff7ea;border:1px solid #f0d8a8;border-radius:8px;padding:12px 14px;font-size:12.5px;color:#6b5320;margin-top:10px;}
+.about{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;font-size:13.3px;}
+.about h3{color:var(--navy);font-size:15px;margin:16px 0 7px;}
+.about h3:first-child{margin-top:0;}
+.about p{margin-bottom:9px;}
+.about ul{margin:0 0 9px 20px;}
+.about li{margin-bottom:5px;}
+.about a{color:var(--teal);}
+footer{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);}
+footer a{color:var(--teal);text-decoration:none;}
+/* --- quick-look specifics --- */
+.btn{font:inherit;font-size:11.5px;font-weight:600;padding:4px 10px;border:1px solid var(--line);
+  background:#fff;color:var(--teal);border-radius:0;cursor:pointer;}
+.btn:hover{border-color:var(--teal2);background:#f0f6fb;}
+.btn.done{border-color:var(--good);color:var(--good);background:#e4f3e9;}
+.kpi .btn{position:absolute;top:12px;right:12px;}
+.panelhead{display:flex;align-items:flex-start;gap:12px;justify-content:space-between;}
+.panelhead .btn{flex:0 0 auto;margin-top:2px;}
+.fresh{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;}
+.fresh.ok{background:#e4f3e9;color:var(--good);}
+.fresh.stale{background:#fdf3e2;color:#8a6516;}
+.defs{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal2);border-radius:9px;padding:14px 16px;margin-bottom:18px;font-size:12.8px;}
+.defs h4{font-size:13.5px;color:var(--navy);margin-bottom:7px;}
+.defs ul{margin:0 0 0 18px;}
+.defs li{margin-bottom:5px;}
+.qry{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px;
+  background:#f7f9fb;border:1px solid var(--line);padding:9px 11px;margin-bottom:8px;
+  word-break:break-all;color:#2c3b4a;}
+.qry b{color:var(--navy);font-family:'PT Sans',Helvetica,Arial,sans-serif;font-size:12px;
+  display:block;margin-bottom:3px;word-break:normal;}
+details>summary{cursor:pointer;font-size:12.5px;color:var(--teal);font-weight:600;padding:4px 0;}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;max-width:min(680px,90vw);
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media(max-width:820px){.kpis{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+@media print{.tabs,.btn{display:none !important}.tab{display:block !important}}
+</style>
+</head>
+<body>
+<!-- Gateshead · Economic Intelligence brand bar (self-contained; portable) -->
+<style>
+.gcbar{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:#252525;color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap;
+  border-bottom:3px solid #045a90;position:relative;z-index:2000;}
+.gcbar *{box-sizing:border-box;}
+.gcbar a.gcbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+.gcbar .gcbar-mark{width:32px;height:32px;background:#045a90;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:16px;color:#fff;}
+.gcbar .gcbar-word{font-size:16px;font-weight:700;line-height:1.05;letter-spacing:.2px;}
+.gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
+.gcbar .gcbar-spacer{flex:1 1 auto;}
+.gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
+.gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
+.gcbar .gcbar-copy svg{width:15px;height:15px;}
+.gcbar .gcbar-copy:hover{border-color:#0772b4;color:#8fd0f5;}
+.gcbar .gcbar-copy.gcbar-copied{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-home{color:#cfd6dc;text-decoration:none;font-size:12px;}
+.gcbar .gcbar-home:hover{color:#fff;text-decoration:underline;}
+.gcbar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.gcbar-toast.gcbar-show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media print{.gcbar,.gcbar-toast{display:none !important;}}
+</style>
+<div class="gcbar" data-id="nomis-quick-look">
+  <a class="gcbar-logo" href="../index.html" title="Back to the Economic Intelligence landing page">
+    <span class="gcbar-mark">G</span>
+    <span class="gcbar-word">Gateshead<small>Economic Intelligence</small></span>
+  </a>
+  <span class="gcbar-spacer"></span>
+  <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
+  <button class="gcbar-copy" type="button" aria-label="Copy direct link to this dashboard" title="Copy direct link to this dashboard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var bar=document.currentScript.previousElementSibling;
+  while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
+  if(!bar)return;
+  var toast;
+  function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
+    toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
+  bar.querySelector('.gcbar-copy').addEventListener('click',function(){
+    var btn=this,url=location.origin+location.pathname;
+    var ok=function(){btn.classList.add('gcbar-copied');say('Link copied — opens this dashboard directly');setTimeout(function(){btn.classList.remove('gcbar-copied');},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){leg(url);ok();});}else{leg(url);ok();}
+    function leg(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+<!-- /Gateshead brand bar -->
+
+<div class="wrap">
+
+<header>
+  <h1>NOMIS Quick Look</h1>
+  <p>The latest published NOMIS figures for Gateshead, with their full breakdowns, on one page.
+     Every figure carries the exact measure it represents, the period it covers and the query
+     that produced it. Click any figure to copy it, already written in the house citation format.</p>
+  <div class="chips" id="chips"></div>
+</header>
+
+<div class="caveat" id="snapnote"></div>
+
+<div class="tabs" id="tabs"></div>
+<div id="panes"></div>
+
+<footer id="foot"></footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= DATA (embedded — never fetched at runtime) ================ */
+const D = {"built":"2026-08-28","geography":{"code":"E08000037","name":"Gateshead"},"datasets":[{"id":"claimant-count","title":"Claimant count","full_measure":"claimant count (people claiming Jobseeker's Allowance or Universal Credit principally for the reason of being unemployed, not seasonally adjusted)","dataset":"NM_162_1","dataset_name":"Claimant count by sex and age","cadence":"Monthly","source_url":"https://www.nomisweb.co.uk/datasets/ucjsa","has_ci":false,"ci_note":"An administrative count of benefit claims, not a survey estimate, so there is no sampling confidence interval and no error bars.","measure_qualifier":"Claimant count by sex and age","caveats":["Not seasonally adjusted. NOMIS publishes no seasonally adjusted claimant count below regional level - the seasonally adjusted dataset NM_11_1 goes down to regions and countries, not local authorities - so month-on-month movements here partly reflect season.","The claimant count is not a measure of unemployment. It counts people claiming unemployment-related benefits, which under Universal Credit includes some people in work on low earnings.","The proportion is claimants as a share of residents aged 16-64, not a share of the economically active. It is not comparable with the unemployment rate.","The most recent months are provisional. Each monthly release revises the preceding month, so the right-hand end of the series can move.","Age and sex breakdowns are rounded to the nearest 5 for disclosure control, so they do not sum exactly to the published total - see the note on each breakdown for the size of the gap."],"headline":[{"label":"People claiming","unit":"count","value":5035.0,"ci":null,"period":"July 2026","measure":"claimant count (people claiming Jobseeker's Allowance or Universal Credit principally for the reason of being unemployed, not seasonally adjusted)"},{"label":"Proportion of residents aged 16-64","unit":"percent","value":4.0,"ci":null,"period":"July 2026","measure":"claimant count as a proportion of residents aged 16-64 (not seasonally adjusted)"}],"breakdowns":[{"name":"By age band","sub":"Claimant count, people, by age band. The bands are mutually exclusive and cover the whole 16+ population, including a category for claims whose age is not recorded.","unit":"count","chart":"bar","pull":"by_age","measure_mode":"subdivide","period":"July 2026","rows":[["Age unknown (clerical claims)",0.0,null],["Aged 16-17",5.0,null],["Aged 18-24",990.0,null],["Aged 25-29",600.0,null],["Aged 30-34",640.0,null],["Aged 35-39",635.0,null],["Aged 40-44",620.0,null],["Aged 45-49",505.0,null],["Aged 50-54",330.0,null],["Aged 55-59",300.0,null],["Aged 60-64",315.0,null],["Aged 65+",90.0,null]],"sum":5030.0,"share":true,"note":"These 12 categories sum to 5,030, against a published total of 5,035 - a difference of 5. ONS rounds the breakdown and the total independently for disclosure control, so the gap is rounding, not a missing category. Quote the published total or the breakdown, never both in one sentence.","ci_suppressed":0},{"name":"By sex","sub":"Claimant count, people, aged 16 and over.","unit":"count","chart":"bar","pull":"by_sex","measure_mode":"subdivide","period":"July 2026","rows":[["Male",2955.0,null],["Female",2080.0,null]],"sum":5035.0,"share":true,"note":"These 2 categories sum to 5,035, exactly the published total. The breakdown accounts for the whole.","ci_suppressed":0}],"series":{"name":"Last 24 months","sub":"Claimant count, people aged 16 and over, not seasonally adjusted. Month-to-month movement partly reflects seasonal hiring patterns.","unit":"count","x":["August 2024","September 2024","October 2024","November 2024","December 2024","January 2025","February 2025","March 2025","April 2025","May 2025","June 2025","July 2025","August 2025","September 2025","October 2025","November 2025","December 2025","January 2026","February 2026","March 2026","April 2026","May 2026","June 2026","July 2026"],"y":[5735.0,5635.0,5475.0,5365.0,5250.0,5305.0,5400.0,5335.0,5325.0,5230.0,5180.0,5025.0,5000.0,4935.0,4830.0,4745.0,4725.0,4780.0,4980.0,5030.0,4960.0,4955.0,4990.0,5035.0],"ci":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]},"queries":[{"pull":"headline","params":{"geography":"E08000037","measures":"20100","date":"latest","gender":"0","age":"0","measure":"1,2","select":"date_name,geography_name,measure_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv?geography=E08000037&measures=20100&date=latest&gender=0&age=0&measure=1,2&select=date_name,geography_name,measure_name,obs_value"},{"pull":"by_age","params":{"geography":"E08000037","measures":"20100","date":"latest","gender":"0","measure":"1","age":"1,10,11,12,13,14,15,16,17,18,19,20","select":"date_name,geography_name,age_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv?geography=E08000037&measures=20100&date=latest&gender=0&measure=1&age=1,10,11,12,13,14,15,16,17,18,19,20&select=date_name,geography_name,age_name,obs_value"},{"pull":"by_sex","params":{"geography":"E08000037","measures":"20100","date":"latest","gender":"1,2","age":"0","measure":"1","select":"date_name,geography_name,gender_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv?geography=E08000037&measures=20100&date=latest&gender=1,2&age=0&measure=1&select=date_name,geography_name,gender_name,obs_value"},{"pull":"series","params":{"geography":"E08000037","measures":"20100","date":"latestMINUS23-latest","gender":"0","age":"0","measure":"1","select":"date_name,geography_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv?geography=E08000037&measures=20100&date=latestMINUS23-latest&gender=0&age=0&measure=1&select=date_name,geography_name,obs_value"}],"vintage":"July 2026","latest_available":"July 2026","current":true},{"id":"bres","title":"BRES employees","full_measure":"number of employees (Business Register and Employment Survey, employees excluding working proprietors, workplace-based)","dataset":"NM_189_1","dataset_name":"Business Register and Employment Survey: open access","cadence":"Annual, in the autumn following the reference year","source_url":"https://www.nomisweb.co.uk/datasets/newbres6pub","has_ci":false,"ci_note":"BRES is a survey, but the NOMIS open-access release publishes no confidence interval at local authority level, so none can be drawn. Figures are rounded by ONS for disclosure control.","measure_qualifier":"Business Register and Employment Survey: open access","caveats":["The headline figure is EMPLOYEES (employment_status=1), which excludes working proprietors. The wider Employment basis (employment_status=4) includes them and is shown on the By employment status breakdown.","Workplace-based: it counts jobs located in Gateshead, whoever fills them, not Gateshead residents in work.","ONS rounds BRES for disclosure control, and rounds the total independently of the sections. The sections therefore do not sum to the published total - see the note on that breakdown. Quote one or the other, never both."],"headline":[{"label":"Employees","unit":"count","value":95000.0,"ci":null,"period":"2024","measure":"number of employees (Business Register and Employment Survey, employees excluding working proprietors, workplace-based)"}],"breakdowns":[{"name":"By industry section","sub":"Employees by SIC 2007 section, workplace-based, excluding working proprietors.","unit":"count","chart":"barh","pull":"by_section","measure_mode":"subdivide","period":"2024","rows":[["G: Wholesale and retail trade; repair of motor vehicles and motorcycles",17000.0,null],["Q: Human health and social work activities",13000.0,null],["C: Manufacturing",10000.0,null],["H: Transportation and storage",7000.0,null],["N: Administrative and support service activities",7000.0,null],["O: Public administration and defence; compulsory social security",7000.0,null],["P: Education",7000.0,null],["F: Construction",6000.0,null],["I: Accommodation and food service activities",5000.0,null],["M: Professional, scientific and technical activities",5000.0,null],["J: Information and communication",3000.0,null],["S: Other service activities",1750.0,null],["R: Arts, entertainment and recreation",1500.0,null],["K: Financial and insurance activities",1250.0,null],["L: Real estate activities",800.0,null],["E: Water supply; sewerage, waste management and remediation activities",700.0,null],["D: Electricity, gas, steam and air conditioning supply",100.0,null],["A: Agriculture, forestry and fishing",30.0,null],["B: Mining and quarrying",0.0,null],["T: Activities of households as employers;undifferentiated goods-and services-producing activities of households for own use",0.0,null],["U: Activities of extraterritorial organisations and bodies",0.0,null]],"sum":93130.0,"share":true,"note":"These 21 sections sum to 93,130, against a published total of 95,000 - a difference of 1,870. ONS rounds the breakdown and the total independently for disclosure control, so the gap is rounding, not a missing category. Quote the published total or the breakdown, never both in one sentence.","ci_suppressed":0},{"name":"By employment status","sub":"The same workplace population on the four bases BRES publishes. These are alternative totals, not components - they do not sum.","unit":"count","chart":null,"pull":"by_status","measure_mode":"subdivide","period":"2024","rows":[["Employees",95000.0,null],["Full-time employees",66000.0,null],["Part-time employees",29000.0,null],["Employment",96000.0,null]],"sum":null,"share":false,"note":"Full-time and part-time employees sum to Employees. Employment is the wider basis: it adds working proprietors.","ci_suppressed":0}],"series":null,"queries":[{"pull":"headline","params":{"geography":"E08000037","measures":"20100","measure":"1","employment_status":"1","date":"latest","industry":"37748736","select":"date_name,geography_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_189_1.data.csv?geography=E08000037&measures=20100&measure=1&employment_status=1&date=latest&industry=37748736&select=date_name,geography_name,obs_value"},{"pull":"by_section","params":{"geography":"E08000037","measures":"20100","measure":"1","employment_status":"1","date":"latest","industry":"150994945,150994946,150994947,150994948,150994949,150994950,150994951,150994952,150994953,150994954,150994955,150994956,150994957,150994958,150994959,150994960,150994961,150994962,150994963,150994964,150994965","select":"date_name,geography_name,industry_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_189_1.data.csv?geography=E08000037&measures=20100&measure=1&employment_status=1&date=latest&industry=150994945,150994946,150994947,150994948,150994949,150994950,150994951,150994952,150994953,150994954,150994955,150994956,150994957,150994958,150994959,150994960,150994961,150994962,150994963,150994964,150994965&select=date_name,geography_name,industry_name,obs_value"},{"pull":"by_status","params":{"geography":"E08000037","measures":"20100","measure":"1","employment_status":"1,2,3,4","date":"latest","industry":"37748736","select":"date_name,geography_name,employment_status_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_189_1.data.csv?geography=E08000037&measures=20100&measure=1&employment_status=1,2,3,4&date=latest&industry=37748736&select=date_name,geography_name,employment_status_name,obs_value"}],"vintage":"2024","latest_available":"2024","current":true},{"id":"jobs-density","title":"Jobs density","full_measure":"jobs density (the number of jobs in the area per resident aged 16-64)","dataset":"NM_57_1","dataset_name":"Jobs density","cadence":"Annual","source_url":"https://www.nomisweb.co.uk/datasets/jd","has_ci":false,"ci_note":"Published without a confidence interval, so none can be drawn. Note this is an absence of published uncertainty rather than an absence of uncertainty: total jobs is built partly from BRES and from Annual Population Survey self-employment, both of which are surveys.","measure_qualifier":"Jobs density","caveats":["A density of 1.0 means one job in the area for every resident aged 16-64. Below 1.0 means fewer jobs than working-age residents - it does not mean residents are out of work, since people commute across boundaries.","The numerator is workplace-based total jobs; the denominator is resident population aged 16-64. Commuting is what drives the two apart.","Total jobs here is a wider measure than BRES employees: it adds self-employment, government-supported trainees and HM Forces.","Do not re-derive the ratio from the two figures on this page. ONS publishes the density against its own population denominator, which is not always the latest mid-year estimate: for 2024, 104,000 total jobs over the mid-2024 population aged 16-64 of 124,790 gives 0.833, not the published 0.82. The years 2019 to 2023 do reproduce. Quote the published density.","Movements in the series can come from either side of the ratio. The 2021 peak of 0.85 is denominator-driven - total jobs that year (103,000) were below 2019 (104,000), while the working-age population hit its series low on the census-rebased estimates. The 2020 trough is genuinely jobs-driven."],"headline":[{"label":"Jobs per resident aged 16-64","unit":"ratio","value":0.82,"ci":null,"period":"2024","measure":"jobs density (the number of jobs in the area per resident aged 16-64)"},{"label":"Total jobs in Gateshead","unit":"count","value":104000.0,"ci":null,"period":"2024","measure":"total jobs (Jobs density series, workplace-based, including employees, self-employment, government-supported trainees and HM Forces)"}],"breakdowns":[],"series":{"name":"Last 10 years","sub":"Jobs density, jobs per resident aged 16-64.","unit":"ratio","x":["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],"y":[0.83,0.82,0.82,0.82,0.83,0.8,0.85,0.82,0.82,0.82],"ci":[null,null,null,null,null,null,null,null,null,null]},"queries":[{"pull":"headline","params":{"geography":"E08000037","measures":"20100","date":"latest","item":"1,3","select":"date_name,geography_name,item_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_57_1.data.csv?geography=E08000037&measures=20100&date=latest&item=1,3&select=date_name,geography_name,item_name,obs_value"},{"pull":"series","params":{"geography":"E08000037","measures":"20100","date":"latestMINUS9-latest","item":"3","select":"date_name,geography_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_57_1.data.csv?geography=E08000037&measures=20100&date=latestMINUS9-latest&item=3&select=date_name,geography_name,obs_value"}],"vintage":"2024","latest_available":"2024","current":true},{"id":"population","title":"Population","full_measure":"mid-year population estimate (all ages, resident population)","dataset":"NM_31_1","dataset_name":"Population estimates - local authority based by five year age band","cadence":"Annual, in the summer of the year the estimate refers to","source_url":"https://www.nomisweb.co.uk/datasets/pestnew","has_ci":false,"ci_note":"An estimate of the whole resident population built from the census, births, deaths and migration - not a sample survey, so no confidence interval is published.","measure_qualifier":"Population estimates - local authority based by five year age band","caveats":["Mid-year estimate: the population as at 30 June of the reference year.","Resident population on the usual-residence definition, which counts students at their term-time address.","Estimates between censuses are rolled forward from the last census using births, deaths and migration, and are revised when a new census lands."],"headline":[{"label":"All ages","unit":"count","value":202509.0,"ci":null,"period":"2025","measure":"mid-year population estimate (all ages, resident population)"}],"breakdowns":[{"name":"By broad age band","sub":"Resident population by broad age band. The three bands are mutually exclusive and cover the whole population.","unit":"count","chart":"bar","pull":"broad_age","measure_mode":"subdivide","period":"2025","rows":[["Aged 0 - 15",34977.0,null],["Aged 16 - 64",125561.0,null],["Aged 65 and over",41971.0,null]],"sum":202509.0,"share":true,"note":"These 3 bands sum to 202,509, exactly the published total. The breakdown accounts for the whole.","ci_suppressed":0},{"name":"By five-year age band","sub":"Resident population by five-year age band, under 1 to 85 and over.","unit":"count","chart":"barh","pull":"five_year","measure_mode":"subdivide","period":"2025","rows":[["Aged under 1 year",1880.0,null],["Aged 1 - 4 years",7907.0,null],["Aged 5 - 9 years",10985.0,null],["Aged 10 - 14 years",11794.0,null],["Aged 15 - 19 years",12116.0,null],["Aged 20 - 24 years",10313.0,null],["Aged 25 - 29 years",12905.0,null],["Aged 30 - 34 years",14294.0,null],["Aged 35 - 39 years",14095.0,null],["Aged 40 - 44 years",13222.0,null],["Aged 45 - 49 years",11726.0,null],["Aged 50 - 54 years",12205.0,null],["Aged 55 - 59 years",13635.0,null],["Aged 60 - 64 years",13461.0,null],["Aged 65 - 69 years",11716.0,null],["Aged 70 - 74 years",9644.0,null],["Aged 75 - 79 years",9285.0,null],["Aged 80 - 84 years",5660.0,null],["Aged 85 and over",5666.0,null]],"sum":202509.0,"share":true,"note":"These 19 bands sum to 202,509, exactly the published total. The breakdown accounts for the whole.","ci_suppressed":0},{"name":"By sex","sub":"Resident population, all ages.","unit":"count","chart":"bar","pull":"by_sex","measure_mode":"subdivide","period":"2025","rows":[["Male",100212.0,null],["Female",102297.0,null]],"sum":202509.0,"share":true,"note":"These 2 categories sum to 202,509, exactly the published total. The breakdown accounts for the whole.","ci_suppressed":0}],"series":{"name":"Last 10 years","sub":"Mid-year resident population estimate, all ages.","unit":"count","x":["2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],"y":[201359.0,200660.0,199915.0,198435.0,197342.0,196179.0,198321.0,199876.0,201422.0,202509.0],"ci":[null,null,null,null,null,null,null,null,null,null]},"queries":[{"pull":"headline","params":{"geography":"E08000037","measures":"20100","date":"latest","sex":"7","age":"0","select":"date_name,geography_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geography=E08000037&measures=20100&date=latest&sex=7&age=0&select=date_name,geography_name,obs_value"},{"pull":"broad_age","params":{"geography":"E08000037","measures":"20100","date":"latest","sex":"7","age":"24,22,25","select":"date_name,geography_name,age_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geography=E08000037&measures=20100&date=latest&sex=7&age=24,22,25&select=date_name,geography_name,age_name,obs_value"},{"pull":"five_year","params":{"geography":"E08000037","measures":"20100","date":"latest","sex":"7","age":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19","select":"date_name,geography_name,age_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geography=E08000037&measures=20100&date=latest&sex=7&age=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19&select=date_name,geography_name,age_name,obs_value"},{"pull":"by_sex","params":{"geography":"E08000037","measures":"20100","date":"latest","sex":"5,6","age":"0","select":"date_name,geography_name,sex_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geography=E08000037&measures=20100&date=latest&sex=5,6&age=0&select=date_name,geography_name,sex_name,obs_value"},{"pull":"series","params":{"geography":"E08000037","measures":"20100","date":"latestMINUS9-latest","sex":"7","age":"0","select":"date_name,geography_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geography=E08000037&measures=20100&date=latestMINUS9-latest&sex=7&age=0&select=date_name,geography_name,obs_value"}],"vintage":"2025","latest_available":"2025","current":true},{"id":"business-counts","title":"Business counts","full_measure":"number of enterprises (UK Business Counts, VAT- and/or PAYE-registered enterprises)","dataset":"NM_142_1","dataset_name":"UK Business Counts - enterprises by industry and employment size band","cadence":"Annual, usually released in the autumn of the reference year","source_url":"https://www.nomisweb.co.uk/datasets/idbrent","has_ci":false,"ci_note":"A count drawn from the Inter-Departmental Business Register, not a survey estimate, so there is no sampling confidence interval. Counts are rounded to the nearest 5 for disclosure control.","measure_qualifier":"UK Business Counts - enterprises by industry and employment size band","caveats":["UK Business Counts is one of two business-count bases and they do not agree. This product uses UK Business Counts (the IDBR snapshot of registered enterprises). ONS Business Demography counts differently and gives a higher figure for Gateshead. Never mix the two in one comparison - name the base every time.","Enterprises, not local units. An enterprise is the whole business; a local unit is an individual site. NOMIS publishes local units separately as NM_141_1, and the local-unit count is higher.","Registered businesses only: VAT- and/or PAYE-registered. Businesses below both thresholds are not counted, so small and self-employed activity is understated.","Counts are rounded to the nearest 5, so breakdowns may not sum exactly to the total."],"headline":[{"label":"Enterprises","unit":"count","value":5580.0,"ci":null,"period":"2025","measure":"number of enterprises (UK Business Counts, VAT- and/or PAYE-registered enterprises)"}],"breakdowns":[{"name":"By employment size band","sub":"Enterprises by number of employees. The bands are mutually exclusive and cover every enterprise.","unit":"count","chart":"bar","pull":"by_sizeband","measure_mode":"subdivide","period":"2025","rows":[["0 to 4",3995.0,null],["5 to 9",760.0,null],["10 to 19",420.0,null],["20 to 49",250.0,null],["50 to 99",80.0,null],["100 to 249",45.0,null],["250 to 499",15.0,null],["500 to 999",5.0,null],["1000+",10.0,null]],"sum":5580.0,"share":true,"note":"These 9 size bands sum to 5,580, exactly the published total. The breakdown accounts for the whole.","ci_suppressed":0},{"name":"By industry section","sub":"Enterprises by SIC 2007 section.","unit":"count","chart":"barh","pull":"by_section","measure_mode":"subdivide","period":"2025","rows":[["G: Wholesale and retail trade; repair of motor vehicles and motorcycles",945.0,null],["F: Construction",835.0,null],["M: Professional, scientific and technical activities",680.0,null],["N: Administrative and support service activities",485.0,null],["I: Accommodation and food service activities",445.0,null],["C: Manufacturing",325.0,null],["S: Other service activities",300.0,null],["L: Real estate activities",285.0,null],["J: Information and communication",280.0,null],["Q: Human health and social work activities",280.0,null],["H: Transportation and storage",260.0,null],["R: Arts, entertainment and recreation",145.0,null],["P: Education",140.0,null],["K: Financial and insurance activities",85.0,null],["A: Agriculture, forestry and fishing",50.0,null],["E: Water supply; sewerage, waste management and remediation activities",25.0,null],["D: Electricity, gas, steam and air conditioning supply",10.0,null],["O: Public administration and defence; compulsory social security",5.0,null],["B: Mining and quarrying",0.0,null],["T: Activities of households as employers;undifferentiated goods-and services-producing activities of households for own use",0.0,null],["U: Activities of extraterritorial organisations and bodies",0.0,null]],"sum":5580.0,"share":true,"note":"These 21 sections sum to 5,580, exactly the published total. The breakdown accounts for the whole.","ci_suppressed":0},{"name":"By legal status","sub":"Enterprises by legal form.","unit":"count","chart":"bar","pull":"by_legal_status","measure_mode":"subdivide","period":"2025","rows":[["Company (including building society)",4305.0,null],["Sole proprietor",730.0,null],["Partnership",245.0,null],["Non-profit body or mutual association",285.0,null],["Public corporation",0.0,null],["Central government",10.0,null],["Local authority",0.0,null]],"sum":5575.0,"share":true,"note":"These 7 categories sum to 5,575, against a published total of 5,580 - a difference of 5. ONS rounds the breakdown and the total independently for disclosure control, so the gap is rounding, not a missing category. Quote the published total or the breakdown, never both in one sentence.","ci_suppressed":0}],"series":null,"queries":[{"pull":"headline","params":{"geography":"E08000037","measures":"20100","date":"latest","industry":"37748736","employment_sizeband":"0","legal_status":"0","select":"date_name,geography_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_142_1.data.csv?geography=E08000037&measures=20100&date=latest&industry=37748736&employment_sizeband=0&legal_status=0&select=date_name,geography_name,obs_value"},{"pull":"by_sizeband","params":{"geography":"E08000037","measures":"20100","date":"latest","industry":"37748736","employment_sizeband":"1,2,3,4,5,6,7,8,9","legal_status":"0","select":"date_name,geography_name,employment_sizeband_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_142_1.data.csv?geography=E08000037&measures=20100&date=latest&industry=37748736&employment_sizeband=1,2,3,4,5,6,7,8,9&legal_status=0&select=date_name,geography_name,employment_sizeband_name,obs_value"},{"pull":"by_section","params":{"geography":"E08000037","measures":"20100","date":"latest","industry":"150994945,150994946,150994947,150994948,150994949,150994950,150994951,150994952,150994953,150994954,150994955,150994956,150994957,150994958,150994959,150994960,150994961,150994962,150994963,150994964,150994965","employment_sizeband":"0","legal_status":"0","select":"date_name,geography_name,industry_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_142_1.data.csv?geography=E08000037&measures=20100&date=latest&industry=150994945,150994946,150994947,150994948,150994949,150994950,150994951,150994952,150994953,150994954,150994955,150994956,150994957,150994958,150994959,150994960,150994961,150994962,150994963,150994964,150994965&employment_sizeband=0&legal_status=0&select=date_name,geography_name,industry_name,obs_value"},{"pull":"by_legal_status","params":{"geography":"E08000037","measures":"20100","date":"latest","industry":"37748736","employment_sizeband":"0","legal_status":"1,2,3,7,4,5,6","select":"date_name,geography_name,legal_status_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_142_1.data.csv?geography=E08000037&measures=20100&date=latest&industry=37748736&employment_sizeband=0&legal_status=1,2,3,7,4,5,6&select=date_name,geography_name,legal_status_name,obs_value"}],"vintage":"2025","latest_available":"2025","current":true},{"id":"aps","title":"Labour market (APS)","full_measure":"employment rate for residents aged 16-64 (Annual Population Survey, the share of the resident population aged 16-64 who are in employment)","dataset":"NM_17_5","dataset_name":"Annual Population Survey (variables, percentages)","cadence":"Quarterly, each release covering a rolling 12 months; the qualifications variables are published only on the January-December period","source_url":"https://www.nomisweb.co.uk/datasets/apsnew","has_ci":true,"ci_note":"A sample survey, so every estimate carries a 95% confidence interval and every one is drawn with it. Differences between two estimates whose intervals overlap are not evidence of a real difference.","measure_qualifier":"Annual Population Survey","caveats":["A sample survey, not a count. Every figure is an estimate with a 95% confidence interval, shown throughout. The interval on the Gateshead employment rate is around four percentage points wide either side, so small movements and small gaps are not findings.","Each estimate covers a rolling 12 months, and consecutive periods overlap by nine months. Comparing one period with the next is not comparing two independent samples; compare with the same period a year earlier instead.","From 11 August 2026 the Labour Force Survey and Annual Population Survey outputs are official statistics but are NOT accredited official statistics, and ONS is not seeking reaccreditation. Describe them as official statistics; do not call them accredited or National Statistics.","Achieved sample sizes have fallen and the intervals have widened with them. The 95% half-width on Gateshead's employment rate ran between 2.7 and 3.1 percentage points up to 2019 and between 3.7 and 4.4 from 2022 onward. ONS warns that increased volatility from smaller achieved samples means estimates of quarterly change should be treated with additional caution, and its letter of 11 August 2026 names reductions in the sample boost and in interviewer numbers as an APS quality consideration. The only boost discontinuation actually documented is the Scottish one, from Quarter 4 2025, which does not affect Gateshead - the English boost continues. Sub-group estimates (by sex, by qualification) are wider still.","Residence-based: it counts Gateshead residents wherever they work, which is the opposite basis to BRES and jobs density on the other tabs. The two are not comparable and must never be differenced.","The unemployment rate has a different denominator from the other rates: it is the share of the economically active who are unemployed, not a share of the population aged 16-64. It is not comparable with the claimant count proportion on the claimant count tab, which is a share of residents."],"headline":[{"label":"Employment rate, aged 16-64","unit":"percent","value":72.4,"ci":4.2,"period":"Apr 2025-Mar 2026","measure":"employment rate for residents aged 16-64 (Annual Population Survey, the share of the resident population aged 16-64 who are in employment)"},{"label":"Unemployment rate, aged 16-64","unit":"percent","value":6.6,"ci":2.7,"period":"Apr 2025-Mar 2026","measure":"unemployment rate for those aged 16-64 (Annual Population Survey, the share of the economically active aged 16-64 who are unemployed - not a share of the population)"},{"label":"Economic inactivity rate, aged 16-64","unit":"percent","value":22.4,"ci":3.9,"period":"Apr 2025-Mar 2026","measure":"economic inactivity rate for residents aged 16-64 (Annual Population Survey, the share of the resident population aged 16-64 who are neither in work nor looking for work)"}],"breakdowns":[{"name":"Economic activity and inactivity","sub":"The two states every resident aged 16-64 is in: economically active (in work or looking for work) or economically inactive. Both are shares of the same resident population, so they partition it. The unemployment rate on the cards above does not belong here - it is a share of the economically active, not of the population.","unit":"percent","chart":"bar","pull":"by_status","measure_mode":"label","period":"Apr 2025-Mar 2026","rows":[["Economic activity rate - aged 16-64",77.6,3.9],["% who are economically inactive - aged 16-64",22.4,3.9]],"sum":100.0,"share":false,"note":"These 2 rates are shares of the same population and sum to 100.0%. They account for the whole. Each is a separate survey estimate with its own confidence interval, so the shares cannot be compared with one another without checking whether their intervals overlap.","ci_suppressed":0},{"name":"Employment rate by sex","sub":"Employment rate, aged 16-64, for men and for women. These are two separate rates on two separate populations, not a split of one total, so they do not sum.","unit":"percent","chart":"bar","pull":"by_sex","measure_mode":"label","period":"Apr 2025-Mar 2026","rows":[["Employment rate males - aged 16-64",74.4,5.9],["Employment rate females - aged 16-64",70.3,6.0]],"sum":null,"share":false,"note":"Sub-group estimates rest on a smaller sample than the headline and so carry wider intervals. Check whether the two intervals overlap before reading a gap between men and women as real.","ci_suppressed":0},{"name":"Highest qualification (RQF), aged 16-64","sub":"Highest qualification held, as a share of residents aged 16-64. Published only on the January-December period, so this panel is a different vintage from the rates above - its own period is shown.","unit":"percent","chart":"bar","pull":"quals","measure_mode":"label","period":"Jan 2025-Dec 2025","rows":[["% with RQF4+ - aged 16-64",36.6,4.6],["% with RQF3 only - aged 16-64",23.3,4.1],["% with RQF2 only - aged 16-64",24.3,4.1],["% with RQF1 only - aged 16-64",1.7,null],["% with other qualifications (RQF) - aged 16-64",4.1,1.9],["% with no qualifications (RQF) - aged 16-64",10.0,2.9]],"sum":100.0,"share":false,"note":"These 6 levels are shares of the same population and sum to 100.0%. They account for the whole. Each is a separate survey estimate with its own confidence interval, so the shares cannot be compared with one another without checking whether their intervals overlap. 1 of these estimates is published without a confidence interval and is drawn without an error bar: ONS suppresses the interval where an estimate is too small to be reliable. Treat those as indicative only.","ci_suppressed":1}],"series":{"name":"Employment rate, last 12 rolling periods","sub":"Employment rate, aged 16-64, with its 95% confidence interval shaded. Consecutive periods overlap by nine months and share sample, so successive points are not independent observations.","unit":"percent","x":["Jul 2022-Jun 2023","Oct 2022-Sep 2023","Jan 2023-Dec 2023","Apr 2023-Mar 2024","Jul 2023-Jun 2024","Oct 2023-Sep 2024","Jan 2024-Dec 2024","Apr 2024-Mar 2025","Jul 2024-Jun 2025","Oct 2024-Sep 2025","Jan 2025-Dec 2025","Apr 2025-Mar 2026"],"y":[72.1,72.0,76.3,73.6,73.8,75.4,75.6,75.2,71.4,69.1,70.2,72.4],"ci":[4.1,4.4,4.3,4.3,4.4,4.2,4.2,4.3,4.4,4.4,4.3,4.2]},"queries":[{"pull":"headline","params":{"geography":"E08000037","measures":"20599,21003","date":"latest","variable":"45,84,111","select":"date_name,geography_name,variable_name,measures_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.csv?geography=E08000037&measures=20599,21003&date=latest&variable=45,84,111&select=date_name,geography_name,variable_name,measures_name,obs_value"},{"pull":"by_status","params":{"geography":"E08000037","measures":"20599,21003","date":"latest","variable":"18,111","select":"date_name,geography_name,variable_name,measures_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.csv?geography=E08000037&measures=20599,21003&date=latest&variable=18,111&select=date_name,geography_name,variable_name,measures_name,obs_value"},{"pull":"by_sex","params":{"geography":"E08000037","measures":"20599,21003","date":"latest","variable":"54,63","select":"date_name,geography_name,variable_name,measures_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.csv?geography=E08000037&measures=20599,21003&date=latest&variable=54,63&select=date_name,geography_name,variable_name,measures_name,obs_value"},{"pull":"quals","params":{"geography":"E08000037","measures":"20599,21003","date":"latestMINUS4-latest","variable":"1902,1911,1920,1929,1938,1947","select":"date,date_name,geography_name,variable_name,measures_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.csv?geography=E08000037&measures=20599,21003&date=latestMINUS4-latest&variable=1902,1911,1920,1929,1938,1947&select=date,date_name,geography_name,variable_name,measures_name,obs_value"},{"pull":"series","params":{"geography":"E08000037","measures":"20599,21003","date":"latestMINUS11-latest","variable":"45","select":"date_name,geography_name,measures_name,obs_value"},"url":"https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.csv?geography=E08000037&measures=20599,21003&date=latestMINUS11-latest&variable=45&select=date_name,geography_name,measures_name,obs_value"}],"vintage":"Apr 2025-Mar 2026","latest_available":"Apr 2025-Mar 2026","current":true}]};
+
+/* ================= HELPERS ================ */
+const el = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NAVY = getComputedStyle(document.documentElement).getPropertyValue("--navy").trim();
+/* Chart axes only. Citations and tables always use the full label - an ellipsis in a
+   metric title makes the citation wrong. */
+function axisLabel(s){ return s.length > 58 ? s.slice(0, 55).replace(/[ ,;]+$/, "") + "..." : s; }
+const TEAL2 = getComputedStyle(document.documentElement).getPropertyValue("--teal2").trim();
+
+function fmt(v, unit){
+  if (v === null || v === undefined) return "—";
+  if (unit === "percent") return v.toFixed(1) + "%";
+  if (unit === "ratio")   return v.toFixed(2);
+  return Math.round(v).toLocaleString("en-GB");
+}
+
+/* Days between the snapshot build date and today, computed in the browser so the
+   page ages honestly rather than claiming to be current forever. */
+function daysSinceBuild(){
+  return Math.floor((Date.now() - Date.parse(D.built)) / 86400000);
+}
+function plural(n, w){ return n + " " + w + (n === 1 ? "" : "s"); }
+/* Age of the snapshot in words - "today" on build day, not "0 days ago". */
+function age(){
+  const d = daysSinceBuild();
+  return d <= 0 ? "today" : (d === 1 ? "yesterday" : plural(d, "day") + " ago");
+}
+
+/* Confidence intervals. `ci` is the half-width of the 95% interval as published;
+   null where the source publishes none, or where ONS suppresses it for an estimate
+   too small to be reliable. */
+function ciText(v, ci, unit){
+  if (ci == null || v == null) return "";
+  return "95% CI " + fmt(v - ci, unit) + "–" + fmt(v + ci, unit);
+}
+function ciRangeText(v, ci, unit){
+  if (ci == null || v == null) return "—";
+  return fmt(v - ci, unit) + "–" + fmt(v + ci, unit);
+}
+
+/* The house citation format, ground rule 3:
+   "<Geography>'s <full metric title> for <period> is <value> (<source>)"
+   An estimate never travels without its interval. */
+function quote(ds, measure, period, value, unit, ci){
+  const band = ciText(value, ci, unit);
+  // A survey estimate whose interval ONS has suppressed must say so when copied.
+  // Falling silent would let the one estimate ONS judged too unreliable to interval
+  // travel into a document as a bare number - the opposite of what the rule intends.
+  const tail = band ? " (" + band + ")"
+    : (ds.has_ci && value !== null
+        ? " (no confidence interval published for this estimate)" : "");
+  return D.geography.name + "'s " + measure + " for " + period + " is " +
+         fmt(value, unit) + tail +
+         " (NOMIS, " + ds.dataset_name + " " + ds.dataset +
+         ", " + ds.source_url + ")";
+}
+
+let toastTimer;
+function toast(msg){
+  const t = el("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
+}
+function copy(text, msg){
+  const done = () => toast(msg || ("Copied: " + text));
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done, () => { legacy(text); done(); });
+  } else { legacy(text); done(); }
+  function legacy(t){
+    const ta = document.createElement("textarea");
+    ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+
+/* ================= RENDER ================ */
+const charts = [];
+
+/* Generated from the registry, not typed: adding a survey dataset changes this
+   sentence automatically instead of leaving a stale claim that nothing here has
+   an interval. */
+function uncertaintyLine(){
+  const withCI = D.datasets.filter(d => d.has_ci);
+  const without = D.datasets.filter(d => !d.has_ci);
+  const names = a => a.map(d => d.title).join(", ").replace(/, ([^,]*)$/, " and $1");
+  if (!withCI.length){
+    return "None of these " + D.datasets.length + " measures publishes a confidence " +
+      "interval, so there are no error bars to draw. That is an absence of published " +
+      "uncertainty, not an absence of uncertainty.";
+  }
+  return "<b>" + names(withCI) + "</b> " + (withCI.length === 1 ? "is a survey" :
+    "are surveys") + " and every estimate is shown with its 95% confidence interval — " +
+    "on the cards, in the tables, on the charts as error bars or a shaded band, and in " +
+    "the copied citation. Where two intervals overlap, the difference between the two " +
+    "estimates is not evidence of a real difference. " +
+    (without.length ? names(without) + " publish no interval: they are administrative, " +
+      "register-based or demographic counts, or (BRES) a survey released without " +
+      "intervals at local authority level. Nothing is drawn for those because nothing " +
+      "is published." : "");
+}
+
+/* Which series get a non-zero y-axis - and therefore need the warning that goes
+   with one. Kept beside the chart option that causes it so the two cannot drift. */
+function seriesAxisTruncated(s){
+  return s.unit === "ratio" || (s.ci && s.ci.some(x => x != null));
+}
+
+function freshChip(ds){
+  return ds.current
+    ? '<span class="fresh ok">Latest published vintage</span>'
+    : '<span class="fresh stale">NOMIS now has ' + esc(ds.latest_available) + '</span>';
+}
+
+function overviewPane(){
+  const cards = D.datasets.map(ds => {
+    const h = ds.headline[0];
+    const band = ciText(h.value, h.ci, h.unit);
+    return '<div class="kpi' + (ds.current ? '' : ' amber') + '">' +
+      '<button class="btn" data-q="' + esc(quote(ds, h.measure, h.period, h.value, h.unit, h.ci)) + '">Copy</button>' +
+      '<div class="v">' + fmt(h.value, h.unit) + '</div>' +
+      (band ? '<div class="ci">' + esc(band) + '</div>' : '') +
+      '<div class="l">' + esc(ds.title) + ' · ' + esc(h.label) + '</div>' +
+      '<div class="s">' + esc(h.period) + ' · ' + esc(ds.dataset) + '</div>' +
+      '<div style="margin-top:8px">' + freshChip(ds) + '</div>' +
+      '<div class="m">' + esc(ds.full_measure) + '</div>' +
+    '</div>';
+  }).join("");
+
+  return '<div class="kpis">' + cards + '</div>' +
+    '<div class="panel"><h3>What this is</h3>' +
+    '<p style="font-size:13px;color:var(--muted)">' + D.datasets.length + ' NOMIS datasets, each shown at its latest ' +
+    'published vintage with the breakdowns underneath. The figures are a snapshot taken on ' +
+    esc(D.built) + ' and refreshed on the production calendar, so each card states whether ' +
+    'NOMIS has since published a newer period. Every figure is as published by ONS through ' +
+    'NOMIS, quoted verbatim and never re-derived. The page performs no analysis; the only ' +
+    'arithmetic it does is to add up the rows of a breakdown, which is shown beside the ' +
+    'published total rather than in place of it, and a share whose denominator is labelled ' +
+    '&ldquo;% of these rows&rdquo;.</p>' +
+    '<p style="font-size:13px;color:var(--muted);margin-top:9px">Written for the economic ' +
+    'intelligence team and analysts who quote these series. It assumes familiarity with the ' +
+    'NOMIS datasets it names.</p>' +
+    '<p style="font-size:13px;color:var(--muted);margin-top:9px">' + uncertaintyLine() +
+    '</p></div>';
+}
+
+function tableFor(ds, bd){
+  const denom = bd.share && bd.sum ? bd.sum : null;
+  const anyCI = bd.rows.some(r => r[2] != null);
+  const body = bd.rows.map(r => {
+    // A row label can be a slice of the dataset's measure, or a measure in its own
+    // right (APS variables are). Citing the second kind as a slice of the first
+    // produces a self-contradictory metric title.
+    const rowMeasure = bd.measure_mode === "label"
+      ? r[0] + " (" + ds.measure_qualifier + ")"
+      : ds.full_measure + ", " + r[0] + ",";
+    const q = quote(ds, rowMeasure, bd.period, r[1], bd.unit, r[2]);
+    return '<tr data-q="' + esc(q) + '"><td>' + esc(r[0]) + '</td>' +
+      '<td>' + fmt(r[1], bd.unit) + '</td>' +
+      (anyCI ? '<td>' + ciRangeText(r[1], r[2], bd.unit) + '</td>' : '') +
+      (denom ? '<td>' + (r[1] === null ? "—" : (100 * r[1] / denom).toFixed(1) + "%") + '</td>' : '') +
+    '</tr>';
+  }).join("");
+  const totRow = denom
+    ? '<tr class="tot"><td>Total of these rows</td><td>' + fmt(bd.sum, bd.unit) +
+      '</td>' + (anyCI ? '<td>—</td>' : '') + '<td>100.0%</td></tr>'
+    : (bd.sum != null && bd.unit === "percent"
+        ? '<tr class="tot"><td>Total of these rows</td><td>' + fmt(bd.sum, bd.unit) +
+          '</td>' + (anyCI ? '<td>—</td>' : '') + '</tr>'
+        : '');
+  return '<div class="tablewrap"><table><thead><tr>' +
+    '<th>Category</th><th>Value</th>' +
+    (anyCI ? '<th>95% confidence interval</th>' : '') +
+    (denom ? '<th>% of these rows</th>' : '') +
+    '</tr></thead><tbody>' + body + totRow + '</tbody></table></div>' +
+    '<div class="legend">Click any row to copy that figure in the house citation format' +
+    (anyCI ? ', with its confidence interval' : '') + '.</div>';
+}
+
+function datasetPane(ds){
+  const kpis = ds.headline.map(h => {
+    const band = ciText(h.value, h.ci, h.unit);
+    return '<div class="kpi">' +
+      '<button class="btn" data-q="' + esc(quote(ds, h.measure, h.period, h.value, h.unit, h.ci)) + '">Copy</button>' +
+      '<div class="v">' + fmt(h.value, h.unit) + '</div>' +
+      (band ? '<div class="ci">' + esc(band) + '</div>' : '') +
+      '<div class="l">' + esc(h.label) + '</div>' +
+      '<div class="s">' + esc(h.period) + '</div>' +
+      '<div class="m">' + esc(h.measure) + '</div>' +
+    '</div>';
+  }).join("");
+
+  let html = '<div class="kpis">' + kpis + '</div>';
+
+  html += '<div class="defs"><h4>What this measures</h4>' +
+    '<p style="margin-bottom:8px">' + esc(ds.full_measure.charAt(0).toUpperCase() + ds.full_measure.slice(1)) +
+    '. Released ' + esc(ds.cadence.toLowerCase()) + '. Snapshot period ' + esc(ds.vintage) + '; ' +
+    freshChip(ds) + '</p>' +
+    '<h4>Caveats that travel with the figure</h4><ul>' +
+    ds.caveats.map(c => '<li>' + esc(c) + '</li>').join("") +
+    '<li>' + esc(ds.ci_note) + '</li>' +
+    '</ul></div>';
+
+  if (ds.series){
+    html += '<div class="panel full"><h3>' + esc(ds.series.name) + '</h3>' +
+      '<p class="sub">' + esc(ds.series.sub) + '</p>' +
+      '<div class="cwrap"><canvas id="ser_' + ds.id + '"></canvas></div>' +
+      (seriesAxisTruncated(ds.series)
+        ? '<div class="legend">The vertical axis does not start at zero, so small ' +
+          'movements look larger than they are.' +
+          (ds.series.unit === "ratio"
+            ? ' Movement can come from either side of the ratio — see the caveats ' +
+              'above before reading a change as a change in jobs.'
+            : ' The shaded band is the 95% confidence interval; where the bands of two ' +
+              'periods overlap, the difference between them is not a finding.')
+        + '</div>'
+        : '') + '</div>';
+  }
+
+  ds.breakdowns.forEach((bd, i) => {
+    const cid = "bd_" + ds.id + "_" + i;
+    // A panel can legitimately carry an older period than the dataset headline -
+    // APS qualifications are published only on the January-December period. Say so
+    // on the panel rather than letting it inherit the headline's date silently.
+    const offVintage = bd.period !== ds.vintage
+      ? '<span class="chip amber" style="margin-left:8px">' + esc(bd.period) + '</span>'
+      : '';
+    html += '<div class="panel full">' +
+      '<div class="panelhead"><div><h3>' + esc(bd.name) + offVintage + '</h3>' +
+      '<p class="sub">' + esc(bd.sub) + '</p></div>' +
+      '<button class="btn" data-tsv="' + ds.id + "|" + i + '">Copy table</button></div>' +
+      (bd.chart ? '<div class="cwrap' + (bd.chart === "barh" ? " tall" : "") + '">' +
+        '<canvas id="' + cid + '"></canvas></div>' : '') +
+      '<div style="margin-top:14px">' + tableFor(ds, bd) + '</div>' +
+      (bd.note ? '<div class="note">' + esc(bd.note) + '</div>' : '') +
+    '</div>';
+  });
+
+  html += '<div class="panel full"><h3>The queries behind this tab</h3>' +
+    '<p class="sub">Dataset ' + esc(ds.dataset) + ' — every selection, exactly as run. ' +
+    'Paste a URL into a browser to reproduce the pull.</p>' +
+    '<details><summary>Show ' + ds.queries.length + ' ' +
+    (ds.queries.length === 1 ? 'query' : 'queries') + '</summary>' +
+    '<div style="margin-top:10px">' + ds.queries.map(q =>
+      '<div class="qry"><b>' + esc(q.pull) + '</b>' +
+      Object.keys(q.params).map(k => esc(k) + "=" + esc(q.params[k])).join(" &amp; ") +
+      '<div style="margin-top:6px"><a href="' + esc(q.url) + '" target="_blank" rel="noopener">' +
+      esc(q.url) + '</a></div></div>').join("") +
+    '</div></details></div>';
+
+  return html;
+}
+
+function aboutPane(){
+  const rows = D.datasets.map(ds =>
+    '<li><b>' + esc(ds.title) + '</b> — ' + esc(ds.full_measure) + '. ' +
+    'NOMIS <a href="' + esc(ds.source_url) + '" target="_blank" rel="noopener">' +
+    esc(ds.dataset_name) + ' ' + esc(ds.dataset) + '</a>. ' +
+    'Snapshot period ' + esc(ds.vintage) + '; released ' + esc(ds.cadence.toLowerCase()) + '. ' +
+    (ds.current ? "This is the latest published vintage."
+                : "NOMIS has since published " + esc(ds.latest_available) + ".") +
+    '</li>').join("");
+
+  return '<div class="about">' +
+    '<h3>What this page is for</h3>' +
+    '<p>Getting a single figure out of NOMIS means working through its query wizard and ' +
+    'downloading a spreadsheet. This page holds the answers to the queries that get run ' +
+    'most often for Gateshead, so the number is on screen and can be copied straight into ' +
+    'a document with its measure, period and source already attached.</p>' +
+    '<h3>Snapshot, not a live feed</h3>' +
+    '<p>The data is embedded in this file. It was pulled from the NOMIS API on <b>' +
+    esc(D.built) + '</b>, ' + age() + '. The page never fetches data at runtime and will not ' +
+    'change on its own; it does load Chart.js and its typeface from public CDNs, so without ' +
+    'a connection the figures, tables and copy buttons still work but the charts do not draw. ' +
+    'Each dataset states whether NOMIS has published ' +
+    'a newer period since the snapshot was taken; that check was made at build time against ' +
+    'each dataset\'s own release calendar in the API.</p>' +
+    '<p>The snapshot is refreshed on the production calendar, monthly, on the day of the ONS ' +
+    'Labour Market Statistics release — the claimant count is the only monthly series here, ' +
+    'and a monthly sweep picks the annual releases up within weeks of publication.</p>' +
+    '<p><b>Before quoting anything from this page in a published product, check the vintage ' +
+    'chip.</b> Where it says NOMIS holds a newer period, go to the source rather than quoting ' +
+    'the snapshot.</p>' +
+    '<h3>Sources</h3><ul>' + rows + '</ul>' +
+    '<h3>Uncertainty</h3>' +
+    '<p>' + uncertaintyLine() + '</p>' +
+    '<p>Where an estimate carries an interval, that interval travels with it: the figure is never shown or copied without it. ONS suppresses the interval on individual estimates it judges too small to be reliable; those are drawn without an error bar and the panel note says how many there are.</p>' +
+    '<p>Absence of an interval is not precision. BRES and UK Business Counts are rounded for disclosure control, population estimates are revised between censuses, the most recent claimant count months are provisional, and jobs density inherits survey error through BRES and through Annual Population Survey self-employment.</p>' +
+    '<h3>Geography</h3>' +
+    '<p>Gateshead only, GSS code <b>' + esc(D.geography.code) + '</b>. No comparators and no ' +
+    'ward breakdowns. Comparison against the NEMSA seven, statistical neighbours and England ' +
+    'belongs in the analytical products, where the significance of a difference can be ' +
+    'tested rather than merely displayed.</p>' +
+    '<h3>Provenance</h3>' +
+    '<p>Built by <code>pipelines/nomis-quick-look/build.py</code> from the registry in ' +
+    '<code>datasets.py</code>. Every pull is saved as CSV with its full query and the URL as ' +
+    'run in <code>pipelines/nomis-quick-look/data/manifest.json</code>. The queries are also ' +
+    'reproduced on each dataset tab.</p>' +
+    '</div>';
+}
+
+/* ---- build the tabs from the registry, so a new dataset needs no template change ---- */
+const panes = el("panes"), tabBar = el("tabs");
+const spec = [{name:"Overview", html: overviewPane()}]
+  .concat(D.datasets.map(ds => ({name: ds.title, html: datasetPane(ds), ds})))
+  .concat([{name:"About", html: aboutPane()}]);
+
+spec.forEach((s, i) => {
+  const sec = document.createElement("section");
+  sec.className = "tab"; sec.dataset.tab = s.name; sec.innerHTML = s.html;
+  panes.appendChild(sec);
+  const b = document.createElement("button");
+  b.textContent = s.name;
+  b.onclick = () => {
+    [...panes.children].forEach(x => x.classList.remove("active"));
+    [...tabBar.children].forEach(x => x.classList.remove("active"));
+    sec.classList.add("active"); b.classList.add("active");
+    charts.forEach(c => c.resize());
+  };
+  tabBar.appendChild(b);
+  if (i === 0){ sec.classList.add("active"); b.classList.add("active"); }
+});
+
+/* ---- header chips and snapshot banner ---- */
+const stale = D.datasets.filter(d => !d.current);
+el("chips").innerHTML =
+  '<span class="chip">' + D.datasets.length + ' datasets</span>' +
+  '<span class="chip">Gateshead ' + D.geography.code + '</span>' +
+  '<span class="chip">Snapshot ' + D.built + '</span>' +
+  (stale.length
+    ? '<span class="chip amber">' + stale.length + ' with a newer vintage available</span>'
+    : '<span class="chip good">All at the latest published vintage</span>');
+
+el("snapnote").innerHTML = stale.length
+  ? '<b>Read this first.</b> This is a snapshot taken on ' + D.built + ' (' + age() +
+    '). NOMIS has published a newer period for ' +
+    stale.map(d => esc(d.title) + " (" + esc(d.latest_available) + ")").join(", ") +
+    '. Go to the source for those rather than quoting the figures here.'
+  : '<b>Read this first.</b> This is a snapshot taken on ' + D.built + ' (' + age() +
+    '), not a live feed. Every dataset was at its ' +
+    'latest published vintage when the snapshot was built. Check the chip on a figure ' +
+    'before quoting it in a published product.';
+
+/* ---- copy interactions ---- */
+document.addEventListener("click", ev => {
+  const btn = ev.target.closest(".btn[data-q]");
+  if (btn){
+    copy(btn.dataset.q, "Copied in citation format — paste straight into a document");
+    btn.classList.add("done"); btn.textContent = "Copied";
+    setTimeout(() => { btn.classList.remove("done"); btn.textContent = "Copy"; }, 1500);
+    return;
+  }
+  const tsv = ev.target.closest(".btn[data-tsv]");
+  if (tsv){
+    const [dsId, idx] = tsv.dataset.tsv.split("|");
+    const ds = D.datasets.find(d => d.id === dsId);
+    const bd = ds.breakdowns[+idx];
+    const denom = bd.share && bd.sum ? bd.sum : null;
+    const head = ["Category", ds.title + " (" + ds.vintage + ")"]
+      .concat(denom ? ["% of these rows"] : []).join("\t");
+    const body = bd.rows.map(r => [r[0], r[1] === null ? "" : r[1]]
+      .concat(denom ? [r[1] === null ? "" : (100 * r[1] / denom).toFixed(1)] : []).join("\t"));
+    copy([head].concat(body).join("\n"),
+         "Table copied as TSV — paste straight into Excel");
+    tsv.classList.add("done"); tsv.textContent = "Copied";
+    setTimeout(() => { tsv.classList.remove("done"); tsv.textContent = "Copy table"; }, 1500);
+    return;
+  }
+  const row = ev.target.closest("tbody tr[data-q]");
+  if (row){
+    copy(row.dataset.q, "Copied in citation format — paste straight into a document");
+    row.classList.add("copied");
+    setTimeout(() => row.classList.remove("copied"), 900);
+  }
+});
+
+/* ---- footer ---- */
+el("foot").innerHTML =
+  "Source: NOMIS (" + D.datasets.map(d => d.dataset).join(", ") +
+  "), Office for National Statistics, quoted as published. " +
+  "Snapshot taken " + D.built + " · " + age() + " · " +
+  'Gateshead Council Economic Intelligence · <a href="../index.html">All dashboards</a>';
+
+/* ---- charts (last, and isolated: see the note in About on offline behaviour) ---- */
+function drawCharts(){
+  /* Ground rule 4: where the source publishes a confidence interval, the interval is
+   drawn - error bars on bars, a shaded band on a time series. This plugin draws the
+   whiskers; an estimate whose interval ONS suppresses simply gets none, and the
+   panel note says how many of those there are. */
+const errorBars = {
+  id: "errorBars",
+  afterDatasetsDraw(chart, args, opts){
+    const cis = (opts || {}).ci;
+    if (!cis) return;
+    const horiz = chart.options.indexAxis === "y";
+    const scale = horiz ? chart.scales.x : chart.scales.y;
+    const meta = chart.getDatasetMeta(0);
+    const data = chart.data.datasets[0].data;
+    const ctx = chart.ctx;
+    ctx.save();
+    ctx.strokeStyle = "#555";
+    ctx.lineWidth = 1;
+    const cap = 5;
+    meta.data.forEach((pt, i) => {
+      const ci = cis[i], v = data[i];
+      if (ci == null || v == null) return;
+      const lo = scale.getPixelForValue(v - ci);
+      const hi = scale.getPixelForValue(v + ci);
+      ctx.beginPath();
+      if (horiz){
+        ctx.moveTo(lo, pt.y); ctx.lineTo(hi, pt.y);
+        ctx.moveTo(lo, pt.y - cap); ctx.lineTo(lo, pt.y + cap);
+        ctx.moveTo(hi, pt.y - cap); ctx.lineTo(hi, pt.y + cap);
+      } else {
+        ctx.moveTo(pt.x, lo); ctx.lineTo(pt.x, hi);
+        ctx.moveTo(pt.x - cap, lo); ctx.lineTo(pt.x + cap, lo);
+        ctx.moveTo(pt.x - cap, hi); ctx.lineTo(pt.x + cap, hi);
+      }
+      ctx.stroke();
+    });
+    ctx.restore();
+  }
+};
+
+const gridCfg = {grid:{color:"#eef2f6"}, ticks:{font:{size:11}, color:"#5d6b7a"}};
+  function baseOpts(extra){
+    return Object.assign({
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}, tooltip:{callbacks:{}}},
+      scales:{x:Object.assign({}, gridCfg), y:Object.assign({}, gridCfg)}
+    }, extra || {});
+  }
+
+  D.datasets.forEach(ds => {
+    if (ds.series){
+      const c = el("ser_" + ds.id);
+      const s = ds.series;
+      const hasCI = s.ci && s.ci.some(x => x != null);
+      // The interval becomes a shaded band: lower bound, then upper bound filling
+      // back down to it. Both are excluded from the tooltip so only the estimate
+      // is reported, with its interval spelled out.
+      const bands = hasCI ? [
+        {data: s.y.map((v,i) => v == null || s.ci[i] == null ? null : v - s.ci[i]),
+         borderWidth:0, pointRadius:0, fill:false},
+        {data: s.y.map((v,i) => v == null || s.ci[i] == null ? null : v + s.ci[i]),
+         borderWidth:0, pointRadius:0, fill:"-1",
+         backgroundColor:"rgba(4,90,144,.13)"}
+      ] : [];
+      const mainIdx = bands.length;
+      if (c) charts.push(new Chart(c, {
+        type:"line",
+        data:{labels: s.x, datasets: bands.concat([{
+          data: s.y, borderColor: NAVY,
+          backgroundColor: hasCI ? "transparent" : "rgba(4,90,144,.08)",
+          borderWidth:2.5, pointRadius:0, pointHoverRadius:4,
+          fill: !hasCI, tension:.15
+        }])},
+        options: baseOpts({
+          plugins:{legend:{display:false}, tooltip:{
+            filter: ctx => ctx.datasetIndex === mainIdx,
+            callbacks:{
+              label: ctx => {
+                const i = ctx.dataIndex;
+                const band = hasCI ? ciText(s.y[i], s.ci[i], s.unit) : "";
+                return fmt(ctx.parsed.y, s.unit) + (band ? "  (" + band + ")" : "");
+              }
+            }}},
+          scales:{
+            x:Object.assign({}, gridCfg, {ticks:{font:{size:10}, color:"#5d6b7a",
+              maxRotation:60, minRotation:0, autoSkip:true, maxTicksLimit:12}}),
+            y:Object.assign({}, gridCfg, {beginAtZero: !seriesAxisTruncated(s)})
+          }
+        })
+      }));
+    }
+    ds.breakdowns.forEach((bd, i) => {
+      if (!bd.chart) return;
+      const c = el("bd_" + ds.id + "_" + i);
+      if (!c) return;
+      const horiz = bd.chart === "barh";
+      const cis = bd.rows.map(r => r[2]);
+      const hasCI = cis.some(x => x != null);
+      const valMax = Math.max.apply(null,
+        bd.rows.map(r => (r[1] || 0) + (r[2] || 0)).concat([0]));
+      charts.push(new Chart(c, {
+        type:"bar",
+        plugins: hasCI ? [errorBars] : [],
+        data:{labels: bd.rows.map(r => axisLabel(r[0])), datasets:[{
+          data: bd.rows.map(r => r[1]), backgroundColor: NAVY,
+          hoverBackgroundColor: TEAL2, borderWidth:0, barPercentage:.86, categoryPercentage:.86
+        }]},
+        options: baseOpts({
+          indexAxis: horiz ? "y" : "x",
+          plugins:{legend:{display:false},
+            errorBars: hasCI ? {ci: cis} : undefined,
+            tooltip:{callbacks:{
+              label: ctx => {
+                const v = horiz ? ctx.parsed.x : ctx.parsed.y;
+                const band = ciText(bd.rows[ctx.dataIndex][1],
+                                    bd.rows[ctx.dataIndex][2], bd.unit);
+                return fmt(v, bd.unit) + (band ? "  (" + band + ")" : "");
+              }
+          }}},
+          // leave room for the upper whisker, or the axis clips it
+          scales: horiz
+            ? {x:Object.assign({}, gridCfg, {beginAtZero:true, suggestedMax: valMax}),
+               y:Object.assign({}, gridCfg, {ticks:{font:{size:10}, color:"#5d6b7a",
+                 autoSkip:false, crossAlign:"far"}})}
+            : {x:Object.assign({}, gridCfg, {ticks:{font:{size:10}, color:"#5d6b7a",
+                 maxRotation:45, autoSkip:false}}),
+               y:Object.assign({}, gridCfg, {beginAtZero:true, suggestedMax: valMax})}
+        })
+      }));
+    });
+  });
+
+}
+if (typeof Chart === "undefined"){
+  document.querySelectorAll('.cwrap').forEach(w => {
+    w.innerHTML = '<p style="font-size:12.5px;color:var(--muted);padding:10px 0">'+
+      'Chart unavailable — the charting library could not be loaded. Every figure '+
+      'in this chart is in the table below it.</p>';
+  });
+} else {
+  try { drawCharts(); }
+  catch (e) { console.error('Chart rendering failed; tables and copy are unaffected.', e); }
+}
+</script>
+</body>
+</html>
