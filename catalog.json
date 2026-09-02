@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "28 August 2026",
+ "updated": "31 August 2026",
  "schedule": {
-  "updated": "25 August 2026",
+  "updated": "31 August 2026",
   "months": [
    {
     "id": "2026-07",
@@ -98,15 +98,17 @@
       },
       {
        "label": "Mon 31",
-       "status": "next"
-      },
-      {
-       "label": "then every Mon"
+       "status": "released",
+       "href": "briefs/whats-new-2026-08-31.html"
       }
      ],
      "2026-09": [
       {
-       "label": "every Mon"
+       "label": "Mon 7",
+       "status": "next"
+      },
+      {
+       "label": "then every Mon"
       }
      ],
      "2026-10": [
@@ -374,6 +376,38 @@
     "cost of living",
     "neet",
     "18-24"
+   ]
+  },
+  {
+   "id": "whats-new-2026-08-31",
+   "title": "What's New, 31 August 2026",
+   "path": "briefs/whats-new-2026-08-31.html",
+   "topic": "What's New",
+   "description": "Covering 25 to 31 August, back on schedule after last week's late edition. No new economic statistic for the borough landed in the window and the next comes on 15 September. The week's substance is the youth employment evidence base: on 27 August DWP published the six research reports underpinning the independent Young people and work review, whose interim report dates from 28 May and whose solutions report is due in early autumn. The employer views survey (500 telephone interviews, fielded 4 to 18 March 2026) reports 42% of employers had hired 16 to 24 year olds, with a lack of soft skills and work readiness (41%), a lack of work experience (40%) and resilience concerns (32%) the most cited difficulties, 62% feeling young people less ready to excel at work, and 76% saying the curriculum does not prepare students adequately. The same morning the ONS put UK NEET at 981,000 aged 16 to 24 for April to June 2026 (13.0%), of whom 894,000 are 18 to 24 (15.2%), so nine tenths sit above compulsory participation age. Census-based sub-national NEET estimates for England follow on 2 September, the first measure of its kind. On money and machinery: the North East is allocated GBP445 million and around 3,400 homes in the first wave of the GBP39 billion Social and Affordable Homes Programme, made to the strategic authority rather than the seven councils; MHCLG's consultation on mayoral planning powers under the English Devolution and Community Empowerment Act 2026 closes 5 October, three weeks before the devolution white paper; and the centre published nothing on the fiscal devolution mechanism for a fifth week. Also new: an ONS ad hoc dataset giving Gateshead population by single year of age and sex to 2050, whose post-2025 years are national change rescaled and must not be used as a local forecast; Household Costs Indices showing low-income households facing lower inflation than high-income for the first time since March 2025; electronic trade union balloting in force from 25 August; and new zero hours guidance with no commencement dates. Carries the complete departmental log, 69 items, reconciled against the mailroom digest.",
+   "sources": "Weekly round-up · ONS · NOMIS · gov.uk · ONS release calendar · team mailbox",
+   "series": "whats-new",
+   "date": "2026-08-31",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "neet",
+    "young people and work",
+    "milburn",
+    "youth employment",
+    "jobs guarantee",
+    "social and affordable homes",
+    "housing",
+    "planning powers",
+    "mayors",
+    "devolution",
+    "nemsa",
+    "population estimates",
+    "household costs",
+    "zero hours",
+    "employment rights act",
+    "departmental log"
    ]
   },
   {
