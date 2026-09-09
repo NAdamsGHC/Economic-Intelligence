@@ -3,7 +3,7 @@ reduced scorecard data object consumed by dashboard_src.html.
 
 Per indicator (where Gateshead E08000037 has data): Gateshead full series,
 best national benchmark (England > UK > GB > E&W) series, North East series,
-NECA 7 + ONS economic statistical neighbour latest values, all-LAD latest
+NEMSA 7 + ONS economic statistical neighbour latest values, all-LAD latest
 values (sorted, for rank/quartile/distribution), Gateshead 95% CI where the
 table publishes one, source line, unit, period labels, polarity and domain.
 
@@ -21,7 +21,7 @@ GH = "E08000037"
 NE = "E12000001"
 BENCH_PREF = ["E92000001", "K02000001", "K03000001", "K04000001"]
 BENCH_NAME = {"E92000001": "England", "K02000001": "UK", "K03000001": "Great Britain", "K04000001": "England & Wales"}
-NECA = ["E08000037", "E08000021", "E08000022", "E08000023", "E08000024", "E06000047", "E06000057"]
+NEMSA = ["E08000037", "E08000021", "E08000022", "E08000023", "E08000024", "E06000047", "E06000057"]
 NEIGH = ["E08000036", "E08000013", "E08000016", "E06000047", "E08000014",
          "W06000022", "W06000014", "E08000024", "E06000052", "W06000004",
          "W06000008", "W06000009", "E06000057", "E06000046", "W06000003",
@@ -462,7 +462,7 @@ def parse(workbook_path):
             "benchCode": BENCH_NAME.get(bench_code),
             "ne": pick(data[NE]) if NE in data else None,
             "ghCI": gh_ci, "surveyCI": has_measure,
-            "neca": {c: sig(data[c][li]) if c in data else None for c in NECA},
+            "neca": {c: sig(data[c][li]) if c in data else None for c in NEMSA},
             "neigh": {c: sig(data[c][li]) if c in data else None for c in NEIGH},
             "ladSorted": sorted((sig(v) for v in lad_latest.values()), reverse=True),
             "n": n, "rankHigh": rank_high, "cov": cov,
@@ -478,8 +478,8 @@ def parse(workbook_path):
         "sheetCount": len(numbered),
         "ghSheetCount": gh_sheets,
         "gh": GH,
-        "neca": NECA, "neigh": NEIGH,
-        "names": {c: names.get(c, c) for c in sorted(set(NECA) | set(NEIGH))},
+        "neca": NEMSA, "neigh": NEIGH,
+        "names": {c: names.get(c, c) for c in sorted(set(NEMSA) | set(NEIGH))},
         "domains": [{"name": d, "tables": [byname[n] for n in ts if n in byname]} for d, ts in DOMAINS],
         "ind": ind,
     }

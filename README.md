@@ -10,14 +10,16 @@ The site wears **one civic-style skin** (PT Sans, `#045a90` blue, `#252525` mast
 
 ## Catalogue
 
+Comparator groups used throughout: the **NEMSA seven** (the seven councils of the North East Mayoral Strategic Authority), the ONS economic statistical neighbours, and the North East region.
+
 | ONS topic | Dashboard | Theme | Size |
 |---|---|---|---|
 | **Economy** | [NOMIS Quick Look](economy/nomis-quick-look.html) | The most-run NOMIS queries for Gateshead answered on one page - claimant count, BRES employees, jobs density, population estimates, UK Business Counts and the Annual Population Survey at their latest published vintage, with full breakdowns, confidence intervals drawn on every survey estimate, one-click copy in the house citation format, and a vintage flag on every dataset | 72 KB |
 | **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
-| **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NECA 7, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
-| **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, NECA 7 and statistical neighbours, with per-indicator Explore view | 290 KB |
+| **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NEMSA seven, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
+| **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, the NEMSA seven and statistical neighbours, with per-indicator Explore view | 290 KB |
 | **Business, industry and trade** | [Gateshead Business Map](business-industry-trade/gateshead-business-map.html) ⭐ | Every Companies House business in the borough + IMD 2025, sector churn, FSA premises, BRES jobs, UKRI innovation; intervention/investment scores by LSOA & ward; **High streets tab** — 24 Local Plan centres with start-up activity, openings/closures register, premises mix & gaps, independents vs chains, walk-in catchment deprivation, NE footfall context | ~3.4 MB |
-| **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NECA local authorities | 92 KB |
+| **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NEMSA local authorities | 92 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | [Employer Skills Survey 2024](employment-labour-market/employer-skills-survey-2024.html) | DfE ESS 2024 — North East vs England's 9 regions: vacancies, skills gaps, training, apprenticeships, future skill needs, AI | 36 KB |
@@ -88,7 +90,7 @@ Interactive dashboard covering **Gross Disposable Household Income (GDHI)** for 
 | Tab | What it shows |
 |---|---|
 | Gateshead | Borough headline (£3.81bn / £18,988 per head in 2023), per-head trajectory vs NE and UK, four Westminster constituencies, share-of-borough by constituency, income-component breakdown, all 27 Gateshead MSOAs, comparison with neighbouring boroughs |
-| Per head benchmark | **ONS-published GDHI per head, 1997–2023** (ELS extract of the regional GDHI release): £19,127 in 2023, the £5,709 gap to the UK average, rank 329 of 361 UK LADs (bottom decile), NECA seven (6th of 7), all 20 ONS economic statistical neighbours (above only 1), sortable comparator scorecard, distribution histogram and a searchable 361-LAD league table — with its own Overview / Trends / NECA & neighbours / National league / About sub-tabs |
+| Per head benchmark | **ONS-published GDHI per head, 1997–2023** (ELS extract of the regional GDHI release): £19,127 in 2023, the £5,709 gap to the UK average, rank 329 of 361 UK LADs (bottom decile), NEMSA seven (6th of 7), all 20 ONS economic statistical neighbours (above only 1), sortable comparator scorecard, distribution histogram and a searchable 361-LAD league table — with its own Overview / Trends / NEMSA & neighbours / National league / About sub-tabs |
 | LSOAs & Map | Choropleth of 126 Gateshead LSOAs — switch between per-head GDHI (total or working-age), GDHI £m, growth %, or population. Pan/zoom, hover for detail, click for trajectory. Distribution histogram + ranked league table. Inequality ratio (richest:poorest LSOA) alongside median and mean |
 | North East | All NE LADs / constituencies / towns / TTWAs / MSOAs ranked and tabled, switchable by geography type and sort metric |
 | UK Context | UK total, 12 ITL regions ranked, indexed growth trajectories, where Gateshead sits in the 350-LAD league table |
@@ -120,7 +122,7 @@ GDHI is the amount of money that all individuals in the household sector have av
 
 [`economy/els-scorecard.html`](economy/els-scorecard.html)
 
-**Every indicator in the ONS Explore Local Statistics service that covers Gateshead** — 88 of the 108 ELS tables, spanning 10 domains (population, work & income, economy & productivity, business, housing, education & skills, health & wellbeing, environment & energy, connectivity & transport, amenities & culture) — benchmarked in one product against England/UK/GB, the North East, the NECA seven, the ONS economic statistical neighbours (2026 economic set) and the full distribution of UK local authorities.
+**Every indicator in the ONS Explore Local Statistics service that covers Gateshead** — 88 of the 108 ELS tables, spanning 10 domains (population, work & income, economy & productivity, business, housing, education & skills, health & wellbeing, environment & energy, connectivity & transport, amenities & culture) — benchmarked in one product against England/UK/GB, the North East, the NEMSA seven, the ONS economic statistical neighbours (2026 economic set) and the full distribution of UK local authorities.
 
 ### Tabs
 
@@ -128,7 +130,7 @@ GDHI is the amount of money that all individuals in the household sector have av
 |---|---|
 | Overview | Six headline KPIs, quartile mix by domain (Gateshead's Q1–Q4 position on 70 ranked indicators), the twelve indicators furthest above/below the national benchmark, and six generated key findings |
 | Scorecard | All 88 indicators in one sortable, searchable, domain-filterable table — Gateshead vs benchmark vs North East, rank (1 = best on the indicator's stated direction) and quartile chip; click any row to open it in Explore |
-| Explore | Any single indicator in depth: value with 95% CI where published, trend vs benchmark and NE, NECA seven bar, statistical-neighbours bar (with coverage note), national distribution histogram, source and direction statement |
+| Explore | Any single indicator in depth: value with 95% CI where published, trend vs benchmark and NE, NEMSA seven bar, statistical-neighbours bar (with coverage note), national distribution histogram, source and direction statement |
 | About & notes | Methodology, per-indicator source/period/coverage table, caveats, refresh plan |
 
 ### Headline findings (as built, July 2026)
@@ -153,12 +155,12 @@ GDHI is the amount of money that all individuals in the household sector have av
 
 [`business-industry-trade/creative-industries.html`](business-industry-trade/creative-industries.html)
 
-Baseline dashboard of the **DCMS Creative Industries** across the seven local authorities of the **North East Combined Authority** (NECA). Companion to the CCIS Framework Data & Evidence consultation.
+Baseline dashboard of the **DCMS Creative Industries** across the seven local authorities of the **North East Mayoral Strategic Authority** (NEMSA). Companion to the CCIS Framework Data & Evidence consultation.
 
 ### What's in it
 
 - Business counts, employment and Gross Value Added by creative-industry sub-sector
-- Local-authority breakdowns across the seven NECA councils
+- Local-authority breakdowns across the seven NEMSA councils
 - Sector and area filters, time-series trends, sector mix views
 
 ### Data source

@@ -908,7 +908,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 <header>
   <h1>UK Gross Disposable Household Income</h1>
-  <div class="subtitle">GDHI for Gateshead and the North East — official per-head benchmarking (1997–2023, NECA seven, statistical neighbours and the full UK league) plus the small-area explorer (2010–2023): LSOA choropleth, income components, and every geography in the ONS release.</div>
+  <div class="subtitle">GDHI for Gateshead and the North East — official per-head benchmarking (1997–2023, the North East Mayoral Strategic Authority (NEMSA) seven, statistical neighbours and the full UK league) plus the small-area explorer (2010–2023): LSOA choropleth, income components, and every geography in the ONS release.</div>
   <div class="meta" id="meta-loading">Loading dataset…</div>
 </header>
 
@@ -984,7 +984,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <div class="ph" id="phroot">
 <div class="phhead">
   <h2>GDHI per head — official benchmarking</h2>
-  <p>How much money do Gateshead residents have to spend or save, and how does it compare with the places that matter — the NECA seven, the ONS economic statistical neighbours, the North East, and every UK local authority? Built from the ONS Explore Local Statistics extract of regional gross disposable household income, 1997–<span id="hdrLast"></span>.</p>
+  <p>How much money do Gateshead residents have to spend or save, and how does it compare with the places that matter — the NEMSA seven, the ONS economic statistical neighbours, the North East, and every UK local authority? Built from the ONS Explore Local Statistics extract of regional gross disposable household income, 1997–<span id="hdrLast"></span>.</p>
   <div class="chips" id="chips"></div>
 </div>
 
@@ -1010,10 +1010,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <div class="note" id="noteTrend"></div>
 </section>
 
-<section class="tab" data-tab="NECA &amp; neighbours">
+<section class="tab" data-tab="NEMSA &amp; neighbours">
   <div class="grid">
-    <div class="panel"><h3>The NECA seven</h3><p class="sub" id="subNeca"></p><div class="cwrap"><canvas id="cNeca"></canvas></div></div>
-    <div class="panel"><h3>NECA trajectories, UK = 100</h3><p class="sub" id="subNecaIdx"></p><div class="cwrap"><canvas id="cNecaIdx"></canvas></div></div>
+    <div class="panel"><h3>The NEMSA seven</h3><p class="sub" id="subNeca"></p><div class="cwrap"><canvas id="cNeca"></canvas></div></div>
+    <div class="panel"><h3>NEMSA trajectories, UK = 100</h3><p class="sub" id="subNecaIdx"></p><div class="cwrap"><canvas id="cNecaIdx"></canvas></div></div>
     <div class="panel full"><h3>ONS economic statistical neighbours</h3><p class="sub" id="subNeigh"></p><div class="cwrap xtall"><canvas id="cNeigh"></canvas></div></div>
   </div>
   <div class="panel full"><h3>Comparator scorecard</h3><p class="sub" id="subScore"></p>
@@ -2863,7 +2863,7 @@ kpis("kpisOverview", [
   {v:gbp(gh1), l:`GDHI per head, ${Y1}`, s:`UK ${gbp(val(UK))} · North East ${gbp(val(NE))}`},
   {v:gbp(-gapUK), l:"Gap to the UK average", s:`Per resident, per year (England gap ${gbp(-gapEN)})`, amber:true},
   {v:`${rk.r} of ${rk.n}`, l:"Rank among UK local authorities", s:`1 = highest income · ${ord(decile)} decile`, rank:{cls:"bot", txt:`Bottom ${Math.round(100*(1 - (rk.r-1)/rk.n))<=10?"10%":Math.ceil(10*rk.r/rk.n)*10 + "%"}`}, amber:true},
-  {v:`${necaPos} of ${D.neca.length}`, l:"Position in the NECA seven", s:`Only ${necaSorted.slice(necaPos).map(name).join(", ") || "—"} lower`},
+  {v:`${necaPos} of ${D.neca.length}`, l:"Position in the NEMSA seven", s:`Only ${necaSorted.slice(necaPos).map(name).join(", ") || "—"} lower`},
   {v:gbp(gh1 - neighMed), l:"Gap to statistical-neighbour median", s:`Median of ${D.neigh.length} ONS economic neighbours: ${gbp(neighMed)}`, amber:true},
   {v:idxUK(GH).toFixed(1), l:`UK = 100 index, ${Y1}`, s:`${idxUK(GH)>=idxUK(GH,0)?"Up":"Down"} from ${idxUK(GH,0).toFixed(1)} in ${Y0} — Gateshead's share of the UK average has ${idxUK(GH)>=idxUK(GH,0)?"risen":"slipped"}`}
 ]);
@@ -2896,7 +2896,7 @@ findings("findings", [
   {h:"£" + fmt(Math.round(-gapUK)) + " a year short of the UK average", p:`Gateshead residents had <span class="big">${gbp(gh1)}</span> per head available to spend or save in ${Y1} — <span class="big">${gbp(-gapUK)}</span> below the UK average and <span class="big">${gbp(-gapEN)}</span> below England. Current prices; the gap is per resident, per year.`},
   {h:"Bottom decile of the UK", p:`Gateshead ranks <span class="big">${ord(rk.r)} of ${rk.n}</span> UK local authorities (1 = highest income) and sits <span class="big">${gbp(ladMed - gh1)}</span> below the UK local-authority median of ${gbp(ladMed)} — so this is not just 'the North East looks like this'.`, amber:true},
   {h:"Below par even for the kind of place it is", p:`Against the ONS economic statistical neighbours — the fairest like-for-like test — Gateshead is above only <span class="big">${neighAbove} of ${D.neigh.length}</span>, and <span class="big">${gbp(neighMed - gh1)}</span> below the neighbour median. Underperformance survives controlling for economic structure.`, amber:true},
-  {h:`${ord(necaPos)} of seven in NECA`, p:`Within the combined authority, only <span class="big">${necaSorted.slice(necaPos).map(name).join(" and ") || "no area"}</span> ${necaSorted.length - necaPos === 1 ? "is" : "are"} lower. ${name(necaSorted[0])} leads at <span class="big">${gbp(val(necaSorted[0]))}</span>; the North East average is ${gbp(val(NE))}.`},
+  {h:`${ord(necaPos)} of seven in NEMSA`, p:`Within NEMSA, only <span class="big">${necaSorted.slice(necaPos).map(name).join(" and ") || "no area"}</span> ${necaSorted.length - necaPos === 1 ? "is" : "are"} lower. ${name(necaSorted[0])} leads at <span class="big">${gbp(val(necaSorted[0]))}</span>; the North East average is ${gbp(val(NE))}.`},
   {h:"A long, slow relative slide", p:`On the UK = 100 index Gateshead has drifted from <span class="big">${idxUK(GH,0).toFixed(1)}</span> in ${Y0} to <span class="big">${idxUK(GH).toFixed(1)}</span> in ${Y1}, and its national rank from ${ord(rk0.r)} to ${ord(rk.r)}. Cash growth is real enough on paper — the relative position is what has slipped.`},
   {h:"Decade growth ≈ national pace, but nominal", p:`GDHI per head grew <span class="big">${pct(g10gh)}</span> over ${2013}–${Y1}, near the UK's ${pct(g10uk)} and ahead of the North East's ${pct(g10ne)} — but these are current prices: much of it is inflation, and matching national growth from a lower base leaves the £ gap widening.`, amber:true}
 ]);
@@ -2932,7 +2932,7 @@ new Chart(el("cGap"), {type:"line", data:{labels:YRS, datasets:[
 
 el("noteTrend").innerHTML = `<b>Reading these charts.</b> The £ gap to the UK average has grown from ${gbp(val(UK,0)-val(GH,0))} in ${Y0} to ${gbp(-gapUK)} in ${Y1} in cash terms — but both years' figures are in their own prices, so the widening partly reflects inflation. The rank chart and UK = 100 index are the inflation-free reads: rank has moved from ${ord(rk0.r)} (${Y0}) to ${ord(rk13.r)} (2013) to ${ord(rk.r)} (${Y1}) of ${rk.n}.`;
 
-/* ================= NECA & NEIGHBOURS ================ */
+/* ================= NEMSA & NEIGHBOURS ================ */
 el("subNeca").textContent = `GDHI per head, ${Y1}, current prices — North East average shown for reference`;
 new Chart(el("cNeca"), {type:"bar", data:{
   labels:necaSorted.map(name),
@@ -2942,7 +2942,7 @@ new Chart(el("cNeca"), {type:"bar", data:{
   scales:{x:{title:{display:true, text:"£ per head, current prices", font:{size:11}}, ticks:{callback:v=>gbp(v), font:{size:10}}},
           y:{ticks:{font:{size:11}}}}}});
 
-el("subNecaIdx").textContent = `GDHI per head, UK = 100, ${Y0}–${Y1} — Gateshead bold, other NECA areas muted`;
+el("subNecaIdx").textContent = `GDHI per head, UK = 100, ${Y0}–${Y1} — Gateshead bold, other NEMSA areas muted`;
 new Chart(el("cNecaIdx"), {type:"line", data:{labels:YRS, datasets:[
   ...D.neca.filter(c=>c!==GH).map(c=>({label:name(c), data:YRS.map((y,i)=>+idxUK(c,i).toFixed(1)), borderColor:GREY, backgroundColor:GREY, borderWidth:1.2, pointRadius:0, tension:.25})),
   {label:"Gateshead", data:YRS.map((y,i)=>+idxUK(GH,i).toFixed(1)), borderColor:NAVY, backgroundColor:NAVY, borderWidth:2.5, pointRadius:0, tension:.25},
@@ -2969,10 +2969,10 @@ new Chart(el("cNeigh"), {type:"bar", data:{
 const scoreRows = [];
 const simOrder = c => D.neigh.indexOf(c) + 1 || "";
 for (const c of [UK, EN, NE]) scoreRows.push({c, cls:"eng", grp:"Benchmark"});
-scoreRows.push({c:GH, cls:"ne", grp:"NECA"});
-for (const c of D.neca.filter(x=>x!==GH)) scoreRows.push({c, cls:"", grp:"NECA"});
+scoreRows.push({c:GH, cls:"ne", grp:"NEMSA"});
+for (const c of D.neca.filter(x=>x!==GH)) scoreRows.push({c, cls:"", grp:"NEMSA"});
 for (const c of D.neigh.filter(x=>!D.neca.includes(x))) scoreRows.push({c, cls:"", grp:"Neighbour"});
-el("subScore").textContent = `GDHI per head: level (${Y1}), UK = 100, nominal growth, and UK rank — NECA seven plus statistical neighbours`;
+el("subScore").textContent = `GDHI per head: level (${Y1}), UK = 100, nominal growth, and UK rank — NEMSA seven plus statistical neighbours`;
 function renderScore(sortKey, desc) {
   const get = {name:r=>name(r.c), grp:r=>r.grp+ (simOrder(r.c)?` ${simOrder(r.c)}`:""), v:r=>val(r.c), idx:r=>idxUK(r.c), g10:r=>grow(r.c, yi(2013)), g1:r=>grow(r.c, LI-1), rank:r=>LADS.includes(r.c)?rankAt(r.c).r:9999};
   const body = [...scoreRows];
@@ -3026,7 +3026,7 @@ renderLeague();
 /* ================= ABOUT ================ */
 el("about").innerHTML = `
 <h3>What this dashboard answers</h3>
-<p>How much disposable income Gateshead residents have per head, how it has moved since ${Y0}, and how it benchmarks against the team's standard comparator sets: the <b>NECA seven</b> (policy family), the <b>ONS economic statistical neighbours, 2026 set</b> (like-for-like), the <b>North East / England / UK</b> (national gap), and <b>all ${rk.n} UK local authorities</b> (distribution rank).</p>
+<p>How much disposable income Gateshead residents have per head, how it has moved since ${Y0}, and how it benchmarks against the team's standard comparator sets: the <b>NEMSA seven</b> (policy family), the <b>ONS economic statistical neighbours, 2026 set</b> (like-for-like), the <b>North East / England / UK</b> (national gap), and <b>all ${rk.n} UK local authorities</b> (distribution rank).</p>
 <h3>Definition — exactly what the number is</h3>
 <ul>
 <li><b>Gross disposable household income (GDHI) per head</b>: the amount of money all individuals in the household sector have available for spending or saving after taxes, National Insurance, pension contributions and property costs (e.g. mortgage interest) are paid and after receiving benefits — divided by the <b>resident population of all ages</b> (not just adults or workers).</li>
@@ -3037,7 +3037,7 @@ el("about").innerHTML = `
 <h3>Sources</h3>
 <ul>
 <li>ONS, <a href="https://www.ons.gov.uk/explore-local-statistics/indicators/gross-disposable-household-income-per-head">Explore Local Statistics — Gross disposable household income per head</a> (workbook generated ${ukDate(D.elsGenerated)}, retrieved ${ukDate(D.built)}). Underlying release: ONS, <i>Regional gross disposable household income, UK</i>, published ${ukDate(D.sourcePublished)}, covering ${Y0}–${Y1}.</li>
-<li>Comparator sets: ONS, <i>Clustering similar local authorities and statistical nearest neighbours in the UK, 2026</i> — the <b>economic</b> neighbour set; NECA seven per North East devolution geography.</li>
+<li>Comparator sets: ONS, <i>Clustering similar local authorities and statistical nearest neighbours in the UK, 2026</i> — the <b>economic</b> neighbour set; NEMSA seven per the North East devolution geography.</li>
 </ul>
 <h3>Caveats that matter</h3>
 <ul>

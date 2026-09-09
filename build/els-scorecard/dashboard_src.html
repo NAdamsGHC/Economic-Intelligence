@@ -96,7 +96,7 @@ footer a{color:var(--teal);text-decoration:none;}
 
 <header>
   <h1>Gateshead local indicators — ELS scorecard</h1>
-  <p>Every ONS Explore Local Statistics indicator with Gateshead data — <span id="hdrN"></span> indicators across <span id="hdrD"></span> domains — benchmarked against England or the UK, the North East, the NECA seven, the ONS economic statistical neighbours, and every UK local authority. Use the Scorecard for the full table, Explore for any single indicator in depth.</p>
+  <p>Every ONS Explore Local Statistics indicator with Gateshead data — <span id="hdrN"></span> indicators across <span id="hdrD"></span> domains — benchmarked against England or the UK, the North East, the North East Mayoral Strategic Authority (NEMSA) seven, the ONS economic statistical neighbours, and every UK local authority. Use the Scorecard for the full table, Explore for any single indicator in depth.</p>
   <div class="chips" id="chips"></div>
 </header>
 
@@ -132,7 +132,7 @@ footer a{color:var(--teal);text-decoration:none;}
   <div class="detail" id="exDetail"></div>
   <div class="grid">
     <div class="panel"><h3>Trend</h3><p class="sub" id="subTrend"></p><div class="cwrap"><canvas id="cTrend"></canvas></div></div>
-    <div class="panel"><h3>The NECA seven</h3><p class="sub" id="subNeca"></p><div class="cwrap"><canvas id="cNeca"></canvas></div></div>
+    <div class="panel"><h3>The NEMSA seven</h3><p class="sub" id="subNeca"></p><div class="cwrap"><canvas id="cNeca"></canvas></div></div>
     <div class="panel"><h3>ONS economic statistical neighbours</h3><p class="sub" id="subNeigh"></p><div class="cwrap tall"><canvas id="cNeigh"></canvas></div></div>
     <div class="panel"><h3>National distribution</h3><p class="sub" id="subDist"></p><div class="cwrap tall"><canvas id="cDist"></canvas></div></div>
   </div>
@@ -438,7 +438,7 @@ exSel.value = exDefault;
   }).join("")).join("");
   el("about").innerHTML = `
 <h3>What this dashboard answers</h3>
-<p>Where Gateshead stands on <b>every indicator in the ONS Explore Local Statistics (ELS) service that covers the borough</b> — ${TIDS.length} indicators across ${D.domains.length} domains — against the team's standard comparator sets: a national benchmark (England where the source is England-only, otherwise the UK or Great Britain), the North East, the <b>NECA seven</b>, the <b>ONS economic statistical neighbours (2026, economic set)</b>, and the full distribution of UK local authorities.</p>
+<p>Where Gateshead stands on <b>every indicator in the ONS Explore Local Statistics (ELS) service that covers the borough</b> — ${TIDS.length} indicators across ${D.domains.length} domains — against the team's standard comparator sets: a national benchmark (England where the source is England-only, otherwise the UK or Great Britain), the North East, the <b>NEMSA seven</b>, the <b>ONS economic statistical neighbours (2026, economic set)</b>, and the full distribution of UK local authorities.</p>
 <h3>How the benchmarking works</h3>
 <ul>
 <li><b>Rank</b>: Gateshead's position among UK local authorities with data on that indicator, where 1 = best on the indicator's stated direction (higher-is-better or lower-is-better, set out on each Explore page). Quartiles follow the same direction. <b>Context indicators</b> (population size and structure, house prices, energy use, traffic, ecosystem values, short-term lets, active-business counts, food outlets) have no defensible better/worse direction and are not ranked.</li>
@@ -446,7 +446,7 @@ exSel.value = exDefault;
 <li><b>Coverage</b>: England-only sources (DfE, DLUHC, OHID) drop the Welsh, Scottish and Northern Irish statistical neighbours; each Explore page says how many of the 20 are covered rather than silently shrinking the set.</li>
 </ul>
 <h3>Sources</h3>
-<p>ONS, <a href="https://www.ons.gov.uk/explore-local-statistics/">Explore Local Statistics</a> — "all datasets" workbook, generated ${ukDate(D.elsGenerated)}, retrieved ${ukDate(D.built)}. Each indicator carries its own producer and publication date (table below). Comparator sets: ONS, <i>Clustering similar local authorities and statistical nearest neighbours in the UK, 2026</i> (economic set); NECA seven per the North East devolution geography.</p>
+<p>ONS, <a href="https://www.ons.gov.uk/explore-local-statistics/">Explore Local Statistics</a> — "all datasets" workbook, generated ${ukDate(D.elsGenerated)}, retrieved ${ukDate(D.built)}. Each indicator carries its own producer and publication date (table below). Comparator sets: ONS, <i>Clustering similar local authorities and statistical nearest neighbours in the UK, 2026</i> (economic set); NEMSA seven per the North East devolution geography.</p>
 <h3>Caveats that matter</h3>
 <ul>
 <li><b>This is a compendium, not a snapshot.</b> Reference periods run from September 2021 (museums) to ${BYN["Average house price"] ? BYN["Average house price"].latest : "2026"} (house prices) — every figure is labelled with its period; do not read the scorecard as a single point in time.</li>

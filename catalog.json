@@ -763,7 +763,7 @@
       "title": "GDHI — Gateshead & the North East",
       "path": "economy/gdhi.html",
       "topic": "Economy",
-      "description": "Household income in one place. Official GDHI per head benchmarking, 1997–2023 — £19,127 in 2023, £5,709 below the UK average, 329th of 361 UK local authorities, vs the NECA seven and statistical neighbours — plus the small-area explorer across 3,427 UK areas (2010–2023): choropleth of all 126 Gateshead LSOAs, inequality ratios and full income-component breakdowns.",
+      "description": "Household income in one place. Official GDHI per head benchmarking, 1997–2023 — £19,127 in 2023, £5,709 below the UK average, 329th of 361 UK local authorities, vs the North East Mayoral Strategic Authority (NEMSA) seven and statistical neighbours — plus the small-area explorer across 3,427 UK areas (2010–2023): choropleth of all 126 Gateshead LSOAs, inequality ratios and full income-component breakdowns.",
       "sources": "ONS GDHI estimates · ELS regional GDHI per head 1997–2023",
       "keywords": [
         "gdhi",
@@ -780,7 +780,7 @@
       "title": "ELS scorecard — all local indicators",
       "path": "economy/els-scorecard.html",
       "topic": "Economy",
-      "description": "Every ONS Explore Local Statistics indicator covering Gateshead — 89 indicators across 10 domains — ranked against all UK local authorities and benchmarked vs England/UK, the North East, NECA and statistical neighbours. Sortable scorecard plus per-indicator Explore view with trends, CIs and distributions.",
+      "description": "Every ONS Explore Local Statistics indicator covering Gateshead — 89 indicators across 10 domains — ranked against all UK local authorities and benchmarked vs England/UK, the North East region, the North East Mayoral Strategic Authority (NEMSA) seven and statistical neighbours. Sortable scorecard plus per-indicator Explore view with trends, CIs and distributions.",
       "sources": "ONS Explore Local Statistics · 89 indicators · 10 domains",
       "keywords": [
         "els",
@@ -813,7 +813,7 @@
       "title": "North East Creative Industries (CCIS)",
       "path": "business-industry-trade/creative-industries.html",
       "topic": "Business, industry and trade",
-      "description": "Creative sector business counts, employment and a GVA proxy across the seven North East Combined Authority local authorities, built by applying the DCMS creative-industries SIC definition to ONS data. Companion to the CCIS Framework Data & Evidence consultation.",
+      "description": "Creative sector business counts, employment and a GVA proxy across the seven local authorities of the North East Mayoral Strategic Authority (NEMSA), built by applying the DCMS creative-industries SIC definition to ONS data. Companion to the CCIS Framework Data & Evidence consultation.",
       "sources": "ONS UK Business Counts & BRES on the DCMS creative SIC definition · ONS regional GVA (balanced)",
       "keywords": [
         "creative",
@@ -905,7 +905,7 @@
       "title": "Local Outcomes Framework comparator",
       "path": "performance-outcomes/lgof-comparator.html",
       "topic": "Performance and outcomes",
-      "description": "Where Gateshead sits on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) across all 16 outcomes, against six switchable comparator groups — MHCLG's statistical neighbours, NECA 7, the North East 12, the ONS economic neighbours, and the national median with and without London. MHCLG publishes no dataset for the framework and its digital tool is not yet live, so each of the 112 live metrics is assembled from the original publication the framework names, across 12 publishing organisations, and rendered as 137 series (49 with published 95% confidence intervals). Group median, rank, quintile band and a better/worse reading per metric against all 132 English single-tier authorities, with a ranked comparator chart, trends, and a data-currency panel driven by the quarterly vintage sweep. A comparator tool, not an assessment of council performance: where a rank would mislead, none is given, and the 3 metrics MHCLG has not yet confirmed show as visible awaiting-data rows.",
+      "description": "Where Gateshead sits on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) across all 16 outcomes, against six switchable comparator groups — MHCLG's statistical neighbours, the NEMSA 7 (North East Mayoral Strategic Authority), the North East 12, the ONS economic neighbours, and the national median with and without London. MHCLG publishes no dataset for the framework and its digital tool is not yet live, so each of the 112 live metrics is assembled from the original publication the framework names, across 12 publishing organisations, and rendered as 137 series (49 with published 95% confidence intervals). Group median, rank, quintile band and a better/worse reading per metric against all 132 English single-tier authorities, with a ranked comparator chart, trends, and a data-currency panel driven by the quarterly vintage sweep. A comparator tool, not an assessment of council performance: where a rank would mislead, none is given, and the 3 metrics MHCLG has not yet confirmed show as visible awaiting-data rows.",
       "sources": "MHCLG Local Outcomes Framework · assembled from OHID, ONS, NOMIS, DfE, DHSC/ASCOF, MHCLG, DfT, Defra, DCMS, DWP, NDTMS, Sport England, Skills for Care",
       "keywords": [
         "lgof",
