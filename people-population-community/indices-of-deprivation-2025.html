@@ -5887,8 +5887,20 @@ function indCard(k,ppl,rate,den){
   const wardData={}; WARDS.forEach(w=>wardData[w.ward_cd]=w);
 
   const map=L.map('map',{scrollWheelZoom:true}).setView([54.93,-1.66],11);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    {attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
+  /* Basemap: Esri World Light Gray (keyless, no API key, free with attribution).
+     Replaced CARTO Positron on 9 Sep 2026 — CARTO began stamping
+     "API KEY REQUIRED" across unauthenticated basemap tiles. Labels ride in
+     their own pane above the choropleth so place names stay readable. */
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+    maxNativeZoom: 16, maxZoom: 19
+  }).addTo(map);
+  map.createPane('gc-labels');
+  map.getPane('gc-labels').style.zIndex = 450;
+  map.getPane('gc-labels').style.pointerEvents = 'none';
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+    pane: 'gc-labels', maxNativeZoom: 16, maxZoom: 19
+  }).addTo(map);
 
   let geo='lsoa', metric='imd_dec', layer=null;
   const colorOf=d=>DEC_COLORS[Math.max(1,Math.min(10,Math.round(d)))];

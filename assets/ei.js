@@ -100,6 +100,44 @@
     return el;
   }
 
+  // ---- "Show detail" ----
+  // Cards are all the same size, with the title, description and source line
+  // clipped to a fixed number of lines. Where text is actually cut, the card
+  // gets a button that lifts the clamps on that card alone. Cards whose text
+  // already fits never get one, so the button means something when it appears.
+  function isClipped(el) {
+    return !!el && el.scrollHeight > el.clientHeight + 1;
+  }
+  function wireDetail(sec) {
+    sec.querySelectorAll(".gc-card").forEach(function (c) {
+      if (c.classList.contains("gc-detail-open")) return; // measuring an open card tells us nothing
+      var cut = isClipped(c.querySelector("h3")) ||
+                isClipped(c.querySelector(".desc")) ||
+                isClipped(c.querySelector(".meta"));
+      var btn = c.querySelector(".gc-detail");
+      if (!cut) { if (btn) btn.remove(); return; }
+      if (btn) return;
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "gc-detail";
+      btn.textContent = "Show detail";
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Show the full description for " + (c.querySelector("h3") || {}).textContent);
+      var actions = c.querySelector(".actions");
+      actions.insertBefore(btn, actions.firstChild);
+      btn.addEventListener("click", function () {
+        var open = c.classList.toggle("gc-detail-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.textContent = open ? "Hide detail" : "Show detail";
+      });
+    });
+  }
+  // Line counts depend on the web font and on the column width, so re-measure
+  // once the font has loaded and again after the layout settles on a resize.
+  function remeasure() {
+    document.querySelectorAll(".gc-topic").forEach(wireDetail);
+  }
+
   // ---- search ----
   function wireSearch() {
     var input = document.getElementById("gc-search");
@@ -309,6 +347,7 @@
       pinnedProds.forEach(function (p) { pgrid.appendChild(card(p, { inPinned: true })); });
       setCount(psec, pinnedProds.length);
       root.appendChild(psec);
+      wireDetail(psec);
       truncate(psec, CARD_LIMIT);
     }
 
@@ -321,6 +360,7 @@
       featuredProds.forEach(function (p) { fgrid.appendChild(card(p, { inPinned: true })); });
       setCount(fsec, featuredProds.length);
       root.appendChild(fsec);
+      wireDetail(fsec);
       truncate(fsec, CARD_LIMIT);
     }
 
@@ -332,6 +372,7 @@
       prods.forEach(function (p) { grid.appendChild(card(p)); });
       setCount(sec, prods.length);
       root.appendChild(sec);
+      wireDetail(sec);
       truncate(sec, CARD_LIMIT);
     });
 
@@ -346,6 +387,7 @@
       arr.forEach(function (p) { grid.appendChild(card(p)); });
       setCount(sec, arr.length);
       root.appendChild(sec);
+      wireDetail(sec);
       collapsible(sec, true);
     });
 
@@ -357,6 +399,13 @@
     wireSearch();
     var sw = document.querySelector(".gc-searchwrap");
     if (sw && !sw.querySelector("svg")) sw.insertAdjacentHTML("afterbegin", ICON_SEARCH);
+
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+    var rt;
+    window.addEventListener("resize", function () {
+      clearTimeout(rt);
+      rt = setTimeout(remeasure, 180);
+    });
   }
 
   function boot() {

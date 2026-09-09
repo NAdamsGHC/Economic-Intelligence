@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gateshead's Economy at a Glance 2026</title>
+<meta name="description" content="The Gateshead Local Economic Assessment 2026 in one page. Output per hour, household income, jobs growth and participation, with the evidence behind the strategy.">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Gateshead Council brand tokens (gateshead.gov.uk): PT Sans, #045a90 blue, square corners */
+:root{
+  --navy:#045a90;--navy-d:#0F3B5B;--blue:#0772b4;--blue-l:#8fd0f5;
+  --amber:#e8a23d;--amber-bg:#fdf3e2;--amber-ink:#8a6516;
+  --ink:#1c2733;--muted:#5d6b7a;--line:#e2e8ee;--bg:#f4f6f9;--card:#fff;
+  --good:#1a7f37;--bad:#c0392b;--grey:#9aa8b6;--grey-d:#64748b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 24px 8px;}
+a{color:var(--navy);}
+
+/* ---- Hero ---- */
+.hero{background:var(--navy);color:#fff;padding:34px 24px 30px;}
+.hero .inner{max-width:1180px;margin:0 auto;}
+.hero .eyebrow{font-size:11.5px;letter-spacing:1.1px;text-transform:uppercase;color:var(--blue-l);font-weight:700;}
+.hero h1{font-size:34px;line-height:1.12;font-weight:700;margin-top:8px;max-width:900px;}
+.hero .spine{font-size:18px;margin-top:14px;max-width:820px;color:#dbe9f4;}
+.hero .edition{font-size:12.5px;margin-top:18px;color:#b9d2e6;max-width:820px;}
+
+/* ---- Headline figures ---- */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 6px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--navy);padding:15px 16px;}
+.kpi.warn{border-top-color:var(--amber);}
+.kpi .v{font-size:29px;font-weight:700;color:var(--navy);line-height:1.1;}
+.kpi .ci{font-size:12px;color:var(--muted);font-weight:700;margin-top:2px;}
+.kpi .l{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:6px;font-weight:700;}
+.kpi .s{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45;}
+.kpi .rank{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;margin-top:8px;background:#eef1f5;color:var(--grey-d);}
+.kpi .rank.bot{background:#fcebe9;color:var(--bad);}
+.kpi .rank.top{background:#e4f3e9;color:var(--good);}
+
+/* ---- Sections ---- */
+section{margin-top:30px;}
+h2{font-size:21px;color:var(--navy);font-weight:700;border-bottom:2px solid var(--navy);padding-bottom:7px;margin-bottom:6px;}
+h2 .num{color:var(--blue);font-size:15px;margin-right:8px;}
+.standfirst{font-size:14.5px;color:var(--ink);margin:12px 0 4px;max-width:900px;}
+.panel{background:var(--card);border:1px solid var(--line);padding:18px 20px;margin-top:14px;}
+.panel h3{font-size:15.5px;color:var(--navy);}
+.panel .sub{font-size:12.5px;color:var(--muted);margin-top:3px;margin-bottom:14px;}
+.panel .note{font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px solid var(--line);line-height:1.5;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.readout{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);padding:14px 18px;margin-top:14px;font-size:14px;max-width:920px;}
+.readout b{color:var(--navy);}
+.caveat{background:var(--amber-bg);border:1px solid #f0d8a8;border-left:5px solid var(--amber);padding:13px 17px;font-size:13px;color:#6b5320;margin-top:16px;}
+.caveat b{color:var(--amber-ink);}
+ul{margin:8px 0 0 20px;}
+li{margin-bottom:7px;font-size:14px;}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:11.5px;color:var(--muted);margin-top:10px;}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-2px;}
+.legend .bar-ci{width:2px;height:13px;background:var(--ink);margin:0 11px 0 5px;}
+
+/* ---- Priorities ---- */
+.prios{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px;}
+.prio{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--blue);padding:15px 17px;}
+.prio .n{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--blue);}
+.prio h3{font-size:15.5px;color:var(--navy);margin:5px 0 7px;}
+.prio p{font-size:13.3px;color:var(--ink);}
+
+/* ---- Vintages ---- */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);background:var(--card);}
+table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:640px;}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#fff;font-weight:700;font-size:12px;}
+td.num{text-align:right;white-space:nowrap;}
+tbody tr:nth-child(even){background:#fafbfc;}
+
+footer{margin-top:30px;background:#404040;color:#e6e9ec;}
+footer .inner{max-width:1180px;margin:0 auto;padding:20px 24px;font-size:12.5px;}
+footer a{color:#bfe0f5;}
+
+svg{display:block;width:100%;height:auto;}
+svg text{font-family:'PT Sans',Helvetica,Arial,sans-serif;}
+
+@media(max-width:900px){
+  .kpis{grid-template-columns:repeat(2,1fr);}
+  .grid2,.prios{grid-template-columns:1fr;}
+  .hero h1{font-size:26px;}
+}
+@media(max-width:560px){ .kpis{grid-template-columns:1fr;} }
+@media print{
+  body{background:#fff;}
+  .panel,.kpi,.prio{break-inside:avoid;}
+  section{break-inside:avoid-page;}
+}
+</style>
+</head>
+<body>
+
+<!-- Gateshead · Economic Intelligence brand bar (self-contained; portable) -->
+<style>
+.gcbar{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:#252525;color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap;
+  border-bottom:3px solid #045a90;position:relative;z-index:2000;}
+.gcbar *{box-sizing:border-box;}
+.gcbar a.gcbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+.gcbar .gcbar-mark{width:32px;height:32px;background:#045a90;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:16px;color:#fff;}
+.gcbar .gcbar-word{font-size:16px;font-weight:700;line-height:1.05;letter-spacing:.2px;}
+.gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
+.gcbar .gcbar-spacer{flex:1 1 auto;}
+.gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
+.gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
+.gcbar .gcbar-copy svg{width:15px;height:15px;}
+.gcbar .gcbar-copy:hover{border-color:#0772b4;color:#8fd0f5;}
+.gcbar .gcbar-copy.gcbar-copied{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-home{color:#cfd6dc;text-decoration:none;font-size:12px;}
+.gcbar .gcbar-home:hover{color:#fff;text-decoration:underline;}
+.gcbar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.gcbar-toast.gcbar-show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media print{.gcbar,.gcbar-toast{display:none !important;}}
+</style>
+<div class="gcbar" data-id="lea-2026-at-a-glance">
+  <a class="gcbar-logo" href="../index.html" title="Back to the Economic Intelligence landing page">
+    <span class="gcbar-mark">G</span>
+    <span class="gcbar-word">Gateshead<small>Economic Intelligence</small></span>
+  </a>
+  <span class="gcbar-spacer"></span>
+  <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
+  <button class="gcbar-copy" type="button" aria-label="Copy direct link to this dashboard" title="Copy direct link to this dashboard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var bar=document.currentScript.previousElementSibling;
+  while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
+  if(!bar)return;
+  var toast;
+  function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
+    toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
+  bar.querySelector('.gcbar-copy').addEventListener('click',function(){
+    var btn=this,url=location.origin+location.pathname;
+    var ok=function(){btn.classList.add('gcbar-copied');say('Link copied, opens this page directly');setTimeout(function(){btn.classList.remove('gcbar-copied');},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){leg(url);ok();});}else{leg(url);ok();}
+    function leg(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+<!-- /Gateshead brand bar -->
+
+<div class="hero">
+  <div class="inner">
+    <div class="eyebrow">Local Economic Assessment 2026 &middot; Interim Issue</div>
+    <h1>Gateshead's Economy at a Glance</h1>
+    <p class="spine">The largest constraint on Gateshead's economy is the value of its work. Participation sits close to national levels but output per hour does not. Strategy should follow the value of work rather than the volume of it.</p>
+    <p class="edition">This page summarises the Gateshead Local Economic Assessment 2026, Interim Issue, September 2026. It is a provisional edition. Several major releases land between now and the end of the year, and the December 2026 edition will be the definitive one. Every figure below carries its own vintage, listed in full at the foot of the page.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="caveat">
+    <b>Experimental analytical products, not official statistics.</b> This is an independent, unofficial page and not a Gateshead Council publication. It is built from published official statistics, but the derived measures (ranks, decompositions, index positions and model results) are the author's analytical judgements. Three cautions apply throughout. Survey estimates for a single authority carry wide margins, so year-to-year movements can be unclear. Deprivation indices measure relative standing and cannot be compared across releases. The productivity modelling is associational, meaning it identifies what moves together with output rather than what causes it.
+  </div>
+
+  <!-- ================= HEADLINE FIGURES ================= -->
+  <section id="headlines">
+    <h2>The Headline Position</h2>
+    <p class="standfirst">Six figures carry most of the assessment. Output and income sit near the bottom of the English distribution, while participation and the business base sit close to, or above, national benchmarks.</p>
+
+    <div class="kpis">
+      <div class="kpi warn">
+        <div class="v">£32.16</div>
+        <div class="l">GVA per hour worked, 2023</div>
+        <div class="s">An index of 76.8 against a UK average of 100, so around 23% below. The England median is £38.21 an hour.</div>
+        <div class="rank bot">256 of 296 English authorities</div>
+      </div>
+      <div class="kpi warn">
+        <div class="v">£19,745</div>
+        <div class="l">Household income per head, 2024</div>
+        <div class="s">Gross disposable household income, 22.1% below the England median. The gap widened from 21.9% in 2023.</div>
+        <div class="rank bot">274 of 296 English authorities</div>
+      </div>
+      <div class="kpi">
+        <div class="v">72.4%</div>
+        <div class="ci">±4.2pp</div>
+        <div class="l">Employment rate, aged 16&ndash;64</div>
+        <div class="s">Level with the NEMSA median of 72.4% and below England at 75.8%. The recent fall is not statistically established.</div>
+        <div class="rank">Apr 2025 to Mar 2026</div>
+      </div>
+      <div class="kpi warn">
+        <div class="v">94,975</div>
+        <div class="l">Employee jobs, 2024</div>
+        <div class="s">Broadly flat since 2015, against growth of 5.3% across NEMSA and 10.3% in England.</div>
+        <div class="rank bot">11.3% of NEMSA jobs, from 11.9%</div>
+      </div>
+      <div class="kpi">
+        <div class="v">5,580</div>
+        <div class="l">Registered enterprises, 2025</div>
+        <div class="s">Largely unchanged in recent years. The business birth rate of 11.4% in 2024 sits in the upper half nationally.</div>
+        <div class="rank top">Birth rate 97 of 296</div>
+      </div>
+      <div class="kpi warn">
+        <div class="v">19.0%</div>
+        <div class="l">Neighbourhoods in England's most deprived 10%</div>
+        <div class="s">Up from 16.7% at the previous release. As the index measures relative position, other places improved faster.</div>
+        <div class="rank bot">IMD 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VALUE VS VOLUME ================= -->
+  <section id="value">
+    <h2><span class="num">01</span>Value Is Worth Around Three Times Volume</h2>
+    <p class="standfirst">This is the central finding. Taking working-age population growth projected to 2043 and closing the entire employment-rate gap to England, which are deliberately generous assumptions, would put approximately 9,400 more residents into work. Reaching the UK average for output per hour on the job base the borough already has is worth around three times as much.</p>
+
+    <div class="panel">
+      <h3>What Each Route Would Add to Annual Output</h3>
+      <div class="sub">Gross value added, current prices, internal estimates from the Local Economic Assessment 2026</div>
+      <div id="c-value"></div>
+      <div class="note">Both figures are our own estimates and are rounded. The participation figure assumes every assumption falls Gateshead's way, so it should be read as a ceiling rather than a forecast. The case for raising participation rests on household income and on what work does for the people who gain it, rather than on the size of the output gain.</div>
+    </div>
+
+    <div class="readout"><b>The read.</b> Strategy should target the value the economy generates rather than the number of people in work. Participation is already close to national levels, so any strategy resting on participation gains has limited room.</div>
+  </section>
+
+  <!-- ================= OUTPUT PER HOUR ================= -->
+  <section id="productivity">
+    <h2><span class="num">02</span>Output per Hour Is the Binding Constraint</h2>
+    <p class="standfirst">Gateshead's gross value added per hour worked for 2023 is £32.16, against a North East median of £34.49 and an England median of £38.21 (ONS subregional productivity). That is 256th of 296 English authorities and 12th of the 15 areas ONS deems most similar. The gap has not closed at all in the past decade.</p>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>Gross Value Added per Hour Worked, 2023</h3>
+        <div class="sub">Current prices, smoothed. England and North East figures are medians</div>
+        <div id="c-prod"></div>
+        <div class="note">The subregional productivity series carries 296 English local authorities in every year of the period, and that is the denominator behind every productivity and output rank quoted here.</div>
+      </div>
+      <div class="panel">
+        <h3>Where the Productivity Gap Sits</h3>
+        <div class="sub">Share of the shortfall in value per job against England, decomposed</div>
+        <div id="c-mix"></div>
+        <div class="note">Valuing Gateshead's industry mix at England's rates accounts for around 4% of the shortfall in value per job. The remaining 96% is the performance of the sectors the borough already holds. Changing the industrial composition may raise the ceiling over a long horizon, but raising what existing firms produce addresses the rest.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= JOBS ================= -->
+  <section id="jobs">
+    <h2><span class="num">03</span>A Growth Gap Rather Than a Decline</h2>
+    <p class="standfirst">Employee jobs across the seven Mayoral Strategic Authority areas rose by approximately 42,000 over the decade to 2024, while Gateshead's own count was flat. The borough's share of regional employment fell from 11.9% to 11.3%. Decomposing that shortfall against England shows where it comes from.</p>
+
+    <div class="panel">
+      <h3>Employee Jobs, 2015 to 2024, Decomposed Against England</h3>
+      <div class="sub">Gateshead, two-digit SIC basis. Internal decomposition, figures rounded</div>
+      <div id="c-jobs"></div>
+      <div class="note">Industry mix accounts for a loss of around 1,500 jobs. The remaining 8,500 is the local component, being the amount by which Gateshead's own sectors underperformed the same sectors nationally. Gateshead produces less per employee job than England in twelve of fourteen sectors.</div>
+    </div>
+
+    <div class="panel">
+      <h3>Adding Work Without Adding Value</h3>
+      <div class="sub">Transport and storage against the borough average, 2024</div>
+      <div id="c-transport"></div>
+      <div class="note">Transport and storage employs approximately 7,760 people at around £28,800 of output per job, against a borough average of approximately £48,778, and it grew 63.0% between 2015 and 2024. Logistics is the borough's strongest market-sector employment specialism, at a location quotient of 1.61. This reconciles the borough adding work without adding value.</div>
+    </div>
+  </section>
+
+  <!-- ================= INCOME ================= -->
+  <section id="income">
+    <h2><span class="num">04</span>Household Income Is the Weakest Single Position</h2>
+    <p class="standfirst">Gross disposable household income per head for 2024 is £19,745, which is 274th of 296 English authorities and level with the bottom of Gateshead's fifteen statistical neighbours. Workplace pay sits closer to the national average than resident pay, so the borough hosts better-paid jobs than its residents typically hold.</p>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>Gross Disposable Household Income per Head, 2024</h3>
+        <div class="sub">North East and England figures are medians</div>
+        <div id="c-gdhi"></div>
+        <div class="note">The gap to the England median widened from 21.9% in 2023 to 22.1% in 2024. Household income spreads across everyone, whereas pay counts only those in work, which is why wages depict a slightly more positive story.</div>
+      </div>
+      <div class="panel">
+        <h3>Resident and Workplace Pay, 2025</h3>
+        <div class="sub">Median gross weekly pay, full-time employees. North East figures are medians</div>
+        <div id="c-pay"></div>
+        <div class="note">Workplace pay ranks 179th of 295 English authorities and resident pay 249th of 294. Workplace pay moved above resident pay in 2025, having previously been below it, implying that better-paid local jobs are held by people living elsewhere on average.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PARTICIPATION ================= -->
+  <section id="participation">
+    <h2><span class="num">05</span>Participation Is Close to National Levels</h2>
+    <p class="standfirst">Employment and activity rates ran above the regional average and close to England through 2023 and 2024. The Jan&ndash;Dec 2025 survey year showed employment falling to 70.2%, but the following window recovers to 72.4%. On these margins the year-on-year fall is not statistically established, and the administrative data does not settle it either. The claimant count stood at 5,035 in July 2026, approximately 4.0% of residents aged 16&ndash;64, and on same-month comparisons the picture has levelled off.</p>
+
+    <div class="panel">
+      <h3>Survey Measures With Their Confidence Intervals</h3>
+      <div class="sub">Annual Population Survey, Apr 2025 to Mar 2026, except qualifications (Jan&ndash;Dec 2025)</div>
+      <div id="c-aps"></div>
+      <div class="note">The bars show Gateshead's estimate and the whiskers its 95% confidence interval. Comparator markers are drawn without intervals because the source does not publish them alongside these estimates, and regional and national estimates rest on much larger samples, so they are far more precisely measured than Gateshead's. Where a comparator marker falls inside Gateshead's whiskers, the difference is not statistically established. From 11 August 2026 Annual Population Survey outputs are official statistics rather than accredited official statistics, and the sample boost has been reduced, which bites hardest at local authority level.</div>
+    </div>
+
+    <div class="readout"><b>The read.</b> Long-term sickness is the largest single reason for economic inactivity, at 33.0% of the inactive population, or approximately 9,500 residents. Gateshead is not distinguishable from the North East or England on this measure at current sample sizes, so the case for acting rests on the size of the group locally rather than on the borough being unusual.</div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills">
+    <h2><span class="num">06</span>The Pipeline Is Stronger Than the Stock</h2>
+    <p class="standfirst">Around 36.6% of working-age residents hold a Level 4 or higher qualification, against 48.0% in England. The skills gap matters most for what Gateshead residents earn rather than for what the borough produces, because qualified residents are recorded where they live but produce where they work. Beneath that stock, the post-16 pipeline is working.</p>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>16 and 17 Year Olds NEET or Activity Not Known, 2026</h3>
+        <div class="sub">Not in education, employment or training</div>
+        <div id="c-neet"></div>
+        <div class="note">Gateshead ranks 77th of the 152 authorities with education responsibilities. The borough achieves this with an unusually low "not known" rate of 0.6%, meaning it genuinely knows where its young people are, unlike many authorities where better tracking would likely raise the recorded figure. Apprenticeship achievements have risen from 690 in 2020/21 to 880 in 2024/25.</div>
+      </div>
+      <div class="panel">
+        <h3>Five-Year Business Survival Rate, 2024</h3>
+        <div class="sub">The 2019 cohort of business births still trading five years on</div>
+        <div id="c-biz"></div>
+        <div class="note">Five-year survival is above England, and the business birth rate ranks 97th of 296 English authorities. The weakness sits at the scale-up step rather than at formation. Information and communication has 45 sites employing 10 to 49 people and 5 employing 50 to 249, and has added sites of 10 or more employees faster than any other sector in the borough, up 42.9% since 2016 from a small base.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CALDERDALE ================= -->
+  <section id="calderdale">
+    <h2><span class="num">07</span>A Place-Specific Gap Is Not a Fixed One</h2>
+    <p class="standfirst">Our regression model finds that measured characteristics explain almost none of Gateshead's productivity gap against its statistical neighbours, leaving a large place-specific residual. Across 289 English authorities and fourteen years, no authority meaningfully changed the characteristics the model prices, so its variables should not be read as levers. A minority of authorities changed their trajectory anyway.</p>
+
+    <div class="panel">
+      <h3>Productivity Index, Gateshead and Calderdale</h3>
+      <div class="sub">GVA per hour worked, UK = 100. Calderdale is one of Gateshead's ONS statistical neighbours</div>
+      <div id="c-cald"></div>
+      <div class="note">Calderdale moved from an index of 78.3 in 2008 to 90.4 in 2021 while Gateshead fell from 85.3 to 78.5. Gateshead began seven points ahead and ended twelve points behind, a nineteen-point swing between two areas classed as alike, and the divergence began in 2011 for both. Calderdale has since declined again to 83.3 in 2023. Whatever produced that movement sits in the residual, which is what the model cannot see, and it is also where the room for local action sits.</div>
+    </div>
+  </section>
+
+  <!-- ================= PRIORITIES ================= -->
+  <section id="priorities">
+    <h2><span class="num">08</span>Four Priorities</h2>
+    <p class="standfirst">The evidence resolves into four priorities, weighted towards the value of work because that is where the largest constraint sits.</p>
+
+    <div class="prios">
+      <div class="prio">
+        <div class="n">Priority 1</div>
+        <h3>Make Work in Gateshead Higher Value</h3>
+        <p>Knowledge-intensive business services and manufacturing are associated with better local productivity values, and the borough is under-represented in professional, scientific and financial activities where output per hour is highest. Business support should favour industries where an additional job carries above-average value, where there is a local base at the scale-up threshold, and where the constraint is one the council can resolve. On those criteria construction, information and communication, and manufacturing would all be suitable.</p>
+      </div>
+      <div class="prio">
+        <div class="n">Priority 2</div>
+        <h3>Retain Scaling Firms Rather Than Feed Them Elsewhere</h3>
+        <p>The borough has tended to hold a presence in sectors without sharing in their national growth, which aligns to the profile of a feeder. Information and communication is the clearest single case in the business counts. The pipeline is working but the step above it is not.</p>
+      </div>
+      <div class="prio">
+        <div class="n">Priority 3</div>
+        <h3>Reduce Economic Inactivity Through Health Pathways</h3>
+        <p>Long-term sickness is the largest single reason for inactivity, at 33.0% of the inactive population or approximately 9,500 residents, which makes it the participation intervention with the most people to reach. Participation gains are worth around a third of what closing the productivity gap is worth, so this priority should be argued on household income and on what work does for the people who gain it.</p>
+      </div>
+      <div class="prio">
+        <div class="n">Priority 4</div>
+        <h3>Test Whether East&ndash;West Connectivity Constrains Access</h3>
+        <p>The borough's persistent east&ndash;west divide in deprivation, health, skills and attainment is reinforced by a road network that separates rather than connects. Connectivity does not by itself raise productivity, but it determines which residents can reach which opportunities.</p>
+      </div>
+    </div>
+
+    <div class="readout">
+      <b>What would change this conclusion.</b> Three things would move the position, being a sustained employment-rate decline significantly below regional and national averages confirmed by consecutive and statistically significant Annual Population Survey releases, sustained convergence in the productivity, output and household income gaps, and evidence that within-sector productivity gaps are closing.
+    </div>
+  </section>
+
+  <!-- ================= VINTAGES ================= -->
+  <section id="vintages">
+    <h2>Figures and Vintages</h2>
+    <p class="standfirst">Every figure on this page, with the period it refers to. Published figures are quoted as published. Figures marked as estimates are our own and are rounded.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Indicator</th><th>Gateshead</th><th>North East</th><th>England</th><th>Rank</th><th>Vintage</th></tr>
+        </thead>
+        <tbody id="vintage-rows"></tbody>
+      </table>
+    </div>
+
+    <div class="caveat">
+      <b>Source.</b> Gateshead Local Economic Assessment 2026, Interim Issue, September 2026, which draws on ONS subregional productivity and regional accounts, the Annual Population Survey, the Annual Survey of Hours and Earnings, the Business Register and Employment Survey, UK Business Counts, business demography, the Index of Multiple Deprivation 2025 and Department for Education participation data. This is a provisional edition. Subregional productivity for 2024 publishes on 5 November 2026 and regional accounts for 2024 in autumn 2026, so the output and productivity figures here will be superseded. The December 2026 edition will be the definitive one.
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="inner">
+    Open data from <a href="https://www.ons.gov.uk/">ONS</a>, <a href="https://www.nomisweb.co.uk/">NOMIS</a>,
+    <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-local-government">MHCLG</a> and DfE.
+    An independent, unofficial project &middot; produced and maintained by <a href="https://github.com/NAdamsGHC">NAdamsGHC</a> &middot;
+    <a href="../index.html">All dashboards</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------------------------------------------------------
+     Small SVG chart helpers. No dependencies, no network.
+     Every chart that plots an estimate carrying a confidence interval
+     draws that interval (house rule): whiskers on the bar, and a note
+     wherever the chart form cannot carry one.
+     --------------------------------------------------------------- */
+
+  var C = {
+    gh:   '#045a90',   // Gateshead
+    ghl:  '#0772b4',   // Gateshead, secondary
+    ne:   '#9aa8b6',   // North East / NEMSA
+    eng:  '#64748b',   // England
+    warn: '#c0392b',
+    good: '#1a7f37',
+    amber:'#e8a23d',
+    line: '#e2e8ee',
+    muted:'#5d6b7a',
+    ink:  '#1c2733'
+  };
+
+  function el(tag, attrs, text){
+    var n = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function svg(w, h, title){
+    var s = el('svg', {viewBox:'0 0 '+w+' '+h, role:'img', 'aria-label':title});
+    // Cap the drawn width a little above the design width. Left to scale freely
+    // a full-width chart blows the type up to twice the size it was drawn at.
+    s.setAttribute('style', 'max-width:' + Math.round(w * 1.18) + 'px');
+    return s;
+  }
+  function mount(id, node){
+    var host = document.getElementById(id);
+    if (host) host.appendChild(node);
+  }
+  function money(v){ return '£' + v.toLocaleString('en-GB'); }
+
+  /* ---- horizontal bar chart, optional error bars ---- */
+  function hbar(id, opts){
+    var rows = opts.rows, W = opts.w || 620, padL = opts.padL || 150, padR = 74, padT = 10;
+    var rowH = opts.rowH || 44, gap = 12;
+    var H = padT + rows.length * rowH + 30;
+    var s = svg(W, H, opts.title);
+    var max = opts.max || Math.max.apply(null, rows.map(function(r){
+      return r.value + (r.ci || 0);
+    })) * 1.14;
+    var span = W - padL - padR;
+    var x = function(v){ return padL + (v / max) * span; };
+
+    rows.forEach(function(r, i){
+      var y = padT + i * rowH;
+      var bh = rowH - gap;
+      var col = r.colour || C.ne;
+
+      // label
+      s.appendChild(el('text', {x: padL - 10, y: y + bh/2 + 4, 'text-anchor':'end',
+        'font-size':'12.5', fill: r.strong ? C.ink : C.muted,
+        'font-weight': r.strong ? '700' : '400'}, r.label));
+
+      // bar
+      s.appendChild(el('rect', {x: padL, y: y, width: Math.max(1, x(r.value) - padL),
+        height: bh, fill: col}));
+
+      // error bar
+      if (r.ci){
+        var lo = x(Math.max(0, r.value - r.ci)), hi = x(r.value + r.ci), cy = y + bh/2;
+        s.appendChild(el('line', {x1: lo, x2: hi, y1: cy, y2: cy,
+          stroke: C.ink, 'stroke-width':'1.6'}));
+        [lo, hi].forEach(function(px){
+          s.appendChild(el('line', {x1: px, x2: px, y1: cy - 7, y2: cy + 7,
+            stroke: C.ink, 'stroke-width':'1.6'}));
+        });
+      }
+
+      // value label
+      var vx = x(r.value + (r.ci || 0)) + 8;
+      s.appendChild(el('text', {x: vx, y: y + bh/2 + 4, 'font-size':'12.5',
+        'font-weight':'700', fill: r.strong ? C.gh : C.muted}, r.display));
+    });
+
+    // baseline
+    s.appendChild(el('line', {x1: padL, x2: padL, y1: padT - 2,
+      y2: padT + rows.length * rowH - gap + 2, stroke: C.line, 'stroke-width':'1'}));
+
+    if (opts.axis){
+      s.appendChild(el('text', {x: 8, y: H - 8, 'font-size':'11', fill: C.muted}, opts.axis));
+    }
+    mount(id, s);
+  }
+
+  /* =============== 01. Value vs volume =============== */
+  hbar('c-value', {
+    title: 'Reaching the UK average for output per hour is worth around £1,522m a year, against £469m from closing the entire employment rate gap to England',
+    padL: 262, rowH: 58,
+    rows: [
+      {label:'Raising output per hour to the UK average', value:1522,
+       display:'£1,522m', colour:C.gh, strong:true},
+      {label:'Closing the employment rate gap', value:469,
+       display:'£469m', colour:C.ne}
+    ],
+    axis: 'Added gross value added a year, current prices. Both are our own estimates'
+  });
+
+  /* =============== 02. Productivity =============== */
+  hbar('c-prod', {
+    title: 'Gateshead GVA per hour worked is £32.16 against a North East median of £34.49 and an England median of £38.21',
+    w: 520, padL: 130,
+    rows: [
+      {label:'Gateshead', value:32.16, display:'£32.16', colour:C.gh, strong:true},
+      {label:'North East median', value:34.49, display:'£34.49', colour:C.ne},
+      {label:'England median', value:38.21, display:'£38.21', colour:C.eng}
+    ],
+    axis: 'GVA per hour worked, 2023, current prices'
+  });
+
+  /* =============== 02b. Mix vs within-sector =============== */
+  (function(){
+    var W = 520, H = 190, s = svg(W, H,
+      'Around 96% of the shortfall in value per job is the performance of sectors Gateshead already holds; around 4% is industry mix');
+    var barY = 46, barH = 54, padL = 24, padR = 24, span = W - padL - padR;
+    var mix = 4, within = 96;
+    var wMix = span * mix / 100;
+
+    s.appendChild(el('rect', {x: padL, y: barY, width: wMix, height: barH, fill: C.amber}));
+    s.appendChild(el('rect', {x: padL + wMix, y: barY, width: span - wMix, height: barH, fill: C.gh}));
+
+    s.appendChild(el('text', {x: padL, y: 28, 'font-size':'12.5', 'font-weight':'700', fill: C.ink},
+      'Shortfall in value per job against England'));
+
+    // within-sector label sits inside the large block
+    s.appendChild(el('text', {x: padL + wMix + 14, y: barY + 24, 'font-size':'19',
+      'font-weight':'700', fill:'#fff'}, 'Around 96%'));
+    s.appendChild(el('text', {x: padL + wMix + 14, y: barY + 43, 'font-size':'12.5',
+      fill:'#dbe9f4'}, 'Performance within the sectors Gateshead already holds'));
+
+    // mix label with a leader line below the bar
+    var mx = padL + wMix / 2;
+    s.appendChild(el('line', {x1: mx, x2: mx, y1: barY + barH, y2: barY + barH + 18,
+      stroke: C.amber, 'stroke-width':'1.6'}));
+    s.appendChild(el('text', {x: padL, y: barY + barH + 36, 'font-size':'12.5',
+      'font-weight':'700', fill: C.amber}, 'Around 4% industry mix'));
+    s.appendChild(el('text', {x: padL, y: barY + barH + 54, 'font-size':'12',
+      fill: C.muted}, 'The share explained by valuing Gateshead’s industry mix at England’s rates'));
+
+    mount('c-mix', s);
+  })();
+
+  /* =============== 03. Jobs waterfall =============== */
+  (function(){
+    var W = 620, H = 290, s = svg(W, H,
+      'Gateshead would have expected around 10,000 more employee jobs; industry mix accounts for a loss of 1,500 and local performance for 8,500, leaving the count flat');
+    var padL = 46, padR = 20, padB = 76, padT = 22;
+    var span = W - padL - padR, base = H - padB;
+    var scale = (base - padT) / 11000;
+
+    var steps = [
+      {label:'Expected at', label2:'England’s rate', v: 10000, type:'up'},
+      {label:'Industry mix', label2:'', v: -1500, type:'down'},
+      {label:'Local sector', label2:'performance', v: -8500, type:'down'},
+      {label:'Actual change', label2:'2015 to 2024', v: 0, type:'total'}
+    ];
+
+    var bw = 92, gapx = (span - steps.length * bw) / (steps.length - 1);
+    var running = 0;
+
+    steps.forEach(function(st, i){
+      var x = padL + i * (bw + gapx);
+      var top, h, fill, valText;
+
+      if (st.type === 'total'){
+        top = base - 4; h = 4; fill = C.ink;
+        valText = 'Flat';
+      } else if (st.type === 'up'){
+        top = base - (running + st.v) * scale;
+        h = st.v * scale;
+        fill = C.gh;
+        valText = '+' + Math.abs(st.v).toLocaleString('en-GB');
+        running += st.v;
+      } else {
+        var from = running; running += st.v;
+        top = base - from * scale;
+        h = Math.abs(st.v) * scale;
+        fill = C.amber;
+        valText = '−' + Math.abs(st.v).toLocaleString('en-GB');
+      }
+
+      s.appendChild(el('rect', {x: x, y: top, width: bw, height: Math.max(4, h), fill: fill}));
+      s.appendChild(el('text', {x: x + bw/2, y: top - 8, 'text-anchor':'middle',
+        'font-size':'13', 'font-weight':'700', fill: st.type === 'down' ? '#8a6516' : C.gh}, valText));
+
+      s.appendChild(el('text', {x: x + bw/2, y: base + 20, 'text-anchor':'middle',
+        'font-size':'11.5', fill: C.muted}, st.label));
+      if (st.label2){
+        s.appendChild(el('text', {x: x + bw/2, y: base + 35, 'text-anchor':'middle',
+          'font-size':'11.5', fill: C.muted}, st.label2));
+      }
+    });
+
+    s.appendChild(el('line', {x1: padL - 8, x2: W - padR, y1: base, y2: base,
+      stroke: C.ink, 'stroke-width':'1.4'}));
+    s.appendChild(el('text', {x: padL - 12, y: base + 4, 'text-anchor':'end',
+      'font-size':'11', fill: C.muted}, '0'));
+    s.appendChild(el('text', {x: padL - 12, y: padT + 4, 'text-anchor':'end',
+      'font-size':'11', fill: C.muted}, '11k'));
+    s.appendChild(el('text', {x: padL, y: H - 12, 'font-size':'11', fill: C.muted},
+      'Employee jobs, Gateshead, 2015 to 2024. Estimates, rounded'));
+
+    mount('c-jobs', s);
+  })();
+
+  /* =============== 03b. Transport and storage =============== */
+  hbar('c-transport', {
+    title: 'Transport and storage produces around £28,800 per job against a borough average of around £48,778',
+    padL: 210,
+    rows: [
+      {label:'Transport and storage', value:28800, display:'£28,800',
+       colour:C.amber, strong:true},
+      {label:'Gateshead all-sector average', value:48778, display:'£48,778',
+       colour:C.gh}
+    ],
+    axis: 'Output per employee job, 2024. Our own estimates, rounded'
+  });
+
+  /* =============== 04. GDHI =============== */
+  hbar('c-gdhi', {
+    title: 'Gateshead gross disposable household income per head is £19,745 against a North East median of £20,171 and an England median of £25,332',
+    w: 520, padL: 130,
+    rows: [
+      {label:'Gateshead', value:19745, display:money(19745), colour:C.gh, strong:true},
+      {label:'North East median', value:20171, display:money(20171), colour:C.ne},
+      {label:'England median', value:25332, display:money(25332), colour:C.eng}
+    ],
+    axis: 'Gross disposable household income per head, 2024'
+  });
+
+  /* =============== 04b. Pay =============== */
+  (function(){
+    var W = 520, padL = 104, padR = 96, padT = 34, rowH = 76;
+    var groups = [
+      {name:'Resident pay',  gh:578.80, ne:577.85, eng:648.40},
+      {name:'Workplace pay', gh:590.10, ne:563.80, eng:649.80}
+    ];
+    var H = padT + groups.length * rowH + 18;
+    var s = svg(W, H,
+      'Gateshead resident pay is £578.80 a week and workplace pay £590.10, against England at £648.40 and £649.80');
+    var span = W - padL - padR, max = 700;
+    var x = function(v){ return padL + (v / max) * span; };
+
+    s.appendChild(el('text', {x: 4, y: 16, 'font-size':'11', fill: C.muted},
+      'Median gross weekly pay, full-time employees, 2025'));
+
+    groups.forEach(function(g, i){
+      var y = padT + i * rowH, bh = 24;
+      s.appendChild(el('text', {x: padL - 10, y: y + 17, 'text-anchor':'end',
+        'font-size':'12.5', 'font-weight':'700', fill: C.ink}, g.name));
+
+      s.appendChild(el('rect', {x: padL, y: y, width: x(g.gh) - padL, height: bh, fill: C.gh}));
+
+      // Gateshead's own figure is parked at the right margin, clear of the
+      // comparator markers, which otherwise sit on top of it.
+      s.appendChild(el('text', {x: W - 4, y: y + 17, 'text-anchor':'end',
+        'font-size':'12.5', 'font-weight':'700', fill: C.gh}, '£' + g.gh.toFixed(2)));
+
+      // Comparator markers, each labelled on its own line so two close
+      // comparators cannot overprint one another.
+      [{v:g.ne, c:C.ne, lbl:'North East median'}, {v:g.eng, c:C.eng, lbl:'England'}]
+        .forEach(function(m, k){
+          s.appendChild(el('line', {x1: x(m.v), x2: x(m.v), y1: y - 4, y2: y + bh + 4 + k * 15,
+            stroke: m.c, 'stroke-width':'2.2'}));
+          s.appendChild(el('text', {x: x(m.v) + 5, y: y + bh + 15 + k * 15,
+            'font-size':'10.5', 'font-weight':'700', fill: m.c},
+            m.lbl + ' £' + m.v.toFixed(2)));
+        });
+    });
+
+    mount('c-pay', s);
+  })();
+
+  /* =============== 05. APS with confidence intervals =============== */
+  (function(){
+    var W = 620, padL = 208, padR = 112, padT = 16, rowH = 76;
+    var rows = [
+      {label:'Employment rate, 16–64',        v:72.4, ci:4.2, ne:72.4, eng:75.8},
+      {label:'Economic inactivity rate, 16–64', v:22.4, ci:3.9, ne:24.5, eng:20.5},
+      {label:'Long-term sick, share of inactive', v:33.0, ci:9.5, ne:33.5, eng:28.0},
+      {label:'Residents 16–64 with RQF4+',    v:36.6, ci:4.6, ne:36.6, eng:48.0}
+    ];
+    var H = padT + rows.length * rowH + 8;
+    var s = svg(W, H, 'Gateshead survey estimates with 95% confidence intervals, against North East and England comparators');
+    var span = W - padL - padR, max = 82;
+    var x = function(v){ return padL + (v / max) * span; };
+
+    rows.forEach(function(r, i){
+      var y = padT + i * rowH, bh = 24;
+      s.appendChild(el('text', {x: padL - 10, y: y + 17, 'text-anchor':'end',
+        'font-size':'12.5', 'font-weight':'700', fill: C.ink}, r.label));
+
+      s.appendChild(el('rect', {x: padL, y: y, width: x(r.v) - padL, height: bh, fill: C.gh}));
+
+      // 95% confidence interval
+      var lo = x(r.v - r.ci), hi = x(r.v + r.ci), cy = y + bh/2;
+      s.appendChild(el('line', {x1: lo, x2: hi, y1: cy, y2: cy, stroke: C.ink, 'stroke-width':'1.8'}));
+      [lo, hi].forEach(function(px){
+        s.appendChild(el('line', {x1: px, x2: px, y1: cy - 8, y2: cy + 8,
+          stroke: C.ink, 'stroke-width':'1.8'}));
+      });
+
+      // The estimate is parked at the right margin, clear of the whiskers and
+      // of any comparator marker sitting beyond them.
+      s.appendChild(el('text', {x: W - 4, y: y + 17, 'text-anchor':'end',
+        'font-size':'12.5', 'font-weight':'700', fill: C.gh},
+        r.v.toFixed(1) + '% ±' + r.ci.toFixed(1) + 'pp'));
+
+      // Comparator markers, one label per line so close comparators stay legible
+      [{v:r.ne, c:C.ne, lbl:'North East'}, {v:r.eng, c:C.eng, lbl:'England'}]
+        .forEach(function(m, k){
+          s.appendChild(el('line', {x1: x(m.v), x2: x(m.v), y1: y - 4, y2: y + bh + 4 + k * 15,
+            stroke: m.c, 'stroke-width':'2.2'}));
+          s.appendChild(el('text', {x: x(m.v) + 5, y: y + bh + 15 + k * 15,
+            'font-size':'10.5', 'font-weight':'700', fill: m.c},
+            m.lbl + ' ' + m.v.toFixed(1) + '%'));
+        });
+    });
+
+    mount('c-aps', s);
+
+    var host = document.getElementById('c-aps');
+    if (host){
+      var lg = document.createElement('div');
+      lg.className = 'legend';
+      lg.innerHTML = '<span><i style="background:#045a90"></i>Gateshead estimate</span>' +
+        '<span><i class="bar-ci"></i>95% confidence interval</span>' +
+        '<span><i style="background:#9aa8b6;width:3px;height:14px"></i>North East, NEMSA median where one is published</span>' +
+        '<span><i style="background:#64748b;width:3px;height:14px"></i>England</span>';
+      host.appendChild(lg);
+    }
+  })();
+
+  /* =============== 06. NEET =============== */
+  hbar('c-neet', {
+    title: 'Gateshead 16 and 17 year olds NEET or activity not known is 4.8%, against England at 5.8% and the North East at 7.2%',
+    w: 520, padL: 130,
+    rows: [
+      {label:'Gateshead', value:4.8, display:'4.8%', colour:C.gh, strong:true},
+      {label:'England', value:5.8, display:'5.8%', colour:C.eng},
+      {label:'North East', value:7.2, display:'7.2%', colour:C.ne}
+    ],
+    axis: 'Lower is better. Administrative data, no sampling interval applies'
+  });
+
+  /* =============== 06b. Business survival =============== */
+  hbar('c-biz', {
+    title: 'Gateshead five-year business survival is 41.3% against England at 38.3% and the North East at 38.9%',
+    w: 520, padL: 160,
+    rows: [
+      {label:'Gateshead', value:41.3, display:'41.3%', colour:C.gh, strong:true},
+      {label:'North East', value:38.9, display:'38.9%', colour:C.ne},
+      {label:'England', value:38.3, display:'38.3%', colour:C.eng}
+    ],
+    axis: 'Five-year survival rate, 2019 cohort. Administrative data, no sampling interval applies'
+  });
+
+  /* =============== 07. Calderdale =============== */
+  (function(){
+    var W = 620, H = 280, s = svg(W, H,
+      'Calderdale rose from an index of 78.3 in 2008 to 90.4 in 2021 and 83.3 in 2023, while Gateshead fell from 85.3 to 78.5 and 76.8');
+    var padL = 76, padR = 118, padT = 24, padB = 44;
+    var x0 = 2008, x1 = 2023, yMin = 72, yMax = 94;
+    var X = function(v){ return padL + (v - x0) / (x1 - x0) * (W - padL - padR); };
+    var Y = function(v){ return padT + (yMax - v) / (yMax - yMin) * (H - padT - padB); };
+
+    // gridlines
+    [75, 80, 85, 90].forEach(function(g){
+      s.appendChild(el('line', {x1: padL, x2: W - padR, y1: Y(g), y2: Y(g),
+        stroke: C.line, 'stroke-width':'1'}));
+      s.appendChild(el('text', {x: padL - 16, y: Y(g) + 4, 'text-anchor':'end',
+        'font-size':'11', fill: C.muted}, String(g)));
+    });
+
+    var series = [
+      {name:'Calderdale', colour:C.amber, pts:[[2008,78.3],[2021,90.4],[2023,83.3]]},
+      {name:'Gateshead',  colour:C.gh,    pts:[[2008,85.3],[2021,78.5],[2023,76.8]]}
+    ];
+
+    series.forEach(function(se){
+      var d = se.pts.map(function(p, i){ return (i ? 'L' : 'M') + X(p[0]) + ' ' + Y(p[1]); }).join(' ');
+      s.appendChild(el('path', {d: d, fill:'none', stroke: se.colour, 'stroke-width':'2.6',
+        'stroke-linejoin':'round'}));
+      se.pts.forEach(function(p){
+        s.appendChild(el('circle', {cx: X(p[0]), cy: Y(p[1]), r:'4.5', fill: se.colour}));
+        s.appendChild(el('text', {x: X(p[0]), y: Y(p[1]) - 11, 'text-anchor':'middle',
+          'font-size':'11.5', 'font-weight':'700', fill: se.colour}, p[1].toFixed(1)));
+      });
+      var last = se.pts[se.pts.length - 1];
+      s.appendChild(el('text', {x: X(last[0]) + 12, y: Y(last[1]) + 4, 'font-size':'12.5',
+        'font-weight':'700', fill: se.colour}, se.name));
+    });
+
+    // axes
+    s.appendChild(el('line', {x1: padL, x2: W - padR, y1: H - padB, y2: H - padB,
+      stroke: C.ink, 'stroke-width':'1.2'}));
+    [2008, 2021, 2023].forEach(function(yr){
+      s.appendChild(el('text', {x: X(yr), y: H - padB + 18, 'text-anchor':'middle',
+        'font-size':'11.5', fill: C.muted}, String(yr)));
+    });
+    s.appendChild(el('text', {x: padL, y: H - 8, 'font-size':'11', fill: C.muted},
+      'GVA per hour worked, index, UK = 100. Points are the years quoted in the assessment, not a continuous series'));
+
+    mount('c-cald', s);
+  })();
+
+  /* =============== Vintage table =============== */
+  var VINTAGES = [
+    ['GVA per hour worked', '£32.16/hr', '£34.49/hr (NE median)', '£38.21/hr (England median)', '256 of 296', '2023'],
+    ['GVA per filled job', '£49,663', '£55,380 (NEMSA median)', '£59,130 (England median)', '262 of 296', '2023'],
+    ['Total GVA, current prices', '£5.039bn', '£68.9bn', '£2,113bn', 'N/A', '2023'],
+    ['Employment rate, 16–64', '72.4% (±4.2pp)', '72.4% (NEMSA median)', '75.8%', 'N/A', 'Apr 2025 to Mar 2026'],
+    ['Economic inactivity rate, 16–64', '22.4% (±3.9pp)', '24.5% (NEMSA median)', '20.5%', 'N/A', 'Apr 2025 to Mar 2026'],
+    ['Long-term sick, share of inactive', '33.0% (±9.5pp)', '33.5% (NE)', '28.0%', 'N/A', 'Apr 2025 to Mar 2026'],
+    ['Claimant count', '5,035 (4.0%)', '3.8% (NEMSA median)', '4.0%', 'N/A', 'July 2026'],
+    ['Gross disposable household income per head', '£19,745', '£20,171 (NE median)', '£25,332 (England median)', '274 of 296', '2024'],
+    ['Median weekly resident pay', '£578.80', '£577.85 (NE median)', '£648.40', '249 of 294', '2025'],
+    ['Median weekly workplace pay', '£590.10', '£563.80 (NE median)', '£649.80', '179 of 295', '2025'],
+    ['Residents aged 16–64 with RQF4+', '36.6% (±4.6pp)', '36.6% (NEMSA median)', '48.0%', 'N/A', 'Jan–Dec 2025'],
+    ['Employee jobs (two-digit SIC basis)', '94,975', '839,995 (NEMSA total)', '27,633,910', 'N/A', '2024'],
+    ['Share of NEMSA employee jobs', '11.3%', 'N/A', 'N/A', 'N/A', '2024'],
+    ['Registered enterprises', '5,580', '55,170 (NEMSA total)', '2,376,615', 'N/A', '2025'],
+    ['Business birth rate', '11.4%', '11.8% (NE)', '11.2%', '97 of 296', '2024'],
+    ['Five-year business survival rate', '41.3%', '38.9% (NE)', '38.3%', 'N/A', '2024'],
+    ['Neighbourhoods in England’s most deprived 10%', '19.0%', '21.5% (NE)', '10%', 'N/A', 'IMD 2025'],
+    ['16–17 year olds NEET or activity not known', '4.8%', '7.2%', '5.8%', '77 of 152', '2026']
+  ];
+  (function(){
+    var tb = document.getElementById('vintage-rows');
+    if (!tb) return;
+    VINTAGES.forEach(function(r){
+      var tr = document.createElement('tr');
+      r.forEach(function(cell, i){
+        var td = document.createElement('td');
+        td.textContent = cell;
+        if (i > 0 && i < 4) td.className = 'num';
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>

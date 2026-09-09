@@ -1,8 +1,8 @@
 {
   "site": "https://nadamsghc.github.io/Economic-Intelligence",
-  "updated": "8 September 2026",
+  "updated": "9 September 2026",
   "schedule": {
-    "updated": "8 September 2026",
+    "updated": "9 September 2026",
     "months": [
       {
         "id": "2026-07",
@@ -307,24 +307,6 @@
           "2027-06": [
             {
               "label": "Fri 4"
-            }
-          ]
-        }
-      },
-      {
-        "name": "Local Economic Assessment",
-        "cadence": "annual · December (2026 adds a one-off interim)",
-        "entries": {
-          "2026-08": [
-            {
-              "label": "Interim · Fri 28",
-              "kind": "big"
-            }
-          ],
-          "2026-12": [
-            {
-              "label": "Full · Fri 18",
-              "kind": "big"
             }
           ]
         }
@@ -698,6 +680,28 @@
       ]
     },
     {
+      "id": "lea-2026-at-a-glance",
+      "title": "Gateshead's Economy at a Glance 2026",
+      "path": "economy/lea-2026-at-a-glance.html",
+      "topic": "Economy",
+      "description": "The Local Economic Assessment 2026 on one page. Output per hour is the binding constraint at £32.16, ranking 256th of 296 English authorities, and closing that gap is worth around three times what closing the entire employment rate gap would be. Charts the jobs decomposition, household income, participation with its confidence intervals, and the four priorities that follow.",
+      "sources": "ONS subregional productivity · regional accounts · APS · ASHE · BRES · IoD2025 · DfE",
+      "keywords": [
+        "lea",
+        "local economic assessment",
+        "productivity",
+        "gva",
+        "household income",
+        "gdhi",
+        "jobs",
+        "participation",
+        "infographic",
+        "summary",
+        "priorities"
+      ],
+      "featured": true
+    },
+    {
       "id": "nomis-quick-look",
       "title": "NOMIS Quick Look",
       "path": "economy/nomis-quick-look.html",
@@ -802,8 +806,7 @@
         "sectors",
         "churn",
         "startups"
-      ],
-      "featured": true
+      ]
     },
     {
       "id": "creative-industries",

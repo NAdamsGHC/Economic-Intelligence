@@ -1541,11 +1541,35 @@ function initMap() {
   }
   _map.on('click', () => _map.scrollWheelZoom.enable());
   _map.on('mouseout', () => _map.scrollWheelZoom.disable());
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap, &copy; CARTO',
-    subdomains: 'abcd',
-    maxZoom: 19
+  /* Basemap: Esri World Light Gray (keyless, no API key, free with attribution).
+     Replaced CARTO Positron on 9 Sep 2026 — CARTO began stamping
+     "API KEY REQUIRED" across unauthenticated basemap tiles. Labels ride in
+     their own pane above the choropleth so place names stay readable. */
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+    maxNativeZoom: 16, maxZoom: 19
   }).addTo(_map);
+  _map.createPane('gc-labels');
+  _map.getPane('gc-labels').style.zIndex = 450;
+  _map.getPane('gc-labels').style.pointerEvents = 'none';
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+    pane: 'gc-labels', maxNativeZoom: 16, maxZoom: 19
+  }).addTo(_map);
+
+  /* The map is built before the container has settled at its final width, so
+     Leaflet caches a size too small and tiles only paint the top-left corner.
+     Recompute once layout has run, and again whenever the container resizes,
+     re-fitting the bounds so the seven BUAs stay framed. */
+  const refit = () => {
+    _map.invalidateSize({ animate: false });
+    if (pts.length) _map.fitBounds(pts, { padding: [60, 60], animate: false });
+  };
+  requestAnimationFrame(refit);
+  window.addEventListener('resize', refit);
+  if (window.ResizeObserver) {
+    new ResizeObserver(() => _map.invalidateSize({ animate: false }))
+      .observe(document.getElementById('bua-map'));
+  }
 }
 
 function popupHTML(b) {
