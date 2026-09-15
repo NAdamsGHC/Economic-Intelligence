@@ -1,8 +1,8 @@
 {
   "site": "https://nadamsghc.github.io/Economic-Intelligence",
-  "updated": "9 September 2026",
+  "updated": "15 September 2026",
   "schedule": {
-    "updated": "9 September 2026",
+    "updated": "15 September 2026",
     "months": [
       {
         "id": "2026-07",
@@ -109,7 +109,12 @@
               "href": "briefs/whats-new-2026-09-08.html"
             },
             {
-              "label": "Mon 14",
+              "label": "Mon 14 · pub Tue 15",
+              "status": "released",
+              "href": "briefs/whats-new-2026-09-15.html"
+            },
+            {
+              "label": "Mon 21",
               "status": "next"
             },
             {
@@ -372,6 +377,46 @@
         "ai",
         "barnsley",
         "nemsa"
+      ]
+    },
+    {
+      "id": "whats-new-2026-09-15",
+      "title": "What's New, 15 September 2026",
+      "path": "briefs/whats-new-2026-09-15.html",
+      "topic": "What's New",
+      "description": "Covering 8 to 15 September, an eight-day window because the Monday edition ran a day late. First edition in the new format: a one-page dashboard grading every item red, amber or green by what it asks of us, a top actions box, each item written to what changed, why it matters and what we should do, and the complete departmental log folded away rather than cut. The labour market release landed this morning. Gateshead's claimant count for August 2026 is 5,100, which is 4.1% of residents aged 16-64, up 210 on July and above the North East at 3.7% and England at 4.0%. On our own comparison of every July to August step since 2015, the 4.3% rise is the largest of the eleven years, against a median of 0.9%, and the same is true regionally and nationally, so the cause is unlikely to be local while the size is. The 18 to 24 count rose 8.3% to 1,040, also an eleven-year high for August. The PAYE local authority sheets refreshed to August 2026: payrolled employees 86,302, down approximately 405 on the year or approximately 0.47% against a UK fall of approximately 0.48%, with median monthly pay of GBP 2,517 growing approximately 2.90% against the UK's approximately 3.51%, so the monthly gap to the UK median widened from GBP 121 to GBP 140. The NatWest regional tracker put North East business activity at 49.6 in August, below the no-change mark. On policy, the visitor levy government response settles the design: a percentage of accommodation cost, no national cap, all mayoral and foundation strategic authorities eligible, strategic authorities as the tax authorities, one rate across the whole authority with no variation by constituent council, and no part-area levy, so a Quays-only levy is ruled out and Gateshead has no automatic share of the revenue. Spending plans are expected by March 2028, which supersedes the spring 2027 previously held. A joint ministerial letter tells departments there is no general duty to consult and extends the steer to the wider public sector. The Common Ground Award opened with GBP 2.5m of capital for community spaces, closing 12 October. Two release dates moved in our favour, the ONS productivity method paper to 17 September and regional GVA confirmed for 23 September, while the APS quality advice promised for September has not appeared. Corrections to our own collection: the gov.uk organisation identifier used for MHCLG returns nothing and fails silently, and the gov.uk search index missed two items the mail feed caught, so the log is now the union of both sources. Complete departmental log of 163 rows, of which 27 are forthcoming-release announcements and 136 actual publications, reconciled exactly against the mailroom digest.",
+      "sources": "Weekly round-up · ONS · NOMIS · gov.uk · ONS release calendar · S&P Global · team mailbox",
+      "series": "whats-new",
+      "date": "2026-09-15",
+      "keywords": [
+        "whats new",
+        "weekly",
+        "round-up",
+        "releases",
+        "claimant count",
+        "labour market",
+        "payrolled employees",
+        "paye rti",
+        "median pay",
+        "youth unemployment",
+        "neet",
+        "visitor levy",
+        "overnight visitor levy",
+        "fiscal devolution",
+        "nemsa",
+        "strategic authority",
+        "consultation",
+        "common ground award",
+        "connect to work",
+        "productivity",
+        "gva",
+        "annual population survey",
+        "pmi",
+        "natwest tracker",
+        "local outcomes framework",
+        "high streets",
+        "departmental log",
+        "rag"
       ]
     },
     {
