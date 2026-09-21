@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's New, 21 September 2026 &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Weekly round-up of data releases and policy developments relevant to Gateshead's economy, covering 15 to 21 September 2026. The August claimant count rise is entirely a youth rise, the first official 2024 GVA figure lands on 23 September, and the Jobs Guarantee goes national in November.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css">
+<style>
+  .wn-wrap{max-width:880px;margin:0 auto;padding:28px 24px 10px;}
+  .wn-date{font-size:12px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;}
+  .wn-wrap h1{font-size:28px;color:var(--gc-blue-dark);line-height:1.2;margin-bottom:10px;}
+  .wn-lede{font-size:15px;color:#41505e;margin-bottom:22px;}
+  .wn-wrap h2{font-size:18px;color:var(--gc-blue);border-bottom:2px solid var(--gc-blue);padding-bottom:6px;margin:30px 0 14px;}
+
+  /* --- executive dashboard --- */
+  .wn-dash{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px;}
+  .wn-dash th,.wn-dash td{border:1px solid var(--gc-line);padding:8px 10px;text-align:left;vertical-align:top;}
+  .wn-dash th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  .wn-dash th:nth-child(1){width:108px;}
+  .wn-dash th:nth-child(2){width:23%;}
+  .wn-dash th:nth-child(4){width:27%;}
+  .wn-dash td:nth-child(2) a{font-weight:700;color:var(--gc-blue);text-decoration:none;border-bottom:1px solid var(--gc-blue);}
+  .wn-dash td:nth-child(2) a:hover{color:var(--gc-blue-dark);}
+  .wn-dash tr:hover td{background:#fafcfd;}
+  .rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;
+       text-transform:uppercase;padding:2px 7px;border:1px solid;white-space:nowrap;}
+  .rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+  .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+  .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+
+  /* --- top actions --- */
+  .wn-actions{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);
+              padding:14px 18px 6px;margin:18px 0 6px;}
+  .wn-actions h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .wn-actions ol{margin:0 0 10px 18px;padding:0;font-size:13.5px;}
+  .wn-actions li{margin-bottom:7px;}
+  .wn-actions .by{font-weight:700;color:#8c1c1c;}
+  .wn-actions p.carry{font-size:12.5px;color:#6a7784;margin:0 0 10px;border-top:1px solid var(--gc-line);padding-top:8px;}
+
+  /* --- items --- */
+  .wn-item{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:13px 17px;margin-bottom:14px;}
+  .wn-item.r{border-left-color:#c62828;}
+  .wn-item.a{border-left-color:#c9862a;}
+  .wn-item.g{border-left-color:#266427;}
+  .wn-item .when{font-size:11px;font-weight:700;color:#6a7784;text-transform:uppercase;letter-spacing:.5px;}
+  .wn-item h3{font-size:15.5px;color:var(--gc-ink);margin:3px 0 8px;}
+  .wn-item h3 .rag{vertical-align:middle;margin-right:7px;}
+  .wn-item dl{margin:0;font-size:13.5px;}
+  .wn-item dt{font-weight:700;color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;
+              letter-spacing:.4px;margin-top:9px;}
+  .wn-item dt:first-child{margin-top:0;}
+  .wn-item dd{margin:3px 0 0;}
+  .wn-item dd + dt{margin-top:10px;}
+
+  .wn-stat{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px;}
+  .wn-stat div{flex:1 1 150px;border:1px solid var(--gc-line);border-top:3px solid var(--gc-blue);padding:9px 11px;}
+  .wn-stat b{display:block;font-size:20px;color:var(--gc-blue-dark);line-height:1.1;}
+  .wn-stat span{font-size:11.5px;color:#6a7784;display:block;margin-top:3px;}
+
+  .wn-cal{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px;}
+  .wn-cal th,.wn-cal td{border:1px solid var(--gc-line);padding:6px 9px;text-align:left;vertical-align:top;}
+  .wn-cal th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;letter-spacing:.4px;}
+  .wn-cal td:first-child{white-space:nowrap;font-weight:700;color:var(--gc-blue-dark);}
+
+  .wn-note{background:var(--gc-panel);border:1px solid var(--gc-line);padding:13px 17px;font-size:13px;color:#41505e;margin-top:22px;}
+
+  /* --- collapsible log --- */
+  .wn-fold{border:1px solid var(--gc-line);margin-top:8px;}
+  .wn-fold > summary{cursor:pointer;padding:11px 15px;background:var(--gc-panel);
+                     font-weight:700;color:var(--gc-blue-dark);font-size:14px;list-style:none;}
+  .wn-fold > summary::-webkit-details-marker{display:none;}
+  .wn-fold > summary::before{content:"\25B8";display:inline-block;margin-right:9px;color:var(--gc-blue);}
+  .wn-fold[open] > summary::before{content:"\25BE";}
+  .wn-fold > summary:focus{outline:2px solid var(--gc-blue);outline-offset:-2px;}
+  .wn-fold .meta{display:block;font-weight:400;font-size:12px;color:#6a7784;margin-top:5px;}
+  .wn-foldbody{padding:12px 15px 15px;}
+  .wn-log{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:8px;table-layout:fixed;}
+  .wn-log th,.wn-log td{border:1px solid var(--gc-line);padding:4px 6px;text-align:left;vertical-align:top;}
+  .wn-log th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11px;text-transform:uppercase;letter-spacing:.3px;}
+  .wn-log td:nth-child(1){width:52px;white-space:nowrap;font-weight:700;color:var(--gc-blue-dark);}
+  .wn-log td:nth-child(2){width:56px;font-weight:700;}
+  .wn-log td:nth-child(3){width:24%;}
+  .wn-log td:nth-child(4){width:30%;color:#41505e;}
+  .wn-log a{color:var(--gc-blue);}
+  .wn-scroll{overflow-x:auto;}
+  @media (max-width:640px){
+    .wn-dash,.wn-dash thead,.wn-dash tbody,.wn-dash th,.wn-dash td,.wn-dash tr{display:block;}
+    .wn-dash thead{display:none;}
+    .wn-dash tr{border:1px solid var(--gc-line);margin-bottom:10px;}
+    .wn-dash td{border:0;border-bottom:1px solid var(--gc-line);}
+    .wn-dash td:last-child{border-bottom:0;}
+  }
+  .wn-log tr.ann td{background:#fbf8ef;}
+  .wn-log tr.ann td:nth-child(4){font-style:italic;}
+</style></head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  </div>
+</header>
+
+<main class="wn-wrap">
+
+  <div class="wn-date">What's New &middot; weekly round-up &middot; covering 15 &ndash; 21 September</div>
+  <h1>What's New, 21 September 2026</h1>
+  <p class="wn-lede">A short weekly read of what's landed, what's coming, and what matters for Gateshead's economy. Three things carry the week. The claimant count rose in August and the whole of the rise sits in the 18 to 24 age band. The first official 2024 GVA figure for Gateshead lands on Wednesday. And the Jobs Guarantee goes national in November, aimed squarely at the age group where we are most exposed.</p>
+
+  <h2>This Week at a Glance</h2>
+
+  <table class="wn-dash">
+    <thead>
+      <tr><th>Priority</th><th>What</th><th>What changed?</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#gva">Regional GVA 2024</a></td>
+        <td>The delayed balanced GVA release is confirmed for Wednesday 23 September, with a revised back series</td>
+        <td>Read it on release and give the first Gateshead 2024 read</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#claimant">Claimant count</a></td>
+        <td>Up to 5,100 in August. The 18 to 24 band accounts for all of the rise on the year and more</td>
+        <td>Lead the monthly brief on the youth series, and cut it to ward</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#jobsguarantee">Jobs Guarantee</a></td>
+        <td>National rollout from November across 25 areas, for 18 to 24s on Universal Credit for 18 months or more</td>
+        <td>Find the North East lead delivery partner and size the Gateshead cohort</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#ukbc">UK Business Counts</a></td>
+        <td>A new vintage lands on Thursday 24 September and supersedes the 2025 figures we publish</td>
+        <td>Refresh the business base figures across the products</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#housebuilding">Council housebuilding fund</a></td>
+        <td>The 2026-27 bidding round opened today and closes on 2 November</td>
+        <td>Flag it to housing and development colleagues this week</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#commonground">Common Ground Award</a></td>
+        <td>Guidance updated with an FAQ on 17 September. Applications still close on 12 October</td>
+        <td>Decide whether we convene a consortium, having missed the 18 September date we set</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#prideinplace">Pride in Place</a></td>
+        <td>The Beacon Lough and Wrekenton plan is due to MHCLG in November 2026, and the form and templates landed on 17 September</td>
+        <td>Offer the neighbourhood board the small-area evidence for its ten-year plan</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#levy">Visitor levy</a></td>
+        <td>Nothing new this week. The baseline we said we needed has not been started</td>
+        <td>Build the borough overnight-stay and accommodation baseline</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#productivity">Productivity method</a></td>
+        <td>The ONS component method paper landed. It halves the measured post-2008 slowdown</td>
+        <td>Whole economy from November, industry from February 2027</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#rates">Interest rates and inflation</a></td>
+        <td>Rates held at 3.75% on a 6 to 3 vote, with three members voting to raise. Inflation back up to 3.1%</td>
+        <td>Restate the rate assumption in any forward-looking work</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#housing">Housing costs</a></td>
+        <td>The North East has the highest rent inflation and the highest house price inflation of any English region</td>
+        <td>Scope a housing affordability deep dive</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#post16">Post-16 pathways</a></td>
+        <td>The 14 plus reform programme now has a named co-design forum, and it seats mayors</td>
+        <td>Ask what devolved 16 to 19 funding would mean for Gateshead providers</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#efs">Exceptional financial support</a></td>
+        <td>&pound;91m to transform high-cost services in 14 councils. Gateshead is not among them</td>
+        <td>None. Noted as a signal of where support is going</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#lgr">Reorganisation review</a></td>
+        <td>The review launched on 7 September covers two-tier areas only</td>
+        <td>None. One line if members ask</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#flexible">Flexible working</a></td>
+        <td>The government response to the flexible working consultation was published on 15 September</td>
+        <td>None this week. Revisit if the inactivity work needs an employer-side lever</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#forum">Economic Forum slides</a></td>
+        <td>The July pack and the labour market transformation pack are both on the ONS SlideShare account</td>
+        <td>None. The standing watch closes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="wn-actions">
+    <h3>Top actions this week</h3>
+    <ol>
+      <li>Read the regional GVA release on the morning of <span class="by">Wednesday 23 September</span> and give the first Gateshead 2024 read, including what the revised back series does to the figures we have been quoting</li>
+      <li>Refresh the business base figures across the products once the new UK Business Counts vintage lands on <span class="by">Thursday 24 September</span></li>
+      <li>Decide whether Gateshead convenes a Common Ground Award consortium. The date we set ourselves was 18 September and it has passed. Applications close <span class="by">12 October</span>, so this is now decide or drop</li>
+      <li>Flag the Council Housebuilding Support Fund to housing and development colleagues <span class="by">this week</span>, and ask whether Gateshead is bidding. Bids close 2 November</li>
+      <li>Establish who the North East lead delivery partner is for the Jobs Guarantee, and how many Gateshead 18 to 24 year olds meet the eligibility test, before the rollout starts in <span class="by">November</span></li>
+      <li>Offer the Beacon Lough and Wrekenton neighbourhood board a small-area evidence pack for its Pride in Place plan, which is due to MHCLG in <span class="by">November</span>. Nothing is currently packaged for that board</li>
+      <li>Start the borough overnight-stay and accommodation-stock baseline. No deadline has been published, but NEMSA has to consult before it can levy, and we still have nothing to put into that consultation</li>
+    </ol>
+    <p class="carry"><b>Carried forward.</b> Four reds were open from the 15 September edition. Two close this week. The claimant count seasonality test is done and sits in the monthly economic update published today. The ONS productivity paper has been read and drops to amber, because what remains is a dated adoption timetable rather than anything asked of us now. Two stay open and are carried above, both first appearing on 15 September, being the Common Ground Award decision and the visitor levy baseline.</p>
+  </div>
+
+  <h2>What Landed</h2>
+
+  <div class="wn-item r" id="gva">
+    <div class="when">Confirmed for Wednesday 23 September &middot; ONS</div>
+    <h3><span class="rag r">Red</span>The First Official 2024 GVA Figure for Gateshead Lands on Wednesday</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The ONS release calendar now confirms <a href="https://www.ons.gov.uk/releasecalendar">Regional economic activity by gross domestic product, UK: 1998 to 2024</a> for 09:30 on Wednesday 23 September 2026. This is the delayed balanced GVA release. It carries the first official 2024 local authority figure for Gateshead, and it revises the back series at the same time. Gateshead's balanced gross value added at current basic prices for 2023 is &pound;5.0bn (<a href="https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region">ONS regional accounts</a>), which has been the latest available all year.</dd>
+      <dt>Why it matters?</dt>
+      <dd>This is the number the whole autumn cycle has been waiting on, and it settles an open question of our own. We have been carrying internal estimates of &pound;5.2bn to &pound;5.3bn for 2024, derived from our regression and forecast work. Wednesday tells us whether those estimates were any good. The revised back series matters as much as the new year, because a revision moves the base that every growth rate and every gap-to-peers comparison in our published work is calculated from. Anything quoting a 2023 or earlier GVA figure becomes a stale vintage on Wednesday morning.</dd>
+      <dt>What should we do?</dt>
+      <dd>Read it on release and give the Gateshead read the same day. Three things to report, being the 2024 level, what the revision does to the back series we have been quoting, and how our internal estimates performed against the published figure. That last one is the honest test of the forecasting work and should be reported whichever way it falls.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="claimant">
+    <div class="when">15 September &middot; ONS via NOMIS</div>
+    <h3><span class="rag r">Red</span>The August Claimant Count Rise Is Entirely a Youth Rise</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead's claimant count for August 2026 is 5,100 people, and claimants as a proportion of residents aged 16-64 is 4.1% (<a href="https://www.nomisweb.co.uk/datasets/cc162_1">NOMIS, claimant count by sex and age, NM_162_1, not seasonally adjusted</a>). That is up from 4,890 in July 2026 and 5,000 in August 2025. The comparators for August 2026 are the North East at 63,800 and 3.7%, and the United Kingdom at 1,698,450 and 3.9%. The age breakdown is where the story is. Gateshead's claimant count for those aged 18-24 is 1,040 in August 2026, against 960 in July 2026 and 940 in August 2025.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The borough total rose by 100 on the year. The 18-24 band rose by 100 on the year on its own, so every other age band together is flat or falling. That is the first hard local number to land on the 18-24 exposure we have been describing since July, and it is an administrative count rather than a survey estimate, so there is no confidence interval to hide behind. Gateshead also sits above both the regional and the national rate. The youth series is small enough that one month proves nothing, but the direction has now held for three.</dd>
+      <dt>What should we do?</dt>
+      <dd>The monthly economic update published today leads on this and carries the seasonality test that was outstanding from last week. The next step is a ward-level cut, which NM_162_1 supports, to establish whether the youth rise is borough-wide or concentrated. That would turn a headline into something a service could act on.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="jobsguarantee">
+    <div class="when">16 September &middot; DWP</div>
+    <h3><span class="rag r">Red</span>The Jobs Guarantee Goes National in November, Aimed at 18 to 24 Year Olds</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>DWP updated the <a href="https://www.gov.uk/government/publications/jobs-guarantee">Jobs Guarantee</a> publication page on 16 September 2026, replacing the national rollout grant instructions to clarify the moderation process. The rollout runs from November 2026 across 25 areas. It offers a fully funded six-month paid job at 25 hours a week at the National Minimum Wage, with employer National Insurance and pension covered, to 18 to 24 year olds who have been on Universal Credit for 18 months or more. The first phase, from 26 August 2026, covered six areas and none of them was in the North East.</dd>
+      <dt>Why it matters?</dt>
+      <dd>This is a national intervention pointed at exactly the cohort where Gateshead's own data says we are exposed. The claimant count item above says the 18-24 band accounts for the whole of the borough's rise on the year. A fully funded six-month job for long-duration claimants in that band is the largest single lever available to us on that problem, and it arrives in about six weeks. Two facts we do not hold are the lead delivery partner for the North East area, which employers have to approach directly, and the size of the eligible Gateshead cohort, which needs a Universal Credit duration cut rather than the headline claimant count.</dd>
+      <dt>What should we do?</dt>
+      <dd>Establish both before November. The delivery partner name is a question for NEMSA or DWP district rather than a data pull, because the grant competition closed in July and the partner list is not published on gov.uk. The cohort size is ours to derive, and it is the number that tells colleagues whether this is worth building employer engagement around.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="ukbc">
+    <div class="when">Confirmed for Thursday 24 September &middot; ONS</div>
+    <h3><span class="rag r">Red</span>A New Business Counts Vintage Supersedes the Figures We Publish</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>UK business; activity, size and location 2026 is confirmed for 09:30 on Thursday 24 September 2026 (<a href="https://www.ons.gov.uk/releasecalendar">ONS release calendar</a>). It feeds the UK Business Counts tables on NOMIS. Gateshead's UK Business Counts enterprise total for 2025 is 5,580 (<a href="https://www.nomisweb.co.uk/datasets/idbrent">NOMIS, UK Business Counts, enterprises, NM_142_1</a>), and that is the figure our products currently carry.</dd>
+      <dt>Why it matters?</dt>
+      <dd>This is a vintage change rather than a finding, but it touches several live products at once. The business base figure appears in the NOMIS Quick Look, in the assessment work and in the size band and sector splits underneath both. A new vintage landing two days after the GVA release means the business base and the output base both move in the same week, and any comparison that straddles the two needs checking rather than assuming.</dd>
+      <dt>What should we do?</dt>
+      <dd>Run the refresh once it lands and report which figures moved. The snapshot products compute their own staleness, so a missed refresh shows an amber vintage flag rather than failing silently, but it still shows.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="housebuilding">
+    <div class="when">21 September &middot; MHCLG</div>
+    <h3><span class="rag r">Red</span>The Council Housebuilding Support Fund Opened Today and Closes on 2 November</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG updated its <a href="https://www.gov.uk/guidance/capacity-to-build">Capacity to Build</a> guidance today to open the 2026-27 Council Housebuilding Support Fund bidding round. Applications are open from 21 September to 2 November 2026. It is revenue funding for early-stage housing development work such as feasibility, site investigation and pipeline preparation, intended to strengthen later Social and Affordable Homes Programme bids. The programme is &pound;46m over three years to March 2029, run with Homes England and the Local Government Association, and it supported 44 councils in 2025-26.</dd>
+      <dt>Why it matters?</dt>
+      <dd>It is a dated window that closes inside the autumn, and it is revenue rather than capital, which is the scarcer kind. The decision is not ours, but the evidence that supports a bid is. Site pipeline, viability context and small-area housing need are all things we hold or can build quickly.</dd>
+      <dt>What should we do?</dt>
+      <dd>Flag it to housing and development colleagues this week and ask whether Gateshead intends to bid. If yes, offer the site and pipeline evidence. If nobody is bidding, that is worth knowing too, and it is a finding rather than a gap.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="commonground">
+    <div class="when">17 September &middot; MHCLG &middot; carried from 15 September</div>
+    <h3><span class="rag r">Red</span>Common Ground Award Guidance Updated, and Our Own Decision Date Has Passed</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG added a set of frequently asked questions to the <a href="https://www.gov.uk/government/publications/common-ground-award-2026-to-2027-prospectus">Common Ground Award 2026 to 2027 prospectus</a> on 17 September 2026. The award is competitive capital funding for organisations promoting social cohesion in England. Applications close on 12 October 2026. Nothing about the deadline changed.</dd>
+      <dt>Why it matters?</dt>
+      <dd>We set ourselves 18 September to decide whether Gateshead convenes a consortium, and that date passed without a decision. A consortium bid needs partners, a lead and a capital proposition, and three weeks is thin for all three. The update itself is minor, but it is a reminder that the window is still open and is now the constraint.</dd>
+      <dt>What should we do?</dt>
+      <dd>Decide this week, either way. If a consortium is not realistic in the time left, say so and close the item rather than letting it expire on 12 October by default.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="prideinplace">
+    <div class="when">17 September &middot; MHCLG</div>
+    <h3><span class="rag r">Red</span>Gateshead's Pride in Place Plan Is Due to MHCLG in November</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG updated <a href="https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places">Pride in Place Programme: Pride in Place Plans for Phase 2 places</a> on 17 September 2026, adding the Phase 2 plan form questions, an indicative spend profile template and an updated submission process. Neighbourhood Boards submit a ten-year vision and a four-year investment plan, with the local authority as accountable body. The 160 boards named in September 2025 submit by 30 November 2026, with flexibility to 26 February 2027. The 40 boards named in March 2026, and boards in Wales, submit by 26 February 2027. Gateshead is not among the 40 named in March 2026 (<a href="https://www.gov.uk/government/news/local-people-take-the-lead-in-40-more-communities">MHCLG, 20 March 2026</a>), where the only North East places named are two Newcastle upon Tyne neighbourhoods.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The deadline binds Gateshead. Beacon Lough and Wrekenton was selected in September 2025 to receive up to &pound;20 million over ten years, and the Council confirms that its neighbourhood board will submit a ten-year regeneration plan to MHCLG in November 2026 (<a href="https://www.gateshead.gov.uk/article/37538/Pride-in-Place-Programme">Gateshead Council</a>). That places the borough in the September 2025 cohort, so 30 November is the date, with flexibility to 26 February 2027 available across that cohort. The Council is the accountable body. The plan has to carry a ten-year vision, a four-year investment plan and evidence of community engagement, which is the largest single piece of neighbourhood-level evidence work in the borough this autumn.</dd>
+      <dt>What should we do?</dt>
+      <dd>Offer the neighbourhood board the small-area evidence base for its plan, and do it now rather than in November. The data it needs exists, covering claimant and youth claimant counts at ward level, deprivation, business stock and the housing figures in this edition, and none of it is currently packaged for that board. This is a proposal for Nathaniel to commission rather than a commitment, but the deadline makes it time-limited.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item r" id="levy">
+    <div class="when">No movement this week &middot; carried from 15 September</div>
+    <h3><span class="rag r">Red</span>The Visitor Levy Baseline Is Still Not Started</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing this week. No NEMSA or HM Treasury publication on the Overnight Visitor Levy appeared in the window. The design position is unchanged, with the levy available to all strategic authorities from April 2027 and revenue plans due by March 2028.</dd>
+      <dt>Why it matters?</dt>
+      <dd>NEMSA has to consult before it can levy, and a consultation is the only point at which the distribution of the money is genuinely open. We have no borough baseline of overnight stays or accommodation stock, so we would arrive at that consultation with nothing to argue from. The Quays visitor economy is the part of the borough with most at stake.</dd>
+      <dt>What should we do?</dt>
+      <dd>Start the baseline. It does not need the consultation to exist first, and building it afterwards would be too late to shape anything.</dd>
+    </dl>
+  </div>
+
+  <h2>Method, Money and Context</h2>
+
+  <div class="wn-item a" id="productivity">
+    <div class="when">17 September &middot; ONS</div>
+    <h3><span class="rag a">Amber</span>The New Productivity Method Halves the Measured Post-2008 Slowdown</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The ONS published <a href="https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/methodologies/componentapproachtomeasuringlabourproductivityuk1997to2024">Component approach to measuring labour productivity, UK: 1997 to 2024</a> on 17 September 2026, as research rather than official statistics. It rebuilds labour input from Workforce Jobs benchmarked to BRES rather than from the Labour Force Survey total, and it builds hours from Annual Survey of Hours and Earnings usual hours with leave, bank holidays, sickness and overtime deducted separately instead of taking reported actual hours. By 2024 the jobs estimate is around 4.7% higher than the Labour Force Survey total it replaces. On output per hour, growth from 2009 to 2019 becomes 1.3% a year against 0.7% on the current approach, while growth from 1997 to 2007 becomes 2.0% against 2.1%. Over 1997 to 2024 cumulative growth becomes 40.7% against 34.0%.</dd>
+      <dt>Why it matters?</dt>
+      <dd>This roughly halves the size of the post-financial-crisis productivity slowdown as measured, without making it disappear. Productivity is the spine of our assessment work and of the case for intervention, so a measurement change of that size changes the national story any local analysis is set against. The timetable is the part that matters for us. The whole economy figures switch to the new method in November 2026, and industry figures follow at the February 2027 quarterly release. The paper itself covers neither industry nor subnational estimates, and the accompanying ONS blog says improved subnational data follows industry during 2027.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing is required now, which is why this drops from red. Two dates go on the forward plan. November 2026, when the whole economy series changes under us. And February 2027, when industry estimates change, which is the first point the new method could touch anything we publish. The subregional productivity release on 5 November 2026 still comes on the current method, so it is comparable with what we hold.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item a" id="rates">
+    <div class="when">16 and 17 September &middot; ONS and Bank of England</div>
+    <h3><span class="rag a">Amber</span>Three MPC Members Voted to Raise Rates, With Inflation Back Above 3%</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The UK CPI 12-month inflation rate for August 2026 is 3.1%, up from 2.9% in July 2026 (<a href="https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/august2026">ONS consumer price inflation</a>, published 16 September 2026). CPIH is 3.3%, core CPI is 2.6% and CPI services is 3.4%, with the last two unchanged on the month. Transport, and motor fuels within it, gave the largest upward contribution. The following day the Monetary Policy Committee voted by six to three to maintain Bank Rate at 3.75%, with the three dissenting members voting to raise it to 4% (<a href="https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026">Bank of England, September 2026</a>). The Committee said inflation is likely to rise further and could reach slightly above 4% in 2027 Q1, and that risks are tilted to the upside. It also agreed unanimously to reduce its gilt holdings to zero over a multi-year path.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The direction of the dissent is the change. Three votes for a rise, rather than for a cut, is the first time the balance has pointed that way in this cycle, and it lands with headline inflation re-accelerating while core and services inflation sit still. Any Gateshead forward-looking work carrying a rate path or a real-terms deflator is now resting on an assumption that has moved. There is no local CPI, so this is national context rather than a Gateshead figure, but it is context that changes our own outputs.</dd>
+      <dt>What should we do?</dt>
+      <dd>Restate the rate and inflation assumption in the forecasting and cost-of-living work rather than carrying the July position forward silently. One paragraph in the next brief covers it. No dashboard work is needed.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item a" id="housing">
+    <div class="when">16, 17 and 18 September &middot; ONS and HM Land Registry</div>
+    <h3><span class="rag a">Amber</span>The North East Leads England on Both Rent and House Price Inflation</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Average UK monthly private rent rose by 3.8% to &pound;1,400 in the 12 months to August 2026, with England at &pound;1,459 and 4.0%. The North East and the North West had the highest rent annual inflation rate of all English regions, both at 5.8%. On prices, the North East was the English region with the highest house price inflation at 4.9%, against 1.1% for England (<a href="https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/privaterentandhousepricesuk/september2026">ONS private rent and house prices</a>, published 16 September 2026). Gateshead's UK House Price Index average price for July 2026 is &pound;155,550, an annual change of 3.7% (<a href="https://www.gov.uk/government/collections/uk-house-price-index-reports">UK House Price Index</a>, published 18 September 2026). The ONS also published median house price and sales volume for England and Wales for 2025 on 17 September, which goes down to small-area geography.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Three housing releases at local authority level or finer inside four days is unusual, and they point the same way. The region with the lowest price base is running the fastest price and rent inflation in England. For Gateshead that is an affordability question rather than a wealth one, because rents are paid out of local wages and our wage position is weak. The small-area median price release is the piece that makes a borough answer possible, because it gives the geography to say where the squeeze is concentrated rather than only that it exists.</dd>
+      <dt>What should we do?</dt>
+      <dd>Scope a housing affordability deep dive built on the three together, answering whether Gateshead rent inflation is outpacing price inflation and where in the borough. This is a proposal rather than a commitment, and it would need commissioning. The small-area 2025 tables have not been pulled yet and that is the first step if it goes ahead.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item a" id="post16">
+    <div class="when">17 and 18 September &middot; DfE</div>
+    <h3><span class="rag a">Amber</span>The 14 Plus Reform Programme Now Has a Co-Design Forum, and It Seats Mayors</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The Education Secretary convened leaders from education, industry and local government at No.10 North on vocational pathways from age 14, work experience, V levels from 16, expanded T levels and devolved 16 to 19 funding, described as the first of regular gatherings (<a href="https://www.gov.uk/government/news/local-leaders-have-say-on-reforms-to-prepare-youngsters-for-work">DfE</a>, surfaced 18 September 2026). DfE also updated the <a href="https://www.gov.uk/government/publications/post-16-pathways-implementation-plan">Post-16 pathways implementation plan</a> on 17 September with new content development milestones, changes to planned subjects and removals from the funded qualifications list. Separately, DfE published destinations data for key stage 4 and 16 to 19 students on 18 September.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Until now this programme was an announcement with no named process. There is now a forum, and the seats belong to mayors rather than constituent councils, so Gateshead's influence on 14 plus pathways and on devolved 16 to 19 funding runs through NEMSA. The 2028 rollout is too late for the 18-24 cohort in the claimant count item above. Devolved 16 to 19 funding is nearer term, and it touches the age band where our own evidence says Gateshead performs well, so a funding change there is a risk to something that currently works rather than a fix for something that does not. The destinations release is the cleanest official measure of that 16 to 17 strength.</dd>
+      <dt>What should we do?</dt>
+      <dd>Put the question of what devolved 16 to 19 funding would mean for Gateshead providers to NEMSA, and pull the destinations data to refresh the 16 to 17 position with a current vintage. The qualification removals list is worth checking against what Gateshead providers actually offer.</dd>
+    </dl>
+  </div>
+
+  <h2>Noted</h2>
+
+  <div class="wn-item g" id="efs">
+    <div class="when">15 September &middot; MHCLG</div>
+    <h3><span class="rag g">Green</span>&pound;91m for High-Cost Services in 14 Councils, and Gateshead Is Not One</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG announced &pound;91m to transform high-cost services, being &pound;41m across 2026-27 and &pound;50m across 2027-28, covering temporary accommodation, adult social care and other expensive services (<a href="https://www.gov.uk/government/news/councils-high-cost-services-to-be-transformed-through-91m-fund">MHCLG</a>, 15 September 2026). The 14 councils are Bradford, Brighton and Hove, Haringey, Havering, Isle of Wight, Isles of Scilly, Lambeth, Redbridge, Redcar and Cleveland, Sefton, Stoke-on-Trent, Trafford, Waltham Forest and West Berkshire. Allocations are predetermined and there is no open application route.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The selection is councils already receiving Exceptional Financial Support, so this reads as a condition of that support rather than a competitive fund. Redcar and Cleveland is the only North East authority in the list.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing. There is no route in and no bid to prepare.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item g" id="lgr">
+    <div class="when">Context, 7 September &middot; MHCLG</div>
+    <h3><span class="rag g">Green</span>The Reorganisation Review Covers Two-Tier Areas Only</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing new inside this window. The <a href="https://www.gov.uk/government/news/review-of-local-government-reorganisation-launched">review of local government reorganisation</a> launched on 7 September 2026, withdrawing decisions for Essex, Hampshire, Norfolk and Suffolk on new legal advice and pausing 14 further two-tier areas plus Cambridgeshire and Peterborough and West Sussex. Elections in May 2027 run on existing boundaries.</dd>
+      <dt>Why it matters?</dt>
+      <dd>It is a two-tier and shire county programme. Gateshead is a metropolitan borough inside an established mayoral strategic authority, so there is no direct exposure. It is carried here because it is the kind of thing members ask about and the answer should be ready.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing beyond holding the one-line answer.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item g" id="flexible">
+    <div class="when">15 September &middot; DBT and Cabinet Office</div>
+    <h3><span class="rag g">Green</span>Government Response Published on Flexible Working</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The government response to <a href="https://www.gov.uk/government/consultations/make-work-pay-improving-access-to-flexible-working">Make Work Pay: improving access to flexible working</a> was added to the consultation page on 15 September 2026, along with supplementary tables. The same day, the First Secretary of State told the Trade Union Congress that the right to flexible working would be strengthened, with employers required to consider requests formally and explain refusals, and set out procurement and devolution commitments (<a href="https://www.gov.uk/government/speeches/first-secretary-of-state-louise-haighs-speech-to-the-trade-union-congress-2026">Cabinet Office</a>, 15 September 2026).</dd>
+      <dt>Why it matters?</dt>
+      <dd>Flexible working is one of the few employer-side levers on economic inactivity driven by long-term sickness, which is a structural weakness in Gateshead. The speech also confirms that procurement for good jobs and a place and high street component are live national framing ahead of the Budget on 28 October.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing this week. Revisit if the inactivity work needs an employer-side lever, and keep the procurement framing on hand for any social value work.</dd>
+    </dl>
+  </div>
+
+  <div class="wn-item g" id="forum">
+    <div class="when">Standing watch &middot; ONS</div>
+    <h3><span class="rag g">Green</span>The ONS Economic Forum Slides Have Appeared</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The <a href="https://www.slideshare.net/statisticsONS">ONS SlideShare account</a> now carries the Economic Forum pack of 20 July 2026, at 41 slides, and a labour market transformation update of 12 August 2026, at 27 slides. SlideShare shows the event date rather than the upload date, so we cannot prove these appeared inside this window rather than earlier.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The July pack has been on a standing watch since 23 July. The labour market transformation pack is the more useful of the two now, because it bears on the Labour Force Survey and Annual Population Survey changes and on the August designation change that moved those outputs from accredited to official statistics.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing scheduled. The standing watch closes and this becomes a routine currency check. Read the transformation pack alongside the productivity item above, since both sit in the same ONS statistics recovery programme.</dd>
+    </dl>
+  </div>
+
+  <h2>Coming Up</h2>
+
+  <table class="wn-cal">
+    <thead>
+      <tr><th>Date</th><th>Release</th><th>What it gives us</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>22 September</td><td>Public sector finances, UK: August 2026, and HMRC tax receipts</td><td>Fiscal framing five weeks out from the Budget</td></tr>
+      <tr><td>23 September</td><td>Regional economic activity by gross domestic product, UK: 1998 to 2024</td><td>The first official 2024 GVA for Gateshead, plus a revised back series</td></tr>
+      <tr><td>24 September</td><td>UK business; activity, size and location 2026</td><td>New UK Business Counts vintage, enterprises and local units to local authority and SIC</td></tr>
+      <tr><td>24 September</td><td>Business insights and impact on the UK economy</td><td>Business survey estimates for the North East, with confidence intervals</td></tr>
+      <tr><td>Around 23 September</td><td>S&amp;P Global Flash UK PMI, September</td><td>Early read on the close of the third quarter</td></tr>
+      <tr><td>28 October</td><td>Autumn Budget 2026</td><td>Confirmed by the Chancellor on 31 July. The representations window closed on 9 September, so this is read-out rather than input</td></tr>
+      <tr><td>5 November</td><td>Subregional productivity, 2024</td><td>GVA per hour and per filled job at local authority level, on the current method</td></tr>
+      <tr><td>November</td><td>Jobs Guarantee national rollout begins</td><td>Six-month funded jobs for long-duration 18 to 24 claimants across 25 areas</td></tr>
+      <tr><td>Mid-October</td><td>Annual Population Survey quarterly refresh</td><td>Gateshead employment, inactivity and qualifications, with confidence intervals</td></tr>
+    </tbody>
+  </table>
+
+  <div class="wn-note">
+    <b>What we could not close this week.</b> Three things stayed open and are named rather than glossed. The closing date for the flexible working consultation could not be retrieved, because the publication URL returned an error. The lead delivery partner for the Jobs Guarantee in the North East is not published on gov.uk. And the S&amp;P Global press release listing returned an access error again, so no UK PMI, NatWest Regional Growth Tracker or REC Report on Jobs index value has been quoted this week. Where a number could not be verified at source, it is not in this edition.
+  </div>
+
+  <h2>The Complete Departmental Log</h2>
+  <p style="font-size:13px;color:#41505e;margin:0 0 4px;">Every item from the four subscribed gov.uk departmental feeds over the window, with nothing filtered out. The narrative above is short by design and this is where the completeness sits.</p>
+
+  <details class="wn-fold">
+    <summary>Every item from the four subscribed gov.uk departmental feeds, 15 to 21 September 2026
+      <span class="meta">153 log rows &middot; 22 of them forthcoming-release announcements &middot; 131 actual publications. Click to open.</span>
+    </summary>
+    <div class="wn-foldbody">
+      <p style="font-size:12.5px;color:#41505e;margin:0 0 10px;"><b>How this reconciles.</b> The gov.uk search API returned 124 rows across five organisation queries. Four of those were the same MHCLG items returned under both the live and the legacy organisation slug, leaving 120 distinct entries. The mailroom digest carried 159 departmental feed items, of which 129 fall inside this window and the other 30 are dated 14 September or earlier and belong to the previous edition. Of the 129, ninety-one were already in the search result and 37 were not, so 37 were added. That gives 157 entries. Four were chapter sub-pages of a manual that is itself listed once, so they came out, leaving 153 log rows. Twenty-two of those are forthcoming-release announcements rather than things published in the window, which leaves 131 actual publications. The announcements are marked and kept, because they carry the dates the next figures land.</p>
+      <p style="font-size:12.5px;color:#41505e;margin:0 0 10px;"><b>Why both sources.</b> Neither is complete alone. The search index missed 37 items the email feed caught, mostly pages whose update did not move the index timestamp. The email feed does not notify on forthcoming-release announcements at all, and it misses anything published after the last feed email arrived, which is why the weekly MHCLG and DfE feeds leave a tail each week. Both MHCLG organisation slugs are queried, because the live one has no "and" in it and the wrong form returns nothing at all without raising an error.</p>
+      <div class="wn-scroll">
+      <table class="wn-log">
+        <thead>
+          <tr><th>Date</th><th>Dept</th><th>Item</th><th>What changed</th><th>Read</th></tr>
+        </thead>
+        <tbody>
+<tr><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/business-finance-support/local-women-local-enterprise">Local Women Local Enterprise</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/business-finance-support/made-smarter-london">Made Smarter London</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/consultations/make-work-pay-improving-access-to-flexible-working">Make Work Pay: improving access to flexible working</a></td><td>‘Consultation on improving access to flexible working: government response’ and ‘Responses to consultation on improving access to flexible working: supplementary tables’ added to the consultation outcome.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/business-finance-support/north-east-business-and-innovation-centre-bic">North East Business and Innovation Centre (BIC)</a></td><td>First published.</td><td>Watch</td></tr>
+<tr class="ann"><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/statistics/announcements/small-business-survey-2025-businesses-with-employees--2">Small Business Survey 2025: businesses with employees</a></td><td>Forthcoming release announced. Findings of the Small Business Survey 2025 on the performance of businesses with employees.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/statistics/announcements/small-business-survey-2025-businesses-with-employees">Small Business Survey 2025: businesses with no employees</a></td><td>Forthcoming release announced. Findings of the Small Business Survey 2025 on the performance of small and medium-sized businesses with no employees.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/statistics/announcements/small-business-survey-2025-panel-report">Small Business Survey 2025: panel report</a></td><td>Forthcoming release announced. Findings of the Small Business Survey 2025 on the performance of businesses that were interviewed in 2022, 2023, 2024 and 2025.</td><td>Announced release date</td></tr>
+<tr><td>15 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/publications/blowing-the-whistle-list-of-prescribed-people-and-bodies--2">Whistleblowing: list of prescribed people and bodies</a></td><td>Competition and Markets Authority description and phone number has been updated.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/ad-hoc-statistical-analyses-2026">Ad hoc statistical analyses: 2026</a></td><td>Added the ad hoc publications: “Personal Independence Payment decision-based mode of assessment statistics: April 2019 to March 2026” and “Work Capability Assessment decision-based mode of assessment statistics: April 2019 to...</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/dwp-statistical-summaries">Annual DWP Benefits Statistics Compendium</a></td><td>Release of Annual DWP Benefits Statistics Compendium: 2026 added. Removed ‘Benefit combinations’ and ‘HB flows’ from list of benefits. The section ‘Scottish Carers Allowance/Carers Support Payment Transition and Scottish...</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/annual-dwp-benefits-statistics-compendium-2026">Annual DWP Benefits Statistics Compendium: 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/dwp-ad-hoc-research">DWP ad hoc research</a></td><td>Added Health Assessment Channels Trial: 2022 to 2023 to Ad hoc research from 2026.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/dwp-statistical-summary-policies-and-statements">DWP benefits statistical summaries: policies and statements</a></td><td>The page ‘Background information note: DWP benefits statistical summary’ has been updated and renamed ‘Background information note: Annual DWP Benefits Statistics Compendium’ and the page ‘Methodology statement: DWP benefits...</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/dwp-ad-hoc-analyses">DWP management information and ad hoc analyses</a></td><td>Added ‘PIP administrative exercise: completion report at 30 October 2025’ and ‘Health Transformation Programme Management Information to July 2026’ to the 2026 Collection.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/esa-outcomes-of-work-capability-assessments-including-mandatory-reconsiderations-and-appeals-september-2026">ESA: outcomes of Work Capability Assessments including mandatory reconsiderations and appeals: September 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/disability-confident-employers-that-have-signed-up">Employers that have signed up to the Disability Confident scheme</a></td><td>Updated the spreadsheets showing employers that had signed up to the Disability Confident scheme as of August 2026.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/employment-and-support-allowance-outcomes-of-work-capability-assessment">Employment and Support Allowance: outcomes of Work Capability Assessments</a></td><td>Added latest release of statistics: ESA: outcomes of Work Capability Assessments including mandatory reconsiderations and appeals: September 2026</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/health-assessment-channels-trial-2022-to-2023">Health Assessment Channels Trial: 2022 to 2023</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/health-assessment-statistics-pip-and-wca-to-july-2026">Health Assessment Statistics: PIP and WCA to July 2026</a></td><td>Updated 2 images in the statistics release. The labels and associated lines indicating ‘Start of FAS contracts’ were slightly misaligned in the following charts: PIP assessment volumes completed per month in Great Britain, by...</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/health-transformation-programme-management-information-to-july-2026">Health Transformation Programme Management Information to July 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/health-transformation-programme-management-information">Health Transformation Programme management information</a></td><td>Updated current release to reflect the release of ‘Health Transformation Programme Management Information to July 2026’ and moved ‘Health Transformation Programme Management Information to April 2026’ to previous releases.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/local-partnership-opportunities-with-jobcentre-plus">Jobcentre Plus: opportunities for public and voluntary organisations</a></td><td>The district name has been changed from ‘Avon, Somerset and Gloucestershire’ to ‘Gloucestershire, Somerset and West of England’. No other changes have been made.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/occupational-defined-benefit-scheme-funding-analysis-2026">Occupational defined benefit scheme funding analysis 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/pip-administrative-exercise-completion-report-at-30-october-2025">PIP administrative exercise: completion report at 30 October 2025</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/personal-independence-payment-decision-based-mode-of-assessment-statistics-april-2019-to-march-2026">Personal Independence Payment decision-based mode of assessment statistics: April 2019 to March 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/personal-independence-payment-statistics">Personal Independence Payment statistics</a></td><td>Added the latest release of Personal Independence Statistics to July 2026.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/personal-independence-payment-statistics-to-july-2026">Personal Independence Payment statistics to July 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/pre-release-access-to-statistics-order-2008">Pre-release access to DWP statistics</a></td><td>Updated the list of officials with pre-release access to the DWP Annual Benefits Statistics Compendium. The latest release was published on 15 September 2026. This statistical series was previously named DWP Benefits Statistics.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/consultations/small-pots-a-pathway-for-consolidation">Small Pots: a pathway for consolidation</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/consultations/the-value-for-money-framework-consultation">The Value for Money Framework: Consultation</a></td><td>Corrected the contact email in the consultation HTML.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/universal-credit-health-statistics">Universal Credit Health statistics</a></td><td>This collection page has been updated with the latest official statistics to June 2026.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/universal-credit-health-statistics-april-2019-to-june-2026">Universal Credit Health statistics, April 2019 to June 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/universal-credit-health-statistics-release-strategy">Universal Credit Health statistics: release strategy</a></td><td>Updated title of release strategy to “Universal Credit Health statistics: release strategy” to align with change to publication name.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/list-of-upcoming-research-publications">Upcoming DWP research publications</a></td><td>Advance notice that a report called ‘Supporting employers to recruit disabled people and people with health conditions’ will be published on 17 September 2026.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/winter-fuel-payment-statistics">Winter Fuel Payment statistics</a></td><td>The Winter Fuel Payment statistics collection page has been updated to reflect the release of the annual Winter Fuel Payment statistics reflecting winter 2025 to 2026 on the 15 September 2026.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/winter-fuel-payment-statistics-for-winter-2025-to-2026">Winter Fuel Payment statistics for winter 2025 to 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr class="ann"><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/winter-fuel-payment-statistics-for-winter-2026-to-2027">Winter Fuel Payment statistics for winter 2026 to 2027 </a></td><td>Forthcoming release announced. Annual statistics on the number of Winter Fuel Payments made in winter 2026 to 2027.</td><td>Announced release date</td></tr>
+<tr><td>15 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/work-capability-assessment-decision-based-mode-of-assessment-statistics-april-2019-to-march-2026">Work Capability Assessment decision-based mode of assessment statistics: April 2019 to March 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/children-in-need-in-england-2026-to-2027">Children in need in England: 2026 to 2027</a></td><td>Forthcoming release announced. Statistics on children in need in England, including on child protection plans and referrals to and assessments completed by children&#x27;s social care services.</td><td>Announced release date</td></tr>
+<tr><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/free-breakfast-clubs-guidance-for-schools-and-trusts">Free breakfast clubs: guidance for schools and trusts</a></td><td>Updated ‘Free breakfast clubs: guidance for schools and trusts’ for the 2026 to 2027 academic year, including links to current guidance and information on partnerships, offers and school food standards. The guidance was...</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/funding-for-books-and-reading-materials-for-secondary-schools">Funding for books and reading materials for secondary schools</a></td><td>First published.</td><td>No local read</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/higher-level-learners-in-england-2025-to-2026">Higher-level learners in England: 2025 to 2026</a></td><td>Forthcoming release announced. Statistics providing an overview of higher-level learning across the further and higher education sectors in the academic year 2025 to 2026.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/key-stage-2-attainment-provisional-2027">Key stage 2 attainment (provisional): 2027</a></td><td>Forthcoming release announced. Provisional results for the 2027 national curriculum assessments at key stage 2.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/key-stage-4-performance-2027">Key stage 4 performance, 2027</a></td><td>Forthcoming release announced. Statistics on the achievements of young people at the end of key stage 4 in England, in the 2026 to 2027 academic year.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/phonics-screening-check-attainment-2027">Phonics screening check attainment: 2027</a></td><td>Forthcoming release announced. Provisional information on the 2027 phonics screening check, including breakdowns by pupil characteristics.</td><td>Announced release date</td></tr>
+<tr><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/primary-school-accountability">Primary school accountability</a></td><td>Updated ‘Primary school accountability in 2026: technical guide’ to remove row 20 from table 8, which was published in error.</td><td>Watch</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/pupil-absence-in-schools-in-england-autumn-and-spring-term-202627">Pupil absence in schools in England: autumn and spring term 2026/27</a></td><td>Forthcoming release announced. Absence statistics on the levels of overall, authorised and unauthorised absence in state-funded schools.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/secondary-school-performance-data-in-england-2027">Secondary school performance data in England: 2027</a></td><td>Forthcoming release announced. The achievements of pupils at key stage 4, at school level, local authority area and in England.</td><td>Announced release date</td></tr>
+<tr><td>15 September</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/prepare-for-the-fe-data-collection-dry-run-2026-to-2027">Submit financial data for FE colleges &ndash; dry run 2026 to 2027</a></td><td>Updated ‘FE financial reporting dry run: April 2026 to March 2027’ for quarter 2 (Q2), including notes on eliminations, dummy codes, the S2 validation, group level reporting, DfE Consol tab, and academic year end. Added...</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/arriving-in-the-uk-homes-for-ukraine">Arriving in the UK: Homes for Ukraine</a></td><td>Reference to Biometric Residence Permit (BRP) vignette removed.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/becoming-a-sponsor-homes-for-ukraine">Becoming a sponsor: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/children-being-sponsored-by-a-parent-or-legal-guardian-homes-for-ukraine">Children being sponsored by a parent or legal guardian: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/news/councils-high-cost-services-to-be-transformed-through-91m-fund">Councils’ high-cost services to be transformed through £91m fund</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/disclosure-and-barring-service-dbs-checks-homes-for-ukraine">Disclosure and Barring Service (DBS) checks: Homes for Ukraine</a></td><td>Enhanced DBS guidance added.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/ending-your-hosting-arrangements-and-helping-your-guest-with-their-next-steps-homes-for-ukraine">Ending your hosting arrangements, and helping your guest with their next steps: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/find-a-sponsor-using-recognised-providers-homes-for-ukraine">Find a sponsor/guest using recognised providers: Homes for Ukraine</a></td><td>Updated to clarify guidance relates to Homes for Ukraine only.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/finding-a-new-host-rematching-homes-for-ukraine">Finding a new host (rematching): Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/funding-for-councils-homes-for-ukraine">Funding for councils: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/homelessness-and-rough-sleeping-individual-placement-and-support-ips-privacy-notice">Homelessness and rough sleeping: Individual Placement and Support (IPS): privacy notice</a></td><td>Privacy notice updated.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/homes-for-ukraine-guidance-for-councils-children-and-minors-applying-without-parents-or-legal-guardians">Homes for Ukraine: Guidance for councils (children and minors applying without parents or legal guardians)</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/homes-for-ukraine-guidance-for-sponsors-children-and-minors-applying-without-parents-or-legal-guardians">Homes for Ukraine: Guidance for sponsors (children and minors applying without parents or legal guardians)</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/homes-for-ukraine-ukraine-permission-extension-scheme-guidance-for-councils">Homes for Ukraine: Ukraine Permission Extension scheme &ndash; guidance for councils</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/homes-for-ukraine-ukraine-permission-extension-scheme-guidance-for-guests">Homes for Ukraine: Ukraine Permission Extension scheme &ndash; guidance for guests</a></td><td>Clarification of UPE thank you payments.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/homes-for-ukraine-ukraine-permission-extension-scheme-guidance-for-sponsors">Homes for Ukraine: Ukraine Permission Extension scheme &ndash; guidance for sponsors</a></td><td>Clarification of UPE thank you payments.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/hosting-someone-already-in-the-uk-rematching-homes-for-ukraine">Hosting someone already in the UK (rematching): Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/housing-evaluation">Housing evaluation</a></td><td>Added Evaluation of the Help to Buy scheme.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/intervention-at-thurrock-council">Intervention at Thurrock Council</a></td><td>Added Thurrock Council: Explanatory Memorandum (updated 7 September 2026).</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/living-with-your-sponsor-homes-for-ukraine">Living with your sponsor: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/paying-sponsors-homes-for-ukraine">Paying sponsors/hosts: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/paying-tax-homes-for-ukraine">Paying tax: Homes for Ukraine</a></td><td>Updated to reflect UPE council tax disregards position.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/role-of-sponsors-voluntary-and-community-sector-councils-and-where-to-focus-tariff-funding-homes-for-ukraine">Role of sponsors/hosts, voluntary and community sector, councils, and where to focus tariff funding: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/thurrock-council-explanatory-memorandum-updated-7-september-2026">Thurrock Council: Explanatory Memorandum (updated 7 September 2026)</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/west-northamptonshire-council-local-plan-intervention-letter">West Northamptonshire Council: Local Plan intervention letter</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>15 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/when-you-have-sponsored-for-6-months-homes-for-ukraine">When you have sponsored for 6 months: Homes for Ukraine</a></td><td>Updated to reflect revised Homes for Ukraine funding from January 2027.</td><td>Watch</td></tr>
+<tr><td>16 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/publications/critical-minerals-programme-critical-minerals-accelerator">Critical Minerals Programme: Critical Minerals Accelerator</a></td><td>YouTube link to the recording of the 1 September 2026 information session added to the ‘Critical Minerals Programme: Critical Minerals Accelerator’ landing page. The scheme clarifications have also been expanded with further...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/jobs-guarantee">Jobs Guarantee</a></td><td>Replaced the English version of “National Rollout: Grant Application Instructions and Assessment Criteria” to add paragraphs 64 and 65 to clarify the moderation process.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/list-of-upcoming-releases-of-management-information-and-ad-hoc-analyses">List of upcoming releases of management information and ad hoc analyses</a></td><td>Updated publication date for ‘Independent Review of Carer’s Allowance Overpayments: Reassessment Exercise Management Information’ to 14 October.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/maternity-allowance-claim-form">Maternity Allowance claim form</a></td><td>The Maternity Allowance claim form (MA1), notes and Test Period table have been updated. The Test Period table now covers the period from August 2025 to December 2027.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter">Personal information charter</a></td><td>Added Skills England to the list of DWP’s arms-length bodies and executive agencies.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/complete-the-school-census">Complete the school census</a></td><td>Guidance for schools and local authorities on what data we need for the school census and how to submit it.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/department-for-education-non-executive-appointments">Department for Education non-executive appointments</a></td><td>Updated ‘Appointments made: April 2026 to March 2027’ &ndash; Oak National Academy has extended the term of the current chair and appointed a new chair from 9 October 2026.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/dfe-update">DfE Update</a></td><td>Added “DfE Update: 16 September 2026”.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/dfe-update-16-september-2026">DfE Update 16 September 2026</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/free-meals-in-further-education-guide">Free meals in further education guide</a></td><td>Settings can record free meal eligibility through the autumn 2026 census until 2 November 2026. The usual deadline is 1 October.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/free-school-meals-guidance-for-schools-and-local-authorities">Free school meals: guidance for schools and local authorities</a></td><td>Updated the guidance document to add information about the one-off extension until 2 November 2026 for completing free school meals eligibility checks for the autumn 2026 school census. Added a link to the funding arrangements...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/independent-school-registration">Independent school registration</a></td><td>Updated ‘Registration of independent schools: guidance for proprietors’ to reflect current policy and processes and clarify the areas where DfE receives the highest volume of queries.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges">Meeting digital and technology standards in schools and colleges</a></td><td>Filtering and monitoring: core standard &ndash; Added information about schools’ and colleges’ statutory responsibility to keep children and young people safe online.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/post-16-revenue-funding-payments-and-allocations">Post-16 revenue funding: payments and allocations</a></td><td>Updated with a new publication ‘Payments and allocations for post-16 settings for academic year 2026 to 2027’.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/rise-support-for-improving-attainment-in-schools">RISE support for improving attainment in schools</a></td><td>Added a sentence to say ‘Details of the regional launches can be found on the Universal RISE calendar’ and linked to the calendar.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/regional-improvement-for-standards-and-excellence-rise-school-support">Regional improvement for standards and excellence (RISE): school support</a></td><td>Added ‘Universal RISE calendar’ to ‘Universal support’.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/school-admission-appeals-data-collection-how-to-submit-data">School admission appeals data collection: how to submit data</a></td><td>Updated for the 2027 school admissions appeals data collection.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/universal-rise-calendar">Universal RISE calendar</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-archives">Community and Engagement Survey 2025/26: archives</a></td><td>September 2026: Some of the reports for this release (including archives) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a group from the...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-arts">Community and Engagement Survey 2025/26: arts</a></td><td>September 2026: Some of the reports for this release (including arts) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a group from the narrative...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-domestic-tourism">Community and Engagement Survey 2025/26: domestic tourism</a></td><td>September 2026: Some of the reports for this release (including domestic tourism) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a group from the...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-heritage">Community and Engagement Survey 2025/26: heritage</a></td><td>September 2026: The report for the Heritage release has been revised to correct inconsistencies between the written commentary on demographic and geographic breakdowns and the underlying data. The underlying data and charts...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-local-decisions">Community and Engagement Survey 2025/26: local decisions</a></td><td>September 2026: Some of the reports for this release (including influencing local decisions) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-major-events">Community and Engagement Survey 2025/26: major events</a></td><td>September 2026: Some of the reports for this release (including Victory in Europe (VE) Day 80) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-museums-and-galleries">Community and Engagement Survey 2025/26: museums and galleries</a></td><td>September 2026: Some of the reports for this release (including museums and galleries) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a group...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-neighbourhood">Community and Engagement Survey 2025/26: neighbourhood</a></td><td>September 2026: Some of the reports for this release (including neighbourhood and community) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-pride-in-local-area">Community and Engagement Survey 2025/26: pride in local area</a></td><td>September 2026: Some of the reports for this release (including pride in local area) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a group from...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/community-and-engagement-survey-202526-volunteering">Community and Engagement Survey 2025/26: volunteering</a></td><td>September 2026: Some of the reports for this release (including volunteering) have been updated to correct a number of minor discrepancies identified since publication. Revisions include adding or removing a group from the...</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/evaluation-of-the-help-to-buy-scheme">Evaluation of the Help to Buy scheme</a></td><td>Added technical report, which provides further detail on the evaluation methods and analysis.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/fire-safety-approved-document-b">Fire safety: Approved Document B</a></td><td>Updates to Approved Document B introduce guidance on second stairs and evacuation lifts in taller residential buildings.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/housing-health-and-safety-rating-system-hhsrs-landlord-and-agent-guide">Housing Health and Safety Rating System (HHSRS): Landlord and agent guide</a></td><td>Updated to clarify guidance.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/housing-health-and-safety-rating-system-hhsrs-tenant-guide">Housing Health and Safety Rating System (HHSRS): Tenant guide</a></td><td>Updated to clarify guidance.</td><td>No local read</td></tr>
+<tr><td>16 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/consultations/land-use-statistics-in-england-methodology-changes">Land use statistics in England: methodology changes</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DBT</td><td><a href="https://www.gov.uk/guidance/contact-the-fair-work-agency">Contact the Fair Work Agency</a></td><td>Guidance updated to advise people on sponsored work visas to use the online form or to email us if they think they’re a victim of modern slavery or serious abuse at work. This is because it’s can be the quickest route to...</td><td>No local read</td></tr>
+<tr class="ann"><td>17 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/statistics/announcements/national-survey-of-businesses-wave-1">National Survey of Businesses Wave 1 </a></td><td>Forthcoming release announced. The first publication of a new omnibus-style quarterly survey representative of UK businesses. This release covers fieldwork completed from June to August 2026 and delivers insight into business experiences, perceptions and...</td><td>Announced release date</td></tr>
+<tr><td>17 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/publications/shared-parental-leave-and-pay-employers-technical-guide">Shared parental leave and pay: employers&#x27; technical guide</a></td><td>Guidance updated with details of current levels of statutory parental payments. Some references to COVID-19 removed. HTML version of PDF added.</td><td>No local read</td></tr>
+<tr class="ann"><td>17 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/access-to-work-statistics-april-2007-to-march-2026">Access to Work statistics: April 2007 to March 2026 </a></td><td>Forthcoming release announced. Official statistics in development reporting on approval, payment and expenditure for Access to Work provision.</td><td>Announced release date</td></tr>
+<tr><td>17 September</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/current-dwp-research-in-the-field-undertaken-by-external-organisations">Current DWP research being undertaken by external organisations</a></td><td>Fieldwork dates have been corrected for research project ‘Verian &ndash; Monitoring the impact of the Local Housing Allowance (LHA)’ and project has been moved from ‘Completed research’ into ‘Current research’.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/research-reports">DWP research reports</a></td><td>‘Supporting employers to recruit disabled people and people with health conditions’ added to collection.</td><td>No local read</td></tr>
+<tr class="ann"><td>17 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/economic-labour-market-status-of-individuals-aged-50-and-over-trends-over-time-september-2026">Economic labour market status of individuals aged 50 and over, trends over time: September 2026</a></td><td>Forthcoming release announced. Headline measures include the average age of labour market exit, the employment rate gap between those aged 50 and over and those aged 35 to 49, and the employment rate of individuals aged 50 and over.</td><td>Announced release date</td></tr>
+<tr><td>17 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/supporting-employers-to-recruit-disabled-people-and-people-with-health-conditions">Supporting employers to recruit disabled people and people with health conditions</a></td><td>Updated to correct information on the landing page.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/academy-trust-handbook">Academy trust handbook</a></td><td>We have updated the Academy Trust Handbook 2026 to clarify procurement requirements for energy and management information systems (MIS) in paragraphs 2.29 and 2.30 and reflected this in the ‘What has changed’ section.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/cost-of-undergraduate-provision-and-qualifications-in-england">Cost of undergraduate provision and qualifications in England</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/early-years-foundation-stage-profile-handbook">Early years foundation stage profile handbook</a></td><td>Updated the early years foundation stage profile handbook to clarify the ‘Purposes and main uses of the EYFS profile’ section, including use of data by Ofsted; to introduce a new section on EYFS profile submission errors to...</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/fe-funding-initial-teacher-education-bursary-2026-to-2027">FE funding: initial teacher education bursary, 2026 to 2027</a></td><td>Applications for the 2026 to 2027 academic year have now closed.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/higher-education-providers-with-t-levels-in-entry-requirements">Higher education providers with T Levels in entry requirements</a></td><td>Added Sheffield College to the ‘List of higher education providers that accept T Levels for entry’.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/level-2-and-3-qualifications-to-have-16-to-19-funding-approval-removed-in-2027">Level 2 and 3 qualifications to have 16 to 19 funding approval removed in 2027</a></td><td>Removed Cambridge OCR Level 3 Cambridge Technical Diploma in IT, Pearson BTEC Level 3 National Diploma in Information Technology, and Pearson BTEC Level 3 National Diploma in Computing from the ‘Level 2 and 3 qualifications to...</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/post-16-pathways-implementation-plan">Post-16 pathways: implementation plan</a></td><td>We have made significant updates throughout the implementation plan. These include updates on new milestones for content development, changes to planned subjects, and the removal of qualifications approved for funding. We have...</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/common-ground-award-2026-to-2027-prospectus">Common Ground Award 2026 to 2027: prospectus</a></td><td>Added Common Ground Award 26-27 FAQs.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/competent-person-scheme-current-schemes-and-how-schemes-are-authorised">Competent person scheme - current schemes and how schemes are authorised</a></td><td>Cavity Insulation Guarantee Agency Limited (CIGA) has been replaced on the current schemes list by the Installation Assurance Authority (IAA).</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/environmental-delivery-plans">Environmental Delivery Plans</a></td><td>We have added a link to the consultation on the draft Environmental Delivery Plan for Norfolk: Broads Special Area of Conservation (SAC) (Yare and Bure), Broadland Ramsar and River Wensum SAC.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/local-authority-revenue-expenditure-and-financing">Local authority revenue expenditure and financing</a></td><td>Added Local authority revenue expenditure and financing England: 2025 to 2026 &ndash; first release and individual local authority data &ndash; outturn.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/local-authority-revenue-expenditure-and-financing-england-2025-to-2026-individual-local-authority-data-outturn">Local authority revenue expenditure and financing England: 2025 to 2026 individual local authority data - outturn</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/local-authority-revenue-expenditure-and-financing-england-2025-to-2026-first-release">Local authority revenue expenditure and financing England: 2025 to 2026 &ndash; first release</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/local-authority-revenue-expenditure-and-financing-england-revenue-outturn-multi-year-data-set">Local authority revenue expenditure and financing England: Revenue outturn multi-year data set</a></td><td>Updated data for 2025-26 financial year.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/pride-in-place-programme-prospectus">Pride in Place Programme prospectus and guidance</a></td><td>Added Pride in Place Plan submission: privacy notice.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places">Pride in Place Programme: Plans for Phase 2 places</a></td><td>Added Phase 2 Plan form questions; Added Phase 2 PiP Plan indicative spend profile template; Updated details of the Phase 2 submission process.</td><td>No local read</td></tr>
+<tr><td>17 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/social-housing-quality-and-residents-programme-evaluation">​​Social Housing Quality and Residents: programme evaluation</a></td><td>Added information about the External Advisory Group.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DBT</td><td><a href="https://www.gov.uk/guidance/import-controls">Import controls</a></td><td>Reference to firearms legislation in ‘Firearms and ammunition’ section corrected to consistently reference the Firearms Act 1968.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/publications/national-survey-of-businesses-implementation-update">National Survey of Businesses: implementation update</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/statistics/trade-and-investment-core-statistics-book">Trade and investment core statistics book</a></td><td>Trade and investment core statistics book updated with latest statistical data.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/statistics/uk-trade-in-numbers">UK trade in numbers</a></td><td>Sections 2.1, 2.2, 3.1, 3.3, 3.4, 3.5, 4.1, 4.3, 4.4, 4.5, 6.3, 6.7 have been updated in UK trade in numbers (web version) and corresponding data tables where relevant with the latest published data.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DBT</td><td><a href="https://www.gov.uk/government/collections/uk-switzerland-enhanced-free-trade-agreementnegotiations">UK-Switzerland enhanced free trade agreement negotiations</a></td><td>Documents added to the new ‘Conclusion documents’ section of the collection page. New documents include the ‘UK-Switzerland enhanced Free Trade Agreement (FTA): conclusion summary’, the ‘UK-Switzerland enhanced FTA: technical...</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/winter-fuel-payment-claim-form-eea-and-switzerland">Winter Fuel Payment claim form: EEA and Switzerland</a></td><td>Claim form removed and content withdrawn as people living abroad are no longer eligible to receive Winter Fuel Payment if they usually live outside England, Wales or Northern Ireland.</td><td>Watch</td></tr>
+<tr><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/academies-funding-payments-and-compliance">Academies: compliance, funding and payments</a></td><td>Added Academy trust handbook 2026 and removed 2025 version in ‘Academies financial management and governance’. Added funding investigation reports and notices to the ‘Academies compliance’ section.</td><td>No local read</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/destinations-of-key-stage-4-ks4-and-16-to-18-ks5-students-2025">Destinations of key stage 4 (KS4) and 16 to 19 (KS5) students: 2025</a></td><td>Forthcoming release announced. Data on key stage 4 (KS4) and 16 to 19 (KS5) students going into apprenticeship, education and employment destinations and, separately, on 16 to 19 (KS5) students progressing to higher education or training.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/destinations-of-key-stage-4-ks4-and-16-to-18-ks5-students-2026">Destinations of key stage 4 (KS4) and 16 to 19 (KS5) students: 2026</a></td><td>Forthcoming release announced. Data on key stage 4 (KS4) and 16 to 19 (KS5) students going into apprenticeship, education and employment destinations and, separately, on 16 to 19 (KS5) students progressing to higher education or training.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/key-stage-4-performance-2026">Key stage 4 performance, 2026</a></td><td>Forthcoming release announced. Statistics on the achievements of young people at the end of key stage 4 in England, in the 2025 to 2026 academic year.</td><td>Announced release date</td></tr>
+<tr><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/news/local-leaders-have-say-on-reforms-to-prepare-youngsters-for-work">Local leaders have say on reforms to prepare youngsters for work</a></td><td>Added a link to Skills Minister speech at Universities UK.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/news/more-enriching-activities-for-hundreds-of-thousands-of-children">More enriching activities for hundreds of thousands of children</a></td><td>First published.</td><td>No local read</td></tr>
+<tr><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/open-academies-and-academy-projects-in-development">Open academies, free schools, studio schools and UTCs</a></td><td>Updated the list of open academies, free schools, studio schools and UTCs and academy projects in development to include August 2026.</td><td>No local read</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/phonics-screening-check-attainment-2026">Phonics screening check attainment: 2026</a></td><td>Forthcoming release announced. Provisional information on the 2026 phonics screening check, including breakdowns by pupil characteristics.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/pupil-absence-in-schools-in-england-autumn-and-spring-term-202526">Pupil absence in schools in England: autumn and spring term  2025/26</a></td><td>Forthcoming release announced. Absence statistics on the levels of overall, authorised and unauthorised absence in state-funded schools.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/pupil-attendance-in-schools--95">Pupil attendance in schools</a></td><td>Forthcoming release announced. Data on the levels of attendance and overall, authorised and unauthorised absence in state-funded primary, secondary and special schools.</td><td>Announced release date</td></tr>
+<tr class="ann"><td>18 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/secondary-school-performance-data-in-england-2026">Secondary school performance data in England: 2026</a></td><td>Forthcoming release announced. The achievements of pupils at key stage 4, at school level, local authority area and in England.</td><td>Announced release date</td></tr>
+<tr><td>20 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/winter-fuel-payment-claim-form">Winter Fuel Payment claim form</a></td><td>Added form to claim the Winter Fuel Payment for winter 2026 to 2027.</td><td>No local read</td></tr>
+<tr class="ann"><td>21 September</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/annual-dwp-benefits-statistics-compendium">Annual DWP Benefits Statistics Compendium</a></td><td>Forthcoming release announced. National Statistics release of the main Department for Work and Pensions (DWP) administered benefits through Stat-Xplore or supplementary tables where appropriate.</td><td>Announced release date</td></tr>
+<tr><td>21 September</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/period-products-in-schools-and-colleges">Period products in schools and colleges</a></td><td>Guidance for schools and post-16 education organisations in England on providing free period products for pupils and students.</td><td>No local read</td></tr>
+<tr><td>21 September</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/capacity-to-build">Capacity to Build</a></td><td>The government&#x27;s Capacity to Build programme supports councils to increase their current levels of housebuilding.</td><td>No local read</td></tr>        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+
+  <div class="wn-note">
+    <b>The week in one paragraph.</b> The August claimant count rose to 5,100 and the 18 to 24 band accounts for all of the increase on the year, which is the first hard local number behind the youth exposure we have been describing since July. Wednesday brings the first official 2024 GVA figure for Gateshead and a revised back series, which will tell us how our own estimates performed and will date every GVA figure we currently publish. Thursday brings a new business counts vintage. The Jobs Guarantee goes national in November aimed at long-duration 18 to 24 claimants, which is the largest lever available on the problem the claimant count just described, and we hold neither the delivery partner name nor the eligible cohort size. Three members of the Monetary Policy Committee voted to raise rates with inflation back at 3.1%, so the rate assumption behind our forward-looking work has moved. The new ONS productivity method halves the measured post-2008 slowdown and starts changing published figures in November. Two funding windows are open and one internal decision date has already passed. Coverage is the seven days since the last edition. Next edition: Monday 28 September.
+  </div>
+
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; sources: ONS, NOMIS, gov.uk, Bank of England, ONS release calendar. Not official statistics.
+  </div>
+</footer>
+
+</body>
+</html>

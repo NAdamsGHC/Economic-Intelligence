@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monthly Economic Update, September 2026 &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Monthly Economic Update for September 2026, data to August 2026. The claimant count rose to 5,100 and the whole of the rise on the year sits in the 18 to 24 band.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css">
+<style>
+  .qe-wrap{max-width:900px;margin:0 auto;padding:28px 24px 10px;}
+  .qe-date{font-size:12px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;}
+  .qe-wrap h1{font-size:29px;color:var(--gc-blue-dark);line-height:1.2;margin-bottom:6px;}
+  .qe-by{font-size:13px;color:#6a7784;margin-bottom:18px;}
+  .qe-lede{font-size:15px;color:#41505e;margin-bottom:22px;}
+  .qe-wrap h2{font-size:18px;color:var(--gc-blue);border-bottom:2px solid var(--gc-blue);padding-bottom:6px;margin:28px 0 14px;}
+  .qe-wrap h3{font-size:15px;color:var(--gc-blue-dark);margin:18px 0 8px;}
+  .qe-wrap p{font-size:14px;line-height:1.55;margin:0 0 12px;}
+  .qe-lead{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:12px 16px;margin-bottom:12px;}
+  .qe-lead b{color:var(--gc-blue-dark);}
+  .qe-lead p{margin:0;font-size:14px;}
+  .qe-tblwrap{overflow-x:auto;margin:6px 0 10px;}
+  table.qe-tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:720px;}
+  table.qe-tbl th,table.qe-tbl td{border:1px solid var(--gc-line);padding:6px 8px;text-align:left;vertical-align:top;}
+  table.qe-tbl th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  table.qe-tbl td.num{text-align:right;white-space:nowrap;}
+  table.qe-tbl tr.admin td{background:#f4f8fb;}
+  .qe-no{color:#a4331f;font-weight:700;}
+  .qe-adm{color:var(--gc-green,#2c7a4b);font-weight:700;}
+  .qe-note{background:var(--gc-panel);border:1px solid var(--gc-line);padding:12px 16px;font-size:13px;color:#41505e;margin-top:10px;}
+  .qe-flag{background:#fdf3e2;border:1px solid #f0d8a8;border-left:5px solid var(--gc-amber,#e8a23d);padding:12px 16px;font-size:13.5px;color:#6b5320;margin:16px 0;}
+  .qe-flag b{color:#8a6516;}
+  .qe-watch{width:100%;border-collapse:collapse;font-size:13px;}
+  .qe-watch td{border:1px solid var(--gc-line);padding:6px 9px;vertical-align:top;}
+  .qe-watch td:first-child{white-space:nowrap;font-weight:700;color:var(--gc-blue-dark);width:1%;}
+  .qe-cta{background:var(--gc-blue-dark);color:#fff;padding:14px 18px;margin:22px 0 6px;font-size:14px;}
+  .qe-cta a{color:#fff;text-decoration:underline;}
+  .qe-fig{border:1px solid var(--gc-line);padding:12px 14px;margin:10px 0 14px;}
+  .qe-fig figcaption{font-size:12px;color:#6a7784;margin-top:8px;}
+  .qe-fig svg{width:100%;height:auto;display:block;}
+  table.qe-ward{width:100%;border-collapse:collapse;font-size:12.5px;}
+  table.qe-ward th,table.qe-ward td{border:1px solid var(--gc-line);padding:5px 8px;text-align:left;}
+  table.qe-ward th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  table.qe-ward td.num{text-align:right;white-space:nowrap;}
+
+  /* --- executive dashboard, per the recurring update format --- */
+  .qe-dash{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px;}
+  .qe-dash th,.qe-dash td{border:1px solid var(--gc-line);padding:8px 10px;text-align:left;vertical-align:top;}
+  .qe-dash th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  .qe-dash th:nth-child(1){width:104px;}
+  .qe-dash th:nth-child(2){width:22%;}
+  .qe-dash th:nth-child(4){width:27%;}
+  .qe-dash td:nth-child(2) a{font-weight:700;color:var(--gc-blue);text-decoration:none;border-bottom:1px solid var(--gc-blue);}
+  .qe-dash tr:hover td{background:#fafcfd;}
+  .rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;
+       text-transform:uppercase;padding:2px 7px;border:1px solid;white-space:nowrap;}
+  .rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+  .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+  .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+  .qe-actions{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);
+              padding:14px 18px 6px;margin:18px 0 6px;}
+  .qe-actions h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .qe-actions ol{margin:0 0 10px 18px;padding:0;font-size:13.5px;}
+  .qe-actions li{margin-bottom:7px;}
+  .qe-actions .by{font-weight:700;color:#8c1c1c;}
+  .qe-actions p.carry{font-size:12.5px;color:#6a7784;margin:0 0 10px;border-top:1px solid var(--gc-line);padding-top:8px;}
+  .qe-item{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:13px 17px;margin-bottom:14px;}
+  .qe-item.r{border-left-color:#c62828;}
+  .qe-item.a{border-left-color:#c9862a;}
+  .qe-item.g{border-left-color:#266427;}
+  .qe-item h3{font-size:15.5px;color:var(--gc-ink);margin:0 0 8px;}
+  .qe-item h3 .rag{vertical-align:middle;margin-right:7px;}
+  .qe-item dl{margin:0;font-size:13.5px;}
+  .qe-item dt{font-weight:700;color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;letter-spacing:.4px;margin-top:9px;}
+  .qe-item dt:first-child{margin-top:0;}
+  .qe-item dd{margin:3px 0 0;}
+  @media (max-width:640px){
+    .qe-dash,.qe-dash thead,.qe-dash tbody,.qe-dash th,.qe-dash td,.qe-dash tr{display:block;}
+    .qe-dash thead{display:none;}
+    .qe-dash tr{border:1px solid var(--gc-line);margin-bottom:10px;}
+    .qe-dash td{border:0;border-bottom:1px solid var(--gc-line);}
+    .qe-dash td:last-child{border-bottom:0;}
+  }
+</style><body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  </div>
+</header>
+
+<main class="qe-wrap">
+  <div class="qe-date">Monthly Economic Update &middot; data to August 2026</div>
+  <h1>Monthly Economic Update, September 2026</h1>
+  <p class="qe-by">Nathaniel Adams, Economic Intelligence Analyst &middot; published 21 September 2026</p>
+  <p class="qe-lede">The monthly update between quarterly editions. It was due on 17 September, two working days after the labour market release, and is published four days late, so it covers everything since the August edition of 25 August rather than a shorter slice and nothing falls between the two. The <a href="https://app.powerbi.com/groups/12695ffc-4d57-42b8-a2da-1f7372d45254/reports/160ff129-ede0-459d-aae9-e0f72c741d92/ca2e2bf3103708e59de8?experience=power-bi">Quarterly Economic Update dashboard</a> carries the full series behind everything below. Every figure here was pulled fresh from the official source on 21 September 2026. This is the first monthly edition in the new format, with a dashboard and a top actions box replacing the old headline strip.</p>
+
+  <h2>The Month at a Glance</h2>
+
+  <table class="qe-dash">
+    <thead>
+      <tr><th>Priority</th><th>What</th><th>What changed?</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#claimant">Claimant count</a></td>
+        <td>Up to 5,100 in August, a 4.3% step from July that is the largest in twelve years</td>
+        <td>None on the borough total. The step is national, not local</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#youth">Youth claimants</a></td>
+        <td>The 18 to 24 count is 1,040, up 100 on the year, which is the whole of the borough's rise</td>
+        <td>Size the Jobs Guarantee eligible cohort before the November rollout</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#pay">Pay and payrolled employees</a></td>
+        <td>Jobs held in line with the region. The monthly pay gap to the UK median widened to &pound;140</td>
+        <td>Carry the widening gap into the autumn earnings work</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#wards">Where the claimants are</a></td>
+        <td>The youth share of claimants is highest in the west of the borough, not the east</td>
+        <td>Test whether provision follows the overall rate rather than the youth pattern</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#aps">Survey labour market</a></td>
+        <td>No new Annual Population Survey quarter. The latest remains April 2025 to March 2026</td>
+        <td>None. The next refresh is mid-October</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#context">National context</a></td>
+        <td>Inflation back up to 3.1% and three MPC members voting to raise rates</td>
+        <td>None here. Restate the rate assumption in forecasting work</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="qe-actions">
+    <h3>Top actions this month</h3>
+    <ol>
+      <li>Establish how many Gateshead 18 to 24 year olds meet the Jobs Guarantee test, being on Universal Credit for 18 months or more, before the national rollout starts in <span class="by">November</span>. The headline youth claimant count is not that number and cannot stand in for it</li>
+      <li>Read the regional GVA release on <span class="by">Wednesday 23 September</span>, which carries the first official 2024 figure for Gateshead and a revised back series</li>
+      <li>Refresh the business base once the new UK Business Counts vintage lands on <span class="by">Thursday 24 September</span></li>
+      <li>Put the ward youth pattern below to colleagues running youth provision, and ask whether provision is placed against the overall claimant rate or against where young claimants actually are</li>
+    </ol>
+    <p class="carry"><b>Carried forward.</b> One red was open from the August edition, being the test of whether the July to August claimant count step was ordinary seasonality. It is closed here and the answer is that it was not. Nothing else is carried.</p>
+  </div>
+
+  <h2>The Labour Market</h2>
+
+  <div class="qe-item r" id="claimant">
+    <h3><span class="rag r">Red</span>The Claimant Count Rose Sharply, and It Rose Everywhere</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead's claimant count for August 2026 is 5,100 people, and claimants as a proportion of residents aged 16-64 is 4.1% (<a href="https://www.nomisweb.co.uk/datasets/cc162_1">NOMIS, claimant count by sex and age, NM_162_1, not seasonally adjusted</a>). That is up from 4,890 in July 2026 and from 5,000 in August 2025. The North East is 63,800 and 3.7%, and the United Kingdom is 1,698,450 and 3.9%, so Gateshead sits above both. The July 2026 borough figure has itself been revised down from the 5,035 published last month to 4,890, which is normal for this series and is why the monthly change looks larger than it did.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The August edition flagged the step from July to August and asked whether it was ordinary seasonality. It was not. The borough's step of 4.3% is the largest July to August rise in the twelve years to 2026, against a median of 0.9% across the eleven earlier years and a previous maximum of 2.7%. The same test on the comparators gives the same answer. The North East stepped 2.7% and the United Kingdom 2.3%, and both are also twelve-year highs. So the size of the move is real and the cause is not local. What is local is the scale, because Gateshead's step is larger than either comparator. On the year, the borough is up 2.0%, the North East 2.0% and the United Kingdom 2.1%, so over twelve months Gateshead is exactly in line.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing on the borough total. A national move of this size will be picked up in national commentary and there is no Gateshead-specific story in it. The composition is a different matter and is the next item.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item r" id="youth">
+    <h3><span class="rag r">Red</span>The 18 to 24 Band Accounts for the Whole of the Rise</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead's claimant count for those aged 18-24 is 1,040 in August 2026, against 960 in July 2026 and 940 in August 2025. The borough total rose by 100 on the year and the 18-24 band rose by 100 on its own, so every other age band together is flat or falling. The July to August step in the youth band is 8.3%, against a median of 1.9% in the eleven earlier years and a previous maximum of 5.3%. Young claimants are now 20.4% of all Gateshead claimants.</dd>
+      <dt>Why it matters?</dt>
+      <dd>This is the first hard local number behind the 18-24 exposure the team has been describing since July, and it is an administrative count rather than a survey estimate, so there is no confidence interval and no question of whether the change is detectable. The honest qualification is that the pattern is not ours alone. Young claimants account for 84% of the North East's rise on the year and 89% of the United Kingdom's, so a youth-led rise is the national shape and Gateshead's is simply the complete version of it. Gateshead's youth count grew 10.6% on the year, against 10.0% in the United Kingdom and 7.8% in the North East. The borough is at the sharp end of a national movement rather than experiencing something of its own.</dd>
+      <dt>What should we do?</dt>
+      <dd>The Jobs Guarantee national rollout from November covers 18 to 24 year olds who have been on Universal Credit for 18 months or more, across 25 areas. The number that matters for planning is how many Gateshead residents meet that duration test, and it is not the 1,040 above, which counts all young claimants regardless of how long they have been claiming. Deriving it needs a Universal Credit duration cut rather than the claimant count. That is the single most useful piece of analysis available on this problem before November.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item a" id="pay">
+    <h3><span class="rag a">Amber</span>Jobs Are Holding and the Pay Gap to the United Kingdom Is Widening</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead's payrolled employees for August 2026 is 86,302, down 405 on August 2025, a fall of 0.47% (<a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/realtimeinformationstatisticsreferencetableseasonallyadjusted">ONS, real time information statistics, seasonally adjusted, released 15 September 2026</a>). The North East fell 0.55% and the United Kingdom 0.48% over the same twelve months. Gateshead's median monthly pay for August 2026 is &pound;2,517, up 2.90% on the year, against the North East at &pound;2,503 and up 2.29%, and the United Kingdom at &pound;2,657 and up 3.51%.</dd>
+      <dt>Why it matters?</dt>
+      <dd>On jobs the borough is holding its position, falling fractionally less than the region and about the same as the country. On pay the position is mixed. Gateshead has moved from &pound;1 below the regional median a year ago to &pound;14 above it, so relative to the North East the borough is gaining. Against the United Kingdom it is losing, because the monthly gap to the national median has widened from &pound;121 to &pound;140 in twelve months. Both statements are true at once and neither cancels the other. These figures are administrative and cover employees on a payroll only, so the self-employed are outside them entirely.</dd>
+      <dt>What should we do?</dt>
+      <dd>Carry the widening national gap into the autumn earnings work rather than treating it as noise. A &pound;19 widening in one year is small in itself. The month to month series is noisy, and over the last twelve months the gap narrowed in three and was unchanged in a fourth, so the twelve-month direction is the finding rather than any single month's move.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item a" id="wards">
+    <h3><span class="rag a">Amber</span>Young Claimants Are Concentrated in Different Wards From Claimants as a Whole</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The August 2026 ward figures give the first cut of young claimants by ward on the May 2025 ward boundaries. The table below shows all 22 wards, with the total claimant count and rate alongside the 18-24 count and the share of that ward's claimants who are young.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The two patterns do not line up. The highest overall claimant rates are in the east and centre of the borough, with Felling at 6.5% and Deckham at 6.4%. The highest youth shares are mostly in the west, with Winlaton and High Spen at 28.6%, Chopwell and Rowlands Gill at 26.2% and Blaydon at 25.5%, all of which have below-average overall rates. Bridges has the eighth-highest claimant rate in the borough and the lowest youth share of any ward at 14.1%. So a young person claiming in Gateshead is disproportionately likely to live somewhere the borough does not usually think of as a claimant hotspot. Two cautions belong with this. The ward counts are rounded and sum to 1,045 against the published borough total of 1,040, and there is no year-on-year comparison because August 2025 is not published on these ward boundaries.</dd>
+      <dt>What should we do?</dt>
+      <dd>Put this to colleagues running youth provision and ask a single question, which is whether provision is placed against the overall claimant rate or against where young claimants actually are. If it follows the overall rate, the west of the borough is being under-served relative to its young claimant population. That is a proposal for someone to check rather than a finding about provision, because we hold the claimant data and not the provision map.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-tblwrap">
+  <table class="qe-tbl">
+    <caption style="caption-side:top;text-align:left;font-size:12px;color:#6a7784;padding-bottom:6px;">Claimant count by ward, Gateshead, August 2026. Ranked by claimant rate.</caption>
+    <thead>
+      <tr><th>Ward</th><th class="num">Claimants</th><th class="num">Rate, 16-64</th><th class="num">Aged 18-24</th><th class="num">Youth share</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Felling</td><td class="num">375</td><td class="num">6.5%</td><td class="num">75</td><td class="num">20.0%</td></tr>
+      <tr><td>Deckham</td><td class="num">395</td><td class="num">6.4%</td><td class="num">80</td><td class="num">20.3%</td></tr>
+      <tr><td>High Fell</td><td class="num">330</td><td class="num">5.4%</td><td class="num">60</td><td class="num">18.2%</td></tr>
+      <tr><td>Dunston and Teams</td><td class="num">295</td><td class="num">5.2%</td><td class="num">70</td><td class="num">23.7%</td></tr>
+      <tr><td>Lobley Hill and Bensham</td><td class="num">350</td><td class="num">5.2%</td><td class="num">70</td><td class="num">20.0%</td></tr>
+      <tr><td>Windy Nook and Whitehills</td><td class="num">300</td><td class="num">5.1%</td><td class="num">70</td><td class="num">23.3%</td></tr>
+      <tr><td>Saltwell</td><td class="num">350</td><td class="num">4.8%</td><td class="num">65</td><td class="num">18.6%</td></tr>
+      <tr><td>Bridges</td><td class="num">355</td><td class="num">4.5%</td><td class="num">50</td><td class="num">14.1%</td></tr>
+      <tr><td>Blaydon</td><td class="num">275</td><td class="num">4.3%</td><td class="num">70</td><td class="num">25.5%</td></tr>
+      <tr><td>Chowdene</td><td class="num">225</td><td class="num">4.3%</td><td class="num">40</td><td class="num">17.8%</td></tr>
+      <tr><td>Chopwell and Rowlands Gill</td><td class="num">210</td><td class="num">4.0%</td><td class="num">55</td><td class="num">26.2%</td></tr>
+      <tr><td>Whickham North</td><td class="num">170</td><td class="num">3.6%</td><td class="num">35</td><td class="num">20.6%</td></tr>
+      <tr><td>Birtley</td><td class="num">180</td><td class="num">3.5%</td><td class="num">40</td><td class="num">22.2%</td></tr>
+      <tr><td>Lamesley</td><td class="num">220</td><td class="num">3.5%</td><td class="num">50</td><td class="num">22.7%</td></tr>
+      <tr><td>Wardley and Leam Lane</td><td class="num">160</td><td class="num">3.4%</td><td class="num">35</td><td class="num">21.9%</td></tr>
+      <tr><td>Pelaw and Heworth</td><td class="num">180</td><td class="num">3.3%</td><td class="num">35</td><td class="num">19.4%</td></tr>
+      <tr><td>Ryton, Crookhill and Stella</td><td class="num">165</td><td class="num">3.0%</td><td class="num">35</td><td class="num">21.2%</td></tr>
+      <tr><td>Winlaton and High Spen</td><td class="num">140</td><td class="num">2.8%</td><td class="num">40</td><td class="num">28.6%</td></tr>
+      <tr><td>Crawcrook and Greenside</td><td class="num">140</td><td class="num">2.5%</td><td class="num">20</td><td class="num">14.3%</td></tr>
+      <tr><td>Dunston Hill and Whickham East</td><td class="num">125</td><td class="num">2.4%</td><td class="num">20</td><td class="num">16.0%</td></tr>
+      <tr><td>Whickham South and Sunniside</td><td class="num">85</td><td class="num">1.9%</td><td class="num">15</td><td class="num">17.6%</td></tr>
+      <tr><td>Low Fell</td><td class="num">75</td><td class="num">1.4%</td><td class="num">15</td><td class="num">20.0%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:12px;color:#6a7784;margin-top:-4px;">Source: ONS claimant count by sex and age via NOMIS (NM_162_1), August 2026, wards as of May 2025, not seasonally adjusted. Counts are rounded by ONS for disclosure control, so the ward columns do not sum exactly to the published borough totals of 5,100 and 1,040. Youth share is our own calculation from the two published columns. No rate is published for the 18-24 count because there is no published resident denominator for that age band at ward level.</p>
+
+  <div class="qe-item g" id="aps">
+    <h3><span class="rag g">Green</span>No New Survey Estimates This Month</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing. The Annual Population Survey is quarterly and no new period was published in this window. Gateshead's employment rate for those aged 16-64 for April 2025 to March 2026 remains 72.4% (95% confidence interval 68.2 to 76.6), with an unemployment rate of 6.6% (3.9 to 9.3) and an economic inactivity rate of 22.4% (18.5 to 26.3) (<a href="https://www.nomisweb.co.uk/datasets/apsnew">NOMIS, Annual Population Survey</a>).</dd>
+      <dt>Why it matters?</dt>
+      <dd>The claimant count is the only monthly measure of the local labour market, and it counts people claiming benefits while looking for work rather than everyone out of work. The survey measures are the broader picture and they have not moved because they have not been refreshed. The intervals above are wide enough that quarter-to-quarter comparison at borough level is rarely conclusive, which is why this section only reports change when a test supports it. From 11 August 2026 these outputs are official statistics rather than accredited official statistics, and no reaccreditation is being sought.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing. The next refresh is due in mid-October and will be covered in the October edition.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item g" id="context">
+    <h3><span class="rag g">Green</span>The National Picture Behind the Month</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The UK CPI 12-month inflation rate for August 2026 is 3.1%, up from 2.9% in July 2026, with transport and motor fuels the largest upward contribution and core CPI unchanged at 2.6% (<a href="https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/august2026">ONS consumer price inflation</a>). The Monetary Policy Committee then voted by six to three to hold Bank Rate at 3.75%, with the three dissenting members voting to raise it to 4%, and said inflation could reach slightly above 4% in 2027 Q1 (<a href="https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026">Bank of England, September 2026</a>). UK vacancies for June to August 2026 are 702,000, a decrease of 8,000, and the UK unemployment rate for 16 and over is 4.9% (<a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/september2026">ONS labour market overview</a>).</dd>
+      <dt>Why it matters?</dt>
+      <dd>Fewer vacancies nationally with more claimants nationally is the backdrop to the borough figures above, and it is the most plausible explanation for a claimant rise that appeared in all three geographies at once in the same month. There is no local price index, so inflation is context rather than a Gateshead number, but it sets the real-terms value of the pay figures in this edition.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing in this brief. The rate and inflation assumptions behind the forecasting and cost-of-living work need restating, and that is handled there rather than here.</dd>
+    </dl>
+  </div>
+
+  <h2>What to Watch</h2>
+
+  <table class="qe-watch">
+    <tbody>
+      <tr><td>23 September</td><td>Regional economic activity by gross domestic product, UK: 1998 to 2024. The first official 2024 GVA figure for Gateshead, with a revised back series</td></tr>
+      <tr><td>24 September</td><td>UK business; activity, size and location 2026. A new UK Business Counts vintage, superseding the 2025 figures</td></tr>
+      <tr><td>20 October</td><td>Next labour market release, carrying the September 2026 claimant count</td></tr>
+      <tr><td>Mid-October</td><td>Annual Population Survey quarterly refresh, giving new employment and inactivity estimates with confidence intervals</td></tr>
+      <tr><td>28 October</td><td>Autumn Budget 2026</td></tr>
+      <tr><td>5 November</td><td>Subregional productivity, 2024 edition, on the current method</td></tr>
+      <tr><td>November</td><td>Jobs Guarantee national rollout begins across 25 areas</td></tr>
+    </tbody>
+  </table>
+
+  <div class="qe-note">
+    <b>Sources and definitions.</b> Claimant count means people claiming Universal Credit or Jobseeker's Allowance principally for the reason of being unemployed, which is a different and generally wider measure than the survey-based count of unemployed people. It is an administrative count, so it carries no sampling confidence interval, but it is rounded by ONS for disclosure control and is revised for a few months after first publication. The rate is claimants as a proportion of residents aged 16-64. All claimant figures here are not seasonally adjusted, which is why seasonality is tested against the same month in earlier years rather than assumed away. Payrolled employees and median monthly pay come from HM Revenue and Customs Real Time Information via ONS, are seasonally adjusted, and cover employees on a payroll only. The July to August step comparisons across twelve years, the youth shares by ward and the pay gap figures are our own calculations from the published series. Everything was pulled from source on 21 September 2026.
+  </div>
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; sources: ONS, NOMIS, gov.uk. Not official statistics.
+  </div>
+</footer>
+
+</body>
+</html>
