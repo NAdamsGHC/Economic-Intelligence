@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizon Calendar &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Forward calendar of data releases, policy deadlines, consultations, funding windows and fiscal events that matter for Gateshead's economy. Every date checked at its source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css">
+<style>
+  .hz-wrap{max-width:1080px;margin:0 auto;padding:28px 24px 10px;}
+  .hz-kicker{font-size:12px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;}
+  .hz-wrap h1{font-size:28px;color:var(--gc-blue-dark);line-height:1.2;margin-bottom:10px;}
+  .hz-lede{font-size:15px;color:#41505e;margin-bottom:18px;max-width:820px;}
+  .hz-wrap h2{font-size:18px;color:var(--gc-blue);border-bottom:2px solid var(--gc-blue);padding-bottom:6px;margin:28px 0 14px;}
+
+  .hz-stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px;}
+  .hz-stats div{flex:1 1 150px;border:1px solid var(--gc-line);border-top:3px solid var(--gc-blue);padding:9px 12px;}
+  .hz-stats b{display:block;font-size:24px;color:var(--gc-blue-dark);line-height:1.1;}
+  .hz-stats span{font-size:12px;color:#6a7784;}
+  .hz-stats div.r{border-top-color:#c62828;}
+
+  .rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+       padding:2px 7px;border:1px solid;white-space:nowrap;}
+  .rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+  .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+  .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+
+  .hz-act{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);padding:14px 18px 8px;margin:18px 0 4px;}
+  .hz-act h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .hz-act ol{margin:0 0 8px 18px;font-size:13.5px;}
+  .hz-act li{margin-bottom:7px;}
+  .hz-act .by{font-weight:700;color:#8c1c1c;}
+  .hz-act p.none{font-size:13.5px;color:#41505e;margin-bottom:8px;}
+
+  .hz-controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:4px 0 14px;font-size:13px;}
+  .hz-seg{display:inline-flex;border:1px solid var(--gc-blue);}
+  .hz-seg button{font:inherit;font-size:13px;border:0;background:#fff;color:var(--gc-blue);padding:6px 14px;cursor:pointer;}
+  .hz-seg button[aria-pressed="true"]{background:var(--gc-blue);color:#fff;}
+  .hz-controls select,.hz-controls input[type=search]{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--gc-line-2);background:#fff;}
+  .hz-controls input[type=search]{min-width:200px;flex:1 1 200px;max-width:320px;}
+  .hz-controls label.tog{display:inline-flex;align-items:center;gap:6px;color:#41505e;cursor:pointer;}
+  .hz-meta{font-size:12px;color:#6a7784;margin-bottom:8px;}
+
+  /* list view */
+  .hz-month{margin-bottom:22px;}
+  .hz-month h3{font-size:15px;color:var(--gc-blue-dark);text-transform:uppercase;letter-spacing:.6px;
+               border-bottom:1px solid var(--gc-line-2);padding-bottom:4px;margin-bottom:6px;}
+  .hz-row{display:grid;grid-template-columns:108px 1fr;gap:4px 14px;padding:10px 4px 10px 10px;
+          border-bottom:1px solid var(--gc-line);border-left:4px solid transparent;}
+  .hz-row.r{border-left-color:#c62828;} .hz-row.a{border-left-color:#c9862a;} .hz-row.g{border-left-color:#266427;}
+  .hz-row.soon{background:#fbfcfd;}
+  .hz-date{font-size:13px;font-weight:700;color:var(--gc-ink);line-height:1.3;}
+  .hz-date small{display:block;font-weight:400;color:#6a7784;font-size:12px;}
+  .hz-body .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 8px;}
+  .hz-body .title{font-size:14.5px;font-weight:700;color:var(--gc-blue);text-decoration:none;}
+  .hz-body .title:hover{text-decoration:underline;}
+  .hz-tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:#41505e;border:1px solid var(--gc-line-2);padding:1px 6px;white-space:nowrap;}
+  .hz-tag.st-provisional,.hz-tag.st-expected{border-style:dashed;}
+  .hz-tag.st-published{background:#eef2f6;}
+  .hz-body p{font-size:13.5px;margin:3px 0 0;color:var(--gc-text);}
+  .hz-body p.act{color:#8c1c1c;font-weight:700;}
+  .hz-body p.src{font-size:12px;color:#6a7784;}
+  .hz-body p.src a{color:#6a7784;}
+
+  /* month grid view */
+  .hz-gridnav{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .hz-gridnav button{font:inherit;font-size:13px;border:1px solid var(--gc-blue);background:#fff;color:var(--gc-blue);padding:5px 12px;cursor:pointer;}
+  .hz-gridnav button:disabled{opacity:.4;cursor:default;}
+  .hz-gridnav strong{font-size:17px;color:var(--gc-blue-dark);min-width:170px;text-align:center;}
+  table.hz-grid{width:100%;border-collapse:collapse;table-layout:fixed;}
+  .hz-grid th{font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--gc-blue-dark);background:var(--gc-panel);
+              border:1px solid var(--gc-line);padding:5px;}
+  .hz-grid td{border:1px solid var(--gc-line);vertical-align:top;height:96px;padding:4px;font-size:11.5px;}
+  .hz-grid td.out{background:#fafafa;color:#b5bcc3;}
+  .hz-grid td.today{outline:2px solid var(--gc-blue);outline-offset:-2px;}
+  .hz-grid .dn{font-weight:700;color:#6a7784;font-size:11px;margin-bottom:2px;}
+  .hz-chip{display:block;margin:2px 0;padding:2px 4px;border-left:3px solid;background:#f7f9fb;line-height:1.25;
+           color:var(--gc-ink);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .hz-chip:hover{background:#eef3f8;}
+  .hz-chip.r{border-color:#c62828;} .hz-chip.a{border-color:#c9862a;} .hz-chip.g{border-color:#266427;}
+  .hz-chip .w{font-weight:700;font-size:9.5px;text-transform:uppercase;margin-right:3px;}
+  .hz-chip.r .w{color:#8c1c1c;} .hz-chip.a .w{color:#7a5313;} .hz-chip.g .w{color:#1d4d1e;}
+  .hz-undated{margin-top:12px;font-size:13px;}
+  .hz-undated h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--gc-blue-dark);margin-bottom:4px;}
+
+  details.hz-fold{border:1px solid var(--gc-line);margin:18px 0;}
+  details.hz-fold summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--gc-blue-dark);background:var(--gc-panel);font-size:14px;}
+  details.hz-fold > div{padding:6px 14px 10px;}
+
+  .hz-note{font-size:13px;color:#41505e;border-top:1px solid var(--gc-line);padding-top:12px;margin-top:22px;}
+  .hz-note p{margin-bottom:8px;}
+  .hz-empty{padding:18px;color:#6a7784;font-size:14px;}
+
+  @media (max-width:720px){
+    .hz-wrap{padding:20px 16px 10px;}
+    .hz-row{grid-template-columns:1fr;}
+    .hz-grid td{height:auto;min-height:44px;}
+    .hz-grid .hz-chip .t{display:none;}
+    .hz-controls input[type=search]{max-width:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  </div>
+</header>
+
+<main class="hz-wrap">
+  <div class="hz-kicker">Horizon Calendar &middot; updated <span id="hz-updated"></span></div>
+  <h1>Horizon Calendar</h1>
+  <p class="hz-lede">The dates coming up that matter for Gateshead's economy. Data releases, consultations closing, funding windows, fiscal events and policy changes taking effect, in one place. Every date is checked at the source named against it, and the calendar is refreshed with each weekly What's New and each monthly update.</p>
+
+  <div class="hz-stats" id="hz-stats"></div>
+
+  <div class="hz-act" id="hz-act"></div>
+
+  <h2>Calendar</h2>
+  <div class="hz-controls">
+    <span class="hz-seg" role="group" aria-label="View">
+      <button type="button" data-view="list" aria-pressed="true">List</button>
+      <button type="button" data-view="month" aria-pressed="false">Month</button>
+    </span>
+    <select id="hz-cat" aria-label="Filter by type"><option value="">All types</option></select>
+    <select id="hz-rag" aria-label="Filter by priority">
+      <option value="">All priorities</option>
+      <option value="r">Red only</option>
+      <option value="ra">Red and amber</option>
+    </select>
+    <input type="search" id="hz-q" placeholder="Search, for example &ldquo;APS&rdquo; or &ldquo;Budget&rdquo;" aria-label="Search the calendar">
+    <label class="tog"><input type="checkbox" id="hz-routine"> Show routine monthly releases</label>
+  </div>
+  <div class="hz-meta" id="hz-meta" aria-live="polite"></div>
+  <div id="hz-view"></div>
+
+  <details class="hz-fold" id="hz-passed-wrap">
+    <summary id="hz-passed-sum">Recently passed</summary>
+    <div id="hz-passed"></div>
+  </details>
+
+  <div class="hz-note">
+    <p><b>Reading the priorities.</b> <span class="rag r">Red</span> means we need to act by or on the day. <span class="rag a">Amber</span> means the date feeds one of our products or needs preparation. <span class="rag g">Green</span> means noted, with no action expected.</p>
+    <p><b>Reading the status.</b> Confirmed means the publisher has fixed the day. Provisional means the publisher has given a date that may still move. Expected means only a month or a season has been published, so the item sits in that month without a day. Release times are UK time.</p>
+    <p><b>Coverage.</b> ONS releases are taken from the ONS release calendar to <span id="hz-onsto"></span>, filtered to the series we use. Business survey dates come from the S&amp;P Global calendar, which runs about a month ahead. Policy dates are taken from the government page linked on each item, never from press coverage.</p>
+    <p><a href="horizon.ics" download>Add the dated items to your own calendar (.ics)</a></p>
+  </div>
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; sources: ONS release calendar, gov.uk, Bank of England, OBR, S&amp;P Global. Not official statistics.
+  </div>
+</footer>
+
+<script id="hz-data" type="application/json">/*DATA*/</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("hz-data").textContent);
+  var CATS = D.categories, ITEMS = D.items;
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var RAGW = {r: "Red", a: "Amber", g: "Green"};
+  var STW = {confirmed: "Confirmed", provisional: "Provisional", expected: "Expected", published: "Published"};
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function parse(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function longDate(s) { var d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear(); }
+  function shortDate(s) { var d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3); }
+  function dated(x) { return !x.date_label; }
+
+  var TODAY = iso(new Date());
+  var in30 = iso(addDays(new Date(), 30)), in60 = iso(addDays(new Date(), 60)), ago14 = iso(addDays(new Date(), -14));
+
+  document.getElementById("hz-updated").textContent = longDate(D.updated).replace(/^\w+ /, "");
+  document.getElementById("hz-onsto").textContent = longDate(D.window.ons_to).replace(/^\w+ /, "");
+
+  // An undated item (month or season only) stays "upcoming" until its sort date passes.
+  var upcoming = ITEMS.filter(function (x) { return x.date >= TODAY && x.status !== "published"; });
+  var passed = ITEMS.filter(function (x) { return (x.date < TODAY || x.status === "published") && x.date >= ago14; })
+                    .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+
+  // ---- headline counts ----
+  var next30 = upcoming.filter(function (x) { return x.date <= in30 && dated(x); });
+  var reds = upcoming.filter(function (x) { return x.rag === "r"; });
+  var closes = upcoming.filter(function (x) { return /consultation|funding|deadline/.test(x.category) && x.date <= in60; });
+  document.getElementById("hz-stats").innerHTML =
+    '<div><b>' + next30.length + '</b><span>dated items in the next 30 days</span></div>' +
+    '<div class="r"><b>' + reds.length + '</b><span>red items on the horizon</span></div>' +
+    '<div><b>' + closes.length + '</b><span>consultations, funding windows and deadlines closing in 60 days</span></div>' +
+    '<div><b>' + upcoming.length + '</b><span>items tracked in total</span></div>';
+
+  // ---- act-on box: red items in the next 60 days, plus undated reds ----
+  var act = upcoming.filter(function (x) { return x.rag === "r" && (x.date <= in60 || !dated(x)); });
+  var h = '<h3>Act on These</h3>';
+  if (!act.length) h += '<p class="none">Nothing red in the next 60 days.</p>';
+  else {
+    h += "<ol>";
+    act.forEach(function (x) {
+      var when = dated(x) ? longDate(x.date) + (x.time ? ", " + x.time : "") : x.date_label;
+      h += '<li><span class="by">' + esc(when) + '</span>. <a href="' + esc(x.source.url) + '">' + esc(x.title) + "</a>" +
+           (x.action ? ". " + esc(x.action) : "") + "</li>";
+    });
+    h += "</ol>";
+  }
+  document.getElementById("hz-act").innerHTML = h;
+
+  // ---- controls ----
+  var catSel = document.getElementById("hz-cat");
+  Object.keys(CATS).forEach(function (k) {
+    if (ITEMS.some(function (x) { return x.category === k; })) {
+      var o = document.createElement("option"); o.value = k; o.textContent = CATS[k]; catSel.appendChild(o);
+    }
+  });
+  var state = {view: "list", cat: "", rag: "", q: "", routine: false, month: TODAY.slice(0, 7)};
+  try { var sv = JSON.parse(localStorage.getItem("hz-state") || "{}"); if (sv.view) state.view = sv.view; if (sv.routine) state.routine = true; } catch (e) {}
+  document.getElementById("hz-routine").checked = state.routine;
+
+  function save() { try { localStorage.setItem("hz-state", JSON.stringify({view: state.view, routine: state.routine})); } catch (e) {} }
+
+  function match(x) {
+    if (state.cat && x.category !== state.cat) return false;
+    if (state.rag === "r" && x.rag !== "r") return false;
+    if (state.rag === "ra" && x.rag === "g") return false;
+    if (!state.routine && x.routine) return false;
+    if (state.q) {
+      var hay = (x.title + " " + x.why + " " + (x.action || "") + " " + x.source.name + " " + (CATS[x.category] || "")).toLowerCase();
+      if (hay.indexOf(state.q) < 0) return false;
+    }
+    return true;
+  }
+
+  function rowHTML(x, soon) {
+    var when = dated(x)
+      ? shortDate(x.date) + "<small>" + (x.time ? esc(x.time) : parse(x.date).getFullYear()) + "</small>"
+      : esc(x.date_label) + "<small>no fixed day</small>";
+    var fl = x.first_logged
+      ? ' &middot; first logged in <a href="' + (/^policy-update/.test(x.first_logged) ? "../policy/" : "../briefs/") + esc(x.first_logged) + '.html">' + esc(x.first_logged.replace(/-/g, " ")) + "</a>" : "";
+    return '<div class="hz-row ' + x.rag + (soon ? " soon" : "") + '" id="' + esc(x.id) + '">' +
+      '<div class="hz-date">' + when + "</div>" +
+      '<div class="hz-body"><div class="top"><span class="rag ' + x.rag + '">' + RAGW[x.rag] + "</span>" +
+      '<a class="title" href="' + esc(x.source.url) + '">' + esc(x.title) + "</a>" +
+      '<span class="hz-tag">' + esc(CATS[x.category] || x.category) + "</span>" +
+      '<span class="hz-tag st-' + x.status + '">' + (STW[x.status] || x.status) + "</span></div>" +
+      "<p>" + esc(x.why) + "</p>" +
+      (x.action ? '<p class="act">' + esc(x.action) + "</p>" : "") +
+      '<p class="src">Source: <a href="' + esc(x.source.url) + '">' + esc(x.source.name) + "</a>, checked " +
+      longDate(x.verified).replace(/^\w+ /, "") + fl + "</p></div></div>";
+  }
+
+  function listView(list) {
+    if (!list.length) return '<div class="hz-empty">Nothing matches these filters.</div>';
+    var out = "", cur = "";
+    list.forEach(function (x) {
+      var m = x.date.slice(0, 7);
+      if (m !== cur) {
+        if (cur) out += "</div>";
+        cur = m; var d = parse(x.date);
+        out += '<div class="hz-month"><h3>' + MONTHS[d.getMonth()] + " " + d.getFullYear() + "</h3>";
+      }
+      out += rowHTML(x, x.date <= in30 && dated(x));
+    });
+    return out + "</div>";
+  }
+
+  function monthView(list) {
+    var y = +state.month.slice(0, 4), m = +state.month.slice(5, 7) - 1;
+    var first = new Date(y, m, 1), start = addDays(first, -((first.getDay() + 6) % 7));
+    var months = list.map(function (x) { return x.date.slice(0, 7); }).sort();
+    var minM = TODAY.slice(0, 7), maxM = months.length ? months[months.length - 1] : minM;
+    var byDay = {}, undated = [];
+    list.forEach(function (x) {
+      if (x.date.slice(0, 7) !== state.month) return;
+      if (dated(x)) (byDay[x.date] = byDay[x.date] || []).push(x); else undated.push(x);
+    });
+    var h = '<div class="hz-gridnav"><button type="button" data-nav="-1"' + (state.month <= minM ? " disabled" : "") + '>&lsaquo; Previous</button>' +
+      "<strong>" + MONTHS[m] + " " + y + '</strong><button type="button" data-nav="1"' + (state.month >= maxM ? " disabled" : "") + ">Next &rsaquo;</button></div>";
+    h += '<table class="hz-grid"><thead><tr>';
+    ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].forEach(function (d) { h += "<th>" + d + "</th>"; });
+    h += "</tr></thead><tbody>";
+    for (var w = 0; w < 6; w++) {
+      var rowStart = addDays(start, w * 7);
+      if (w > 3 && rowStart.getMonth() !== m) break;
+      h += "<tr>";
+      for (var i = 0; i < 7; i++) {
+        var d = addDays(start, w * 7 + i), k = iso(d), out = d.getMonth() !== m;
+        h += '<td class="' + (out ? "out" : "") + (k === TODAY ? " today" : "") + '"><div class="dn">' + d.getDate() + "</div>";
+        if (!out) (byDay[k] || []).forEach(function (x) {
+          h += '<a class="hz-chip ' + x.rag + '" href="#' + esc(x.id) + '" data-jump="' + esc(x.id) + '" title="' + esc(x.title + (x.time ? " (" + x.time + ")" : "")) + '">' +
+               '<span class="w">' + RAGW[x.rag] + '</span><span class="t">' + esc(x.title) + "</span></a>";
+        });
+        h += "</td>";
+      }
+      h += "</tr>";
+    }
+    h += "</tbody></table>";
+    if (undated.length) {
+      h += '<div class="hz-undated"><h4>No Fixed Day This Month</h4>';
+      undated.forEach(function (x) { h += '<a class="hz-chip ' + x.rag + '" href="#' + esc(x.id) + '" data-jump="' + esc(x.id) + '"><span class="w">' + RAGW[x.rag] + "</span>" + esc(x.date_label + ", " + x.title) + "</a>"; });
+      h += "</div>";
+    }
+    return h;
+  }
+
+  function render() {
+    var list = upcoming.filter(match);
+    var hidden = upcoming.filter(function (x) { return x.routine && !state.routine; }).length;
+    document.getElementById("hz-meta").textContent = list.length + " of " + upcoming.length + " upcoming items shown" +
+      (hidden && !state.routine ? " (" + hidden + " routine monthly releases hidden)" : "");
+    document.querySelectorAll(".hz-seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.view === state.view ? "true" : "false"); });
+    document.getElementById("hz-view").innerHTML = state.view === "month" ? monthView(list) : listView(list);
+  }
+
+  document.querySelectorAll(".hz-seg button").forEach(function (b) {
+    b.addEventListener("click", function () { state.view = b.dataset.view; save(); render(); });
+  });
+  catSel.addEventListener("change", function () { state.cat = catSel.value; render(); });
+  document.getElementById("hz-rag").addEventListener("change", function (e) { state.rag = e.target.value; render(); });
+  document.getElementById("hz-q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById("hz-routine").addEventListener("change", function (e) { state.routine = e.target.checked; save(); render(); });
+  document.getElementById("hz-view").addEventListener("click", function (e) {
+    var nav = e.target.closest("[data-nav]");
+    if (nav) {
+      var y = +state.month.slice(0, 4), m = +state.month.slice(5, 7) - 1 + (+nav.dataset.nav);
+      var d = new Date(y, m, 1); state.month = d.getFullYear() + "-" + pad(d.getMonth() + 1); render(); return;
+    }
+    var j = e.target.closest("[data-jump]");
+    if (j) {
+      // Jumping from the grid switches to the list so the full entry is visible.
+      e.preventDefault(); var id = j.dataset.jump;
+      state.view = "list"; state.cat = ""; state.rag = ""; state.q = "";
+      catSel.value = ""; document.getElementById("hz-rag").value = ""; document.getElementById("hz-q").value = "";
+      var tgt = ITEMS.filter(function (x) { return x.id === id; })[0];
+      if (tgt && tgt.routine) { state.routine = true; document.getElementById("hz-routine").checked = true; }
+      render(); var el = document.getElementById(id); if (el) el.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+  });
+
+  // ---- recently passed ----
+  var pw = document.getElementById("hz-passed-wrap");
+  if (!passed.length) pw.style.display = "none";
+  else {
+    document.getElementById("hz-passed-sum").textContent = "Recently passed, last 14 days (" + passed.length + ")";
+    document.getElementById("hz-passed").innerHTML = passed.map(function (x) { return rowHTML(x, false); }).join("");
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

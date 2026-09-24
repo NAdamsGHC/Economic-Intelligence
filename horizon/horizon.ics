@@ -1,0 +1,998 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gateshead Economic Intelligence//Horizon Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Gateshead Horizon Calendar
+BEGIN:VEVENT
+UID:ons-investigatingnonresponsetothelabourforcesurveyusingadministrativedata@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Investigating non-response to the Labour Force Survey
+DESCRIPTION:Survey quality behind the APS. Time: 09:30 UK. Status: confirm
+ ed. Source: ONS release calendar https://www.ons.gov.uk/releases/investig
+ atingnonresponsetothelabourforcesurveyusingadministrativedata
+URL:https://www.ons.gov.uk/releases/investigatingnonresponsetothelabourfor
+ cesurveyusingadministrativedata
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-childrenlivinginlongtermworklesshouseholdsintheuk2025@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Children in long-term workless households\, 2025
+DESCRIPTION:Child poverty context. Time: 09:30 UK. Status: confirmed. Sour
+ ce: ONS release calendar https://www.ons.gov.uk/releases/childrenlivingin
+ longtermworklesshouseholdsintheuk2025
+URL:https://www.ons.gov.uk/releases/childrenlivinginlongtermworklesshouseh
+ oldsintheuk2025
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-populationestimatesfortheukenglandwalesscotlandandnorthernirelandmid2025@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Population estimates for the UK\, mid-2025
+DESCRIPTION:National and country totals. Time: 09:30 UK. Status: confirmed
+ . Source: ONS release calendar https://www.ons.gov.uk/releases/population
+ estimatesfortheukenglandwalesscotlandandnorthernirelandmid2025
+URL:https://www.ons.gov.uk/releases/populationestimatesfortheukenglandwale
+ sscotlandandnorthernirelandmid2025
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pmi-uk-manufacturing-pmi-2026-10-01@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:UK Manufacturing PMI
+DESCRIPTION:First read on September factory conditions. Time: 09:30 UK. St
+ atus: confirmed. Source: S&P Global PMI release calendar https://www.pmi.
+ spglobal.com/Public/Release/ReleaseDates?language=en
+URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ncs-jcp-merger@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:National Careers Service merges into Jobcentre Plus in England
+DESCRIPTION:First step of the Jobs and Careers Service\, in which Gateshea
+ d Council is a named Pathfinder partner. Status: confirmed. Source: DWP\,
+  Get Britain Working: an update on the Jobs and Careers Service\, 2 July 
+ 2026 https://www.gov.uk/government/publications/get-britain-working-an-up
+ date-on-the-jobs-and-careers-service
+URL:https://www.gov.uk/government/publications/get-britain-working-an-upda
+ te-on-the-jobs-and-careers-service
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:vat-electricity@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:VAT removed from domestic electricity bills
+DESCRIPTION:VAT falls from 5% to zero\, estimated to take around 0.10 perc
+ entage points off CPI inflation. A step change in the electricity part of
+  the cost-of-living index. Status: confirmed. Source: Prime Minister's Of
+ fice press release\, 21 July 2026 https://www.gov.uk/government/news/new-
+ pm-cuts-tax-on-household-electricity-bills-to-give-breathing-space-on-cos
+ t-of-living
+URL:https://www.gov.uk/government/news/new-pm-cuts-tax-on-household-electr
+ icity-bills-to-give-breathing-space-on-cost-of-living
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-averagehouseholdincomeukfinancialyearending2025@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:Average household income\, financial year ending 2025
+DESCRIPTION:Household income context. Time: 09:30 UK. Status: confirmed. S
+ ource: ONS release calendar https://www.ons.gov.uk/releases/averagehouseh
+ oldincomeukfinancialyearending2025
+URL:https://www.ons.gov.uk/releases/averagehouseholdincomeukfinancialyeare
+ nding2025
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pmi-uk-services-pmi-2026-10-05@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:UK Services PMI
+DESCRIPTION:September services conditions. Time: 09:30 UK. Status: confirm
+ ed. Source: S&P Global PMI release calendar https://www.pmi.spglobal.com/
+ Public/Release/ReleaseDates?language=en
+URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mayoral-planning-powers@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:[Red] Consultation closes on planning powers for mayors in England
+DESCRIPTION:Decides which planning decisions move up to the mayor. Respons
+ es shape secondary legislation\, with commencement intended in early 2027
+ . Action: Decide whether we feed evidence into the council's response Tim
+ e: 23:59 UK. Status: confirmed. Source: MHCLG consultation\, opened 24 Au
+ gust 2026 https://www.gov.uk/government/consultations/planning-powers-for
+ -mayors-in-england
+URL:https://www.gov.uk/government/consultations/planning-powers-for-mayors
+ -in-england
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pmi-uk-construction-pmi-2026-10-06@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:UK Construction PMI
+DESCRIPTION:September construction conditions. Time: 09:30 UK. Status: con
+ firmed. Source: S&P Global PMI release calendar https://www.pmi.spglobal.
+ com/Public/Release/ReleaseDates?language=en
+URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pmi-kpmg-and-rec-uk-report-on-jobs-with-the-north-regional-report-2026-10-08@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:[Amber] KPMG and REC UK Report on Jobs\, with the North regional r
+ eport
+DESCRIPTION:Permanent placements\, vacancies and starting pay for the Nort
+ h. Pairs with the claimant count. Time: 00:01 UK. Status: confirmed. Sour
+ ce: S&P Global PMI release calendar https://www.pmi.spglobal.com/Public/R
+ elease/ReleaseDates?language=en
+URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cladding-under-11m@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Cladding Safety Scheme applications close for buildings under 11 m
+ etres
+DESCRIPTION:Eight-week window run by Homes England through the Building Re
+ mediation Hub. Flag to housing colleagues. No economic read. Status: conf
+ irmed. Source: Homes England and MHCLG\, Buildings under 11 metres: new f
+ unding https://www.gov.uk/government/publications/buildings-under-11-metr
+ es-new-funding
+URL:https://www.gov.uk/government/publications/buildings-under-11-metres-n
+ ew-funding
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:common-ground-award@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:[Red] Common Ground Award applications close
+DESCRIPTION:Capital funding for community spaces. Outcomes are due in Dece
+ mber 2026 and payment is likely in January 2027. Action: Decide whether G
+ ateshead convenes a consortium\, or close the item Status: confirmed. Sou
+ rce: MHCLG\, Common Ground Award 2026 to 2027 prospectus https://www.gov.
+ uk/government/publications/common-ground-award-2026-to-2027-prospectus
+URL:https://www.gov.uk/government/publications/common-ground-award-2026-to
+ -2027-prospectus
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pmi-natwest-uk-regional-growth-tracker-2026-10-14@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:[Amber] NatWest UK Regional Growth Tracker
+DESCRIPTION:North East business activity and employment. Watch for a secon
+ d month below 50. Time: 00:01 UK. Status: confirmed. Source: S&P Global P
+ MI release calendar https://www.pmi.spglobal.com/Public/Release/ReleaseDa
+ tes?language=en
+URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpmonthlyestimateukaugust2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:GDP monthly estimate
+DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
+ mateukaugust2026
+URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukaugust2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pubs-hotels-valuation@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:[Amber] Call for evidence closes on how pubs and hotels are valued
+  for business rates
+DESCRIPTION:Business rates valuation of pubs and hotels\, which sits along
+ side the 20% rates cut for pubs\, clubs and live music venues from 2027/2
+ 8. Moves the rateable value base in our local centres. Time: 23:59 UK. St
+ atus: confirmed. Source: HM Treasury call for evidence\, opened 24 August
+  2026 https://www.gov.uk/government/calls-for-evidence/valuation-methodol
+ ogy-review-for-pubs-and-hotels
+URL:https://www.gov.uk/government/calls-for-evidence/valuation-methodology
+ -review-for-pubs-and-hotels
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-labourforcesurveyqualityupdateoctober2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:[Amber] Labour Force Survey quality update
+DESCRIPTION:The likely home of the APS quality advice promised for Septemb
+ er. Time: 07:00 UK. Status: confirmed. Source: ONS release calendar https
+ ://www.ons.gov.uk/releases/labourforcesurveyqualityupdateoctober2026
+URL:https://www.ons.gov.uk/releases/labourforcesurveyqualityupdateoctober2
+ 026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uklabourmarketoctober2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:[Red] UK labour market\, with regional tables and PAYE Real Time I
+ nformation
+DESCRIPTION:Gateshead's September claimant count\, and the next Annual Pop
+ ulation Survey quarter with new employment and inactivity estimates. Time
+ : 07:00 UK. Status: confirmed. Source: ONS release calendar https://www.o
+ ns.gov.uk/releases/uklabourmarketoctober2026
+URL:https://www.ons.gov.uk/releases/uklabourmarketoctober2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:s106-standard-agreements@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:[Amber] Consultation closes on standard planning agreements for me
+ dium-sized sites
+DESCRIPTION:Standard section 106 templates for schemes of 10 to 49 homes. 
+ Affects how quickly smaller housing sites in the borough can be agreed. T
+ ime: 23:59 UK. Status: confirmed. Source: MHCLG consultation\, opened 25 
+ August 2026 https://www.gov.uk/government/consultations/standard-planning
+ -agreements-for-medium-sized-sites
+URL:https://www.gov.uk/government/consultations/standard-planning-agreemen
+ ts-for-medium-sized-sites
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationukseptember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Time: 07:00 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/consume
+ rpriceinflationukseptember2026
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-publicsectorfinancesukseptember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Public sector finances
+DESCRIPTION:Fiscal backdrop. Time: 07:00 UK. Status: confirmed. Source: ON
+ S release calendar https://www.ons.gov.uk/releases/publicsectorfinancesuk
+ september2026
+URL:https://www.ons.gov.uk/releases/publicsectorfinancesukseptember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesukoctober2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. T
+ ime: 09:30 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/privaterentandhousepricesukoctober2026
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesukoctober2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-employeeearningsintheuk2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:[Amber] Employee earnings in the UK\, 2026 (ASHE)
+DESCRIPTION:Resident and workplace earnings for Gateshead. Time: 09:30 UK.
+  Status: confirmed. Source: ONS release calendar https://www.ons.gov.uk/r
+ eleases/employeeearningsintheuk2026
+URL:https://www.ons.gov.uk/releases/employeeearningsintheuk2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pmi-uk-flash-pmi-2026-10-23@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:UK Flash PMI
+DESCRIPTION:Early read on October activity. Time: 09:30 UK. Status: confir
+ med. Source: S&P Global PMI release calendar https://www.pmi.spglobal.com
+ /Public/Release/ReleaseDates?language=en
+URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:budget-2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:[Red] Autumn Budget 2026\, with the OBR Economic and Fiscal Outloo
+ k
+DESCRIPTION:The Chancellor has said the roadmap to fiscal devolution comes
+  at the Budget. It carries the business rates retention and local income 
+ tax design that decides Gateshead's tax base position. Action: Derive Gat
+ eshead's income tax base position before the day\, and read the roadmap i
+ n full on 29 October Status: confirmed. Source: HM Treasury\, Chancellor'
+ s letter to the Treasury Select Committee\, 31 July 2026 https://www.gov.
+ uk/government/publications/chancellor-letter-to-the-treasury-select-commi
+ ttee-tsc-budget-2026-date
+URL:https://www.gov.uk/government/publications/chancellor-letter-to-the-tr
+ easury-select-committee-tsc-budget-2026-date
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:obr-efo-2026-10@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:[Amber] OBR Economic and Fiscal Outlook
+DESCRIPTION:The official forecast behind the Budget. Resets the inflation\
+ , earnings and unemployment path our forward-looking work assumes. Status
+ : confirmed. Source: Office for Budget Responsibility https://obr.uk/
+URL:https://obr.uk/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pip-monitoring-return@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:[Amber] Pride in Place monitoring return portal closes
+DESCRIPTION:The six-monthly return from accountable bodies. The portal ope
+ ns on 1 October and closes on 29 October\, the day after the Budget. Stat
+ us: confirmed. Source: MHCLG\, Pride in Place Programme prospectus and gu
+ idance https://www.gov.uk/government/publications/pride-in-place-programm
+ e-prospectus
+URL:https://www.gov.uk/government/publications/pride-in-place-programme-pr
+ ospectus
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uknationalaccountsthebluebook2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:UK National Accounts\, the Blue Book 2026
+DESCRIPTION:Method changes feed the next regional accounts. Status: provis
+ ional. Source: ONS release calendar https://www.ons.gov.uk/releases/uknat
+ ionalaccountsthebluebook2026
+URL:https://www.ons.gov.uk/releases/uknationalaccountsthebluebook2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:chsf-close@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[Red] Council Housebuilding Support Fund bidding window closes
+DESCRIPTION:Support for councils to increase housebuilding. Applicants hea
+ r from November 2026\, and further windows are expected in April 2027 and
+  April 2028. Action: Ask housing and development colleagues whether Gates
+ head is bidding Time: 14:00 UK. Status: confirmed. Source: MHCLG\, Counci
+ l Housebuilding Support Fund: how to apply https://www.gov.uk/guidance/co
+ uncil-housebuilding-support-fund-how-to-apply
+URL:https://www.gov.uk/guidance/council-housebuilding-support-fund-how-to-
+ apply
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Local sites and employees linked to international trade in service
+ s
+DESCRIPTION:Subnational trade exposure. Time: 09:30 UK. Status: confirmed.
+  Source: ONS release calendar https://www.ons.gov.uk/releases/localsitesa
+ ndnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservic
+ esbysubnationalareasoftheuk2024
+URL:https://www.ons.gov.uk/releases/localsitesandnumbersofemployeeslinkedt
+ ocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk
+ 2024
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-regionalandsubregionallabourproductivityuk2024@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:[Red] Regional and subregional labour productivity\, 2024
+DESCRIPTION:Gateshead's GVA per hour and per filled job for 2024\, on the 
+ current method. Time: 09:30 UK. Status: confirmed. Source: ONS release ca
+ lendar https://www.ons.gov.uk/releases/regionalandsubregionallabourproduc
+ tivityuk2024
+URL:https://www.ons.gov.uk/releases/regionalandsubregionallabourproductivi
+ tyuk2024
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mpc-2026-11-05@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:[Amber] Bank of England interest rate decision\, with Monetary Pol
+ icy Report
+DESCRIPTION:Rates were held at 3.75% in September with three members votin
+ g to raise. A move changes the rate assumption in our forecasts and cost-
+ of-living work. Status: confirmed. Source: Bank of England\, upcoming MPC
+  dates https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+URL:https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-internationaltradeinuknationsregionsandcities2024@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:International trade in UK nations\, regions and cities\, 2024
+DESCRIPTION:Regional export context. Time: 09:30 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/internationalt
+ radeinuknationsregionsandcities2024
+URL:https://www.ons.gov.uk/releases/internationaltradeinuknationsregionsan
+ dcities2024
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpfirstquarterlyestimateukjulytoseptember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:GDP first quarterly estimate\, July to September 2026
+DESCRIPTION:National growth context for the quarterly monitor. Time: 07:00
+  UK. Status: confirmed. Source: ONS release calendar https://www.ons.gov.
+ uk/releases/gdpfirstquarterlyestimateukjulytoseptember2026
+URL:https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukjulytosepte
+ mber2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpmonthlyestimateukseptember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:GDP monthly estimate
+DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
+ mateukseptember2026
+URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukseptember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uklabourmarketnovember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
+  Information
+DESCRIPTION:Gateshead's claimant count and payrolled employees\, and the r
+ egional labour market tables. Time: 07:00 UK. Status: confirmed. Source: 
+ ONS release calendar https://www.ons.gov.uk/releases/uklabourmarketnovemb
+ er2026
+URL:https://www.ons.gov.uk/releases/uklabourmarketnovember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-productivityflashestimateandoverviewukjulytoseptember2026andapriltojune2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:[Amber] Productivity flash estimate
+DESCRIPTION:First release on the new component method for the whole econom
+ y. Time: 09:30 UK. Status: confirmed. Source: ONS release calendar https:
+ //www.ons.gov.uk/releases/productivityflashestimateandoverviewukjulytosep
+ tember2026andapriltojune2026
+URL:https://www.ons.gov.uk/releases/productivityflashestimateandoverviewuk
+ julytoseptember2026andapriltojune2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationukoctober2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Time: 07:00 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/consume
+ rpriceinflationukoctober2026
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationukoctober2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-businessregisterandemploymentsurveybresprovisionalresults2025revisedresults2024@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:[Amber] BRES\, provisional 2025 and revised 2024
+DESCRIPTION:Employee jobs by industry for Gateshead. Supersedes the BRES f
+ igures across our products. Time: 09:30 UK. Status: confirmed. Source: ON
+ S release calendar https://www.ons.gov.uk/releases/businessregisterandemp
+ loymentsurveybresprovisionalresults2025revisedresults2024
+URL:https://www.ons.gov.uk/releases/businessregisterandemploymentsurveybre
+ sprovisionalresults2025revisedresults2024
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesuknovember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. T
+ ime: 09:30 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/privaterentandhousepricesuknovember2026
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesuknovember202
+ 6
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-businessdemography2025@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:[Amber] Business demography 2025
+DESCRIPTION:Local business births\, deaths and survival. Status: provision
+ al. Source: ONS release calendar https://www.ons.gov.uk/releases/business
+ demography2025
+URL:https://www.ons.gov.uk/releases/businessdemography2025
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-publicsectorfinancesukoctober2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Public sector finances
+DESCRIPTION:Fiscal backdrop. Time: 07:00 UK. Status: confirmed. Source: ON
+ S release calendar https://www.ons.gov.uk/releases/publicsectorfinancesuk
+ october2026
+URL:https://www.ons.gov.uk/releases/publicsectorfinancesukoctober2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-youngpeoplenotineducationemploymentortrainingneetuknovember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:[Amber] Young people not in education\, employment or training (NE
+ ET)
+DESCRIPTION:UK and regional NEET context for the youth employment thread. 
+ Time: 09:30 UK. Status: confirmed. Source: ONS release calendar https://w
+ ww.ons.gov.uk/releases/youngpeoplenotineducationemploymentortrainingneetu
+ knovember2026
+URL:https://www.ons.gov.uk/releases/youngpeoplenotineducationemploymentort
+ rainingneetuknovember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-longterminternationalmigrationprovisionalyearendingjune2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Long-term international migration\, year ending June 2026
+DESCRIPTION:Population change context. Status: provisional. Source: ONS re
+ lease calendar https://www.ons.gov.uk/releases/longterminternationalmigra
+ tionprovisionalyearendingjune2026
+URL:https://www.ons.gov.uk/releases/longterminternationalmigrationprovisio
+ nalyearendingjune2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-householdcostsindicesforukhouseholdgroupsjulytoseptember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Household Costs Indices
+DESCRIPTION:Feeds the cost-of-living index. Time: 09:30 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/househo
+ ldcostsindicesforukhouseholdgroupsjulytoseptember2026
+URL:https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgro
+ upsjulytoseptember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pip-plan-beacon-lough@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:[Red] Pride in Place plans due from September 2025 Phase 2 boards
+DESCRIPTION:Beacon Lough and Wrekenton's neighbourhood board is in this co
+ hort. Plans can be submitted up to 26 February 2027 where more time is ne
+ eded. Action: Offer the board a small-area evidence pack for its ten-year
+  plan Status: confirmed. Source: MHCLG\, Pride in Place Programme: plans 
+ for Phase 2 places https://www.gov.uk/government/publications/pride-in-pl
+ ace-programme-pride-in-place-plans-for-phase-2-places
+URL:https://www.gov.uk/government/publications/pride-in-place-programme-pr
+ ide-in-place-plans-for-phase-2-places
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-workingandworklesshouseholdsintheukjulytoseptember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Working and workless households
+DESCRIPTION:Household worklessness context. Time: 09:30 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/working
+ andworklesshouseholdsintheukjulytoseptember2026
+URL:https://www.ons.gov.uk/releases/workingandworklesshouseholdsintheukjul
+ ytoseptember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-trendsinukbusinessdynamismandproductivity2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Trends in UK business dynamism and productivity
+DESCRIPTION:Productivity context. Time: 09:30 UK. Status: confirmed. Sourc
+ e: ONS release calendar https://www.ons.gov.uk/releases/trendsinukbusines
+ sdynamismandproductivity2026
+URL:https://www.ons.gov.uk/releases/trendsinukbusinessdynamismandproductiv
+ ity2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpmonthlyestimateukoctober2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:GDP monthly estimate
+DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
+ mateukoctober2026
+URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukoctober2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uklabourmarketdecember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
+  Information
+DESCRIPTION:Gateshead's claimant count and payrolled employees\, and the r
+ egional labour market tables. The PAYE local authority sheet refreshes. T
+ ime: 07:00 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/uklabourmarketdecember2026
+URL:https://www.ons.gov.uk/releases/uklabourmarketdecember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationuknovember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Time: 07:00 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/consume
+ rpriceinflationuknovember2026
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationuknovember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesukdecember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. T
+ ime: 09:30 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/privaterentandhousepricesukdecember2026
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesukdecember202
+ 6
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mpc-2026-12-17@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Bank of England interest rate decision
+DESCRIPTION:Rate decision without a new forecast. Restate the rate assumpt
+ ion only if Bank Rate moves. Status: confirmed. Source: Bank of England\,
+  upcoming MPC dates https://www.bankofengland.co.uk/monetary-policy/upcom
+ ing-mpc-dates
+URL:https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-publicsectorfinancesuknovember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:Public sector finances
+DESCRIPTION:Fiscal backdrop. Time: 07:00 UK. Status: confirmed. Source: ON
+ S release calendar https://www.ons.gov.uk/releases/publicsectorfinancesuk
+ november2026
+URL:https://www.ons.gov.uk/releases/publicsectorfinancesuknovember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ppn026-live@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:[Amber] PPN 026 social value model applies to new central governme
+ nt procurements
+DESCRIPTION:Central contracts must weight good jobs and skills. Suppliers 
+ will need routes to local NEETs and care leavers. Status: confirmed. Sour
+ ce: Cabinet Office\, PPN 026: the social value model https://www.gov.uk/g
+ overnment/publications/ppn-026-the-social-value-model
+URL:https://www.gov.uk/government/publications/ppn-026-the-social-value-mo
+ del
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bus-fare-cap@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:£2 bus fare cap across England outside London
+DESCRIPTION:Maximum single fares fall by a third\, to the end of 2027. A s
+ tep change in the transport part of the cost-of-living index. Status: con
+ firmed. Source: DfT press release\, 22 July 2026 https://www.gov.uk/gover
+ nment/news/cheaper-travel-for-millions-with-a-third-off-fares
+URL:https://www.gov.uk/government/news/cheaper-travel-for-millions-with-a-
+ third-off-fares
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpmonthlyestimateuknovember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:GDP monthly estimate
+DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
+ mateuknovember2026
+URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateuknovember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uklabourmarketjanuary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270119
+DTEND;VALUE=DATE:20270120
+SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
+  Information
+DESCRIPTION:Gateshead's claimant count and payrolled employees\, and the r
+ egional labour market tables. Time: 07:00 UK. Status: confirmed. Source: 
+ ONS release calendar https://www.ons.gov.uk/releases/uklabourmarketjanuar
+ y2027
+URL:https://www.ons.gov.uk/releases/uklabourmarketjanuary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationukdecember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Time: 07:00 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/consume
+ rpriceinflationukdecember2026
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationukdecember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesukjanuary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. S
+ tatus: provisional. Source: ONS release calendar https://www.ons.gov.uk/r
+ eleases/privaterentandhousepricesukjanuary2027
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesukjanuary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mpc-2027-02-04@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:[Amber] Bank of England interest rate decision\, with Monetary Pol
+ icy Report
+DESCRIPTION:Rates were held at 3.75% in September with three members votin
+ g to raise. A move changes the rate assumption in our forecasts and cost-
+ of-living work. Status: confirmed. Source: Bank of England\, upcoming MPC
+  dates https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+URL:https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpfirstquarterlyestimateukoctobertodecember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:GDP first quarterly estimate
+DESCRIPTION:National growth context for the quarterly monitor. Time: 07:00
+  UK. Status: confirmed. Source: ONS release calendar https://www.ons.gov.
+ uk/releases/gdpfirstquarterlyestimateukoctobertodecember2026
+URL:https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukoctobertode
+ cember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpmonthlyestimateukdecember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:GDP monthly estimate
+DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
+ mateukdecember2026
+URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukdecember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uklabourmarketfebruary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270216
+DTEND;VALUE=DATE:20270217
+SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
+  Information
+DESCRIPTION:Gateshead's claimant count and payrolled employees\, and the r
+ egional labour market tables. Time: 07:00 UK. Status: confirmed. Source: 
+ ONS release calendar https://www.ons.gov.uk/releases/uklabourmarketfebrua
+ ry2027
+URL:https://www.ons.gov.uk/releases/uklabourmarketfebruary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesukfebruary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. T
+ ime: 09:30 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/privaterentandhousepricesukfebruary2027
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesukfebruary202
+ 7
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationukjanuary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Status: provisional. Source: O
+ NS release calendar https://www.ons.gov.uk/releases/consumerpriceinflatio
+ nukjanuary2027
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationukjanuary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-lowcarbonandrenewableenergyeconomyuk2025@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270224
+DTEND;VALUE=DATE:20270225
+SUMMARY:Low carbon and renewable energy economy\, 2025
+DESCRIPTION:Green economy context. Status: provisional. Source: ONS releas
+ e calendar https://www.ons.gov.uk/releases/lowcarbonandrenewableenergyeco
+ nomyuk2025
+URL:https://www.ons.gov.uk/releases/lowcarbonandrenewableenergyeconomyuk20
+ 25
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-householdcostsindicesforukhouseholdgroupsoctobertodecember2026@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270225
+DTEND;VALUE=DATE:20270226
+SUMMARY:Household Costs Indices
+DESCRIPTION:Feeds the cost-of-living index. Time: 09:30 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/househo
+ ldcostsindicesforukhouseholdgroupsoctobertodecember2026
+URL:https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgro
+ upsoctobertodecember2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pip-plan-backstop@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270227
+SUMMARY:[Amber] Latest submission date for Phase 2 Pride in Place plans
+DESCRIPTION:The backstop for boards that need more time\, and the deadline
+  for boards named in March 2026. Status: confirmed. Source: MHCLG\, Pride
+  in Place Programme: plans for Phase 2 places https://www.gov.uk/governme
+ nt/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2
+ -places
+URL:https://www.gov.uk/government/publications/pride-in-place-programme-pr
+ ide-in-place-plans-for-phase-2-places
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-gdpmonthlyestimateukjanuary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270311
+DTEND;VALUE=DATE:20270312
+SUMMARY:GDP monthly estimate
+DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
+ urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
+ mateukjanuary2027
+URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukjanuary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-uklabourmarketmarch2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270316
+DTEND;VALUE=DATE:20270317
+SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
+  Information
+DESCRIPTION:Gateshead's claimant count and payrolled employees\, and the r
+ egional labour market tables. Time: 07:00 UK. Status: confirmed. Source: 
+ ONS release calendar https://www.ons.gov.uk/releases/uklabourmarketmarch2
+ 027
+URL:https://www.ons.gov.uk/releases/uklabourmarketmarch2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mpc-2027-03-18@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270318
+DTEND;VALUE=DATE:20270319
+SUMMARY:Bank of England interest rate decision
+DESCRIPTION:Rate decision without a new forecast. Restate the rate assumpt
+ ion only if Bank Rate moves. Status: confirmed. Source: Bank of England\,
+  upcoming MPC dates https://www.bankofengland.co.uk/monetary-policy/upcom
+ ing-mpc-dates
+URL:https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesukmarch2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270325
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. T
+ ime: 09:30 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/privaterentandhousepricesukmarch2027
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesukmarch2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationukfebruary2027@gateshead-economic-intelligence
+DTSTAMP:20260924T145804Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270325
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Status: provisional. Source: O
+ NS release calendar https://www.ons.gov.uk/releases/consumerpriceinflatio
+ nukfebruary2027
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationukfebruary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

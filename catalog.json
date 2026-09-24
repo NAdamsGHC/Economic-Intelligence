@@ -353,6 +353,27 @@
  ],
  "products": [
   {
+   "id": "horizon-calendar",
+   "title": "Horizon Calendar",
+   "path": "horizon/index.html",
+   "topic": "Policy",
+   "description": "The dates coming up that matter for Gateshead's economy, in one calendar. ONS releases to March 2027, consultations closing, funding windows, the Budget and Bank of England decisions, and policy changes taking effect out to 2028. Every date is checked at the source named against it and marked confirmed, provisional or expected. Red, amber and green priorities, an act-on-these box, list and month views, and an .ics file to add dated items to your own calendar. Refreshed with every What's New and monthly update.",
+   "sources": "ONS release calendar · gov.uk · Bank of England · OBR · S&P Global",
+   "keywords": [
+    "horizon",
+    "calendar",
+    "forward look",
+    "deadlines",
+    "consultations",
+    "release calendar",
+    "budget",
+    "funding",
+    "what's coming",
+    "dates"
+   ],
+   "pinned": true
+  },
+  {
    "id": "policy-2026-09",
    "title": "Policy update, September 2026",
    "path": "policy/policy-update-2026-09.html",

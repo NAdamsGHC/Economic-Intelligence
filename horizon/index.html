@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizon Calendar &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Forward calendar of data releases, policy deadlines, consultations, funding windows and fiscal events that matter for Gateshead's economy. Every date checked at its source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css">
+<style>
+  .hz-wrap{max-width:1080px;margin:0 auto;padding:28px 24px 10px;}
+  .hz-kicker{font-size:12px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;}
+  .hz-wrap h1{font-size:28px;color:var(--gc-blue-dark);line-height:1.2;margin-bottom:10px;}
+  .hz-lede{font-size:15px;color:#41505e;margin-bottom:18px;max-width:820px;}
+  .hz-wrap h2{font-size:18px;color:var(--gc-blue);border-bottom:2px solid var(--gc-blue);padding-bottom:6px;margin:28px 0 14px;}
+
+  .hz-stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px;}
+  .hz-stats div{flex:1 1 150px;border:1px solid var(--gc-line);border-top:3px solid var(--gc-blue);padding:9px 12px;}
+  .hz-stats b{display:block;font-size:24px;color:var(--gc-blue-dark);line-height:1.1;}
+  .hz-stats span{font-size:12px;color:#6a7784;}
+  .hz-stats div.r{border-top-color:#c62828;}
+
+  .rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+       padding:2px 7px;border:1px solid;white-space:nowrap;}
+  .rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+  .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+  .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+
+  .hz-act{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);padding:14px 18px 8px;margin:18px 0 4px;}
+  .hz-act h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .hz-act ol{margin:0 0 8px 18px;font-size:13.5px;}
+  .hz-act li{margin-bottom:7px;}
+  .hz-act .by{font-weight:700;color:#8c1c1c;}
+  .hz-act p.none{font-size:13.5px;color:#41505e;margin-bottom:8px;}
+
+  .hz-controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:4px 0 14px;font-size:13px;}
+  .hz-seg{display:inline-flex;border:1px solid var(--gc-blue);}
+  .hz-seg button{font:inherit;font-size:13px;border:0;background:#fff;color:var(--gc-blue);padding:6px 14px;cursor:pointer;}
+  .hz-seg button[aria-pressed="true"]{background:var(--gc-blue);color:#fff;}
+  .hz-controls select,.hz-controls input[type=search]{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--gc-line-2);background:#fff;}
+  .hz-controls input[type=search]{min-width:200px;flex:1 1 200px;max-width:320px;}
+  .hz-controls label.tog{display:inline-flex;align-items:center;gap:6px;color:#41505e;cursor:pointer;}
+  .hz-meta{font-size:12px;color:#6a7784;margin-bottom:8px;}
+
+  /* list view */
+  .hz-month{margin-bottom:22px;}
+  .hz-month h3{font-size:15px;color:var(--gc-blue-dark);text-transform:uppercase;letter-spacing:.6px;
+               border-bottom:1px solid var(--gc-line-2);padding-bottom:4px;margin-bottom:6px;}
+  .hz-row{display:grid;grid-template-columns:108px 1fr;gap:4px 14px;padding:10px 4px 10px 10px;
+          border-bottom:1px solid var(--gc-line);border-left:4px solid transparent;}
+  .hz-row.r{border-left-color:#c62828;} .hz-row.a{border-left-color:#c9862a;} .hz-row.g{border-left-color:#266427;}
+  .hz-row.soon{background:#fbfcfd;}
+  .hz-date{font-size:13px;font-weight:700;color:var(--gc-ink);line-height:1.3;}
+  .hz-date small{display:block;font-weight:400;color:#6a7784;font-size:12px;}
+  .hz-body .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 8px;}
+  .hz-body .title{font-size:14.5px;font-weight:700;color:var(--gc-blue);text-decoration:none;}
+  .hz-body .title:hover{text-decoration:underline;}
+  .hz-tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:#41505e;border:1px solid var(--gc-line-2);padding:1px 6px;white-space:nowrap;}
+  .hz-tag.st-provisional,.hz-tag.st-expected{border-style:dashed;}
+  .hz-tag.st-published{background:#eef2f6;}
+  .hz-body p{font-size:13.5px;margin:3px 0 0;color:var(--gc-text);}
+  .hz-body p.act{color:#8c1c1c;font-weight:700;}
+  .hz-body p.src{font-size:12px;color:#6a7784;}
+  .hz-body p.src a{color:#6a7784;}
+
+  /* month grid view */
+  .hz-gridnav{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .hz-gridnav button{font:inherit;font-size:13px;border:1px solid var(--gc-blue);background:#fff;color:var(--gc-blue);padding:5px 12px;cursor:pointer;}
+  .hz-gridnav button:disabled{opacity:.4;cursor:default;}
+  .hz-gridnav strong{font-size:17px;color:var(--gc-blue-dark);min-width:170px;text-align:center;}
+  table.hz-grid{width:100%;border-collapse:collapse;table-layout:fixed;}
+  .hz-grid th{font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--gc-blue-dark);background:var(--gc-panel);
+              border:1px solid var(--gc-line);padding:5px;}
+  .hz-grid td{border:1px solid var(--gc-line);vertical-align:top;height:96px;padding:4px;font-size:11.5px;}
+  .hz-grid td.out{background:#fafafa;color:#b5bcc3;}
+  .hz-grid td.today{outline:2px solid var(--gc-blue);outline-offset:-2px;}
+  .hz-grid .dn{font-weight:700;color:#6a7784;font-size:11px;margin-bottom:2px;}
+  .hz-chip{display:block;margin:2px 0;padding:2px 4px;border-left:3px solid;background:#f7f9fb;line-height:1.25;
+           color:var(--gc-ink);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .hz-chip:hover{background:#eef3f8;}
+  .hz-chip.r{border-color:#c62828;} .hz-chip.a{border-color:#c9862a;} .hz-chip.g{border-color:#266427;}
+  .hz-chip .w{font-weight:700;font-size:9.5px;text-transform:uppercase;margin-right:3px;}
+  .hz-chip.r .w{color:#8c1c1c;} .hz-chip.a .w{color:#7a5313;} .hz-chip.g .w{color:#1d4d1e;}
+  .hz-undated{margin-top:12px;font-size:13px;}
+  .hz-undated h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--gc-blue-dark);margin-bottom:4px;}
+
+  details.hz-fold{border:1px solid var(--gc-line);margin:18px 0;}
+  details.hz-fold summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--gc-blue-dark);background:var(--gc-panel);font-size:14px;}
+  details.hz-fold > div{padding:6px 14px 10px;}
+
+  .hz-note{font-size:13px;color:#41505e;border-top:1px solid var(--gc-line);padding-top:12px;margin-top:22px;}
+  .hz-note p{margin-bottom:8px;}
+  .hz-empty{padding:18px;color:#6a7784;font-size:14px;}
+
+  @media (max-width:720px){
+    .hz-wrap{padding:20px 16px 10px;}
+    .hz-row{grid-template-columns:1fr;}
+    .hz-grid td{height:auto;min-height:44px;}
+    .hz-grid .hz-chip .t{display:none;}
+    .hz-controls input[type=search]{max-width:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  </div>
+</header>
+
+<main class="hz-wrap">
+  <div class="hz-kicker">Horizon Calendar &middot; updated <span id="hz-updated"></span></div>
+  <h1>Horizon Calendar</h1>
+  <p class="hz-lede">The dates coming up that matter for Gateshead's economy. Data releases, consultations closing, funding windows, fiscal events and policy changes taking effect, in one place. Every date is checked at the source named against it, and the calendar is refreshed with each weekly What's New and each monthly update.</p>
+
+  <div class="hz-stats" id="hz-stats"></div>
+
+  <div class="hz-act" id="hz-act"></div>
+
+  <h2>Calendar</h2>
+  <div class="hz-controls">
+    <span class="hz-seg" role="group" aria-label="View">
+      <button type="button" data-view="list" aria-pressed="true">List</button>
+      <button type="button" data-view="month" aria-pressed="false">Month</button>
+    </span>
+    <select id="hz-cat" aria-label="Filter by type"><option value="">All types</option></select>
+    <select id="hz-rag" aria-label="Filter by priority">
+      <option value="">All priorities</option>
+      <option value="r">Red only</option>
+      <option value="ra">Red and amber</option>
+    </select>
+    <input type="search" id="hz-q" placeholder="Search, for example &ldquo;APS&rdquo; or &ldquo;Budget&rdquo;" aria-label="Search the calendar">
+    <label class="tog"><input type="checkbox" id="hz-routine"> Show routine monthly releases</label>
+  </div>
+  <div class="hz-meta" id="hz-meta" aria-live="polite"></div>
+  <div id="hz-view"></div>
+
+  <details class="hz-fold" id="hz-passed-wrap">
+    <summary id="hz-passed-sum">Recently passed</summary>
+    <div id="hz-passed"></div>
+  </details>
+
+  <div class="hz-note">
+    <p><b>Reading the priorities.</b> <span class="rag r">Red</span> means we need to act by or on the day. <span class="rag a">Amber</span> means the date feeds one of our products or needs preparation. <span class="rag g">Green</span> means noted, with no action expected.</p>
+    <p><b>Reading the status.</b> Confirmed means the publisher has fixed the day. Provisional means the publisher has given a date that may still move. Expected means only a month or a season has been published, so the item sits in that month without a day. Release times are UK time.</p>
+    <p><b>Coverage.</b> ONS releases are taken from the ONS release calendar to <span id="hz-onsto"></span>, filtered to the series we use. Business survey dates come from the S&amp;P Global calendar, which runs about a month ahead. Policy dates are taken from the government page linked on each item, never from press coverage.</p>
+    <p><a href="horizon.ics" download>Add the dated items to your own calendar (.ics)</a></p>
+  </div>
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; sources: ONS release calendar, gov.uk, Bank of England, OBR, S&amp;P Global. Not official statistics.
+  </div>
+</footer>
+
+<script id="hz-data" type="application/json">{"title":"Horizon Calendar","updated":"2026-09-24","window":{"from":"2026-09-24","ons_to":"2027-03-29"},"categories":{"data":"Data release","survey":"Business survey","fiscal":"Fiscal event","monetary":"Interest rates","consultation":"Consultation closes","funding":"Funding window","deadline":"Programme deadline","policy":"Policy takes effect","milestone":"Statistics milestone"},"items":[{"id":"ons-regionalgdp-2024","date":"2026-09-23","title":"Regional economic activity by GDP, 1998 to 2024","category":"data","rag":"r","status":"published","why":"The first official 2024 GVA figure for Gateshead, with a revised back series.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/regionaleconomicactivitybygrossdomesticproductuk1998to2024"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-ukbusinesscounts-2026","date":"2026-09-24","title":"UK business; activity, size and location 2026 (UK Business Counts)","category":"data","rag":"r","status":"published","why":"A new business counts vintage that supersedes the 2025 figures we publish.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/ukbusinessactivitysizeandlocation2026"},"verified":"2026-09-24","time":"09:30","action":"Refresh the business base figures across the products","first_logged":"whats-new-2026-08-17"},{"id":"ons-investigatingnonresponsetothelabourforcesurveyusingadministrativedata","date":"2026-09-28","title":"Investigating non-response to the Labour Force Survey","category":"data","rag":"g","status":"confirmed","why":"Survey quality behind the APS.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/investigatingnonresponsetothelabourforcesurveyusingadministrativedata"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-childrenlivinginlongtermworklesshouseholdsintheuk2025","date":"2026-10-01","title":"Children in long-term workless households, 2025","category":"data","rag":"g","status":"confirmed","why":"Child poverty context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/childrenlivinginlongtermworklesshouseholdsintheuk2025"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-populationestimatesfortheukenglandwalesscotlandandnorthernirelandmid2025","date":"2026-10-01","title":"Population estimates for the UK, mid-2025","category":"data","rag":"g","status":"confirmed","why":"National and country totals.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/populationestimatesfortheukenglandwalesscotlandandnorthernirelandmid2025"},"verified":"2026-09-24","time":"09:30"},{"id":"pmi-uk-manufacturing-pmi-2026-10-01","date":"2026-10-01","title":"UK Manufacturing PMI","category":"survey","rag":"g","status":"confirmed","why":"First read on September factory conditions.","source":{"name":"S&P Global PMI release calendar","url":"https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"},"verified":"2026-09-24","time":"09:30"},{"id":"ncs-jcp-merger","date":"2026-10-01","title":"National Careers Service merges into Jobcentre Plus in England","category":"policy","rag":"g","status":"confirmed","why":"First step of the Jobs and Careers Service, in which Gateshead Council is a named Pathfinder partner.","source":{"name":"DWP, Get Britain Working: an update on the Jobs and Careers Service, 2 July 2026","url":"https://www.gov.uk/government/publications/get-britain-working-an-update-on-the-jobs-and-careers-service"},"verified":"2026-09-24","first_logged":"policy-update-2026-07"},{"id":"vat-electricity","date":"2026-10-01","title":"VAT removed from domestic electricity bills","category":"policy","rag":"g","status":"confirmed","why":"VAT falls from 5% to zero, estimated to take around 0.10 percentage points off CPI inflation. A step change in the electricity part of the cost-of-living index.","source":{"name":"Prime Minister's Office press release, 21 July 2026","url":"https://www.gov.uk/government/news/new-pm-cuts-tax-on-household-electricity-bills-to-give-breathing-space-on-cost-of-living"},"verified":"2026-09-24","first_logged":"whats-new-2026-07-28"},{"id":"ons-averagehouseholdincomeukfinancialyearending2025","date":"2026-10-02","title":"Average household income, financial year ending 2025","category":"data","rag":"g","status":"confirmed","why":"Household income context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/averagehouseholdincomeukfinancialyearending2025"},"verified":"2026-09-24","time":"09:30"},{"id":"pmi-uk-services-pmi-2026-10-05","date":"2026-10-05","title":"UK Services PMI","category":"survey","rag":"g","status":"confirmed","why":"September services conditions.","source":{"name":"S&P Global PMI release calendar","url":"https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"},"verified":"2026-09-24","time":"09:30"},{"id":"mayoral-planning-powers","date":"2026-10-05","title":"Consultation closes on planning powers for mayors in England","category":"consultation","rag":"r","status":"confirmed","why":"Decides which planning decisions move up to the mayor. Responses shape secondary legislation, with commencement intended in early 2027.","source":{"name":"MHCLG consultation, opened 24 August 2026","url":"https://www.gov.uk/government/consultations/planning-powers-for-mayors-in-england"},"verified":"2026-09-24","time":"23:59","action":"Decide whether we feed evidence into the council's response","first_logged":"whats-new-2026-08-31"},{"id":"pmi-uk-construction-pmi-2026-10-06","date":"2026-10-06","title":"UK Construction PMI","category":"survey","rag":"g","status":"confirmed","why":"September construction conditions.","source":{"name":"S&P Global PMI release calendar","url":"https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"},"verified":"2026-09-24","time":"09:30"},{"id":"pmi-kpmg-and-rec-uk-report-on-jobs-with-the-north-regional-report-2026-10-08","date":"2026-10-08","title":"KPMG and REC UK Report on Jobs, with the North regional report","category":"survey","rag":"a","status":"confirmed","why":"Permanent placements, vacancies and starting pay for the North. Pairs with the claimant count.","source":{"name":"S&P Global PMI release calendar","url":"https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"},"verified":"2026-09-24","time":"00:01"},{"id":"cladding-under-11m","date":"2026-10-09","title":"Cladding Safety Scheme applications close for buildings under 11 metres","category":"funding","rag":"g","status":"confirmed","why":"Eight-week window run by Homes England through the Building Remediation Hub. Flag to housing colleagues. No economic read.","source":{"name":"Homes England and MHCLG, Buildings under 11 metres: new funding","url":"https://www.gov.uk/government/publications/buildings-under-11-metres-new-funding"},"verified":"2026-09-24","first_logged":"whats-new-2026-08-25"},{"id":"common-ground-award","date":"2026-10-12","title":"Common Ground Award applications close","category":"funding","rag":"r","status":"confirmed","why":"Capital funding for community spaces. Outcomes are due in December 2026 and payment is likely in January 2027.","source":{"name":"MHCLG, Common Ground Award 2026 to 2027 prospectus","url":"https://www.gov.uk/government/publications/common-ground-award-2026-to-2027-prospectus"},"verified":"2026-09-24","action":"Decide whether Gateshead convenes a consortium, or close the item","first_logged":"whats-new-2026-09-15"},{"id":"pmi-natwest-uk-regional-growth-tracker-2026-10-14","date":"2026-10-14","title":"NatWest UK Regional Growth Tracker","category":"survey","rag":"a","status":"confirmed","why":"North East business activity and employment. Watch for a second month below 50.","source":{"name":"S&P Global PMI release calendar","url":"https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"},"verified":"2026-09-24","time":"00:01"},{"id":"ons-gdpmonthlyestimateukaugust2026","date":"2026-10-15","title":"GDP monthly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpmonthlyestimateukaugust2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"pubs-hotels-valuation","date":"2026-10-16","title":"Call for evidence closes on how pubs and hotels are valued for business rates","category":"consultation","rag":"a","status":"confirmed","why":"Business rates valuation of pubs and hotels, which sits alongside the 20% rates cut for pubs, clubs and live music venues from 2027/28. Moves the rateable value base in our local centres.","source":{"name":"HM Treasury call for evidence, opened 24 August 2026","url":"https://www.gov.uk/government/calls-for-evidence/valuation-methodology-review-for-pubs-and-hotels"},"verified":"2026-09-24","time":"23:59","first_logged":"policy-update-2026-09"},{"id":"ons-traveltrends2025","date":"2026-10-16","title":"Travel trends, 2025","category":"data","rag":"g","status":"provisional","why":"Visitor economy context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/traveltrends2025"},"verified":"2026-09-24","date_label":"October to November 2026"},{"id":"ons-labourforcesurveyqualityupdateoctober2026","date":"2026-10-20","title":"Labour Force Survey quality update","category":"data","rag":"a","status":"confirmed","why":"The likely home of the APS quality advice promised for September.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/labourforcesurveyqualityupdateoctober2026"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-uklabourmarketoctober2026","date":"2026-10-20","title":"UK labour market, with regional tables and PAYE Real Time Information","category":"data","rag":"r","status":"confirmed","why":"Gateshead's September claimant count, and the next Annual Population Survey quarter with new employment and inactivity estimates.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uklabourmarketoctober2026"},"verified":"2026-09-24","time":"07:00"},{"id":"s106-standard-agreements","date":"2026-10-20","title":"Consultation closes on standard planning agreements for medium-sized sites","category":"consultation","rag":"a","status":"confirmed","why":"Standard section 106 templates for schemes of 10 to 49 homes. Affects how quickly smaller housing sites in the borough can be agreed.","source":{"name":"MHCLG consultation, opened 25 August 2026","url":"https://www.gov.uk/government/consultations/standard-planning-agreements-for-medium-sized-sites"},"verified":"2026-09-24","time":"23:59","first_logged":"policy-update-2026-09"},{"id":"ons-consumerpriceinflationukseptember2026","date":"2026-10-21","title":"Consumer price inflation","category":"data","rag":"g","status":"confirmed","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-publicsectorfinancesukseptember2026","date":"2026-10-21","title":"Public sector finances","category":"data","rag":"g","status":"confirmed","why":"Fiscal backdrop.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/publicsectorfinancesukseptember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-privaterentandhousepricesukoctober2026","date":"2026-10-21","title":"Private rent and house prices","category":"data","rag":"g","status":"confirmed","why":"Local authority rents and house prices, so a Gateshead cut.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/privaterentandhousepricesukoctober2026"},"verified":"2026-09-24","time":"09:30","routine":true},{"id":"ons-employeeearningsintheuk2026","date":"2026-10-22","title":"Employee earnings in the UK, 2026 (ASHE)","category":"data","rag":"a","status":"confirmed","why":"Resident and workplace earnings for Gateshead.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/employeeearningsintheuk2026"},"verified":"2026-09-24","time":"09:30"},{"id":"pmi-uk-flash-pmi-2026-10-23","date":"2026-10-23","title":"UK Flash PMI","category":"survey","rag":"g","status":"confirmed","why":"Early read on October activity.","source":{"name":"S&P Global PMI release calendar","url":"https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"},"verified":"2026-09-24","time":"09:30"},{"id":"budget-2026","date":"2026-10-28","title":"Autumn Budget 2026, with the OBR Economic and Fiscal Outlook","category":"fiscal","rag":"r","status":"confirmed","why":"The Chancellor has said the roadmap to fiscal devolution comes at the Budget. It carries the business rates retention and local income tax design that decides Gateshead's tax base position.","source":{"name":"HM Treasury, Chancellor's letter to the Treasury Select Committee, 31 July 2026","url":"https://www.gov.uk/government/publications/chancellor-letter-to-the-treasury-select-committee-tsc-budget-2026-date"},"verified":"2026-09-24","action":"Derive Gateshead's income tax base position before the day, and read the roadmap in full on 29 October","first_logged":"whats-new-2026-08-03"},{"id":"obr-efo-2026-10","date":"2026-10-28","title":"OBR Economic and Fiscal Outlook","category":"fiscal","rag":"a","status":"confirmed","why":"The official forecast behind the Budget. Resets the inflation, earnings and unemployment path our forward-looking work assumes.","source":{"name":"Office for Budget Responsibility","url":"https://obr.uk/"},"verified":"2026-09-24"},{"id":"pip-monitoring-return","date":"2026-10-29","title":"Pride in Place monitoring return portal closes","category":"deadline","rag":"a","status":"confirmed","why":"The six-monthly return from accountable bodies. The portal opens on 1 October and closes on 29 October, the day after the Budget.","source":{"name":"MHCLG, Pride in Place Programme prospectus and guidance","url":"https://www.gov.uk/government/publications/pride-in-place-programme-prospectus"},"verified":"2026-09-24","first_logged":"whats-new-2026-09-08"},{"id":"ons-uknationalaccountsthebluebook2026","date":"2026-10-30","title":"UK National Accounts, the Blue Book 2026","category":"data","rag":"g","status":"provisional","why":"Method changes feed the next regional accounts.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uknationalaccountsthebluebook2026"},"verified":"2026-09-24"},{"id":"workwell-england","date":"2026-11-01","title":"WorkWell rolls out across England","category":"policy","rag":"a","status":"expected","why":"Integrated work and health support, up to £259 million from 2026/27 to 2028/29. Relevant to the inactivity position.","source":{"name":"DWP, Get Britain Working: an update on the Jobs and Careers Service, 2 July 2026","url":"https://www.gov.uk/government/publications/get-britain-working-an-update-on-the-jobs-and-careers-service"},"verified":"2026-09-24","date_label":"From November 2026","first_logged":"policy-update-2026-07"},{"id":"chsf-close","date":"2026-11-02","title":"Council Housebuilding Support Fund bidding window closes","category":"funding","rag":"r","status":"confirmed","why":"Support for councils to increase housebuilding. Applicants hear from November 2026, and further windows are expected in April 2027 and April 2028.","source":{"name":"MHCLG, Council Housebuilding Support Fund: how to apply","url":"https://www.gov.uk/guidance/council-housebuilding-support-fund-how-to-apply"},"verified":"2026-09-24","time":"14:00","action":"Ask housing and development colleagues whether Gateshead is bidding","first_logged":"whats-new-2026-09-21"},{"id":"ons-localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024","date":"2026-11-05","title":"Local sites and employees linked to international trade in services","category":"data","rag":"g","status":"confirmed","why":"Subnational trade exposure.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-regionalandsubregionallabourproductivityuk2024","date":"2026-11-05","title":"Regional and subregional labour productivity, 2024","category":"data","rag":"r","status":"confirmed","why":"Gateshead's GVA per hour and per filled job for 2024, on the current method.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/regionalandsubregionallabourproductivityuk2024"},"verified":"2026-09-24","time":"09:30"},{"id":"mpc-2026-11-05","date":"2026-11-05","title":"Bank of England interest rate decision, with Monetary Policy Report","category":"monetary","rag":"a","status":"confirmed","why":"Rates were held at 3.75% in September with three members voting to raise. A move changes the rate assumption in our forecasts and cost-of-living work.","source":{"name":"Bank of England, upcoming MPC dates","url":"https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates"},"verified":"2026-09-24"},{"id":"ons-internationaltradeinuknationsregionsandcities2024","date":"2026-11-10","title":"International trade in UK nations, regions and cities, 2024","category":"data","rag":"g","status":"confirmed","why":"Regional export context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/internationaltradeinuknationsregionsandcities2024"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-gdpfirstquarterlyestimateukjulytoseptember2026","date":"2026-11-12","title":"GDP first quarterly estimate, July to September 2026","category":"data","rag":"g","status":"confirmed","why":"National growth context for the quarterly monitor.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukjulytoseptember2026"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-gdpmonthlyestimateukseptember2026","date":"2026-11-12","title":"GDP monthly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpmonthlyestimateukseptember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-shorttermletsthroughonlinecollaborativeeconomyplatformsukjuly2023tojune2026","date":"2026-11-13","title":"Short-term lets through online platforms, July 2023 to June 2026","category":"data","rag":"a","status":"provisional","why":"Part of the overnight-stay baseline the visitor levy work needs.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/shorttermletsthroughonlinecollaborativeeconomyplatformsukjuly2023tojune2026"},"verified":"2026-09-24","date_label":"November 2026"},{"id":"ons-uklabourmarketnovember2026","date":"2026-11-17","title":"UK labour market, with regional tables and PAYE Real Time Information","category":"data","rag":"a","status":"confirmed","why":"Gateshead's claimant count and payrolled employees, and the regional labour market tables.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uklabourmarketnovember2026"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-productivityflashestimateandoverviewukjulytoseptember2026andapriltojune2026","date":"2026-11-17","title":"Productivity flash estimate","category":"data","rag":"a","status":"confirmed","why":"First release on the new component method for the whole economy.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/productivityflashestimateandoverviewukjulytoseptember2026andapriltojune2026"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-consumerpriceinflationukoctober2026","date":"2026-11-18","title":"Consumer price inflation","category":"data","rag":"g","status":"confirmed","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/consumerpriceinflationukoctober2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-businessregisterandemploymentsurveybresprovisionalresults2025revisedresults2024","date":"2026-11-18","title":"BRES, provisional 2025 and revised 2024","category":"data","rag":"a","status":"confirmed","why":"Employee jobs by industry for Gateshead. Supersedes the BRES figures across our products.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/businessregisterandemploymentsurveybresprovisionalresults2025revisedresults2024"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-privaterentandhousepricesuknovember2026","date":"2026-11-18","title":"Private rent and house prices","category":"data","rag":"g","status":"confirmed","why":"Local authority rents and house prices, so a Gateshead cut.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/privaterentandhousepricesuknovember2026"},"verified":"2026-09-24","time":"09:30","routine":true},{"id":"ons-businessdemography2025","date":"2026-11-19","title":"Business demography 2025","category":"data","rag":"a","status":"provisional","why":"Local business births, deaths and survival.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/businessdemography2025"},"verified":"2026-09-24"},{"id":"ons-publicsectorfinancesukoctober2026","date":"2026-11-20","title":"Public sector finances","category":"data","rag":"g","status":"confirmed","why":"Fiscal backdrop.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/publicsectorfinancesukoctober2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-youngpeoplenotineducationemploymentortrainingneetuknovember2026","date":"2026-11-26","title":"Young people not in education, employment or training (NEET)","category":"data","rag":"a","status":"confirmed","why":"UK and regional NEET context for the youth employment thread.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/youngpeoplenotineducationemploymentortrainingneetuknovember2026"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-longterminternationalmigrationprovisionalyearendingjune2026","date":"2026-11-26","title":"Long-term international migration, year ending June 2026","category":"data","rag":"g","status":"provisional","why":"Population change context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/longterminternationalmigrationprovisionalyearendingjune2026"},"verified":"2026-09-24"},{"id":"ons-provisionalpopulationestimatefortheukmid2026","date":"2026-11-26","title":"Provisional UK population estimate, mid-2026","category":"data","rag":"g","status":"provisional","why":"National context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/provisionalpopulationestimatefortheukmid2026"},"verified":"2026-09-24","date_label":"November 2026"},{"id":"ons-householdcostsindicesforukhouseholdgroupsjulytoseptember2026","date":"2026-11-27","title":"Household Costs Indices","category":"data","rag":"g","status":"confirmed","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsjulytoseptember2026"},"verified":"2026-09-24","time":"09:30"},{"id":"ppn026-guidance","date":"2026-11-30","title":"Guidance on the PPN 026 social value model","category":"policy","rag":"g","status":"expected","why":"Sets how the good jobs and skills weightings are measured.","source":{"name":"Cabinet Office, PPN 026: the social value model","url":"https://www.gov.uk/government/publications/ppn-026-the-social-value-model"},"verified":"2026-09-24","date_label":"Autumn 2026","first_logged":"policy-update-2026-09"},{"id":"pip-plan-beacon-lough","date":"2026-11-30","title":"Pride in Place plans due from September 2025 Phase 2 boards","category":"deadline","rag":"r","status":"confirmed","why":"Beacon Lough and Wrekenton's neighbourhood board is in this cohort. Plans can be submitted up to 26 February 2027 where more time is needed.","source":{"name":"MHCLG, Pride in Place Programme: plans for Phase 2 places","url":"https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places"},"verified":"2026-09-24","action":"Offer the board a small-area evidence pack for its ten-year plan","first_logged":"whats-new-2026-09-21"},{"id":"common-ground-outcomes","date":"2026-12-01","title":"Common Ground Award outcomes notified","category":"funding","rag":"g","status":"expected","why":"Notification of application outcomes, with payment to successful applicants likely in January 2027.","source":{"name":"MHCLG, Common Ground Award 2026 to 2027 prospectus","url":"https://www.gov.uk/government/publications/common-ground-award-2026-to-2027-prospectus"},"verified":"2026-09-24","date_label":"December 2026"},{"id":"ons-populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025","date":"2026-12-01","title":"Small-area population estimates, mid-2025","category":"data","rag":"a","status":"provisional","why":"Ward and neighbourhood populations for the places work.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025"},"verified":"2026-09-24","date_label":"December 2026 to January 2027"},{"id":"ons-workingandworklesshouseholdsintheukjulytoseptember2026","date":"2026-12-02","title":"Working and workless households","category":"data","rag":"g","status":"confirmed","why":"Household worklessness context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/workingandworklesshouseholdsintheukjulytoseptember2026"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-trendsinukbusinessdynamismandproductivity2026","date":"2026-12-09","title":"Trends in UK business dynamism and productivity","category":"data","rag":"g","status":"confirmed","why":"Productivity context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/trendsinukbusinessdynamismandproductivity2026"},"verified":"2026-09-24","time":"09:30"},{"id":"ons-theuktourismsatelliteaccountuktsa2024","date":"2026-12-09","title":"UK Tourism Satellite Account, 2024","category":"data","rag":"g","status":"provisional","why":"Visitor economy context for the levy work.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/theuktourismsatelliteaccountuktsa2024"},"verified":"2026-09-24","date_label":"December 2026 to January 2027"},{"id":"ons-lifeexpectancyforlocalareasoftheukbetween2001to2003and2023to2025","date":"2026-12-10","title":"Life expectancy for local areas, 2023 to 2025","category":"data","rag":"g","status":"provisional","why":"Gateshead life expectancy refresh.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/lifeexpectancyforlocalareasoftheukbetween2001to2003and2023to2025"},"verified":"2026-09-24","date_label":"December 2026 to January 2027"},{"id":"ons-gdpmonthlyestimateukoctober2026","date":"2026-12-11","title":"GDP monthly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpmonthlyestimateukoctober2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-uklabourmarketdecember2026","date":"2026-12-15","title":"UK labour market, with regional tables and PAYE Real Time Information","category":"data","rag":"a","status":"confirmed","why":"Gateshead's claimant count and payrolled employees, and the regional labour market tables. The PAYE local authority sheet refreshes.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uklabourmarketdecember2026"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-consumerpriceinflationuknovember2026","date":"2026-12-16","title":"Consumer price inflation","category":"data","rag":"g","status":"confirmed","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/consumerpriceinflationuknovember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-privaterentandhousepricesukdecember2026","date":"2026-12-16","title":"Private rent and house prices","category":"data","rag":"g","status":"confirmed","why":"Local authority rents and house prices, so a Gateshead cut.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/privaterentandhousepricesukdecember2026"},"verified":"2026-09-24","time":"09:30","routine":true},{"id":"mpc-2026-12-17","date":"2026-12-17","title":"Bank of England interest rate decision","category":"monetary","rag":"g","status":"confirmed","why":"Rate decision without a new forecast. Restate the rate assumption only if Bank Rate moves.","source":{"name":"Bank of England, upcoming MPC dates","url":"https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates"},"verified":"2026-09-24"},{"id":"ons-publicsectorfinancesuknovember2026","date":"2026-12-22","title":"Public sector finances","category":"data","rag":"g","status":"confirmed","why":"Fiscal backdrop.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/publicsectorfinancesuknovember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"jobs-guarantee-national","date":"2026-12-31","title":"Jobs Guarantee national rollout begins","category":"policy","rag":"r","status":"expected","why":"Funded six-month jobs for young people across 25 areas of Great Britain. The 18 to 24 claimant count is where Gateshead is most exposed.","source":{"name":"DWP, Jobs Guarantee guidance, updated 16 September 2026","url":"https://www.gov.uk/government/publications/jobs-guarantee"},"verified":"2026-09-24","date_label":"Later in 2026","action":"Find the North East delivery partner and size the eligible Gateshead cohort","first_logged":"whats-new-2026-09-21"},{"id":"young-people-work-final","date":"2026-12-31","title":"Young people and work review final report","category":"policy","rag":"a","status":"expected","why":"The final report will set out what a participation system for early adulthood should look like. Feeds our NEET work.","source":{"name":"Young people and work: interim report, 10 August 2026","url":"https://www.gov.uk/government/publications/young-people-and-work-interim-report"},"verified":"2026-09-24","date_label":"Later in 2026","first_logged":"whats-new-2026-08-31"},{"id":"ppn026-live","date":"2027-01-01","title":"PPN 026 social value model applies to new central government procurements","category":"policy","rag":"a","status":"confirmed","why":"Central contracts must weight good jobs and skills. Suppliers will need routes to local NEETs and care leavers.","source":{"name":"Cabinet Office, PPN 026: the social value model","url":"https://www.gov.uk/government/publications/ppn-026-the-social-value-model"},"verified":"2026-09-24","first_logged":"policy-update-2026-09"},{"id":"bus-fare-cap","date":"2027-01-01","title":"£2 bus fare cap across England outside London","category":"policy","rag":"g","status":"confirmed","why":"Maximum single fares fall by a third, to the end of 2027. A step change in the transport part of the cost-of-living index.","source":{"name":"DfT press release, 22 July 2026","url":"https://www.gov.uk/government/news/cheaper-travel-for-millions-with-a-third-off-fares"},"verified":"2026-09-24","first_logged":"policy-update-2026-08"},{"id":"ons-gdpmonthlyestimateuknovember2026","date":"2027-01-15","title":"GDP monthly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpmonthlyestimateuknovember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-uklabourmarketjanuary2027","date":"2027-01-19","title":"UK labour market, with regional tables and PAYE Real Time Information","category":"data","rag":"a","status":"confirmed","why":"Gateshead's claimant count and payrolled employees, and the regional labour market tables.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uklabourmarketjanuary2027"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-consumerpriceinflationukdecember2026","date":"2027-01-20","title":"Consumer price inflation","category":"data","rag":"g","status":"confirmed","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/consumerpriceinflationukdecember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-privaterentandhousepricesukjanuary2027","date":"2027-01-20","title":"Private rent and house prices","category":"data","rag":"g","status":"provisional","why":"Local authority rents and house prices, so a Gateshead cut.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/privaterentandhousepricesukjanuary2027"},"verified":"2026-09-24","routine":true},{"id":"ons-estimatesofgreenjobsukseptember2026","date":"2027-01-21","title":"Estimates of green jobs","category":"data","rag":"g","status":"provisional","why":"Green economy context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/estimatesofgreenjobsukseptember2026"},"verified":"2026-09-24","date_label":"January 2027"},{"id":"mayoral-planning-commence","date":"2027-01-31","title":"Mayoral planning powers commence","category":"policy","rag":"g","status":"expected","why":"Secondary legislation is to be laid by the end of 2026, subject to the consultation outcome.","source":{"name":"MHCLG, Planning powers for mayors in England consultation","url":"https://www.gov.uk/government/consultations/planning-powers-for-mayors-in-england"},"verified":"2026-09-24","date_label":"Early 2027"},{"id":"tlfs-progress-jan27","date":"2027-01-31","title":"Transformed Labour Force Survey progress check and transition plan","category":"milestone","rag":"a","status":"expected","why":"The survey behind every APS estimate we publish. A detailed transition plan follows in the first quarter.","source":{"name":"ONS, Labour market transformation: update on progress and plans, August 2026","url":"https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/articles/labourmarkettransformationupdateonprogressandplans/august2026"},"verified":"2026-09-24","date_label":"January 2027","first_logged":"whats-new-2026-08-17"},{"id":"productivity-industry-method","date":"2027-02-01","title":"Industry productivity estimates move to the component method","category":"milestone","rag":"a","status":"expected","why":"Full implementation at the February 2027 productivity flash. The first point the new method could touch anything we publish.","source":{"name":"ONS, Component approach to measuring labour productivity, 17 September 2026","url":"https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/methodologies/componentapproachtomeasuringlabourproductivityuk1997to2024"},"verified":"2026-09-24","date_label":"February 2027","first_logged":"whats-new-2026-09-21"},{"id":"mpc-2027-02-04","date":"2027-02-04","title":"Bank of England interest rate decision, with Monetary Policy Report","category":"monetary","rag":"a","status":"confirmed","why":"Rates were held at 3.75% in September with three members voting to raise. A move changes the rate assumption in our forecasts and cost-of-living work.","source":{"name":"Bank of England, upcoming MPC dates","url":"https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates"},"verified":"2026-09-24"},{"id":"ons-gdpfirstquarterlyestimateukoctobertodecember2026","date":"2027-02-12","title":"GDP first quarterly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context for the quarterly monitor.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukoctobertodecember2026"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-gdpmonthlyestimateukdecember2026","date":"2027-02-12","title":"GDP monthly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpmonthlyestimateukdecember2026"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-uklabourmarketfebruary2027","date":"2027-02-16","title":"UK labour market, with regional tables and PAYE Real Time Information","category":"data","rag":"a","status":"confirmed","why":"Gateshead's claimant count and payrolled employees, and the regional labour market tables.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uklabourmarketfebruary2027"},"verified":"2026-09-24","time":"07:00"},{"id":"ons-privaterentandhousepricesukfebruary2027","date":"2027-02-17","title":"Private rent and house prices","category":"data","rag":"g","status":"confirmed","why":"Local authority rents and house prices, so a Gateshead cut.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/privaterentandhousepricesukfebruary2027"},"verified":"2026-09-24","time":"09:30","routine":true},{"id":"ons-consumerpriceinflationukjanuary2027","date":"2027-02-17","title":"Consumer price inflation","category":"data","rag":"g","status":"provisional","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/consumerpriceinflationukjanuary2027"},"verified":"2026-09-24","routine":true},{"id":"ons-lowcarbonandrenewableenergyeconomyuk2025","date":"2027-02-24","title":"Low carbon and renewable energy economy, 2025","category":"data","rag":"g","status":"provisional","why":"Green economy context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/lowcarbonandrenewableenergyeconomyuk2025"},"verified":"2026-09-24"},{"id":"ons-householdcostsindicesforukhouseholdgroupsoctobertodecember2026","date":"2027-02-25","title":"Household Costs Indices","category":"data","rag":"g","status":"confirmed","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsoctobertodecember2026"},"verified":"2026-09-24","time":"09:30"},{"id":"pip-plan-backstop","date":"2027-02-26","title":"Latest submission date for Phase 2 Pride in Place plans","category":"deadline","rag":"a","status":"confirmed","why":"The backstop for boards that need more time, and the deadline for boards named in March 2026.","source":{"name":"MHCLG, Pride in Place Programme: plans for Phase 2 places","url":"https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places"},"verified":"2026-09-24"},{"id":"ons-gdpmonthlyestimateukjanuary2027","date":"2027-03-11","title":"GDP monthly estimate","category":"data","rag":"g","status":"confirmed","why":"National growth context.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/gdpmonthlyestimateukjanuary2027"},"verified":"2026-09-24","time":"07:00","routine":true},{"id":"ons-uklabourmarketmarch2027","date":"2027-03-16","title":"UK labour market, with regional tables and PAYE Real Time Information","category":"data","rag":"a","status":"confirmed","why":"Gateshead's claimant count and payrolled employees, and the regional labour market tables.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/uklabourmarketmarch2027"},"verified":"2026-09-24","time":"07:00"},{"id":"mpc-2027-03-18","date":"2027-03-18","title":"Bank of England interest rate decision","category":"monetary","rag":"g","status":"confirmed","why":"Rate decision without a new forecast. Restate the rate assumption only if Bank Rate moves.","source":{"name":"Bank of England, upcoming MPC dates","url":"https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates"},"verified":"2026-09-24"},{"id":"ons-privaterentandhousepricesukmarch2027","date":"2027-03-24","title":"Private rent and house prices","category":"data","rag":"g","status":"confirmed","why":"Local authority rents and house prices, so a Gateshead cut.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/privaterentandhousepricesukmarch2027"},"verified":"2026-09-24","time":"09:30","routine":true},{"id":"ons-consumerpriceinflationukfebruary2027","date":"2027-03-24","title":"Consumer price inflation","category":"data","rag":"g","status":"provisional","why":"Feeds the cost-of-living index.","source":{"name":"ONS release calendar","url":"https://www.ons.gov.uk/releases/consumerpriceinflationukfebruary2027"},"verified":"2026-09-24","routine":true},{"id":"pubs-rates-cut","date":"2027-04-01","title":"20% business rates cut for pubs, clubs and live music venues","category":"policy","rag":"a","status":"confirmed","why":"Takes effect for the 2027/28 rates year. Baseline the qualifying premises in our local centres before it lands.","source":{"name":"Prime Minister's Office press release, 23 July 2026","url":"https://www.gov.uk/government/news/burnham-means-business-pm-slashes-business-rates-bills-for-pubs-clubs-and-live-music-venues"},"verified":"2026-09-24","date_label":"2027/28 rates year","first_logged":"policy-update-2026-08"},{"id":"mayors-business-rates","date":"2027-04-01","title":"Mayors begin retaining a share of business rates, and gain visitor levy powers","category":"fiscal","rag":"a","status":"confirmed","why":"The first step of fiscal devolution. The share and the baseline are expected in the Budget roadmap.","source":{"name":"Cabinet Office, Rewiring the State: Cabinet Statement, 31 July 2026","url":"https://www.gov.uk/government/publications/rewiring-the-state-cabinet-statement"},"verified":"2026-09-24","date_label":"From April 2027","first_logged":"whats-new-2026-08-25"},{"id":"adv-manuf-panel","date":"2027-04-30","title":"Advanced manufacturing expert evaluation panel first convenes","category":"policy","rag":"g","status":"expected","why":"Applications to the panel are now rolling. Advanced manufacturing is the borough's largest single contributor to output.","source":{"name":"DBT, Advanced manufacturing expert evaluation panel: expression of interest","url":"https://www.gov.uk/government/publications/advanced-manufacturing-expert-evaluation-panel-expression-of-interest"},"verified":"2026-09-24","date_label":"Spring 2027","first_logged":"whats-new-2026-08-31"},{"id":"flexible-voting","date":"2027-05-01","title":"Local elections, with flexible voting pilots","category":"policy","rag":"g","status":"expected","why":"Councils can apply to pilot flexible voting at the scheduled May 2027 local elections.","source":{"name":"MHCLG, Flexible voting pilots 2027: prospectus","url":"https://www.gov.uk/government/publications/flexible-voting-pilots-2027-prospectus"},"verified":"2026-09-24","date_label":"May 2027","first_logged":"whats-new-2026-08-31"},{"id":"tlfs-decision-jul27","date":"2027-07-31","title":"Transformed Labour Force Survey decision point","category":"milestone","rag":"a","status":"expected","why":"If ONS and users are ready, the process starts for a November 2027 switch of headline labour market data.","source":{"name":"ONS, Labour market transformation: update on progress and plans, August 2026","url":"https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/articles/labourmarkettransformationupdateonprogressandplans/august2026"},"verified":"2026-09-24","date_label":"July 2027"},{"id":"tlfs-transition-nov27","date":"2027-11-30","title":"Planned switch of headline labour market data to the Transformed Labour Force Survey","category":"milestone","rag":"a","status":"expected","why":"Subject to readiness. Local and annual data follow from 2028.","source":{"name":"ONS, Labour market transformation: update on progress and plans, August 2026","url":"https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/articles/labourmarkettransformationupdateonprogressandplans/august2026"},"verified":"2026-09-24","date_label":"November 2027"},{"id":"strategic-authorities-2027","date":"2027-12-31","title":"Every area to have, or be establishing, a strategic authority","category":"policy","rag":"g","status":"expected","why":"The government's stated ambition, with strategic authorities in place everywhere by the end of 2028.","source":{"name":"Cabinet Office, Rewiring the State: Cabinet Statement, 31 July 2026","url":"https://www.gov.uk/government/publications/rewiring-the-state-cabinet-statement"},"verified":"2026-09-24","date_label":"End of 2027"},{"id":"visitor-levy-plans","date":"2028-03-31","title":"Visitor levy revenue plans due from strategic authorities","category":"fiscal","rag":"a","status":"expected","why":"The point by which NEMSA would set out how levy revenues are invested. We still need the borough's overnight-stay baseline.","source":{"name":"Cabinet Office, Rewiring the State: Cabinet Statement, 31 July 2026","url":"https://www.gov.uk/government/publications/rewiring-the-state-cabinet-statement"},"verified":"2026-09-24","date_label":"By March 2028","first_logged":"policy-update-2026-08"},{"id":"income-tax-share","date":"2028-04-01","title":"Mayors retain a share of local income tax","category":"fiscal","rag":"a","status":"confirmed","why":"Replaces central grants. Receipts are retained locally from April 2028, with detail confirmed at the Spending Review.","source":{"name":"Cabinet Office, Rewiring the State: Cabinet Statement, 31 July 2026","url":"https://www.gov.uk/government/publications/rewiring-the-state-cabinet-statement"},"verified":"2026-09-24","date_label":"From April 2028","first_logged":"policy-update-2026-08"}],"pending_verification":[{"claim":"Pubs and hotels valuation review reports by the end of March 2027","held_in":"policy-update-2026-09, whats-new-2026-09-08","note":"Not found on the call-for-evidence page, which says only that findings will be published in a report. Find the source or drop."},{"claim":"Jobs Guarantee national rollout starts in November 2026","held_in":"whats-new-2026-09-21","note":"The DWP page says later in 2026. Shown on the calendar as later in 2026 until a dated source appears."},{"claim":"14+ technical education pathways roll out from September 2028","held_in":"whats-new-2026-07-28, policy-update-2026-08","note":"Announcement only, no document found yet."},{"claim":"Adult gaming centres need planning permission from the start of 2027","held_in":"whats-new-2026-08-17","note":"Source not re-checked in the first build."},{"claim":"National Visitor Economy Strategy expected autumn 2026","held_in":"policy-update-2026-07, policy-update-2026-08","note":"No primary source for the timing found yet."},{"claim":"Devolution white paper published with the Budget on 28 October","held_in":"whats-new-2026-08-25, whats-new-2026-09-08","note":"The Chancellor's 7 September speech confirms the fiscal devolution roadmap at the Budget, not a white paper. Find the source for the white paper or drop."},{"claim":"Local elections in May 2027 run on existing council boundaries","held_in":"whats-new-2026-09-08","note":"Quoted in the edition; source page not re-fetched in the first build."}],"log":[{"date":"2026-09-24","run":"first build","note":"Seeded from every edition published since July 2026, each date checked at source, plus the ONS release calendar to March 2027 and the S&P Global calendar.","added":100,"changed":0,"removed":0}]}</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("hz-data").textContent);
+  var CATS = D.categories, ITEMS = D.items;
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var RAGW = {r: "Red", a: "Amber", g: "Green"};
+  var STW = {confirmed: "Confirmed", provisional: "Provisional", expected: "Expected", published: "Published"};
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function parse(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function longDate(s) { var d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear(); }
+  function shortDate(s) { var d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3); }
+  function dated(x) { return !x.date_label; }
+
+  var TODAY = iso(new Date());
+  var in30 = iso(addDays(new Date(), 30)), in60 = iso(addDays(new Date(), 60)), ago14 = iso(addDays(new Date(), -14));
+
+  document.getElementById("hz-updated").textContent = longDate(D.updated).replace(/^\w+ /, "");
+  document.getElementById("hz-onsto").textContent = longDate(D.window.ons_to).replace(/^\w+ /, "");
+
+  // An undated item (month or season only) stays "upcoming" until its sort date passes.
+  var upcoming = ITEMS.filter(function (x) { return x.date >= TODAY && x.status !== "published"; });
+  var passed = ITEMS.filter(function (x) { return (x.date < TODAY || x.status === "published") && x.date >= ago14; })
+                    .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+
+  // ---- headline counts ----
+  var next30 = upcoming.filter(function (x) { return x.date <= in30 && dated(x); });
+  var reds = upcoming.filter(function (x) { return x.rag === "r"; });
+  var closes = upcoming.filter(function (x) { return /consultation|funding|deadline/.test(x.category) && x.date <= in60; });
+  document.getElementById("hz-stats").innerHTML =
+    '<div><b>' + next30.length + '</b><span>dated items in the next 30 days</span></div>' +
+    '<div class="r"><b>' + reds.length + '</b><span>red items on the horizon</span></div>' +
+    '<div><b>' + closes.length + '</b><span>consultations, funding windows and deadlines closing in 60 days</span></div>' +
+    '<div><b>' + upcoming.length + '</b><span>items tracked in total</span></div>';
+
+  // ---- act-on box: red items in the next 60 days, plus undated reds ----
+  var act = upcoming.filter(function (x) { return x.rag === "r" && (x.date <= in60 || !dated(x)); });
+  var h = '<h3>Act on These</h3>';
+  if (!act.length) h += '<p class="none">Nothing red in the next 60 days.</p>';
+  else {
+    h += "<ol>";
+    act.forEach(function (x) {
+      var when = dated(x) ? longDate(x.date) + (x.time ? ", " + x.time : "") : x.date_label;
+      h += '<li><span class="by">' + esc(when) + '</span>. <a href="' + esc(x.source.url) + '">' + esc(x.title) + "</a>" +
+           (x.action ? ". " + esc(x.action) : "") + "</li>";
+    });
+    h += "</ol>";
+  }
+  document.getElementById("hz-act").innerHTML = h;
+
+  // ---- controls ----
+  var catSel = document.getElementById("hz-cat");
+  Object.keys(CATS).forEach(function (k) {
+    if (ITEMS.some(function (x) { return x.category === k; })) {
+      var o = document.createElement("option"); o.value = k; o.textContent = CATS[k]; catSel.appendChild(o);
+    }
+  });
+  var state = {view: "list", cat: "", rag: "", q: "", routine: false, month: TODAY.slice(0, 7)};
+  try { var sv = JSON.parse(localStorage.getItem("hz-state") || "{}"); if (sv.view) state.view = sv.view; if (sv.routine) state.routine = true; } catch (e) {}
+  document.getElementById("hz-routine").checked = state.routine;
+
+  function save() { try { localStorage.setItem("hz-state", JSON.stringify({view: state.view, routine: state.routine})); } catch (e) {} }
+
+  function match(x) {
+    if (state.cat && x.category !== state.cat) return false;
+    if (state.rag === "r" && x.rag !== "r") return false;
+    if (state.rag === "ra" && x.rag === "g") return false;
+    if (!state.routine && x.routine) return false;
+    if (state.q) {
+      var hay = (x.title + " " + x.why + " " + (x.action || "") + " " + x.source.name + " " + (CATS[x.category] || "")).toLowerCase();
+      if (hay.indexOf(state.q) < 0) return false;
+    }
+    return true;
+  }
+
+  function rowHTML(x, soon) {
+    var when = dated(x)
+      ? shortDate(x.date) + "<small>" + (x.time ? esc(x.time) : parse(x.date).getFullYear()) + "</small>"
+      : esc(x.date_label) + "<small>no fixed day</small>";
+    var fl = x.first_logged
+      ? ' &middot; first logged in <a href="' + (/^policy-update/.test(x.first_logged) ? "../policy/" : "../briefs/") + esc(x.first_logged) + '.html">' + esc(x.first_logged.replace(/-/g, " ")) + "</a>" : "";
+    return '<div class="hz-row ' + x.rag + (soon ? " soon" : "") + '" id="' + esc(x.id) + '">' +
+      '<div class="hz-date">' + when + "</div>" +
+      '<div class="hz-body"><div class="top"><span class="rag ' + x.rag + '">' + RAGW[x.rag] + "</span>" +
+      '<a class="title" href="' + esc(x.source.url) + '">' + esc(x.title) + "</a>" +
+      '<span class="hz-tag">' + esc(CATS[x.category] || x.category) + "</span>" +
+      '<span class="hz-tag st-' + x.status + '">' + (STW[x.status] || x.status) + "</span></div>" +
+      "<p>" + esc(x.why) + "</p>" +
+      (x.action ? '<p class="act">' + esc(x.action) + "</p>" : "") +
+      '<p class="src">Source: <a href="' + esc(x.source.url) + '">' + esc(x.source.name) + "</a>, checked " +
+      longDate(x.verified).replace(/^\w+ /, "") + fl + "</p></div></div>";
+  }
+
+  function listView(list) {
+    if (!list.length) return '<div class="hz-empty">Nothing matches these filters.</div>';
+    var out = "", cur = "";
+    list.forEach(function (x) {
+      var m = x.date.slice(0, 7);
+      if (m !== cur) {
+        if (cur) out += "</div>";
+        cur = m; var d = parse(x.date);
+        out += '<div class="hz-month"><h3>' + MONTHS[d.getMonth()] + " " + d.getFullYear() + "</h3>";
+      }
+      out += rowHTML(x, x.date <= in30 && dated(x));
+    });
+    return out + "</div>";
+  }
+
+  function monthView(list) {
+    var y = +state.month.slice(0, 4), m = +state.month.slice(5, 7) - 1;
+    var first = new Date(y, m, 1), start = addDays(first, -((first.getDay() + 6) % 7));
+    var months = list.map(function (x) { return x.date.slice(0, 7); }).sort();
+    var minM = TODAY.slice(0, 7), maxM = months.length ? months[months.length - 1] : minM;
+    var byDay = {}, undated = [];
+    list.forEach(function (x) {
+      if (x.date.slice(0, 7) !== state.month) return;
+      if (dated(x)) (byDay[x.date] = byDay[x.date] || []).push(x); else undated.push(x);
+    });
+    var h = '<div class="hz-gridnav"><button type="button" data-nav="-1"' + (state.month <= minM ? " disabled" : "") + '>&lsaquo; Previous</button>' +
+      "<strong>" + MONTHS[m] + " " + y + '</strong><button type="button" data-nav="1"' + (state.month >= maxM ? " disabled" : "") + ">Next &rsaquo;</button></div>";
+    h += '<table class="hz-grid"><thead><tr>';
+    ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].forEach(function (d) { h += "<th>" + d + "</th>"; });
+    h += "</tr></thead><tbody>";
+    for (var w = 0; w < 6; w++) {
+      var rowStart = addDays(start, w * 7);
+      if (w > 3 && rowStart.getMonth() !== m) break;
+      h += "<tr>";
+      for (var i = 0; i < 7; i++) {
+        var d = addDays(start, w * 7 + i), k = iso(d), out = d.getMonth() !== m;
+        h += '<td class="' + (out ? "out" : "") + (k === TODAY ? " today" : "") + '"><div class="dn">' + d.getDate() + "</div>";
+        if (!out) (byDay[k] || []).forEach(function (x) {
+          h += '<a class="hz-chip ' + x.rag + '" href="#' + esc(x.id) + '" data-jump="' + esc(x.id) + '" title="' + esc(x.title + (x.time ? " (" + x.time + ")" : "")) + '">' +
+               '<span class="w">' + RAGW[x.rag] + '</span><span class="t">' + esc(x.title) + "</span></a>";
+        });
+        h += "</td>";
+      }
+      h += "</tr>";
+    }
+    h += "</tbody></table>";
+    if (undated.length) {
+      h += '<div class="hz-undated"><h4>No Fixed Day This Month</h4>';
+      undated.forEach(function (x) { h += '<a class="hz-chip ' + x.rag + '" href="#' + esc(x.id) + '" data-jump="' + esc(x.id) + '"><span class="w">' + RAGW[x.rag] + "</span>" + esc(x.date_label + ", " + x.title) + "</a>"; });
+      h += "</div>";
+    }
+    return h;
+  }
+
+  function render() {
+    var list = upcoming.filter(match);
+    var hidden = upcoming.filter(function (x) { return x.routine && !state.routine; }).length;
+    document.getElementById("hz-meta").textContent = list.length + " of " + upcoming.length + " upcoming items shown" +
+      (hidden && !state.routine ? " (" + hidden + " routine monthly releases hidden)" : "");
+    document.querySelectorAll(".hz-seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.view === state.view ? "true" : "false"); });
+    document.getElementById("hz-view").innerHTML = state.view === "month" ? monthView(list) : listView(list);
+  }
+
+  document.querySelectorAll(".hz-seg button").forEach(function (b) {
+    b.addEventListener("click", function () { state.view = b.dataset.view; save(); render(); });
+  });
+  catSel.addEventListener("change", function () { state.cat = catSel.value; render(); });
+  document.getElementById("hz-rag").addEventListener("change", function (e) { state.rag = e.target.value; render(); });
+  document.getElementById("hz-q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById("hz-routine").addEventListener("change", function (e) { state.routine = e.target.checked; save(); render(); });
+  document.getElementById("hz-view").addEventListener("click", function (e) {
+    var nav = e.target.closest("[data-nav]");
+    if (nav) {
+      var y = +state.month.slice(0, 4), m = +state.month.slice(5, 7) - 1 + (+nav.dataset.nav);
+      var d = new Date(y, m, 1); state.month = d.getFullYear() + "-" + pad(d.getMonth() + 1); render(); return;
+    }
+    var j = e.target.closest("[data-jump]");
+    if (j) {
+      // Jumping from the grid switches to the list so the full entry is visible.
+      e.preventDefault(); var id = j.dataset.jump;
+      state.view = "list"; state.cat = ""; state.rag = ""; state.q = "";
+      catSel.value = ""; document.getElementById("hz-rag").value = ""; document.getElementById("hz-q").value = "";
+      var tgt = ITEMS.filter(function (x) { return x.id === id; })[0];
+      if (tgt && tgt.routine) { state.routine = true; document.getElementById("hz-routine").checked = true; }
+      render(); var el = document.getElementById(id); if (el) el.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+  });
+
+  // ---- recently passed ----
+  var pw = document.getElementById("hz-passed-wrap");
+  if (!passed.length) pw.style.display = "none";
+  else {
+    document.getElementById("hz-passed-sum").textContent = "Recently passed, last 14 days (" + passed.length + ")";
+    document.getElementById("hz-passed").innerHTML = passed.map(function (x) { return rowHTML(x, false); }).join("");
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
