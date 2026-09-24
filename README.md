@@ -15,6 +15,7 @@ Comparator groups used throughout: the **NEMSA seven** (the seven councils of th
 | ONS topic | Dashboard | Theme | Size |
 |---|---|---|---|
 | **Economy** | [NOMIS Quick Look](economy/nomis-quick-look.html) | The most-run NOMIS queries for Gateshead answered on one page - claimant count, BRES employees, jobs density, population estimates, UK Business Counts and the Annual Population Survey at their latest published vintage, with full breakdowns, confidence intervals drawn on every survey estimate, one-click copy in the house citation format, and a vintage flag on every dataset | 72 KB |
+| **Economy** | [GVA 2024](economy/gva-2024.html) | Balanced GVA 1998–2024 (23 September 2026 release) in cash and real terms, industry structure, NEMSA seven and statistical neighbours, all-authority league table, revisions against the previous edition | 385 KB |
 | **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
 | **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NEMSA seven, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
 | **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, the NEMSA seven and statistical neighbours, with per-indicator Explore view | 290 KB |
@@ -26,6 +27,23 @@ Comparator groups used throughout: the **NEMSA seven** (the seven councils of th
 | **Performance and outcomes** | [Local Outcomes Framework comparator](performance-outcomes/lgof-comparator.html) ⭐ | Gateshead on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) — all 16 outcomes, 112 live metrics assembled from 12 publishers' own releases into 137 series, against six switchable comparator groups. Median, rank, quintile and a CI-based better/worse reading per metric across all 132 English single-tier authorities; ranked comparator charts with confidence whiskers, trends, and a data-currency panel from the quarterly vintage sweep. A comparator, not a performance assessment | 1.05 MB |
 
 ---
+
+## Economy - GVA 2024 dashboard
+
+[`economy/gva-2024.html`](economy/gva-2024.html)
+
+Gateshead's gross value added from 1998 to 2024, built on the ONS balanced GVA release of 23 September 2026. That release adds 2024 and revises every earlier year, with new deflation methods and the ITL25 geography, so this is a separate product from the 2023 Productivity & GVA dashboard rather than an update to it.
+
+| Tab | What it shows |
+|---|---|
+| Overview | Headline figures, cash against real GVA, real GVA since 2019 against the North East, England and the UK, generated key findings |
+| GVA & Growth | Real GVA index since 1998, annual real growth, growth by period |
+| Sectors | GVA by industry, real growth by industry, industry mix against the North East and UK, GVA per employee job (with BRES 2024), concentration, business base (UK Business Counts 2025) |
+| Benchmarking | Real growth since 2019 for the NEMSA seven and the ONS economic statistical neighbours, official GDP per head, comparator scorecard |
+| National League | Distribution of real growth across every local authority with data, fastest and slowest, sortable league table |
+| Revisions | This edition against the previous one (published 17 April 2025) for Gateshead and the NEMSA seven |
+
+ONS has suppressed the whole series for 51 of 361 local authorities (all of Wales and parts of South West England and Scotland) while it fixes an error converting to ITL25 geography, and expects to publish the complete dataset within four to six weeks. Seven of Gateshead's twenty economic neighbours are affected. They are shown as suppressed and left out of every rank. The build is `pipelines/gva-2024` (`build_data.py` then `bundle.py`), so the complete dataset drops in by re-running it. Productivity for 2024 is due on 5 November 2026.
 
 ## Economy — Productivity & GVA dashboard
 

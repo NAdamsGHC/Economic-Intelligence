@@ -7,6 +7,7 @@ This note applies the **Aqua Book (2025)** framework — proportionate quality a
 - [`economy/els-scorecard.html`](economy/els-scorecard.html) — all 88 ONS Explore Local Statistics indicators covering Gateshead
 - [`economy/gdhi.html`](economy/gdhi.html) — GDHI per head benchmarking, 1997–2023, and the small-area GDHI explorer, 2010–2023 (the per-head benchmarking previously sat in a separate `gdhi-per-head.html`, merged into this product in July 2026)
 - [`economy/productivity.html`](economy/productivity.html) — GVA and productivity position, 1998–2023, with the statistical-neighbour scorecard and UK league table
+- [`economy/gva-2024.html`](economy/gva-2024.html) - GVA position, 1998–2024, on the 23 September 2026 edition, with NEMSA and statistical-neighbour benchmarking, a league table and a revisions comparison (added 24 September 2026)
 - [`performance-outcomes/lgof-comparator.html`](performance-outcomes/lgof-comparator.html) — Gateshead's position on MHCLG's Local Outcomes Framework (first edition, 1 July 2026), 112 live metrics rendered as 137 series against six comparator groups (added 30 July 2026)
 
 Last updated: 30 July 2026.
@@ -86,6 +87,17 @@ These are **descriptive monitoring and benchmarking products**: they answer *"wh
 | D1 | GVA and productivity series quoted **exactly as published** by ONS — regional GVA (balanced) by industry for local authorities (April 2025 release, data to 2023) and subregional productivity by local authority district (19 June 2025 release, data to 2023). No re-derivation where an official figure exists. | Next vintages: LAD GVA 2024 around September 2026, subregional productivity 2024 on 5 November 2026, both with back-series revisions — rebuild, don't append. |
 | D2 | The **business base total is the published UKBC figure** (5,580 enterprises, 2025), not the sum of the disclosure-rounded size bands (5,575). Size-band shares are computed on the band sum, so they remain internally consistent. | Corrected 28 July 2026; the difference is disclosure rounding, not error. |
 | D3 | The statistical-neighbour scorecard resolves **all 20 economic neighbours**, including Barnsley (E08000016) and Newry, Mourne and Down (N09000010), both added from source on 28 July 2026 after the July verification pass found Barnsley carried a non-existent code (E08000038) and Newry missing from the areas dictionary. | Newry's 2023 per-job and jobs values are suppressed at source; the series ends 2022 for those two measures and the table shows the last published value. |
+
+### GVA 2024 dashboard (added 24 September 2026)
+
+| # | Assumption / judgement | Basis and risk |
+|---|---|---|
+| G1 | GVA and GDP per head quoted **exactly as published** by ONS in the 23 September 2026 edition (1998–2024). Growth rates, ranks, shares, revisions and GVA per employee job are our calculations and are labelled as such. | 2024 is provisional. The build reconciles the twelve North East authorities to the published North East total in every year (largest difference £3m, rounding). |
+| G2 | **51 suppressed authorities are left out of every rank and distribution**, not estimated. Ranks are out of the 310 with data, and the denominator is printed with every rank. | ONS suppressed the whole series for these areas pending an ITL25 conversion fix. Seven of the twenty ONS economic neighbours are affected (Newport, Vale of Glamorgan, Denbighshire, Ceredigion, Pembrokeshire, Conwy, Somerset). Ranks will move when the complete dataset lands in four to six weeks, so rebuild then. |
+| G3 | **North East, England and UK figures are the published ITL1 and country totals**, not sums of local authorities, because the suppression makes England and UK sums incomplete. UK totals and growth include Extra-Regio, as in the ONS headline. UK industry shares use the UK less Extra-Regio, on the same basis as the regions. | Caught in the narrative gate: the first build labelled the UK less Extra-Regio as the United Kingdom, overstating UK real growth since 2019 (5.2% against 4.5%). |
+| G4 | **GVA per employee job** divides current price GVA by BRES employee jobs for the same year (2024), for industries with at least 500 Gateshead employee jobs. Real estate is excluded because its GVA includes imputed rent. | BRES excludes most self-employment and is rounded, so levels are an approximation, labelled so on the chart. |
+| G5 | **Revisions compare editions on their own terms**, current price levels directly and real growth within each edition's own chained volume series (2022 prices in the previous edition, 2023 prices in this one). | Chained volume levels from different price bases are never compared. |
+| G6 | Real terms movements in **public administration, health and education** are flagged as saying little about local performance, because ONS allocates them to local authorities using BRES employment. | Stated in the caveats. It explains the large real fall in health GVA (2014–2024) while cash GVA rose. |
 
 ### Local Outcomes Framework comparator (added 30 July 2026)
 
