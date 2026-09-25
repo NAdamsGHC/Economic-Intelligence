@@ -271,16 +271,23 @@
     sec.id = "publication-schedule";
     var head =
       '<div class="gc-topic-head"><h2>Publication schedule</h2>' +
-      '<span class="note">What&rsquo;s coming and when &middot; updated ' + esc(sch.updated || "") + "</span>" +
+      '<span class="note">Our next six months &middot; updated ' + esc(sch.updated || "") + "</span>" +
       '<button class="gc-sched-toggle" type="button" aria-expanded="true" aria-controls="gc-sched-body">' +
       '<span class="chev" aria-hidden="true">&#9662;</span><span class="lbl">Hide</span></button></div>';
+    // Six months only: the viewer's current month and the five after it. Falls
+    // back to the last six held if the schedule has run out of future months.
+    var now = new Date(), cur = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2);
+    var from = 0;
+    while (from < sch.months.length && sch.months[from].id < cur) from++;
+    if (from > sch.months.length - 6) from = Math.max(0, sch.months.length - 6);
+    var months = sch.months.slice(from, from + 6);
     var html = '<div class="gc-sched-body" id="gc-sched-body">' +
       '<div class="gc-sched-scroll"><table class="gc-sched-table"><thead><tr><th class="prod">Product</th>';
-    sch.months.forEach(function (m) { html += "<th>" + esc(m.label) + "</th>"; });
+    months.forEach(function (m) { html += "<th>" + esc(m.label) + "</th>"; });
     html += "</tr></thead><tbody>";
     sch.rows.forEach(function (row) {
       html += '<tr><td class="prod">' + esc(row.name) + '<span class="cad">' + esc(row.cadence || "") + "</span></td>";
-      sch.months.forEach(function (m) {
+      months.forEach(function (m) {
         html += "<td>";
         (row.entries[m.id] || []).forEach(function (e) {
           var cls = "gc-chip " + (e.status || "planned") + (e.kind ? " " + e.kind : "");
@@ -317,6 +324,147 @@
     return sec;
   }
 
+  // ---- Horizon Calendar widget (a small wall calendar, rendered from horizon/horizon.json) ----
+  // Each day with items is filled with its highest priority. Hover or focus a
+  // day to see what lands on it. Clicking the card opens the full calendar at
+  // the month on show.
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var RAGW = { r: "Red", a: "Amber", g: "Green" }, RANK = { r: 3, a: 2, g: 1 };
+  function ymd(d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+
+  function horizonSection(p) {
+    var sec = document.createElement("section");
+    sec.className = "gc-topic gc-topic-horizon";
+    sec.id = "horizon-widget";
+    sec.setAttribute("data-noun", "calendar");
+    sec.innerHTML =
+      '<div class="gc-topic-head"><h2>Horizon Calendar</h2><span class="note">Dates that matter</span></div>' +
+      '<div class="gc-cards gc-cards-one"></div>';
+    var url = absUrl(p);
+    var el = document.createElement("article");
+    el.className = "gc-card gc-hzw";
+    el.setAttribute("data-id", p.id);
+    el.setAttribute("data-search", (p.title + " " + p.description + " " + p.sources + " " + (p.keywords || []).join(" ") + " " + p.topic).toLowerCase());
+    el.innerHTML = '<div class="hz-hang" aria-hidden="true"><i></i><i></i></div>' +
+      '<div class="hz-top"><button type="button" class="hz-nav" data-step="-1" aria-label="Previous month">&lsaquo;</button>' +
+      '<b></b><button type="button" class="hz-nav" data-step="1" aria-label="Next month">&rsaquo;</button></div>' +
+      '<div class="hz-body"><div class="hz-grid"><table aria-label="Horizon Calendar, month view"><thead><tr>' +
+      ["M", "T", "W", "T", "F", "S", "S"].map(function (d) { return "<th>" + d + "</th>"; }).join("") +
+      "</tr></thead><tbody></tbody></table></div>" +
+      '<div class="hz-key"><span><i style="background:#c62828"></i>Red, act on the day</span>' +
+      '<span><i style="background:#e0a030"></i>Amber, prepare</span><span><i style="background:#3f8a40"></i>Green, noted</span></div>' +
+      '<div class="hz-foot"><span class="hz-count">Loading dates</span><a class="gc-open" href="' + esc(url) + '">Open &rsaquo;</a></div></div>';
+    sec.querySelector(".gc-cards").appendChild(el);
+
+    var tip = document.createElement("div");
+    tip.className = "gc-hztip";
+    tip.setAttribute("role", "tooltip");
+    document.body.appendChild(tip);
+
+    var today = new Date(), view = new Date(today.getFullYear(), today.getMonth(), 1);
+    var byDay = {}, undated = {}, minM = ymd(view).slice(0, 7), maxM = minM;
+
+    function monthUrl() { return url + "?view=month&month=" + ymd(view).slice(0, 7); }
+
+    function draw() {
+      var y = view.getFullYear(), m = view.getMonth(), key = ymd(view).slice(0, 7);
+      el.querySelector(".hz-top b").innerHTML = esc(MONTHS[m]) + "<small>" + y + "</small>";
+      el.querySelector('[data-step="-1"]').disabled = key <= minM;
+      el.querySelector('[data-step="1"]').disabled = key >= maxM;
+      var first = new Date(y, m, 1);
+      var start = new Date(y, m, 1 - ((first.getDay() + 6) % 7));
+      var rows = "", n = 0, t = ymd(today);
+      for (var w = 0; w < 6; w++) {
+        rows += "<tr>";
+        for (var i = 0; i < 7; i++) {
+          var d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + w * 7 + i), k = ymd(d);
+          if (d.getMonth() !== m) { rows += '<td class="out">' + d.getDate() + "</td>"; continue; }
+          var its = byDay[k] || [], top = "";
+          its.forEach(function (x) { if (!top || RANK[x.rag] > RANK[top]) top = x.rag; });
+          n += its.length;
+          var cls = (k === t ? "today " : "") + (its.length ? "has " + top : "");
+          var label = its.length
+            ? d.getDate() + " " + MONTHS[m] + ". " + its.map(function (x) { return RAGW[x.rag] + ", " + x.title; }).join(". ")
+            : "";
+          rows += '<td class="' + cls + '"' +
+            (its.length ? ' data-day="' + k + '" tabindex="0" aria-label="' + esc(label) + '"' : "") + ">" + d.getDate() + "</td>";
+        }
+        rows += "</tr>";
+      }
+      el.querySelector("tbody").innerHTML = rows;
+      var u = (undated[key] || []).length;
+      el.querySelector(".hz-count").textContent = n + " dated item" + (n === 1 ? "" : "s") + " this month" +
+        (u ? ", plus " + u + " with no fixed day" : "");
+    }
+
+    function showTip(td) {
+      var its = byDay[td.getAttribute("data-day")] || [];
+      if (!its.length) return;
+      var d = new Date(td.getAttribute("data-day") + "T12:00:00");
+      tip.innerHTML = "<b>" + d.getDate() + " " + MONTHS[d.getMonth()] + "</b>" + its.map(function (x) {
+        return '<div><span class="w ' + x.rag + '">' + RAGW[x.rag] + "</span>" + (x.time ? esc(x.time) + " " : "") + esc(x.title) + "</div>";
+      }).join("");
+      tip.style.display = "block";
+      var r = td.getBoundingClientRect(), tw = tip.offsetWidth, th = tip.offsetHeight;
+      var left = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
+      var top = r.top - th - 8 < 8 ? r.bottom + 8 : r.top - th - 8;
+      tip.style.left = left + "px";
+      tip.style.top = top + "px";
+    }
+    function hideTip() { tip.style.display = "none"; }
+
+    el.addEventListener("mouseover", function (e) {
+      var td = e.target.closest("td[data-day]");
+      if (td) showTip(td); else hideTip();
+    });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focusin", function (e) { var td = e.target.closest("td[data-day]"); if (td) showTip(td); });
+    el.addEventListener("focusout", hideTip);
+    window.addEventListener("scroll", hideTip, { passive: true });
+    el.addEventListener("click", function (e) {
+      var nav = e.target.closest(".hz-nav");
+      if (nav) {
+        view = new Date(view.getFullYear(), view.getMonth() + (+nav.getAttribute("data-step")), 1);
+        hideTip();
+        draw();
+        return;
+      }
+      if (e.target.closest("a")) return;
+      window.location.href = monthUrl();
+    });
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && e.target.closest("td[data-day]")) window.location.href = monthUrl();
+    });
+
+    draw();
+    fetch(p.path.replace(/index\.html$/, "") + "horizon.json", { cache: "no-cache" })
+      .then(function (r) { return r.json(); })
+      .then(function (h) {
+        h.items.forEach(function (x) {
+          if (x.routine) return;
+          var mk = x.date.slice(0, 7);
+          if (x.date_label) { (undated[mk] = undated[mk] || []).push(x); return; }
+          (byDay[x.date] = byDay[x.date] || []).push(x);
+          if (mk > maxM) maxM = mk;
+        });
+        draw();
+      })
+      .catch(function () { el.querySelector(".hz-count").textContent = "Dates could not be loaded"; });
+    return sec;
+  }
+
+  // The widget takes the height of a standard product card, measured live, so it
+  // stays the same size as the squares around it whatever the font or width.
+  function syncWidgetHeight() {
+    var w = document.querySelector(".gc-hzw");
+    if (!w) return;
+    var ref = null;
+    document.querySelectorAll(".gc-card:not(.gc-hzw):not(.gc-detail-open)").forEach(function (c) {
+      if (!ref && c.offsetHeight) ref = c;
+    });
+    w.style.height = ref && window.innerWidth > 700 ? ref.offsetHeight + "px" : "";
+  }
+
   function render(cat) {
     SITE = cat.site || "";
     var root = document.getElementById("gc-catalog");
@@ -334,8 +482,17 @@
       bySeries[s].forEach(function (p, i) { p.pinned = i === 0; p._archived = i > 0; });
     });
 
-    // Publication schedule first — the public year view (collapsible).
-    if (cat.schedule) root.appendChild(scheduleSection(cat.schedule));
+    // Top row: the publication schedule (next six months) beside the Horizon
+    // Calendar widget, which is its permanent home on the landing page.
+    var widgets = cat.products.filter(function (p) { return p.widget === "horizon"; });
+    cat.products = cat.products.filter(function (p) { return !p.widget; });
+    if (cat.schedule || widgets.length) {
+      var row = document.createElement("div");
+      row.className = "gc-toprow";
+      if (cat.schedule) row.appendChild(scheduleSection(cat.schedule));
+      if (widgets.length) row.appendChild(horizonSection(widgets[0]));
+      root.appendChild(row);
+    }
 
     // Pinned section — the latest edition of each recurring update series.
     // Pinned products appear here ONLY (not repeated in their topic section).
@@ -400,11 +557,12 @@
     var sw = document.querySelector(".gc-searchwrap");
     if (sw && !sw.querySelector("svg")) sw.insertAdjacentHTML("afterbegin", ICON_SEARCH);
 
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+    syncWidgetHeight();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { remeasure(); syncWidgetHeight(); });
     var rt;
     window.addEventListener("resize", function () {
       clearTimeout(rt);
-      rt = setTimeout(remeasure, 180);
+      rt = setTimeout(function () { remeasure(); syncWidgetHeight(); }, 180);
     });
   }
 

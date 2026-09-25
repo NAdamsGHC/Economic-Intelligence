@@ -192,7 +192,7 @@ body.gc-searching .gc-showmore{display:none;}
 .gc-sched.collapsed .gc-sched-toggle .chev{transform:rotate(-90deg);}
 .gc-sched.collapsed .gc-sched-body{display:none;}
 .gc-sched-scroll{overflow-x:auto;border:1px solid var(--gc-line);}
-.gc-sched-table{border-collapse:collapse;width:100%;min-width:1050px;font-size:12px;}
+.gc-sched-table{border-collapse:collapse;width:100%;min-width:560px;font-size:12px;}
 .gc-sched-table th,.gc-sched-table td{border:1px solid var(--gc-line);padding:5px 6px;vertical-align:top;text-align:center;}
 .gc-sched-table thead th{background:var(--gc-panel);font-weight:700;color:var(--gc-blue-dark);}
 .gc-sched-table .prod{text-align:left;white-space:nowrap;font-weight:700;background:#fafbfc;color:var(--gc-ink);}
@@ -208,6 +208,59 @@ a.gc-chip.released:hover{background:var(--gc-green);color:#fff;}
   background:#eef2f6;border:1px solid var(--gc-line-2);}
 .gc-sched-key .k.released{background:#e8f2e8;border-color:#9cc39c;}
 .gc-sched-key .k.next{background:var(--gc-blue);border-color:var(--gc-blue);}
+
+/* ---- Top row: publication schedule (two card columns) + Horizon widget (one) ----
+   Uses the same column arithmetic as .gc-cards, so the widget is exactly the
+   width of a standard card at every breakpoint. */
+.gc-toprow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start;margin-bottom:30px;}
+.gc-toprow > .gc-topic{margin-bottom:0;}
+.gc-toprow > .gc-sched{grid-column:span 2;}
+.gc-toprow > .gc-sched:only-child{grid-column:1 / -1;}
+body.gc-searching .gc-toprow{display:block;}
+
+/* ---- Horizon Calendar widget: a small wall calendar ---- */
+.gc-card.gc-hzw{padding:0;cursor:pointer;overflow:visible;border-top-color:#c62828;}
+.gc-hzw .hz-hang{display:flex;justify-content:space-around;height:0;position:relative;top:-9px;padding:0 22%;}
+.gc-hzw .hz-hang i{display:block;width:8px;height:16px;border:2px solid #8a96a3;border-radius:5px;background:#fff;}
+.gc-hzw .hz-top{background:#c62828;color:#fff;display:flex;align-items:center;gap:6px;padding:8px 10px 6px;}
+.gc-hzw .hz-top b{flex:1;text-align:center;font-size:15px;letter-spacing:.6px;text-transform:uppercase;}
+.gc-hzw .hz-top small{display:block;font-weight:400;font-size:11px;letter-spacing:.3px;text-transform:none;opacity:.9;}
+.gc-hzw .hz-nav{font:inherit;font-size:16px;line-height:1;width:26px;height:26px;border:1px solid rgba(255,255,255,.55);
+  background:transparent;color:#fff;cursor:pointer;border-radius:0;}
+.gc-hzw .hz-nav:hover{background:rgba(255,255,255,.15);}
+.gc-hzw .hz-nav:disabled{opacity:.35;cursor:default;}
+.gc-hzw .hz-body{padding:6px 12px 8px;display:flex;flex-direction:column;flex:1;min-height:0;}
+.gc-hzw .hz-grid{flex:1;min-height:0;display:flex;}
+.gc-hzw table{width:100%;height:100%;border-collapse:separate;border-spacing:3px;table-layout:fixed;}
+.gc-hzw th{font-size:10px;font-weight:700;color:#6a7784;text-transform:uppercase;padding:0 0 2px;}
+.gc-hzw td{height:auto;text-align:center;font-size:12.5px;color:var(--gc-ink);background:#f7f8fa;padding:0;position:relative;}
+.gc-hzw td.out{background:transparent;color:#c3c9cf;}
+.gc-hzw td.today{outline:2px solid var(--gc-blue);outline-offset:-2px;font-weight:700;}
+.gc-hzw td.has{font-weight:700;cursor:help;}
+.gc-hzw td.r{background:#c62828;color:#fff;}
+.gc-hzw td.a{background:#e0a030;color:#1a1a1a;}
+.gc-hzw td.g{background:#3f8a40;color:#fff;}
+.gc-hzw td.has:hover,.gc-hzw td.has:focus{box-shadow:0 0 0 2px var(--gc-ink);outline:none;}
+.gc-hzw .hz-key{display:flex;flex-wrap:wrap;gap:2px 12px;font-size:11px;color:#41505e;margin-top:5px;}
+.gc-hzw .hz-key i{display:inline-block;width:10px;height:10px;margin-right:4px;vertical-align:-1px;}
+.gc-hzw .hz-foot{display:flex;align-items:center;gap:8px;margin-top:6px;padding-top:6px;border-top:1px solid var(--gc-line);font-size:12px;color:#6a7784;}
+.gc-hzw .hz-foot span{flex:1;}
+.gc-hztip{position:fixed;z-index:50;max-width:300px;background:#fff;border:1px solid var(--gc-line-2);border-top:3px solid var(--gc-blue);
+  box-shadow:0 8px 24px rgba(0,0,0,.16);padding:8px 10px;font-size:12.5px;line-height:1.4;pointer-events:none;display:none;}
+.gc-hztip b{display:block;color:var(--gc-blue-dark);margin-bottom:4px;}
+.gc-hztip div{margin:3px 0;}
+.gc-hztip .w{font-size:10px;font-weight:700;text-transform:uppercase;padding:1px 5px;margin-right:5px;border:1px solid;}
+.gc-hztip .w.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+.gc-hztip .w.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+.gc-hztip .w.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+
+@media(max-width:1060px){
+  .gc-toprow{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .gc-toprow > .gc-sched{grid-column:1 / -1;}
+}
+@media(max-width:700px){
+  .gc-toprow{grid-template-columns:1fr;}
+}
 
 /* ---- Footer ---- */
 .gc-footer{background:var(--gc-footer);color:#e6e9ec;margin-top:34px;}

@@ -227,6 +227,12 @@
   });
   var state = {view: "list", cat: "", rag: "", q: "", routine: false, month: TODAY.slice(0, 7)};
   try { var sv = JSON.parse(localStorage.getItem("hz-state") || "{}"); if (sv.view) state.view = sv.view; if (sv.routine) state.routine = true; } catch (e) {}
+  // Deep link from the landing-page widget, e.g. ?view=month&month=2026-10
+  try {
+    var qs = new URLSearchParams(location.search);
+    if (qs.get("view") === "month" || qs.get("view") === "list") state.view = qs.get("view");
+    if (/^\d{4}-\d{2}$/.test(qs.get("month") || "") && qs.get("month") >= TODAY.slice(0, 7)) state.month = qs.get("month");
+  } catch (e) {}
   document.getElementById("hz-routine").checked = state.routine;
 
   function save() { try { localStorage.setItem("hz-state", JSON.stringify({view: state.view, routine: state.routine})); } catch (e) {} }
