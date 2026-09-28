@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "24 September 2026",
+ "updated": "28 September 2026",
  "schedule": {
-  "updated": "21 September 2026",
+  "updated": "28 September 2026",
   "months": [
    {
     "id": "2026-07",
@@ -120,15 +120,17 @@
       },
       {
        "label": "Mon 28",
-       "status": "next"
-      },
-      {
-       "label": "then every Mon"
+       "status": "released",
+       "href": "briefs/whats-new-2026-09-28.html"
       }
      ],
      "2026-10": [
       {
-       "label": "every Mon"
+       "label": "Mon 5",
+       "status": "next"
+      },
+      {
+       "label": "then every Mon"
       }
      ],
      "2026-11": [
@@ -405,6 +407,52 @@
     "ai",
     "barnsley",
     "nemsa"
+   ]
+  },
+  {
+   "id": "whats-new-2026-09-28",
+   "title": "What's New, 28 September 2026",
+   "path": "briefs/whats-new-2026-09-28.html",
+   "topic": "What's New",
+   "description": "Covering 21 to 28 September, an eight-day window. Gateshead's balanced GVA at current prices for 2024 is £5,221 million, provisional, with 2023 revised to £5,067 million, which puts the first official 2024 figure at the bottom of the £5.2bn to £5.3bn range our internal estimates set. The ONS has suppressed all of Wales and parts of South West England and Scotland pending a geography fix, so seven of our twenty statistical neighbours are missing until early November. DWP opened the £60 million Pathways to Work Innovation Fund today, open to local authorities, closing 26 October. The Jobs Guarantee widens to 18 to 24 year olds on health benefits from April 2027. The 2026 UK Business Counts are live, with 5,700 Gateshead enterprises against 5,580 a year earlier, and our products still carry the 2025 figure. NEMSA is named as a replication site for a shared occupational health scheme for small firms. Also a £210 million high streets package including a £125 million Derelict Buildings Fund, the Your First Home equity loan to be confirmed at the Budget, Vocational GCSEs from 2029, 1,000 new youth workers, the Cabinet Office's Measures to rewire the state and faster Empty Dwelling Management Orders. Seven reds, six of them carried. The complete departmental log carries 193 rows from the four subscribed gov.uk feeds, folded away rather than cut.",
+   "sources": "ONS Regional gross value added (balanced) by industry, local authorities by ITL1 region, published 23 September 2026; NOMIS UK Business Counts enterprises (NM_142_1) and local units (NM_141_1); S&P Global Flash UK PMI, September 2026; gov.uk publications from DWP, DBT, DHSC, MHCLG, DfE, DCMS, the Cabinet Office and HM Treasury; gov.uk departmental feeds for DBT, DWP, MHCLG and DfE. All figures quoted as published, pulled 28 September 2026.",
+   "series": "whats-new",
+   "date": "2026-09-28",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "gva",
+    "regional accounts",
+    "gva 2024",
+    "uk business counts",
+    "pathways to work",
+    "innovation fund",
+    "jobs guarantee",
+    "health benefits",
+    "workplace health",
+    "keep britain working",
+    "workwell",
+    "high streets",
+    "derelict buildings fund",
+    "your first home",
+    "vocational gcses",
+    "work experience",
+    "youth workers",
+    "youth matters",
+    "rewire the state",
+    "insourcing",
+    "shipbuilding",
+    "empty homes",
+    "pmi",
+    "pride in place",
+    "common ground award",
+    "council housebuilding support fund",
+    "visitor levy",
+    "nemsa",
+    "departmental log",
+    "rag"
    ]
   },
   {
