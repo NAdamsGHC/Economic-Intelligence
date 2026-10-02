@@ -264,21 +264,24 @@
   }
 
   // ---- publication schedule (rendered from catalog.schedule) ----
-  var SCHED_KEY = "gc-sched-collapsed";
+  // New key (Oct 2026): the old one only folded the schedule, so earlier
+  // choices are not carried over and every reader starts with the row shown.
+  var TOPROW_KEY = "gc-toprow-collapsed";
   function scheduleSection(sch) {
     var sec = document.createElement("section");
     sec.className = "gc-topic gc-sched";
     sec.id = "publication-schedule";
     var head =
       '<div class="gc-topic-head"><h2>Publication schedule</h2>' +
-      '<span class="note">Our next six months &middot; updated ' + esc(sch.updated || "") + "</span>" +
-      '<button class="gc-sched-toggle" type="button" aria-expanded="true" aria-controls="gc-sched-body">' +
+      '<span class="note">Last month and the next five &middot; updated ' + esc(sch.updated || "") + "</span>" +
+      '<button class="gc-sched-toggle" type="button" aria-expanded="true" aria-controls="gc-sched-body horizon-widget-body">' +
       '<span class="chev" aria-hidden="true">&#9662;</span><span class="lbl">Hide</span></button></div>';
-    // Six months only: the viewer's current month and the five after it. Falls
-    // back to the last six held if the schedule has run out of future months.
+    // Six months: the month just gone, the viewer's current month and the four
+    // after it. Falls back to the last six held if the schedule runs out.
     var now = new Date(), cur = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2);
     var from = 0;
     while (from < sch.months.length && sch.months[from].id < cur) from++;
+    from = Math.max(0, from - 1);
     if (from > sch.months.length - 6) from = Math.max(0, sch.months.length - 6);
     var months = sch.months.slice(from, from + 6);
     var html = '<div class="gc-sched-body" id="gc-sched-body">' +
@@ -306,21 +309,8 @@
       "<span><i class=\"k next\"></i>Next up</span><span><i class=\"k planned\"></i>Planned</span></div></div>";
     sec.innerHTML = head + html;
 
-    // Collapse toggle — state remembered per browser via localStorage.
-    var btn = sec.querySelector(".gc-sched-toggle");
-    var setState = function (collapsed) {
-      sec.classList.toggle("collapsed", collapsed);
-      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
-      btn.querySelector(".lbl").textContent = collapsed ? "Show" : "Hide";
-    };
-    var saved = null;
-    try { saved = localStorage.getItem(SCHED_KEY); } catch (e) {}
-    setState(saved === "1");
-    btn.addEventListener("click", function () {
-      var collapsed = !sec.classList.contains("collapsed");
-      setState(collapsed);
-      try { localStorage.setItem(SCHED_KEY, collapsed ? "1" : "0"); } catch (e) {}
-    });
+    // The Hide button folds the whole top row (schedule and Horizon Calendar
+    // together); wired in render() once both halves exist. Shown by default.
     return sec;
   }
 
@@ -339,7 +329,7 @@
     sec.setAttribute("data-noun", "calendar");
     sec.innerHTML =
       '<div class="gc-topic-head"><h2>Horizon Calendar</h2><span class="note">Dates that matter</span></div>' +
-      '<div class="gc-cards gc-cards-one"></div>';
+      '<div class="gc-cards gc-cards-one" id="horizon-widget-body"></div>';
     var url = absUrl(p);
     var el = document.createElement("article");
     el.className = "gc-card gc-hzw";
@@ -465,7 +455,45 @@
     w.style.height = ref && window.innerWidth > 700 ? ref.offsetHeight + "px" : "";
   }
 
+  // One Hide/Show button folds the schedule and the Horizon Calendar together,
+  // leaving both headings in place. State remembered per browser.
+  function wireTopRow(row) {
+    var btn = row.querySelector(".gc-sched-toggle");
+    if (!btn) return;
+    var setState = function (collapsed) {
+      row.classList.toggle("gc-row-collapsed", collapsed);
+      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      btn.querySelector(".lbl").textContent = collapsed ? "Show" : "Hide";
+    };
+    var saved = null;
+    try { saved = localStorage.getItem(TOPROW_KEY); } catch (e) {}
+    setState(saved === "1");
+    btn.addEventListener("click", function () {
+      var collapsed = !row.classList.contains("gc-row-collapsed");
+      setState(collapsed);
+      try { localStorage.setItem(TOPROW_KEY, collapsed ? "1" : "0"); } catch (e) {}
+      if (!collapsed) syncWidgetHeight();
+    });
+  }
+
+  // "Last updated" line in the hero, from catalog.updated_at (ISO date-time).
+  function lastUpdated(cat) {
+    var el = document.getElementById("gc-updated");
+    if (!el) return;
+    var d = cat.updated_at ? new Date(cat.updated_at) : null;
+    if (d && !isNaN(d)) {
+      // Always UK time, whatever the reader's own time zone.
+      var f = function (o) { return d.toLocaleString("en-GB", Object.assign({ timeZone: "Europe/London" }, o)); };
+      el.textContent = "Last updated " + f({ day: "numeric", month: "long", year: "numeric" }) +
+        " at " + f({ hour: "2-digit", minute: "2-digit", hour12: false });
+      el.setAttribute("datetime", cat.updated_at);
+    } else if (cat.updated) {
+      el.textContent = "Last updated " + cat.updated;
+    }
+  }
+
   function render(cat) {
+    lastUpdated(cat);
     SITE = cat.site || "";
     var root = document.getElementById("gc-catalog");
     if (!root) return;
@@ -492,6 +520,7 @@
       if (cat.schedule) row.appendChild(scheduleSection(cat.schedule));
       if (widgets.length) row.appendChild(horizonSection(widgets[0]));
       root.appendChild(row);
+      wireTopRow(row);
     }
 
     // Pinned section — the latest edition of each recurring update series.

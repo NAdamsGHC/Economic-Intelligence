@@ -66,6 +66,7 @@ a:hover{color:var(--gc-blue-dark);}
   border:2px solid #fff;border-radius:0;color:var(--gc-ink);background:#fff;
 }
 #gc-search::placeholder{color:#6a7784;}
+.gc-updated{display:block;margin-top:8px;font-size:13px;color:#dfe6ec;text-shadow:0 1px 2px rgba(0,0,0,.5);}
 .gc-searchmeta{margin-top:8px;font-size:13px;color:#dfe6ec;min-height:18px;text-shadow:0 1px 2px rgba(0,0,0,.5);}
 
 /* ---- Page body ---- */
@@ -189,8 +190,7 @@ body.gc-searching .gc-showmore{display:none;}
 }
 .gc-sched-toggle:hover{border-color:var(--gc-blue);}
 .gc-sched-toggle .chev{display:inline-block;transition:transform .15s ease;}
-.gc-sched.collapsed .gc-sched-toggle .chev{transform:rotate(-90deg);}
-.gc-sched.collapsed .gc-sched-body{display:none;}
+.gc-row-collapsed .gc-sched-toggle .chev{transform:rotate(-90deg);}
 .gc-sched-scroll{overflow-x:auto;border:1px solid var(--gc-line);}
 .gc-sched-table{border-collapse:collapse;width:100%;min-width:560px;font-size:12px;}
 .gc-sched-table th,.gc-sched-table td{border:1px solid var(--gc-line);padding:5px 6px;vertical-align:top;text-align:center;}
@@ -212,8 +212,24 @@ a.gc-chip.released:hover{background:var(--gc-green);color:#fff;}
 /* ---- Top row: publication schedule (two card columns) + Horizon widget (one) ----
    Uses the same column arithmetic as .gc-cards, so the widget is exactly the
    width of a standard card at every breakpoint. */
-.gc-toprow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start;margin-bottom:30px;}
-.gc-toprow > .gc-topic{margin-bottom:0;}
+.gc-toprow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;margin-bottom:30px;}
+.gc-toprow > .gc-topic{margin-bottom:0;display:flex;flex-direction:column;min-width:0;}
+/* Both headings the same height, so the table and the calendar card start on
+   one line; the table then stretches to finish level with the card. */
+.gc-toprow .gc-topic-head{min-height:40px;align-items:center;}
+@media(min-width:1061px){
+  .gc-toprow .gc-topic-head{flex-wrap:nowrap;}
+  .gc-toprow .gc-topic-head .note{flex:1;min-width:0;}
+}
+.gc-toprow .gc-sched-body{flex:1;display:flex;flex-direction:column;min-height:0;min-width:0;}
+.gc-toprow .gc-sched-scroll{flex:1;}
+.gc-toprow .gc-sched-table{height:100%;}
+.gc-toprow .gc-sched-table tbody td{vertical-align:middle;}
+.gc-toprow .gc-sched-key{margin-top:6px;}
+.gc-toprow > .gc-topic-horizon .gc-cards{flex:1;}
+/* The Hide button folds the whole row: both headings stay, both bodies go. */
+body:not(.gc-searching) .gc-row-collapsed .gc-sched-body,
+body:not(.gc-searching) .gc-row-collapsed .gc-topic-horizon .gc-cards{display:none;}
 .gc-toprow > .gc-sched{grid-column:span 2;}
 .gc-toprow > .gc-sched:only-child{grid-column:1 / -1;}
 body.gc-searching .gc-toprow{display:block;}
@@ -259,7 +275,7 @@ body.gc-searching .gc-toprow{display:block;}
   .gc-toprow > .gc-sched{grid-column:1 / -1;}
 }
 @media(max-width:700px){
-  .gc-toprow{grid-template-columns:1fr;}
+  .gc-toprow{grid-template-columns:minmax(0,1fr);}
 }
 
 /* ---- Footer ---- */

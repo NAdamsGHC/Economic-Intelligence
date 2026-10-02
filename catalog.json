@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "28 September 2026",
+ "updated": "2 October 2026",
  "schedule": {
-  "updated": "28 September 2026",
+  "updated": "2 October 2026",
   "months": [
    {
     "id": "2026-07",
@@ -126,7 +126,12 @@
      ],
      "2026-10": [
       {
-       "label": "Mon 5",
+       "label": "Fri 2",
+       "status": "released",
+       "href": "briefs/whats-new-2026-10-02.html"
+      },
+      {
+       "label": "Wed 14",
        "status": "next"
       },
       {
@@ -407,6 +412,49 @@
     "ai",
     "barnsley",
     "nemsa"
+   ]
+  },
+  {
+   "id": "whats-new-2026-10-02",
+   "title": "What's New, 2 October 2026",
+   "path": "briefs/whats-new-2026-10-02.html",
+   "topic": "What's New",
+   "description": "Covering 28 September to 2 October, a five-day window, because this edition replaces Monday 5 October and the next is on Wednesday 14 October. Manufacturers can now register for the British Industrial Competitiveness Scheme, which cuts eligible firms' electricity bills by up to 25% from April 2027, and registrations close on 30 November. Small firms get £2,000 for each new apprentice aged 16 to 24, and apprenticeship brokerage funding reaches all 14 mayoral strategic authorities with directly elected mayors, NEMSA included, from spring 2027. The North East's percentage of children living in long-term workless households for 2025 is 17.0%, the highest of any UK region. Also a National Care Service planned for the next Parliament, UK second quarter growth revised up to 0.5%, VAT off household electricity bills and new council homelessness powers in the Social Housing Bill. Eight reds, seven of them carried, with the Common Ground Award closing on 12 October. The complete departmental log carries 175 rows from the four subscribed gov.uk feeds, folded away rather than cut.",
+   "sources": "BIST, Applications open for the British Industrial Competitiveness Scheme, 1 October 2026; DWP, £2,000 boost for small businesses who take on young apprentices, 1 October 2026; HM Treasury, Chancellor backs young people into work, 28 September 2026; ONS, Children living in long-term workless households in the UK: 2025, Table D; ONS, GDP quarterly national accounts, UK: April to June 2026; ONS, Average household income, UK: financial year ending 2025; S&P Global UK Manufacturing PMI, September 2026; Lloyds Bank Business Barometer, September 2026; gov.uk publications from No.10, the Cabinet Office, HM Treasury, BIST, DBT, DWP, MHCLG and DfE; gov.uk departmental feeds for DBT, DWP, MHCLG and DfE. All figures quoted as published, pulled 2 October 2026.",
+   "series": "whats-new",
+   "date": "2026-10-02",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "british industrial competitiveness scheme",
+    "bics",
+    "electricity costs",
+    "manufacturing",
+    "apprenticeships",
+    "apprenticeship brokerage",
+    "hiring payment",
+    "youth employment",
+    "workless households",
+    "children",
+    "national care service",
+    "triple lock",
+    "gdp",
+    "household income",
+    "pmi",
+    "business confidence",
+    "vat electricity",
+    "social housing bill",
+    "homelessness",
+    "employment tribunal",
+    "pathways to work",
+    "innovation fund",
+    "common ground award",
+    "jobs guarantee",
+    "pride in place",
+    "visitor levy",
+    "uk business counts"
    ]
   },
   {
@@ -1147,5 +1195,6 @@
    ],
    "featured": true
   }
- ]
+ ],
+ "updated_at": "2026-10-02T12:13:00+01:00"
 }
