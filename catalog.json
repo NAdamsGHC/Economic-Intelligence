@@ -285,12 +285,14 @@
      "2026-10": [
       {
        "label": "Fri 2",
-       "status": "next"
+       "status": "released",
+       "href": "policy/policy-update-2026-10.html"
       }
      ],
      "2026-11": [
       {
-       "label": "Fri 6"
+       "label": "Fri 6",
+       "status": "next"
       }
      ],
      "2026-12": [
@@ -379,6 +381,41 @@
     "dates"
    ],
    "widget": "horizon"
+  },
+  {
+   "id": "policy-2026-10",
+   "title": "Policy update, October 2026",
+   "path": "policy/policy-update-2026-10.html",
+   "topic": "Policy",
+   "description": "Fifth edition, scan covering 8 September to 2 October 2026, and the first built to the new format with a one-page dashboard and red, amber and green grading. Devolution started arriving as instruments, and most of them land with NEMSA rather than the borough. The visitor levy design was settled with one rate across each strategic authority and no automatic borough share. Apprenticeship brokerage extends to every mayoral authority from spring 2027, NEMSA launched Business North East with a spoke in each council from January 2027, and NEMSA was named to copy a shared occupational health scheme for small firms. Gateshead was shortlisted for Young Futures Hubs and not selected, while Newcastle, Northumberland and South Tyneside were. The Jobs Guarantee widens to young people on health benefits from April 2027, a GBP 60m Innovation Fund is open to councils until 26 October, and manufacturers can register for cheaper electricity until 30 November. The fiscal devolution mechanism is still unpublished ahead of the Budget on 28 October, and the Spending Review that confirms the income tax arrangements is now placed in 2027.",
+   "sources": "Briefing · HTML · gov.uk · NE MSA · NOMIS",
+   "series": "policy-update",
+   "date": "2026-10-02",
+   "keywords": [
+    "policy",
+    "bulletin",
+    "fiscal devolution",
+    "budget",
+    "spending review",
+    "visitor levy",
+    "jobs guarantee",
+    "innovation fund",
+    "apprenticeships",
+    "young futures hubs",
+    "workplace health",
+    "business north east",
+    "post-16",
+    "bics",
+    "electricity",
+    "high streets",
+    "derelict buildings fund",
+    "common ground award",
+    "housebuilding",
+    "pride in place",
+    "national care service",
+    "consultations",
+    "nemsa"
+   ]
   },
   {
    "id": "policy-2026-09",
@@ -1196,5 +1233,5 @@
    "featured": true
   }
  ],
- "updated_at": "2026-10-02T12:13:00+01:00"
+ "updated_at": "2026-10-02T14:03:00+01:00"
 }

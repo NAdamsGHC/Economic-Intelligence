@@ -1927,23 +1927,148 @@
    "verified": "2026-10-02",
    "routine": true,
    "first_logged": "whats-new-2026-10-02"
+  },
+  {
+   "id": "best-value-duty-guidance",
+   "date": "2026-10-07",
+   "time": "23:59",
+   "title": "Consultation closes on revised Best Value Duty statutory guidance",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Applies to local and strategic authorities. Corporate governance rather than economic, so for corporate policy colleagues.",
+   "source": {
+    "name": "MHCLG, Best Value Duty: consultation on revised statutory guidance, 15 July 2026",
+    "url": "https://www.gov.uk/government/consultations/best-value-duty-consultation-on-revised-statutory-guidance"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "leasehold-valuation-rates",
+   "date": "2026-10-21",
+   "time": "23:59",
+   "title": "Consultation closes on leasehold enfranchisement valuation rates",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Extended by four weeks on 7 September. Housing market rather than economic intelligence, and no response is proposed.",
+   "source": {
+    "name": "MHCLG, Leasehold enfranchisement valuation rates, updated 7 September 2026",
+    "url": "https://www.gov.uk/government/consultations/leasehold-enfranchisement-valuation-rates"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "land-use-stats-method",
+   "date": "2026-10-28",
+   "time": "23:59",
+   "title": "Consultation closes on new methodology for land use statistics in England",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Rebuilds the land use and new-address statistics on the Ordnance Survey National Geographic Database. A statistics user question for any land or housing supply work.",
+   "source": {
+    "name": "MHCLG, Land use statistics in England: methodology changes, 16 September 2026",
+    "url": "https://www.gov.uk/government/consultations/land-use-statistics-in-england-methodology-changes"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "ai-clean-energy-cfe",
+   "date": "2026-11-06",
+   "time": "23:45",
+   "title": "Call for evidence closes on an AI-enabled clean energy system",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Context for the AI testbed objective. No response is proposed.",
+   "source": {
+    "name": "DESNZ, Vision for an AI-enabled clean energy system, 8 September 2026",
+    "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "business-north-east-launch",
+   "date": "2027-01-15",
+   "date_label": "January 2027",
+   "title": "Business North East regional business support framework starts",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "£25.9 million to March 2029, with a regional hub and a spoke in each of the seven councils, so the council's business support becomes the Gateshead spoke.",
+   "action": "Agree with business support colleagues what evidence the Gateshead spoke needs before launch",
+   "source": {
+    "name": "NEMSA, A further £25.9m investment to back regional business and boost jobs, 22 September 2026",
+    "url": "https://www.northeast-ca.gov.uk/news/economy/a-further-25-9m-investment-to-back-regional-business-and-boost-jobs"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "youth-transformation-2027",
+   "date": "2027-02-15",
+   "date_label": "Early 2027",
+   "title": "Further selection round for the Local Youth Transformation programme",
+   "category": "funding",
+   "rag": "a",
+   "status": "expected",
+   "why": "Gateshead was shortlisted for Young Futures Hubs in July 2026 and not selected. This round funds youth service transformation without a hub.",
+   "action": "Establish whether Gateshead submitted an expression of interest in 2026 and get the feedback before this round",
+   "source": {
+    "name": "DCMS, Young Futures Hubs and Transformation Programme, updated 17 September 2026",
+    "url": "https://www.gov.uk/guidance/young-futures-hubs-and-transformation-programme"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "agc-planning-permission",
+   "date": "2027-01-01",
+   "date_label": "Start of 2027",
+   "title": "Adult gaming centres expected to need planning permission",
+   "category": "policy",
+   "rag": "g",
+   "status": "expected",
+   "why": "Part of the August high streets measures on vape and gaming premises. No consultation, draft order or legislation had been published by 2 October 2026.",
+   "source": {
+    "name": "No.10, PM vows to save hollowed out high streets, 11 August 2026",
+    "url": "https://www.gov.uk/government/news/pm-vows-to-save-hollowed-out-high-streets-with-crackdown-on-vape-and-betting-shops"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "spending-review-2027",
+   "date": "2027-06-30",
+   "date_label": "2027",
+   "title": "Spending Review, which confirms the detailed arrangements for retained income tax",
+   "category": "fiscal",
+   "rag": "a",
+   "status": "expected",
+   "why": "The Cabinet Statement says the Spending Review confirms the income tax share arrangements, so half of the fiscal devolution answer may sit beyond the Budget. Placed in 2027 by the Keep Britain Working update. No date is published.",
+   "source": {
+    "name": "DWP, Keep Britain Working: a national growth opportunity, 23 September 2026, and Cabinet Office, Rewiring the State, 31 July 2026",
+    "url": "https://www.gov.uk/government/publications/keep-britain-working-review-update-a-national-growth-opportunity-september-2026"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
   }
  ],
  "pending_verification": [
   {
    "claim": "Pubs and hotels valuation review reports by the end of March 2027",
    "held_in": "policy-update-2026-09, whats-new-2026-09-08",
-   "note": "Not found on the call-for-evidence page, which says only that findings will be published in a report. Find the source or drop."
+   "note": "Not found on the call-for-evidence page, which says only that findings will be published in a report. Find the source or drop. Re-checked 2 October 2026. MHCLG (10 September) says only that the review reports in time for decisions to be implemented at the next revaluation. Still no date."
   },
   {
    "claim": "Jobs Guarantee national rollout starts in November 2026",
    "held_in": "whats-new-2026-09-21",
    "note": "The DWP page says later in 2026. Shown on the calendar as later in 2026 until a dated source appears. Re-checked 28 September 2026, the page still says later in 2026. Re-checked 2 October 2026, the page still says later in 2026."
-  },
-  {
-   "claim": "Adult gaming centres need planning permission from the start of 2027",
-   "held_in": "whats-new-2026-08-17",
-   "note": "Source not re-checked in the first build."
   },
   {
    "claim": "National Visitor Economy Strategy expected autumn 2026",
@@ -1953,7 +2078,7 @@
   {
    "claim": "Devolution white paper published with the Budget on 28 October",
    "held_in": "whats-new-2026-08-25, whats-new-2026-09-08",
-   "note": "The Chancellor's 7 September speech confirms the fiscal devolution roadmap at the Budget, not a white paper. Find the source for the white paper or drop."
+   "note": "The Chancellor's 7 September speech confirms the fiscal devolution roadmap at the Budget, not a white paper. Find the source for the white paper or drop. Re-checked 2 October 2026. DfE (10 September) describes it only as forthcoming. Still no date."
   },
   {
    "claim": "Youth Matters Fund (£450m) opens for applications",
@@ -1993,6 +2118,14 @@
    "run": "whats-new-2026-10-02 and horizon scan",
    "note": "Full horizon scan run with the weekly edition, ahead of a twelve-day gap to the next edition on 14 October. ONS calendar swept, one release added (productivity flash, 16 February 2027). S&P Global release dates re-checked at source, all held dates unchanged. Every non-ONS item due within 60 days, and every provisional or expected item, re-fetched at source, and none moved. Innovation Fund dates re-confirmed in the bid pack after its 29 September update, which only corrected audio links. Eight items added from this week's sweep and one pending claim added.",
    "added": 9,
+   "changed": 0,
+   "removed": 0
+  },
+  {
+   "date": "2026-10-02",
+   "run": "policy-update-2026-10",
+   "note": "Refresh from the Monthly Policy Update, October 2026. Eight items added from the edition, of which one (adult gaming centres needing planning permission from the start of 2027) promotes a pending claim now traced to the No.10 announcement of 11 August. Every consultation and funding deadline in the edition re-read at source on 2 October, none moved. Two pending notes updated, the pubs and hotels report date and the devolution white paper, both still undated.",
+   "added": 8,
    "changed": 0,
    "removed": 0
   }
