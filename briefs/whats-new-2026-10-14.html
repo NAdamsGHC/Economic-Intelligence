@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's New, 14 October 2026 &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Catch-up round-up of data releases and policy developments relevant to Gateshead's economy, covering 2 to 14 October 2026. NEMSA will control its local innovation funding from 2028, North East business activity rose in September, and the Pathways to Work Innovation Fund closes on 26 October.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css">
+<style>
+  .wn-wrap{max-width:880px;margin:0 auto;padding:28px 24px 10px;}
+  .wn-date{font-size:12px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;}
+  .wn-wrap h1{font-size:28px;color:var(--gc-blue-dark);line-height:1.2;margin-bottom:10px;}
+  .wn-lede{font-size:15px;color:#41505e;margin-bottom:22px;}
+  .wn-wrap h2{font-size:18px;color:var(--gc-blue);border-bottom:2px solid var(--gc-blue);padding-bottom:6px;margin:30px 0 14px;}
+
+  /* --- executive dashboard --- */
+  .wn-dash{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px;}
+  .wn-dash th,.wn-dash td{border:1px solid var(--gc-line);padding:8px 10px;text-align:left;vertical-align:top;}
+  .wn-dash th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  .wn-dash th:nth-child(1){width:108px;}
+  .wn-dash th:nth-child(2){width:23%;}
+  .wn-dash th:nth-child(4){width:27%;}
+  .wn-dash td:nth-child(2) a{font-weight:700;color:var(--gc-blue);text-decoration:none;border-bottom:1px solid var(--gc-blue);}
+  .wn-dash td:nth-child(2) a:hover{color:var(--gc-blue-dark);}
+  .wn-dash tr:hover td{background:#fafcfd;}
+  .rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;
+       text-transform:uppercase;padding:2px 7px;border:1px solid;white-space:nowrap;}
+  .rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+  .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+  .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+
+  /* --- top actions --- */
+  .wn-actions{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);
+              padding:14px 18px 6px;margin:18px 0 6px;}
+  .wn-actions h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .wn-actions ol{margin:0 0 10px 18px;padding:0;font-size:13.5px;}
+  .wn-actions li{margin-bottom:7px;}
+  .wn-actions .by{font-weight:700;color:#8c1c1c;}
+  .wn-actions p.carry{font-size:12.5px;color:#6a7784;margin:0 0 10px;border-top:1px solid var(--gc-line);padding-top:8px;}
+
+  /* --- items --- */
+  .wn-item{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:13px 17px;margin-bottom:14px;}
+  .wn-item.r{border-left-color:#c62828;}
+  .wn-item.a{border-left-color:#c9862a;}
+  .wn-item.g{border-left-color:#266427;}
+  .wn-item .when{font-size:11px;font-weight:700;color:#6a7784;text-transform:uppercase;letter-spacing:.5px;}
+  .wn-item h3{font-size:15.5px;color:var(--gc-ink);margin:3px 0 8px;}
+  .wn-item h3 .rag{vertical-align:middle;margin-right:7px;}
+  .wn-item dl{margin:0;font-size:13.5px;}
+  .wn-item dt{font-weight:700;color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;
+              letter-spacing:.4px;margin-top:9px;}
+  .wn-item dt:first-child{margin-top:0;}
+  .wn-item dd{margin:3px 0 0;}
+  .wn-item dd + dt{margin-top:10px;}
+
+  .wn-stat{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px;}
+  .wn-stat div{flex:1 1 150px;border:1px solid var(--gc-line);border-top:3px solid var(--gc-blue);padding:9px 11px;}
+  .wn-stat b{display:block;font-size:20px;color:var(--gc-blue-dark);line-height:1.1;}
+  .wn-stat span{font-size:11.5px;color:#6a7784;display:block;margin-top:3px;}
+
+  .wn-cal{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px;}
+  .wn-cal th,.wn-cal td{border:1px solid var(--gc-line);padding:6px 9px;text-align:left;vertical-align:top;}
+  .wn-cal th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;letter-spacing:.4px;}
+  .wn-cal td:first-child{white-space:nowrap;font-weight:700;color:var(--gc-blue-dark);}
+
+  .wn-note{background:var(--gc-panel);border:1px solid var(--gc-line);padding:13px 17px;font-size:13px;color:#41505e;margin-top:22px;}
+
+  /* --- collapsible log --- */
+  .wn-fold{border:1px solid var(--gc-line);margin-top:8px;}
+  .wn-fold > summary{cursor:pointer;padding:11px 15px;background:var(--gc-panel);
+                     font-weight:700;color:var(--gc-blue-dark);font-size:14px;list-style:none;}
+  .wn-fold > summary::-webkit-details-marker{display:none;}
+  .wn-fold > summary::before{content:"\25B8";display:inline-block;margin-right:9px;color:var(--gc-blue);}
+  .wn-fold[open] > summary::before{content:"\25BE";}
+  .wn-fold > summary:focus{outline:2px solid var(--gc-blue);outline-offset:-2px;}
+  .wn-fold .meta{display:block;font-weight:400;font-size:12px;color:#6a7784;margin-top:5px;}
+  .wn-foldbody{padding:12px 15px 15px;}
+  .wn-log{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:8px;table-layout:fixed;}
+  .wn-log th,.wn-log td{border:1px solid var(--gc-line);padding:4px 6px;text-align:left;vertical-align:top;}
+  .wn-log th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11px;text-transform:uppercase;letter-spacing:.3px;}
+  .wn-log td:nth-child(1){width:52px;white-space:nowrap;font-weight:700;color:var(--gc-blue-dark);}
+  .wn-log td:nth-child(2){width:56px;font-weight:700;}
+  .wn-log td:nth-child(3){width:24%;}
+  .wn-log td:nth-child(4){width:30%;color:#41505e;}
+  .wn-log a{color:var(--gc-blue);}
+  .wn-scroll{overflow-x:auto;}
+  @media (max-width:640px){
+    .wn-dash,.wn-dash thead,.wn-dash tbody,.wn-dash th,.wn-dash td,.wn-dash tr{display:block;}
+    .wn-dash thead{display:none;}
+    .wn-dash tr{border:1px solid var(--gc-line);margin-bottom:10px;}
+    .wn-dash td{border:0;border-bottom:1px solid var(--gc-line);}
+    .wn-dash td:last-child{border-bottom:0;}
+  }
+  .wn-log tr.ann td{background:#fbf8ef;}
+  .wn-log tr.ann td:nth-child(4){font-style:italic;}
+</style></head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  </div>
+</header>
+
+<main class="wn-wrap">
+
+  <div class="wn-date">What's New &middot; catch-up edition &middot; covering 2 &ndash; 14 October</div>
+  <h1>What's New, 14 October 2026</h1>
+  <p class="wn-lede">A short read of what&rsquo;s landed, what&rsquo;s coming, and what matters for Gateshead&rsquo;s economy. This is a catch-up edition covering the thirteen days since 2 October. The 2 October edition replaced the one due on 5 October and this one replaces 12 October, so the departmental log is longer than usual. Three things carry it. NEMSA will control its Local Innovation Partnerships funding from 2028, and more on the new Good Growth Funds is promised at the Budget on 28 October. North East business activity rose in September, and the North of England led England&rsquo;s regions for permanent hiring. And the Pathways to Work Innovation Fund closes in twelve days, with no partner from the NEMSA area in its directory.</p>
+
+  <h2>This Fortnight at a Glance</h2>
+
+  <table class="wn-dash">
+    <thead>
+      <tr><th>Priority</th><th>What</th><th>What changed?</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#innovation">Pathways to Work Innovation Fund</a></td>
+        <td>The partnership directory is out and names no partner from the NEMSA area. Bids close on 26 October</td>
+        <td>Decide whether Gateshead bids, partners or passes</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#prideinplace">Pride in Place</a></td>
+        <td>No change. The monitoring return is due by 29 October</td>
+        <td>Offer the neighbourhood board the small-area evidence</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#housebuilding">Council housebuilding fund</a></td>
+        <td>One proposal per council, capped at &pound;300,000. Bids close at 2pm on 2 November</td>
+        <td>Confirm whether Gateshead is bidding</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#bics">Electricity costs for manufacturers</a></td>
+        <td>Guidance clarified, eligibility unchanged. Applications close on 30 November</td>
+        <td>Check the scheme has reached business support</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#ukbc">UK Business Counts</a></td>
+        <td>No change. Four products still carry the 2025 vintage</td>
+        <td>Refresh the business base figures across the products</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#jobsguarantee">Jobs Guarantee</a></td>
+        <td>No change. The North East delivery partner is still not named</td>
+        <td>Size both Gateshead cohorts and find the partner</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#levy">Visitor levy</a></td>
+        <td>National registration of short-term lets now expected in March 2027</td>
+        <td>Build the overnight-stay and accommodation baseline</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#innovationfunding">Local innovation funding</a></td>
+        <td>NEMSA controls its Local Innovation Partnerships funding from 2028</td>
+        <td>Watch the Budget on 28 October for the Good Growth Funds</td>
+      </tr>
+      <tr>
+        <td><span class="rag a">Amber</span></td>
+        <td><a href="#surveys">Business surveys</a></td>
+        <td>North East business activity rose in September, and the North led England for permanent hiring</td>
+        <td>Use in the 29 October quarterly update</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#industrialstrategy">Industrial Strategy update</a></td>
+        <td>Four milestones in the NEMSA area, the Port of Tyne Clean Energy Park among them</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#healthwork">Health and work</a></td>
+        <td>Longer NHS waits are associated with more time on benefits</td>
+        <td>Propose a full read of the DHSC review</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#employment">Employment support</a></td>
+        <td>Careers advice moves into Jobcentres, and supported housing tenants keep more of their earnings</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#lgp">Local Growth Plan guidance</a></td>
+        <td>Councils asked to align social value statements to the Local Growth Plan</td>
+        <td>Pass to procurement colleagues</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#counciltax">Council tax</a></td>
+        <td>Tax base return moved to 16 October, and new steps before enforcement</td>
+        <td>Flag to revenues colleagues</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#housing">Awaab's Law</a></td>
+        <td>Consultation on extending it to private renters closes on 18 December</td>
+        <td>Flag to housing colleagues</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#ons">ONS productivity and business statistics</a></td>
+        <td>Component approach tables and industry concentration published</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#centre">Centre of government</a></td>
+        <td>Housing investment, fuel prices, AI security and 51 further items</td>
+        <td>None</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="wn-actions">
+    <h3>Top actions before the next edition</h3>
+    <ol>
+      <li>Decide whether Gateshead bids for the Pathways to Work Innovation Fund, joins someone else&rsquo;s bid, or passes. Applications close on <span class="by">26 October</span>. Carried from 28 September</li>
+      <li>Offer the Beacon Lough and Wrekenton neighbourhood board a small-area evidence pack. The monitoring return is due by <span class="by">29 October</span> and the plan by <span class="by">30 November</span>, or 26 February 2027 at the latest. Carried from 21 September</li>
+      <li>Confirm with housing and development colleagues whether Gateshead is bidding for the Council Housebuilding Support Fund. Bids close at 2pm on <span class="by">2 November</span>. Carried from 21 September</li>
+      <li>Check that the British Industrial Competitiveness Scheme has reached Gateshead manufacturers through business support. Registrations close on <span class="by">30 November</span>. Carried from 2 October</li>
+      <li>Refresh the business base figures across the products to the 2026 UK Business Counts vintage. Carried from 21 September</li>
+      <li>Establish the North East lead delivery partner for the Jobs Guarantee and size both Gateshead cohorts. Carried from 21 September</li>
+      <li>Start the borough overnight-stay and accommodation-stock baseline for the visitor levy. Carried from 15 September</li>
+    </ol>
+    <p class="carry"><b>Carried forward.</b> Eight reds were open from the 2 October edition. Seven carry above, reordered by deadline. One is closed. The Common Ground Award window closed on 12 October with no Gateshead decision on record, so it no longer carries, and outcomes are due in December on the Horizon Calendar. No new red has been added.</p>
+  </div>
+
+  <h2>What Landed</h2>
+
+  <div class="wn-item r" id="innovation">
+    <div class="when">6 and 13 October &middot; DWP &middot; carried from 28 September</div>
+    <h3><span class="rag r">Red</span>The Innovation Fund Closes on 26 October, and the Partnership Directory Names No Partner From the NEMSA Area</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>DWP added the partnership directory to the <a href="https://www.gov.uk/government/publications/pathways-to-work-innovation-fund-applicant-bid-pack">applicant bid pack</a> on 6 October 2026, a day after the date the pack gave, and updated it on 13 October. It lists 245 entries, 230 of them organisations. The directory has no location field, and none of the entries names any of the seven NEMSA authorities or a place within them. The nearest are two Tees Valley entries, also in the North East region, a joint entry from Stockton-on-Tees Borough Council and Teesside University and one from First Stop Darlington. The page still says an online application portal will launch in early October, and applications can go by post or email in the meantime. Applications close on 26 October and shortlisting outcomes follow on 9 November.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Economic inactivity driven by long-term sickness is one of the structural weaknesses in Gateshead&rsquo;s labour market, and this money is aimed at it. Twelve days remain, and the item has carried since 28 September with no decision recorded.</dd>
+      <dt>What should we do?</dt>
+      <dd>Settle this week whether Gateshead bids, joins a bid or passes. The two Tees Valley entries are the nearest potential partners if Gateshead wants to join a bid. If Gateshead is involved, the evidence case on inactivity and health is ours to supply, and the ONS waiting times analysis in this edition adds to it.</dd>
+    </dl>
+  </div>
+  <div class="wn-item r" id="prideinplace">
+    <div class="when">MHCLG &middot; carried from 21 September</div>
+    <h3><span class="rag r">Red</span>The Pride in Place Monitoring Return Is Due by 29 October</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing has changed. The <a href="https://www.gov.uk/government/publications/pride-in-place-programme-prospectus">programme prospectus</a> was last updated on 17 September. The monitoring return portal closes on 29 October, and plans from the Phase 2 places named in September 2025 are due on 30 November, with 26 February 2027 the latest any place needing more time can submit (<a href="https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places">plan submission guidance</a>).</dd>
+      <dt>Why it matters?</dt>
+      <dd>The Beacon Lough and Wrekenton plan needs small-area evidence, and we hold more of it than the board is likely to.</dd>
+      <dt>What should we do?</dt>
+      <dd>Offer the neighbourhood board a small-area evidence pack this month.</dd>
+    </dl>
+  </div>
+  <div class="wn-item r" id="housebuilding">
+    <div class="when">7 October &middot; Homes England &middot; carried from 21 September</div>
+    <h3><span class="rag r">Red</span>Council Housebuilding Fund Bids Close on 2 November, Capped at &pound;300,000 a Proposal</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The <a href="https://www.gov.uk/guidance/council-housebuilding-support-fund-how-to-apply">how to apply guidance</a> was updated on 7 October 2026 to make clear that councils can submit one proposal in each application window and that the maximum for an individual proposal is &pound;300,000. A proposal can cover activity in more than one financial year, as long as the total stays within that cap. The window still closes at 2pm on 2 November 2026.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The cap and the one-proposal rule decide what a Gateshead bid could cover. The next edition is the last before the deadline.</dd>
+      <dt>What should we do?</dt>
+      <dd>Confirm with housing and development colleagues whether Gateshead is bidding, and pass them the clarification.</dd>
+    </dl>
+  </div>
+  <div class="wn-item r" id="bics">
+    <div class="when">2 and 12 October &middot; BIST &middot; carried from 2 October</div>
+    <h3><span class="rag r">Red</span>Electricity Cost Scheme Registrations Close on 30 November</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The Department for Business, Innovation, Science and Trade (BIST) changed its <a href="https://www.gov.uk/government/publications/british-industrial-competitiveness-scheme-business-guidance">business guidance</a> twice. On 2 October it clarified that the eligible product codes are read against version 1.31 of the UK Tariff, dated 3 March 2026, and on 12 October it replaced the Annex A PDF with a web page. The <a href="https://www.gov.uk/government/publications/eligibility-for-the-british-industrial-competitiveness-scheme">eligibility list</a> is still described as final for 2027. Applications close at 11:59pm on 30 November.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Neither change alters who is eligible. Only firms applying this year can get the additional lump sum worth around a year&rsquo;s relief, and BIST&rsquo;s impact assessment estimates that small and micro businesses are 98% of businesses in the frontier sectors and 99% in the foundational ones (<a href="https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers">BIST, 1 October 2026</a>).</dd>
+      <dt>What should we do?</dt>
+      <dd>Check that the scheme has reached business support colleagues. A count of potentially eligible Gateshead firms is still a proposal for commissioning.</dd>
+    </dl>
+  </div>
+  <div class="wn-item r" id="ukbc">
+    <div class="when">ONS via NOMIS &middot; carried from 21 September</div>
+    <h3><span class="rag r">Red</span>Four Products Still Carry the 2025 Business Counts</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing. None of the four products has changed since 2 October, when the NOMIS Quick Look, the LEA at a Glance page, the GVA 2024 dashboard and the productivity dashboard all carried the 2025 enterprise count, as does the catalogue description of the NOMIS Quick Look. The 2026 <a href="https://www.nomisweb.co.uk/datasets/idbrent">UK Business Counts</a> vintage has been on NOMIS since 24 September.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The borough&rsquo;s position has not moved, but a reader comparing our products with NOMIS will find an out-of-date figure.</dd>
+      <dt>What should we do?</dt>
+      <dd>Refresh the four products and the catalogue description, starting with the NOMIS Quick Look.</dd>
+    </dl>
+  </div>
+  <div class="wn-item r" id="jobsguarantee">
+    <div class="when">DWP &middot; carried from 21 September</div>
+    <h3><span class="rag r">Red</span>Still No North East Delivery Partner for the Jobs Guarantee</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing. The <a href="https://www.gov.uk/government/publications/jobs-guarantee">Jobs Guarantee page</a> was last updated on 16 September and still says the national rollout goes live later in 2026. No North East delivery partner is named.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Gateshead has two cohorts to size, long-duration young claimants now and young people on health benefits from April 2027 (<a href="https://www.gov.uk/government/news/thousands-of-young-disabled-people-to-be-offered-guaranteed-jobs">DWP, 27 September 2026</a>), and the delivery partner decides how either group is reached locally.</dd>
+      <dt>What should we do?</dt>
+      <dd>Size both cohorts from Stat-Xplore, and ask NEMSA or the DWP district who the partner is.</dd>
+    </dl>
+  </div>
+  <div class="wn-item r" id="levy">
+    <div class="when">2 October &middot; BIST &middot; carried from 15 September</div>
+    <h3><span class="rag r">Red</span>National Registration of Short-Term Lets Is Now Expected in March 2027</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>BIST updated its <a href="https://www.gov.uk/guidance/letting-out-a-self-catering-holiday-home-in-england-rules-and-regulations">guidance on letting out a self-catering holiday home in England</a> on 2 October 2026 to say that the mandatory national registration scheme for short-term lets is now expected to begin in March 2027. Our baseline has not been started.</dd>
+      <dt>Why it matters?</dt>
+      <dd>A national register would give a direct count of short-term lets, which are part of the accommodation stock any levy case rests on. It arrives after the ONS short-term lets release, provisionally due in November.</dd>
+      <dt>What should we do?</dt>
+      <dd>Start the overnight-stay and accommodation-stock baseline from the sources available now, and add the register when it exists.</dd>
+    </dl>
+  </div>
+  <div class="wn-item a" id="innovationfunding">
+    <div class="when">9 October &middot; No.10</div>
+    <h3><span class="rag a">Amber</span>NEMSA Will Control Its Local Innovation Partnerships Funding From 2028</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The Prime Minister announced on 9 October 2026 that the existing Local Innovation Partnerships Fund will be devolved to established mayors from 2028, the first time mayors receive dedicated research and development funding (<a href="https://www.gov.uk/government/news/prime-minister-to-hand-regions-innovation-funding-to-build-world-leading-industries">No.10</a>, alongside his <a href="https://www.gov.uk/government/speeches/pm-speech-at-the-innovation-nation-summit-9-october-2026">Innovation Nation speech</a>). The North East is one of the Fund&rsquo;s regions, each backed by at least &pound;30 million (<a href="https://www.gov.uk/government/news/local-leaders-in-every-uk-nation-backed-by-30-million-each-to-drive-transformative-innovation-and-grow-the-economy">DSIT, 29 July 2025</a>), and Homes England lists it among the Established Mayoral Strategic Authority areas (<a href="https://www.gov.uk/guidance/sahp-2026-to-2036-strategic-priorities-in-established-mayoral-strategic-authority-areas">SAHP strategic priorities</a>, November 2025, under the older North East Combined Authority name). DSIT had already said on <a href="https://www.gov.uk/government/news/regional-leaders-to-get-more-power-over-innovation-funding-to-drive-local-jobs-and-growth">1 June 2026</a>, naming the North East, that mayors would get this control after the next Spending Review, so the 2028 date is what is new. The announcement also commits &pound;1 billion through UK Research and Innovation over four years to high-growth clusters in the Industrial Strategy&rsquo;s priority sectors, and asks No.10 North to link clusters, starting with the Northern Growth Corridor and the Oxford to Cambridge Growth Corridor. Separately, a &pound;40 million network of <a href="https://www.gov.uk/government/news/brits-to-benefit-from-faster-recovery-from-surgeries-and-better-harvests-through-new-backing-for-robotics">Robotics Adoption Hubs</a> started on 9 October, with hubs running from Newcastle and the South West to Milton Keynes and South Wales. The release gives no detail of the Newcastle hub.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Innovation money decided in the region is a lever NEMSA has not held before. The announcement places it next to the new Good Growth Funds, for which no detail is published, and the Prime Minister said more on the Good Growth Funds would be set out at the Budget on 28 October.</dd>
+      <dt>What should we do?</dt>
+      <dd>Watch the Budget for the size and rules of the Good Growth Funds. Ask NEMSA whether it will report where devolved innovation money is spent by local authority, so we can track what reaches Gateshead.</dd>
+    </dl>
+  </div>
+  <div class="wn-item a" id="surveys">
+    <div class="when">5 to 14 October &middot; NatWest, KPMG and REC, S&amp;P Global</div>
+    <h3><span class="rag a">Amber</span>North East Business Activity Rose in September, and the North Led England for Permanent Hiring</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The North East&rsquo;s NatWest Business Activity Index for September 2026 is 52.0, a renewed increase in output (<a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/392c9d72d8eb4b9d8d595bdc079c519a">NatWest UK Regional Growth Tracker</a>, 14 October 2026). It is a diffusion index from a business survey, so a reading above 50 signals growth on the month and shows the direction and breadth of change, not a measured rate. No confidence interval is published. Ten of the 12 UK nations and regions grew, and input cost inflation picked up almost everywhere. The <a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/a1ea5e36d39444b0a92e3294ce6b2cd5">KPMG and REC Report on Jobs for the North of England</a>, which covers the North East, the North West and Yorkshire and The Humber, found permanent placements rising at the strongest pace in 52 months and faster than in the other three English regions, with starting salary inflation at a 26-month high (8 October 2026). Across the UK, permanent placements rose at a pace that, though marginal, was the strongest in four years, and vacancies fell at the weakest rate in just over two years (<a href="https://kpmg.com/uk/en/media/press-releases/2026/10/kpmg-and-rec-uk-report-on-jobs-october-2026.html">KPMG</a>). The S&amp;P Global UK Services PMI Business Activity Index for September 2026 is 52.1, down from 52.5 in August (<a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/23453dfdab0048ee8a69994752851579">S&amp;P Global</a>, 5 October 2026). The construction release of 6 October could not be retrieved from source.</dd>
+      <dt>Why it matters?</dt>
+      <dd>These monthly surveys give the earliest read on the North East&rsquo;s private sector, and they point the same way, towards firmer activity and hiring with rising costs. The regional surveys rest on small samples and cannot be broken down below the region. The official local read follows on 20 October with the September claimant count.</dd>
+      <dt>What should we do?</dt>
+      <dd>Use them in the Quarterly Economic Update on 29 October, paired with the claimant count and labelled as surveys.</dd>
+    </dl>
+  </div>
+
+  <h2>Noted</h2>
+
+  <div class="wn-item g" id="industrialstrategy">
+    <div class="when">9 October &middot; BIST</div>
+    <h3><span class="rag g">Green</span>The Industrial Strategy Update Records Four Milestones in the NEMSA Area</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The <a href="https://www.gov.uk/government/publications/industrial-strategy-quarterly-update-july-to-september-2026">Industrial Strategy quarterly update for July to September 2026</a> records four items in the NEMSA area. Planning and approvals for the Port of Tyne Clean Energy Park have been streamlined, and BIST expects the project to create up to 12,000 jobs in the North East and contribute over &pound;5.6bn to the economy. Over 550 jobs are supported in Newcastle through Siemens Energy&rsquo;s production of turbine components for Rolls-Royce small modular reactors. Nissan is to produce a new hybrid Kicks model at its Sunderland plant. And one of four new National Wealth Fund strategic partnerships is with the North East. In Tees Valley, it also records Alfor Aviation establishing its global headquarters and an aircraft conversion campus in Teesside, and private investment in lithium projects in Cornwall and Teesside. Its forward look says the remaining 14 Local Innovation Partnerships Fund regions will set out their delivery plans between October and December.</dd>
+      <dt>Why it matters?</dt>
+      <dd>None of these is in Gateshead, and the jobs figures are BIST&rsquo;s own estimates, which we have not tested. They are regional investment context.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing now. Note them for the investment section of the December LEA.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="healthwork">
+    <div class="when">9 and 12 October &middot; ONS, DHSC</div>
+    <h3><span class="rag g">Green</span>Longer NHS Waits Are Associated With More Time on Benefits</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>ONS analysis published on 12 October 2026 finds that, among working-age people in England receiving elective NHS treatment, treatment was associated with a reduction in benefits receipt for up to five years (<a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/bulletins/theimpactofelectivewaitingtimesonbenefitsreceiptengland/april2014toapril2024">ONS, The impact of elective waiting times on benefits receipt, England: April 2014 to April 2024</a>). Compared with waiting times as they stood in 2015 to 2016, the last time the 18-week target was met, longer waits were associated with an estimated 38,972 to 60,572 additional person-years of benefit receipt over five years for inpatients, and 38,396 to 65,598 for outpatients. The largest increases were in trauma and orthopaedics for inpatients and neurology for outpatients. On 9 October the Department of Health and Social Care published the <a href="https://www.gov.uk/government/publications/independent-review-into-mental-health-conditions-adhd-and-autism-final-report">final report of the independent review into mental health conditions, ADHD and autism</a>, covering prevalence, diagnosis, waiting times and recommendations for reform.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Health-related inactivity is one of the live threads in our work, and this is linked national evidence that treatment waits are associated with time out of work. The figures are for England and the analysis gives no local breakdown. We have not yet read the DHSC review.</dd>
+      <dt>What should we do?</dt>
+      <dd>A full read of the DHSC review for the inactivity work is a proposal for commissioning. The ONS figures can support the Innovation Fund evidence case if Gateshead bids.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="employment">
+    <div class="when">5 to 12 October &middot; DWP</div>
+    <h3><span class="rag g">Green</span>Careers Advice Moves Into Jobcentres, and Supported Housing Tenants Keep More of What They Earn</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>DWP confirmed on 6 October 2026 that around 500 qualified careers advisers have joined it as the National Careers Service merges into DWP, so careers advice is now available through Jobcentres to everyone, whether or not they claim benefits (<a href="https://www.gov.uk/government/news/free-careers-support-now-available-through-jobcentres">DWP</a>). From 5 October, new rules end the drop in income that more than 325,000 residents of supported housing and temporary accommodation faced when they increased their working hours (<a href="https://www.gov.uk/government/news/supported-housing-residents-to-keep-more-of-what-they-earn-as-new-rules-come-into-force">DWP</a>). Youth Hubs opened in <a href="https://www.gov.uk/government/news/major-boost-for-young-people-in-rossendale-as-youth-hub-opens-to-support-them-towards-work">Rossendale</a> on 5 October and <a href="https://www.gov.uk/government/news/major-boost-for-young-people-in-exeter-as-youth-hub-opens-to-support-them-towards-work">Exeter</a> on 12 October.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Both bear on our inactivity and youth employment threads. DWP says its careers advisers will concentrate on people facing greater barriers, including young people not in education, employment or training.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing now.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="lgp">
+    <div class="when">9 October &middot; MHCLG</div>
+    <h3><span class="rag g">Green</span>Local Growth Plan Guidance Asks Councils to Align Social Value to the Plan</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG updated section 7.2 of its <a href="https://www.gov.uk/government/publications/local-growth-plans-england">Local Growth Plans guidance</a> on 9 October 2026. It encourages mayoral strategic authorities to consider social value alongside economic value, and says that they and their constituent local authorities should, wherever possible, align social value statements or strategies to their Local Growth Plan.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Gateshead is a constituent authority of NEMSA, so the guidance reaches the council&rsquo;s own social value approach.</dd>
+      <dt>What should we do?</dt>
+      <dd>Pass it to procurement colleagues.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="counciltax">
+    <div class="when">5 and 12 October &middot; MHCLG</div>
+    <h3><span class="rag g">Green</span>Council Tax Base Return Moved to 16 October, and New Steps Before Enforcement</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG extended the deadline for the <a href="https://www.gov.uk/government/publications/council-tax-base-calculation">Council Tax Base return</a> from 9 October to Friday 16 October 2026. On 12 October it published its <a href="https://www.gov.uk/government/consultations/improving-enforcement-of-council-tax">response to the consultation on council tax enforcement</a>, with the statutory steps councils must take before formal enforcement, and <a href="https://www.gov.uk/government/publications/council-tax-information-letter-52026-response-to-technical-consultation-on-council-tax-enforcement">council tax information letter 5/2026</a>, which also covers next steps towards default 12-month billing.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Both are council finance matters with no economic read.</dd>
+      <dt>What should we do?</dt>
+      <dd>Flag both to revenues colleagues.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="housing">
+    <div class="when">7 to 9 October &middot; MHCLG</div>
+    <h3><span class="rag g">Green</span>Consultation on Extending Awaab's Law to Private Renters Closes on 18 December</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>MHCLG opened a <a href="https://www.gov.uk/government/consultations/extending-awaabs-law-to-private-rented-tenancies-and-to-licences">consultation</a> on 9 October 2026 on extending Awaab&rsquo;s Law, which sets legal deadlines for landlords to fix hazards such as damp and mould, to private rented tenancies and to accommodation held under licence, including supported housing, temporary accommodation for homeless households and care leaver accommodation. It closes on 18 December. MHCLG <a href="https://www.gov.uk/government/news/clampdown-on-dangerous-homes-to-protect-more-tenants-and-families">says</a> the extension could take the number of homes covered from 4 million to around 9 million. The housing minister also wrote to the Planning Inspectorate on 7 October about applying the new National Planning Policy Framework.</dd>
+      <dt>Why it matters?</dt>
+      <dd>A housing standards measure with no direct economic read, though temporary accommodation is a council cost.</dd>
+      <dt>What should we do?</dt>
+      <dd>Flag it to housing colleagues.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="ons">
+    <div class="when">6 and 13 October &middot; ONS</div>
+    <h3><span class="rag g">Green</span>ONS Publishes the Component Approach Tables and New Industry Concentration Statistics</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>On 6 October the ONS published the <a href="https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/datasets/referencetablescomponentapproachtolabourproductivityuk1997to2024">reference tables for the component approach to labour productivity, UK: 1997 to 2024</a>, with productivity on both the existing and the new basis and the labour inputs behind them. On 13 October it published <a href="https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/bulletins/trendsinukindustryconcentration/2007to2025">Trends in UK industry concentration: 2007 to 2025</a>, which are official statistics in development. Across the UK non-financial business economy, the turnover-weighted average share of turnover held by the five largest firms in each four-digit industry fell from 0.45 in 2010 to 0.38 in 2025.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The component approach changes the hours used to measure output per hour. It reaches UK figures first and local estimates later, so these tables show how far the national series moves before ours does. The concentration statistics are UK-level only.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing now. Keep the old and new bases apart in the productivity re-run after 5 November.</dd>
+    </dl>
+  </div>
+  <div class="wn-item g" id="centre">
+    <div class="when">2 to 14 October &middot; Cabinet Office, HM Treasury, No.10</div>
+    <h3><span class="rag g">Green</span>Housing Investment, Fuel Prices and AI Security From the Centre</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>No.10 announced on 8 October 2026 that the German investor PATRIZIA has pledged &pound;1bn to deliver up to 4,000 <a href="https://www.gov.uk/government/news/1bn-german-investment-to-deliver-4000-affordable-homes-across-the-uk">affordable homes across the UK</a>, working with mayors and local partners. No locations are named. HM Treasury put <a href="https://www.gov.uk/government/news/drivers-set-to-save-as-petrol-prices-launch-on-google-maps">near real-time petrol and diesel prices on Google Maps</a> from 8 October, which it says can save car-owning households around &pound;40 a year. The Prime Minister will attend the <a href="https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november">second UK-EU summit</a> in Brussels on 20 November. The Cabinet Office announced <a href="https://www.gov.uk/government/news/britain-steps-up-national-defences-against-growing-ai-risks">measures against AI risks</a> on 12 October and a <a href="https://www.gov.uk/government/news/uk-canada-renewed-ai-security-partnership">renewed UK-Canada AI security partnership</a> on 13 October, and set out the UK&rsquo;s priorities as lead co-chair of the Open Government Partnership in <a href="https://www.gov.uk/government/publications/open-government-that-delivers-trust-prosperity-and-democratic-resilience">Open Government that Delivers</a> on 12 October. Every other centre-of-government item in the window is named and dated in the table below.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The housing investment works through mayors, so NEMSA may be a route to it. The fuel price tool bears on the cost-of-living picture. The rest carries no economic read.</dd>
+      <dt>What should we do?</dt>
+      <dd>Ask NEMSA whether the North East is in the housing platform&rsquo;s pipeline.</dd>
+    </dl>
+  </div>
+
+  <table class="wn-cal">
+    <thead>
+      <tr><th>Date</th><th>Body</th><th>Item</th><th>Read</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/treasury-minutes-for-august-2026">Treasury Minutes for August 2026</a></td><td>Government responses to Public Accounts Committee reports, no local read</td></tr>
+      <tr><td>5 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/statistical-release-uk-official-holdings-of-international-reserves">HMT statistical release: UK official holdings of international reserves</a></td><td>No local read</td></tr>
+      <tr><td>5 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/uk-official-holdings-of-international-reserves-september-2026">UK official holdings of international reserves: September 2026</a></td><td>No local read</td></tr>
+      <tr><td>5 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/civil-service-pension-recovery-plan-updates">Civil Service Pension Recovery Plan Updates</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/news/uk-takes-next-step-towards-first-digitally-native-government-bond">UK takes next step towards first digitally native government bond</a></td><td>No local read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/digital-gilt-instrument-digit">Digital Gilt Instrument (DIGIT)</a></td><td>No local read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/reference-documents-for-the-customs-tariff-suspension-of-import-duty-rates-eu-exit-regulations-2020">Reference Documents for The Customs Tariff (Suspension of Import Duty Rates) (EU Exit) Regulations 2020</a></td><td>Tariff reference documents, no local read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/reference-document-for-the-customs-tariff-establishment-eu-exit-regulations-2020">Reference Document for The Customs Tariff (Establishment) (EU Exit) Regulations 2020</a></td><td>Tariff reference documents, no local read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/reference-documents-for-the-customs-tariff-quotas-eu-exit-regulations-2020">Reference Documents for The Customs (Tariff Quotas) (EU Exit) Regulations 2020</a></td><td>Tariff reference documents, no local read</td></tr>
+      <tr><td>6 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/privacy-information-relating-to-honours-nominations">Privacy information relating to honours nominations</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/speeches/economic-secretary-to-the-treasury-speech-for-uk-digital-assets-week">Economic Secretary to the Treasury speech for UK Digital Assets Week</a></td><td>No local read</td></tr>
+      <tr><td>6 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/green-book-supplementary-guidance">Green Book supplementary guidance</a></td><td>New collection page for the Green Book supplementary guidance, used in our appraisal work</td></tr>
+      <tr><td>7 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/pm-statement-on-october-7th-attacks">PM statement on October 7th attacks</a></td><td>No economic read</td></tr>
+      <tr><td>7 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/chancellor-meeting-with-gilt-edged-market-makers-minutes-october-2026">Chancellor meeting with Gilt-edged Market Makers: Minutes - October 2026</a></td><td>No local read</td></tr>
+      <tr><td>7 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/chancellor-meeting-with-gilt-edged-market-makers">Chancellor meeting with Gilt-edged Market Makers</a></td><td>No local read</td></tr>
+      <tr><td>7 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/trade-specialised-committee-on-level-playing-field-for-open-and-fair-competition-and-sustainable-development">Trade Specialised Committee on Level Playing Field for Open and Fair Competition and Sustainable Development</a></td><td>No local read</td></tr>
+      <tr><td>7 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/india-uk-financial-markets-dialogue-joint-statements">India-UK Financial Markets Dialogue: Joint Statements</a></td><td>No local read</td></tr>
+      <tr><td>7 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/india-uk-4th-financial-markets-dialogue-joint-statement">India-UK 4th Financial Markets Dialogue: Joint Statement</a></td><td>No local read</td></tr>
+      <tr><td>7 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/acquisition-of-gumtreecom-limited-by-fe-international-limited">Acquisition of Gumtree.com Limited by FE International Limited</a></td><td>Merger control notice, no local read</td></tr>
+      <tr><td>7 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/collections/notices-of-final-orders-under-the-national-security-and-investment-act-2021">Notices of final orders under the National Security and Investment Act 2021</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>7 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/fraud-risk-assessment-accelerator-privacy-notice">Fraud Risk Assessment Accelerator Privacy Notice</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>8 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/uk-and-germany-launch-joint-partnership-to-counter-sabotage-and-cyber-attacks">UK and Germany launch joint-partnership to counter sabotage and cyber attacks</a></td><td>Security, no economic read</td></tr>
+      <tr><td>8 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/how-the-cabinet-office-handles-hr-and-finance-personal-information">How the Cabinet Office handles HR and finance personal information</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>8 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/joint-uk-germany-statement-berlin-8-october-2026">Joint UK-Germany Statement  - Berlin, 8 October 2026 </a></td><td>No local read</td></tr>
+      <tr><td>8 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/pm-meeting-with-chancellor-merz-of-germany-8-october-2026">PM meeting with Chancellor Merz of Germany: 8 October 2026</a></td><td>No local read</td></tr>
+      <tr><td>8 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/i-have-real-hope-that-britain-can-come-together-to-defeat-dementia-pm">“I have real hope that Britain can come together to defeat dementia" – PM</a></td><td>&pound;48 million dementia research partnership, no local read</td></tr> <!-- voice-lint: ok (published gov.uk wording) -->
+      <tr><td>9 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/cabinet-office-annual-report-and-accounts-2025-to-2026">Cabinet Office annual report and accounts 2025 to 2026</a></td><td>No local read</td></tr>
+      <tr><td>10 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/uk-government-response-to-agreement-between-us-and-russia-9-october">UK government response to agreement between US and Russia: 9 October</a></td><td>No economic read</td></tr>
+      <tr><td>10 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/pm-call-with-president-volodymyr-zelenskyy-of-ukraine-10-october-2026">PM call with President Volodymyr Zelenskyy of Ukraine: 10 October 2026</a></td><td>No economic read</td></tr>
+      <tr><td>12 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/government-major-projects-portfolio-accounting-officer-assessments-ministry-of-justice">Government Major Projects Portfolio – Accounting Officer Assessments Ministry of Justice</a></td><td>Administrative, no economic read</td></tr> <!-- voice-lint: ok (published gov.uk wording) -->
+      <tr><td>12 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/preston-guidance-september-2026">Preston guidance: September 2026</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/preston-guidance">HMT Preston guidance</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/collections/national-security-and-investment-act">National Security and Investment Act 2021</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/national-security-and-investment-notification-service-mandatory-voluntary-and-retrospective-forms">National Security and Investment notification service: mandatory, voluntary and retrospective forms</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/collections/open-government">Open government</a></td><td>No local read</td></tr>
+      <tr><td>12 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/collections/ofsi-general-licences">OFSI General Licences</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/cabinet-office-workforce-management-data-2023-to-2024">Cabinet Office workforce management data 2023 to 2025</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/security-and-intelligence-agencies-financial-statement-2025-26">Security and Intelligence Agencies Financial Statement 2025-26</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/statistics/hm-treasury-statistics-timetable-standards-and-policies">HM Treasury Statistics: Timetable, standards and policies</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>12 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/speeches/pm-statement-to-the-house-of-commons-12-october-2026">PM statement to the House of Commons: 12 October 2026</a></td><td>Statement on international events, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/news/infected-blood-memorial-unveiled-at-treloars-school">Infected Blood Memorial Unveiled at Treloar’s School</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/news/chancellor-call-with-vice-premier-he-lifeng-of-china-8-october-2026">Chancellor call with Vice Premier He Lifeng of China: 8 October 2026</a></td><td>No local read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/post-office-horizon-inquiry">Post Office (Horizon) Inquiry</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/grenfell-tower-inquiry-phase-2-recommendations">Grenfell Tower Inquiry Phase 2 recommendations</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/fuller-inquiry">Fuller Inquiry</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/cranston-inquiry-recommendations">Cranston Inquiry recommendations</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/angiolini-inquiry-recommendations">Angiolini Inquiry recommendations</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/publications/manchester-arena-inquiry-recommendations">Manchester Arena Inquiry recommendations</a></td><td>Administrative, no economic read</td></tr>
+      <tr><td>13 October</td><td>Cabinet Office</td><td><a href="https://www.gov.uk/government/collections/public-inquiries-recommendations-and-the-government-response">Public Inquiries: Recommendations and the Government Response</a></td><td>Tracker of government responses to public inquiries, no economic read</td></tr>
+      <tr><td>13 October</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/speeches/exchequer-secretary-to-the-treasury-speech-at-the-west-midlands-growth-summit">Exchequer Secretary to the Treasury speech at the West Midlands Growth Summit</a></td><td>Growth speech in the West Midlands, no local read</td></tr>
+      <tr><td>13 October</td><td>No.10</td><td><a href="https://www.gov.uk/government/news/president-zelenskyy-to-visit-downing-street-as-the-uk-doubles-down-on-support-for-ukraine-and-calls-on-partners-to-follow-suit">President Zelenskyy to visit Downing Street as the UK doubles down on support for Ukraine and calls on partners to follow suit </a></td><td>No economic read</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Dates That Fell in the Window</h2>
+
+  <table class="wn-cal">
+    <thead>
+      <tr><th>Date</th><th>What was due</th><th>What happened</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>5 October</td><td>Consultation closes on planning powers for mayors</td><td>Closed. No government response yet</td></tr>
+      <tr><td>5 October</td><td>Innovation Fund partnership directory</td><td>Published on 6 October and updated on 13 October (<a href="#innovation">item</a>)</td></tr>
+      <tr><td>5 October</td><td>UK Services PMI</td><td>Published (<a href="#surveys">item</a>)</td></tr>
+      <tr><td>6 October</td><td>UK Construction PMI</td><td>Published, but could not be retrieved from source</td></tr>
+      <tr><td>7 October</td><td>Pro-Worker AI Adoption Prize nominations and the Best Value Duty guidance consultation</td><td>Both closed. No response to the consultation yet</td></tr>
+      <tr><td>8 October</td><td>Report on Jobs, with the North regional report</td><td>Published (<a href="#surveys">item</a>)</td></tr>
+      <tr><td>8 October</td><td>Phonics screening check, pupil attendance and provisional wildfire statistics</td><td>Published, in the log</td></tr>
+      <tr><td>9 October</td><td>Council Tax Base return</td><td>Moved to 16 October (<a href="#counciltax">item</a>)</td></tr>
+      <tr><td>9 October</td><td>Cladding Safety Scheme closes for buildings under 11 metres</td><td>Closed, in the log</td></tr>
+      <tr><td>12 October</td><td>Common Ground Award closes</td><td>Closed, and the red is closed</td></tr>
+      <tr><td>14 October</td><td>NatWest UK Regional Growth Tracker</td><td>Published (<a href="#surveys">item</a>)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Coming Up</h2>
+
+  <table class="wn-cal">
+    <thead>
+      <tr><th>Date</th><th>What</th><th>What it gives us</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>15 October</td><td>Key stage 4 and 16 to 19 destinations, and key stage 4 performance</td><td>Destinations data for the NEET thread</td></tr>
+      <tr><td>16 October</td><td>Council Tax Base return due, and the call for evidence on pubs and hotels valuation closes</td><td>A council deadline</td></tr>
+      <tr><td>20 October</td><td>UK labour market</td><td>September claimant count for Gateshead</td></tr>
+      <tr><td>22 October</td><td>Employee earnings in the UK (ASHE) 2026</td><td>Resident and workplace earnings for Gateshead</td></tr>
+      <tr><td>26 October</td><td>Pathways to Work Innovation Fund closes</td><td>The bid deadline</td></tr>
+      <tr><td>28 October</td><td>Autumn Budget and OBR Economic and Fiscal Outlook</td><td>The fiscal devolution roadmap and the Good Growth Funds</td></tr>
+      <tr><td>29 October</td><td>Pride in Place monitoring return, Access to Work statistics, and our Quarterly Economic Update</td><td>The October quarterly read</td></tr>
+      <tr><td>30 October</td><td>The Blue Book 2026, now confirmed</td><td>The national accounts the regional figures are built on</td></tr>
+      <tr><td>2 November</td><td>Council Housebuilding Support Fund closes</td><td>The bid deadline</td></tr>
+      <tr><td>4 November</td><td>The Employment of Disabled People 2026 (provisional)</td><td>Disability employment context</td></tr>
+      <tr><td>5 November</td><td>Subregional productivity 2024, the Bank Rate decision and business population estimates (provisional)</td><td>GVA per hour for Gateshead</td></tr>
+      <tr><td>20 November</td><td>Second UK-EU summit</td><td>Trade context</td></tr>
+      <tr><td>30 November</td><td>Electricity cost scheme registrations close, and Pride in Place plans due</td><td>The manufacturers&rsquo; deadline</td></tr>
+      <tr><td>18 December</td><td>Consultation closes on extending Awaab&rsquo;s Law</td><td>Housing standards</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:#41505e;margin:8px 0 0;">Every forward date we track, with its source, is on the <a href="../horizon/index.html">Horizon Calendar</a>.</p>
+
+  <div class="wn-note">
+    <b>What we could not close this fortnight.</b> The North East lead delivery partner for the Jobs Guarantee is still not published. The Youth Matters Fund and the Derelict Buildings Fund still have no published opening dates or criteria, and the consultation on employment status and the self-employed is still undated. Nothing new on the fiscal devolution roadmap has been published ahead of the Budget. The Innovation Fund&rsquo;s online portal is not confirmed as open. The S&amp;P Global construction release of 6 October could not be retrieved, so no construction figure appears here. The complete regional GVA dataset for 2024 has not landed. Where a number or date could not be verified at source, it is not in this edition.
+  </div>
+
+  <h2>The Complete Departmental Log</h2>
+  <p style="font-size:13px;color:#41505e;margin:0 0 4px;">Every item from the four subscribed gov.uk departmental feeds over the window, with nothing filtered out. The narrative above is short by design and this is where the completeness sits.</p>
+
+  <details class="wn-fold">
+    <summary>Every item from the four subscribed gov.uk departmental feeds, 2 to 14 October 2026
+      <span class="meta">191 log rows &middot; 19 of them forthcoming-release announcements &middot; 172 actual publications. Click to open.</span>
+    </summary>
+    <div class="wn-foldbody">
+      <p style="font-size:12.5px;color:#41505e;margin:0 0 10px;"><b>How this reconciles.</b> The gov.uk search API returned 219 rows across six organisation queries for the four feeds. 18 of those were the same page returned under more than one query, leaving 201 distinct entries. 3 were chapter pages of the school census manual, which is listed once, so they came out, leaving 198. 8 were the same publications already in the 2 October log, so they came out, leaving 190. The mailroom digests carried 213 departmental feed items. 112 were dated inside the window, covering 107 distinct pages, and every one was already in the search result. The other 101 were dated before the window and arrived late in the weekly feeds of 3 October. All but one of those pages are already in an earlier log or in this one, and the one that was not, a DfE school notice of 1 October, is added here, giving 191 log rows. 19 of them are forthcoming-release announcements rather than things published in the window, which leaves 172 actual publications. The announcements are marked and kept, because they carry the dates the next figures land.</p>
+      <p style="font-size:12.5px;color:#41505e;margin:0 0 10px;"><b>Why both sources.</b> Neither source is complete alone. The business department publishes under both the Department for Business and Trade (DBT) and the Department for Business, Innovation, Science and Trade (BIST) organisations, and both are queried. Both MHCLG organisation slugs are queried, the live one and the legacy one from the department&rsquo;s previous name, because the legacy one still carries items. 40 rows are pages that sat in an earlier log and were updated again in this window, and they are kept because the change is new. Centre-of-government items are not a departmental feed. The 62 in the window not already named in the 2 October edition, or updated since, are each named above, in an item or in the centre-of-government table, apart from three that also carry a departmental tag and sit in this log.</p>
+      <div class="wn-scroll">
+      <table class="wn-log">
+        <thead>
+          <tr><th>Date</th><th>Dept</th><th>Item</th><th>What changed</th><th>Read</th></tr>
+        </thead>
+        <tbody>
+<tr><td>1 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/holy-trinity-church-of-england-aided-school-1-october-2026">Holy Trinity Church of England (Aided) School: 1 October 2026</a></td><td>The schools adjudicator’s admission variation decision about Holy Trinity Church of England (Aided) School.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>2 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/mhclg-privacy-notices">MHCLG privacy notices</a></td><td>Adde Windrush Day Grant Scheme 2027: privacy notice.</td><td>Administrative, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support">Finance and support for your business</a></td><td>Find government-backed support and finance for business</td><td>No local read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/find-licences">Find a licence</a></td><td>Find licences, permits or certifications you may need for yourself or your business.</td><td>No local read</td></tr>
+<tr><td>2 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/free-schools-and-utcs-successful-applications">Free schools and UTCs: successful applications</a></td><td>Updated the September 2026 ‘List of free schools and UTCs in the pre-opening stage’.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/guidance/letting-out-a-self-catering-holiday-home-in-england-rules-and-regulations">Letting out a self-catering holiday home in England: rules and regulations</a></td><td>Updated ‘Register your property (not yet in force)’ section to state that the mandatory national registration scheme is now expected to begin in March 2027.</td><td>Visitor levy, carried red</td></tr>
+<tr><td>2 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/grenfell-tower-inquiry-government-progress-report-september-2026-translations">Grenfell Tower Inquiry Government Progress Report: September 2026 translations</a></td><td>Translations of the summary of the September 2026 Grenfell Tower Inquiry Government Progress Report.</td><td>No local read</td></tr>
+<tr><td>2 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/grenfell-tower-inquiry-government-progress-report-september-2026">Grenfell Tower Inquiry Government Progress Report: September 2026</a></td><td>Added link to translations of the summary.</td><td>No local read</td></tr>
+<tr><td>2 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/16-to-19-qualifications-discount-codes-and-point-scores">16 to 18 qualifications, discount codes and point scores</a></td><td>Updated ‘16 to 18 qualifications and discount codes: 2018 to 2028 performance tables’ with changes to the ‘A level in facilitating subject?’ column and discount codes for the following 2028 qualifications: Cambridge OCR Level 3 Alternative Academic Qualification Cambridge Advanced National: Cyber Security (Certificate) and Cyber Security and Networks (Extended Certificate).</td><td>Schools administration, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/eligibility-for-the-british-industrial-competitiveness-scheme">Eligibility for the British Industrial Competitiveness Scheme</a></td><td>This document details Standard Industrial Classification (SIC) and Harmonised System (HS) codes that are eligible for BICS.</td><td>BICS, carried red</td></tr>
+<tr><td>2 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/notice-to-improve-mighty-oaks-academy-trust">Notice to improve: Mighty Oaks Academy Trust</a></td><td>A notice to improve issued to Mighty Oaks Academy Trust by the Department for Education.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>2 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/academy-trust-notices-to-improve">Academy trust notices to improve</a></td><td>Added ‘Notice to improve: Mighty Oaks Academy Trust’ to the list of open notices.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/dbt-workforce-management-information-august-2026">DBT: workforce management information August 2026</a></td><td>Reports on departmental staff numbers and costs.</td><td>Administrative, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/collections/department-for-business-and-trade-workforce-management-information">Department for Business and Trade: workforce management information</a></td><td>‘DBT: workforce management information August 2026’ added to collection.</td><td>Administrative, no economic read</td></tr>
+<tr><td>2 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/the-prevent-duty-safeguarding-learners-susceptible-to-radicalisation">The Prevent duty: safeguarding learners susceptible to radicalisation</a></td><td>Added guidance on weaponry or explosives fixation, and on antisemitism, to the ‘Concerning behaviours’ section of ‘The Prevent duty: practical guidance for designated safeguarding leads’.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/organisations/department-for-business-innovation-science-and-trade/about/publication-scheme">Publication scheme - Department for Business, Innovation, Science and Trade</a></td><td>This publication scheme specifies the categories of information that BIST and its agencies regularly publish and explains how to get that information.</td><td>Administrative, no economic read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/uk-and-taiwan-deepen-trade-and-technology-cooperation">UK and Taiwan deepen trade and technology cooperation</a></td><td>The UK and Taiwan have held the 28th annual UK-Taiwan Trade Talks in London, alongside the launch of a new Science, Innovation and Technology Arrangement and engagement with a Taiwanese business delegation.</td><td>No local read</td></tr>
+<tr><td>2 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/bist-contribution-to-uks-third-round-of-international-climate-finance">BIST contribution to UK’s third round of International Climate Finance</a></td><td>Department for Business, Innovation, Science and Trade’s contributions to the UK’s third round of International Climate Finance commitments from 2021 to 2022 and 2025 to 2026.</td><td>No local read</td></tr>
+<tr><td>5 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/news/supported-housing-residents-to-keep-more-of-what-they-earn-as-new-rules-come-into-force">Supported housing residents to keep more of what they earn as new rules come into force</a></td><td>More than 325,000 residents in supported housing and temporary accommodation will keep more of what they earn when they take up work or increase their hours.</td><td>Employment support item</td></tr>
+<tr class="ann"><td>5 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/esa-outcomes-of-work-capability-assessments-including-mandatory-reconsiderations-and-appeals-june-2027">ESA: outcomes of Work Capability Assessments including mandatory reconsiderations and appeals: June 2027 </a> <i>(announcement)</i></td><td>Outcomes of Employment and Support Allowance (ESA) Work Capability Assessments, including mandatory reconsiderations and appeals information.</td><td>Release announcement, 15 June 2027</td></tr>
+<tr class="ann"><td>5 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/announcements/council-taxbase-2026-in-england">Council Taxbase 2026 in England</a> <i>(announcement)</i></td><td>Estimate of the number of properties liable for Council Tax as at September 2026.</td><td>Release announcement, 18 November 2026</td></tr>
+<tr><td>5 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/council-tax-base-calculation">Council Tax base calculation</a></td><td>Updated form, guidance notes, and letter to authorities with extended deadline for submission.</td><td>Council tax item, deadline now 16 October</td></tr>
+<tr><td>5 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/news/more-enriching-activities-for-hundreds-of-thousands-of-children">More enriching activities for hundreds of thousands of children</a></td><td>The Isle of Wight has been added to the list of areas provided with funding.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>5 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/international-qualified-teacher-status-criteria-for-providers">International qualified teacher status: criteria for providers</a></td><td>Added guidance for 2026 to 2027 academic year. We will add iQTS inspection criteria for approved providers when it is agreed.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>5 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/decision-makers-guide-vol-10-benefits-for-incapacity-disability-maternity-and-bereavement-staff-guide">Decision makers’ guide: Vol 10: Benefits for incapacity, disability, maternity and bereavement: staff guide</a></td><td>Updated DMG Chapter 62: Maternity Benefits and also DMG Vol 10: Summary of changes from January 2022.</td><td>No local read</td></tr>
+<tr><td>5 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports">British schools overseas: inspection reports for accredited schools</a></td><td>Removed: Nadeen School (Bahrain)British School of Brussels (Belgium)International School of Flanders (Belgium)Kellet School, The British International School in Hong Kong (China)Meridian International School (Czech Republic)Campion School (Greece)Sunshine Kindergarten (Kuwait)British International School, Casablanca (Morocco)International School of Morocco (Morocco)Kathmandu International Study Centre (Nepal)Children’s International School, Lagos (Nigeria)Al Khor International School (Qatar)International School of Bucharest (Romania)GEMS The Cambridge High School, Abu Dhabi (UAE)GEMS Cambridge International School Dubai (UAE)Updated 4 reports already on the list.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>5 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/mhclg-workforce-management-information-august-2026">MHCLG: workforce management information, August 2026</a></td><td>Reports on departmental staff numbers and costs.</td><td>Administrative, no economic read</td></tr>
+<tr><td>5 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/mhclg-workforce-management-information">MHCLG: workforce management information</a></td><td>Added August 2026 data.</td><td>Administrative, no economic read</td></tr>
+<tr><td>5 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/news/major-boost-for-young-people-in-rossendale-as-youth-hub-opens-to-support-them-towards-work">Major boost for young people in Rossendale as Youth Hub opens to support them towards work</a></td><td>Young people in Rossendale are set to benefit from expanded employment support through a new Youth Hub in the area, as the government continues to deliver opportunity directly into the heart of the community.</td><td>Watch, Youth Hub rollout</td></tr>
+<tr class="ann"><td>5 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/announcements/housing-supply-net-additional-dwellings-england-2026-to-2027">Housing supply: net additional dwellings, England: 2026 to 2027</a> <i>(announcement)</i></td><td>Statistics on housing supply (net additional dwellings) in England up to 2026 to 2027</td><td>Release announcement, November 2027</td></tr>
+<tr class="ann"><td>5 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/announcements/dwelling-stock-estimates-england-31-march-2027">Dwelling stock Estimates, England: 31 March 2027</a> <i>(announcement)</i></td><td>This statistical release presents National Statistics on estimates of the number of dwellings in England and in each local authority district as of 31 March 2027. The statistics use the Census as a baseline and apply annual net changes to the dwelling stock as measured by the related Housing supply: net additional dwellings statistics. Figures for 2027 are provisional and subject to revision. This release also includes figures on dwelling density represented by dwellings per hectare of land area</td><td>Release announcement, May 2028</td></tr>
+<tr><td>5 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/key-stage-4-qualifications-discount-codes-and-point-scores">Key stage 4 qualifications, discount codes and point scores</a></td><td>Updated for 2026, with years rolled forward and references to the English Baccalaureate updated, as this was last included in key stage 4 performance measures up to and including academic year 2024 to 2025.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>5 October</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/school-resource-management-training-and-support">School business professionals: training and development</a></td><td>Updated information on the application window for level 7 bursaries which closes on 20 October. Also updated information on free regional in-person training.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>5 October</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/join-the-risk-protection-arrangement-rpa-for-schools">Join the risk protection arrangement (RPA) for schools</a></td><td>Updated the annual costs for academies.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>5 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/unpaid-carers-action-plan-recognise-refer-reach-easy-read">Unpaid carers action plan: recognise, refer, reach (easy read)</a></td><td>Easy read version of the government’s plan to make life better for unpaid carers in England.</td><td>No local read</td></tr>
+<tr><td>6 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/news/free-careers-support-now-available-through-jobcentres">Free careers support now available through Jobcentres</a></td><td>People across England can now access free careers advice alongside employment support through Jobcentres, making it easier to get help to find work, change careers, progress in work or build new skills.</td><td>Employment support item</td></tr>
+<tr><td>6 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/dwp-special-advisers-hospitality-and-gifts">DWP special advisers’ gifts, hospitality and meetings</a></td><td>Created 2026 group and added DWP’s special advisers’ gifts, hospitality and meetings, January to March 2026.</td><td>Administrative, no economic read</td></tr>
+<tr><td>6 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/dwps-special-advisers-gifts-hospitality-and-meetings-january-to-march-2026">DWP's special advisers' gifts, hospitality and meetings, January to March 2026</a></td><td>Data on gifts and hospitality received by special advisers, and meetings they attended with senior media figures.</td><td>Administrative, no economic read</td></tr>
+<tr><td>6 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/news/chief-construction-and-scientific-adviser-appointed-to-improve-building-safety">Chief Construction and Scientific Adviser appointed to improve building safety</a></td><td>New Chief Construction and Scientific Adviser appointed to provide expert, independent advice on building safety and regulatory reform.</td><td>No local read</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/pupil-attendance-in-schools--98">Pupil attendance in schools</a> <i>(announcement)</i></td><td>Data on the levels of attendance and overall, authorised and unauthorised absence in state-funded primary, secondary and special schools.</td><td>Release announcement, 5 November 2026</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/a-level-and-other-16-to-18-results-2026-provisional">16 to 19 performance: 2026 (provisional)</a> <i>(announcement)</i></td><td>Performance data by age 16-19 in England. Includes qualification type, characteristic, geographic, provider, and subject breakdowns.</td><td>Release announcement, 12 November 2026</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/education-and-training-statistics-for-the-uk-2026">Education and training statistics for the UK: 2026</a> <i>(announcement)</i></td><td>Data on schools, attainment, qualifications gained, education expenditure, further education and higher education in the UK.</td><td>Release announcement, 12 November 2026</td></tr>
+<tr><td>6 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/horizon-redress-schemes-progress-report-for-2026">Horizon redress schemes: progress report for 2026</a></td><td>‘June 2026: report on GLO, HCRS and HSSA progress’ added to the page.</td><td>No local read</td></tr>
+<tr><td>6 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/skills-england-annual-skills-report-and-sectoral-skills-needs-assessments-2026">Skills England annual skills report and Sectoral Skills Needs Assessments 2026</a></td><td>Images have been added to the HTML versions of the reports.</td><td>Images added only</td></tr>
+<tr><td>6 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/mhclg-ministerial-travel-and-meetings-april-to-june-2026">MHCLG: ministerial travel and meetings, April to June 2026</a></td><td>Added missing Meetings data.</td><td>Administrative, no economic read</td></tr>
+<tr><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/school-census-2026-to-2027-technical-information">School census 2026 to 2027: technical information</a></td><td>Added ‘School census 2026 to 2027: validation rules’ document.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>6 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/bist-digital-service-performance-indicators">BIST digital service performance indicators</a></td><td>Management information on the performance, usage and reliability of digital services delivered by the Department for Business, Innovation, Science and Trade (BIST).</td><td>Administrative, no economic read</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/additional-tables-stability-measures-for-children-looked-after-in-england-2026-school-stability-update">Additional tables: Stability measures for children looked after in England, 2026: school stability update</a> <i>(announcement)</i></td><td>Statistics on the stability of Children Looked After (CLA) at school, for CLA on 31 March 2026.</td><td>Release announcement, March to April 2027</td></tr>
+<tr><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/full-time-enrolment-of-14-to-16-year-olds-in-further-education-and-sixth-form-colleges">Full-time enrolment of 14- to 16-year-olds in further education and sixth-form colleges</a></td><td>‘Full-time enrolment of 14- to 16-year-olds in further education and sixth-form colleges’, ‘Readiness to open checklist for direct entry of students aged 14 to 16 from September 2026’ and ‘Letter to parents and carers about pupil premium’ updated for 2026 to 2027 academic year.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>6 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/state-pension-uprating-analysis-2026">State Pension uprating analysis 2026</a></td><td>Added ‘Triple Lock reform factsheet’.</td><td>Triple Lock reform factsheet added</td></tr>
+<tr class="ann"><td>6 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/access-to-work-statistics-april-2007-to-march-2025--2">Access to Work statistics: April 2007 to March 2026</a> <i>(announcement)</i></td><td>Statistics include approval and payment volumes as well as Access to Work expenditure and average payment amounts.</td><td>Release announcement, 29 October 2026</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/parental-responsibility-measures-202526-academic-year">Parental responsibility measures: 2025/26 academic year</a> <i>(announcement)</i></td><td>National and local authority data on penalty notices, cases entering fast-track case management, parenting orders and parenting contracts.</td><td>Release announcement, January 2027</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/elective-home-education-autumn-term-202627">Elective home education: Autumn term 2026/27</a> <i>(announcement)</i></td><td>Information on the number and characteristics of children in elective home education (EHE) in England.</td><td>Release announcement, January 2027</td></tr>
+<tr class="ann"><td>6 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/children-missing-education-autumn-term-202627">Children missing education: Autumn term 2026/27</a> <i>(announcement)</i></td><td>Information on the number and characteristics of children missing education (CME) in England.</td><td>Release announcement, January 2027</td></tr>
+<tr><td>7 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/statistics/building-materials-and-components-statistics-september-2026">Building materials and components statistics: September 2026</a></td><td>Statistics and analysis on the construction sector for September 2026.</td><td>Construction context</td></tr>
+<tr><td>7 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/collections/building-materials-and-components-monthly-statistics-2012">Building materials and components: monthly statistics</a></td><td>This collection brings together all documents relating to building materials and components monthly statistics.</td><td>Construction context</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/free-school-meals-guidance-for-schools-and-local-authorities">Free school meals: guidance for schools and local authorities</a></td><td>Added guidance on implementing changes to free school meals.</td><td>Watch, cost of living</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/high-needs-funding-arrangements-2027-to-2028">High needs funding arrangements: 2027 to 2028</a></td><td>Information for local authorities, schools and colleges about high needs funding arrangements for the 2027 to 2028 financial and academic year.</td><td>Council education funding, flag to colleagues</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/academies-accounts-direction">Academies accounts direction and submitting your audited financial statements</a></td><td>We’ve published our guide to submitting your audited financial statements for 2025 to 2026. The accounts submission coversheet online form is now open.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>7 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/jobseekers-allowance-what-you-need-to-tell-us-if-you-do-any-work-b7l">Jobseeker's Allowance: what you need to tell us if you do any work</a></td><td>Updated the ‘What you need to tell us section’ to include information on self-employment.</td><td>No local read</td></tr>
+<tr class="ann"><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/destinations-of-key-stage-4-ks4-and-16-to-18-ks5-students-2025">Destinations of key stage 4 (KS4) and 16 to 19 (KS5) students: 2025</a> <i>(announcement)</i></td><td>Data on key stage 4 (KS4) and 16 to 19 (KS5) students going into apprenticeship, education and employment destinations and, separately, on 16 to 19 (KS5) students progressing to higher education or training.</td><td>Release announcement, 15 October 2026</td></tr>
+<tr><td>7 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/the-new-national-planning-policy-framework-letter-to-the-chief-executive-of-the-planning-inspectorate">The new National Planning Policy Framework: letter to the Chief Executive of the Planning Inspectorate</a></td><td>Minister of State Matthew Pennycook MP has written to the Planning Inspectorate Chief Executive Graham Stallwood on the new National Planning Policy Framework.</td><td>Housing item</td></tr>
+<tr><td>7 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/dwp-procurement-security-policies-and-standards">DWP procurement: security policies and standards</a></td><td>Updated Technical Vulnerability Management Policy document with HTML version and renamed ‘Technical Vulnerability and Continuous Threat Exposure Management Security Policy’. Also updated ‘User Access Control Policy’ and replaced with HTML version. Also updated latest (PDF) of Security Standard –Microservices (SS-028) and (PDF) of Security standard – Software Development (SS-003).</td><td>No local read</td></tr> <!-- voice-lint: ok (published gov.uk wording) -->
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/rise-programme-lists-of-advisers-and-schools">RISE programme: lists of advisers and targeted schools</a></td><td>Updated the ‘List of schools in the RISE targeted intervention programme’ as of 1 September 2026.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/dfe-update">DfE Update</a></td><td>Added ‘DfE Update: 7 October 2026’.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/dfe-update-7-october-2026">DfE Update - 7 October 2026</a></td><td>Latest information and actions from the Department for Education about funding, assurance and resource management, for academies, local authorities and further education providers.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/financial-health-notice-to-improve-mary-ward-settlement">Revised financial health notice to improve: Mary Ward Settlement</a></td><td>Added the revised notice to improve issued in September 2026 and closed the previous notice to improve.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/school-age-childcare-guidance-for-schools">School-age childcare guidance for schools</a></td><td>Updated the section on ‘Food and nutrition standards’ in ‘Delivering school-age childcare provision: non-statutory guidance for schools and trusts’ to include new information on allergy safety, in line with allergen regulations.</td><td>Children's services, no economic read</td></tr>
+<tr><td>7 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/holocaust-memorial-handling-arrangements-for-planning-casework">Holocaust Memorial: handling arrangements for planning casework</a></td><td>This update is necessary to identify the Ministers and officials currently responsible for handling the planning casework decision for the proposed Holocaust Memorial. It reflects changes to Ministers and officials dealing with the application (and those who must not do so) since the last update was published earlier this year, following the change in Prime Minister and subsequent Ministerial changes.</td><td>No local read</td></tr>
+<tr class="ann"><td>7 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/statistics/announcements/the-employment-of-disabled-people-2026">The Employment of Disabled People 2026 </a> <i>(announcement)</i></td><td>These statistics will be expanded, in the next annual update due to be released on 4 November 2026, with the addition of employment and unemployment duration, secondary reasons for economic inactivity, strategic geographic boundaries (Combined Authorities and NHS Integrated Care Boards), disability prevalence adjusted and age-standardised disability employment gaps. Furthermore, the data will be published on the online tool Stat-Xplore, which allows users to create their own bespoke tables. Users are invited to provide feedback on the employment of disabled people statistics, including the new breakdowns and how you use the statistics and how well they meet your requirements.</td><td>Release announcement, 4 November 2026</td></tr>
+<tr><td>7 October</td><td>DWP</td><td><a href="https://www.gov.uk/view-share-apprenticeship-certificate">View and share an apprenticeship certificate</a></td><td>View, share or order a copy of an apprenticeship certificate.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>7 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/independent-schools-warning-notices">Independent schools: warning notices and enforcement letters</a></td><td>Added Suffah Primary School in Hounslow and Drive Prep School to the ‘Independent school enforcement letters list’.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/standards-general-product-safety">Standards: general product safety</a></td><td>Notice of publication amended and consolidated list updated.</td><td>No local read</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/statistics-key-stage-1">Statistics: key stage 1</a></td><td>Added ‘Phonics screening check attainment: England 2026’.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/phonics-screening-check-attainment-england-2026">Phonics screening check attainment: England 2026</a></td><td>Provisional information including breakdowns by pupil characteristics, school characteristics, region and local authority.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/higher-level-learners-in-england-2024-to-2025">Higher-level learners in England: 2024 to 2025</a></td><td>Statistics providing an overview of higher-level learning across the further and higher education sectors in the 2024 to 2025 academic year.</td><td>Has local authority tables, skills evidence</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/pupil-attendance-in-schools">Pupil attendance in schools</a></td><td>‘Pupil attendance in schools’ statistics updated to include data covering the period 7 September to 25 September 2026.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/ministry-of-housing-communities-and-local-government-ad-hoc-fire-and-rescue-statistics">Ministry of Housing, Communities and Local Government: ad-hoc fire and rescue statistics</a></td><td>Added Provisional wildfire statistics for England, 2010 to 2026.</td><td>No local read</td></tr>
+<tr><td>8 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/grenfell-tower-community-update-october-2026">Grenfell Tower: community update October 2026</a></td><td>An update on work to carefully take down Grenfell Tower, including dust, noise and vibration monitoring reports.</td><td>No local read</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/church-academies-model-documents">Church academies: model documents</a></td><td>Added information to the details section for Catholic and Church of England academy trusts, including links to further guidance and support from relevant religious authorities.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/guidance/pro-worker-ai-adoption-prize">Pro-Worker AI Adoption Prize</a></td><td>The Pro-Worker AI Adoption Prize recognises organisations using artificial intelligence (AI) that benefits workers.</td><td>Closed 7 October</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/first-ever-uk-germany-tech-corridor-unlocks-investment-jobs-and-opportunity-for-british-business">First ever UK-Germany tech corridor unlocks investment, jobs and opportunity for British business</a></td><td>New Industrial Tech Corridor will help companies in both countries to strike partnerships that drive investment, new jobs and adoption of cutting-edge technologies.</td><td>Watch, trade</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/co-operatives-uk">Co Operatives UK</a></td><td>Co Operatives UK is a membership network for businesses working to promote, develop and unite member-owned business.</td><td>National scheme, no local read</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/open-academies-and-academy-projects-in-development">Open academies, free schools, studio schools and UTCs</a></td><td>Updated the list of open academies, free schools, studio schools and UTCs and academy projects in development to include September 2026.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/end-point-assessment-organisation-guide-to-delivering-high-quality-assessment-of-apprenticeships">End-point assessment organisation guide to assessing apprenticeships</a></td><td>Updated ‘Results, feedback and celebration after end-point assessment’ HTML to add a link to view, download and share an apprenticeship certificate online.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/record-a-grade-api">Record a grade API</a></td><td>Updated information to reflect that the API no longer lets EPAOs request certificates.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/support-your-apprentice-through-end-point-assessment">Support your apprentice through end-point assessment</a></td><td>Added a link to view, download and share an apprenticeship certificate online in the ‘If your apprentice is successful’ section.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/how-to-take-on-an-apprentice">How to take on an apprentice</a></td><td>Added a link to view, download and share an apprenticeship certificate online in the ‘7. Certificates’ section.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/completing-and-certifying-apprenticeship-frameworks">Replacement certificates for apprenticeship frameworks</a></td><td>Added a link to request, download or share an apprenticeship certificate online in the ‘Replacement certificates’ section.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/apprentice-guide-to-assessment">Apprentice guide to assessment</a></td><td>Added a link to view, download and share an apprenticeship certificate online in the ‘Results, feedback and celebration after end-point assessment’ section.</td><td>Apprenticeship administration, no local read</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/essex-working-well">Essex Working Well</a></td><td>This programme offers free workplace health and well-being support to businesses.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/wenta">Wenta</a></td><td>Enterprise agency Wenta, offers free one-to-one and virtual support for people starting or running a small business.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/grants-and-loans-for-retail-hospitality-and-leisure-businesses-in-county-durham">Grants and loans for retail, hospitality and leisure businesses in County Durham.</a></td><td>A range of business grants and loans for businesses in the County Durham in the retail, hospitality and leisure sectors.</td><td>County Durham only</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/ip-advance-grant-funding">IP Advance Grant Funding</a></td><td>Funding for businesses towards making the most of their intellectual property.</td><td>National scheme, no local read</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/speeches/business-secretary-sets-out-plan-for-new-industrial-economy">Business Secretary sets out plan for new industrial economy</a></td><td>The Business, Innovation, Science and Trade Secretary spoke at the West Midlands Growth Summit in Coventry on 8 October 2026.</td><td>Industrial Strategy context, West Midlands speech</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/business-incentive-grant">Business Incentive Grant</a></td><td>The Business Incentive Grant could provide up to £750 to help businesses get up and running. The grant must be applied for before the business starts to trade and the grant is paid following visits from the council (The first visit is to confirm eligibility for the grant).</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/school-uniform">School uniforms: guidance for schools</a></td><td>Added statement to the guidance on ‘Procuring school uniform supplies’ confirming that the guidance and the associated template documents are being reviewed to reflect the Procurement Act 2023.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/hope-street-xchange">Hope Street Xchange</a></td><td>Hope Street Xchange is a new centre for enterprise and innovation in Sunderland that can offer expertise to help businesses flourish.</td><td>Neighbouring support, Sunderland</td></tr>
+<tr><td>8 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/sunderland-software-city">Sunderland Software City</a></td><td>A range of support services to help businesses adopt digital technologies, develop products, and grow.</td><td>Neighbouring support, Sunderland</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/special-educational-needs-person-level-survey-report-specifications">Special educational needs person level survey: report specifications</a></td><td>SEN2 person level survey report specifications for 2027 has been replaced with a new version to fix errors.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>8 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/provisional-wildfire-statistics-for-england-2010-to-2026">Provisional wildfire statistics for England, 2010 to 2026</a></td><td>Label in pre-release access list updated to Official Statistics</td><td>No local read</td></tr>
+<tr><td>8 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/dont-pay-to-claim-toolkit">'Don’t pay to claim' toolkit</a></td><td>Promotional material that can be used by stakeholders to raise awareness and help develop understanding of the ‘Don’t pay to claim’ campaign.</td><td>No local read</td></tr>
+<tr><td>8 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/holiday-activities-and-food-programme">Holiday activities and food programme</a></td><td>Updated the programme evaluation information in the payments and reporting section of ‘Holiday activities and food programme 2026 to 2027 financial year’.</td><td>Children's services, no economic read</td></tr>
+<tr><td>8 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/news/clampdown-on-dangerous-homes-to-protect-more-tenants-and-families">Clampdown on dangerous homes to protect more tenants and families</a></td><td>Private renters are next to benefit from the protections of Awaab's Law. A government consultation is now open, looking at how to implement these new rights.</td><td>Housing item</td></tr>
+<tr><td>9 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/news/teenagers-back-vocational-reforms-and-defy-outdated-stigma">Teenagers back vocational reforms and defy outdated stigma</a></td><td>Majority of young people support more hands-on learning from age 14.</td><td>Watch, vocational reform</td></tr>
+<tr><td>9 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/collections/the-uks-modern-industrial-strategy-2025">The UK's Modern Industrial Strategy 2025</a></td><td>‘Industrial Strategy quarterly update: July to September 2026’ added to collection.</td><td>Industrial Strategy item</td></tr>
+<tr><td>9 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/industrial-strategy-quarterly-update-july-to-september-2026">Industrial Strategy quarterly update: July to September 2026</a></td><td>An update on delivery of commitments in the Industrial Strategy.</td><td>Industrial Strategy item</td></tr>
+<tr><td>9 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/the-social-security-further-methods-of-recovery-regulations-2026">The Social Security (Further Methods of Recovery) Regulations 2026</a></td><td>Letters between the chair of the Social Security Advisory Committee (SSAC) and the DWP Minister for Lords.</td><td>No local read</td></tr>
+<tr><td>9 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/funding-claims-and-reconciliation">Funding claims and reconciliation</a></td><td>Removed ‘Year end funding claims user guide’ and added ‘Final funding claims user guide’.</td><td>No local read</td></tr>
+<tr><td>9 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/consultations/extending-awaabs-law-to-private-rented-tenancies-and-to-licences">Extending Awaab's Law to private rented tenancies and to licences</a></td><td>We are seeking views on proposals to apply Awaab's Law to private rented tenancies and to accommodation occupied under licence.</td><td>Housing item, closes 18 December</td></tr>
+<tr><td>9 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/dwp-information-leaflets-how-to-order-them">DWP information leaflets: how to order them</a></td><td>Replaced the external order form for DWP information materials to add 4 new Pension Credit products.</td><td>No local read</td></tr>
+<tr><td>9 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/statistics">Statistics at DWP</a></td><td>Updated to remove entries about discontinued statistics, add a link to new guide about discontinued statistics, update descriptions of current statistics, and update some email contacts.</td><td>No local read</td></tr>
+<tr><td>9 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/discontinued-dwp-statistics-at-dwp">Discontinued DWP statistics at DWP</a></td><td>This page provides details of DWP statistics that are no longer updated, including their purpose and last publication dates.</td><td>No series we use has ended</td></tr>
+<tr><td>9 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/local-growth-plans-england">Local Growth Plans: England</a></td><td>Updated section 7.2 Social Value.</td><td>Local Growth Plans item</td></tr>
+<tr><td>9 October</td><td>DBT</td><td><a href="https://www.gov.uk/government/publications/keep-britain-working-review-update-a-national-growth-opportunity-september-2026">Keep Britain Working review update: a national growth opportunity, September 2026</a></td><td>Added English audio, BSL and Easy Read versions.</td><td>Accessible versions only</td></tr>
+<tr><td>9 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/section-106-affordable-housing-clearing-service-privacy-notice">Section 106 Affordable Housing Clearing Service: privacy notice</a></td><td>Privacy notice for Section 106 Affordable Housing Clearing Service, explaining how the Ministry of Housing, Communities and Local Government handles users’ personal data.</td><td>Housing, no economic read</td></tr>
+<tr><td>9 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/the-section-106-affordable-housing-clearing-service">Section 106 Affordable Housing Clearing Service</a></td><td>Updated page to reflect that the Section 106 Affordable Housing Clearing Service has transferred from Homes England to the Ministry of Housing, Communities and Local Government.</td><td>Housing, no economic read</td></tr>
+<tr><td>9 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/guidance/register-to-sell-and-buy-section-106-affordable-homes">Register to sell and buy Section 106 affordable homes</a></td><td>Updated page to reflect that the Section 106 Affordable Housing Clearing Service has transferred from Homes England to the Ministry of Housing, Communities and Local Government.</td><td>Housing, no economic read</td></tr>
+<tr class="ann"><td>9 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/key-stage-4-performance-2026">Key stage 4 performance, 2026</a> <i>(announcement)</i></td><td>Statistics on the achievements of young people at the end of key stage 4 in England, in the 2025 to 2026 academic year.</td><td>Release announcement, 15 October 2026</td></tr>
+<tr><td>9 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/brits-to-benefit-from-faster-recovery-from-surgeries-and-better-harvests-through-new-backing-for-robotics">Brits to benefit from faster recovery from surgeries and better harvests through new backing for robotics</a></td><td>Hubs across the country will give businesses and public services the support they need to adopt cutting-edge robotics technology</td><td>Innovation item, Newcastle robotics hub</td></tr>
+<tr><td>9 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/pre-16-schools-funding-local-authority-guidance-for-2027-to-2028">Pre-16 schools funding: local authority guidance for 2027 to 2028</a></td><td>We have updated the ‘Schools national funding formula summary policy document for 2027 to 2028’ to include a line in reference to maternity pay funding in the section ‘The structure of the schools NFF for 2027 to 2028’.</td><td>Council education funding, flag to colleagues</td></tr>
+<tr><td>9 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/collections/individuals-prohibited-from-managing-or-governing-schools">Individuals prohibited from managing or governing schools</a></td><td>Added ‘Direction: Zafar Ali barred from managing independent schools’.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>9 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/direction-zafar-ali-barred-from-managing-independent-schools">Direction: Zafar Ali barred from managing independent schools</a></td><td>A decision from the Secretary of State to direct that Mr Zafar Ali should be prohibited from the management of independent schools.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>10 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/buildings-under-11-metres-new-funding">Buildings under 11 metres: new funding</a></td><td>Updated to reflect that the application window closed on 9 October 2026. New applications for buildings under 11 metres can no longer be submitted through the Building Remediation Hub. Applications submitted before the deadline will be assessed in line with the published eligibility criteria and risk-based prioritisation approach.</td><td>Window closed 9 October</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/notice-to-exporters-202622-temporary-pause-of-the-control-list-classification-clc-service">Notice to exporters 2026/22: temporary pause of the Control List Classification (CLC) Service</a></td><td>This notice advises of that the Export Control Joint Unit (ECJU) is temporarily pausing the Control List Classification (CLC) Service from Monday 12 October</td><td>No local read</td></tr>
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/estimating-pupil-numbers-how-to-complete-your-return-for-2027-to-2028">Estimating pupil numbers: how to complete your return for 2027 to 2028</a></td><td>How to complete the estimating pupil numbers form for academic year 2027 to 2028.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/consultations/whistleblowing">Whistleblowing</a></td><td>We are seeking views on the whistleblowing framework and a proposed Serious Fraud Office financial incentives scheme for individuals who report economic crimes.</td><td>Consultation, no local read</td></tr>
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/academies-funded-on-estimates">Academies funded on estimates</a></td><td>Information for academies funded on estimated pupil numbers</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/primary-assessments-future-dates">Primary assessments: future dates</a></td><td>This page summarises future assessment dates in primary schools, to assist schools with their forward planning.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/india-trade-mission-unlocks-hundreds-of-uk-jobs-and-new-deals">India trade mission unlocks hundreds of UK jobs and new deals</a></td><td>A UK trade mission to India has unlocked hundreds of jobs and new deals for businesses as Ministers and Mayors look to drive growth.</td><td>Watch, trade</td></tr>
+<tr><td>12 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/news/major-boost-for-young-people-in-exeter-as-youth-hub-opens-to-support-them-towards-work">Major boost for young people in Exeter as Youth Hub opens to support them towards work</a></td><td>Young people in Exeter are set to benefit from expanded employment support through a new Youth Hub in the area, as the government continues to deliver opportunity directly into the heart of the community.</td><td>Watch, Youth Hub rollout</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/sustainable-farming-incentive-sfi">Sustainable Farming Incentive (SFI)</a></td><td>The Sustainable Farming Incentive (SFI) aims to help farmers manage land in a way that improves food production and is more environmentally sustainable.</td><td>National scheme, no local read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/gangmasters-licensing-appeals-results-and-judgements">Gangmasters Licensing Appeals results and judgements</a></td><td>Table updated to reflect a withdrawal by FWA.</td><td>No local read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/business-and-technology-centre-stevenage"> Business &amp; Technology Centre Stevenage</a></td><td>Offers an incubation service with access to a hot desk, plus advice and networking opportunities to help get businesses started .</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>12 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/statutory-homelessness-ad-hoc-analyses">Statutory homelessness ad hoc analyses</a></td><td>Additional statistical analyses on statutory homelessness from our case level data collection.</td><td>No local read</td></tr>
+<tr class="ann"><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/pupil-absence-in-schools-in-england-autumn-and-spring-term-202526">Pupil absence in schools in England: autumn and spring term  2025/26</a> <i>(announcement)</i></td><td>Absence statistics on the levels of overall, authorised and unauthorised absence in state-funded schools.</td><td>Release announcement, 15 October 2026</td></tr>
+<tr><td>12 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/consultations/improving-enforcement-of-council-tax">Improving enforcement of council tax</a></td><td>We are seeking views on the steps councils should take ahead of taking council tax enforcement action.</td><td>Council tax item</td></tr>
+<tr><td>12 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/council-tax-information-letter-52026-response-to-technical-consultation-on-council-tax-enforcement">Council tax information letter 5/2026: Response to technical consultation on council tax enforcement</a></td><td>Summary of government response to technical consultation and next steps in administration reform.</td><td>Council tax item</td></tr>
+<tr><td>12 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/collections/council-tax-information-letters">Council Tax information letters</a></td><td>This collection of letters provides information for local authorities on Council Tax.</td><td>Council tax item</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/blaby-district-council-community-grants">Blaby District Council Community Grants</a></td><td>Blaby District Council Community Grants offer a variety of grants to the community and voluntary sector.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/voluntary-action-leicestershire">Voluntary Action Leicestershire</a></td><td>Advice, support and training for charities and community groups.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/speeches/building-a-safer-more-secure-britain-in-the-age-of-ai">Building a Safer, More Secure Britain in the age of AI</a></td><td>Speech delivered by the Minister for Artificial Intelligence</td><td>AI watch theme, no local read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/business-and-ip-centres">Business &amp; IP Centres </a></td><td>The British Libraries Business &amp; IP Centres are located in locations across the Country, they offer a wide range of support.</td><td>National scheme, no local read</td></tr>
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/higher-education-providers-with-t-levels-in-entry-requirements">Higher education providers with T Levels in entry requirements</a></td><td>Universities and colleges that accept T Levels for entry onto at least one course.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/statutory-sick-pay-employee-not-entitled-form-for-employers">Employer form SSP1: Statutory Sick Pay and an employee's claim for benefit</a></td><td>Updated the English (SSP1) and Welsh (SSP1W) versions of the ‘Employer form: employee not entitled to Statutory Sick Pay’ – forms are now dated 10/26.</td><td>No local read</td></tr> <!-- voice-lint: ok (published gov.uk wording) -->
+<tr><td>12 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/common-ground-award-2026-to-2027-prospectus">Common Ground Award 2026 to 2027: prospectus</a></td><td>Grant prospectus for a competitive award that will invest capital funding into organisations effectively promoting social cohesion in England.</td><td>Common Ground, closed this edition</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/8th-uk-india-science-and-innovation-council-statement">8th UK-India Science and Innovation Council Statement</a></td><td>The UK and India have agreed new science and innovation partnerships, including on technology, research and AI cooperation, to boost growth and innovation.</td><td>No local read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/joint-statement-of-16th-meeting-of-the-india-uk-jetco">Joint Statement of 16th Meeting of the India–UK JETCO</a></td><td>The UK and India celebrated early successes from the FTA, agreed steps to maximise benefits for businesses and deepen co-operation ahead of the 2027 JETCO.</td><td>Watch, trade</td></tr> <!-- voice-lint: ok (published gov.uk wording) -->
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/funding-for-books-and-reading-materials-for-secondary-schools">Funding for books and reading materials for secondary schools</a></td><td>Guidance setting out information for secondary schools on funding for books and reading materials, as part of the National Year of Reading 2026.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/rise-attendance-and-behaviour-hubs-guidance-for-partner-schools">RISE attendance and behaviour hubs: guidance for partner schools</a></td><td>Guidance on what is expected of schools that join the programme and how they will benefit.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/pension-credit-toolkit">Pension Credit toolkit</a></td><td>The Pension Credit flyers and poster for the 2026 campaign have been added to view and download.</td><td>Watch, pensioner incomes</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/british-industrial-competitiveness-scheme-business-guidance">British Industrial Competitiveness Scheme: business guidance</a></td><td>This guidance explains how to apply for support through the British Industrial Competitiveness Scheme (BICS) ahead of applications opening on 1 October 2026.</td><td>BICS, carried red</td></tr>
+<tr><td>12 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/publications/developer-remediation-contract">Developer remediation contract</a></td><td>The government wrote to developers on 30 January 2023 asking them to sign a contract committing them to remediate unsafe buildings that they developed.</td><td>No local read</td></tr>
+<tr><td>12 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/dwp-workforce-management-information-august-2026">DWP: workforce management information August 2026</a></td><td>Report on departmental staff numbers and costs.</td><td>Administrative, no economic read</td></tr>
+<tr><td>12 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/dwp-workforce-management-information">DWP workforce management information</a></td><td>Added DWP: workforce management information August 2026.</td><td>Administrative, no economic read</td></tr>
+<tr class="ann"><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/further-education-and-skills-november-2026">Further education and skills: November 2026</a> <i>(announcement)</i></td><td>Statistics covering further education and skills summary data, including apprenticeships and detailed non-apprenticeship adult further education, in England for the 2025 to 2026 academic year.</td><td>Release announcement, November 2026</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/dbt-worldwide-offices">BIST worldwide offices</a></td><td>HM Trade Commissioners list updated reflecting new commissioners for Africa, China, Middle East and North America.</td><td>No local read</td></tr>
+<tr><td>12 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/regional-improvement-for-standards-and-excellence-rise">Regional improvement for standards and excellence (RISE)</a></td><td>Information about the eligibility criteria for targeted intervention, the national priorities for the universal service, funding and RISE advisers.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>12 October</td><td>BIST</td><td><a href="https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement">Data Use and Access Act 2025: plans for commencement</a></td><td>A summary of the government’s plans for bringing into force provisions in the Data (Use and Access) Act 2025.</td><td>No local read</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/how-dwp-checks-benefit-eligibility-using-the-eligibility-verification-measure">How DWP checks benefit eligibility using the Eligibility Verification Measure</a></td><td>Banks and other financial institutions must share limited information with the Department for Work and Pensions (DWP) when they receive an Eligibility Verification Notice. This helps identify incorrect benefit payments, and check benefit entitlement.</td><td>Watch, Universal Credit administration</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/andover-skills-training-fund">Andover Skills Training Fund</a></td><td>The Andover Skills Training Fund Grant offer grants for skills training.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/north-east-property-fund">North East Property Fund</a></td><td>North East Property Fund can offer loans for small-scale, non-speculative residential and commercial developments in the north east.</td><td>North East scheme, pass to business support</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter">Personal information charter - Department for Work and Pensions</a></td><td>The page has been updated to include holders of bank accounts that receive payments from DWP and landlords in the list of who DWP holds information about.</td><td>Administrative, no economic read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/national-standards-for-the-provision-of-childrens-and-young-peoples-advocacy-services">National standards for the provision of children’s and young people’s advocacy services</a></td><td>National Standards on providing advocacy services for children and young people.</td><td>Children's services, no economic read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/the-assessment-only-route-to-qts">Assessment only route to QTS: criteria and supporting advice</a></td><td>Criteria and supporting advice for accredited providers wishing to offer the assessment only route to qualified teacher status (QTS).</td><td>Schools administration, no economic read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/advocacy-services-for-children-and-young-people">Advocacy services for children and young people</a></td><td>Statutory guidance on providing effective advocacy services for children and young people making a complaint under the children Act 1989.</td><td>Children's services, no economic read</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/national-cyber-resilience-centre">National Cyber Resilience Centre</a></td><td>A police-led, not-for-profit organisation that helps businesses protect themselves from cybercrime through free and paid memberships, offering practical cyber security advice, tools, resources and resilience services.</td><td>National scheme, no local read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/overseas-trained-teachers-apply-for-qualified-teacher-status-in-england">Overseas-trained teachers: apply for qualified teacher status in England</a></td><td>How some overseas-trained teachers can apply for qualified teacher status (QTS), using the apply for QTS in England service.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/quantum-firms-backed-to-keep-railways-running-and-cut-waiting-lists-as-uk-harnesses-potential-of-future-tech">Quantum firms backed to keep railways running and cut waiting lists as UK harnesses potential of future tech</a></td><td>Businesses across the UK backed with a share of £50 million to help turn innovations into products that make a difference in the real world</td><td>No North East firm named</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/incuhive-business-advice">IncuHive Business Advice</a></td><td>IncuHive business Advice programme offers free, tailored guidance and support to pre start business in Surrey. It’s also available to businesses in their first year of operation.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/universal-credit-detailed-information-for-claimants">Universal Credit: detailed information for claimants</a></td><td>Added ‘How DWP checks benefit eligibility using the Eligibility Verification Measure’ to the collection.</td><td>No local read</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/pathways-to-work-innovation-fund-applicant-bid-pack">Pathways to Work Innovation Fund: applicant bid pack</a></td><td>Updated the partnership directory.</td><td>Innovation Fund, carried red</td></tr>
+<tr class="ann"><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/statistics/announcements/early-years-foundation-stage-profile-results-2025-to-2026">Early years foundation stage profile results: 2025 to 2026</a> <i>(announcement)</i></td><td>Statistics on early years foundation stage profile assessments in England, including on the 7 areas of learning and the 17 early learning goals.</td><td>Release announcement, 22 October 2026</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/publications/personal-independence-payment-data-on-stat-xplore-user-guide">Personal Independence Payment data on Stat-Xplore: user guide</a></td><td>Made several changes based on factual accuracy and improvements. The section on Scottish devolution has brought up to date.</td><td>Note for our Stat-Xplore pulls</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/north-devon-angels">North Devon Angels</a></td><td>An angel investment group supporting businesses in North Devon and Torridge.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/news/hundreds-of-thousands-of-pensioners-urged-to-check-theyre-not-missing-out-on-vital-pension-credit">Hundreds of thousands of pensioners urged to check they're not missing out on vital Pension Credit</a></td><td>Hundreds of thousands of pensioners are being urged to check if they can benefit from Pension Credit, an income top-up that can provide vital help with everyday costs.</td><td>Watch, pensioner incomes</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/business-finance-support/tech-dot-london">Tech.London</a></td><td>Information and resources for businesses in London's tech sector.</td><td>Finance finder entry, outside the North East</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/general-hospital-schools-census-guide">General hospital schools census: guide</a></td><td>Guide to help general hospital schools complete their 2027 census.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/universal-credit-welsh-language-detailed-information-for-claimants">Universal Credit: Welsh language detailed information for claimants</a></td><td>Updating Welsh to match recent changes to English.</td><td>No local read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/consultations/revisions-to-the-national-standards-and-statutory-guidance-for-advocacy">Revisions to the national standards and statutory guidance for advocacy</a></td><td>We’d like your views on our revisions to the national standards and the statutory guidance for the Provision of Children’s Advocacy Services.</td><td>Children's services, no economic read</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/news/businesses-set-to-be-protected-from-argentinian-economic-coercion">Businesses set to be protected from Argentinian economic coercion</a></td><td>Businesses investing in the Falklands Islands are set to be protected from Argentinian domestic measures targeting companies and individuals involved in lawful economic activity</td><td>No local read</td></tr>
+<tr class="ann"><td>13 October</td><td>MHCLG</td><td><a href="https://www.gov.uk/government/statistics/announcements/statutory-homelessness-in-england-april-to-june-2026">Statutory homelessness in England: April to June 2026</a> <i>(announcement)</i></td><td>Accredited official statistics on statutory homelessness applications, duties, and outcomes for local authorities in England. It also reports on households in temporary accommodation.</td><td>Release announcement, 26 November 2026</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/guidance/new-style-jobseekers-allowance">New Style Jobseeker's Allowance</a></td><td>Added information about when someone who has received JSA for the full entitlement of 182 days, may be able to get it again.</td><td>No local read</td></tr>
+<tr><td>13 October</td><td>BIST</td><td><a href="https://www.gov.uk/government/publications/uk-support-to-ukraine-factsheet">UK support to Ukraine: factsheet</a></td><td>This factsheet summarises how the UK is supporting Ukraine following the Russian invasion.</td><td>No local read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/section-251-2025-to-2026">Section 251: 2025 to 2026</a></td><td>Information for local authorities, schools and the general public about local authority education funding and expenditure plans for 2025 to 2026.</td><td>Council education funding, no economic read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/section-251-2026-to-2027">Section 251: 2026 to 2027</a></td><td>Information for local authorities, schools and the general public about local authority education funding and expenditure plans for 2026 to 2027.</td><td>Council education funding, no economic read</td></tr>
+<tr><td>13 October</td><td>DfE</td><td><a href="https://www.gov.uk/guidance/complete-the-school-census">Complete the school census</a></td><td>Guidance for schools and local authorities on what data we need for the school census and how to submit it.</td><td>Schools administration, no economic read</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/universal-credit-information-for-stakeholders-and-partners">Universal Credit: information for stakeholders and partners</a></td><td>Added ‘How DWP checks benefit eligibility using the Eligibility Verification Measure’ to the collection.</td><td>No local read</td></tr>
+<tr><td>13 October</td><td>DWP</td><td><a href="https://www.gov.uk/government/collections/universal-credit-information-for-landlords">Universal Credit: information for landlords</a></td><td>Added ‘How DWP checks benefit eligibility using the Eligibility Verification Measure’ to the collection.</td><td>No local read</td></tr>
+<tr><td>14 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/news/national-call-to-recruit-more-foster-carers-launched-at-number-10">National call to recruit more foster carers launched at Number 10</a></td><td>Campaign launched with backing of foster carers and care-experienced influencers as part of government plans to create 10,000 new foster places.</td><td>Children's services, no economic read</td></tr>
+<tr><td>14 October</td><td>DfE</td><td><a href="https://www.gov.uk/government/publications/fostering-innovation-fund-application-outcomes">Fostering innovation fund: application outcomes</a></td><td>Successful applicants for funding from the fostering innovation fund to develop and deliver innovative foster care projects.</td><td>Children's services, no economic read</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+
+  <div class="wn-note">
+    <b>The fortnight in one paragraph.</b> NEMSA will control its Local Innovation Partnerships funding from 2028, and the Budget on 28 October is expected to say more about the Good Growth Funds that sit alongside it. North East business activity rose in September and the North of England led England&rsquo;s regions for permanent hiring, though costs are rising again. Longer NHS waits are associated with more time on benefits, which supports our inactivity work. The Innovation Fund closes on 26 October with no partner from the NEMSA area in its directory. Seven reds carry and one, the Common Ground Award, is closed. Coverage is the thirteen days since 2 October, because the 2 October edition replaced 5 October and this one replaces 12 October. The next edition is on Monday 19 October.
+  </div>
+
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; sources: ONS, NOMIS, gov.uk, NatWest, KPMG and REC, S&amp;P Global, ONS release calendar. Not official statistics.
+  </div>
+</footer>
+
+</body>
+</html>

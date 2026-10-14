@@ -1,9 +1,9 @@
 {
  "title": "Horizon Calendar",
- "updated": "2026-10-02",
+ "updated": "2026-10-14",
  "window": {
   "from": "2026-09-28",
-  "ons_to": "2027-04-06"
+  "ons_to": "2027-04-18"
  },
  "categories": {
   "data": "Data release",
@@ -17,53 +17,6 @@
   "milestone": "Statistics milestone"
  },
  "items": [
-  {
-   "id": "ons-regionalgdp-2024",
-   "date": "2026-09-23",
-   "title": "Regional economic activity by GDP, 1998 to 2024",
-   "category": "data",
-   "rag": "r",
-   "status": "published",
-   "why": "The first official 2024 GVA figure for Gateshead, with a revised back series.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/regionaleconomicactivitybygrossdomesticproductuk1998to2024"
-   },
-   "verified": "2026-09-24",
-   "time": "09:30"
-  },
-  {
-   "id": "ons-ukbusinesscounts-2026",
-   "date": "2026-09-24",
-   "title": "UK business; activity, size and location 2026 (UK Business Counts)",
-   "category": "data",
-   "rag": "r",
-   "status": "published",
-   "why": "A new business counts vintage that supersedes the 2025 figures we publish.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/ukbusinessactivitysizeandlocation2026"
-   },
-   "verified": "2026-09-24",
-   "time": "09:30",
-   "action": "Refresh the business base figures across the products",
-   "first_logged": "whats-new-2026-08-17"
-  },
-  {
-   "id": "ons-investigatingnonresponsetothelabourforcesurveyusingadministrativedata",
-   "date": "2026-09-28",
-   "title": "Investigating non-response to the Labour Force Survey",
-   "category": "data",
-   "rag": "g",
-   "status": "published",
-   "why": "Survey quality behind the APS.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/investigatingnonresponsetothelabourforcesurveyusingadministrativedata"
-   },
-   "verified": "2026-09-28",
-   "time": "09:30"
-  },
   {
    "id": "ons-childrenlivinginlongtermworklesshouseholdsintheuk2025",
    "date": "2026-10-01",
@@ -160,7 +113,7 @@
    "title": "Average household income, financial year ending 2025",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Household income context.",
    "source": {
     "name": "ONS release calendar",
@@ -175,7 +128,7 @@
    "title": "UK Services PMI",
    "category": "survey",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "September services conditions.",
    "source": {
     "name": "S&P Global PMI release calendar",
@@ -190,7 +143,7 @@
    "title": "Consultation closes on planning powers for mayors in England",
    "category": "consultation",
    "rag": "r",
-   "status": "confirmed",
+   "status": "published",
    "why": "Decides which planning decisions move up to the mayor. Responses shape secondary legislation, with commencement intended in early 2027.",
    "source": {
     "name": "MHCLG consultation, opened 24 August 2026",
@@ -207,13 +160,13 @@
    "title": "Pathways to Work Innovation Fund partnership directory published",
    "category": "funding",
    "rag": "a",
-   "status": "confirmed",
-   "why": "Shows who else is bidding for the £60m work and health fund, and who Gateshead could partner with.",
+   "status": "published",
+   "why": "Shows who else is bidding for the £60m work and health fund, and who Gateshead could partner with. Published on 6 October, a day after the date in the bid pack, and updated on 13 October.",
    "source": {
     "name": "DWP, Pathways to Work Innovation Fund applicant bid pack, 28 September 2026",
     "url": "https://www.gov.uk/government/publications/pathways-to-work-innovation-fund-applicant-bid-pack"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "first_logged": "whats-new-2026-09-28"
   },
   {
@@ -222,7 +175,7 @@
    "title": "UK Construction PMI",
    "category": "survey",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "September construction conditions.",
    "source": {
     "name": "S&P Global PMI release calendar",
@@ -232,12 +185,43 @@
    "time": "09:30"
   },
   {
+   "id": "best-value-duty-guidance",
+   "date": "2026-10-07",
+   "time": "23:59",
+   "title": "Consultation closes on revised Best Value Duty statutory guidance",
+   "category": "consultation",
+   "rag": "g",
+   "status": "published",
+   "why": "Applies to local and strategic authorities. Corporate governance rather than economic, so for corporate policy colleagues.",
+   "source": {
+    "name": "MHCLG, Best Value Duty: consultation on revised statutory guidance, 15 July 2026",
+    "url": "https://www.gov.uk/government/consultations/best-value-duty-consultation-on-revised-statutory-guidance"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "pro-worker-ai-prize-close",
+   "date": "2026-10-07",
+   "title": "Pro-Worker AI Adoption Prize nominations close",
+   "category": "deadline",
+   "rag": "g",
+   "status": "published",
+   "why": "National prize for organisations adopting AI in ways that benefit workers. The deadline has been extended, and organisations with five or more UK staff can now be nominated.",
+   "source": {
+    "name": "DSIT, Pro-Worker AI Adoption Prize: how to nominate, updated 28 September 2026",
+    "url": "https://www.gov.uk/guidance/pro-worker-ai-adoption-prize-how-to-nominate"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "whats-new-2026-10-02"
+  },
+  {
    "id": "pmi-kpmg-and-rec-uk-report-on-jobs-with-the-north-regional-report-2026-10-08",
    "date": "2026-10-08",
    "title": "KPMG and REC UK Report on Jobs, with the North regional report",
    "category": "survey",
    "rag": "a",
-   "status": "confirmed",
+   "status": "published",
    "why": "Permanent placements, vacancies and starting pay for the North. Pairs with the claimant count.",
    "source": {
     "name": "S&P Global PMI release calendar",
@@ -252,7 +236,7 @@
    "title": "Cladding Safety Scheme applications close for buildings under 11 metres",
    "category": "funding",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Eight-week window run by Homes England through the Building Remediation Hub. Flag to housing colleagues. No economic read.",
    "source": {
     "name": "Homes England and MHCLG, Buildings under 11 metres: new funding",
@@ -263,17 +247,17 @@
   },
   {
    "id": "ctb-return-2026",
-   "date": "2026-10-09",
+   "date": "2026-10-16",
    "title": "Council Tax Base return due to MHCLG",
    "category": "deadline",
    "rag": "g",
    "status": "confirmed",
    "why": "The dwellings and discounts count that feeds future funding allocations. A Council finance return, noted for completeness.",
    "source": {
-    "name": "MHCLG, Council Tax Base notes for completion, October 2026",
-    "url": "https://www.gov.uk/government/publications/council-tax-base-calculation/council-tax-base-ctb-notes-for-completion"
+    "name": "MHCLG, Council Tax Base covering letter (version 2), 5 October 2026",
+    "url": "https://www.gov.uk/government/publications/council-tax-base-calculation"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "first_logged": "whats-new-2026-09-28"
   },
   {
@@ -282,7 +266,7 @@
    "title": "Common Ground Award applications close",
    "category": "funding",
    "rag": "r",
-   "status": "confirmed",
+   "status": "published",
    "why": "Capital funding for community spaces. Outcomes are due in December 2026 and payment is likely in January 2027.",
    "source": {
     "name": "MHCLG, Common Ground Award 2026 to 2027 prospectus",
@@ -298,13 +282,13 @@
    "title": "NatWest UK Regional Growth Tracker",
    "category": "survey",
    "rag": "a",
-   "status": "confirmed",
+   "status": "published",
    "why": "North East business activity and employment. Watch for a second month below 50.",
    "source": {
     "name": "S&P Global PMI release calendar",
     "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "00:01"
   },
   {
@@ -319,9 +303,24 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukaugust2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
+  },
+  {
+   "id": "ons-traveltrends2025",
+   "date": "2026-10-16",
+   "title": "Travel trends, 2025",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Visitor economy context.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/traveltrends2025"
+   },
+   "verified": "2026-10-14",
+   "time": "09:30"
   },
   {
    "id": "pubs-hotels-valuation",
@@ -335,24 +334,9 @@
     "name": "HM Treasury call for evidence, opened 24 August 2026",
     "url": "https://www.gov.uk/government/calls-for-evidence/valuation-methodology-review-for-pubs-and-hotels"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "23:59",
    "first_logged": "policy-update-2026-09"
-  },
-  {
-   "id": "ons-traveltrends2025",
-   "date": "2026-10-16",
-   "title": "Travel trends, 2025",
-   "category": "data",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Visitor economy context.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/traveltrends2025"
-   },
-   "verified": "2026-10-02",
-   "date_label": "October to November 2026"
   },
   {
    "id": "ons-labourforcesurveyqualityupdateoctober2026",
@@ -366,7 +350,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/labourforcesurveyqualityupdateoctober2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -381,7 +365,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketoctober2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -396,7 +380,7 @@
     "name": "MHCLG consultation, opened 25 August 2026",
     "url": "https://www.gov.uk/government/consultations/standard-planning-agreements-for-medium-sized-sites"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "23:59",
    "first_logged": "policy-update-2026-09"
   },
@@ -412,7 +396,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -428,7 +412,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -444,9 +428,25 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukoctober2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30",
    "routine": true
+  },
+  {
+   "id": "leasehold-valuation-rates",
+   "date": "2026-10-21",
+   "time": "23:59",
+   "title": "Consultation closes on leasehold enfranchisement valuation rates",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Extended by four weeks on 7 September. Housing market rather than economic intelligence, and no response is proposed.",
+   "source": {
+    "name": "MHCLG, Leasehold enfranchisement valuation rates, updated 7 September 2026",
+    "url": "https://www.gov.uk/government/consultations/leasehold-enfranchisement-valuation-rates"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "policy-update-2026-10"
   },
   {
    "id": "ons-employeeearningsintheuk2026",
@@ -460,7 +460,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/employeeearningsintheuk2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -491,8 +491,24 @@
     "name": "DWP, Pathways to Work Innovation Fund applicant bid pack, 28 September 2026",
     "url": "https://www.gov.uk/government/publications/pathways-to-work-innovation-fund-applicant-bid-pack"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "first_logged": "whats-new-2026-09-28"
+  },
+  {
+   "id": "land-use-stats-method",
+   "date": "2026-10-28",
+   "time": "23:59",
+   "title": "Consultation closes on new methodology for land use statistics in England",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Rebuilds the land use and new-address statistics on the Ordnance Survey National Geographic Database. A statistics user question for any land or housing supply work.",
+   "source": {
+    "name": "MHCLG, Land use statistics in England: methodology changes, 16 September 2026",
+    "url": "https://www.gov.uk/government/consultations/land-use-statistics-in-england-methodology-changes"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "policy-update-2026-10"
   },
   {
    "id": "budget-2026",
@@ -506,7 +522,7 @@
     "name": "HM Treasury, Chancellor's letter to the Treasury Select Committee, 31 July 2026",
     "url": "https://www.gov.uk/government/publications/chancellor-letter-to-the-treasury-select-committee-tsc-budget-2026-date"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "action": "Derive Gateshead's income tax base position before the day, and read the roadmap in full on 29 October",
    "first_logged": "whats-new-2026-08-03"
   },
@@ -536,8 +552,23 @@
     "name": "MHCLG, Pride in Place Programme prospectus and guidance",
     "url": "https://www.gov.uk/government/publications/pride-in-place-programme-prospectus"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "first_logged": "whats-new-2026-09-08"
+  },
+  {
+   "id": "ons-uknationalaccountsthebluebook2026",
+   "date": "2026-10-30",
+   "title": "UK National Accounts, the Blue Book 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Method changes feed the next regional accounts.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/uknationalaccountsthebluebook2026"
+   },
+   "verified": "2026-10-14",
+   "time": "09:30"
   },
   {
    "id": "era-trade-union-harassment",
@@ -551,22 +582,8 @@
     "name": "DBT, Plan to Make Work Pay and Employment Rights Act timeline update, 25 September 2026",
     "url": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act/plan-to-make-work-pay-and-employment-rights-act-timeline-update"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "first_logged": "whats-new-2026-09-28"
-  },
-  {
-   "id": "ons-uknationalaccountsthebluebook2026",
-   "date": "2026-10-30",
-   "title": "UK National Accounts, the Blue Book 2026",
-   "category": "data",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Method changes feed the next regional accounts.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/uknationalaccountsthebluebook2026"
-   },
-   "verified": "2026-10-02"
   },
   {
    "id": "workwell-england",
@@ -580,9 +597,26 @@
     "name": "DWP, Get Britain Working: an update on the Jobs and Careers Service, 2 July 2026",
     "url": "https://www.gov.uk/government/publications/get-britain-working-an-update-on-the-jobs-and-careers-service"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "From November 2026",
    "first_logged": "policy-update-2026-07"
+  },
+  {
+   "id": "pmi-uk-manufacturing-pmi-2026-11-02",
+   "date": "2026-11-02",
+   "time": "09:30",
+   "title": "UK Manufacturing PMI",
+   "category": "survey",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "National manufacturing conditions, including the split by firm size.",
+   "source": {
+    "name": "S&P Global, PMI release calendar",
+    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
+   },
+   "verified": "2026-10-02",
+   "routine": true,
+   "first_logged": "whats-new-2026-10-02"
   },
   {
    "id": "chsf-close",
@@ -591,12 +625,12 @@
    "category": "funding",
    "rag": "r",
    "status": "confirmed",
-   "why": "Support for councils to increase housebuilding. Applicants hear from November 2026, and further windows are expected in April 2027 and April 2028.",
+   "why": "Support for councils to increase housebuilding. Applicants hear from November 2026, and further windows are expected in April 2027 and April 2028. One proposal per council in each window, up to £300,000 (guidance updated 7 October 2026).",
    "source": {
     "name": "MHCLG, Council Housebuilding Support Fund: how to apply",
     "url": "https://www.gov.uk/guidance/council-housebuilding-support-fund-how-to-apply"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "14:00",
    "action": "Ask housing and development colleagues whether Gateshead is bidding",
    "first_logged": "whats-new-2026-09-21"
@@ -619,6 +653,22 @@
    "first_logged": "whats-new-2026-09-28"
   },
   {
+   "id": "dbt-business-population-2026",
+   "date": "2026-11-05",
+   "time": "09:30",
+   "title": "Business population estimates 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private sector business counts for the UK and regions, including the unregistered businesses that UK Business Counts leaves out. North East context for the business base.",
+   "source": {
+    "name": "DBT, Business population estimates 2026, release announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/business-population-estimates-2026"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-02"
+  },
+  {
    "id": "ons-localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024",
    "date": "2026-11-05",
    "title": "Local sites and employees linked to international trade in services",
@@ -630,7 +680,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -645,7 +695,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/regionalandsubregionallabourproductivityuk2024"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -663,6 +713,22 @@
    "verified": "2026-10-02"
   },
   {
+   "id": "ai-clean-energy-cfe",
+   "date": "2026-11-06",
+   "time": "23:45",
+   "title": "Call for evidence closes on an AI-enabled clean energy system",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Context for the AI testbed objective. No response is proposed.",
+   "source": {
+    "name": "DESNZ, Vision for an AI-enabled clean energy system, 8 September 2026",
+    "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
    "id": "pathways-innovation-shortlist",
    "date": "2026-11-09",
    "title": "Pathways to Work Innovation Fund shortlisting outcomes",
@@ -674,7 +740,7 @@
     "name": "DWP, Pathways to Work Innovation Fund applicant bid pack, 28 September 2026",
     "url": "https://www.gov.uk/government/publications/pathways-to-work-innovation-fund-applicant-bid-pack"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "first_logged": "whats-new-2026-09-28"
   },
   {
@@ -689,7 +755,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/internationaltradeinuknationsregionsandcities2024"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -704,7 +770,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukjulytoseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -719,7 +785,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -735,7 +801,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/shorttermletsthroughonlinecollaborativeeconomyplatformsukjuly2023tojune2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "November 2026"
   },
   {
@@ -750,7 +816,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketnovember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -765,8 +831,23 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/productivityflashestimateandoverviewukjulytoseptember2026andapriltojune2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
+  },
+  {
+   "id": "dwp-universal-credit-2026-11",
+   "date": "2026-11-17",
+   "title": "Universal Credit statistics, quarterly release to 13 August 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Quarterly Universal Credit people, households and deductions, with local authority breakdowns through Stat-Xplore.",
+   "source": {
+    "name": "DWP, Universal Credit statistics collection, updated 2 October 2026",
+    "url": "https://www.gov.uk/government/collections/universal-credit-statistics"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-02"
   },
   {
    "id": "ons-consumerpriceinflationukoctober2026",
@@ -780,7 +861,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukoctober2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -796,7 +877,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/businessregisterandemploymentsurveybresprovisionalresults2025revisedresults2024"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -811,7 +892,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesuknovember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30",
    "routine": true
   },
@@ -841,7 +922,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukoctober2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -857,7 +938,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/youngpeoplenotineducationemploymentortrainingneetuknovember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -872,7 +953,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/longterminternationalmigrationprovisionalyearendingjune2026"
    },
-   "verified": "2026-10-02"
+   "verified": "2026-10-14"
   },
   {
    "id": "ons-provisionalpopulationestimatefortheukmid2026",
@@ -886,7 +967,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/provisionalpopulationestimatefortheukmid2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "November 2026"
   },
   {
@@ -901,8 +982,24 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsjulytoseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
+  },
+  {
+   "id": "bics-registration-close",
+   "date": "2026-11-30",
+   "title": "British Industrial Competitiveness Scheme registrations close",
+   "category": "funding",
+   "rag": "r",
+   "status": "confirmed",
+   "why": "Eligible manufacturers can cut electricity bills by up to 25% from 2027. Only firms applying this year get the extra lump sum worth around a year's relief, and nearly all firms in the eligible sectors are small businesses, who may not know they qualify.",
+   "action": "Ask business support colleagues to promote the scheme to Gateshead manufacturers before registrations close",
+   "source": {
+    "name": "BIST, Applications open for scheme to slash electricity bills for over 10,000 manufacturers, 1 October 2026",
+    "url": "https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-02"
   },
   {
    "id": "ppn026-guidance",
@@ -916,7 +1013,7 @@
     "name": "Cabinet Office, PPN 026: the social value model",
     "url": "https://www.gov.uk/government/publications/ppn-026-the-social-value-model"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "Autumn 2026",
    "first_logged": "policy-update-2026-09"
   },
@@ -932,7 +1029,7 @@
     "name": "MHCLG, Pride in Place Programme: plans for Phase 2 places",
     "url": "https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "action": "Offer the board a small-area evidence pack for its ten-year plan",
    "first_logged": "whats-new-2026-09-21"
   },
@@ -948,7 +1045,7 @@
     "name": "MHCLG, Common Ground Award 2026 to 2027 prospectus",
     "url": "https://www.gov.uk/government/publications/common-ground-award-2026-to-2027-prospectus"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "December 2026"
   },
   {
@@ -963,7 +1060,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "December 2026 to January 2027"
   },
   {
@@ -978,7 +1075,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/workingandworklesshouseholdsintheukjulytoseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -993,7 +1090,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/trendsinukbusinessdynamismandproductivity2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -1008,7 +1105,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/theuktourismsatelliteaccountuktsa2024"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "December 2026 to January 2027"
   },
   {
@@ -1023,7 +1120,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/lifeexpectancyforlocalareasoftheukbetween2001to2003and2023to2025"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "December 2026 to January 2027"
   },
   {
@@ -1038,7 +1135,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukoctober2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -1054,7 +1151,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketdecember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -1069,9 +1166,24 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationuknovember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
+  },
+  {
+   "id": "ons-businessregisterandemploymentsurveybresrevisedresults2024fortheuk",
+   "date": "2026-12-16",
+   "title": "BRES, provisional and revised results, revised results 2024 for the UK",
+   "category": "data",
+   "rag": "a",
+   "status": "confirmed",
+   "why": "A second BRES release on the calendar, titled revised results 2024 for the UK. The calendar page does not say how it relates to the 18 November release, so check before either feeds a product.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/businessregisterandemploymentsurveybresrevisedresults2024fortheuk"
+   },
+   "verified": "2026-10-14",
+   "time": "09:30"
   },
   {
    "id": "ons-privaterentandhousepricesukdecember2026",
@@ -1085,7 +1197,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukdecember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30",
    "routine": true
   },
@@ -1115,7 +1227,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesuknovember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -1147,7 +1259,7 @@
     "name": "DWP, Jobs Guarantee guidance, updated 16 September 2026",
     "url": "https://www.gov.uk/government/publications/jobs-guarantee"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "Later in 2026",
    "action": "Find the North East delivery partner and size the eligible Gateshead cohort",
    "first_logged": "whats-new-2026-09-21"
@@ -1183,6 +1295,22 @@
    "verified": "2026-10-02",
    "date_label": "Later in 2026",
    "first_logged": "whats-new-2026-08-31"
+  },
+  {
+   "id": "agc-planning-permission",
+   "date": "2027-01-01",
+   "date_label": "Start of 2027",
+   "title": "Adult gaming centres expected to need planning permission",
+   "category": "policy",
+   "rag": "g",
+   "status": "expected",
+   "why": "Part of the August high streets measures on vape and gaming premises. No consultation, draft order or legislation had been published by 2 October 2026.",
+   "source": {
+    "name": "No.10, PM vows to save hollowed out high streets, 11 August 2026",
+    "url": "https://www.gov.uk/government/news/pm-vows-to-save-hollowed-out-high-streets-with-crackdown-on-vape-and-betting-shops"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
   },
   {
    "id": "ppn026-live",
@@ -1242,9 +1370,26 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateuknovember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
+  },
+  {
+   "id": "business-north-east-launch",
+   "date": "2027-01-15",
+   "date_label": "January 2027",
+   "title": "Business North East regional business support framework starts",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "£25.9 million to March 2029, with a regional hub and a spoke in each of the seven councils, so the council's business support becomes the Gateshead spoke.",
+   "action": "Agree with business support colleagues what evidence the Gateshead spoke needs before launch",
+   "source": {
+    "name": "NEMSA, A further £25.9m investment to back regional business and boost jobs, 22 September 2026",
+    "url": "https://www.northeast-ca.gov.uk/news/economy/a-further-25-9m-investment-to-back-regional-business-and-boost-jobs"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
   },
   {
    "id": "ons-uklabourmarketjanuary2027",
@@ -1258,7 +1403,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketjanuary2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -1273,7 +1418,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukdecember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -1289,7 +1434,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukjanuary2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "routine": true
   },
   {
@@ -1304,7 +1449,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/estimatesofgreenjobsukseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "date_label": "January 2027"
   },
   {
@@ -1380,7 +1525,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukoctobertodecember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -1395,9 +1540,26 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukdecember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
+  },
+  {
+   "id": "youth-transformation-2027",
+   "date": "2027-02-15",
+   "date_label": "Early 2027",
+   "title": "Further selection round for the Local Youth Transformation programme",
+   "category": "funding",
+   "rag": "a",
+   "status": "expected",
+   "why": "Gateshead was shortlisted for Young Futures Hubs in July 2026 and not selected. This round funds youth service transformation without a hub.",
+   "action": "Establish whether Gateshead submitted an expression of interest in 2026 and get the feedback before this round",
+   "source": {
+    "name": "DCMS, Young Futures Hubs and Transformation Programme, updated 17 September 2026",
+    "url": "https://www.gov.uk/guidance/young-futures-hubs-and-transformation-programme"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
   },
   {
    "id": "ons-uklabourmarketfebruary2027",
@@ -1411,7 +1573,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketfebruary2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -1426,8 +1588,24 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/productivityflashestimateandoverviewukoctobertodecember2026andjulytoseptember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
+  },
+  {
+   "id": "ons-consumerpriceinflationukjanuary2027",
+   "date": "2027-02-17",
+   "title": "Consumer price inflation",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Feeds the cost-of-living index.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukjanuary2027"
+   },
+   "verified": "2026-10-14",
+   "routine": true,
+   "time": "07:00"
   },
   {
    "id": "ons-privaterentandhousepricesukfebruary2027",
@@ -1441,23 +1619,8 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukfebruary2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30",
-   "routine": true
-  },
-  {
-   "id": "ons-consumerpriceinflationukjanuary2027",
-   "date": "2027-02-17",
-   "title": "Consumer price inflation",
-   "category": "data",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Feeds the cost-of-living index.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukjanuary2027"
-   },
-   "verified": "2026-10-02",
    "routine": true
   },
   {
@@ -1472,7 +1635,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/lowcarbonandrenewableenergyeconomyuk2025"
    },
-   "verified": "2026-10-02"
+   "verified": "2026-10-14"
   },
   {
    "id": "ons-householdcostsindicesforukhouseholdgroupsoctobertodecember2026",
@@ -1486,7 +1649,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsoctobertodecember2026"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30"
   },
   {
@@ -1515,7 +1678,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukjanuary2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00",
    "routine": true
   },
@@ -1531,7 +1694,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketmarch2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "07:00"
   },
   {
@@ -1549,6 +1712,22 @@
    "verified": "2026-09-28"
   },
   {
+   "id": "ons-consumerpriceinflationukfebruary2027",
+   "date": "2027-03-24",
+   "title": "Consumer price inflation",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Feeds the cost-of-living index.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukfebruary2027"
+   },
+   "verified": "2026-10-14",
+   "routine": true,
+   "time": "07:00"
+  },
+  {
    "id": "ons-privaterentandhousepricesukmarch2027",
    "date": "2027-03-24",
    "title": "Private rent and house prices",
@@ -1560,23 +1739,8 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukmarch2027"
    },
-   "verified": "2026-10-02",
+   "verified": "2026-10-14",
    "time": "09:30",
-   "routine": true
-  },
-  {
-   "id": "ons-consumerpriceinflationukfebruary2027",
-   "date": "2027-03-24",
-   "title": "Consumer price inflation",
-   "category": "data",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Feeds the cost-of-living index.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukfebruary2027"
-   },
-   "verified": "2026-10-02",
    "routine": true
   },
   {
@@ -1594,6 +1758,22 @@
    "verified": "2026-09-28",
    "date_label": "2027/28 rates year",
    "first_logged": "policy-update-2026-08"
+  },
+  {
+   "id": "bics-support-starts",
+   "date": "2027-04-01",
+   "date_label": "From April 2027",
+   "title": "British Industrial Competitiveness Scheme support starts for eligible manufacturers",
+   "category": "policy",
+   "rag": "g",
+   "status": "expected",
+   "why": "Exemption from the indirect costs of the Renewables Obligation and Feed-in Tariffs starts in April 2027, and from the Capacity Market in October 2027, for eligible manufacturers in the Industrial Strategy frontier sectors and the foundational industries that supply them.",
+   "source": {
+    "name": "BIST, Applications open for scheme to slash electricity bills for over 10,000 manufacturers, 1 October 2026",
+    "url": "https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "whats-new-2026-10-02"
   },
   {
    "id": "jobs-guarantee-health",
@@ -1628,6 +1808,22 @@
    "first_logged": "whats-new-2026-08-25"
   },
   {
+   "id": "ons-gdpmonthlyestimateukfebruary2027",
+   "date": "2027-04-14",
+   "title": "GDP monthly estimate",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "National growth context.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukfebruary2027"
+   },
+   "verified": "2026-10-14",
+   "time": "07:00",
+   "routine": true
+  },
+  {
    "id": "adv-manuf-panel",
    "date": "2027-04-30",
    "title": "Advanced manufacturing expert evaluation panel first convenes",
@@ -1642,6 +1838,23 @@
    "verified": "2026-10-02",
    "date_label": "Spring 2027",
    "first_logged": "whats-new-2026-08-31"
+  },
+  {
+   "id": "apprenticeship-brokerage-msas",
+   "date": "2027-04-30",
+   "date_label": "Spring 2027",
+   "title": "Apprenticeship brokerage funding extends to all 14 mayoral strategic authorities",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "£100 million over two years for mayors to match young people with small employers. NEMSA becomes one of the bodies running local apprenticeship services, which bears on the youth employment thread.",
+   "action": "Ask NEMSA how the service will run in Gateshead and what data it will share",
+   "source": {
+    "name": "HM Treasury, Chancellor backs young people into work by supporting jobs, 28 September 2026",
+    "url": "https://www.gov.uk/government/news/chancellor-backs-young-people-into-work-by-supporting-jobs"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "whats-new-2026-10-02"
   },
   {
    "id": "youth-workers-2027",
@@ -1690,6 +1903,38 @@
    },
    "verified": "2026-10-02",
    "first_logged": "whats-new-2026-09-28"
+  },
+  {
+   "id": "spending-review-2027",
+   "date": "2027-06-30",
+   "date_label": "2027",
+   "title": "Spending Review, which confirms the detailed arrangements for retained income tax",
+   "category": "fiscal",
+   "rag": "a",
+   "status": "expected",
+   "why": "The Cabinet Statement says the Spending Review confirms the income tax share arrangements, so half of the fiscal devolution answer may sit beyond the Budget. Placed in 2027 by the Keep Britain Working update. No date is published.",
+   "source": {
+    "name": "DWP, Keep Britain Working: a national growth opportunity, 23 September 2026, and Cabinet Office, Rewiring the State, 31 July 2026",
+    "url": "https://www.gov.uk/government/publications/keep-britain-working-review-update-a-national-growth-opportunity-september-2026"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "casey-commission-report",
+   "date": "2027-07-31",
+   "date_label": "Summer 2027",
+   "title": "Casey Commission reports on how to build a National Care Service",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "Free personal care for older people is planned for the next Parliament, funded by adjusting the Triple Lock from April 2030. Adult social care is a council function, and personal care charges are part of how it is paid for today, so the design matters to the council's finances.",
+   "source": {
+    "name": "Prime Minister's Office, Prime Minister Andy Burnham sets out plans for a new National Care Service, 29 September 2026",
+    "url": "https://www.gov.uk/government/news/prime-minister-andy-burnham-sets-out-plans-for-a-new-national-care-service"
+   },
+   "verified": "2026-10-02",
+   "first_logged": "whats-new-2026-10-02"
   },
   {
    "id": "tlfs-decision-jul27",
@@ -1801,262 +2046,147 @@
    "first_logged": "whats-new-2026-09-28"
   },
   {
-   "id": "bics-registration-close",
-   "date": "2026-11-30",
-   "title": "British Industrial Competitiveness Scheme registrations close",
-   "category": "funding",
-   "rag": "r",
-   "status": "confirmed",
-   "why": "Eligible manufacturers can cut electricity bills by up to 25% from 2027. Only firms applying this year get the extra lump sum worth around a year's relief, and nearly all firms in the eligible sectors are small businesses, who may not know they qualify.",
-   "action": "Ask business support colleagues to promote the scheme to Gateshead manufacturers before registrations close",
-   "source": {
-    "name": "BIST, Applications open for scheme to slash electricity bills for over 10,000 manufacturers, 1 October 2026",
-    "url": "https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "bics-support-starts",
-   "date": "2027-04-01",
-   "date_label": "From April 2027",
-   "title": "British Industrial Competitiveness Scheme support starts for eligible manufacturers",
-   "category": "policy",
-   "rag": "g",
-   "status": "expected",
-   "why": "Exemption from the indirect costs of the Renewables Obligation and Feed-in Tariffs starts in April 2027, and from the Capacity Market in October 2027, for eligible manufacturers in the Industrial Strategy frontier sectors and the foundational industries that supply them.",
-   "source": {
-    "name": "BIST, Applications open for scheme to slash electricity bills for over 10,000 manufacturers, 1 October 2026",
-    "url": "https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "pro-worker-ai-prize-close",
-   "date": "2026-10-07",
-   "title": "Pro-Worker AI Adoption Prize nominations close",
-   "category": "deadline",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "National prize for organisations adopting AI in ways that benefit workers. The deadline has been extended, and organisations with five or more UK staff can now be nominated.",
-   "source": {
-    "name": "DSIT, Pro-Worker AI Adoption Prize: how to nominate, updated 28 September 2026",
-    "url": "https://www.gov.uk/guidance/pro-worker-ai-adoption-prize-how-to-nominate"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "apprenticeship-brokerage-msas",
-   "date": "2027-04-30",
-   "date_label": "Spring 2027",
-   "title": "Apprenticeship brokerage funding extends to all 14 mayoral strategic authorities",
+   "id": "lipf-devolved-2028",
+   "date": "2028-04-01",
+   "date_label": "2028",
+   "title": "Local Innovation Partnerships Fund devolved to established mayors, NEMSA included",
    "category": "policy",
    "rag": "a",
    "status": "expected",
-   "why": "£100 million over two years for mayors to match young people with small employers. NEMSA becomes one of the bodies running local apprenticeship services, which bears on the youth employment thread.",
-   "action": "Ask NEMSA how the service will run in Gateshead and what data it will share",
+   "why": "NEMSA decides how its share of local innovation funding is spent, the first dedicated research and development money held by mayors. It sits alongside the new Good Growth Funds, on which the Budget on 28 October is due to say more.",
+   "action": "Ask NEMSA whether spending will be reported by local authority.",
    "source": {
-    "name": "HM Treasury, Chancellor backs young people into work by supporting jobs, 28 September 2026",
-    "url": "https://www.gov.uk/government/news/chancellor-backs-young-people-into-work-by-supporting-jobs"
+    "name": "No.10, Prime Minister to hand regions innovation funding to build world-leading industries, 9 October 2026",
+    "url": "https://www.gov.uk/government/news/prime-minister-to-hand-regions-innovation-funding-to-build-world-leading-industries"
    },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
   },
   {
-   "id": "dbt-business-population-2026",
-   "date": "2026-11-05",
+   "id": "lipf-delivery-plans",
+   "date": "2026-11-30",
+   "date_label": "October to December 2026",
+   "title": "Remaining Local Innovation Partnerships Fund regions set out delivery plans",
+   "category": "funding",
+   "rag": "g",
+   "status": "expected",
+   "why": "Should show what the North East partnership plans to fund.",
+   "source": {
+    "name": "BIST, Industrial Strategy quarterly update, July to September 2026, 9 October 2026",
+    "url": "https://www.gov.uk/government/publications/industrial-strategy-quarterly-update-july-to-september-2026"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "stl-registration",
+   "date": "2027-03-15",
+   "date_label": "March 2027",
+   "title": "Mandatory national registration scheme for short-term lets expected to begin",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "A national register would give a direct count of short-term lets, an input to any visitor levy baseline.",
+   "source": {
+    "name": "BIST, Letting out a self-catering holiday home in England, updated 2 October 2026",
+    "url": "https://www.gov.uk/guidance/letting-out-a-self-catering-holiday-home-in-england-rules-and-regulations"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "awaabs-law-prs-consultation",
+   "date": "2026-12-18",
+   "title": "Consultation closes on extending Awaab's Law to private rented tenancies and licences",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Covers temporary accommodation and supported housing as well as private renters. A housing matter, flagged to colleagues.",
+   "source": {
+    "name": "MHCLG, Extending Awaab's Law to private rented tenancies and to licences, 9 October 2026",
+    "url": "https://www.gov.uk/government/consultations/extending-awaabs-law-to-private-rented-tenancies-and-to-licences"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "uk-eu-summit-2026",
+   "date": "2026-11-20",
+   "title": "Second UK-EU summit, Brussels",
+   "category": "policy",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Possible deals on trade costs and red tape for businesses.",
+   "source": {
+    "name": "No.10, Prime Minister to attend UK-EU summit in Brussels on 20 November, 12 October 2026",
+    "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "dfe-ks4-ks5-destinations-2025",
+   "date": "2026-10-15",
    "time": "09:30",
-   "title": "Business population estimates 2026",
+   "title": "Destinations of key stage 4 and 16 to 19 students, 2025",
+   "category": "data",
+   "rag": "a",
+   "status": "confirmed",
+   "why": "Where Gateshead school and college leavers go, including into apprenticeships and employment. Evidence for the NEET thread.",
+   "source": {
+    "name": "DfE statistics announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/destinations-of-key-stage-4-ks4-and-16-to-18-ks5-students-2025"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "dwp-access-to-work-2026",
+   "date": "2026-10-29",
+   "time": "09:30",
+   "title": "Access to Work statistics, April 2007 to March 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Disability employment support context.",
+   "source": {
+    "name": "DWP statistics announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/access-to-work-statistics-april-2007-to-march-2025--2"
+   },
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "dwp-employment-disabled-people-2026",
+   "date": "2026-11-04",
+   "time": "09:30",
+   "title": "The Employment of Disabled People 2026",
    "category": "data",
    "rag": "g",
    "status": "provisional",
-   "why": "Private sector business counts for the UK and regions, including the unregistered businesses that UK Business Counts leaves out. North East context for the business base.",
+   "why": "Disability employment rates, context for the inactivity work.",
    "source": {
-    "name": "DBT, Business population estimates 2026, release announcement",
-    "url": "https://www.gov.uk/government/statistics/announcements/business-population-estimates-2026"
+    "name": "DWP statistics announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/the-employment-of-disabled-people-2026"
    },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
   },
   {
-   "id": "dwp-universal-credit-2026-11",
-   "date": "2026-11-17",
-   "title": "Universal Credit statistics, quarterly release to 13 August 2026",
+   "id": "dfe-fe-skills-2026-11",
+   "date": "2026-11-26",
+   "date_label": "November 2026",
+   "title": "Further education and skills statistics, November 2026",
    "category": "data",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "Quarterly Universal Credit people, households and deductions, with local authority breakdowns through Stat-Xplore.",
-   "source": {
-    "name": "DWP, Universal Credit statistics collection, updated 2 October 2026",
-    "url": "https://www.gov.uk/government/collections/universal-credit-statistics"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "casey-commission-report",
-   "date": "2027-07-31",
-   "date_label": "Summer 2027",
-   "title": "Casey Commission reports on how to build a National Care Service",
-   "category": "policy",
    "rag": "a",
    "status": "expected",
-   "why": "Free personal care for older people is planned for the next Parliament, funded by adjusting the Triple Lock from April 2030. Adult social care is a council function, and personal care charges are part of how it is paid for today, so the design matters to the council's finances.",
+   "why": "Apprenticeship starts and further education participation, with local authority detail.",
    "source": {
-    "name": "Prime Minister's Office, Prime Minister Andy Burnham sets out plans for a new National Care Service, 29 September 2026",
-    "url": "https://www.gov.uk/government/news/prime-minister-andy-burnham-sets-out-plans-for-a-new-national-care-service"
+    "name": "DfE statistics announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/further-education-and-skills-november-2026"
    },
-   "verified": "2026-10-02",
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "pmi-uk-manufacturing-pmi-2026-11-02",
-   "date": "2026-11-02",
-   "time": "09:30",
-   "title": "UK Manufacturing PMI",
-   "category": "survey",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "National manufacturing conditions, including the split by firm size.",
-   "source": {
-    "name": "S&P Global, PMI release calendar",
-    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
-   },
-   "verified": "2026-10-02",
-   "routine": true,
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "best-value-duty-guidance",
-   "date": "2026-10-07",
-   "time": "23:59",
-   "title": "Consultation closes on revised Best Value Duty statutory guidance",
-   "category": "consultation",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "Applies to local and strategic authorities. Corporate governance rather than economic, so for corporate policy colleagues.",
-   "source": {
-    "name": "MHCLG, Best Value Duty: consultation on revised statutory guidance, 15 July 2026",
-    "url": "https://www.gov.uk/government/consultations/best-value-duty-consultation-on-revised-statutory-guidance"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "leasehold-valuation-rates",
-   "date": "2026-10-21",
-   "time": "23:59",
-   "title": "Consultation closes on leasehold enfranchisement valuation rates",
-   "category": "consultation",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "Extended by four weeks on 7 September. Housing market rather than economic intelligence, and no response is proposed.",
-   "source": {
-    "name": "MHCLG, Leasehold enfranchisement valuation rates, updated 7 September 2026",
-    "url": "https://www.gov.uk/government/consultations/leasehold-enfranchisement-valuation-rates"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "land-use-stats-method",
-   "date": "2026-10-28",
-   "time": "23:59",
-   "title": "Consultation closes on new methodology for land use statistics in England",
-   "category": "consultation",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "Rebuilds the land use and new-address statistics on the Ordnance Survey National Geographic Database. A statistics user question for any land or housing supply work.",
-   "source": {
-    "name": "MHCLG, Land use statistics in England: methodology changes, 16 September 2026",
-    "url": "https://www.gov.uk/government/consultations/land-use-statistics-in-england-methodology-changes"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "ai-clean-energy-cfe",
-   "date": "2026-11-06",
-   "time": "23:45",
-   "title": "Call for evidence closes on an AI-enabled clean energy system",
-   "category": "consultation",
-   "rag": "g",
-   "status": "confirmed",
-   "why": "Context for the AI testbed objective. No response is proposed.",
-   "source": {
-    "name": "DESNZ, Vision for an AI-enabled clean energy system, 8 September 2026",
-    "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "business-north-east-launch",
-   "date": "2027-01-15",
-   "date_label": "January 2027",
-   "title": "Business North East regional business support framework starts",
-   "category": "policy",
-   "rag": "a",
-   "status": "expected",
-   "why": "£25.9 million to March 2029, with a regional hub and a spoke in each of the seven councils, so the council's business support becomes the Gateshead spoke.",
-   "action": "Agree with business support colleagues what evidence the Gateshead spoke needs before launch",
-   "source": {
-    "name": "NEMSA, A further £25.9m investment to back regional business and boost jobs, 22 September 2026",
-    "url": "https://www.northeast-ca.gov.uk/news/economy/a-further-25-9m-investment-to-back-regional-business-and-boost-jobs"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "youth-transformation-2027",
-   "date": "2027-02-15",
-   "date_label": "Early 2027",
-   "title": "Further selection round for the Local Youth Transformation programme",
-   "category": "funding",
-   "rag": "a",
-   "status": "expected",
-   "why": "Gateshead was shortlisted for Young Futures Hubs in July 2026 and not selected. This round funds youth service transformation without a hub.",
-   "action": "Establish whether Gateshead submitted an expression of interest in 2026 and get the feedback before this round",
-   "source": {
-    "name": "DCMS, Young Futures Hubs and Transformation Programme, updated 17 September 2026",
-    "url": "https://www.gov.uk/guidance/young-futures-hubs-and-transformation-programme"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "agc-planning-permission",
-   "date": "2027-01-01",
-   "date_label": "Start of 2027",
-   "title": "Adult gaming centres expected to need planning permission",
-   "category": "policy",
-   "rag": "g",
-   "status": "expected",
-   "why": "Part of the August high streets measures on vape and gaming premises. No consultation, draft order or legislation had been published by 2 October 2026.",
-   "source": {
-    "name": "No.10, PM vows to save hollowed out high streets, 11 August 2026",
-    "url": "https://www.gov.uk/government/news/pm-vows-to-save-hollowed-out-high-streets-with-crackdown-on-vape-and-betting-shops"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
-  },
-  {
-   "id": "spending-review-2027",
-   "date": "2027-06-30",
-   "date_label": "2027",
-   "title": "Spending Review, which confirms the detailed arrangements for retained income tax",
-   "category": "fiscal",
-   "rag": "a",
-   "status": "expected",
-   "why": "The Cabinet Statement says the Spending Review confirms the income tax share arrangements, so half of the fiscal devolution answer may sit beyond the Budget. Placed in 2027 by the Keep Britain Working update. No date is published.",
-   "source": {
-    "name": "DWP, Keep Britain Working: a national growth opportunity, 23 September 2026, and Cabinet Office, Rewiring the State, 31 July 2026",
-    "url": "https://www.gov.uk/government/publications/keep-britain-working-review-update-a-national-growth-opportunity-september-2026"
-   },
-   "verified": "2026-10-02",
-   "first_logged": "policy-update-2026-10"
+   "verified": "2026-10-14",
+   "first_logged": "whats-new-2026-10-14"
   }
  ],
  "pending_verification": [
@@ -2128,6 +2258,63 @@
    "added": 8,
    "changed": 0,
    "removed": 0
+  },
+  {
+   "date": "2026-10-14",
+   "run": "whats-new-2026-10-14",
+   "note": "Refresh from the 14 October catch-up What's New. ONS sweep added 2 releases, confirmed 4 (the Blue Book 2026, travel trends and two inflation releases) and retired 3 to the archive. The Council Tax Base return moved from 9 to 16 October. The 16 December BRES entry reworded, because the calendar does not say how it relates to the 18 November release. Every non-ONS deadline within 60 days re-read at source, none moved. Nine items added from the edition. Pending list unchanged, all seven still without a primary dated source.",
+   "added": 11,
+   "changed": 6,
+   "removed": 3
+  }
+ ],
+ "archive": [
+  {
+   "id": "ons-regionalgdp-2024",
+   "date": "2026-09-23",
+   "title": "Regional economic activity by GDP, 1998 to 2024",
+   "category": "data",
+   "rag": "r",
+   "status": "published",
+   "why": "The first official 2024 GVA figure for Gateshead, with a revised back series.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/regionaleconomicactivitybygrossdomesticproductuk1998to2024"
+   },
+   "verified": "2026-09-24",
+   "time": "09:30"
+  },
+  {
+   "id": "ons-ukbusinesscounts-2026",
+   "date": "2026-09-24",
+   "title": "UK business; activity, size and location 2026 (UK Business Counts)",
+   "category": "data",
+   "rag": "r",
+   "status": "published",
+   "why": "A new business counts vintage that supersedes the 2025 figures we publish.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/ukbusinessactivitysizeandlocation2026"
+   },
+   "verified": "2026-09-24",
+   "time": "09:30",
+   "action": "Refresh the business base figures across the products",
+   "first_logged": "whats-new-2026-08-17"
+  },
+  {
+   "id": "ons-investigatingnonresponsetothelabourforcesurveyusingadministrativedata",
+   "date": "2026-09-28",
+   "title": "Investigating non-response to the Labour Force Survey",
+   "category": "data",
+   "rag": "g",
+   "status": "published",
+   "why": "Survey quality behind the APS.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/investigatingnonresponsetothelabourforcesurveyusingadministrativedata"
+   },
+   "verified": "2026-09-28",
+   "time": "09:30"
   }
  ]
 }

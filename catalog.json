@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "2 October 2026",
+ "updated": "14 October 2026",
  "schedule": {
-  "updated": "2 October 2026",
+  "updated": "14 October 2026",
   "months": [
    {
     "id": "2026-07",
@@ -132,10 +132,15 @@
       },
       {
        "label": "Wed 14",
+       "status": "released",
+       "href": "briefs/whats-new-2026-10-14.html"
+      },
+      {
+       "label": "Mon 19",
        "status": "next"
       },
       {
-       "label": "then every Mon"
+       "label": "Mon 26"
       }
      ],
      "2026-11": [
@@ -492,6 +497,51 @@
     "pride in place",
     "visitor levy",
     "uk business counts"
+   ]
+  },
+  {
+   "id": "whats-new-2026-10-14",
+   "title": "What's New, 14 October 2026",
+   "path": "briefs/whats-new-2026-10-14.html",
+   "topic": "What's New",
+   "description": "Catch-up edition covering 2 to 14 October, thirteen days, replacing the Monday 12 October edition. NEMSA will control its Local Innovation Partnerships Fund money from 2028, the first dedicated research and development funding held by mayors, with more on the new Good Growth Funds promised at the Budget on 28 October. The North East's NatWest Business Activity Index for September 2026 is 52.0, a renewed increase, and the KPMG and REC Report on Jobs found the North of England leading England's regions for permanent placements. The £60 million Pathways to Work Innovation Fund closes on 26 October, and its partnership directory names no partner from the NEMSA area. Also ONS analysis linking longer NHS waits to more time on benefits, careers advice moving into Jobcentres, national registration of short-term lets now expected in March 2027, and the Industrial Strategy's North East milestones. Seven reds carried, one closed. The complete departmental log carries 191 rows from the four subscribed gov.uk feeds, folded away rather than cut.",
+   "sources": "No.10, Prime Minister to hand regions innovation funding, 9 October 2026; DSIT Local Innovation Partnerships Fund releases, 29 July 2025 and 1 June 2026; NatWest UK Regional Growth Tracker, 14 October 2026; KPMG and REC UK Report on Jobs and Report on Jobs: North of England, 8 October 2026; S&P Global UK Services PMI, September 2026; ONS, The impact of elective waiting times on benefits receipt, England; ONS, Trends in UK industry concentration: 2007 to 2025; ONS component approach to labour productivity reference tables; BIST, Industrial Strategy quarterly update, July to September 2026; DWP Pathways to Work Innovation Fund applicant bid pack and partnership directory; gov.uk publications from No.10, the Cabinet Office, HM Treasury, BIST, DBT, DWP, MHCLG, DfE, DHSC and Homes England; gov.uk departmental feeds for DBT, DWP, MHCLG and DfE. All figures quoted as published, pulled 14 October 2026.",
+   "series": "whats-new",
+   "date": "2026-10-14",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "catch-up",
+    "releases",
+    "local innovation partnerships fund",
+    "innovation",
+    "good growth fund",
+    "nemsa",
+    "natwest regional growth tracker",
+    "pmi",
+    "report on jobs",
+    "recruitment",
+    "pathways to work",
+    "innovation fund",
+    "waiting times",
+    "inactivity",
+    "health",
+    "careers service",
+    "jobcentre",
+    "short-term lets",
+    "visitor levy",
+    "industrial strategy",
+    "port of tyne",
+    "council tax",
+    "awaab's law",
+    "council housebuilding support fund",
+    "pride in place",
+    "bics",
+    "jobs guarantee",
+    "uk business counts",
+    "departmental log",
+    "rag"
    ]
   },
   {
@@ -1233,5 +1283,5 @@
    "featured": true
   }
  ],
- "updated_at": "2026-10-02T14:03:00+01:00"
+ "updated_at": "2026-10-14T09:40:00+01:00"
 }
