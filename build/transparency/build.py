@@ -98,7 +98,7 @@ def performance_log():
     out = []
     out.append(f"""<p class="tp-kicker">Transparency</p>
 <h1>Performance Log</h1>
-<p class="tp-byline">Nathaniel Adams, Economic Intelligence Analyst &middot; last updated {nice_date(log['updated'])}</p>
+<p class="tp-byline">Last updated {nice_date(log['updated'])}</p>
 <p class="tp-lede">Every material error found in our work, how it was found and what changed as a result. Errors caught before publication sit alongside those that reached a published product, because our checks are only worth something if we can show what they catch.</p>
 """)
     out.append("""<h2>How the Log Works</h2>
@@ -107,7 +107,7 @@ def performance_log():
 <li>Each entry records where the error got to, what kind of error it was, which part of our process produced it, how it was found and what we changed</li>
 <li>An error that reached a published product is also corrected in that product or in the next edition, and the correction says so on its face</li>
 <li>Entries are never rewritten after the event. The only later change is closing an open entry once its fix is made and checked</li>
-<li>Two errors of the same kind from the same part of the process within 90 days put that part on probation. Nathaniel then reviews every output from it line by line until it has produced three products in a row with nothing logged</li>
+<li>Two errors of the same kind from the same part of the process within 90 days put that part on probation. The site owner then reviews every output from it line by line until it has produced three products in a row with nothing logged</li>
 </ul>
 """)
     rows = "".join(f"<tr><td>{esc(k)}</td><td>{esc(v)}</td></tr>" for k, v in log["stages"].items())
@@ -127,7 +127,7 @@ def performance_log():
 <div class="tp-tiles">
 <div><b>{len(entries)}</b><span>errors logged</span></div>
 <div><b>{count(stage='Published')}</b><span>reached a published product</span></div>
-<div><b>{count(stage='Draft')}</b><span>reached Nathaniel and stopped there</span></div>
+<div><b>{count(stage='Draft')}</b><span>reached the site owner and stopped there</span></div>
 <div><b>{count(stage='Caught by checks')}</b><span>caught by our own checks first</span></div>
 <div><b>{count(status='Open')}</b><span>still open</span></div>
 </div>

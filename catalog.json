@@ -1143,23 +1143,6 @@
    "pinned": false
   },
   {
-   "id": "business-map",
-   "title": "Gateshead Business Map",
-   "path": "business-industry-trade/gateshead-business-map.html",
-   "topic": "Business, industry and trade",
-   "description": "11,000+ companies registered in Gateshead borough, mapped from Companies House and enriched with IMD 2025 deprivation, ONS sector churn, FSA food premises, BRES jobs and UKRI innovation. Intervention & investment scores per LSOA and ward, high-streets lens on Local Plan centres, plus sector saturation.",
-   "sources": "Companies House · IMD 2025 · ONS · FSA · UKRI · rebuilt monthly",
-   "keywords": [
-    "business",
-    "companies",
-    "map",
-    "high street",
-    "sectors",
-    "churn",
-    "startups"
-   ]
-  },
-  {
    "id": "creative-industries",
    "title": "North East Creative Industries (CCIS)",
    "path": "business-industry-trade/creative-industries.html",
