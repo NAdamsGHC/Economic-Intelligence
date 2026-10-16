@@ -2,7 +2,6 @@
 
     economy/lea-2026-interim.html        the report as a page in the house skin
     economy/lea-2026-interim/fig-NN.png  its figures, extracted from the Word file
-    economy/lea-2026-interim/*.docx      the Word file, offered as a download
 
 The Word file is the master. The page is generated from it with mammoth, so
 any later correction is made in Word and this script is run again.
@@ -26,7 +25,6 @@ CSS_VERSION = "20261016"
 SLUG = "lea-2026-interim"
 OUT_PAGE = ROOT / "economy" / f"{SLUG}.html"
 OUT_DIR = ROOT / "economy" / SLUG
-DOCX_NAME = "Gateshead-LEA-2026-Interim-Edition.docx"
 
 TITLE = "Interim Local Economic Assessment 2026"
 DESCRIPTION = ("The interim edition of the Gateshead Local Economic Assessment 2026, "
@@ -70,8 +68,6 @@ SHELL = """<!DOCTYPE html>
 .lea-caption,.lea-block.cap{{font-weight:700;color:var(--gc-blue-dark);margin:18px 0 6px !important;}}
 .lea-source{{font-size:12.5px;color:#5d6b7a;}}
 .lea-annex{{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#6a7784;margin-top:40px !important;}}
-.lea-dl{{display:inline-block;margin:4px 0 18px;padding:7px 14px;border:1px solid var(--gc-blue);color:var(--gc-blue);text-decoration:none;font-weight:700;font-size:14px;}}
-.lea-dl:hover{{background:var(--gc-blue);color:#fff;}}
 .lea-wrap .tp-scroll table{{width:100%;border-collapse:collapse;font-size:13px;}}
 .lea-wrap .tp-scroll td,.lea-wrap .tp-scroll th{{border:1px solid var(--gc-line);padding:6px 8px;vertical-align:top;}}
 .lea-wrap .tp-scroll th{{text-align:left;background:var(--gc-panel);color:var(--gc-blue-dark);font-weight:700;}}
@@ -79,7 +75,7 @@ SHELL = """<!DOCTYPE html>
 .lea-toc ol{{list-style:none;margin-left:0;}}
 .lea-toc ol ol{{margin:2px 0 4px 18px;font-size:13px;}}
 .lea-top{{font-size:12.5px;}}
-@media print{{.gc-masthead,.gc-footer,.lea-dl,.lea-toc,.lea-top{{display:none;}}}}
+@media print{{.gc-masthead,.gc-footer,.lea-toc,.lea-top{{display:none;}}}}
 </style>
 </head>
 <body>
@@ -99,7 +95,6 @@ SHELL = """<!DOCTYPE html>
 <p class="tp-kicker">Economy &middot; Local Economic Assessment</p>
 <h1 id="top">{title}</h1>
 <p class="tp-byline">Interim edition &middot; October 2026 &middot; Gateshead Council</p>
-<a class="lea-dl" href="{slug}/{docx}">Download the Word version</a>
 
 <nav class="tp-toc lea-toc" aria-label="Contents">
 <b>Contents</b>
@@ -192,10 +187,9 @@ def main(docx_path):
     body = re.sub(r"(</(?:p|h1|h2|ul|ol|div|table)>)", r"\1\n", body)
 
     page = SHELL.format(title=TITLE, description=html.escape(DESCRIPTION), css=CSS_VERSION,
-                        slug=SLUG, docx=DOCX_NAME, toc=toc_html, body=body)
+                        toc=toc_html, body=body)
     page, _ = insert(page, "../")
     OUT_PAGE.write_text(page, encoding="utf-8")
-    shutil.copyfile(docx_path, OUT_DIR / DOCX_NAME)
 
     print(f"{OUT_PAGE.relative_to(ROOT)}: {len(page):,} bytes, {counter['n']} figures, "
           f"{body.count('<table')} tables, {len(toc)} chapters")
