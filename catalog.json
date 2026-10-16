@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "14 October 2026",
+ "updated": "16 October 2026",
  "schedule": {
-  "updated": "14 October 2026",
+  "updated": "16 October 2026",
   "months": [
    {
     "id": "2026-07",
@@ -1283,5 +1283,5 @@
    "featured": true
   }
  ],
- "updated_at": "2026-10-14T09:40:00+01:00"
+ "updated_at": "2026-10-16T12:00:00+01:00"
 }

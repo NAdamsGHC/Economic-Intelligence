@@ -1,6 +1,6 @@
 # Gateshead Economic Intelligence Catalogue
 
-Interactive HTML dashboards exploring open ONS datasets for **Gateshead borough** and the wider **North East of England**. Catalogued by ONS topic. An independent, unofficial project — not a Gateshead Council product.
+Interactive HTML dashboards exploring open ONS datasets for **Gateshead borough** and the wider **North East of England**. Catalogued by ONS topic. An independent, unofficial project.
 
 Each dashboard is a single self-contained HTML file — open it directly in any modern browser, or browse the live versions via [GitHub Pages](#enabling-github-pages) once enabled. The site's landing page is [`index.html`](index.html).
 

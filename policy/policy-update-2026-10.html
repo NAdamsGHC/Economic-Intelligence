@@ -171,6 +171,33 @@ caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding
   <button class="gcbar-copy" type="button" aria-label="Copy direct link to this document" title="Copy direct link to this document">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
   </button>
+<!-- gc-menu --><details class="gc-menu">
+<summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
+<nav class="gc-menu-panel" aria-label="Transparency">
+<p class="gc-menu-head">Transparency</p>
+<a href="../transparency/index.html">Transparency Statement</a>
+<a href="../transparency/runbook.html">Regular Reports Runbook</a>
+<a href="../transparency/performance-log.html">Performance Log</a>
+<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
+</nav>
+</details>
+<style>
+.gc-menu{position:relative;margin-left:12px;font-family:'PT Sans',Helvetica,Arial,sans-serif;line-height:1.3;}
+.gc-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;height:30px;padding:0 12px;
+  border:1px solid #6a7784;color:#fff;font-size:13px;font-weight:700;letter-spacing:.3px;user-select:none;white-space:nowrap;}
+.gc-menu>summary::-webkit-details-marker{display:none;}
+.gc-menu>summary:hover,.gc-menu[open]>summary{border-color:#0772b4;color:#8fd0f5;}
+.gc-menu>summary:focus-visible{outline:2px solid #8fd0f5;outline-offset:2px;}
+.gc-menu-bars{display:inline-block;width:14px;height:2px;background:currentColor;box-shadow:0 -4px 0 currentColor,0 4px 0 currentColor;}
+.gc-menu-panel{position:absolute;right:0;top:calc(100% + 6px);z-index:1000;min-width:250px;background:#fff;
+  border:1px solid #ccc;border-top:3px solid #045a90;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:6px 0;}
+.gc-menu-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6a7784;padding:6px 14px 4px;margin:0;}
+.gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
+.gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}}
+</style>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<!-- /gc-menu -->
 </div>
 <script>
 (function(){
@@ -618,7 +645,7 @@ caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding
 <li><a href="https://www.gov.uk/government/publications/chancellor-letter-to-the-treasury-select-committee-tsc-budget-2026-date">Chancellor's letter to the Treasury Select Committee, Budget 2026 date</a> (31 July 2026)</li>
 </ul>
 
-<div class="docfoot">Prepared by Nathaniel Adams. This is an independent, unofficial product, not a Gateshead Council publication. Policy scan run 2 October 2026, covering 8 September to 2 October 2026, against the strategy and guidance documents we hold as current. Free public official sources only. Summaries are not legal advice, so check source documents before citing. Fifth edition, replacing the 8 September 2026 edition. Next edition Friday 6 November 2026.</div>
+<div class="docfoot">Prepared by Nathaniel Adams. This is an independent, unofficial product. Policy scan run 2 October 2026, covering 8 September to 2 October 2026, against the strategy and guidance documents we hold as current. Free public official sources only. Summaries are not legal advice, so check source documents before citing. Fifth edition, replacing the 8 September 2026 edition. Next edition Friday 6 November 2026.</div>
 
 </article></div>
 

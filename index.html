@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/ei.css?v=20261002b">
+<link rel="stylesheet" href="assets/ei.css?v=20261016">
 </head>
 <body>
 
@@ -19,6 +19,33 @@
       <span class="word">Gateshead<small>Economic Intelligence</small></span>
     </a>
     <span class="spacer"></span>
+  <!-- gc-menu --><details class="gc-menu">
+<summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
+<nav class="gc-menu-panel" aria-label="Transparency">
+<p class="gc-menu-head">Transparency</p>
+<a href="transparency/index.html">Transparency Statement</a>
+<a href="transparency/runbook.html">Regular Reports Runbook</a>
+<a href="transparency/performance-log.html">Performance Log</a>
+<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
+</nav>
+</details>
+<style>
+.gc-menu{position:relative;margin-left:12px;font-family:'PT Sans',Helvetica,Arial,sans-serif;line-height:1.3;}
+.gc-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;height:30px;padding:0 12px;
+  border:1px solid #6a7784;color:#fff;font-size:13px;font-weight:700;letter-spacing:.3px;user-select:none;white-space:nowrap;}
+.gc-menu>summary::-webkit-details-marker{display:none;}
+.gc-menu>summary:hover,.gc-menu[open]>summary{border-color:#0772b4;color:#8fd0f5;}
+.gc-menu>summary:focus-visible{outline:2px solid #8fd0f5;outline-offset:2px;}
+.gc-menu-bars{display:inline-block;width:14px;height:2px;background:currentColor;box-shadow:0 -4px 0 currentColor,0 4px 0 currentColor;}
+.gc-menu-panel{position:absolute;right:0;top:calc(100% + 6px);z-index:1000;min-width:250px;background:#fff;
+  border:1px solid #ccc;border-top:3px solid #045a90;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:6px 0;}
+.gc-menu-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6a7784;padding:6px 14px 4px;margin:0;}
+.gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
+.gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}}
+</style>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<!-- /gc-menu -->
   </div>
 </header>
 
@@ -36,7 +63,7 @@
 
 <main class="gc-wrap">
   <div class="gc-disclaimer">
-    <b>Experimental analytical products &mdash; not official statistics.</b> This is an independent, unofficial site and not a Gateshead Council publication. These dashboards are built from published official statistics, but the derived measures (ranks, quartiles, indices, better/worse directions) are the author&rsquo;s analytical judgements and models are experimental. Treat with caution and verify figures against the source releases before using them to inform decisions. See the <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>.
+    <b>Experimental analytical products &mdash; not official statistics.</b> This is an independent, unofficial site. These dashboards are built from published official statistics, but the derived measures (ranks, quartiles, indices, better/worse directions) are the author&rsquo;s analytical judgements and models are experimental. Treat with caution and verify figures against the source releases before using them to inform decisions. See the <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">analytical assurance note</a>.
   </div>
 
   <div id="gc-catalog"><!-- topics + cards rendered from catalog.json --></div>
@@ -44,7 +71,7 @@
 
 <footer class="gc-footer">
   <div class="gc-inner">
-    Open data from <a href="https://www.ons.gov.uk/">ONS</a>, <a href="https://www.nomisweb.co.uk/">NOMIS</a>, <a href="https://geoportal.statistics.gov.uk/">ONS Open Geography Portal</a>, <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-local-government">MHCLG</a>, HM Land Registry, DfE and DCMS. An independent, unofficial project &middot; produced and maintained by <a href="https://github.com/NAdamsGHC">NAdamsGHC</a>.
+    Open data from <a href="https://www.ons.gov.uk/">ONS</a>, <a href="https://www.nomisweb.co.uk/">NOMIS</a>, <a href="https://geoportal.statistics.gov.uk/">ONS Open Geography Portal</a>, <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-local-government">MHCLG</a>, HM Land Registry, DfE and DCMS. An independent, unofficial project &middot; produced and maintained by <a href="https://github.com/NAdamsGHC">NAdamsGHC</a>. &middot; <a href="transparency/index.html">Transparency Statement</a>
   </div>
 </footer>
 

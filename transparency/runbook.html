@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regular Reports Runbook &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Step-by-step instructions a person can follow to produce the four regular reports on the Gateshead Economic Intelligence site without AI tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css?v=20261016">
+</head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  <!-- gc-menu --><details class="gc-menu">
+<summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
+<nav class="gc-menu-panel" aria-label="Transparency">
+<p class="gc-menu-head">Transparency</p>
+<a href="../transparency/index.html">Transparency Statement</a>
+<a href="../transparency/runbook.html">Regular Reports Runbook</a>
+<a href="../transparency/performance-log.html">Performance Log</a>
+<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
+</nav>
+</details>
+<style>
+.gc-menu{position:relative;margin-left:12px;font-family:'PT Sans',Helvetica,Arial,sans-serif;line-height:1.3;}
+.gc-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;height:30px;padding:0 12px;
+  border:1px solid #6a7784;color:#fff;font-size:13px;font-weight:700;letter-spacing:.3px;user-select:none;white-space:nowrap;}
+.gc-menu>summary::-webkit-details-marker{display:none;}
+.gc-menu>summary:hover,.gc-menu[open]>summary{border-color:#0772b4;color:#8fd0f5;}
+.gc-menu>summary:focus-visible{outline:2px solid #8fd0f5;outline-offset:2px;}
+.gc-menu-bars{display:inline-block;width:14px;height:2px;background:currentColor;box-shadow:0 -4px 0 currentColor,0 4px 0 currentColor;}
+.gc-menu-panel{position:absolute;right:0;top:calc(100% + 6px);z-index:1000;min-width:250px;background:#fff;
+  border:1px solid #ccc;border-top:3px solid #045a90;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:6px 0;}
+.gc-menu-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6a7784;padding:6px 14px 4px;margin:0;}
+.gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
+.gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}}
+</style>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<!-- /gc-menu -->
+  </div>
+</header>
+
+<main class="tp-wrap">
+<p class="tp-kicker">Transparency</p>
+<h1>Regular Reports Runbook</h1>
+<p class="tp-byline">Nathaniel Adams, Economic Intelligence Analyst &middot; 16 October 2026</p>
+<p class="tp-lede">How to produce the four regular reports on this site by hand, without any AI tools. It is written so that anyone with the access listed below could produce an edition if they needed to, and so that every step our process takes can be checked against something a person can follow.</p>
+
+<nav class="tp-toc" aria-label="Contents">
+<b>Contents</b>
+<ol>
+<li><a href="#start">Before You Start</a></li>
+<li><a href="#rules">Rules for Every Report</a></li>
+<li><a href="#format">The Shared Format</a></li>
+<li><a href="#whats-new">Weekly What's New</a></li>
+<li><a href="#economic-update">Economic Update</a></li>
+<li><a href="#policy-update">Monthly Policy Update</a></li>
+<li><a href="#horizon">Horizon Calendar Refresh</a></li>
+<li><a href="#checks">Checks Before Publishing</a></li>
+<li><a href="#publishing">Publishing</a></li>
+</ol>
+</nav>
+
+<h2 id="start">Before You Start</h2>
+<p>You need four things.</p>
+<ul>
+<li>A web browser. Every source used here is free and public, and none needs an account or a key</li>
+<li>A copy of the <a href="https://github.com/NAdamsGHC/Economic-Intelligence">Economic-Intelligence repository</a> and permission to push to it</li>
+<li>Python 3, for the build scripts in the repository's <code>build/</code> folder</li>
+<li>Subscriptions to the gov.uk email alerts for the Department for Business and Trade, the Department for Work and Pensions, the Ministry of Housing, Communities and Local Government and the Department for Education. These help, but gov.uk itself is the authority on what was published</li>
+</ul>
+
+<div class="tp-scroll"><table class="tp-table">
+<thead><tr><th>Report</th><th>When</th><th>Output</th></tr></thead>
+<tbody>
+<tr><td>Weekly What's New</td><td>Every Monday</td><td><code>briefs/whats-new-YYYY-MM-DD.html</code></td></tr>
+<tr><td>Economic Update</td><td>Monthly, within two working days of the ONS labour market release (around the third Thursday). In January, April, July and October the larger quarterly edition replaces the monthly one, on the last Thursday</td><td><code>briefs/economic-update-YYYY-MM.html</code>, plus an email for the quarterly edition</td></tr>
+<tr><td>Monthly Policy Update</td><td>First Friday of the month</td><td><code>policy/policy-update-YYYY-MM.html</code></td></tr>
+<tr><td>Horizon Calendar refresh</td><td>At the end of each report above, and whenever asked</td><td><code>horizon/horizon.json</code>, which builds <code>horizon/index.html</code> and <code>horizon/horizon.ics</code></td></tr>
+</tbody></table></div>
+
+<p><b>Coverage window.</b> Each edition covers the day after the previous edition up to the day it is written. A late edition covers the whole gap, never only its nominal week or month, and says so near the top so the reader knows its coverage is wider than the title suggests.</p>
+
+<h2 id="rules">Rules for Every Report</h2>
+<ul>
+<li>Every figure comes from a fresh pull of the official source on the day, at the latest edition published on that day. Check the <a href="https://www.ons.gov.uk/releasecalendar">ONS release calendar</a> to confirm what the latest edition is rather than re-running last month's query</li>
+<li>ONS and NOMIS figures are quoted exactly as published, with no rounding. Anything we calculate ourselves is rounded and introduced with "approximately" or "around"</li>
+<li>Every figure is quoted with its geography, full metric title, period and source link, for example "Gateshead's 16-64 employment rate for Jul-25 to Jun-26 is X% (Annual Population Survey)"</li>
+<li>Survey estimates carry their 95% confidence interval. A change or a gap smaller than the interval is written as "no detectable change" or "not statistically distinguishable", never as a rise, a fall or a lead</li>
+<li>Policy facts and dates are quoted from the primary document. A search result, a press story or one of our own earlier editions is a lead to check, never a source</li>
+<li>ONS release dates come from the release calendar, which states confirmed or provisional. A dataset page's "next release" field lags behind it</li>
+<li>Earlier editions and dashboards on this site are never a source for a figure</li>
+<li>Free, public sources only</li>
+<li>Plain English. Title Case headings, short sentences, no em dashes, and bullets without a full stop at the end</li>
+</ul>
+
+<h2 id="format">The Shared Format</h2>
+<p>All three report families share one shape, so a reader can find the priorities and actions on one screen and click through to the detail. The easiest start is a copy of the previous edition's HTML file, with its content cleared.</p>
+<ol class="tp-steps">
+<li><b>A dashboard table first.</b> One row per item, with columns Priority, What, What changed? and Action. The What cell links to that item's section further down. The table navigates and never summarises a second time</li>
+<li><b>A red, amber or green marker on every item</b>, always with its word as well as its colour. Red means something is needed from us before the next edition (a closing consultation, a funding window, a figure that moves a live product). Amber means something is needed later, with the date named. Green means noted, with no action expected</li>
+<li><b>A top actions box</b> under the dashboard. Red items from earlier editions carry forward into it until they are closed, with the edition they first appeared in. Amber and green never carry forward. If nothing is carried, say so</li>
+<li><b>Every item in three parts</b>, in this order. What changed? (the fact, its figure, edition and source link). Why it matters? (what it means for Gateshead). What should we do? (a recommendation to be commissioned, never a commitment made on anyone's behalf). If an item asks nothing of us, the third part says so in one line</li>
+<li><b>Nothing appears twice</b> in an edition</li>
+<li><b>Long reference tables keep every row</b> but sit in a collapsed <code>&lt;details&gt;</code> block, with the counts on its summary line so the coverage claim is visible without opening it</li>
+</ol>
+<p>The forward look in each edition names the dates that matter this period and links to the <a href="../horizon/index.html">Horizon Calendar</a> for the rest.</p>
+
+<h2 id="whats-new">Weekly What's New</h2>
+<p>A round-up of the data releases and policy developments relevant to Gateshead's economy since the last edition, with a complete log of everything the four departments published.</p>
+<ol class="tp-steps">
+<li><b>Set the window</b> from the day after the last edition to today, and check for any notes held over for this edition from earlier ones</li>
+<li><b>Pull every departmental publication from gov.uk</b>, one query per organisation, using the gov.uk search API. Replace the organisation, and page through if there are more than 100 results.<br><code>https://www.gov.uk/api/search.json?filter_organisations=ORGANISATION&amp;order=-public_timestamp&amp;count=100&amp;fields=title,public_timestamp,link,content_store_document_type,description</code></li>
+<li><b>Use all six organisation names</b> below. Two departments publish under two names each, and a wrong name returns nothing with no error, so check every query returns at least one result before going on</li>
+</ol>
+<div class="tp-scroll"><table class="tp-table">
+<thead><tr><th>Department</th><th>Organisation names to query</th></tr></thead>
+<tbody>
+<tr><td>Business and Trade</td><td><code>department-for-business-and-trade</code> and <code>department-for-business-innovation-science-and-trade</code></td></tr>
+<tr><td>Work and Pensions</td><td><code>department-for-work-pensions</code></td></tr>
+<tr><td>Housing, Communities and Local Government</td><td><code>ministry-of-housing-communities-local-government</code> and <code>department-for-levelling-up-housing-and-communities</code></td></tr>
+<tr><td>Education</td><td><code>department-for-education</code></td></tr>
+</tbody></table></div>
+<ol class="tp-steps" start="4" style="counter-reset:tp 3">
+<li><b>Add anything from the email alerts that the search missed.</b> Neither source is complete on its own. The search index sometimes misses an updated page, and the email alerts never include forthcoming release announcements. Record how many rows came from each</li>
+<li><b>Reconcile and state three numbers.</b> Entries returned, log rows after removing duplicate sub-pages of one document, and actual publications after separating forthcoming release announcements. Keep the announcements in the log and mark them, because they carry the dates the next figures land</li>
+<li><b>Never filter out central government.</b> Anything from the Cabinet Office, the Prime Minister's Office or a cross-government function gets its own item with its own Why it matters?, however far it sits from an economic indicator. So does any departmental item that changes machinery of government, geography or which tier of government holds a function</li>
+<li><b>Check the data calendars.</b> The ONS release calendar for the window and the week ahead, and the <a href="https://www.pmi.spglobal.com/Public/Release/PressReleases?language=en">S&amp;P Global release page</a> for the UK purchasing managers' indices, the NatWest North East business activity index and the REC Report on Jobs. These business surveys are not official statistics, and every figure from them says that 50 means no change</li>
+<li><b>Choose the items with a Gateshead read</b>, write each in three parts and grade it red, amber or green. Build the dashboard and the top actions box, carrying forward any red item from the last edition that is still open</li>
+<li><b>Write the departmental log</b> as a table with columns Date, Department, Item, What changed and Read, where Read is a one-line disposition such as "no local read" or "watch". Fold it away in a <code>&lt;details&gt;</code> block with the three numbers on its summary line</li>
+<li><b>Refresh the Horizon Calendar</b> from the edition's forward dates (<a href="#horizon">see below</a>), then run the <a href="#checks">checks</a> and <a href="#publishing">publish</a></li>
+</ol>
+
+<h2 id="economic-update">Economic Update</h2>
+<h3>Monthly Edition</h3>
+<p>The labour market brief, built after each ONS labour market release. Gateshead's comparators are the North East and England throughout. The geography codes are <code>E08000037</code> (Gateshead), <code>E12000001</code> (North East) and <code>E92000001</code> (England).</p>
+<ol class="tp-steps">
+<li><b>Confirm the release</b> on the ONS release calendar and publish within two working days of it</li>
+<li><b>Pull the claimant count</b> from NOMIS dataset <code>NM_162_1</code>, for all three geographies and the latest month, as a level and as a proportion of residents aged 16-64.<br><code>https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv?geography=E08000037,E12000001,E92000001&amp;date=latest&amp;gender=0&amp;age=0&amp;measure=2&amp;measures=20100</code> (use <code>measure=1</code> for the level)</li>
+<li><b>If a new Annual Population Survey period has landed</b>, pull it from NOMIS dataset <code>NM_17_5</code> with the confidence interval every time (measure <code>21003</code>, the half-width of the 95% interval). Variable <code>45</code> is the 16-64 employment rate, <code>83</code> the 16+ unemployment rate, <code>111</code> the 16-64 inactivity rate and <code>1496</code> the share of inactive people who are long-term sick</li>
+<li><b>Build the key figures block</b> on the day. A productivity panel sits above nine tiles in three rows. Economy is GVA, jobs and business survival. People is household income, employment and qualifications. Place is deprivation, claimants and young people not in education, employment or training. Each tile shows the latest published period, the change since the period before, and either a "New" label or the next release date. Annual series compare with the year before, survey rolling years with the same period a year earlier, and the claimant count with the month before and the year before. We generate this block with a script that pulls every series fresh and records every query, but each figure can be pulled by hand from the same public sources</li>
+<li><b>Test every change against its interval</b> before calling it a change, and test Gateshead's gap to each comparator the same way</li>
+<li><b>Write the sections</b> in this order. Dashboard, top actions, claimant count (level, monthly and annual change, rate against the comparators), the wider labour market (only when a new survey period has landed), a ward-level claimant table, one rotating focus topic and data notes. Each section takes the three parts</li>
+<li><b>Refresh the Horizon Calendar</b>, then run the checks and publish</li>
+</ol>
+
+<h3>Quarterly Edition</h3>
+<p>The quarterly edition is an email to council colleagues that fronts the Power BI Quarterly Economic Update dashboard, with an HTML edition on this site. Nathaniel owns and refreshes the Power BI dashboard and sends the email himself. Build the HTML edition first, because the email's dashboard rows link to its sections.</p>
+<p>The sections are fixed and none is ever dropped. If nothing moved, the section says "no change this quarter", so readers can follow an indicator from one edition to the next.</p>
+<ol>
+<li>Dashboard</li>
+<li>Top actions this quarter</li>
+<li>Indicator table</li>
+<li>Labour market (claimant count, employment, unemployment, inactivity, inactivity due to long-term sickness)</li>
+<li>Standing local indicators (pension-age claimants, the housing market)</li>
+<li>Cost of living</li>
+<li>Business conditions and national context (GDP, pay, vacancies, the purchasing managers' indices including the NatWest North East index, business insights survey, producer prices)</li>
+<li>What to watch, with dates</li>
+<li>Notes, with sources, periods and two sentences on reading the intervals</li>
+</ol>
+<p>The indicator table has columns Indicator, Period, Gateshead, North East, England, Change on quarter, Change on year, 95% CI (Gateshead) and Real change?. Every row takes all three areas from one release and one period. Its rows are the claimant proportion and level (<code>NM_162_1</code>), the four survey rates above (<code>NM_17_5</code>), and payrolled employees from the ONS PAYE Real Time Information release (the local authority sheet, updated quarterly). Before sending, check that every indicator name matches the variable actually queried, and that every change has been re-calculated from the two pulled values rather than copied.</p>
+
+<h2 id="policy-update">Monthly Policy Update</h2>
+<p>The formal policy bulletin, covering national and regional policy developments relevant to Gateshead's economy.</p>
+<ol class="tp-steps">
+<li><b>Set the window</b> from the last edition to today</li>
+<li><b>Sweep the sources.</b> The gov.uk search API (as above) for the departments we watch, including HM Treasury, the Cabinet Office, the Department for Science, Innovation and Technology, the Department for Culture, Media and Sport, the Department for Transport and the Department for Energy Security and Net Zero. Also the North East Mayoral Strategic Authority's news page, open consultations and calls for evidence, Parliament's bills pages and the Local Government Association</li>
+<li><b>Filter to the watch themes.</b> Procurement and social value, community wealth building, anchor institutions, AI and digital inclusion, skills, productivity, local business news, the visitor economy and spending, and high streets and placemaking</li>
+<li><b>Read every candidate item in full at its source</b> and check its publication date, so that an old announcement is never reported as news</li>
+<li><b>Write the items</b> under theme headings in three parts, each with a full citation (title, link and publication date)</li>
+<li><b>List current consultations</b> in a table, soonest closing date first. Anything closing before the next edition is a red row on the dashboard and goes in the top actions box. For gov.uk consultations the closing date is in the content API at <code>https://www.gov.uk/api/content/PATH</code></li>
+<li><b>Fold the checked-and-unchanged list</b> into a collapsed block that names what was checked</li>
+<li><b>Correct earlier editions in the open.</b> If anything in a previous edition turns out to be wrong, say so in this one and log it in the <a href="performance-log.html">Performance Log</a></li>
+<li><b>Refresh the Horizon Calendar</b>, then run the checks and publish</li>
+</ol>
+
+<h2 id="horizon">Horizon Calendar Refresh</h2>
+<p>The <a href="../horizon/index.html">Horizon Calendar</a> lists every forward date that matters for Gateshead's economy. Its single source is <code>horizon/horizon.json</code>, and the page and calendar file are generated from it. Never edit the generated page by hand.</p>
+<ol class="tp-steps">
+<li><b>Read <code>horizon.json</code></b> to see what is already held</li>
+<li><b>Refresh the ONS releases</b> with <code>python build/horizon/sweep_ons.py</code> (a dry run that lists changes), then <code>python build/horizon/sweep_ons.py --write</code>. To track a new ONS series, add it to the script's list</li> <!-- voice-lint: ok (command-line flag) -->
+<li><b>Add the other dates</b> from the edition just written and from consultations, funding pages, Bank of England interest rate decisions, the Office for Budget Responsibility and the S&amp;P Global release dates page</li>
+<li><b>Verify every new or changed date at its primary source.</b> If the page cannot be reached or does not carry the date, the item goes in the pending list, not the calendar</li>
+<li><b>Re-check everything due in the next 60 days</b> and every provisional or expected item. Update moved dates in place and record the move</li>
+<li><b>Retire the past.</b> Items more than 14 days old move to the archive. Items from the last 14 days are marked as published</li>
+<li><b>Write the log entry</b> (date, which product ran it, what was added, changed and removed), then run <code>python build/horizon/build_horizon.py</code>, which checks the file and rebuilds the page</li>
+</ol>
+
+<div class="tp-box check" id="checks">
+<h3>Checks Before Publishing</h3>
+<ul>
+<li>Every figure traced back to a pull made today, with the query kept so it can be reproduced</li>
+<li>Every survey change and gap tested against its interval</li>
+<li>Every link opens, and every dashboard row lands on its section</li>
+<li>Every marker carries its word, every item has its three parts, and nothing appears twice</li>
+<li>Red items from the previous edition are carried forward or closed</li>
+<li>Long tables are collapsed when the page loads</li>
+<li>Every forward date is in the Horizon Calendar and the calendar has been rebuilt</li>
+<li>A second check by someone who did not write it, reproducing the headline figures from source</li>
+<li>Any material error found along the way is logged in the <a href="performance-log.html">Performance Log</a></li>
+</ul>
+</div>
+
+<h2 id="publishing">Publishing</h2>
+<ol class="tp-steps">
+<li><b>Save the edition</b> in its folder with a dated file name, as in the table at the top</li>
+<li><b>Add an entry to <code>catalog.json</code></b> with its id, title, path, topic, description, sources, keywords, series (<code>whats-new</code>, <code>economic-update</code> or <code>policy-update</code>) and ISO date. The newest edition of each series pins to the top of the landing page and the previous one moves to the archive automatically</li>
+<li><b>Update the publication schedule</b> in <code>catalog.json</code>. Mark this edition's entry as released with its link, and mark the following one as next</li>
+<li><b>Update the stamps.</b> Set <code>updated</code>, <code>updated_at</code> (date and time with the UK offset) and the schedule's <code>updated</code></li>
+<li><b>Add the site menu</b> to the new page with <code>python build/transparency/insert_menu.py --write</code> (a copied edition usually has it already)</li> <!-- voice-lint: ok (command-line flag) -->
+<li><b>Commit the report's own files</b> on their own, with a message such as "Weekly What's New, 19 October 2026"</li>
+<li><b>Push only with Nathaniel's agreement.</b> The site updates a few minutes after the push. Open the live page and check it</li>
+</ol>
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a>
+  </div>
+</footer>
+
+</body>
+</html>
