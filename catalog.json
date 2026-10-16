@@ -1263,8 +1263,36 @@
     "child poverty",
     "deprivation"
    ],
+   "featured": false
+  },
+  {
+   "id": "lea-2026-interim",
+   "title": "Interim Local Economic Assessment 2026",
+   "path": "economy/lea-2026-interim.html",
+   "topic": "Economy",
+   "description": "The interim edition of the Gateshead Local Economic Assessment 2026, published October 2026, in full. The value of work is the largest constraint on the economy: output per hour is an index of 76.8 against a UK average of 100 in 2023, 256th of 296 English authorities, and reaching the UK average on the existing job base would add around £1,522m of output against roughly £469m from closing the entire employment rate gap. Chapters cover business and productivity, population and labour supply, employment demand, infrastructure and connectivity, place and policy implications, with a technical annex on the productivity model and forecasts and a table of the indicator editions behind every figure. The Word version can be downloaded from the page.",
+   "sources": "ONS subregional productivity · regional accounts · GDHI · APS · ASHE · BRES · UK Business Counts · Census 2021 · IoD2025 · DfE · Ofcom · DESNZ",
+   "keywords": [
+    "lea",
+    "local economic assessment",
+    "interim",
+    "2026",
+    "productivity",
+    "gva",
+    "household income",
+    "gdhi",
+    "participation",
+    "skills",
+    "neet",
+    "sectors",
+    "foundational economy",
+    "shift-share",
+    "deprivation",
+    "priorities",
+    "report"
+   ],
    "featured": true
   }
  ],
- "updated_at": "2026-10-16T12:00:00+01:00"
+ "updated_at": "2026-10-16T16:00:00+01:00"
 }
