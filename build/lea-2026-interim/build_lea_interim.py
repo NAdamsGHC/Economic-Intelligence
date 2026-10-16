@@ -94,7 +94,7 @@ SHELL = """<!DOCTYPE html>
 <main class="tp-wrap lea-wrap">
 <p class="tp-kicker">Economy &middot; Local Economic Assessment</p>
 <h1 id="top">{title}</h1>
-<p class="tp-byline">Interim edition &middot; October 2026 &middot; Gateshead Council</p>
+<p class="tp-byline">Interim edition &middot; October 2026</p>
 
 <nav class="tp-toc lea-toc" aria-label="Contents">
 <b>Contents</b>
@@ -135,7 +135,10 @@ def main(docx_path):
 
     def save_image(image):
         counter["n"] += 1
-        ext = {"image/png": "png", "image/jpeg": "jpg", "image/gif": "gif"}.get(image.content_type, "png")
+        # The site is independent of the council, so the cover logo is not published.
+        if (image.alt_text or "").startswith("Gateshead Council logo"):
+            return {"src": "", "class": "lea-drop"}
+        ext ={"image/png": "png", "image/jpeg": "jpg", "image/gif": "gif"}.get(image.content_type, "png")
         name = f"fig-{counter['n']:02d}.{ext}"
         with image.open() as src, open(OUT_DIR / name, "wb") as dst:
             shutil.copyfileobj(src, dst)
@@ -145,6 +148,12 @@ def main(docx_path):
         result = mammoth.convert_to_html(
             f, style_map=STYLE_MAP, convert_image=mammoth.images.img_element(save_image))
     body = result.value
+
+    # The site is not a council publication: drop the logo and credit the
+    # report's own models and forecasts as "own" rather than to the council.
+    body = re.sub(r'<img[^>]*class="lea-drop"[^>]*/>', "", body)
+    body = re.sub(r"Gateshead Council (forecasts?|panel model|total GVA forecast|group forecasts)",
+                  r"own \1", body)
 
     # Empty paragraphs and anchors left by Word bookmarks.
     body = re.sub(r'<a id="[^"]*"></a>', "", body)
