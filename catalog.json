@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "16 October 2026",
+ "updated": "19 October 2026",
  "schedule": {
-  "updated": "16 October 2026",
+  "updated": "19 October 2026",
   "months": [
    {
     "id": "2026-07",
@@ -137,10 +137,12 @@
       },
       {
        "label": "Mon 19",
-       "status": "next"
+       "status": "released",
+       "href": "briefs/whats-new-2026-10-19.html"
       },
       {
-       "label": "Mon 26"
+       "label": "Mon 26",
+       "status": "next"
       }
      ],
      "2026-11": [
@@ -537,6 +539,48 @@
     "awaab's law",
     "council housebuilding support fund",
     "pride in place",
+    "bics",
+    "jobs guarantee",
+    "uk business counts",
+    "departmental log",
+    "rag"
+   ]
+  },
+  {
+   "id": "whats-new-2026-10-19",
+   "title": "What's New, 19 October 2026",
+   "path": "briefs/whats-new-2026-10-19.html",
+   "topic": "What's New",
+   "description": "Covering 14 to 19 October. Gateshead's percentage of pupils sustaining an education, apprenticeship or employment destination after key stage 4, for pupils who finished key stage 4 in 2023/24, is 89.7%, down from 91.3% a year earlier, against 91.3% for England. The consultation on employment status reform and protections for the self-employed opened on 14 October and closes on 8 January 2027. ONS published a full year of North East overseas visitor estimates on its new survey design, the overseas part of a visitor levy baseline. The Pathways to Work Innovation Fund closes on 26 October with no partner from the NEMSA area in its directory. Also UK GDP up 0.1% in August, hospitality firms pledging 100,000 jobs for NEET young people, a Best Value inspection at Tees Valley Combined Authority and the carbon border tax starting on 1 January 2027. Seven reds carried, none closed. The complete departmental log carries 126 rows from the four subscribed gov.uk feeds, folded away rather than cut.",
+   "sources": "DfE, Key stage 4 destination measures, academic year 2024/25, 15 October 2026; BIST, Make Work Pay: employment status reform and protections for the self-employed, 14 October 2026; ONS, Travel trends: 2025 and estimates of overseas residents' visits and spending in the UK, 16 October 2026; ONS, GDP monthly estimate, UK: August 2026; ONS surveys and economic statistics improvement plan, October 2026 update; DWP, hospitality partnership for NEET young people, 15 October 2026; DfE, School exclusion reform call for evidence; MHCLG, Best Value Inspection at Tees Valley Combined Authority; DWP Pathways to Work Innovation Fund partnership directory; gov.uk publications from No.10, the Cabinet Office, HM Treasury, HMRC, BIST, DBT, DWP, MHCLG and DfE; gov.uk departmental feeds for DBT, DWP, MHCLG and DfE. All figures quoted as published, pulled 19 October 2026.",
+   "series": "whats-new",
+   "date": "2026-10-19",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "destinations",
+    "key stage 4",
+    "neet",
+    "young people",
+    "employment status",
+    "self-employment",
+    "make work pay",
+    "visitor levy",
+    "tourism",
+    "overseas visitors",
+    "pathways to work",
+    "innovation fund",
+    "gdp",
+    "labour force survey",
+    "small business survey",
+    "tees valley",
+    "supported housing",
+    "cbam",
+    "carbon border",
+    "pride in place",
+    "council housebuilding support fund",
     "bics",
     "jobs guarantee",
     "uk business counts",
@@ -1294,5 +1338,5 @@
    "featured": true
   }
  ],
- "updated_at": "2026-10-16T16:00:00+01:00"
+ "updated_at": "2026-10-19T12:00:00+01:00"
 }
