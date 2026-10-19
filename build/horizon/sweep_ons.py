@@ -46,7 +46,7 @@ RULES = [
     (r"^Regional gross disposable household income", "Regional gross disposable household income",
      "Gateshead's household income per head.", "a", False),
     (r"^UK business; activity, size and location", "UK Business Counts",
-     "A new business counts vintage that supersedes the figures we publish.", "r", False),
+     "A new business counts edition that supersedes the figures we publish.", "r", False),
     (r"^Employee earnings in the UK", "Employee earnings in the UK (ASHE)", "Resident and workplace earnings for Gateshead.", "a", False),
     (r"^Population estimates by output areas", "Small-area population estimates", "Ward and neighbourhood populations for the places work.", "a", False),
     (r"^Population estimates for the UK", "Population estimates for the UK", "National and country totals.", "g", False),
