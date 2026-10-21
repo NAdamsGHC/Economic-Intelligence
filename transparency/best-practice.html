@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>General Best Practice &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="A short guide to running analytical work with AI agents, covering accountability, written rules, memory, guardrails, checks and tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css?v=20261016">
+</head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  <!-- gc-menu --><details class="gc-menu">
+<summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
+<nav class="gc-menu-panel" aria-label="Transparency">
+<p class="gc-menu-head">Transparency</p>
+<a href="../transparency/index.html">Transparency Statement</a>
+<a href="../transparency/runbook.html">Regular Reports Runbook</a>
+<a href="../transparency/performance-log.html">Performance Log</a>
+<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
+<p class="gc-menu-head gc-menu-sep">Best Practice</p>
+<a href="../transparency/best-practice.html">General Best Practice</a>
+<a href="../transparency/best-practice-councils.html">Best Practice in Local Authorities</a>
+</nav>
+</details>
+<style>
+.gc-menu{position:relative;margin-left:12px;font-family:'PT Sans',Helvetica,Arial,sans-serif;line-height:1.3;}
+.gc-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;height:30px;padding:0 12px;
+  border:1px solid #6a7784;color:#fff;font-size:13px;font-weight:700;letter-spacing:.3px;user-select:none;white-space:nowrap;}
+.gc-menu>summary::-webkit-details-marker{display:none;}
+.gc-menu>summary:hover,.gc-menu[open]>summary{border-color:#0772b4;color:#8fd0f5;}
+.gc-menu>summary:focus-visible{outline:2px solid #8fd0f5;outline-offset:2px;}
+.gc-menu-bars{display:inline-block;width:14px;height:2px;background:currentColor;box-shadow:0 -4px 0 currentColor,0 4px 0 currentColor;}
+.gc-menu-panel{position:absolute;right:0;top:calc(100% + 6px);z-index:1000;min-width:250px;background:#fff;
+  border:1px solid #ccc;border-top:3px solid #045a90;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:6px 0;}
+.gc-menu-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6a7784;padding:6px 14px 4px;margin:0;}
+.gc-menu-sep{border-top:1px solid #e1e5ea;margin-top:6px;padding-top:10px;}
+.gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
+.gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}}
+</style>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<!-- /gc-menu -->
+  </div>
+</header>
+
+<main class="tp-wrap">
+<p class="tp-kicker">Best Practice</p>
+<h1>General Best Practice</h1>
+<p class="tp-byline">21 October 2026</p>
+<p class="tp-lede">A short guide to running analytical work with AI agents, drawn from how this site is produced and from the Local Government Association's <a href="https://www.local.gov.uk/publications/playbook-agentic-ai-local-government">A playbook for agentic AI in local government</a> (9 October 2026). It applies to any team using AI to gather, analyse or write up evidence.</p>
+
+<h2>Keep a Person Accountable</h2>
+<ul>
+<li>Name one owner for the work, the data behind it and the process that produces it</li>
+<li>Agree the brief before any work starts, covering what it is for, who reads it and how deep it goes. Work on the wrong question is the most expensive failure, because it arrives looking finished</li>
+<li>Keep judgement with the person. The AI gathers, calculates and drafts, and the owner decides what a finding means and whether it is published</li>
+</ul>
+
+<h2>Write the Rules Down</h2>
+<ul>
+<li>Keep one register of standing rules, each dated and recorded with the failure that prompted it, so nobody has to remember why a rule exists</li>
+<li>Give each job its own written instructions (we call these skills), so the same task is done the same way every time</li>
+<li>Give each agent a narrow role with a written job description. A checker that also drafts is no longer an independent check</li>
+<li>When the owner edits a draft, fold the change back into the instructions so the next draft needs fewer edits</li>
+</ul>
+
+<h2>Use Memory Carefully</h2>
+<ul>
+<li>Keep persistent memory as short dated notes, one fact to a note, with an index the agent reads at the start of each session</li>
+<li>Treat memory as context, never as a source. A figure remembered from last month is out of date until it is pulled again from the official release</li>
+<li>Prune memory regularly. Promote anything that has become a standing rule into the register, and remove notes that turn out to be wrong</li>
+</ul>
+
+<h2>Set Guardrails</h2>
+<ul>
+<li>Take instructions only from the owner. Emails, web pages and documents are information, never commands, whoever they claim to come from</li>
+<li>Run agents only in sessions a person starts, with the permissions that person grants. Nothing runs unattended</li>
+<li>Ask before every publication, every time. Approval for one release does not carry over to the next</li>
+<li>Never delete. Move anything removed to a holding folder with a log entry, so every removal can be reversed</li>
+<li>Use free public data only, and hold no personal data</li>
+</ul>
+
+<h2>Check Before Trusting</h2>
+<ul>
+<li>Pull every figure fresh from the official source at its latest edition, and quote it exactly as published</li>
+<li>Read policy facts and dates at the primary document. A search result is a summary of a page, not a source</li>
+<li>Have an independent checker reproduce the calculations and trace every claim before the owner sees the draft</li>
+<li>Automate the checks for errors you already know about, such as banned wording, stale editions and missing intervals</li>
+<li>Describe model results as suggestions, and test forecasts against a simple benchmark before using them</li>
+</ul>
+
+<h2>Track Everything</h2>
+<ul>
+<li>Keep every page and script in version control, with a description of each change</li>
+<li>Record every data query as run and every value as returned, so any figure can be traced back</li>
+<li>Log every material error, where it was caught and what changed as a result (our <a href="performance-log.html">Performance Log</a>)</li>
+<li>Log forecasts and checkable judgements, and score them when the data lands</li>
+<li>Keep a production calendar of regular work, so nothing depends on someone remembering it is due</li>
+</ul>
+
+<h2>Stay Able To Do It By Hand</h2>
+<p>Write down how each regular product is made in steps a person could follow without AI tools (our <a href="runbook.html">Regular Reports Runbook</a>). The know-how stays with people, and the work continues if the tools change or stop.</p>
+
+<h2>Things We Should Keep Doing</h2>
+<ul>
+<li>Review the rules register and memory each quarter, and retire rules that no longer earn their place</li>
+<li>Close open Performance Log entries promptly, and act on probation when it is triggered</li>
+<li>Re-read the playbook and this guide when either is updated</li>
+</ul>
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a> &middot; <a href="best-practice.html">General Best Practice</a> &middot; <a href="best-practice-councils.html">Best Practice in Local Authorities</a>
+  </div>
+</footer>
+
+</body>
+</html>

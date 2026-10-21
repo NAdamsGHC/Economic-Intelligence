@@ -1,8 +1,10 @@
-"""Build the three transparency pages.
+"""Build the transparency and best-practice pages.
 
-    transparency/index.html            from statement.body.html
-    transparency/runbook.html          from runbook.body.html
-    transparency/performance-log.html  generated from transparency/performance-log.json
+    transparency/index.html                   from statement.body.html
+    transparency/runbook.html                 from runbook.body.html
+    transparency/performance-log.html         generated from transparency/performance-log.json
+    transparency/best-practice.html           from best-practice.body.html
+    transparency/best-practice-councils.html  from best-practice-councils.body.html
 
 Each page gets the same masthead, menu and footer. Run after any change to a
 body file or to the log, then run check_voice.py over the three outputs.
@@ -54,7 +56,7 @@ SHELL = """<!DOCTYPE html>
 
 <footer class="gc-footer">
   <div class="gc-inner">
-    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a>
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a> &middot; <a href="best-practice.html">General Best Practice</a> &middot; <a href="best-practice-councils.html">Best Practice in Local Authorities</a>
   </div>
 </footer>
 
@@ -170,6 +172,12 @@ def main():
          "Step-by-step instructions a person can follow to produce the four regular reports on the Gateshead Economic Intelligence site without AI tools.",
          (HERE / "runbook.body.html").read_text(encoding="utf-8"))
     performance_log()
+    page("best-practice.html", "General Best Practice",
+         "A short guide to running analytical work with AI agents, covering accountability, written rules, memory, guardrails, checks and tracking.",
+         (HERE / "best-practice.body.html").read_text(encoding="utf-8"))
+    page("best-practice-councils.html", "Best Practice in Local Authorities",
+         "What changes when a council uses AI agents for analysis, covering governance, data protection, public sector standards, openness and continuity.",
+         (HERE / "best-practice-councils.body.html").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
