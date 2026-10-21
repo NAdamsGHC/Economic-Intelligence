@@ -96,14 +96,14 @@
 <li>Pull every figure fresh from the official source at its latest edition, and quote it exactly as published</li>
 <li>Read policy facts and dates at the primary document. A search result is a summary of a page, not a source</li>
 <li>Have an independent checker reproduce the calculations and trace every claim before the owner sees the draft</li>
-<li>Automate the checks for errors you already know about, such as banned wording, stale editions and missing intervals</li>
+<li>Automate the checks for errors you already know about. Ours check wording against the house rules and check that the standing rules have not drifted between files, and our larger pipelines check for out-of-date editions</li>
 <li>Describe model results as suggestions, and test forecasts against a simple benchmark before using them</li>
 </ul>
 
 <h2>Track Everything</h2>
 <ul>
 <li>Keep every page and script in version control, with a description of each change</li>
-<li>Record every data query as run and every value as returned, so any figure can be traced back</li>
+<li>Record every query behind a saved analysis as run, and every value as returned, so any figure can be traced back</li>
 <li>Log every material error, where it was caught and what changed as a result (our <a href="performance-log.html">Performance Log</a>)</li>
 <li>Log forecasts and checkable judgements, and score them when the data lands</li>
 <li>Keep a production calendar of regular work, so nothing depends on someone remembering it is due</li>
@@ -112,10 +112,11 @@
 <h2>Stay Able To Do It By Hand</h2>
 <p>Write down how each regular product is made in steps a person could follow without AI tools (our <a href="runbook.html">Regular Reports Runbook</a>). The know-how stays with people, and the work continues if the tools change or stop.</p>
 
-<h2>Things We Should Keep Doing</h2>
+<h2>Things We Should Be Doing</h2>
 <ul>
-<li>Review the rules register and memory each quarter, and retire rules that no longer earn their place</li>
+<li>Review the rules register and memory on a set cycle, and retire rules that no longer earn their place. This is not yet in our production calendar</li>
 <li>Close open Performance Log entries promptly, and act on probation when it is triggered</li>
+<li>Extend automated checks to missing confidence intervals, which are checked by hand at present</li>
 <li>Re-read the playbook and this guide when either is updated</li>
 </ul>
 </main>
