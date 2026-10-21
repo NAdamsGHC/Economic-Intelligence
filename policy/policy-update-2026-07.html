@@ -125,7 +125,7 @@ caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding
   <button class="gcbar-copy" type="button" aria-label="Copy direct link to this document" title="Copy direct link to this document">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
   </button>
-<!-- gc-menu --><details class="gc-menu">
+<!-- gc-menu --><span class="gc-beta" title="This site is in beta. Products and layout may change, and errors are logged in the Performance Log">Beta</span><details class="gc-menu">
 <summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
 <nav class="gc-menu-panel" aria-label="Transparency">
 <p class="gc-menu-head">Transparency</p>
@@ -152,7 +152,10 @@ caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding
 .gc-menu-sep{border-top:1px solid #e1e5ea;margin-top:6px;padding-top:10px;}
 .gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
 .gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
-@media(max-width:560px){.gc-menu{margin-left:auto;}}
+.gc-beta{display:inline-flex;align-items:center;height:22px;padding:0 8px;margin-left:12px;border:1px solid #f2b84b;color:#f2b84b;
+  font-family:'PT Sans',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;line-height:1;white-space:nowrap;cursor:default;}
+.gc-beta+.gc-menu{margin-left:10px;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}.gc-beta{margin-left:auto;}.gc-beta+.gc-menu{margin-left:8px;}}
 </style>
 <script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
 <!-- /gc-menu -->
