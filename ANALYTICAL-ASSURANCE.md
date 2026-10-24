@@ -134,6 +134,17 @@ A reference-lookup product, not an analytical one: it re-presents published NOMI
 - **A breakdown row may be a measure in its own right, not a slice of one.** The count datasets split a published total into categories, so a row cites as "<measure>, <category>". APS rows are separate survey variables, so citing them that way produced "Gateshead's employment rate ..., Economic activity rate - aged 16-64, ... is 77.6%", which is self-contradictory. Breakdowns now declare which of the two they are, and APS rows cite under their own variable name qualified by the source.
 - **Gateshead only.** No comparators and no ward breakdowns, by design: comparison belongs in the analytical products where a difference can be significance-tested rather than merely displayed.
 
+### Town Centre Activation Value Model (added 23 October 2026)
+
+| # | Assumption / judgement | Basis and risk |
+|---|---|---|
+| M1 | **Welfare ratios, GVA outside.** Benefit-cost ratios use welfare values only (value of the space, volunteering, regular participation, employment wellbeing, avoided costs, offsetting transfers) over net public cost, for Gateshead and the UK. GVA and jobs are Gateshead and NEMSA indicators. | Green Book 2026 6.41 and 8.41; MHCLG Appraisal Guide chapter 6. The ratios are therefore often low for small, short schemes; the page says so up front. |
+| M2 | **Confidence grades applied literally** from the HM Treasury local partnerships guidance (Tables 7.A and 7.B): evidence over five years old is grade 6, which cuts that benefit by 40%. | Decided with the commissioner on 23 October 2026. Most guidance-mandated sources (Employment Density Guide 2015, Additionality Guide 2014) are over five years old. |
+| M3 | **Scenarios, not intervals.** Low and high take the pessimistic and optimistic end of every ranged assumption; a stream whose range exceeds four times its central value is left out of the ratio (MHCLG 5.92, applied to every stream as our extension). | The whiskers on the chart are labelled as scenario ranges, not confidence intervals. |
+| M4 | **Discount rate 3.5%** as published in the Green Book, with a field to test 3.0%. | The Chancellor announced a cut to 3.0% (GOV.UK, 22 October 2026) with reforms at the 28 October 2026 Budget; revise when the guidance is published. |
+| M5 | **A let anyway is netted off every benefit.** With a break clause the meanwhile use ends if a commercial tenant appears. Without one it blocks the let, and the model assumes the blocked tenant would have brought similar jobs and visitors and counts the rates it would have paid as lost public income with no offsetting private gain. Costs are not reduced. | Cautious on benefits and costs. Optimism bias is not applied to a disbenefit (a negative value of the space when no break clause blocks a market let). |
+| M6 | **Market rent from the unit's own rateable value**, entered by the officer from the free VOA per-property service, not from the bulk rating list. | The bulk list has a restricted licence. Rateable value is the open market rent at 1 April 2024; it is uprated with the GDP deflator, not a rent index. |
+
 ## 4. Verification and validation record
 
 **Verification (built right):**
@@ -242,6 +253,22 @@ all. That is the check the gate cannot make, and it is the evidence that the int
 arithmetic is right rather than merely present. Earlier in the same session the series
 band and bar fills were confirmed painted by the same method (250 band pixels, 177
 whisker pixels, 26,027 bar pixels) with zero console messages from the page.
+
+**Town Centre Activation Value Model (23 to 24 October 2026).** One Python reference engine
+(`analysis/meanwhile-use-2026/src/engine.py`, outside this repo) specifies every calculation. The Excel
+workbook was recalculated with the open-source `formulas` package and matched the engine on all 90 checked
+values in each of nine cases; the web calculator was run under Node and matched on eleven cases, two of them
+testing settings the workbook holds once for all proposals (the UK employment switch, the legacy switch, a
+3.0% discount rate and a STEAM override). The cases cover every use, private and council ownership, both
+break-clause settings, the council vacancy survey (complete and incomplete), occupations of 2, 9, 12, 18, 24,
+30, 48, 60 and 72 months, rateable values from £2,000 to £520,000, the charity, small business and no-relief
+rates paths, and a negative net public cost. Not yet tested: local overrides on the Assumptions sheet, the
+Results, Sensitivity and Compare sheets beyond an error scan, and the workbook chart, which has not been opened
+in Excel. The assumptions register and the build were each reviewed by a separate structured AI-assisted review
+session, which reproduced the worked example by hand; its findings (two register blockers, one build blocker on
+blank inputs, and method fixes to the let-anyway netting and council-owned rates) were corrected before
+publication. N. Adams is the named assurer; independent assurance by a colleague is still recommended before
+high-stakes use.
 
 ## 5. Code of Practice for Statistics
 

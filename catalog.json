@@ -1,6 +1,6 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "19 October 2026",
+ "updated": "24 October 2026",
  "schedule": {
   "updated": "19 October 2026",
   "months": [
@@ -1203,6 +1203,31 @@
    "pinned": false
   },
   {
+   "id": "meanwhile-use-value-model",
+   "title": "Town Centre Activation Value Model",
+   "path": "business-industry-trade/meanwhile-use-value-model.html",
+   "topic": "Business, industry and trade",
+   "description": "Calculator and Excel model for valuing meanwhile use of a vacant town centre unit in Gateshead against the public money it needs. It follows the MHCLG Appraisal Guide and the Green Book (2026), giving welfare-based benefit-cost ratios for Gateshead and the UK with their value for money category, and reports local jobs, GVA and visitor spend as Gateshead indicators outside the ratios. Every assumption is in an approved register with its source or marked as a rule or an officer input. Version 0.1, built before the 28 October 2026 Budget and due for revision after it. The worked example is hypothetical.",
+   "sources": "MHCLG Appraisal Guide 2026 · HM Treasury Green Book 2026 · HCA Additionality and Employment Density Guides · ONS BRES, UK Business Counts, regional GVA, Annual Business Survey, Business demography · MHCLG Towns Fund evaluation 2026 · GMCA Unit Cost Database",
+   "keywords": [
+    "meanwhile use",
+    "vacant",
+    "empty shops",
+    "town centre",
+    "high street",
+    "activation",
+    "appraisal",
+    "value for money",
+    "benefit-cost ratio",
+    "BCR",
+    "Green Book",
+    "pop-up",
+    "calculator",
+    "excel"
+   ],
+   "pinned": false
+  },
+  {
    "id": "built-up-areas",
    "title": "Gateshead Built-Up Areas",
    "path": "people-population-community/built-up-areas.html",
@@ -1310,5 +1335,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-10-19T12:00:00+01:00"
+ "updated_at": "2026-10-24T09:00:00+01:00"
 }

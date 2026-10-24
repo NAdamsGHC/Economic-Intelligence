@@ -60,7 +60,7 @@
 <main class="tp-wrap">
 <p class="tp-kicker">Transparency</p>
 <h1>Performance Log</h1>
-<p class="tp-byline">Last updated 16 October 2026</p>
+<p class="tp-byline">Last updated 24 October 2026</p>
 <p class="tp-lede">Every material error found in our work, how it was found and what changed as a result. Errors caught before publication sit alongside those that reached a published product, because our checks are only worth something if we can show what they catch.</p>
 
 <h2>How the Log Works</h2>
@@ -78,18 +78,62 @@
 <p>No part of the process is on probation.</p>
 <h2>Summary</h2>
 <div class="tp-tiles">
-<div><b>18</b><span>errors logged</span></div>
+<div><b>22</b><span>errors logged</span></div>
 <div><b>8</b><span>reached a published product</span></div>
-<div><b>6</b><span>reached the site owner and stopped there</span></div>
+<div><b>10</b><span>reached the site owner and stopped there</span></div>
 <div><b>4</b><span>caught by our own checks first</span></div>
 <div><b>1</b><span>still open</span></div>
 </div>
 
 <h3>Errors by Function</h3>
-<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>1</td><td>1</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>1</td><td>0</td><td>0</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
+<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>1</td><td>1</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>1</td><td>4</td><td>0</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
 
 <h2>Entries</h2>
 <p>Newest first. Entries found before 16 October 2026 were reconstructed from our working records when the log started, so they are as complete as those records allow. Probation counts errors from 16 October 2026 onward.</p>
+<article class="tp-entry draft" id="E-2026-22">
+<div class="meta"><b>E-2026-22</b><span>Found 24 October 2026</span><span class="tp-tag draft">Draft</span><span class="tp-tag closed">Closed</span></div>
+<h3>Town Centre Activation Value Model, build of 23 October 2026</h3>
+<dl>
+<dt>What</dt><dd>The chance that the unit would have been let commercially anyway was netted off jobs and the value of the space but not off volunteering, participation, visitor spend, avoided costs or the rates transfer, which overstated the worked example's ratio (0.14 against 0.12). Council-owned units also counted empty rates the council would pay itself as a public cost with an offsetting private gain</dd>
+<dt>Kind</dt><dd>Code or reference</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>The let-anyway chance is now netted off every benefit and the rates transfer, consistently in the engine, workbook and calculator; council-owned units carry no empty rates transfer and no council rent; all three implementations retested on eleven cases</dd>
+</dl>
+</article>
+<article class="tp-entry draft" id="E-2026-21">
+<div class="meta"><b>E-2026-21</b><span>Found 24 October 2026</span><span class="tp-tag draft">Draft</span><span class="tp-tag closed">Closed</span></div>
+<h3>Town Centre Activation Value Model, build of 23 October 2026</h3>
+<dl>
+<dt>What</dt><dd>In the blank workbook, inputs left empty were misread: a blank floor area unit was taken as square metres (about ten times the jobs), a blank break clause as no break clause, a blank participant group or cost grade broke the Results sheet, and a missing rateable value was not flagged. The demo file was unaffected because every input was filled in</dd>
+<dt>Kind</dt><dd>Code or reference</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Blank inputs now take the stated defaults (sq ft, break clause, cost grade 4, the first participant group); results stay blank with a prompt until the use, period and rateable value are entered; Results, Sensitivity and Compare are guarded against errors and were rechecked empty and part-filled</dd>
+</dl>
+</article>
+<article class="tp-entry draft" id="E-2026-20">
+<div class="meta"><b>E-2026-20</b><span>Found 23 October 2026</span><span class="tp-tag draft">Draft</span><span class="tp-tag closed">Closed</span></div>
+<h3>Meanwhile use research and guidance review, draft of 23 October 2026</h3>
+<dl>
+<dt>What</dt><dd>The draft proposed a UK benefit-cost ratio without saying which benefits it would count once GVA was excluded, although the working notes held the answer (value of the space to its occupier). It also omitted rejected precedents, the search method and conflicts with four agreed decisions</dd>
+<dt>Kind</dt><dd>Completeness</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Value of the space added as an explicit decision; precedent table now shows compliance with guidance and what was rejected and why; decision table covers all fourteen changes</dd>
+</dl>
+</article>
+<article class="tp-entry draft" id="E-2026-19">
+<div class="meta"><b>E-2026-19</b><span>Found 23 October 2026</span><span class="tp-tag draft">Draft</span><span class="tp-tag closed">Closed</span></div>
+<h3>Meanwhile use research and guidance review, draft of 23 October 2026</h3>
+<dl>
+<dt>What</dt><dd>The draft said the MHCLG Appraisal Guide supports a local GVA per £1 headline in place-based analysis. MHCLG 6.21 and 6.26 put output and job counts in the strategic case and value place benefits as welfare, so the proposed headline did not follow the guidance it cited. The claim also reached Nathaniel in a chat summary</dd>
+<dt>Kind</dt><dd>Unsupported claim</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Report rewritten: welfare-based ratios for Gateshead and the UK, with local GVA and jobs reported as indicators; the original combined figure offered only as a labelled alternative</dd>
+</dl>
+</article>
 <article class="tp-entry caught" id="E-2026-18">
 <div class="meta"><b>E-2026-18</b><span>Found 2 October 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
 <h3>Weekly What's New, 2 October 2026</h3>

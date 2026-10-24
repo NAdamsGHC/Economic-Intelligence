@@ -20,6 +20,7 @@ Comparator groups used throughout: the **NEMSA seven** (the seven councils of th
 | **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NEMSA seven, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
 | **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, the NEMSA seven and statistical neighbours, with per-indicator Explore view | 290 KB |
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NEMSA local authorities | 92 KB |
+| **Business, industry and trade** | [Town Centre Activation Value Model](business-industry-trade/meanwhile-use-value-model.html) | Calculator and downloadable Excel model valuing meanwhile use of a vacant unit against its public cost, to the MHCLG Appraisal Guide and Green Book (2026); version 0.1, pre-Budget | 128 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | [Employer Skills Survey 2024](employment-labour-market/employer-skills-survey-2024.html) | DfE ESS 2024 — North East vs England's 9 regions: vacancies, skills gaps, training, apprenticeships, future skill needs, AI | 36 KB |
@@ -165,6 +166,20 @@ GDHI is the amount of money that all individuals in the household sector have av
 - 25 indicators are survey estimates with 95% CIs (marked ≈) — ranks are soft; Gateshead's CI is shown in Explore.
 - All values quoted directly from the ELS workbook; ranks, quartiles and benchmark comparisons are author's calculations.
 - **Auto-refreshes monthly**: a GitHub Action (`.github/workflows/refresh-els-scorecard.yml`) re-downloads the workbook on the 2nd of each month, rebuilds via `build/els-scorecard/`, and commits only when the data actually changed (the workbook's own regeneration date is ignored). Run it on demand from the Actions tab (workflow_dispatch), or locally: `python build/els-scorecard/build.py`.
+
+---
+
+## Town Centre Activation Value Model (Business, industry and trade)
+
+[`business-industry-trade/meanwhile-use-value-model.html`](business-industry-trade/meanwhile-use-value-model.html), with the Excel model beside it
+([blank](business-industry-trade/meanwhile-use-value-model.xlsx), [worked example](business-industry-trade/meanwhile-use-value-model-worked-example.xlsx)).
+
+Values bringing a vacant town centre unit into meanwhile use against the public money it needs. It follows the MHCLG Appraisal Guide (4th edition, February 2026) and the Green Book (2026), so GVA and jobs are reported as Gateshead indicators rather than inside the benefit-cost ratios.
+
+- The calculator and the workbook run the same calculations. Both are tested against one reference engine: the workbook on nine cases and the calculator on eleven, 90 values each.
+- Every assumption comes from an approved register. Sourced rows carry the source, edition and location, a verbatim quote where the source has one and a Treasury confidence grade; method rules and officer inputs are marked as such.
+- The worked example is hypothetical and describes no real unit.
+- Version 0.1 was built before the 28 October 2026 Budget and will be revised after it.
 
 ---
 
