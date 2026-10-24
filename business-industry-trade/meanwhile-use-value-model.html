@@ -34,6 +34,10 @@ header p{color:var(--muted);font-size:14px;margin-top:5px;max-width:880px;}
 .btns{display:flex;gap:8px;margin:4px 0 10px;flex-wrap:wrap;}
 .btns button,.dl a{font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:1px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;border-radius:0;text-decoration:none;display:inline-block;}
 .btns button.alt,.dl a.alt{background:#fff;color:var(--navy);}
+.topline{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--navy);padding:16px 18px;margin-bottom:16px;}
+.topline .buys{font-size:19px;font-weight:700;color:var(--navy);line-height:1.35;}
+.topline .verdict{font-size:14px;margin-top:8px;}
+.topline .verdict b{color:var(--ink);}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;}
 .kpi{background:var(--card);border:1px solid var(--line);padding:14px;border-top:4px solid var(--teal);}
 .kpi.amber{border-top-color:var(--amber);}
@@ -158,7 +162,7 @@ footer a{color:var(--teal);text-decoration:none;}
 <div class="wrap">
 <header>
   <h1>Town Centre Activation Value Model</h1>
-  <p>Estimates the value of bringing a vacant town centre unit in Gateshead into meanwhile use against the public money it needs, following the MHCLG Appraisal Guide (2026) and the Green Book (2026). It gives welfare-based benefit-cost ratios for Gateshead and the UK with their value for money category, and reports local jobs, GVA and visitor spend as Gateshead indicators outside the ratios.</p>
+  <p>Put in a vacant unit, what would go in it and what it would cost. The model tells you what the money buys in Gateshead in jobs, local output, people and businesses, and how the scheme scores on government value for money rules (MHCLG Appraisal Guide and Green Book, 2026).</p>
   <div class="chips" id="chips"></div>
 </header>
 <div class="caveat"><b>In development.</b> This tool is still being developed and tested, and its figures may change between versions. Do not quote its results as final. <b>Read this first.</b> This is an indicative appraisal tool, not a business case. Version 0.1 was built before the 28 October 2026 Budget, which is expected to cut the Green Book discount rate from 3.5% to 3.0%, and will be revised afterwards. Meanwhile use is short and small, and most of its value is local and social, so the welfare ratios can be modest; the indicators and the workbook's place scorecard carry the local effects they leave out. The worked example is hypothetical and describes no real unit. Low takes the pessimistic end of every ranged assumption and high the optimistic end; these ranges are scenarios, not confidence intervals.</div>
@@ -170,6 +174,7 @@ footer a{color:var(--teal);text-decoration:none;}
   <div class="btns"><button type="button" id="ex">Load the worked example</button><button type="button" class="alt" id="clear">Clear</button></div>
 </div>
 <div>
+  <div class="topline" id="topline"></div>
   <div class="kpis" id="kpis"></div>
   <div class="panel"><h3>Value for Money Statement</h3><p class="statement" id="statement"></p><p class="flag" id="flags"></p></div>
   <div class="panel"><h3>Benefit-Cost Ratio by Lens</h3><p class="sub">£ of benefit, including offsetting transfers, per £1 of net public cost, present value, 2026-27 prices. Bar = central; whiskers = low to high scenario range, not a confidence interval.</p><div class="cwrap"><canvas id="bcr"></canvas></div></div>
@@ -464,17 +469,29 @@ const T_DN = b => b >= 4 ? 4 : b >= 2 ? 2 : b >= 1.5 ? 1.5 : b >= 1 ? 1 : null;
 function calc() {
   const x = getForm();
   if (!x.rv || !x.months) {
-    ["kpis", "bc", "ind", "sw", "bau", "flags", "onsflag"].forEach(id => el(id).innerHTML = "");
+    ["topline", "kpis", "bc", "ind", "sw", "bau", "flags", "onsflag"].forEach(id => el(id).innerHTML = "");
     if (chart) { chart.destroy(); chart = null; }
     el("statement").textContent = "Enter at least the use, the occupation period and the rateable value to see results."; return; }
   const st = {discount: (x.discount === null ? D.reg.A1.central : x.discount) / 100, uk_employment_wellbeing: x.uk_emp, legacy: x.legacy};
   const R = MVM.appraise(x, D.reg, st), c = R.central, lo = R.low, hi = R.high;
+  // top line in plain words: what the money buys, then the value for money verdict
+  const rnd = n => Math.abs(n) >= 10000 ? Math.round(n / 10000) * 10000 : Math.round(n / 1000) * 1000;
+  const jobs = c.netG < 1 ? "less than one job" : `about ${Math.round(c.netG)} job${Math.round(c.netG) === 1 ? "" : "s"}`;
+  const people = x.volunteers + x.participants;
+  const extras = [];
+  if (people > 0) extras.push(`${people} people volunteering or taking part every week`);
+  if (x.startups > 0) extras.push(`${x.startups} start-up${x.startups === 1 ? "" : "s"}, about ${Math.round(c.s3)} likely to still be trading three years on`);
+  const yrs = Math.min(60, x.months);
+  el("topline").innerHTML = `<div class="buys">${gbp(c.cash)} over ${yrs} months buys ${jobs} and about ${gbp(rnd(c.gva))} of extra output in Gateshead while the unit is open` +
+    (extras.length ? `, plus ${extras.join(" and ")}.` : ".") + `</div>` +
+    `<p class="verdict">On government value for money rules it rates <b>${c.gateshead.category}</b>, with about £${d2(c.gateshead.bcr)} of social value back for every £1 of public money` +
+    ` (range £${d2(lo.gateshead.bcr)} to £${d2(hi.gateshead.bcr)}). Those rules count social value only. They leave out the jobs and local output above, because nationally they treat them as moved from elsewhere rather than new.</p>`;
   el("kpis").innerHTML = [
-    [c.gateshead.category, "Value for money, Gateshead", `Ratio ${d2(c.gateshead.bcr)} (${d2(lo.gateshead.bcr)} to ${d2(hi.gateshead.bcr)})`],
-    [c.uk.category, "Value for money, UK", `Ratio ${d2(c.uk.bcr)} (${d2(lo.uk.bcr)} to ${d2(hi.uk.bcr)})`],
-    [gbp(c.pvc), "Net public cost", `Cash budget ${gbp(c.cash)}`],
-    [d1(c.netG), "Net FTE, Gateshead", `${d1(lo.netG)} to ${d1(hi.netG)}; UK 0`]].map((k, i) =>
-    `<div class="kpi${i === 3 ? " amber" : ""}"><div class="v">${k[0]}</div><div class="l">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
+    [Math.round(c.netG * 10) / 10, "Net jobs in Gateshead (FTE)", `${d1(lo.netG)} to ${d1(hi.netG)} across scenarios`],
+    [gbp(rnd(c.gva)), "Extra output in Gateshead (GVA)", `${gbp(rnd(lo.gva))} to ${gbp(rnd(hi.gva))}`],
+    [c.gateshead.category, "Value for money rating", `£${d2(c.gateshead.bcr)} back per £1; UK ${c.uk.category}`],
+    [gbp(c.pvc), "Public cost after risk allowances", `Cash budget ${gbp(c.cash)}`]].map((k, i) =>
+    `<div class="kpi${i === 2 ? " amber" : ""}"><div class="v">${k[0]}</div><div class="l">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
   const same = lo.gateshead.category === hi.gateshead.category;
   el("statement").textContent = `On central assumptions the proposal returns £${d2(c.gateshead.bcr)} of benefits in Gateshead for each £1 of net public cost, including offsetting transfers such as rates relief (£${d2(c.gateshead.bcrNoTransfers)} without them), which is ${c.gateshead.category} value for money, and £${d2(c.uk.bcr)} across the UK (${c.uk.category}). ` +
     (same ? `The Gateshead category is ${lo.gateshead.category} in every scenario. ` : `Across the low and high scenarios the Gateshead category runs from ${lo.gateshead.category} to ${hi.gateshead.category}. `) +
