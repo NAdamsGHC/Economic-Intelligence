@@ -20,7 +20,7 @@ Comparator groups used throughout: the **NEMSA seven** (the seven councils of th
 | **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NEMSA seven, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
 | **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, the NEMSA seven and statistical neighbours, with per-indicator Explore view | 290 KB |
 | **Business, industry and trade** | [Creative Industries (CCIS)](business-industry-trade/creative-industries.html) | DCMS creative sector businesses / employment / GVA across the 7 NEMSA local authorities | 92 KB |
-| **Business, industry and trade** | [Town Centre Activation Value Model](business-industry-trade/meanwhile-use-value-model.html) | Calculator and downloadable Excel model valuing meanwhile use of a vacant unit against its public cost, to the MHCLG Appraisal Guide and Green Book (2026); version 0.1, pre-Budget | 128 KB |
+| **Business, industry and trade** | [Town Centre Activation Value Model](business-industry-trade/meanwhile-use-value-model.html) (in development) | Calculator and downloadable Excel model valuing meanwhile use of a vacant unit against its public cost, to the MHCLG Appraisal Guide and Green Book (2026); version 0.1, pre-Budget | 128 KB |
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | [Employer Skills Survey 2024](employment-labour-market/employer-skills-survey-2024.html) | DfE ESS 2024 — North East vs England's 9 regions: vacancies, skills gaps, training, apprenticeships, future skill needs, AI | 36 KB |
@@ -170,6 +170,8 @@ GDHI is the amount of money that all individuals in the household sector have av
 ---
 
 ## Town Centre Activation Value Model (Business, industry and trade)
+
+**In development.** The tool is still being developed and tested, and its figures may change between versions.
 
 [`business-industry-trade/meanwhile-use-value-model.html`](business-industry-trade/meanwhile-use-value-model.html), with the Excel model beside it
 ([blank](business-industry-trade/meanwhile-use-value-model.xlsx), [worked example](business-industry-trade/meanwhile-use-value-model-worked-example.xlsx)).

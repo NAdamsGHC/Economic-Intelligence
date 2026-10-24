@@ -161,7 +161,7 @@ footer a{color:var(--teal);text-decoration:none;}
   <p>Estimates the value of bringing a vacant town centre unit in Gateshead into meanwhile use against the public money it needs, following the MHCLG Appraisal Guide (2026) and the Green Book (2026). It gives welfare-based benefit-cost ratios for Gateshead and the UK with their value for money category, and reports local jobs, GVA and visitor spend as Gateshead indicators outside the ratios.</p>
   <div class="chips" id="chips"></div>
 </header>
-<div class="caveat"><b>Read this first.</b> This is an indicative appraisal tool, not a business case. Version 0.1 was built before the 28 October 2026 Budget, which is expected to cut the Green Book discount rate from 3.5% to 3.0%, and will be revised afterwards. Meanwhile use is short and small, and most of its value is local and social, so the welfare ratios can be modest; the indicators and the workbook's place scorecard carry the local effects they leave out. The worked example is hypothetical and describes no real unit. Low takes the pessimistic end of every ranged assumption and high the optimistic end; these ranges are scenarios, not confidence intervals.</div>
+<div class="caveat"><b>In development.</b> This tool is still being developed and tested, and its figures may change between versions. Do not quote its results as final. <b>Read this first.</b> This is an indicative appraisal tool, not a business case. Version 0.1 was built before the 28 October 2026 Budget, which is expected to cut the Green Book discount rate from 3.5% to 3.0%, and will be revised afterwards. Meanwhile use is short and small, and most of its value is local and social, so the welfare ratios can be modest; the indicators and the workbook's place scorecard carry the local effects they leave out. The worked example is hypothetical and describes no real unit. Low takes the pessimistic end of every ranged assumption and high the optimistic end; these ranges are scenarios, not confidence intervals.</div>
 <div class="tabs" id="tabs"></div>
 
 <section class="tab" data-tab="Calculator">
@@ -551,8 +551,8 @@ function drawReg(q) {
 el("regfilter").oninput = e => drawReg(e.target.value); drawReg("");
 
 /* ================= CHIPS, ABOUT, FOOTER ================ */
-el("chips").innerHTML = [`Version 0.1, pre-Budget`, `Price base 2026-27`, `Discount rate ${D.reg.A1.central}% (Green Book)`, `${D.rows.length} register rows`].map((t, i) =>
-  `<span class="chip${i === 0 ? " amber" : ""}">${t}</span>`).join("");
+el("chips").innerHTML = [`In development`, `Version 0.1, pre-Budget`, `Price base 2026-27`, `Discount rate ${D.reg.A1.central}% (Green Book)`, `${D.rows.length} register rows`].map((t, i) =>
+  `<span class="chip${i < 2 ? " amber" : ""}">${t}</span>`).join("");
 el("about").innerHTML = `
 <h3>Download the Excel Model</h3>
 <p class="dl"><a href="${D.xlsx.blank}" download>Blank model (five proposals)</a> <a class="alt" href="${D.xlsx.demo}" download>Worked example</a></p>
