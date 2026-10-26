@@ -196,6 +196,8 @@ details>summary{cursor:pointer;font-size:12.5px;color:var(--teal);font-weight:60
   <div class="chips" id="chips"></div>
 </header>
 
+<div class="caveat" id="suspended"><b>Refreshes suspended.</b> This page is no longer being updated while we build our Data Compendium, planned for January 2027. It stays on its snapshot of 21 September 2026, and NOMIS has since published newer periods for several of the datasets below. Go to <a href="https://www.nomisweb.co.uk/">NOMIS</a> for current figures.</div>
+
 <div class="caveat" id="snapnote"></div>
 
 <div class="tabs" id="tabs"></div>
@@ -489,9 +491,8 @@ function aboutPane(){
     'Each dataset states whether NOMIS has published ' +
     'a newer period since the snapshot was taken; that check was made at build time against ' +
     'each dataset\'s own release calendar in the API.</p>' +
-    '<p>The snapshot is refreshed on the production calendar, monthly, on the day of the ONS ' +
-    'Labour Market Statistics release — the claimant count is the only monthly series here, ' +
-    'and a monthly sweep picks the annual releases up within weeks of publication.</p>' +
+    '<p>Refreshes are suspended while we build our Data Compendium, so this snapshot will ' +
+    'not be updated.</p>' +
     '<p><b>Before quoting anything from this page in a published product, check the vintage ' +
     'chip.</b> Where it says NOMIS holds a newer period, go to the source rather than quoting ' +
     'the snapshot.</p>' +
