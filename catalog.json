@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "24 October 2026",
+ "updated": "26 October 2026",
  "schedule": {
-  "updated": "19 October 2026",
+  "updated": "26 October 2026",
   "months": [
    {
     "id": "2026-07",
@@ -142,12 +142,17 @@
       },
       {
        "label": "Mon 26",
-       "status": "next"
+       "status": "released",
+       "href": "briefs/whats-new-2026-10-26.html"
       }
      ],
      "2026-11": [
       {
-       "label": "every Mon"
+       "label": "Mon 2",
+       "status": "next"
+      },
+      {
+       "label": "then every Mon"
       }
      ],
      "2026-12": [
@@ -542,6 +547,52 @@
     "bics",
     "jobs guarantee",
     "uk business counts",
+    "departmental log",
+    "rag"
+   ]
+  },
+  {
+   "id": "whats-new-2026-10-26",
+   "title": "What's New, 26 October 2026",
+   "path": "briefs/whats-new-2026-10-26.html",
+   "topic": "What's New",
+   "description": "Covering 19 to 26 October, the last edition before the Budget. ONS has moved subregional productivity for 2024 from 5 November to 24 November. Gateshead's 16-64 economic inactivity rate for Jul-25 to Jun-26 is 18.3% (plus or minus 3.7 points), down from 24.0% a year earlier, a statistically significant fall, and the claimant count for September 2026 is 5,050. Provisional 2026 median gross weekly pay for full-time employees living in Gateshead is £735.60, still statistically below England's £815.50. DWP named Ingeus UK Ltd as its preferred Jobs Guarantee partner for the North East and Tees Valley, and the Pathways to Work Innovation Fund closes on 26 October. Also place-based Green Book reforms promised for the Budget, consumer price inflation at 3.5% in September, Industrial Strategy jobs plans and Gateshead's new statutory early years target of 76.4% by 2027/28. Seven reds carried, none fully closed. The complete departmental log carries 195 rows from the four subscribed gov.uk feeds, folded away rather than cut.",
+   "sources": "ONS release calendar, Regional and subregional labour productivity, UK: 2024; ONS claimant count and Annual Population Survey via NOMIS (NM_162_1, NM_17_5), 20 October 2026; ONS, Annual Survey of Hours and Earnings 2026 provisional, tables 7 and 8, 22 October 2026; ONS, Consumer price inflation, UK: September 2026; DWP, Jobs Guarantee and Pathways to Work Innovation Fund pages; No.10 and HM Treasury, Green Book announcement, 22 October 2026, and the Chancellor's growth speech, 7 September 2026; BIST, Industrial Strategy Jobs Plans; DfE, Early years foundation stage profile results 2025 to 2026 and local authority good level of development targets 2028; MHCLG, legacy local plan extension letter; gov.uk publications from No.10, the Cabinet Office and HM Treasury; gov.uk departmental feeds for DBT, DWP, MHCLG and DfE. All figures quoted as published, pulled 26 October 2026.",
+   "series": "whats-new",
+   "date": "2026-10-26",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "productivity",
+    "gva per hour",
+    "claimant count",
+    "annual population survey",
+    "economic inactivity",
+    "employment rate",
+    "ashe",
+    "earnings",
+    "pay",
+    "jobs guarantee",
+    "pathways to work",
+    "innovation fund",
+    "green book",
+    "discount rate",
+    "budget",
+    "inflation",
+    "cpi",
+    "industrial strategy",
+    "jobs plans",
+    "apprenticeships",
+    "early years",
+    "good level of development",
+    "local plan",
+    "pride in place",
+    "council housebuilding support fund",
+    "bics",
+    "uk business counts",
+    "visitor levy",
     "departmental log",
     "rag"
    ]
@@ -1335,5 +1386,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-10-24T09:00:00+01:00"
+ "updated_at": "2026-10-26T12:00:00+00:00"
 }
