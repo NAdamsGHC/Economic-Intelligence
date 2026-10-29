@@ -347,6 +347,54 @@
    "what": "A repeat of E-2026-23. An executive summary bullet opening 'The budget states' carried a claim found only in the Fiscal Devolution Roadmap (that the mayoral share will not affect councils' core funding). Cutting the gate-checked version down also dropped qualifiers: the Treasury assumption behind the 2.6% real-terms fall, the business case and legislation conditions, 'emerging proposition', and two hedges on our own inferences",
    "fix": "Attribution split between the Budget and the Roadmap, qualifiers restored and 16 points applied. Any cut-down version now gets its own verification against the full version before it is presented",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-27",
+   "found": "2026-10-29",
+   "product": "Budget 2026 economic analysis, full version, and Budget 2026 summary draft",
+   "stage": "Draft",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "A summary line merged two different SEND descriptions: it said councils' SEND deficits move to central funding from 2028-29. The OBR says SEND spending is centrally funded from 2028-29, and that 90% of deficits to the end of 2025-26 will be reimbursed, with no commitment after that. The full economic analysis carried the merged line in its council funding bullet while its own detail was right, and the summary draft copied it",
+   "fix": "Both now say spending moves to central funding from 2028-29, 90% of deficits to the end of 2025-26 are reimbursed, and there is no commitment after that. The full economic analysis was rebuilt",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-28",
+   "found": "2026-10-29",
+   "product": "Budget 2026 summary (House of Lords Library style), draft of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Two reaction quotes were narrowed. The Resolution Foundation's 'one in twenty' figure covers the North East, North West and Yorkshire and The Humber together, but was given for the North East alone. The CBI quote on business rates relief dropped 'will be welcomed but', turning a mixed verdict into a negative one",
+   "fix": "Both restored in full in the reaction and Gateshead sections",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-29",
+   "found": "2026-10-29",
+   "product": "Budget 2026 summary (House of Lords Library style), draft of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Code or reference",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Six endnotes did not hold the claims they were attached to: the fiscal rule target year cited Hansard rather than OBR Table 7.1, the £14 billion debt interest figure needed OBR paragraph 5.30, the savings and property tax rates needed Budget paragraphs 6.246 and 6.247, the devolution paragraph's levy and 100% retention claims needed Budget paragraphs 4.60 and 4.66, and one sentence on borrowing costs had no endnote",
+   "fix": "Endnotes corrected and the missing one added. The fan charts were also re-rendered without their in-image Figure 1 and Figure 2 titles, which clashed with the page's numbering",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-30",
+   "found": "2026-10-29",
+   "product": "Budget 2026 summary (House of Lords Library style), draft of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The brief review found the political reaction left out the DUP and Plaid Cymru, the Rewiring the State Delivery Plan was missing, and technical terms (percentile, confidence interval, rateable value, multipliers, headroom, CPI, real terms, retention zones) were used without a plain-words gloss for a public page",
+   "fix": "DUP and Plaid Cymru quotes added from Hansard, the Delivery Plan line added, and plain-words glosses written in",
+   "status": "Closed"
   }
  ]
 }

@@ -395,6 +395,28 @@
    "widget": "horizon"
   },
   {
+   "id": "budget-2026-summary",
+   "title": "Budget 2026 Summary",
+   "path": "policy/budget-2026-summary.html",
+   "topic": "Policy",
+   "description": "A summary of Budget 2026 in the House of Lords Library style. The economic context before the Budget, the main revenue and spending measures with their costings from the Budget's table of policy decisions, the fiscal rules and headroom, the OBR's October 2026 forecasts with their probability bands, and political, think tank, union and business reaction from each organisation's own published response. Closes with what the Budget means for Gateshead residents, covering the £100 Household Energy Payment, the National Living Wage, business rates for high streets, travel costs, council funding and devolution.",
+   "sources": "HM Treasury · OBR · Hansard · ONS · MHCLG",
+   "date": "2026-10-29",
+   "keywords": [
+    "budget",
+    "budget 2026",
+    "obr",
+    "economic and fiscal outlook",
+    "fiscal devolution",
+    "business rates",
+    "household energy payment",
+    "national living wage",
+    "fiscal rules",
+    "reaction",
+    "lords library"
+   ]
+  },
+  {
    "id": "policy-2026-10",
    "title": "Policy update, October 2026",
    "path": "policy/policy-update-2026-10.html",
