@@ -335,6 +335,18 @@
    "what": "Four errors before the draft reached the site owner: section 31 compensation quoted as 20.87 million pounds due to Gateshead when that is the total across all shares and the council share is 10.23 million pounds (NNDR1 2026-27); the national and local ranked lists were not in the order their stated methods give; and the note said no document says which share the mayoral 20% comes from, when the OBR says growth accrues to mayors rather than central government (EFO para 3.19)",
    "fix": "Section 31 split by share, both lists reordered with the method and its limits stated (the Defence lines described separately because they offset), the 20% passage rewritten from the OBR and roadmap wording, and 15 further accuracy and 10 brief points applied",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-26",
+   "found": "2026-10-29",
+   "product": "Budget 2026 economic analysis, short version, draft of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "A repeat of E-2026-23. An executive summary bullet opening 'The budget states' carried a claim found only in the Fiscal Devolution Roadmap (that the mayoral share will not affect councils' core funding). Cutting the gate-checked version down also dropped qualifiers: the Treasury assumption behind the 2.6% real-terms fall, the business case and legislation conditions, 'emerging proposition', and two hedges on our own inferences",
+   "fix": "Attribution split between the Budget and the Roadmap, qualifiers restored and 16 points applied. Any cut-down version now gets its own verification against the full version before it is presented",
+   "status": "Closed"
   }
  ]
 }
