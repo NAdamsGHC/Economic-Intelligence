@@ -395,6 +395,54 @@
    "what": "The brief review found the political reaction left out the DUP and Plaid Cymru, the Rewiring the State Delivery Plan was missing, and technical terms (percentile, confidence interval, rateable value, multipliers, headroom, CPI, real terms, retention zones) were used without a plain-words gloss for a public page",
    "fix": "DUP and Plaid Cymru quotes added from Hansard, the Delivery Plan line added, and plain-words glosses written in",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-31",
+   "found": "2026-10-29",
+   "product": "Budget 2026 measures register, OOTLAR and TIIN reconciliations of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The reconciliation covered the OOTLAR and every TIIN but not the other half of the plan's rule, every OBR-certified costing. Ten of the 17 recostings in Red Book Table 6.4 had no register entry, including the salary sacrifice cap, the Plan 2 student loan threshold freeze and inheritance tax on unused pensions. One impact note filed by the Department for Education rather than HMRC was also missed",
+   "fix": "Table 6.4 is now reconciled in the same script, with ten new register rows, and the Department for Education impact note is added to the documents list",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-32",
+   "found": "2026-10-29",
+   "product": "Budget 2026 measures register, OOTLAR and TIIN reconciliations of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Four new register sentences did not match their source. The Oil and Gas Revenue Levy start date was attached to the wrong event, 3.5% was given as the rise in the National Insurance Lower Earnings Limit when it was the uprating basis (the limit rises 3.1%), a 'rather than change the law' clause had no source, and two vaping duty dates were paired with the wrong powers. Five partial matches were recorded as full matches, and several TIIN costing differences were missed by the parser",
+   "fix": "All corrected and re-checked by verification. The parser now reads every table format, and every TIIN costing difference is recorded with its explanation, or marked unexplained where nothing published accounts for it",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-33",
+   "found": "2026-10-29",
+   "product": "Budget 2026 policy decisions list (product 1) and economic analysis draft of 29 October 2026",
+   "stage": "Draft",
+   "type": "Process",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Two register sentences carried Table 6.1 mechanics against the author's steer of no line numbers: one ended 'and line 41 delivers them from capital budgets' and another began 'This line scores the capital grant element'. Both were in the policy decisions list already sent, and resurfaced when the economic analysis listed all 98 decisions",
+   "fix": "Both sentences rewritten at source in the register script, and the policy decisions list and the analysis rebuilt from it",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-34",
+   "found": "2026-10-29",
+   "product": "Budget 2026 economic analysis, checklist revision of 29 October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The checklist revision merged separate statements: the OBR's 'more likely than not' was attached to landlords passing on tax when it belongs to rents rising as demand outstrips supply, and the British Business Bank's £6.5 billion of lending was described as part of its £5 billion of capacity. The mayor's 20% illustration had no price basis or reset assumption, the electricity VAT quarter assumed even use, and BRES sector shares were given to a decimal place from rounded cells",
+   "fix": "All reworded to their sources, the illustration labelled at 2026-27 prices with its assumptions, and the sector shares rounded",
+   "status": "Closed"
   }
  ]
 }
