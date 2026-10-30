@@ -498,6 +498,66 @@
    "what": "The SEND sentence added to the public page drifted from the checked analysis. It stated approximately £3.5 million uncovered as fact when it rests on a July projection, left out the council's own review and its share of the deficit, and did not say the deficit is held separately until 31 March 2028",
    "fix": "Reworded to the checked analysis before publication",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-39",
+   "found": "2026-10-30",
+   "product": "OBR Economic and Fiscal Outlook one-page summary, October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The SEND sentence gave the OBR's annual cost of councils' SEND deficits (£3 billion to £6 billion) as if it were the stock of deficits, and set it beside Gateshead's cumulative deficit so the two read as the same path. The £3.792 million was also sourced to the July Cabinet paper rather than the September scrutiny pack",
+   "fix": "Restored 'the annual cost of', added the 90% reimbursement, compared Gateshead on its 2026-27 overspend and corrected the source before the summary was presented",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-40",
+   "found": "2026-10-30",
+   "product": "OBR Economic and Fiscal Outlook one-page summary, October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Several 'The OBR states' sentences dropped qualifiers or carried our own reading: council building constraint without 'many' and 'significantly increase', the welfare cap breach without 'once the margin is included', real earnings flat in 2027 only (the OBR says 2027 and 2028), and inferences on council funding, SEND and housing not marked as ours",
+   "fix": "Reworded to the OBR's own qualifiers and marked each inference 'on our reading' before the summary was presented",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-41",
+   "found": "2026-10-30",
+   "product": "Budget 2026 Policy Decisions (Word list, the 98 decisions in the Budget analysis, and the new web list)",
+   "stage": "Draft",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Sentences said more than the sources: the Cambridge pilot described as funded by capital grant when the Budget says repayable finance, the Defence Investment Plan line inferred how the remainder is funded, the mayoral business rates share stated as settled where two of three sources make it conditional, and the medical deputies line gave no direction of change",
+   "fix": "Reworded from the Budget, the Policy Costings and the Fiscal Devolution Roadmap in the measures register and on the web list before publication. The Word products keep the old wording until rebuilt",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-42",
+   "found": "2026-10-30",
+   "product": "Budget 2026 Policy Decisions (Word list, the 98 decisions in the Budget analysis, and the new web list)",
+   "stage": "Draft",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Sentences dropped what a reader needed: the cash ISA line read as no change when a planned cut to £12,000 was cancelled, Your First Home omitted that it covers new-build homes in England only, the mileage line omitted that 55p was already temporary and the upper rate's rise from 25p, tax debt recovery omitted its limits, and the double taxation relief omitted that it covers individuals only",
+   "fix": "Added to the register and the web list before publication. The Word products keep the old wording until rebuilt",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-43",
+   "found": "2026-10-30",
+   "product": "Budget 2026 summary",
+   "stage": "Published",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The summary said the cash ISA limit stays at £20,000 without saying a planned cut to £12,000 had been cancelled, and described Your First Home without saying it is for new-build homes",
+   "fix": "Both lines corrected, with a dated correction note at the top of the page",
+   "status": "Closed"
   }
  ]
 }
