@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -24,7 +24,14 @@
   "Draft": "Reached the site owner in a draft, a working document or a chat answer, and stopped there",
   "Caught by checks": "Caught by our own verification before it reached the site owner"
  },
- "probation": [],
+ "probation": [
+  {
+   "function": "Production",
+   "since": "2026-10-24",
+   "reason": "Repeat entries of the same kind within 90 days: Code or reference (E-2026-21, 22), Unsupported claim (E-2026-19, 23, 26, 27, 28, 32, 34, 36), Completeness (E-2026-20, 30, 31, 35), Source or edition (E-2026-24, 37). The threshold was first met on 24 October 2026 and recorded late, on 30 October 2026",
+   "status": "Active"
+  }
+ ],
  "entries": [
   {
    "id": "E-2026-01",
@@ -442,6 +449,42 @@
    "found_by": "Verification",
    "what": "The checklist revision merged separate statements: the OBR's 'more likely than not' was attached to landlords passing on tax when it belongs to rents rising as demand outstrips supply, and the British Business Bank's £6.5 billion of lending was described as part of its £5 billion of capacity. The mayor's 20% illustration had no price basis or reset assumption, the electricity VAT quarter assumed even use, and BRES sector shares were given to a decimal place from rounded cells",
    "fix": "All reworded to their sources, the illustration labelled at 2026-27 prices with its assumptions, and the sector shares rounded",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-35",
+   "found": "2026-10-30",
+   "product": "Budget 2026 economic analysis, SEND and council housing revision of 30 October 2026",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The draft said we had found nothing on what happens to a SEND deficit balance when the statutory override ends. MHCLG's settlement response of February 2026 already says councils must meet any residual deficit from their own resources in 2028-29, and that further support for 2026-27 and 2027-28 will be confirmed",
+   "fix": "The MHCLG position added to both versions, with the approximately £0.4 million residual for Gateshead stated",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-36",
+   "found": "2026-10-30",
+   "product": "Budget 2026 economic analysis, SEND and council housing revision of 30 October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The draft said Gateshead's Housing Revenue Account had the same strain the OBR describes, when the council's paper shows it on budget with a planned use of reserves, and said the £1.5 billion for council homes applied to us directly, when holding stock shows relevance rather than access to the money",
+   "fix": "Reworded to what the papers show and hedged, with the limit of the evidence stated",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-37",
+   "found": "2026-10-30",
+   "product": "Budget 2026 economic analysis, SEND and council housing revision of 30 October 2026",
+   "stage": "Caught by checks",
+   "type": "Source or edition",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The draft treated Gateshead's High Needs Stability Grant as conditional on plan approval and eligibility, when DfE had published allocations the day before, including £3,413,085 for Gateshead",
+   "fix": "Both versions rewritten on the published allocation, confirmed in DfE's workbook",
    "status": "Closed"
   }
  ]
