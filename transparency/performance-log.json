@@ -486,6 +486,18 @@
    "what": "The draft treated Gateshead's High Needs Stability Grant as conditional on plan approval and eligibility, when DfE had published allocations the day before, including £3,413,085 for Gateshead",
    "fix": "Both versions rewritten on the published allocation, confirmed in DfE's workbook",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-38",
+   "found": "2026-10-30",
+   "product": "Budget 2026 summary, additions of 30 October 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The SEND sentence added to the public page drifted from the checked analysis. It stated approximately £3.5 million uncovered as fact when it rests on a July projection, left out the council's own review and its share of the deficit, and did not say the deficit is held separately until 31 March 2028",
+   "fix": "Reworded to the checked analysis before publication",
+   "status": "Closed"
   }
  ]
 }
