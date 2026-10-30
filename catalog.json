@@ -396,7 +396,7 @@
   },
   {
    "id": "budget-2026-summary",
-   "title": "Budget 2026: Summary of key announcements and economic and fiscal forecasts",
+   "title": "Budget 2026 - Summary of key announcements and economic and fiscal forecasts",
    "path": "policy/budget-2026-summary.html",
    "topic": "Policy",
    "description": "A summary of Budget 2026 in the House of Lords Library style. The economic context before the Budget, the main revenue and spending measures with their costings from the Budget's table of policy decisions, the fiscal rules and headroom, the OBR's October 2026 forecasts with their probability bands, and political reaction from Hansard, with think tank, union and business reaction from each organisation's own published response. Closes with what the Budget means for Gateshead residents, covering the £100 Household Energy Payment, the National Living Wage, business rates for high streets, travel costs, council funding and devolution, SEND funding and council housing.",
@@ -417,7 +417,8 @@
     "dedicated schools grant",
     "council housing",
     "lords library"
-   ]
+   ],
+   "featured": true
   },
   {
    "id": "policy-2026-10",
