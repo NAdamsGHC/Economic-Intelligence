@@ -421,6 +421,31 @@
    "featured": true
   },
   {
+   "id": "budget-2026-policy-decisions",
+   "title": "Budget 2026 Policy Decisions",
+   "path": "policy/budget-2026-policy-decisions.html",
+   "topic": "Policy",
+   "description": "All 98 costed policy decisions in Table 6.1 of Budget 2026, each with one sentence on what has changed, in the table's order and under its headings.",
+   "sources": "HM Treasury",
+   "date": "2026-10-30",
+   "keywords": [
+    "budget",
+    "budget 2026",
+    "policy decisions",
+    "business rates",
+    "fuel duty",
+    "isa",
+    "council tax",
+    "national wealth fund",
+    "rough sleeping",
+    "table 6.1",
+    "costed decisions",
+    "tax",
+    "spending"
+   ],
+   "featured": false
+  },
+  {
    "id": "policy-2026-10",
    "title": "Policy update, October 2026",
    "path": "policy/policy-update-2026-10.html",
