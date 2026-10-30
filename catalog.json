@@ -1,6 +1,6 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "26 October 2026",
+ "updated": "30 October 2026",
  "schedule": {
   "updated": "26 October 2026",
   "months": [
@@ -396,12 +396,12 @@
   },
   {
    "id": "budget-2026-summary",
-   "title": "Budget 2026 Summary",
+   "title": "Budget 2026: Summary of key announcements and economic and fiscal forecasts",
    "path": "policy/budget-2026-summary.html",
    "topic": "Policy",
-   "description": "A summary of Budget 2026 in the House of Lords Library style. The economic context before the Budget, the main revenue and spending measures with their costings from the Budget's table of policy decisions, the fiscal rules and headroom, the OBR's October 2026 forecasts with their probability bands, and political, think tank, union and business reaction from each organisation's own published response. Closes with what the Budget means for Gateshead residents, covering the £100 Household Energy Payment, the National Living Wage, business rates for high streets, travel costs, council funding and devolution.",
-   "sources": "HM Treasury · OBR · Hansard · ONS · MHCLG",
-   "date": "2026-10-29",
+   "description": "A summary of Budget 2026 in the House of Lords Library style. The economic context before the Budget, the main revenue and spending measures with their costings from the Budget's table of policy decisions, the fiscal rules and headroom, the OBR's October 2026 forecasts with their probability bands, and political reaction from Hansard, with think tank, union and business reaction from each organisation's own published response. Closes with what the Budget means for Gateshead residents, covering the £100 Household Energy Payment, the National Living Wage, business rates for high streets, travel costs, council funding and devolution, SEND funding and council housing.",
+   "sources": "HM Treasury · OBR · Hansard · ONS · MHCLG · DfE · Gateshead Council",
+   "date": "2026-10-30",
    "keywords": [
     "budget",
     "budget 2026",
@@ -413,6 +413,9 @@
     "national living wage",
     "fiscal rules",
     "reaction",
+    "send",
+    "dedicated schools grant",
+    "council housing",
     "lords library"
    ]
   },
@@ -1408,5 +1411,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-10-26T12:00:00+00:00"
+ "updated_at": "2026-10-30T12:00:00+00:00"
 }
