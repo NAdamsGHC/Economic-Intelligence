@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quarterly Economic Update, October 2026 &middot; Gateshead Economic Intelligence</title>
+<meta name="description" content="Quarterly Economic Update, October 2026. Gateshead economic inactivity falls by a statistically significant margin, the claimant count holds at 4.0%, house prices rise 4.4% on the year and North East business activity grows again.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ei.css">
+<style>
+  .qe-wrap{max-width:900px;margin:0 auto;padding:28px 24px 10px;}
+  .qe-date{font-size:12px;color:#6a7784;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;}
+  .qe-wrap h1{font-size:29px;color:var(--gc-blue-dark);line-height:1.2;margin-bottom:6px;}
+  .qe-by{font-size:13px;color:#6a7784;margin-bottom:18px;}
+  .qe-lede{font-size:15px;color:#41505e;margin-bottom:22px;}
+  .qe-wrap h2{font-size:18px;color:var(--gc-blue);border-bottom:2px solid var(--gc-blue);padding-bottom:6px;margin:28px 0 14px;}
+  .qe-wrap h3{font-size:15px;color:var(--gc-blue-dark);margin:18px 0 8px;}
+  .qe-wrap p{font-size:14px;line-height:1.55;margin:0 0 12px;}
+  .qe-lead{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:12px 16px;margin-bottom:12px;}
+  .qe-lead b{color:var(--gc-blue-dark);}
+  .qe-lead p{margin:0;font-size:14px;}
+  .qe-tblwrap{overflow-x:auto;margin:6px 0 10px;}
+  table.qe-tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:720px;}
+  table.qe-tbl th,table.qe-tbl td{border:1px solid var(--gc-line);padding:6px 8px;text-align:left;vertical-align:top;}
+  table.qe-tbl th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  table.qe-tbl td.num{text-align:right;white-space:nowrap;}
+  table.qe-tbl tr.admin td{background:#f4f8fb;}
+  .qe-no{color:#a4331f;font-weight:700;}
+  .qe-adm{color:var(--gc-green,#2c7a4b);font-weight:700;}
+  .qe-note{background:var(--gc-panel);border:1px solid var(--gc-line);padding:12px 16px;font-size:13px;color:#41505e;margin-top:10px;}
+  .qe-flag{background:#fdf3e2;border:1px solid #f0d8a8;border-left:5px solid var(--gc-amber,#e8a23d);padding:12px 16px;font-size:13.5px;color:#6b5320;margin:16px 0;}
+  .qe-flag b{color:#8a6516;}
+  .qe-watch{width:100%;border-collapse:collapse;font-size:13px;}
+  .qe-watch td{border:1px solid var(--gc-line);padding:6px 9px;vertical-align:top;}
+  .qe-watch td:first-child{white-space:nowrap;font-weight:700;color:var(--gc-blue-dark);width:1%;}
+  .qe-cta{background:var(--gc-blue-dark);color:#fff;padding:14px 18px;margin:22px 0 6px;font-size:14px;}
+  .qe-cta a{color:#fff;text-decoration:underline;}
+  .qe-fig{border:1px solid var(--gc-line);padding:12px 14px;margin:10px 0 14px;}
+  .qe-fig figcaption{font-size:12px;color:#6a7784;margin-top:8px;}
+  .qe-fig svg{width:100%;height:auto;display:block;}
+  table.qe-ward{width:100%;border-collapse:collapse;font-size:12.5px;}
+  table.qe-ward th,table.qe-ward td{border:1px solid var(--gc-line);padding:5px 8px;text-align:left;}
+  table.qe-ward th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  table.qe-ward td.num{text-align:right;white-space:nowrap;}
+
+  /* --- executive dashboard, per the recurring update format --- */
+  .qe-dash{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px;}
+  .qe-dash th,.qe-dash td{border:1px solid var(--gc-line);padding:8px 10px;text-align:left;vertical-align:top;}
+  .qe-dash th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+  .qe-dash th:nth-child(1){width:104px;}
+  .qe-dash th:nth-child(2){width:22%;}
+  .qe-dash th:nth-child(4){width:27%;}
+  .qe-dash td:nth-child(2) a{font-weight:700;color:var(--gc-blue);text-decoration:none;border-bottom:1px solid var(--gc-blue);}
+  .qe-dash tr:hover td{background:#fafcfd;}
+  .rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;
+       text-transform:uppercase;padding:2px 7px;border:1px solid;white-space:nowrap;}
+  .rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+  .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+  .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+  .qe-actions{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);
+              padding:14px 18px 6px;margin:18px 0 6px;}
+  .qe-actions h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .qe-actions ol{margin:0 0 10px 18px;padding:0;font-size:13.5px;}
+  .qe-actions li{margin-bottom:7px;}
+  .qe-actions .by{font-weight:700;color:#8c1c1c;}
+  .qe-actions p.carry{font-size:12.5px;color:#6a7784;margin:0 0 10px;border-top:1px solid var(--gc-line);padding-top:8px;}
+  .qe-item{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:13px 17px;margin-bottom:14px;}
+  .qe-item.r{border-left-color:#c62828;}
+  .qe-item.a{border-left-color:#c9862a;}
+  .qe-item.g{border-left-color:#266427;}
+  .qe-item h3{font-size:15.5px;color:var(--gc-ink);margin:0 0 8px;}
+  .qe-item h3 .rag{vertical-align:middle;margin-right:7px;}
+  .qe-item dl{margin:0;font-size:13.5px;}
+  .qe-item dt{font-weight:700;color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;letter-spacing:.4px;margin-top:9px;}
+  .qe-item dt:first-child{margin-top:0;}
+  .qe-item dd{margin:3px 0 0;}
+  @media (max-width:640px){
+    .qe-dash,.qe-dash thead,.qe-dash tbody,.qe-dash th,.qe-dash td,.qe-dash tr{display:block;}
+    .qe-dash thead{display:none;}
+    .qe-dash tr{border:1px solid var(--gc-line);margin-bottom:10px;}
+    .qe-dash td{border:0;border-bottom:1px solid var(--gc-line);}
+    .qe-dash td:last-child{border-bottom:0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="gc-masthead">
+  <div class="gc-inner">
+    <a class="gc-logo" href="../index.html">
+      <span class="mark">G</span>
+      <span class="word">Gateshead<small>Economic Intelligence</small></span>
+    </a>
+    <span class="spacer"></span>
+    <a class="gc-home" href="../index.html">&lsaquo; All products</a>
+  <!-- gc-menu --><span class="gc-beta" title="This site is in beta. Products and layout may change, and errors are logged in the Performance Log">Beta</span><details class="gc-menu">
+<summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
+<nav class="gc-menu-panel" aria-label="Transparency">
+<p class="gc-menu-head">Transparency</p>
+<a href="../transparency/index.html">Transparency Statement</a>
+<a href="../transparency/runbook.html">Regular Reports Runbook</a>
+<a href="../transparency/performance-log.html">Performance Log</a>
+<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
+<p class="gc-menu-head gc-menu-sep">Best Practice</p>
+<a href="../transparency/best-practice.html">General Best Practice</a>
+<a href="../transparency/best-practice-councils.html">Best Practice in Local Authorities</a>
+</nav>
+</details>
+<style>
+.gc-menu{position:relative;margin-left:12px;font-family:'PT Sans',Helvetica,Arial,sans-serif;line-height:1.3;}
+.gc-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;height:30px;padding:0 12px;
+  border:1px solid #6a7784;color:#fff;font-size:13px;font-weight:700;letter-spacing:.3px;user-select:none;white-space:nowrap;}
+.gc-menu>summary::-webkit-details-marker{display:none;}
+.gc-menu>summary:hover,.gc-menu[open]>summary{border-color:#0772b4;color:#8fd0f5;}
+.gc-menu>summary:focus-visible{outline:2px solid #8fd0f5;outline-offset:2px;}
+.gc-menu-bars{display:inline-block;width:14px;height:2px;background:currentColor;box-shadow:0 -4px 0 currentColor,0 4px 0 currentColor;}
+.gc-menu-panel{position:absolute;right:0;top:calc(100% + 6px);z-index:1000;min-width:250px;background:#fff;
+  border:1px solid #ccc;border-top:3px solid #045a90;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:6px 0;}
+.gc-menu-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6a7784;padding:6px 14px 4px;margin:0;}
+.gc-menu-sep{border-top:1px solid #e1e5ea;margin-top:6px;padding-top:10px;}
+.gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
+.gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
+.gc-beta{display:inline-flex;align-items:center;height:22px;padding:0 8px;margin-left:12px;border:1px solid #f2b84b;color:#f2b84b;
+  font-family:'PT Sans',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;line-height:1;white-space:nowrap;cursor:default;}
+.gc-beta+.gc-menu{margin-left:10px;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}.gc-beta{margin-left:auto;}.gc-beta+.gc-menu{margin-left:8px;}}
+</style>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<!-- /gc-menu -->
+  </div>
+</header>
+
+<main class="qe-wrap">
+  <div class="qe-date">Quarterly Economic Update &middot; data to September 2026</div>
+  <h1>Quarterly Economic Update, October 2026</h1>
+  <p class="qe-by">Nathaniel Adams, Economic Intelligence Analyst &middot; published 3 November 2026</p>
+  <p class="qe-lede">The quarterly update, built on the October labour market release and the new Annual Population Survey quarter. It covers everything since the September monthly edition of 21 September. The Quarterly Economic Update dashboard carries the full series behind everything below. Every figure here was pulled fresh from the official source on 3 November 2026. The headline is that economic inactivity in Gateshead fell by a statistically significant margin over the year, while the claimant count and payrolled jobs barely moved.</p>
+
+  <h2>The Month at a Glance</h2>
+
+  <!-- key-figures:start (generated by pipelines/econ-update-key-figures/build.py, do not hand-edit) -->
+<style>
+  .kf{margin:0 0 18px;}
+  .kf-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;font-size:12px;color:#6a7784;margin-bottom:8px;}
+  .kf-top b{color:var(--gc-blue-dark);}
+  .kf-key span{display:inline-flex;align-items:center;gap:5px;margin-left:12px;}
+  .kf .chip{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 6px;border:1px solid;white-space:nowrap;}
+  .kf .chip.new{background:#045a90;border-color:#045a90;color:#fff;}
+  .kf .chip.next{background:#fff;border-color:var(--gc-line-2);color:#6a7784;font-weight:400;letter-spacing:.2px;text-transform:none;}
+  .kf-hero{background:var(--gc-blue-dark);color:#fff;padding:16px 20px;display:grid;grid-template-columns:auto 1fr;gap:6px 26px;align-items:center;margin-bottom:10px;}
+  .kf-hero .lab{font-size:11.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--gc-yellow);grid-column:1/-1;display:flex;justify-content:space-between;gap:8px;}
+  .kf-hero .chip.next{background:transparent;color:#cfdbe6;border-color:#4d7393;}
+  .kf-hero .big{font-size:58px;font-weight:700;line-height:1;}
+  .kf-hero .met{font-size:14px;font-weight:700;margin-bottom:2px;}
+  .kf-hero .ctx{font-size:13px;color:#cfdbe6;line-height:1.45;}
+  .kf-bar{position:relative;height:12px;background:#2c5677;margin:10px 0 3px;}
+  .kf-bar i{position:absolute;left:0;top:0;bottom:0;background:var(--gc-yellow);}
+  .kf-bar b{position:absolute;top:-4px;bottom:-4px;width:3px;background:#fff;right:0;}
+  .kf-bar-l{font-size:11px;color:#cfdbe6;text-align:right;}
+  .kf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .kf-row{grid-column:1/-1;font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;margin:6px 0 -4px;}
+  .kf-t{border:1px solid var(--gc-line);border-top:4px solid var(--c);padding:10px 12px 9px;display:flex;flex-direction:column;background:#fff;}
+  .kf-t .lab{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--c);display:flex;justify-content:space-between;gap:6px;}
+  .kf-t .big{font-size:30px;font-weight:700;line-height:1.1;color:var(--gc-ink);margin:4px 0 2px;}
+  .kf-t .met{font-size:12.5px;font-weight:700;color:var(--gc-ink);line-height:1.3;}
+  .kf-t .ctx{font-size:12px;color:#5b6772;line-height:1.35;margin-top:2px;}
+  .kf-t svg{display:block;width:100%;height:auto;margin-top:6px;}
+  .kf .chg{font-size:12.5px;line-height:1.35;padding-top:7px;border-top:1px solid var(--gc-line);margin-top:auto;}
+  .kf-t .chg{margin-top:8px;}
+  .kf .chg .ar{font-weight:700;}
+  .kf .chg.up .ar{color:#266427;} .kf .chg.dn .ar{color:#a4331f;} .kf .chg.nd .ar{color:#5b6772;}
+  .kf-hero .chg{border-top-color:#2c5677;margin-top:6px;}
+  .kf-hero .chg .ar,.kf-hero .chg.up .ar,.kf-hero .chg.dn .ar,.kf-hero .chg.nd .ar{color:var(--gc-yellow);}
+  .kf-t.eco{--c:#045a90;} .kf-t.ppl{--c:#266427;} .kf-t.plc{--c:#7f0eba;}
+  .kf-note{font-size:11.5px;color:#6a7784;margin-top:8px;line-height:1.45;}
+  @media (max-width:820px){.kf-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.kf-grid{grid-template-columns:1fr;}.kf-hero{grid-template-columns:1fr;}.kf-hero .big{font-size:48px;}}
+</style>
+  <section class="kf" aria-label="Gateshead key figures">
+    <div class="kf-top">
+      <span><b>Gateshead key figures</b> &middot; latest published period, with the change since the period before</span>
+      <span class="kf-key"><span><span class="chip new">New</span> since the last edition</span><span><span class="chip next">Next date</span> no new data yet</span></span>
+    </div>
+    <div class="kf-hero"><div class="lab"><span>Productivity</span><span class="chip next">Next 24 Nov</span></div><div class="big">76.8</div><div><div class="met">GVA per hour worked, index UK = 100, 2023</div><div class="ctx">&pound;32.16 an hour against an England median of &pound;38.21, 256th of 296 English authorities</div><div class="kf-bar" role="img" aria-label="Gateshead at 76.8 against UK at 100"><i style="width:76.8%"></i><b></b></div><div class="kf-bar-l">UK = 100</div><div class="chg dn"><span class="ar">&#9660; &minus;0.5 points</span> on 2022 (77.3)</div></div></div>
+    <div class="kf-grid"><div class="kf-row" style="color:#045a90;">Economy</div><div class="kf-t eco"><div class="lab"><span>GVA</span><span class="chip new">New</span></div><div class="big">&pound;5,221m</div><div class="met">Total GVA, current prices, 2024</div><div class="ctx">Series high, but 4.2% below 2019 in real terms</div><div class="chg up"><span class="ar">&#9650; +&pound;154m (3.0%)</span> on 2023 (&pound;5,067m). Real terms +0.7%</div></div><div class="kf-t eco"><div class="lab"><span>Jobs</span><span class="chip next">Next 18 Nov</span></div><div class="big">95,000</div><div class="met">Employee jobs, 2024</div><div class="ctx">Broadly flat since 2015, against +10.3% in England</div><div class="chg nd"><span class="ar">&#9650; +1,000</span> on 2023 (94,000). Totals are rounded to the nearest 1,000, so read as flat</div></div><div class="kf-t eco"><div class="lab"><span>Business survival</span><span class="chip next">Next 19 Nov</span></div><div class="big">41.3%</div><div class="met">Five-year survival, businesses born in 2019</div><div class="ctx">Above England at 38.3%</div><div class="chg dn"><span class="ar">&#9660; &minus;2.5pp</span> on the 2018 cohort (43.8%)</div></div><div class="kf-row" style="color:#266427;">People</div><div class="kf-t ppl"><div class="lab"><span>Household income</span><span class="chip next">Next date not set</span></div><div class="big">&pound;19,745</div><div class="met">GDHI per head, 2024</div><div class="ctx">274th of 296 authorities, England median &pound;25,332</div><div class="chg up"><span class="ar">&#9650; +&pound;1,088 (5.8%)</span> on 2023 (&pound;18,657), current prices</div></div><div class="kf-t ppl"><div class="lab"><span>Employment</span><span class="chip new">New</span></div><div class="big">76.9%</div><div class="met">Employment rate 16&ndash;64, Jul-25 to Jun-26</div><div class="ctx">&plusmn;4.1pp, England 75.8%</div><svg viewBox="0 0 200 50" role="img" aria-label="Employment with 95% confidence intervals. Jul-24 to Jun-25 71.4% (67.0 to 75.8). Jul-25 to Jun-26 76.9% (72.8 to 81.0). England 75.8%."><line x1="137.5" y1="2" x2="137.5" y2="40" stroke="#999" stroke-dasharray="3 2"/><text x="140.5" y="9" font-size="8" fill="#6a7784">England</text><line x1="82.5" y1="16" x2="137.5" y2="16" stroke="#9fb7a0" stroke-width="2"/><circle cx="110.0" cy="16" r="3.5" fill="#9fb7a0"/><text x="2" y="19" font-size="8" fill="#6a7784">Jul-24 to Jun-25</text><line x1="118.8" y1="31" x2="170.0" y2="31" stroke="#266427" stroke-width="2"/><circle cx="144.4" cy="31" r="3.5" fill="#266427"/><text x="2" y="34" font-size="8" fill="#266427" font-weight="700">Jul-25 to Jun-26</text><text x="70" y="48" font-size="7.5" fill="#999">65%</text><text x="182" y="48" font-size="7.5" fill="#999">85%</text></svg><div class="chg nd"><span class="ar">&#9650; +5.5pp</span> on Jul-24 to Jun-25 (71.4%). Change smaller than the combined interval (&plusmn;6.0pp), so no detectable change</div></div><div class="kf-t ppl"><div class="lab"><span>Qualifications</span><span class="chip next">Next 20 Apr</span></div><div class="big">36.6%</div><div class="met">16&ndash;64s qualified to RQF4+, Jan&ndash;Dec 2025</div><div class="ctx">&plusmn;4.6pp, England 48.0%</div><svg viewBox="0 0 200 50" role="img" aria-label="Qualifications with 95% confidence intervals. Jan to Dec 2024 38.1% (33.3 to 42.9). Jan to Dec 2025 36.6% (32.0 to 41.2). England 48.0%."><line x1="182.5" y1="2" x2="182.5" y2="40" stroke="#999" stroke-dasharray="3 2"/><text x="179.5" y="9" font-size="8" fill="#6a7784" text-anchor="end">England</text><line x1="90.6" y1="16" x2="150.6" y2="16" stroke="#9fb7a0" stroke-width="2"/><circle cx="120.6" cy="16" r="3.5" fill="#9fb7a0"/><text x="2" y="19" font-size="8" fill="#6a7784">Jan&ndash;Dec 2024</text><line x1="82.5" y1="31" x2="140.0" y2="31" stroke="#266427" stroke-width="2"/><circle cx="111.2" cy="31" r="3.5" fill="#266427"/><text x="2" y="34" font-size="8" fill="#266427" font-weight="700">Jan&ndash;Dec 2025</text><text x="70" y="48" font-size="7.5" fill="#999">30%</text><text x="182" y="48" font-size="7.5" fill="#999">50%</text></svg><div class="chg nd"><span class="ar">&#9660; &minus;1.5pp</span> on Jan&ndash;Dec 2024 (38.1%). Change smaller than the combined interval (&plusmn;6.6pp), so no detectable change</div></div><div class="kf-row" style="color:#7f0eba;">Place and Young People</div><div class="kf-t plc"><div class="lab"><span>Deprivation</span><span class="chip next">No date set</span></div><div class="big">19.0%</div><div class="met">Neighbourhoods in England's most deprived 10%, IMD2025</div><div class="ctx">A relative ranking, so this measures position against other areas</div><div class="chg dn"><span class="ar">&#9650; +2.3pp</span> on IMD2019 (16.7%), a worse relative position</div></div><div class="kf-t plc"><div class="lab"><span>Claimants</span><span class="chip new">New</span></div><div class="big">5,050</div><div class="met">Claimant count, Sep-26</div><div class="ctx">4.0% of residents aged 16&ndash;64, England 4.1%</div><svg viewBox="0 0 200 40" role="img" aria-label="Claimant rate, Gateshead, Sep-24 to Sep-26, from 4.5% to 4.0%, low of 3.8%"><polyline points="4.0,6.9 11.7,9.8 19.3,12.7 27.0,15.6 34.7,15.6 42.3,12.7 50.0,15.6 57.7,15.6 65.3,15.6 73.0,18.4 80.7,21.3 88.3,21.3 96.0,24.2 103.7,27.1 111.3,27.1 119.0,27.1 126.7,27.1 134.3,21.3 142.0,21.3 149.7,24.2 157.3,24.2 165.0,21.3 172.7,24.2 180.3,21.3 188.0,21.3" fill="none" stroke="#7f0eba" stroke-width="1.8"/><circle cx="188.0" cy="21.3" r="3" fill="#7f0eba"/><text x="4" y="39" font-size="7.5" fill="#999">Sep-24</text><text x="196" y="39" font-size="7.5" fill="#999" text-anchor="end">Sep-26</text></svg><div class="chg dn"><span class="ar">&#9650; +60 (1.2%)</span> on Aug-26 (4,990). +115 on Sep-25</div></div><div class="kf-t plc"><div class="lab"><span>NEET</span><span class="chip next">Next summer 2027</span></div><div class="big">4.8%</div><div class="met">16&ndash;17s NEET or activity not known, 2026</div><div class="ctx">Below England at 5.8%, 77th of 152 authorities</div><div class="chg up"><span class="ar">&#9660; &minus;0.1pp</span> on 2025 (4.9%)</div></div></div>
+    <p class="kf-note">Arrows show which way the number moved. Green means the change is good for Gateshead, red means it is bad, and grey means the change is within the survey's margin of error or the published rounding. The survey tiles compare with the same period a year earlier, and their lines are 95% confidence intervals. Sources are <a href="https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/labourproductivity/datasets/subregionalproductivitylabourproductivityindicesbylocalauthoritydistrict/current/labourproductivitylad1.xls">ONS subregional productivity</a>, <a href="https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiesbyitl1region/tlcnortheast/regionalgrossvalueaddedbalancedbyindustrylocalauthoritiestlcnortheast.xlsx">ONS regional GVA (balanced) by industry</a>, <a href="https://www.ons.gov.uk/explore-local-statistics/indicators/gross-disposable-household-income-per-head">ONS regional GDHI</a>, <a href="https://www.nomisweb.co.uk/datasets/newbres6pub">BRES via NOMIS</a> (employees), <a href="https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/datasets/businessdemographyreferencetable">ONS Business Demography</a>, the <a href="https://www.nomisweb.co.uk/datasets/apsnew">Annual Population Survey via NOMIS</a>, the <a href="https://www.nomisweb.co.uk/datasets/ucjsa">claimant count via NOMIS</a> (not seasonally adjusted), <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025">MHCLG Indices of Deprivation 2025</a> and <a href="https://explore-education-statistics.service.gov.uk/find-statistics/participation-in-education-training-and-neet-age-16-to-17-by-local-authority">DfE participation and NEET statistics</a>. Ranks are our own calculation against all English authorities. Every figure was pulled from source on 3 November 2026.</p>
+  </section>
+<!-- key-figures:end -->
+
+
+  <table class="qe-dash">
+    <thead>
+      <tr><th>Priority</th><th>What</th><th>What changed?</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#inactivity">Economic inactivity</a></td>
+        <td>Down to 18.3% (&plusmn;3.7pp), a statistically significant fall on the year, and below the North East</td>
+        <td>Employability colleagues to treat it as encouraging but not settled</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#housing">Housing market</a></td>
+        <td>Prices up 4.4% on the year against 0.4% for England, while house building is the weakest part of construction nationally</td>
+        <td>Housing and planning colleagues will want to know</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#prices">Cost of living</a></td>
+        <td>CPIH up to 3.6%, so pay is only just ahead of prices</td>
+        <td>Nothing new for us this quarter</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#claimants">Claimant count</a></td>
+        <td>5,050 in September, 4.0% of residents aged 16-64, level with England and above the North East</td>
+        <td>Nothing new for us this quarter</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#jobs">Employment and payrolled jobs</a></td>
+        <td>No detectable change in the employment rate. Payrolled employees down 405 on the year</td>
+        <td>Nothing new for us this quarter</td>
+      </tr>
+      <tr>
+        <td><span class="rag r">Red</span></td>
+        <td><a href="#business">Business conditions</a></td>
+        <td>North East business activity growing again at 52.0. Manufacturers face rising input costs, and the electricity cost scheme closes on 30 November</td>
+        <td>Business support colleagues to reach eligible manufacturers before 30 November</td>
+      </tr>
+      <tr>
+        <td><span class="rag g">Green</span></td>
+        <td><a href="#standing">Pension-age claimants</a></td>
+        <td>No update, as there is still no current source we can pull</td>
+        <td>None</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="qe-actions">
+    <h3>Top actions this quarter</h3>
+    <ol>
+      <li>Business support colleagues can point eligible Gateshead manufacturers to the British Industrial Competitiveness Scheme, which cuts electricity costs for energy-intensive firms. Applications close at 11:59pm on <span class="by">30 November</span> (<a href="https://www.gov.uk/government/publications/british-industrial-competitiveness-scheme-business-guidance">business guidance</a>)</li>
+    </ol>
+  </div>
+
+  <div class="qe-tblwrap">
+  <table class="qe-tbl">
+    <caption style="caption-side:top;text-align:left;font-size:12px;color:#6a7784;padding-bottom:6px;">Indicator Table. Gateshead, North East and England, latest period for each row.</caption>
+    <thead>
+      <tr><th>Indicator</th><th>Period</th><th class="num">Gateshead</th><th class="num">North East</th><th class="num">England</th><th class="num">Change on quarter</th><th class="num">Change on year</th><th class="num">95% CI (Gateshead)</th><th>Real change?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Claimants as a proportion of residents aged 16-64</td><td>Sep-26</td><td class="num">4.0%</td><td class="num">3.7%</td><td class="num">4.1%</td><td class="num">0.0pp</td><td class="num">+0.1pp</td><td class="num">None (count)</td><td>Administrative count</td></tr>
+      <tr><td>Claimant count</td><td>Sep-26</td><td class="num">5,050</td><td class="num">63,515</td><td class="num">1,493,875</td><td class="num">+60</td><td class="num">+115</td><td class="num">None (count)</td><td>Administrative count</td></tr>
+      <tr><td>Employment rate, aged 16-64</td><td>Jul-25 to Jun-26</td><td class="num">76.9%</td><td class="num">71.8%</td><td class="num">75.8%</td><td class="num">+4.5pp</td><td class="num">+5.5pp</td><td class="num">&plusmn;4.1pp</td><td>No</td></tr>
+      <tr><td>Unemployment rate, aged 16+</td><td>Jul-25 to Jun-26</td><td class="num">5.8%</td><td class="num">5.0%</td><td class="num">4.6%</td><td class="num">&minus;1.0pp</td><td class="num">&minus;0.4pp</td><td class="num">&plusmn;2.4pp</td><td>No</td></tr>
+      <tr><td>Economic inactivity rate, aged 16-64</td><td>Jul-25 to Jun-26</td><td class="num">18.3%</td><td class="num">24.3%</td><td class="num">20.5%</td><td class="num">&minus;4.1pp</td><td class="num">&minus;5.7pp</td><td class="num">&plusmn;3.7pp</td><td>Yes on the year, not on the quarter</td></tr>
+      <tr><td>% of economically inactive who are long-term sick, aged 16-64</td><td>Jul-25 to Jun-26</td><td class="num">32.6%</td><td class="num">36.3%</td><td class="num">28.2%</td><td class="num">&minus;0.4pp</td><td class="num">&minus;0.3pp</td><td class="num">&plusmn;10.7pp</td><td>No</td></tr>
+      <tr><td>Payrolled employees, seasonally adjusted</td><td>Aug-26</td><td class="num">86,302</td><td class="num">1,120,076</td><td class="num">Not published</td><td class="num">&minus;146</td><td class="num">&minus;405</td><td class="num">None (count)</td><td>Administrative count</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:12px;color:#6a7784;margin:4px 0 18px;">Source: ONS claimant count (NOMIS NM_162_1, not seasonally adjusted), Sep-26; ONS Annual Population Survey (NOMIS NM_17_5), Jul-25 to Jun-26; ONS Earnings and employment from PAYE Real Time Information, September 2026 tables, sheets 7 and 19. Quarter changes compare Jun-26 for the claimant count, Apr-25 to Mar-26 for the survey and May-26 for payrolled employees. A change is called real only where it is larger than the combined 95% interval of the two periods.</p>
+
+  <h2>The Labour Market</h2>
+
+  <div class="qe-item g" id="inactivity">
+    <h3><span class="rag g">Green</span>Economic Inactivity Has Fallen, and the Fall Is Statistically Significant</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead&rsquo;s economic inactivity rate for people aged 16-64 for Jul-25 to Jun-26 is 18.3% (&plusmn;3.7pp), down from 24.0% (&plusmn;4.1pp) a year earlier (<a href="https://www.nomisweb.co.uk/datasets/apsnew">ONS, Annual Population Survey, via NOMIS</a>). The North East is 24.3% (&plusmn;1.1pp) and England 20.5% (&plusmn;0.3pp). The share of inactive people who are long-term sick is 32.6% (&plusmn;10.7pp), against 36.3% (&plusmn;2.4pp) for the North East and 28.2% (&plusmn;0.7pp) for England.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The fall of 5.7 percentage points is just larger than the combined interval of the two years, so it is statistically significant, and Gateshead is now significantly below the North East. We cannot say whether it is above or below England. The change on the quarter is not statistically established, and the long-term sick share has not moved by anything we can detect. One year of a small survey can swing like this, and since August the survey is published as official statistics that are no longer accredited, so the fall needs to hold for another period before it is treated as settled.</dd>
+      <dt>What should we do?</dt>
+      <dd>Employability colleagues can treat this as an encouraging sign, but not yet as evidence that the position has changed. The next survey quarter lands on 19 January 2027.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item g" id="claimants">
+    <h3><span class="rag g">Green</span>The Claimant Count Is Level With England and Has Barely Moved</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead&rsquo;s claimant count for Sep-26 is 5,050, and claimants as a proportion of residents aged 16-64 is 4.0% (<a href="https://www.nomisweb.co.uk/datasets/ucjsa">ONS, claimant count, via NOMIS</a>, not seasonally adjusted). That compares with 4,990 in Jun-26 and 4,935 in Sep-25. The North East is at 3.7% and England at 4.1%. The August figure has been revised down from the 5,100 published in September to 4,990.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The rate is unchanged on the quarter and up 0.1 percentage points on the year. Gateshead stays above the North East and close to England, as it has been. The revision to August means the sharp July to August rise reported in the September edition was smaller than first published.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing new for us this quarter.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item g" id="jobs">
+    <h3><span class="rag g">Green</span>No Detectable Change in Employment, and Payrolled Jobs Down Slightly</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead&rsquo;s employment rate for people aged 16-64 for Jul-25 to Jun-26 is 76.9% (&plusmn;4.1pp), up from 71.4% (&plusmn;4.4pp) a year earlier, against the North East at 71.8% (&plusmn;1.1pp) and England at 75.8% (&plusmn;0.3pp). The unemployment rate for people aged 16 and over is 5.8% (&plusmn;2.4pp), against 6.2% (&plusmn;2.6pp) a year earlier. Gateshead&rsquo;s count of payrolled employees for Aug-26 is 86,302, down from 86,448 in May-26 and 86,707 in Aug-25 (<a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/realtimeinformationstatisticsreferencetableseasonallyadjusted">ONS, PAYE Real Time Information</a>, seasonally adjusted). The North East fell from 1,126,245 to 1,120,076 over the same year.</dd>
+      <dt>Why it matters?</dt>
+      <dd>The rise in the employment rate is inside the combined interval, so it is not statistically established, and unemployment has not changed by anything we can detect. Gateshead&rsquo;s employment rate is significantly above the North East&rsquo;s and cannot be told apart from England&rsquo;s. The payroll figures have no sampling error, and they show approximately 0.5% fewer payrolled jobs than a year ago, the same rate of fall as the region and the UK, which fell approximately 0.5% over the same year in the same tables (<a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/realtimeinformationstatisticsreferencetableseasonallyadjusted">ONS, PAYE Real Time Information, September 2026 tables</a>). The local payroll series next updates on 15 December.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing new for us this quarter.</dd>
+    </dl>
+  </div>
+
+  <h2>Standing Local Indicators</h2>
+
+  <div class="qe-item g" id="housing">
+    <h3><span class="rag g">Green</span>House Prices Are Rising Faster Than England&rsquo;s</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Gateshead&rsquo;s average house price for Aug-26 is &pound;156,036, up 4.4% on the year and down 0.2% on the month (<a href="https://landregistry.data.gov.uk/app/ukhpi">HM Land Registry, UK House Price Index</a>). The North East is &pound;165,640, up 3.2%, and England &pound;293,525, up 0.4%. Gateshead had 60 permanent dwellings started and 80 completed in Apr-26 to Jun-26, against 60 and 100 a year earlier (<a href="https://www.gov.uk/government/statistical-data-sets/live-tables-on-house-building">MHCLG, live table 253a</a>).</dd>
+      <dt>Why it matters?</dt>
+      <dd>Prices here are rising much faster than England&rsquo;s from a level a little over half of it, so the gap is narrowing. Starts are the same as a year earlier. Housing was again the weakest part of construction nationally in September, with the house building index at 40.7, where 50 means no change (<a href="https://www.pmi.spglobal.com/Public/Release/PressReleases?language=en">S&amp;P Global UK Construction PMI</a>, 6 October 2026). Quarterly starts in Gateshead are small numbers and move a lot, so one quarter says little on its own.</dd>
+      <dt>What should we do?</dt>
+      <dd>Housing and planning colleagues will want to know that prices are rising faster here than nationally.</dd>
+    </dl>
+  </div>
+
+  <div class="qe-item g" id="standing">
+    <h3><span class="rag g">Green</span>Pension-Age Claimants Are Not Updated This Quarter</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>Nothing. The NOMIS state pension claimant series stopped updating in November 2018, and there is still no current source we can pull without a licence key.</dd>
+      <dt>Why it matters?</dt>
+      <dd>Rather than quote an old number with a current label, the row stays blank until a free source is in place.</dd>
+      <dt>What should we do?</dt>
+      <dd>None.</dd>
+    </dl>
+  </div>
+
+  <h2>Cost of Living</h2>
+
+  <div class="qe-item g" id="prices">
+    <h3><span class="rag g">Green</span>Inflation Has Climbed to 3.6%, and Pay Is Only Just Ahead</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The UK&rsquo;s CPIH annual rate for Sep-26 is 3.6%, up from 3.3% in Aug-26, and CPI is 3.5% (<a href="https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest">ONS, consumer price inflation</a>, 21 October 2026). Motor fuels made the largest upward contribution. Regular pay across the economy grew 3.7% in the year to Jun-26 to Aug-26, which is 0.6% in real terms after CPIH (<a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest">ONS, labour market overview</a>, 20 October 2026). Gateshead&rsquo;s provisional median gross weekly pay for full-time employees living in the borough for 2026 is &pound;735.60 (<a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/placeofresidencebylocalauthorityashetable8">ONS, ASHE 2026 provisional, table 8</a>), and we can be 95% confident it lies between approximately &pound;681 and &pound;790. The North East is &pound;732.50 and England &pound;815.50, so Gateshead is below England and cannot be told apart from the region.</dd>
+      <dt>Why it matters?</dt>
+      <dd>With prices rising faster again and pay growth flat, the real gain in pay is small. The Budget&rsquo;s &pound;100 Household Energy Payment for homes in council tax bands A to D starts in January, and approximately 96% of Gateshead&rsquo;s homes are in those bands (<a href="https://www.gov.uk/government/statistics/council-tax-stock-of-properties-2025">VOA, Council Tax stock of properties</a>, at 9 September 2025). MHCLG&rsquo;s council tax information letter 6/2026 says councils are expected to start paying from January 2027.</dd>
+      <dt>What should we do?</dt>
+      <dd>Nothing new for us this quarter.</dd>
+    </dl>
+  </div>
+
+  <h2>Business Conditions and National Context</h2>
+
+  <div class="qe-item r" id="business">
+    <h3><span class="rag r">Red</span>North East Business Activity Is Growing Again, While Manufacturers Face Rising Costs</h3>
+    <dl>
+      <dt>What changed?</dt>
+      <dd>The North East&rsquo;s business activity index for Sep-26 is 52.0, a renewed increase in output (<a href="https://www.pmi.spglobal.com/Public/Release/PressReleases?language=en">NatWest UK Regional Growth Tracker</a>, 14 October 2026). Nationally, the S&amp;P Global UK Manufacturing PMI for Oct-26 is 52.8, a five-month high, up from 51.9. The UK Services PMI business activity index for Sep-26 is 52.1, down from 52.5. The UK Construction PMI for Sep-26 is 46.1, up from 44.3, with house building at 40.7 and commercial building at 48.5, and civil engineering also falling more slowly. These are business surveys where 50 means no change on the month. UK GDP grew 0.7% in the three months to Aug-26 (<a href="https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/latest">ONS, GDP monthly estimate</a>). UK vacancies fell 21,000 to 691,000 in Jul-26 to Sep-26. Producer input prices rose 8.3% and factory gate prices 4.6% in the year to Sep-26 (<a href="https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/producerpriceinflation/latest">ONS, producer price inflation</a>).</dd>
+      <dt>Why it matters?</dt>
+      <dd>The regional tracker is the only one of these surveys with a North East figure, and it points to renewed growth in the region. The national surveys describe rising output with rising costs. Manufacturers&rsquo; input costs are growing almost twice as fast as the prices they charge, which squeezes margins, and hiring is flat in manufacturing and still falling in services and construction. The Manufacturing PMI survey closed before the Budget. The latest Business Insights and Conditions Survey bulletin could not be reached when this edition was built, so it is not quoted.</dd>
+      <dt>What should we do?</dt>
+      <dd>Business support colleagues can point eligible manufacturers to the British Industrial Competitiveness Scheme before applications close on 30 November.</dd>
+    </dl>
+  </div>
+
+  <h2>What to Watch</h2>
+
+  <table class="qe-watch">
+    <tbody>
+      <tr><td>5 November</td><td>Bank of England interest rate decision, with the Monetary Policy Report</td></tr>
+      <tr><td>11 November</td><td>NatWest UK Regional Growth Tracker, North East business activity for October</td></tr>
+      <tr><td>12 November</td><td>GDP first quarterly estimate for Jul to Sep 2026</td></tr>
+      <tr><td>17 November</td><td>UK labour market, carrying the October claimant count</td></tr>
+      <tr><td>18 November</td><td>BRES, provisional 2025 and revised 2024, employee jobs by sector for Gateshead, plus consumer price inflation and private rent and house prices for October</td></tr>
+      <tr><td>19 November</td><td>Business demography 2025 (provisional)</td></tr>
+      <tr><td>24 November</td><td>Regional and subregional labour productivity, 2024</td></tr>
+      <tr><td>30 November</td><td>British Industrial Competitiveness Scheme applications close</td></tr>
+      <tr><td>15 December</td><td>PAYE Real Time Information local authority update, the next payrolled employee figure for Gateshead</td></tr>
+      <tr><td>19 January 2027</td><td>UK labour market, with the next Annual Population Survey quarter</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:#41505e;margin:6px 0 18px;">Every forward date we track, with its source, is on the <a href="../horizon/index.html">Horizon Calendar</a>.</p>
+
+  <div class="qe-note">
+    <b>Reading the figures.</b> The Annual Population Survey figures are estimates from a sample, so each carries a 95% confidence interval, shown as &plusmn; percentage points. The survey periods are rolling 12-month windows, so a change on the quarter compares two windows that share nine months of the same sample, which is why the series looks steady and then jumps. The claimant count and payrolled employees are administrative counts with no sampling interval, though both are revised after first publication. The claimant rate is claimants as a proportion of residents aged 16-64, and the national comparator is England. The full series are on the Quarterly Economic Update dashboard. Questions and feedback go to the <a href="https://forms.office.com/e/LMB2iNikwJ">QEU Queries &amp; Feedback form</a>.
+  </div>
+
+</main>
+
+<footer class="gc-footer">
+  <div class="gc-inner">
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; sources: ONS, NOMIS, HM Land Registry, MHCLG, VOA, S&amp;P Global and NatWest. Not official statistics.
+  </div>
+</footer>
+
+</body>
+</html>

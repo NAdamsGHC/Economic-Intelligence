@@ -225,14 +225,16 @@
      ],
      "2026-10": [
       {
-       "label": "BIG · Thu 29",
+       "label": "BIG · Thu 29 · pub Tue 3 Nov",
        "kind": "big",
-       "status": "next"
+       "status": "released",
+       "href": "briefs/economic-update-2026-10.html"
       }
      ],
      "2026-11": [
       {
-       "label": "Thu 19"
+       "label": "Thu 19",
+       "status": "next"
       }
      ],
      "2026-12": [
@@ -901,6 +903,42 @@
    ]
   },
   {
+   "id": "economic-update-2026-10",
+   "title": "Quarterly Economic Update, October 2026",
+   "path": "briefs/economic-update-2026-10.html",
+   "topic": "Economic Update",
+   "description": "The October quarterly update, built on the October labour market release and the Jul-25 to Jun-26 Annual Population Survey quarter, published five days late. Gateshead's 16-64 economic inactivity rate is 18.3% (plus or minus 3.7 points), down from 24.0% a year earlier, a statistically significant fall that puts the borough below the North East. The claimant count for September 2026 is 5,050, 4.0% of residents aged 16-64, level with England. The employment rate rise is not statistically established, and payrolled employees are down 405 on the year to 86,302. House prices are up 4.4% on the year against 0.4% for England, CPIH is 3.6%, and North East business activity is growing again at 52.0 on the NatWest tracker. With the key figures infographic, an indicator table with intervals and a what-to-watch list.",
+   "sources": "ONS claimant count and Annual Population Survey via NOMIS (NM_162_1, NM_17_5); ONS PAYE Real Time Information, September 2026 tables; HM Land Registry UK House Price Index, August 2026; MHCLG live table 253a; ONS consumer price inflation, labour market overview, GDP monthly estimate and producer price inflation, October 2026; S&P Global UK Manufacturing, Services and Construction PMIs and the NatWest UK Regional Growth Tracker; ONS ASHE 2026 provisional; VOA Council Tax stock of properties. All figures quoted as published, pulled 3 November 2026.",
+   "series": "economic-update",
+   "date": "2026-10-29",
+   "keywords": [
+    "economic update",
+    "quarterly",
+    "qeu",
+    "labour market",
+    "claimant count",
+    "annual population survey",
+    "economic inactivity",
+    "employment rate",
+    "unemployment",
+    "long-term sick",
+    "payrolled employees",
+    "paye rti",
+    "house prices",
+    "house building",
+    "cost of living",
+    "cpih",
+    "inflation",
+    "pay",
+    "pmi",
+    "natwest regional growth tracker",
+    "gdp",
+    "vacancies",
+    "producer prices",
+    "key figures"
+   ]
+  },
+  {
    "id": "economic-update-2026-09",
    "title": "Monthly Economic Update, September 2026",
    "path": "briefs/economic-update-2026-09.html",
@@ -1486,5 +1524,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-11-03T08:51:00+00:00"
+ "updated_at": "2026-11-03T10:01:00+00:00"
 }

@@ -2949,6 +2949,14 @@
    "added": 9,
    "changed": 3,
    "removed": 0
+  },
+  {
+   "date": "2026-11-03",
+   "run": "economic-update-2026-10",
+   "note": "Refresh from the October 2026 Quarterly Economic Update. Every forward date the edition carries (5, 11, 12, 17, 18, 19 and 24 November, 15 December and 19 January 2027) was already held and was verified on 2 or 3 November. The PAYE local authority sheet confirms its next update on 15 December, which sits with the December labour market item. Nothing added, moved or retired.",
+   "added": 0,
+   "changed": 0,
+   "removed": 0
   }
  ],
  "archive": [
