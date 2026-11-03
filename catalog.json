@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "30 October 2026",
+ "updated": "3 November 2026",
  "schedule": {
-  "updated": "26 October 2026",
+  "updated": "3 November 2026",
   "months": [
    {
     "id": "2026-07",
@@ -148,7 +148,12 @@
      ],
      "2026-11": [
       {
-       "label": "Mon 2",
+       "label": "Mon 2 · pub Tue 3",
+       "status": "released",
+       "href": "briefs/whats-new-2026-11-03.html"
+      },
+      {
+       "label": "Mon 9",
        "status": "next"
       },
       {
@@ -598,6 +603,50 @@
     "bics",
     "jobs guarantee",
     "uk business counts",
+    "departmental log",
+    "rag"
+   ]
+  },
+  {
+   "id": "whats-new-2026-11-03",
+   "title": "What's New, 3 November 2026",
+   "path": "briefs/whats-new-2026-11-03.html",
+   "topic": "What's New",
+   "description": "A catch-up edition covering the nine days from 26 October to 3 November, which takes in the Budget on 28 October. Gateshead is allocated £1.91 million from the new Derelict Buildings Fund. The Fiscal Devolution Roadmap names the North East in the first wave of mayoral business rates retention zones and gives mayors a 20% share of retained business rates from 2027. Business rates multipliers for 2027/28 are set, with higher Small Business Rates Relief thresholds for small firms and a bill cap for qualifying retail, hospitality and leisure premises of any size. Also the national design rules for the Overnight Visitor Levy, Hope on the High Street with rental auction funding opening the week of 23 November, the updated 2026 Green Book with a 3.00% discount rate, the £100 Household Energy Payment paid through councils from January 2027, and a North East NEET rate of 20.3% (plus or minus 3.7 points) from DWP, significantly above England and estimated to be the highest of England's regions. No reds this week. The complete departmental log carries 326 rows from the four subscribed gov.uk feeds, folded away rather than cut.",
+   "sources": "MHCLG, Derelict Buildings Fund methodology note and interim guidance, business rates information letter 8/2026, council tax information letter 6/2026, Hope on the High Street and the High Street Rental Auctions Fund prospectus, 28 to 30 October 2026; HM Treasury, Budget 2026, Fiscal Devolution Roadmap, Northern Growth Strategy government response, The Green Book 2026 and the discount rate review response, 28 October 2026; OBR, Economic and Fiscal Outlook, October 2026; BIST, Strategic Sites Accelerator announcement, 2 November 2026; VOA, Council Tax stock of properties supplementary table, 9 September 2025; DWP, Get Britain Working: Labour Market Insights October 2026; ONS, Business demography, quarterly, July to September 2026, local breakdown; MHCLG, local government reorganisation announcement, 29 October 2026; DfT, Everitt Review terms of reference, 3 November 2026; gov.uk publications from No.10, the Cabinet Office and HM Treasury; gov.uk departmental feeds for DBT, DWP, MHCLG and DfE. All figures quoted as published, pulled 3 November 2026.",
+   "series": "whats-new",
+   "date": "2026-11-03",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "budget",
+    "derelict buildings fund",
+    "fiscal devolution",
+    "business rates",
+    "business rates retention",
+    "multipliers",
+    "small business rates relief",
+    "retail hospitality leisure",
+    "visitor levy",
+    "high streets",
+    "rental auctions",
+    "northern growth",
+    "strategic sites",
+    "green book",
+    "discount rate",
+    "household energy payment",
+    "council tax",
+    "neet",
+    "young people",
+    "universal credit",
+    "business demography",
+    "trading allowance",
+    "local government reorganisation",
+    "transport",
+    "ppn 026",
+    "social value",
     "departmental log",
     "rag"
    ]
@@ -1437,5 +1486,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-10-30T12:00:00+00:00"
+ "updated_at": "2026-11-03T08:51:00+00:00"
 }
