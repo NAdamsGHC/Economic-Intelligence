@@ -558,6 +558,30 @@
    "what": "The summary said the cash ISA limit stays at £20,000 without saying a planned cut to £12,000 had been cancelled, and described Your First Home without saying it is for new-build homes",
    "fix": "Both lines corrected, with a dated correction note at the top of the page",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-44",
+   "found": "2026-10-30",
+   "product": "Budget 2026 economic analysis, 3 to 4 page version, draft of 30 October 2026",
+   "stage": "Draft",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The first 3 to 4 page draft gave Gateshead's SEND grant and uncovered amount without saying the government reimburses 90% of deficits to the end of 2025-26 with no commitment after that, attributed the Treasury's finding on lower-income households to the OBR, and said Gateshead would benefit from basic rate income tax while also saying nothing flows to councils",
+   "fix": "SEND logic stated, claims attributed and the income tax paragraph rewritten before the document went further",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-45",
+   "found": "2026-10-30",
+   "product": "Budget 2026 economic analysis, 3 to 4 page version, draft of 30 October 2026",
+   "stage": "Draft",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The draft said the documents do not say whether the mayor's 20% comes from the central or local share, when the OBR says the growth accrues to mayors rather than central government. It also said miles driven are not published locally, when road traffic data is published by local authority, and listed two exclusions from the Treasury's distributional analysis when the £100 payment is also outside it",
+   "fix": "Corrected in the version Nathaniel finalised on 30 October 2026",
+   "status": "Closed"
   }
  ]
 }
