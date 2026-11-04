@@ -185,7 +185,7 @@ def library_evals():
 <p>The library holds {lib['documents']} documents ({lib['current']} current and {lib['superseded']} superseded), split into {lib['passages']:,} passages.</p>
 """,
            f"""<h2>How the Test Works</h2>
-<p>The test is a fixed set of {t['answerable'] + t['supersession'] + t['no_answer']} questions, each worded differently from the document so that it tests meaning and not just matching words.</p>
+<p>The test is a set of {t['answerable'] + t['supersession'] + t['no_answer']} questions, each worded differently from the document so that it tests meaning and not just matching words. Questions are added whenever documents are, and the settings are re-tested each time.</p>
 <ul>
 <li><b>{t['answerable']} answerable questions</b> – each has an answer key naming the document and page that answers it. Where the answer is a value, the passage must contain the value itself, so a passage from the right page that has lost the number does not count</li>
 <li><b>{t['supersession']} edition questions</b> – the current edition must be found, and the older edition must be recorded as superseded by it</li>
@@ -195,7 +195,8 @@ def library_evals():
 """,
            f"""<h2>Current Scores</h2>
 <div class="tp-tiles">
-<div><b>{frac(c['top5'])}</b><span>answerable questions with a correct passage in the top five</span></div>
+<div><b>{frac(c['top8'])}</b><span>answerable questions with a correct passage in the top eight, the results the team reads</span></div>
+<div><b>{frac(c['top5'])}</b><span>with a correct passage in the top five</span></div>
 <div><b>{frac(c['top1'])}</b><span>with a correct passage first</span></div>
 <div><b>{frac(c['supersession'])}</b><span>edition questions passed</span></div>
 <div><b>{frac(c['no_answer'])}</b><span>unanswerable questions flagged</span></div>
@@ -204,12 +205,16 @@ def library_evals():
 <p>Mean reciprocal rank, which averages how near the top the first correct passage sits (1 means always first), is {c['mrr']}. Wrongly telling the team an answer is missing is the more harmful mistake, because it stops the search, so the flag is set to fire only when two separate measures agree.</p>
 """]
     rows = "".join(
-        f"<tr><td>{r['n']}</td><td>{esc(r['change'])}</td><td>{r['top5']} of {t['answerable']}</td>"
-        f"<td>{r['top1']} of {t['answerable']}</td><td>{r['mrr']}</td><td>{esc(r['decision'])}</td></tr>"
+        f"<tr><td>{r['n']}</td><td>{esc(r['change'])}</td><td>{r['top5']} of {r.get('of', t['answerable'])}</td>"
+        f"<td>{r['top1']} of {r.get('of', t['answerable'])}</td><td>{r['mrr']}</td><td>{esc(r['decision'])}</td></tr>"
         for r in d["runs"])
     first = [r["n"] for r in d["runs"] if r["key"] == "first"]
+    grown = [r["n"] for r in d["runs"] if r.get("of", t["answerable"]) != d["runs"][0].get("of", t["answerable"])]
+    grown_note = (f" From run {grown[0]} the library and the test are larger, so those scores are out of a larger total and"
+                  " are not directly comparable with earlier runs either. Adding documents is not a setting, so a fall"
+                  " it causes is recorded, not reverted.") if grown else ""
     out.append(f"""<h2>Score History</h2>
-<p>Each change is tested against the previous score. A change that lowers the score is reverted. Runs {first[0]} to {first[-1]} used the first answer key, before verification corrected it, so their scores are not directly comparable with the later runs.</p>
+<p>Each change to a setting is tested against the previous score, and one that lowers it is reverted. Runs {first[0]} to {first[-1]} used the first answer key, before verification corrected it, so their scores are not directly comparable with the later runs.{grown_note}</p>
 <div class="tp-scroll"><table class="tp-table plain"><thead><tr><th>Run</th><th>Change tested</th><th>Correct in top five</th><th>Correct first</th><th>Mean reciprocal rank</th><th>Decision</th></tr></thead><tbody>{rows}</tbody></table></div>
 """)
     links = ", ".join(f'<a href="performance-log.html#{e}">{e}</a>' for e in d["log_entries"])
