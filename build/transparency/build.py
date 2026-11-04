@@ -222,7 +222,7 @@ def library_evals():
 <ul>
 <li>It tests whether the right passage is found, not whether a written answer built from it is correct. Answers are checked separately by the verification step before any product ships</li>
 <li>The settings were chosen using this same set of questions, so the scores are likely to flatter the library a little until new questions confirm them</li>
-<li>The not-in-library flag rests on seven questions, which is too few to rely on. The team is told to read the passages every time, whatever the flag says</li>
+<li>The not-in-library flag rests on seven questions, which is too few to rely on, and it catches fewer of them as the library grows, because related material exists for more questions. The team is told to read the passages every time, whatever the flag says</li>
 <li>Tables are the weakest point. The second model reads flattened tables badly, so passages it marks down but the first-stage search ranked highly are returned as extra results</li>
 </ul>
 <h2>Errors Found While Building It</h2>
