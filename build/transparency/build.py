@@ -3,6 +3,7 @@
     transparency/index.html                   from statement.body.html
     transparency/runbook.html                 from runbook.body.html
     transparency/performance-log.html         generated from transparency/performance-log.json
+    transparency/library-evals.html           generated from transparency/library-evals.json
     transparency/best-practice.html           from best-practice.body.html
     transparency/best-practice-councils.html  from best-practice-councils.body.html
 
@@ -56,7 +57,7 @@ SHELL = """<!DOCTYPE html>
 
 <footer class="gc-footer">
   <div class="gc-inner">
-    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a> &middot; <a href="best-practice.html">General Best Practice</a> &middot; <a href="best-practice-councils.html">Best Practice in Local Authorities</a>
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a> &middot; <a href="library-evals.html">Document Library Evaluation</a> &middot; <a href="best-practice.html">General Best Practice</a> &middot; <a href="best-practice-councils.html">Best Practice in Local Authorities</a>
   </div>
 </footer>
 
@@ -164,6 +165,74 @@ def performance_log():
          "\n".join(out))
 
 
+def library_evals():
+    d = json.loads((OUT / "library-evals.json").read_text(encoding="utf-8"))
+    c, t, lib = d["current"], d["test"], d["library"]
+    frac = lambda p: f"{p[0]} of {p[1]}"  # noqa: E731
+    out = [f"""<p class="tp-kicker">Transparency</p>
+<h1>Document Library Evaluation</h1>
+<p class="tp-byline">Last updated {nice_date(d['updated'])}</p>
+<p class="tp-lede">The AI team keeps a searchable library of published documents, such as government guidance, strategies and evidence reviews, so it can find the right passage instead of relying on memory. This page reports how well that search works, measured by a fixed test that is re-run after every change.</p>
+""",
+           f"""<h2>What the Library Does</h2>
+<ul>
+<li>Whole documents are split into passages and indexed two ways, by the words they contain and by what they mean. A second model then reads the question alongside each candidate passage and puts the best answers first</li>
+<li>Every passage keeps its document, page, edition and date, so anything the team takes from it can be cited and checked</li>
+<li>When a newer edition of a document arrives, the older one is marked superseded and drops out of normal searches</li>
+<li>Figures found in a document are treated as leads only. They are always re-pulled from the official source before they are quoted</li>
+<li>It holds published documents only, not our own products, and everything runs locally at no cost</li>
+</ul>
+<p>The library holds {lib['documents']} documents ({lib['current']} current and {lib['superseded']} superseded), split into {lib['passages']:,} passages.</p>
+""",
+           f"""<h2>How the Test Works</h2>
+<p>The test is a fixed set of {t['answerable'] + t['supersession'] + t['no_answer']} questions, each worded differently from the document so that it tests meaning and not just matching words.</p>
+<ul>
+<li><b>{t['answerable']} answerable questions</b> – each has an answer key naming the document and page that answers it. Where the answer is a value, the passage must contain the value itself, so a passage from the right page that has lost the number does not count</li>
+<li><b>{t['supersession']} edition questions</b> – the current edition must be found, and the older edition must be recorded as superseded by it</li>
+<li><b>{t['no_answer']} questions the library cannot answer</b> – the right result is a flag saying the library probably does not hold the answer</li>
+</ul>
+<p>The answer keys were found by searching the original PDFs directly, not through the library, and were then checked page by page in a separate verification pass. That pass found six wrong or incomplete keys, which were corrected (E-2026-47).</p>
+""",
+           f"""<h2>Current Scores</h2>
+<div class="tp-tiles">
+<div><b>{frac(c['top5'])}</b><span>answerable questions with a correct passage in the top five</span></div>
+<div><b>{frac(c['top1'])}</b><span>with a correct passage first</span></div>
+<div><b>{frac(c['supersession'])}</b><span>edition questions passed</span></div>
+<div><b>{frac(c['no_answer'])}</b><span>unanswerable questions flagged</span></div>
+<div><b>{frac(c['false_missing'])}</b><span>real answers wrongly flagged as missing</span></div>
+</div>
+<p>Mean reciprocal rank, which averages how near the top the first correct passage sits (1 means always first), is {c['mrr']}. Wrongly telling the team an answer is missing is the more harmful mistake, because it stops the search, so the flag is set to fire only when two separate measures agree.</p>
+"""]
+    rows = "".join(
+        f"<tr><td>{r['n']}</td><td>{esc(r['change'])}</td><td>{r['top5']} of {t['answerable']}</td>"
+        f"<td>{r['top1']} of {t['answerable']}</td><td>{r['mrr']}</td><td>{esc(r['decision'])}</td></tr>"
+        for r in d["runs"])
+    first = [r["n"] for r in d["runs"] if r["key"] == "first"]
+    out.append(f"""<h2>Score History</h2>
+<p>Each change is tested against the previous score. A change that lowers the score is reverted. Runs {first[0]} to {first[-1]} used the first answer key, before verification corrected it, so their scores are not directly comparable with the later runs.</p>
+<div class="tp-scroll"><table class="tp-table plain"><thead><tr><th>Run</th><th>Change tested</th><th>Correct in top five</th><th>Correct first</th><th>Mean reciprocal rank</th><th>Decision</th></tr></thead><tbody>{rows}</tbody></table></div>
+""")
+    links = ", ".join(f'<a href="performance-log.html#{e}">{e}</a>' for e in d["log_entries"])
+    out.append(f"""<h2>What the Test Does Not Show</h2>
+<ul>
+<li>It tests whether the right passage is found, not whether a written answer built from it is correct. Answers are checked separately by the verification step before any product ships</li>
+<li>The settings were chosen using this same set of questions, so the scores are likely to flatter the library a little until new questions confirm them</li>
+<li>The not-in-library flag rests on seven questions, which is too few to rely on. The team is told to read the passages every time, whatever the flag says</li>
+<li>Tables are the weakest point. The second model reads flattened tables badly, so passages it marks down but the first-stage search ranked highly are returned as extra results</li>
+</ul>
+<h2>Errors Found While Building It</h2>
+<p>Five errors were found and fixed during the build, and all are recorded in the Performance Log ({links}).</p>
+<h2>Next Steps</h2>
+<ul>
+<li>Add test questions written by the site owner, which reflect real use better than questions drafted from the documents</li>
+<li>Re-run the test at every quarterly library review and after every large batch of new documents, and add each run to this page</li>
+</ul>
+""")
+    page("library-evals.html", "Document Library Evaluation",
+         "How well the Gateshead Economic Intelligence team's document library finds the right passage, measured by a fixed test re-run after every change.",
+         "\n".join(out))
+
+
 def main():
     page("index.html", "Transparency Statement",
          "How the Gateshead Economic Intelligence site is produced, who is accountable, the AI team behind it, the principles it works to and the guidance it follows.",
@@ -172,6 +241,7 @@ def main():
          "Step-by-step instructions a person can follow to produce the four regular reports on the Gateshead Economic Intelligence site without AI tools.",
          (HERE / "runbook.body.html").read_text(encoding="utf-8"))
     performance_log()
+    library_evals()
     page("best-practice.html", "General Best Practice",
          "A short guide to running analytical work with AI agents, covering accountability, written rules, memory, guardrails, checks and tracking.",
          (HERE / "best-practice.body.html").read_text(encoding="utf-8"))

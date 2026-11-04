@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-11-04",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -581,6 +581,67 @@
    "found_by": "Verification",
    "what": "The draft said the documents do not say whether the mayor's 20% comes from the central or local share, when the OBR says the growth accrues to mayors rather than central government. It also said miles driven are not published locally, when road traffic data is published by local authority, and listed two exclusions from the Treasury's distributional analysis when the £100 payment is also outside it",
    "fix": "Corrected in the version Nathaniel finalised on 30 October 2026",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-46",
+   "found": "2026-11-04",
+   "product": "Document library, first build",
+   "stage": "Caught by checks",
+   "type": "Data handling",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The step that removes running headers and footers from PDFs deleted any line that recurred on a fifth of the pages, wherever it sat on the page. It removed table values and labels from the stored text, including the call centre and distribution centre densities in the HCA Employment Density Guide, where the 2010 figures survived and the 2015 ones did not, and the persistence values in the HCA Additionality Guide",
+   "fix": "Removal is now limited to the top and bottom margins of each page, and the values were confirmed back in the stored text after a rebuild. The retrieval test now requires the answer value itself to be in the passage, so lost content fails the test",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-47",
+   "found": "2026-11-04",
+   "product": "Document library retrieval test, first runs",
+   "stage": "Draft",
+   "type": "Data handling",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Six of the 21 answer keys named wrong or incomplete pages, and the test credited a passage from the right page even when it had lost the answer. Scores given to the site owner in chat on 4 November 2026 rested on that key",
+   "fix": "Keys corrected against the original PDFs, value checks added and every score re-run. The published scores come from the corrected test, and the score history marks which runs used the first key",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-48",
+   "found": "2026-11-04",
+   "product": "Document library, HM Treasury Green Book",
+   "stage": "Caught by checks",
+   "type": "Source or edition",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The library held the 5 February 2026 Green Book after gov.uk replaced it on 28 October 2026 with a change to the discount rate. The warning attached to it said discounting content may be out of date when it was out of date, and one test question was keyed to the superseded rate",
+   "fix": "The 28 October 2026 edition was added and the February copy marked superseded, so it drops out of normal searches. The Green Book Review 2025 now carries a warning that its rate is historic, and the test question requires the current rate",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-49",
+   "found": "2026-11-04",
+   "product": "Document library, first build",
+   "stage": "Caught by checks",
+   "type": "Code or reference",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Section labels were applied from the top of the page rather than where the heading sits, and file-name bookmarks were used as labels. Overlapping text carried the wrong page number, very short sections were dropped, editions with dates at different precision were ordered as if the order were known, and one failed file could leave used metadata behind for the next batch",
+   "fix": "Each corrected and tested with constructed cases. Supersession now refuses to decide between dates it cannot order and asks for the exact date",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-50",
+   "found": "2026-11-04",
+   "product": "Document library, first build",
+   "stage": "Caught by checks",
+   "type": "Process",
+   "function": "Production",
+   "found_by": "Our own review while building",
+   "what": "Publication dates were looked up from the PDFs' embedded file metadata, which the standing rules forbid",
+   "rule": "C2",
+   "fix": "Metadata reading removed from every extractor and from the inbox scan. Dates now come from the document's content or its publisher's page, and verification confirmed nothing reads metadata",
    "status": "Closed"
   }
  ]

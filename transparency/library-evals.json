@@ -1,0 +1,36 @@
+{
+  "updated": "2026-11-04",
+  "about": "Source for transparency/library-evals.html, built by build/transparency/build.py. Scores come from the retrieval test in the team's document library (library/evals/results.csv in the working folder). Add a run here whenever the test is re-run after a change, newest last. Counts are out of the questions of that kind in the test at the time.",
+  "library": {
+    "documents": 10,
+    "current": 8,
+    "superseded": 2,
+    "passages": 1250
+  },
+  "test": {
+    "answerable": 21,
+    "supersession": 2,
+    "no_answer": 7
+  },
+  "current": {
+    "top5": [19, 21],
+    "top1": [12, 21],
+    "mrr": 0.68,
+    "supersession": [1, 2],
+    "no_answer": [4, 7],
+    "false_missing": [0, 23]
+  },
+  "runs": [
+    {"n": 1, "change": "First build. Keyword and meaning search combined", "top5": 16, "top1": 9, "mrr": 0.565, "decision": "Baseline", "key": "first"},
+    {"n": 2, "change": "Each passage indexed with its document title and section", "top5": 16, "top1": 10, "mrr": 0.589, "decision": "Kept", "key": "first"},
+    {"n": 3, "change": "Running headers and footers removed from PDFs", "top5": 17, "top1": 13, "mrr": 0.702, "decision": "Kept, but the step also deleted table values (E-2026-46) and was corrected after verification", "key": "first"},
+    {"n": 4, "change": "How the two rankings are combined, four settings tried", "top5": 17, "top1": 13, "mrr": 0.702, "decision": "Original setting kept. The others were no better or worse", "key": "first"},
+    {"n": 5, "change": "Less weight on keyword matching, four settings tried", "top5": 15, "top1": 7, "mrr": 0.482, "decision": "Rejected. Every reduction was worse, and meaning alone (shown) was worst", "key": "first"},
+    {"n": 6, "change": "Answer key corrected after verification, value checks added, three no-answer questions added", "top5": 18, "top1": 11, "mrr": 0.648, "decision": "All later scores use the corrected test (E-2026-47)", "key": "corrected"},
+    {"n": 7, "change": "Updated Green Book (28 October 2026) added, three questions re-keyed to it", "top5": 17, "top1": 11, "mrr": 0.639, "decision": "Kept. The test now requires the current discount rate", "key": "corrected"},
+    {"n": 8, "change": "Reranker added, a second model that reads the question and each passage together", "top5": 19, "top1": 12, "mrr": 0.68, "decision": "Kept", "key": "corrected"},
+    {"n": 9, "change": "Two places in the top five reserved for the first-stage rankings, to protect tables", "top5": 17, "top1": 12, "mrr": 0.659, "decision": "Reverted. It pushed out correct answers", "key": "corrected"},
+    {"n": 10, "change": "Those passages added after the top five instead, and a stricter not-in-library flag", "top5": 19, "top1": 12, "mrr": 0.68, "decision": "Kept. Current setting", "key": "corrected"}
+  ],
+  "log_entries": ["E-2026-46", "E-2026-47", "E-2026-48", "E-2026-49", "E-2026-50"]
+}

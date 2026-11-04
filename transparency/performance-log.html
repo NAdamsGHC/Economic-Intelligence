@@ -27,6 +27,7 @@
 <a href="../transparency/index.html">Transparency Statement</a>
 <a href="../transparency/runbook.html">Regular Reports Runbook</a>
 <a href="../transparency/performance-log.html">Performance Log</a>
+<a href="../transparency/library-evals.html">Document Library Evaluation</a>
 <a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
 <p class="gc-menu-head gc-menu-sep">Best Practice</p>
 <a href="../transparency/best-practice.html">General Best Practice</a>
@@ -60,7 +61,7 @@
 <main class="tp-wrap">
 <p class="tp-kicker">Transparency</p>
 <h1>Performance Log</h1>
-<p class="tp-byline">Last updated 30 October 2026</p>
+<p class="tp-byline">Last updated 4 November 2026</p>
 <p class="tp-lede">Every material error found in our work, how it was found and what changed as a result. Errors caught before publication sit alongside those that reached a published product, because our checks are only worth something if we can show what they catch.</p>
 
 <h2>How the Log Works</h2>
@@ -78,18 +79,73 @@
 <div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>Since</th><th>Reason</th><th>Status</th></tr></thead><tbody><tr><td>Production</td><td>24 October 2026</td><td>Repeat entries of the same kind within 90 days: Code or reference (E-2026-21, 22), Unsupported claim (E-2026-19, 23, 26, 27, 28, 32, 34, 36), Completeness (E-2026-20, 30, 31, 35), Source or edition (E-2026-24, 37). The threshold was first met on 24 October 2026 and recorded late, on 30 October 2026</td><td>Active</td></tr></tbody></table></div>
 <h2>Summary</h2>
 <div class="tp-tiles">
-<div><b>45</b><span>errors logged</span></div>
+<div><b>50</b><span>errors logged</span></div>
 <div><b>10</b><span>reached a published product</span></div>
-<div><b>16</b><span>reached the site owner and stopped there</span></div>
-<div><b>19</b><span>caught by our own checks first</span></div>
+<div><b>17</b><span>reached the site owner and stopped there</span></div>
+<div><b>23</b><span>caught by our own checks first</span></div>
 <div><b>1</b><span>still open</span></div>
 </div>
 
 <h3>Errors by Function</h3>
-<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>1</td><td>1</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>3</td><td>10</td><td>15</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
+<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>1</td><td>1</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>3</td><td>11</td><td>19</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
 
 <h2>Entries</h2>
 <p>Newest first. Entries found before 16 October 2026 were reconstructed from our working records when the log started, so they are as complete as those records allow. Probation counts errors from 16 October 2026 onward.</p>
+<article class="tp-entry caught" id="E-2026-50">
+<div class="meta"><b>E-2026-50</b><span>Found 4 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Document library, first build</h3>
+<dl>
+<dt>What</dt><dd>Publication dates were looked up from the PDFs' embedded file metadata, which the standing rules forbid</dd>
+<dt>Kind</dt><dd>Process</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Our own review while building</dd>
+<dt>What changed</dt><dd>Metadata reading removed from every extractor and from the inbox scan. Dates now come from the document's content or its publisher's page, and verification confirmed nothing reads metadata</dd>
+<dt>Rule</dt><dd>C2 in our standing rules</dd></dl>
+</article>
+<article class="tp-entry caught" id="E-2026-49">
+<div class="meta"><b>E-2026-49</b><span>Found 4 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Document library, first build</h3>
+<dl>
+<dt>What</dt><dd>Section labels were applied from the top of the page rather than where the heading sits, and file-name bookmarks were used as labels. Overlapping text carried the wrong page number, very short sections were dropped, editions with dates at different precision were ordered as if the order were known, and one failed file could leave used metadata behind for the next batch</dd>
+<dt>Kind</dt><dd>Code or reference</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Each corrected and tested with constructed cases. Supersession now refuses to decide between dates it cannot order and asks for the exact date</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-48">
+<div class="meta"><b>E-2026-48</b><span>Found 4 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Document library, HM Treasury Green Book</h3>
+<dl>
+<dt>What</dt><dd>The library held the 5 February 2026 Green Book after gov.uk replaced it on 28 October 2026 with a change to the discount rate. The warning attached to it said discounting content may be out of date when it was out of date, and one test question was keyed to the superseded rate</dd>
+<dt>Kind</dt><dd>Source or edition</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>The 28 October 2026 edition was added and the February copy marked superseded, so it drops out of normal searches. The Green Book Review 2025 now carries a warning that its rate is historic, and the test question requires the current rate</dd>
+</dl>
+</article>
+<article class="tp-entry draft" id="E-2026-47">
+<div class="meta"><b>E-2026-47</b><span>Found 4 November 2026</span><span class="tp-tag draft">Draft</span><span class="tp-tag closed">Closed</span></div>
+<h3>Document library retrieval test, first runs</h3>
+<dl>
+<dt>What</dt><dd>Six of the 21 answer keys named wrong or incomplete pages, and the test credited a passage from the right page even when it had lost the answer. Scores given to the site owner in chat on 4 November 2026 rested on that key</dd>
+<dt>Kind</dt><dd>Data handling</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Keys corrected against the original PDFs, value checks added and every score re-run. The published scores come from the corrected test, and the score history marks which runs used the first key</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-46">
+<div class="meta"><b>E-2026-46</b><span>Found 4 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Document library, first build</h3>
+<dl>
+<dt>What</dt><dd>The step that removes running headers and footers from PDFs deleted any line that recurred on a fifth of the pages, wherever it sat on the page. It removed table values and labels from the stored text, including the call centre and distribution centre densities in the HCA Employment Density Guide, where the 2010 figures survived and the 2015 ones did not, and the persistence values in the HCA Additionality Guide</dd>
+<dt>Kind</dt><dd>Data handling</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Removal is now limited to the top and bottom margins of each page, and the values were confirmed back in the stored text after a rebuild. The retrieval test now requires the answer value itself to be in the passage, so lost content fails the test</dd>
+</dl>
+</article>
 <article class="tp-entry draft" id="E-2026-45">
 <div class="meta"><b>E-2026-45</b><span>Found 30 October 2026</span><span class="tp-tag draft">Draft</span><span class="tp-tag closed">Closed</span></div>
 <h3>Budget 2026 economic analysis, 3 to 4 page version, draft of 30 October 2026</h3>
@@ -589,7 +645,7 @@
 
 <footer class="gc-footer">
   <div class="gc-inner">
-    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a> &middot; <a href="best-practice.html">General Best Practice</a> &middot; <a href="best-practice-councils.html">Best Practice in Local Authorities</a>
+    Part of the <a href="../index.html">Gateshead Economic Intelligence Catalogue</a> &middot; an independent, unofficial project &middot; <a href="index.html">Transparency Statement</a> &middot; <a href="runbook.html">Regular Reports Runbook</a> &middot; <a href="performance-log.html">Performance Log</a> &middot; <a href="library-evals.html">Document Library Evaluation</a> &middot; <a href="best-practice.html">General Best Practice</a> &middot; <a href="best-practice-councils.html">Best Practice in Local Authorities</a>
   </div>
 </footer>
 
