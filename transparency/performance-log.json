@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -642,6 +642,42 @@
    "what": "Publication dates were looked up from the PDFs' embedded file metadata, which the standing rules forbid",
    "rule": "C2",
    "fix": "Metadata reading removed from every extractor and from the inbox scan. Dates now come from the document's content or its publisher's page, and verification confirmed nothing reads metadata",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-51",
+   "found": "2026-11-05",
+   "product": "December LEA reconciliation check (REC), first builds",
+   "stage": "Caught by checks",
+   "type": "Code or reference",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Patterns meant to set aside structural numbers (years, months, section references, age bands, levels) also masked real figures, so they were never checked. In the September interim edition the second figure of 'from 18.1% in 2015 to 12.0% in 2023' was hidden, and so were figures after a month name, after 'is', after 'level' or 'phase', and after 'Table 3,'",
+   "fix": "Each pattern narrowed, and a general guard added: a mask that ends where a figure carries on is not applied. Every case found is a permanent test case, and a scan of the interim edition finds no masked figure",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-52",
+   "found": "2026-11-05",
+   "product": "December LEA reconciliation check (REC), first builds",
+   "stage": "Caught by checks",
+   "type": "Data handling",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The checks passed wrong figures. Minus signs were dropped, periods were checked per sentence rather than per figure, year ranges were read as their first year, years in brackets and comparison bases were mistaken for a figure's period, and an interval could attach to the wrong figure",
+   "fix": "Periods and areas are now assigned to each figure, carried across the sentence where written once, and ranges, comparison bases and citations are read separately. Intervals attach to the figure straight before them and are checked in its unit. Each case is a permanent test case",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-53",
+   "found": "2026-11-05",
+   "product": "December LEA reconciliation check (REC), first builds",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The plan's geography check was missing, so England's figure passed as Gateshead's. The freeze diff dropped every sentence after a paragraph was added above it. There was no score per chapter, and a rank's field size was never checked against the data",
+   "fix": "Geography check added, with an unnamed area read as Gateshead and comparator sets kept apart. The diff pairs figures by id and wording, and labels stale and removed sentences. A score per chapter and the rank field check were added. Verification's final verdict is that REC is safe to use at Gate 2 with its score",
    "status": "Closed"
   }
  ]

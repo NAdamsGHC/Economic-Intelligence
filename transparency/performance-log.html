@@ -61,7 +61,7 @@
 <main class="tp-wrap">
 <p class="tp-kicker">Transparency</p>
 <h1>Performance Log</h1>
-<p class="tp-byline">Last updated 4 November 2026</p>
+<p class="tp-byline">Last updated 5 November 2026</p>
 <p class="tp-lede">Every material error found in our work, how it was found and what changed as a result. Errors caught before publication sit alongside those that reached a published product, because our checks are only worth something if we can show what they catch.</p>
 
 <h2>How the Log Works</h2>
@@ -79,18 +79,51 @@
 <div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>Since</th><th>Reason</th><th>Status</th></tr></thead><tbody><tr><td>Production</td><td>24 October 2026</td><td>Repeat entries of the same kind within 90 days: Code or reference (E-2026-21, 22), Unsupported claim (E-2026-19, 23, 26, 27, 28, 32, 34, 36), Completeness (E-2026-20, 30, 31, 35), Source or edition (E-2026-24, 37). The threshold was first met on 24 October 2026 and recorded late, on 30 October 2026</td><td>Active</td></tr></tbody></table></div>
 <h2>Summary</h2>
 <div class="tp-tiles">
-<div><b>50</b><span>errors logged</span></div>
+<div><b>53</b><span>errors logged</span></div>
 <div><b>10</b><span>reached a published product</span></div>
 <div><b>17</b><span>reached the site owner and stopped there</span></div>
-<div><b>23</b><span>caught by our own checks first</span></div>
+<div><b>26</b><span>caught by our own checks first</span></div>
 <div><b>1</b><span>still open</span></div>
 </div>
 
 <h3>Errors by Function</h3>
-<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>1</td><td>1</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>3</td><td>11</td><td>19</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
+<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>1</td><td>1</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>3</td><td>11</td><td>22</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
 
 <h2>Entries</h2>
 <p>Newest first. Entries found before 16 October 2026 were reconstructed from our working records when the log started, so they are as complete as those records allow. Probation counts errors from 16 October 2026 onward.</p>
+<article class="tp-entry caught" id="E-2026-53">
+<div class="meta"><b>E-2026-53</b><span>Found 5 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>December LEA reconciliation check (REC), first builds</h3>
+<dl>
+<dt>What</dt><dd>The plan's geography check was missing, so England's figure passed as Gateshead's. The freeze diff dropped every sentence after a paragraph was added above it. There was no score per chapter, and a rank's field size was never checked against the data</dd>
+<dt>Kind</dt><dd>Completeness</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Geography check added, with an unnamed area read as Gateshead and comparator sets kept apart. The diff pairs figures by id and wording, and labels stale and removed sentences. A score per chapter and the rank field check were added. Verification's final verdict is that REC is safe to use at Gate 2 with its score</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-52">
+<div class="meta"><b>E-2026-52</b><span>Found 5 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>December LEA reconciliation check (REC), first builds</h3>
+<dl>
+<dt>What</dt><dd>The checks passed wrong figures. Minus signs were dropped, periods were checked per sentence rather than per figure, year ranges were read as their first year, years in brackets and comparison bases were mistaken for a figure's period, and an interval could attach to the wrong figure</dd>
+<dt>Kind</dt><dd>Data handling</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Periods and areas are now assigned to each figure, carried across the sentence where written once, and ranges, comparison bases and citations are read separately. Intervals attach to the figure straight before them and are checked in its unit. Each case is a permanent test case</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-51">
+<div class="meta"><b>E-2026-51</b><span>Found 5 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>December LEA reconciliation check (REC), first builds</h3>
+<dl>
+<dt>What</dt><dd>Patterns meant to set aside structural numbers (years, months, section references, age bands, levels) also masked real figures, so they were never checked. In the September interim edition the second figure of 'from 18.1% in 2015 to 12.0% in 2023' was hidden, and so were figures after a month name, after 'is', after 'level' or 'phase', and after 'Table 3,'</dd>
+<dt>Kind</dt><dd>Code or reference</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Each pattern narrowed, and a general guard added: a mask that ends where a figure carries on is not applied. Every case found is a permanent test case, and a scan of the interim edition finds no masked figure</dd>
+</dl>
+</article>
 <article class="tp-entry caught" id="E-2026-50">
 <div class="meta"><b>E-2026-50</b><span>Found 4 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
 <h3>Document library, first build</h3>
