@@ -1,8 +1,8 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "3 November 2026",
+ "updated": "9 November 2026",
  "schedule": {
-  "updated": "3 November 2026",
+  "updated": "9 November 2026",
   "months": [
    {
     "id": "2026-07",
@@ -154,6 +154,11 @@
       },
       {
        "label": "Mon 9",
+       "status": "released",
+       "href": "briefs/whats-new-2026-11-09.html"
+      },
+      {
+       "label": "Mon 16",
        "status": "next"
       },
       {
@@ -651,6 +656,40 @@
     "social value",
     "departmental log",
     "rag"
+   ]
+  },
+  {
+   "id": "whats-new-2026-11-09",
+   "title": "What's New, 9 November 2026",
+   "path": "briefs/whats-new-2026-11-09.html",
+   "topic": "What's New",
+   "description": "The weekly edition covering 3 to 9 November. Bank Rate rises by 0.25 percentage points to 4%, with the Bank of England expecting inflation to reach around 5% by the middle of next year. The Visitor Levy Bill is introduced, setting the rules for draft plans, consultation, exemptions and the 28-night limit, and the Mayor of the North East backs a levy. The Prime Minister writes to councils on 11 November asking for plans to offer accommodation to veterans sleeping rough ahead of the Christmas period. ONS has cancelled the 18 November BRES release for further quality assurance, with no new date. Also plans for a legal duty to publish salaries in job adverts, guidance for firms hit by disruption from the Middle East conflict, business population estimates putting the North East at 162,890 private sector businesses with the lowest density of the English regions, Gateshead mortgage statistics for 2025 (a late item missed in September), Labour Force Survey response back to pre-Covid levels and new consultations including the Crichel Down Rules. No reds this week. The complete departmental log carries 181 rows, folded away rather than cut.",
+   "sources": "Bank of England, Monetary Policy Summary and minutes, November 2026; MHCLG, New visitor levy powers to put money back into local communities, 4 November 2026, and Reform of the Crichel Down Rules consultation; No.10, announcements of 5 and 7 November 2026; BIST, Managing challenges from the Middle East conflict as a UK business, 3 November 2026, and Business population estimates 2026; ONS, Mortgage statistics by local authority 2025, the cancelled BRES release notice, the 2026 Deane-Stone Lecture; DWP pension consultations; gov.uk publications from No.10 and the Cabinet Office; gov.uk departmental feeds for DBIST, DWP, MHCLG and DfE, and HM Treasury. All figures quoted as published, pulled 9 November 2026.",
+   "series": "whats-new",
+   "date": "2026-11-09",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "bank rate",
+    "interest rates",
+    "visitor levy",
+    "rough sleeping",
+    "veterans",
+    "pay transparency",
+    "job adverts",
+    "middle east",
+    "business support",
+    "business population",
+    "mortgages",
+    "labour force survey",
+    "crichel down",
+    "compulsory purchase",
+    "pensions",
+    "departmental log",
+    "rag",
+    "bres"
    ]
   },
   {
@@ -1524,5 +1563,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-11-03T10:01:00+00:00"
+ "updated_at": "2026-11-09T09:05:00+00:00"
 }
