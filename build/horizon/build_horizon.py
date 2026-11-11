@@ -79,8 +79,8 @@ def build_ics(doc):
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Gateshead Economic Intelligence//Horizon Calendar//EN",
              "CALSCALE:GREGORIAN", "X-WR-CALNAME:Gateshead Horizon Calendar"]
     for x in doc["items"]:
-        if x.get("date_label") or x["status"] == "published":
-            continue  # only items with a fixed day go into other people's calendars
+        if x.get("date_label") or x["status"] == "published" or (x["category"] == "bill" and x.get("routine")):
+            continue  # routine bill stages stay off the .ics, or it would carry a hundred private members' bill dates  # only items with a fixed day go into other people's calendars
         d = x["date"].replace("-", "")
         nxt = date.fromordinal(date.fromisoformat(x["date"]).toordinal() + 1).isoformat().replace("-", "")
         desc = x["why"] + (" Action: " + x["action"] if x.get("action") else "") + \

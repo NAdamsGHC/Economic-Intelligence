@@ -173,7 +173,7 @@
       <option value="ra">Red and amber</option>
     </select>
     <input type="search" id="hz-q" placeholder="Search, for example &ldquo;APS&rdquo; or &ldquo;Budget&rdquo;" aria-label="Search the calendar">
-    <label class="tog"><input type="checkbox" id="hz-routine"> Show routine monthly releases</label>
+    <label class="tog"><input type="checkbox" id="hz-routine"> Show routine items</label>
   </div>
   <div class="hz-meta" id="hz-meta" aria-live="polite"></div>
   <div id="hz-view"></div>
@@ -186,7 +186,7 @@
   <div class="hz-note">
     <p><b>Reading the priorities.</b> <span class="rag r">Red</span> means we need to act by or on the day. <span class="rag a">Amber</span> means the date feeds one of our products or needs preparation. <span class="rag g">Green</span> means noted, with no action expected.</p>
     <p><b>Reading the status.</b> Confirmed means the publisher has fixed the day. Provisional means the publisher has given a date that may still move. Expected means only a month or a season has been published, so the item sits in that month without a day. Release times are UK time.</p>
-    <p><b>Coverage.</b> ONS releases are taken from the ONS release calendar to <span id="hz-onsto"></span>, filtered to the series we use. Business survey dates come from the S&amp;P Global calendar, which runs about a month ahead. Policy dates are taken from the government page linked on each item, never from press coverage.</p>
+    <p><b>Coverage.</b> ONS releases are taken from the ONS release calendar to <span id="hz-onsto"></span>, filtered to the series we use. Business survey dates come from the S&amp;P Global calendar, which runs about a month ahead. Policy dates are taken from the government page linked on each item, never from press coverage. Bill stages are taken from the UK Parliament Bills site for every bill in the session. Bills on the local, digital and visitor economy are amber. Private members' and private bills off those themes count as routine items. Every bill stage is provisional, because Parliament only firms up its business a week or two ahead.</p>
     <p><a href="horizon.ics" download>Add the dated items to your own calendar (.ics)</a></p>
   </div>
 </main>
@@ -360,7 +360,7 @@
     var list = upcoming.filter(match);
     var hidden = upcoming.filter(function (x) { return x.routine && !state.routine; }).length;
     document.getElementById("hz-meta").textContent = list.length + " of " + upcoming.length + " upcoming items shown" +
-      (hidden && !state.routine ? " (" + hidden + " routine monthly releases hidden)" : "");
+      (hidden && !state.routine ? " (" + hidden + " routine items hidden)" : "");
     document.querySelectorAll(".hz-seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.view === state.view ? "true" : "false"); });
     document.getElementById("hz-view").innerHTML = state.view === "month" ? monthView(list) : listView(list);
   }
