@@ -1,8 +1,8 @@
 {
- "_about": "Theme rules for sweep_bills.py. Added 11 November 2026 (Nathaniel: every bill is pulled into What's New and the horizon scan, with local, digital and visitor economy bills as the priority). A bill is a priority if any pattern below matches its short title or long title. Patterns are case-insensitive regular expressions, so a word boundary is written \\\\b in this file. Add a billId to 'include' to force a bill into a theme the words miss, or to 'exclude' to drop a false match, with a reason. Check the 'matched words' list in bills.md each week. Edit this file, not the script.",
+ "_about": "Theme rules for sweep_bills.py. Added 11 November 2026 (Nathaniel: every bill is pulled into What's New and the horizon scan, with local, digital and visitor economy bills as the priority). A bill gets an advisor flag (Local, Digital, Visitor, the Policy Advisors' areas) if any pattern below matches its short title or long title. What's New shows every flagged or government bill that moved in the week, plus any listed under 'relevant'. Patterns are case-insensitive regular expressions, so a word boundary is written \\\\b in this file. Add a billId to 'include' to force a bill into a theme the words miss, or to 'exclude' to drop a false match, with a reason. Check the 'matched words' list in bills.md each week. Edit this file, not the script.",
  "themes": {
   "local": {
-   "label": "Local economy",
+   "label": "Local",
    "patterns": [
     "local (government|authorit|council|growth|economic)",
     "(district|county|borough|city|parish|town|unitary) councils?\\b",
@@ -48,7 +48,7 @@
    ]
   },
   "digital": {
-   "label": "Digital economy",
+   "label": "Digital",
    "patterns": [
     "\\bdigital\\b",
     "data (protection|sharing|centre|economy|infrastructure)",
@@ -71,7 +71,7 @@
    ]
   },
   "visitor": {
-   "label": "Visitor economy",
+   "label": "Visitor",
    "patterns": [
     "\\bvisitor",
     "touris",
@@ -99,6 +99,9 @@
     "\\bhotels?\\b"
    ]
   }
+ },
+ "relevant": {
+  "_about": "billId: reason. Puts a bill that moved into the What's New section even though it carries no advisor flag and is not a government bill. Government bills and flagged bills are in automatically."
  },
  "include": {},
  "exclude": {

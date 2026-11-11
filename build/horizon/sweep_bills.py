@@ -16,15 +16,16 @@ What it does
   1. Finds the current session (the highest session id on recently updated bills) unless
      --session is given, and pulls every bill in it, carried-over bills included.
   2. For each bill, reads the long title, the stage history and the publications.
-  3. Tags priority themes from bills_watch.json (local, digital, visitor), matching the
+  3. Flags each bill Local, Digital or Visitor (the Policy Advisors' areas) from bills_watch.json, matching the
      short and long titles. The matched words are kept so a false match is easy to spot.
   4. The documentation flag is "Yes" if Parliament lists any publication against the bill,
      with the document types named. "None yet" is common for presentation bills, whose
      text is often never printed.
   5. What's New mode (--from, --to, --out) writes bills.md, bills.csv and bills-fragment.html.
-     The fragment, ready to paste into the edition, holds only the priority-theme bills
-     that moved in the window (a stage sitting or new documents inside it), or one line
-     in a quiet week. bills.csv keeps every bill in the session for reference, never in
+     The fragment, ready to paste into the edition, holds every relevant bill that moved
+     in the window (a stage sitting or new documents inside it): flagged bills, government
+     bills and any listed under "relevant", each showing its flag. One line in a quiet week.
+     The other movers are printed so they can be added by hand. bills.csv keeps every bill in the session for reference, never in
      the edition (Nathaniel, 11 November 2026).
   6. Horizon mode (--horizon) adds every future stage sitting to horizon.json under the
      "bill" category, one item per bill stage, with later sittings of the same stage noted.
@@ -97,6 +98,14 @@ def words(stage):
     return s
 
 
+def sl(st):
+    """A stage as house style, e.g. "Commons second reading", "Royal Assent". Royal Assent carries house "Unassigned"."""
+    if st["description"].strip().lower() == "royal assent":
+        return "Royal Assent"
+    h = "" if st.get("house") in (None, "", "Unassigned") else st["house"] + " "
+    return h + words(st["description"])
+
+
 def day(iso):
     return iso[:10] if iso else None
 
@@ -161,7 +170,7 @@ def stage_text(b):
         return "No stage recorded"
     if cs["description"] == "Royal Assent":
         return "Royal Assent (Act)"
-    return f"{cs['house']}, {words(cs['description'])}"
+    return sl(cs)
 
 
 def build(session, today, frm, to, cache=None):
@@ -188,7 +197,7 @@ def build(session, today, frm, to, cache=None):
             upto = min(to, today.isoformat())  # a sitting only counts once it has happened, not when it is merely scheduled
             for d, st in sittings:
                 if frm <= d <= upto:
-                    moved.append(f"{st['house']} {words(st['description'])} on {date.fromisoformat(d).strftime('%d %b').lstrip('0')}")
+                    moved.append(f"{sl(st)} on {date.fromisoformat(d).strftime('%d %b').lstrip('0')}")
             new_docs = {}
             for p in b["pubs"]:
                 d = day(p.get("displayDate"))
@@ -203,7 +212,7 @@ def build(session, today, frm, to, cache=None):
             "type": TYPES.get(b["billTypeId"], str(b["billTypeId"])), "government": b["billTypeId"] in GOVERNMENT,
             "private": b["billTypeId"] not in GOVERNMENT, "stage": stage_text(b),
             "last_sitting": past[-1][0] if past else "", "next_sitting": future[0][0] if future else "",
-            "next_stage": f"{future[0][1]['house']}, {words(future[0][1]['description'])}" if future else "",
+            "next_stage": sl(future[0][1]) if future else "",
             "docs_flag": flag, "docs": docs, "themes": th, "priority": bool(th), "moved": moved,
             "is_act": b.get("isAct"), "url": SITE + str(b["billId"]), "future": future,
             "last_update": day(b.get("lastUpdate")),
@@ -213,7 +222,7 @@ def build(session, today, frm, to, cache=None):
 
 
 def theme_label(r, watch):
-    return ", ".join(watch["themes"][k]["label"] for k in r["themes"]) or "Not on our themes"
+    return ", ".join(watch["themes"][k]["label"] for k in r["themes"]) or "None"
 
 
 # ---------------------------------------------------------------- What's New outputs
@@ -271,30 +280,36 @@ def write_whatsnew(rows, watch, session, frm, to, out):
                  e("; ".join(r["moved"])), e(r["stage"]), nxt, docs_cell(r)]
         return "<tr>" + "".join(f"<td>{c}</td>" for c in cells) + "</tr>"
 
-    # The edition carries only what is relevant in the week: bills on our priority themes that moved in the window
-    # (Nathaniel, 11 November 2026). Every bill stays in bills.csv in the build folder, and every future date
-    # stays on the Horizon Calendar.
-    week = [r for r in pri if r["moved"]]
+    # The edition carries only what is relevant in the week (Nathaniel, 11 November 2026): every bill that moved in
+    # the window and carries an advisor flag (Local, Digital, Visitor), is a government bill, or is listed under
+    # "relevant" in bills_watch.json. The flag is shown, never used to drop a relevant bill. Every bill stays in
+    # bills.csv, and every future date stays on the Horizon Calendar.
+    hand = {k for k in watch.get("relevant", {}) if not k.startswith("_")}
+    week = [r for r in rows if r["moved"] and (r["priority"] or r["government"] or str(r["id"]) in hand)]
+    others = [r for r in rows if r["moved"] and r not in week]
     window = f"{fd(frm)} and {fd(to)}"
     frag = [f"<!-- Generated by build/horizon/sweep_bills.py on {date.today().isoformat()} for {frm} to {to}. Paste as the edition's Parliamentary Bills section. -->",
             "<h2>Parliamentary Bills</h2>"]
     if week:
-        frag += [f"<p>{len(week)} bill{'s' if len(week) != 1 else ''} on the local, digital or visitor economy moved between {e(window)}, "
-                 "taken from the UK Parliament Bills site. The documents column shows whether Parliament has published anything against "
-                 "the bill, such as the bill text, Explanatory Notes, an Impact Assessment or a Library briefing. Future stage dates are on "
-                 "the Horizon Calendar.</p>",
-                 '<div class="wn-scroll"><table class="wn-cal"><tr><th>Bill</th><th>Theme</th><th>What happened this week</th>'
+        frag += [f"<p>{len(week)} relevant bill{'s' if len(week) != 1 else ''} moved between {e(window)}, taken from the UK Parliament "
+                 "Bills site. The flag names the Policy Advisor area a bill touches (Local, Digital or Visitor). The documents column shows "
+                 "whether Parliament has published anything against the bill, such as the bill text, Explanatory Notes, an Impact Assessment "
+                 "or a Library briefing. Future stage dates are on the Horizon Calendar.</p>",
+                 '<div class="wn-scroll"><table class="wn-cal"><tr><th>Bill</th><th>Flag</th><th>What happened this week</th>'
                  "<th>Stage now</th><th>Next sitting</th><th>Documents</th></tr>" +
                  "".join(week_row(r) for r in week) + "</table></div>"]
     else:
-        frag.append(f"<p>No bill on the local, digital or visitor economy moved between {e(window)}. "
-                    "Their future stage dates are on the Horizon Calendar.</p>")
+        frag.append(f"<p>No relevant bill moved between {e(window)}. "
+                    "Future stage dates are on the Horizon Calendar.</p>")
     (out / "bills-fragment.html").write_text("\n".join(frag) + "\n", encoding="utf-8")
     print(counts)
     print(f"Wrote bills.md, bills.csv (every bill, for reference) and bills-fragment.html (relevant movers only) to {out}")
-    print(f"In the edition, {len(week)} priority bills that moved:")
+    print(f"In the edition, {len(week)} relevant bills that moved:")
     for r in week:
-        print(f"  {r['title']} [{theme_label(r, watch)}] {r['stage']}; docs {r['docs_flag']}; moved: {'; '.join(r['moved'])}")
+        print(f"  {r['title']} ({r['type']}) [flag {theme_label(r, watch)}] {r['stage']}; docs {r['docs_flag']}; moved: {'; '.join(r['moved'])}")
+    print(f"Also moved, not in the edition ({len(others)}). Add any that matter under 'relevant' in bills_watch.json and re-run:")
+    for r in others:
+        print(f"  {r['id']} {r['title']} ({r['type']}); moved: {'; '.join(r['moved'])}")
 
 
 # ---------------------------------------------------------------- Horizon
@@ -313,17 +328,17 @@ def horizon(rows, watch, today, write):
             iid = f"bill-{r['id']}-{sid}"
             if r["priority"]:
                 rag, routine = "a", False
-                why = f"{theme_label(r, watch)} bill. {r['long_title']}"
+                why = f"Flagged {theme_label(r, watch)}. {r['long_title']}"
             elif r["government"]:
                 rag, routine = "g", False
-                why = f"Government bill off our priority themes. {r['long_title']}"
+                why = f"Government bill with no advisor flag. {r['long_title']}"
             else:
                 rag, routine = "g", True
-                why = f"{r['type']} bill off our priority themes. {r['long_title']}"
+                why = f"{r['type']} bill with no advisor flag. {r['long_title']}"
             if len(dates) > 1:
                 why += f" This stage has {len(dates)} sittings scheduled, the last on {dates[-1]}."
             why += f" Documents published: {r['docs_flag'].lower()}" + (f" ({', '.join(r['docs'])})." if r["docs"] else ".")
-            item = {"id": iid, "date": dates[0], "title": f"{st['house']} {words(st['description'])} of the {r['title']}",
+            item = {"id": iid, "date": dates[0], "title": f"{sl(st)} of the {r['title']}",
                     "category": "bill", "rag": rag, "status": "provisional", "why": why.strip(),
                     "source": {"name": f"UK Parliament, Bills site, {r['title']} stages", "url": r["url"] + "/stages"},
                     "verified": today.isoformat(), "bill_stage_now": r["stage"], "bill_documents": r["docs_flag"]}

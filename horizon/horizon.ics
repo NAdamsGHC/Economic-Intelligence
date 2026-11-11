@@ -5,7 +5,7 @@ CALSCALE:GREGORIAN
 X-WR-CALNAME:Gateshead Horizon Calendar
 BEGIN:VEVENT
 UID:pathways-innovation-shortlist@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Pathways to Work Innovation Fund shortlisting outcomes
@@ -19,7 +19,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wajc-16-2026-11-10@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:16th meeting of the UK-EU Withdrawal Agreement Joint Committee
@@ -34,7 +34,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pmi-natwest-uk-regional-growth-tracker-2026-11-11@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
 SUMMARY:[Amber] NatWest UK Regional Growth Tracker
@@ -47,23 +47,23 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4124-21233@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
 SUMMARY:Lords committee stage of the Health Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to make provis
- ion about health and social care. This stage has 4 sittings scheduled\, t
- he last on 2026-11-25. Documents published: yes (263) (Bill text\, Explan
- atory Notes\, Impact Assessment\, Library briefing\, Delegated Powers Mem
- orandum\, Committee report\, Written evidence\, 85 other). Status: provis
- ional. Source: UK Parliament\, Bills site\, Health Bill stages https://bi
- lls.parliament.uk/bills/4124/stages
+DESCRIPTION:Government bill with no advisor flag. A Bill to make provision
+  about health and social care. This stage has 4 sittings scheduled\, the 
+ last on 2026-11-25. Documents published: yes (263) (Bill text\, Explanato
+ ry Notes\, Impact Assessment\, Library briefing\, Delegated Powers Memora
+ ndum\, Committee report\, Written evidence\, 85 other). Status: provision
+ al. Source: UK Parliament\, Bills site\, Health Bill stages https://bills
+ .parliament.uk/bills/4124/stages
 URL:https://bills.parliament.uk/bills/4124/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pm-veterans-rough-sleeping-letter@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
 SUMMARY:[Amber] Prime Minister writes to councils in England asking for pl
@@ -80,7 +80,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpfirstquarterlyestimateukjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:GDP first quarterly estimate\, July to September 2026
@@ -93,7 +93,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:GDP monthly estimate
@@ -105,7 +105,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-la-capital-outturn-2026-11-12@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Local authority capital expenditure and receipts\, 2025 to 2026 fi
@@ -120,51 +120,51 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4305-21287@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:[Amber] Commons committee stage of the Building Safety (Remediatio
  n of Unsafe Cladding etc) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about fire safety
-  in buildings containing multiple dwellings\, including provision for the
-  assessment and remediation of external walls that give rise to risks fro
- m fire\, and the mitigation of such risks\, in taller buildings\; to make
-  provision for the obtaining and recording of information about buildings
-  containing residential accommodation\; to make provision about liabiliti
- es in connection with unsafe construction products\; and to make other pr
- ovision in connection with the safety and management of residential build
- ings. This stage has 3 sittings scheduled\, the last on 2026-11-19. Docum
- ents published: yes (15) (Bill text\, Explanatory Notes\, Impact Assessme
- nt\, Library briefing\, Delegated Powers Memorandum\, 6 other). Status: p
- rovisional. Source: UK Parliament\, Bills site\, Building Safety (Remedia
- tion of Unsafe Cladding etc) Bill stages https://bills.parliament.uk/bill
- s/4305/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about fire safety in b
+ uildings containing multiple dwellings\, including provision for the asse
+ ssment and remediation of external walls that give rise to risks from fir
+ e\, and the mitigation of such risks\, in taller buildings\; to make prov
+ ision for the obtaining and recording of information about buildings cont
+ aining residential accommodation\; to make provision about liabilities in
+  connection with unsafe construction products\; and to make other provisi
+ on in connection with the safety and management of residential buildings.
+  This stage has 3 sittings scheduled\, the last on 2026-11-19. Documents 
+ published: yes (15) (Bill text\, Explanatory Notes\, Impact Assessment\, 
+ Library briefing\, Delegated Powers Memorandum\, 6 other). Status: provis
+ ional. Source: UK Parliament\, Bills site\, Building Safety (Remediation 
+ of Unsafe Cladding etc) Bill stages https://bills.parliament.uk/bills/430
+ 5/stages
 URL:https://bills.parliament.uk/bills/4305/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4290-21253@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Commons committee stage of the Highways (Financing) Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to Make provis
- ion for licences authorising the charging of tolls in return for securing
-  works on trunk roads in England\; about the functions of holders of lice
- nces\; about enforcement\; for a special administration regime for holder
- s of licences\; about the collection and enforcement of tolls charged und
- er other Acts\; and for connected purposes. This stage has 3 sittings sch
- eduled\, the last on 2026-11-19. Documents published: yes (25) (Bill text
- \, Explanatory Notes\, Impact Assessment\, Library briefing\, Delegated P
- owers Memorandum\, Written evidence\, 10 other). Status: provisional. Sou
- rce: UK Parliament\, Bills site\, Highways (Financing) Bill stages https:
- //bills.parliament.uk/bills/4290/stages
+DESCRIPTION:Government bill with no advisor flag. A Bill to Make provision
+  for licences authorising the charging of tolls in return for securing wo
+ rks on trunk roads in England\; about the functions of holders of licence
+ s\; about enforcement\; for a special administration regime for holders o
+ f licences\; about the collection and enforcement of tolls charged under 
+ other Acts\; and for connected purposes. This stage has 3 sittings schedu
+ led\, the last on 2026-11-19. Documents published: yes (25) (Bill text\, 
+ Explanatory Notes\, Impact Assessment\, Library briefing\, Delegated Powe
+ rs Memorandum\, Written evidence\, 10 other). Status: provisional. Source
+ : UK Parliament\, Bills site\, Highways (Financing) Bill stages https://b
+ ills.parliament.uk/bills/4290/stages
 URL:https://bills.parliament.uk/bills/4290/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-shorttermletsthroughonlinecollaborativeeconomyplatformsukjuly2023tojune2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Short-term lets through online platforms\, July 2023 to Ju
@@ -179,122 +179,122 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4161-20850@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Commons second reading of the Homes and Planning Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the availab
- ility of social\, affordable\, and intermediate market homes\; to make pr
- ovision about the powers of local authorities and local planning authorit
- ies in relation to homes and planning\; to make further provision in rela
- tion to homes and planning\; and for connected purposes. Documents publis
- hed: yes (5) (Bill text\, Library briefing). Status: provisional. Source:
-  UK Parliament\, Bills site\, Homes and Planning Bill stages https://bill
- s.parliament.uk/bills/4161/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the availability
+  of social\, affordable\, and intermediate market homes\; to make provisi
+ on about the powers of local authorities and local planning authorities i
+ n relation to homes and planning\; to make further provision in relation 
+ to homes and planning\; and for connected purposes. Documents published: 
+ yes (5) (Bill text\, Library briefing). Status: provisional. Source: UK P
+ arliament\, Bills site\, Homes and Planning Bill stages https://bills.par
+ liament.uk/bills/4161/stages
 URL:https://bills.parliament.uk/bills/4161/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4205-20946@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Commons second reading of the Hospitality Services (Value 
  Added Tax Exemption) Bill
-DESCRIPTION:Visitor economy bill. A Bill to exempt providers of catering a
- nd accommodation services from VAT for fees and charges made in respect o
- f the provision of those services\; and for connected purposes. Documents
-  published: yes (4) (Bill text). Status: provisional. Source: UK Parliame
- nt\, Bills site\, Hospitality Services (Value Added Tax Exemption) Bill s
- tages https://bills.parliament.uk/bills/4205/stages
+DESCRIPTION:Flagged Visitor. A Bill to exempt providers of catering and ac
+ commodation services from VAT for fees and charges made in respect of the
+  provision of those services\; and for connected purposes. Documents publ
+ ished: yes (4) (Bill text). Status: provisional. Source: UK Parliament\, 
+ Bills site\, Hospitality Services (Value Added Tax Exemption) Bill stages
+  https://bills.parliament.uk/bills/4205/stages
 URL:https://bills.parliament.uk/bills/4205/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4201-20938@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Commons second reading of the Non-Domestic Rating (Retail\
  , Hospitality and Leisure) Bill
-DESCRIPTION:Local economy\, Visitor economy bill. A Bill to make provision
-  about non-domestic rating in respect of retail\, hospitality and leisure
-  businesses\; and for connected purposes. Documents published: yes (4) (B
- ill text). Status: provisional. Source: UK Parliament\, Bills site\, Non-
- Domestic Rating (Retail\, Hospitality and Leisure) Bill stages https://bi
- lls.parliament.uk/bills/4201/stages
+DESCRIPTION:Flagged Local\, Visitor. A Bill to make provision about non-do
+ mestic rating in respect of retail\, hospitality and leisure businesses\;
+  and for connected purposes. Documents published: yes (4) (Bill text). St
+ atus: provisional. Source: UK Parliament\, Bills site\, Non-Domestic Rati
+ ng (Retail\, Hospitality and Leisure) Bill stages https://bills.parliamen
+ t.uk/bills/4201/stages
 URL:https://bills.parliament.uk/bills/4201/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4283-21161@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Commons second reading of the Road Safety Plans Bill
-DESCRIPTION:Local economy bill. A Bill to require local authorities in Eng
- land to prepare and publish a road safety plan in respect of each school 
- in their area\; and for connected purposes. Documents published: yes (4) 
- (Bill text). Status: provisional. Source: UK Parliament\, Bills site\, Ro
- ad Safety Plans Bill stages https://bills.parliament.uk/bills/4283/stages
+DESCRIPTION:Flagged Local. A Bill to require local authorities in England 
+ to prepare and publish a road safety plan in respect of each school in th
+ eir area\; and for connected purposes. Documents published: yes (4) (Bill
+  text). Status: provisional. Source: UK Parliament\, Bills site\, Road Sa
+ fety Plans Bill stages https://bills.parliament.uk/bills/4283/stages
 URL:https://bills.parliament.uk/bills/4283/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4313-21264@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Commons second reading of the Social Security (Marriage) B
  ill
-DESCRIPTION:Local economy bill. A Bill to prohibit the recognition of poly
- gamous marriages\, marriages within prohibited degrees\, and certain othe
- r marriages between close relatives\, in the social security system. Docu
- ments published: none yet. Status: provisional. Source: UK Parliament\, B
- ills site\, Social Security (Marriage) Bill stages https://bills.parliame
- nt.uk/bills/4313/stages
+DESCRIPTION:Flagged Local. A Bill to prohibit the recognition of polygamou
+ s marriages\, marriages within prohibited degrees\, and certain other mar
+ riages between close relatives\, in the social security system. Documents
+  published: none yet. Status: provisional. Source: UK Parliament\, Bills 
+ site\, Social Security (Marriage) Bill stages https://bills.parliament.uk
+ /bills/4313/stages
 URL:https://bills.parliament.uk/bills/4313/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4209-20952@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:[Amber] Commons second reading of the Tax Reliefs Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the relief 
- of taxation in respect of private education\, private healthcare\, mortga
- ge interest payments for primary residences\, certain transport costs rel
- ating to employment and private pension contributions\; to make further p
- rovision relating to the relief of taxation\; and for connected purposes.
-  Documents published: none yet. Status: provisional. Source: UK Parliamen
- t\, Bills site\, Tax Reliefs Bill stages https://bills.parliament.uk/bill
- s/4209/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the relief of ta
+ xation in respect of private education\, private healthcare\, mortgage in
+ terest payments for primary residences\, certain transport costs relating
+  to employment and private pension contributions\; to make further provis
+ ion relating to the relief of taxation\; and for connected purposes. Docu
+ ments published: none yet. Status: provisional. Source: UK Parliament\, B
+ ills site\, Tax Reliefs Bill stages https://bills.parliament.uk/bills/420
+ 9/stages
 URL:https://bills.parliament.uk/bills/4209/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4083-21266@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Lords committee stage of the Courts and Tribunals Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to Make provis
- ion in relation to criminal courts in England and Wales\; to make provisi
- on about the leadership of tribunals\; to amend section 1 of the Children
-  Act 1989 to remove the presumption relating to the involvement of parent
- s in the life of a child\; and for connected purposes. Documents publishe
- d: yes (131) (Bill text\, Explanatory Notes\, Impact Assessment\, Library
-  briefing\, Delegated Powers Memorandum\, Committee report\, Written evid
- ence\, 63 other). Status: provisional. Source: UK Parliament\, Bills site
- \, Courts and Tribunals Bill stages https://bills.parliament.uk/bills/408
- 3/stages
+DESCRIPTION:Government bill with no advisor flag. A Bill to Make provision
+  in relation to criminal courts in England and Wales\; to make provision 
+ about the leadership of tribunals\; to amend section 1 of the Children Ac
+ t 1989 to remove the presumption relating to the involvement of parents i
+ n the life of a child\; and for connected purposes. Documents published: 
+ yes (131) (Bill text\, Explanatory Notes\, Impact Assessment\, Library br
+ iefing\, Delegated Powers Memorandum\, Committee report\, Written evidenc
+ e\, 63 other). Status: provisional. Source: UK Parliament\, Bills site\, 
+ Courts and Tribunals Bill stages https://bills.parliament.uk/bills/4083/s
+ tages
 URL:https://bills.parliament.uk/bills/4083/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketnovember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -308,7 +308,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-productivityflashestimateandoverviewukjulytoseptember2026andapriltojune2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:[Amber] Productivity flash estimate
@@ -322,7 +322,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:dwp-universal-credit-2026-11@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Universal Credit statistics\, quarterly release to 13 August 2026
@@ -336,7 +336,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukoctober2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Consumer price inflation
@@ -348,7 +348,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-council-taxbase-2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Council Taxbase 2026 in England
@@ -362,7 +362,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Private rent and house prices
@@ -375,24 +375,23 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4030-21281@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Lords report stage of the Railways Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to make provis
- ion about railways and railway services\; and for connected purposes. Thi
- s stage has 3 sittings scheduled\, the last on 2026-12-15. Documents publ
- ished: yes (243) (Bill text\, Explanatory Notes\, Impact Assessment\, Lib
- rary briefing\, Delegated Powers Memorandum\, Committee report\, Written 
- evidence\, 178 other). Status: provisional. Source: UK Parliament\, Bills
-  site\, Railways Bill stages https://bills.parliament.uk/bills/4030/stage
- s
+DESCRIPTION:Government bill with no advisor flag. A Bill to make provision
+  about railways and railway services\; and for connected purposes. This s
+ tage has 3 sittings scheduled\, the last on 2026-12-15. Documents publish
+ ed: yes (243) (Bill text\, Explanatory Notes\, Impact Assessment\, Librar
+ y briefing\, Delegated Powers Memorandum\, Committee report\, Written evi
+ dence\, 178 other). Status: provisional. Source: UK Parliament\, Bills si
+ te\, Railways Bill stages https://bills.parliament.uk/bills/4030/stages
 URL:https://bills.parliament.uk/bills/4030/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:school-exclusion-cfe@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Call for evidence closes on school exclusion reform
@@ -407,7 +406,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-businessdemography2025@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:[Amber] Business demography 2025
@@ -419,7 +418,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukoctober2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Public sector finances
@@ -431,7 +430,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:uk-eu-summit-2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Second UK-EU summit\, Brussels
@@ -445,7 +444,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:corporate-tax-simplification@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Consultation closes on corporate tax simplification for business i
@@ -461,7 +460,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pmi-uk-flash-pmi-2026-11-23@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:UK Flash PMI
@@ -473,7 +472,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ifg-devolab-health-inactivity@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Institute for Government event on how mayors can tackle health-rel
@@ -489,64 +488,64 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4296-21307@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Lords committee stage of the Church Appointments (Repeal of Discri
  minatory Provision) Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to Repeal prov
- ision which prohibits persons of the Roman Catholic or Jewish faiths from
-  advising the Crown on appointments in the Church of England or Church of
-  Scotland\; and to repeal provision which precludes such persons from mak
- ing ecclesiastical appointments. Documents published: yes (14) (Bill text
- \, Explanatory Notes\, Library briefing\, Committee report\, 3 other). St
- atus: provisional. Source: UK Parliament\, Bills site\, Church Appointmen
- ts (Repeal of Discriminatory Provision) Bill stages https://bills.parliam
- ent.uk/bills/4296/stages
+DESCRIPTION:Government bill with no advisor flag. A Bill to Repeal provisi
+ on which prohibits persons of the Roman Catholic or Jewish faiths from ad
+ vising the Crown on appointments in the Church of England or Church of Sc
+ otland\; and to repeal provision which precludes such persons from making
+  ecclesiastical appointments. Documents published: yes (14) (Bill text\, 
+ Explanatory Notes\, Library briefing\, Committee report\, 3 other). Statu
+ s: provisional. Source: UK Parliament\, Bills site\, Church Appointments 
+ (Repeal of Discriminatory Provision) Bill stages https://bills.parliament
+ .uk/bills/4296/stages
 URL:https://bills.parliament.uk/bills/4296/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4296-21308@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Lords report stage of the Church Appointments (Repeal of Discrimin
  atory Provision) Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to Repeal prov
- ision which prohibits persons of the Roman Catholic or Jewish faiths from
-  advising the Crown on appointments in the Church of England or Church of
-  Scotland\; and to repeal provision which precludes such persons from mak
- ing ecclesiastical appointments. Documents published: yes (14) (Bill text
- \, Explanatory Notes\, Library briefing\, Committee report\, 3 other). St
- atus: provisional. Source: UK Parliament\, Bills site\, Church Appointmen
- ts (Repeal of Discriminatory Provision) Bill stages https://bills.parliam
- ent.uk/bills/4296/stages
+DESCRIPTION:Government bill with no advisor flag. A Bill to Repeal provisi
+ on which prohibits persons of the Roman Catholic or Jewish faiths from ad
+ vising the Crown on appointments in the Church of England or Church of Sc
+ otland\; and to repeal provision which precludes such persons from making
+  ecclesiastical appointments. Documents published: yes (14) (Bill text\, 
+ Explanatory Notes\, Library briefing\, Committee report\, 3 other). Statu
+ s: provisional. Source: UK Parliament\, Bills site\, Church Appointments 
+ (Repeal of Discriminatory Provision) Bill stages https://bills.parliament
+ .uk/bills/4296/stages
 URL:https://bills.parliament.uk/bills/4296/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4296-21309@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Lords third reading of the Church Appointments (Repeal of Discrimi
  natory Provision) Bill
-DESCRIPTION:Government bill off our priority themes. A Bill to Repeal prov
- ision which prohibits persons of the Roman Catholic or Jewish faiths from
-  advising the Crown on appointments in the Church of England or Church of
-  Scotland\; and to repeal provision which precludes such persons from mak
- ing ecclesiastical appointments. Documents published: yes (14) (Bill text
- \, Explanatory Notes\, Library briefing\, Committee report\, 3 other). St
- atus: provisional. Source: UK Parliament\, Bills site\, Church Appointmen
- ts (Repeal of Discriminatory Provision) Bill stages https://bills.parliam
- ent.uk/bills/4296/stages
+DESCRIPTION:Government bill with no advisor flag. A Bill to Repeal provisi
+ on which prohibits persons of the Roman Catholic or Jewish faiths from ad
+ vising the Crown on appointments in the Church of England or Church of Sc
+ otland\; and to repeal provision which precludes such persons from making
+  ecclesiastical appointments. Documents published: yes (14) (Bill text\, 
+ Explanatory Notes\, Library briefing\, Committee report\, 3 other). Statu
+ s: provisional. Source: UK Parliament\, Bills site\, Church Appointments 
+ (Repeal of Discriminatory Provision) Bill stages https://bills.parliament
+ .uk/bills/4296/stages
 URL:https://bills.parliament.uk/bills/4296/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-regionalandsubregionallabourproductivityuk2024@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:[Red] Regional and subregional labour productivity\, 2024
@@ -562,38 +561,37 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4080-21212@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Lords committee stage of the Representation of the People Bill
-DESCRIPTION:Government bill off our priority themes. Make provision extend
- ing the right to vote to 16 and 17 year olds\; to make provision about th
- e registration of voters\; to make provision about the administration and
-  conduct of elections\, referendums and recall petitions\; to make provis
- ion about election agents’ addresses\; to make provision about politica
- l expenditure and political donations\; to make provision about informati
- on to be included in electronic campaigning material\; to make provision 
- about offences and civil sanctions in connection with elections\, referen
- dums and recall petitions and with donations and expenditure for politica
- l purposes\; to repeal provision about the designation of a strategy and 
- policy statement for the Electoral Commission\; to make provision about t
- he disclosure of information by the Electoral Commission\; to make provis
- ion about the disqualification of offenders for holding elective offices\
- , and their sentencing\, where offences are aggravated by hostility towar
- ds persons involved in elections\, referendums or recall petitions or hol
- ders of such offices\; and for connected purposes. This stage has 4 sitti
- ngs scheduled\, the last on 2026-12-14. Documents published: yes (250) (B
- ill text\, Explanatory Notes\, Impact Assessment\, Library briefing\, Del
- egated Powers Memorandum\, Committee report\, Written evidence\, 167 othe
- r). Status: provisional. Source: UK Parliament\, Bills site\, Representat
- ion of the People Bill stages https://bills.parliament.uk/bills/4080/stag
- es
+DESCRIPTION:Government bill with no advisor flag. Make provision extending
+  the right to vote to 16 and 17 year olds\; to make provision about the r
+ egistration of voters\; to make provision about the administration and co
+ nduct of elections\, referendums and recall petitions\; to make provision
+  about election agents’ addresses\; to make provision about political e
+ xpenditure and political donations\; to make provision about information 
+ to be included in electronic campaigning material\; to make provision abo
+ ut offences and civil sanctions in connection with elections\, referendum
+ s and recall petitions and with donations and expenditure for political p
+ urposes\; to repeal provision about the designation of a strategy and pol
+ icy statement for the Electoral Commission\; to make provision about the 
+ disclosure of information by the Electoral Commission\; to make provision
+  about the disqualification of offenders for holding elective offices\, a
+ nd their sentencing\, where offences are aggravated by hostility towards 
+ persons involved in elections\, referendums or recall petitions or holder
+ s of such offices\; and for connected purposes. This stage has 4 sittings
+  scheduled\, the last on 2026-12-14. Documents published: yes (250) (Bill
+  text\, Explanatory Notes\, Impact Assessment\, Library briefing\, Delega
+ ted Powers Memorandum\, Committee report\, Written evidence\, 167 other).
+  Status: provisional. Source: UK Parliament\, Bills site\, Representation
+  of the People Bill stages https://bills.parliament.uk/bills/4080/stages
 URL:https://bills.parliament.uk/bills/4080/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-net-additional-dwellings-2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:[Amber] Housing supply\, net additional dwellings\, England\, 2025
@@ -608,7 +606,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-provisionalpopulationestimatefortheukmid2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Provisional UK population estimate\, mid-2026
@@ -621,7 +619,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-youngpeoplenotineducationemploymentortrainingneetuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:[Amber] Young people not in education\, employment or training (NE
@@ -636,7 +634,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-longterminternationalmigrationprovisionalyearendingjune2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Long-term international migration\, year ending June 2026
@@ -649,7 +647,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-householdcostsindicesforukhouseholdgroupsjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Household Costs Indices
@@ -662,79 +660,79 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4310-21258@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Artificial Intelligence (Con
  sent and Misuse) Bill
-DESCRIPTION:Digital economy bill. A Bill to make provision about a require
- ment for consent to generate a likeness of a person using\, or with the a
- ssistance of\, artificial intelligence\; to make further provision relati
- ng to that requirement\; to make provision about civil action in circumst
- ances where that requirement is not met\; to make provision about offence
- s relating to the creating or dissemination of such likenesses\; to make 
- provision about duties on providers of artificial intelligence technology
-  in relation to misuse of that technology to generate likenesses\; and fo
- r connected purposes. Documents published: none yet. Status: provisional.
-  Source: UK Parliament\, Bills site\, Artificial Intelligence (Consent an
- d Misuse) Bill stages https://bills.parliament.uk/bills/4310/stages
+DESCRIPTION:Flagged Digital. A Bill to make provision about a requirement 
+ for consent to generate a likeness of a person using\, or with the assist
+ ance of\, artificial intelligence\; to make further provision relating to
+  that requirement\; to make provision about civil action in circumstances
+  where that requirement is not met\; to make provision about offences rel
+ ating to the creating or dissemination of such likenesses\; to make provi
+ sion about duties on providers of artificial intelligence technology in r
+ elation to misuse of that technology to generate likenesses\; and for con
+ nected purposes. Documents published: none yet. Status: provisional. Sour
+ ce: UK Parliament\, Bills site\, Artificial Intelligence (Consent and Mis
+ use) Bill stages https://bills.parliament.uk/bills/4310/stages
 URL:https://bills.parliament.uk/bills/4310/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4295-21199@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Personal Data (Digital Twins
  ) Bill
-DESCRIPTION:Digital economy bill. A Bill to make provision about the regul
- ation of software or algorithms which use or hold personal data for the p
- urpose of modelling the preferences or behaviours of a person\; to make p
- rovision about the rights of individuals in respect of the holding and us
- e of their personal data by such software or algorithms\; and for connect
- ed purposes. Documents published: none yet. Status: provisional. Source: 
- UK Parliament\, Bills site\, Personal Data (Digital Twins) Bill stages ht
- tps://bills.parliament.uk/bills/4295/stages
+DESCRIPTION:Flagged Digital. A Bill to make provision about the regulation
+  of software or algorithms which use or hold personal data for the purpos
+ e of modelling the preferences or behaviours of a person\; to make provis
+ ion about the rights of individuals in respect of the holding and use of 
+ their personal data by such software or algorithms\; and for connected pu
+ rposes. Documents published: none yet. Status: provisional. Source: UK Pa
+ rliament\, Bills site\, Personal Data (Digital Twins) Bill stages https:/
+ /bills.parliament.uk/bills/4295/stages
 URL:https://bills.parliament.uk/bills/4295/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4248-21033@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Rural Public Transport Bill
-DESCRIPTION:Local economy bill. A Bill to make provision for a minimum lev
- el of bus and rail services in rural areas\; to require the Secretary of 
- State to consult users and prospective users of local rail and bus transp
- ortation about the provision of those services\; to require the Secretary
-  of State to review the provision of rail services to rural areas\; and f
- or connected purposes. Documents published: none yet. Status: provisional
- . Source: UK Parliament\, Bills site\, Rural Public Transport Bill stages
-  https://bills.parliament.uk/bills/4248/stages
+DESCRIPTION:Flagged Local. A Bill to make provision for a minimum level of
+  bus and rail services in rural areas\; to require the Secretary of State
+  to consult users and prospective users of local rail and bus transportat
+ ion about the provision of those services\; to require the Secretary of S
+ tate to review the provision of rail services to rural areas\; and for co
+ nnected purposes. Documents published: none yet. Status: provisional. Sou
+ rce: UK Parliament\, Bills site\, Rural Public Transport Bill stages http
+ s://bills.parliament.uk/bills/4248/stages
 URL:https://bills.parliament.uk/bills/4248/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4311-21260@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Utilities (Social Tariff) Bi
  ll
-DESCRIPTION:Digital economy bill. A Bill to require utility companies to p
- rovide social tariffs for energy\, broadband and mobile bills to support 
- customers who are disabled\, elderly or on a low income\; and for connect
- ed purposes. Documents published: none yet. Status: provisional. Source: 
- UK Parliament\, Bills site\, Utilities (Social Tariff) Bill stages https:
- //bills.parliament.uk/bills/4311/stages
+DESCRIPTION:Flagged Digital. A Bill to require utility companies to provid
+ e social tariffs for energy\, broadband and mobile bills to support custo
+ mers who are disabled\, elderly or on a low income\; and for connected pu
+ rposes. Documents published: none yet. Status: provisional. Source: UK Pa
+ rliament\, Bills site\, Utilities (Social Tariff) Bill stages https://bil
+ ls.parliament.uk/bills/4311/stages
 URL:https://bills.parliament.uk/bills/4311/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:founders-relief@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Technical consultation closes on Founders' Relief
@@ -748,7 +746,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bics-registration-close@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:[Red] British Industrial Competitiveness Scheme applications close
@@ -767,7 +765,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pip-plan-beacon-lough@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:[Red] Pride in Place plans due from September 2025 Phase 2 boards
@@ -783,7 +781,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:[Amber] Small-area population estimates\, mid-2025
@@ -797,7 +795,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pmi-uk-manufacturing-pmi-2026-12-01@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:UK Manufacturing PMI
@@ -810,7 +808,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:state-pension-deferral-cfe@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Call for evidence closes on State Pension deferral
@@ -824,7 +822,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-workingandworklesshouseholdsintheukjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Working and workless households
@@ -837,86 +835,86 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4208-20950@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Employment Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the employm
- ent of foreign nationals\; to make provision about the national minimum w
- age\; and for connected purposes. Documents published: none yet. Status: 
- provisional. Source: UK Parliament\, Bills site\, Employment Bill stages 
- https://bills.parliament.uk/bills/4208/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the employment o
+ f foreign nationals\; to make provision about the national minimum wage\;
+  and for connected purposes. Documents published: none yet. Status: provi
+ sional. Source: UK Parliament\, Bills site\, Employment Bill stages https
+ ://bills.parliament.uk/bills/4208/stages
 URL:https://bills.parliament.uk/bills/4208/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4190-20914@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Environmental Impact Assessm
  ent (Downstream Emissions) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the assessm
- ent of environmental impact of developments involving the extraction of f
- ossil fuels\; to provide that downstream greenhouse gas emissions from th
- e combustion or other end use of extracted hydrocarbons are not required 
- to be assessed as part of the environmental impact assessment of such dev
- elopments\; to make provision relating to decisions in respect of the gra
- nt of consent and planning permission for certain such developments\; and
-  for connected purposes. Documents published: none yet. Status: provision
- al. Source: UK Parliament\, Bills site\, Environmental Impact Assessment 
- (Downstream Emissions) Bill stages https://bills.parliament.uk/bills/4190
- /stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the assessment o
+ f environmental impact of developments involving the extraction of fossil
+  fuels\; to provide that downstream greenhouse gas emissions from the com
+ bustion or other end use of extracted hydrocarbons are not required to be
+  assessed as part of the environmental impact assessment of such developm
+ ents\; to make provision relating to decisions in respect of the grant of
+  consent and planning permission for certain such developments\; and for 
+ connected purposes. Documents published: none yet. Status: provisional. S
+ ource: UK Parliament\, Bills site\, Environmental Impact Assessment (Down
+ stream Emissions) Bill stages https://bills.parliament.uk/bills/4190/stag
+ es
 URL:https://bills.parliament.uk/bills/4190/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4307-21247@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Flooding Bill
-DESCRIPTION:Local economy\, Digital economy bill. A Bill to make provision
-  about the responsibilities and duties of certain authorities and agencie
- s in respect of inland flood prevention\; to make provision about the pow
- ers of local flood authorities and Internal Drainage Boards\; to require 
- the Secretary of State to report to Parliament on the funding of local fl
- ood authorities and Internal Drainage Boards\; to provide for the designa
- tion of Internal Drainage Board pumps as critical national infrastructure
- \; to require the Secretary of State to prepare and publish a report on t
- he potential merits of establishing a Flood Compensation Fund to support 
- homeowners whose primary residence has become unsaleable as a direct resu
- lt of flooding\; to make provision about flood reinsurance schemes\; to m
- ake provision about the responsibilities of developers and water companie
- s in respect of the provision of drainage for new housing developments\; 
- to make water companies statutory consultees for certain planning applica
- tions\; to place a duty on fire and rescue services to respond to flood e
- vents\; to make provision about national and local digital mapping of flo
- od incidence and risk\; and for connected purposes. Documents published: 
- none yet. Status: provisional. Source: UK Parliament\, Bills site\, Flood
- ing Bill stages https://bills.parliament.uk/bills/4307/stages
+DESCRIPTION:Flagged Local\, Digital. A Bill to make provision about the re
+ sponsibilities and duties of certain authorities and agencies in respect 
+ of inland flood prevention\; to make provision about the powers of local 
+ flood authorities and Internal Drainage Boards\; to require the Secretary
+  of State to report to Parliament on the funding of local flood authoriti
+ es and Internal Drainage Boards\; to provide for the designation of Inter
+ nal Drainage Board pumps as critical national infrastructure\; to require
+  the Secretary of State to prepare and publish a report on the potential 
+ merits of establishing a Flood Compensation Fund to support homeowners wh
+ ose primary residence has become unsaleable as a direct result of floodin
+ g\; to make provision about flood reinsurance schemes\; to make provision
+  about the responsibilities of developers and water companies in respect 
+ of the provision of drainage for new housing developments\; to make water
+  companies statutory consultees for certain planning applications\; to pl
+ ace a duty on fire and rescue services to respond to flood events\; to ma
+ ke provision about national and local digital mapping of flood incidence 
+ and risk\; and for connected purposes. Documents published: none yet. Sta
+ tus: provisional. Source: UK Parliament\, Bills site\, Flooding Bill stag
+ es https://bills.parliament.uk/bills/4307/stages
 URL:https://bills.parliament.uk/bills/4307/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4260-21085@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Public Procurement (British 
  Goods and Services) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about public proc
- urement in respect of British goods and services in relation to social va
- lue and contract award notices\; and for connected purposes. Documents pu
- blished: yes (4) (Bill text). Status: provisional. Source: UK Parliament\
- , Bills site\, Public Procurement (British Goods and Services) Bill stage
- s https://bills.parliament.uk/bills/4260/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about public procureme
+ nt in respect of British goods and services in relation to social value a
+ nd contract award notices\; and for connected purposes. Documents publish
+ ed: yes (4) (Bill text). Status: provisional. Source: UK Parliament\, Bil
+ ls site\, Public Procurement (British Goods and Services) Bill stages htt
+ ps://bills.parliament.uk/bills/4260/stages
 URL:https://bills.parliament.uk/bills/4260/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-affordable-housing-supply-2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:[Amber] Affordable housing supply in England\, 2025 to 2026
@@ -931,7 +929,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-trendsinukbusinessdynamismandproductivity2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Trends in UK business dynamism and productivity
@@ -944,7 +942,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wholesale-cfd@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Consultation closes on Wholesale Contracts for Difference
@@ -958,7 +956,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-lifeexpectancyforlocalareasoftheukbetween2001to2003and2023to2025@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Life expectancy for local areas\, 2023 to 2025
@@ -971,7 +969,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-live-table-1012-2026-12-10@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Update of Live Table 1012 on affordable housing supply
@@ -986,7 +984,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:supported-housing-licensing-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Consultation closes on supported housing licensing regulations
@@ -1001,7 +999,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukoctober2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:GDP monthly estimate
@@ -1013,7 +1011,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:child-employment-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Consultation closes on the child employment regulatory framework
@@ -1027,7 +1025,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:street-works-code@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Consultation closes on the street works and road works safety code
@@ -1042,7 +1040,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1056,7 +1054,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-internationaltradeinuknationsregionsandcities2024@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:International trade in UK nations\, regions and cities\, 2024
@@ -1069,7 +1067,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cdc-regs-2027-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Consultation closes on the Retirement Collective Money Purchase Sc
@@ -1085,7 +1083,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Consumer price inflation
@@ -1097,7 +1095,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-businessregisterandemploymentsurveybresrevisedresults2024fortheuk@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:[Amber] BRES\, provisional and revised results\, revised results 2
@@ -1114,7 +1112,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Private rent and house prices
@@ -1127,7 +1125,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev-charging-tenants-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Consultation closes on electric vehicle charging access for tenant
@@ -1144,7 +1142,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev-charging-building-regs-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Consultation closes on electric vehicle charging in the building r
@@ -1161,7 +1159,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:dismissal-reengagement-code-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:Consultation closes on the revised code of practice on dismissal a
@@ -1177,7 +1175,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2026-12-17@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:[Amber] Bank of England interest rate decision
@@ -1193,7 +1191,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:awaabs-law-prs-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:Consultation closes on extending Awaab's Law to private rented ten
@@ -1209,7 +1207,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Public sector finances
@@ -1221,7 +1219,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:guided-retirement-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Consultation closes on guided retirement
@@ -1235,7 +1233,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:land-registry-consultations@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Consultations close on access to HM Land Registry information and 
@@ -1250,7 +1248,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:gas-network-costs-cfe@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Call for evidence closes on recovering gas network costs during th
@@ -1266,7 +1264,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cbam-start@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Carbon Border Adjustment Mechanism starts
@@ -1282,7 +1280,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ppn026-live@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:[Amber] PPN 026 social value model applies to new central governme
@@ -1297,7 +1295,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bus-fare-cap@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:£2 bus fare cap across England outside London
@@ -1311,7 +1309,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:crichel-down-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:Consultation closes on reform of the Crichel Down Rules
@@ -1326,7 +1324,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:employment-status-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:[Amber] Consultation closes on employment status reform and protec
@@ -1344,7 +1342,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:data-centres-nps-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:Consultation closes on the draft National Policy Statement for Dat
@@ -1360,7 +1358,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:lle-loan-payments-cfe@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
 SUMMARY:Call for evidence closes on how Lifelong Learning Entitlement loan
@@ -1375,7 +1373,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:GDP monthly estimate
@@ -1387,118 +1385,117 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4170-20869@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Automated Online Software (A
  ccess and Transparency) Bill
-DESCRIPTION:Digital economy bill. A Bill to make provision about the regis
- tration of operators of specified automated online software\; to make pro
- vision about duties on those operators with regard to the functions of th
- at software\, including in relation to accessing online material publishe
- d by persons other than the operator\; and for connected purposes. Docume
- nts published: yes (6) (Bill text\, Explanatory Notes). Status: provision
- al. Source: UK Parliament\, Bills site\, Automated Online Software (Acces
- s and Transparency) Bill stages https://bills.parliament.uk/bills/4170/st
- ages
+DESCRIPTION:Flagged Digital. A Bill to make provision about the registrati
+ on of operators of specified automated online software\; to make provisio
+ n about duties on those operators with regard to the functions of that so
+ ftware\, including in relation to accessing online material published by 
+ persons other than the operator\; and for connected purposes. Documents p
+ ublished: yes (6) (Bill text\, Explanatory Notes). Status: provisional. S
+ ource: UK Parliament\, Bills site\, Automated Online Software (Access and
+  Transparency) Bill stages https://bills.parliament.uk/bills/4170/stages
 URL:https://bills.parliament.uk/bills/4170/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4185-20904@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Battery Energy Storage (Plan
  ning and Regulation) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the constru
- ction\, use and decommissioning of battery energy storage systems\; to pr
- ovide that fire and rescue authorities must be consulted in relation to p
- lanning applications relating to battery energy storage systems\; to requ
- ire the Secretary of State to undertake a review of the safety and risks 
- of battery energy storage systems and to lay the report of that review be
- fore Parliament\; and for connected purposes. Documents published: none y
- et. Status: provisional. Source: UK Parliament\, Bills site\, Battery Ene
- rgy Storage (Planning and Regulation) Bill stages https://bills.parliamen
- t.uk/bills/4185/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the construction
+ \, use and decommissioning of battery energy storage systems\; to provide
+  that fire and rescue authorities must be consulted in relation to planni
+ ng applications relating to battery energy storage systems\; to require t
+ he Secretary of State to undertake a review of the safety and risks of ba
+ ttery energy storage systems and to lay the report of that review before 
+ Parliament\; and for connected purposes. Documents published: none yet. S
+ tatus: provisional. Source: UK Parliament\, Bills site\, Battery Energy S
+ torage (Planning and Regulation) Bill stages https://bills.parliament.uk/
+ bills/4185/stages
 URL:https://bills.parliament.uk/bills/4185/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4232-21001@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Green Belt (Protection) Bill
-DESCRIPTION:Local economy bill. A Bill to establish a national register of
-  Green Belt land in England\; to restrict the ability of local authoritie
- s to de-designate Green Belt land\; to make provision about future develo
- pment of de-designated Green Belt land\; and for connected purposes. Docu
- ments published: none yet. Status: provisional. Source: UK Parliament\, B
- ills site\, Green Belt (Protection) Bill stages https://bills.parliament.
- uk/bills/4232/stages
+DESCRIPTION:Flagged Local. A Bill to establish a national register of Gree
+ n Belt land in England\; to restrict the ability of local authorities to 
+ de-designate Green Belt land\; to make provision about future development
+  of de-designated Green Belt land\; and for connected purposes. Documents
+  published: none yet. Status: provisional. Source: UK Parliament\, Bills 
+ site\, Green Belt (Protection) Bill stages https://bills.parliament.uk/bi
+ lls/4232/stages
 URL:https://bills.parliament.uk/bills/4232/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4159-20844@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Heritage Public Houses Bill
-DESCRIPTION:Local economy\, Visitor economy bill. A Bill to require local 
- authorities to maintain a register of heritage public houses in their are
- a and to make provision in connection with the compilation and maintenanc
- e of such registers\; to make provision relating to planning applications
-  in respect of public houses on such a register\; to make provision about
-  the listing of heritage public houses\; to make further provision relati
- ng to heritage public houses\; and for connected purposes. Documents publ
- ished: yes (4) (Bill text). Status: provisional. Source: UK Parliament\, 
- Bills site\, Heritage Public Houses Bill stages https://bills.parliament.
- uk/bills/4159/stages
+DESCRIPTION:Flagged Local\, Visitor. A Bill to require local authorities t
+ o maintain a register of heritage public houses in their area and to make
+  provision in connection with the compilation and maintenance of such reg
+ isters\; to make provision relating to planning applications in respect o
+ f public houses on such a register\; to make provision about the listing 
+ of heritage public houses\; to make further provision relating to heritag
+ e public houses\; and for connected purposes. Documents published: yes (4
+ ) (Bill text). Status: provisional. Source: UK Parliament\, Bills site\, 
+ Heritage Public Houses Bill stages https://bills.parliament.uk/bills/4159
+ /stages
 URL:https://bills.parliament.uk/bills/4159/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4173-20875@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Planning (Solar Power Genera
  tion) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the grantin
- g of planning permission and development consent in respect of the buildi
- ng or installation of provision for solar power generation on agricultura
- l land\; and for connected purposes. Documents published: none yet. Statu
- s: provisional. Source: UK Parliament\, Bills site\, Planning (Solar Powe
- r Generation) Bill stages https://bills.parliament.uk/bills/4173/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the granting of 
+ planning permission and development consent in respect of the building or
+  installation of provision for solar power generation on agricultural lan
+ d\; and for connected purposes. Documents published: none yet. Status: pr
+ ovisional. Source: UK Parliament\, Bills site\, Planning (Solar Power Gen
+ eration) Bill stages https://bills.parliament.uk/bills/4173/stages
 URL:https://bills.parliament.uk/bills/4173/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4249-21035@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Reciprocal Cross-Border Publ
  ic Services Bill
-DESCRIPTION:Local economy bill. A Bill to require the Secretary of State t
- o publish proposals for the reciprocal provision of health\, social and e
- ducation services between persons in local authorities in England and Sco
- tland\, and England and Wales\; to require the Secretary of State to publ
- ish guidance about the storage\, sharing and use of individual data by an
- d between public service providers in England and Scotland\, and England 
- and Wales\; to require certain public service providers to comply with su
- ch guidance\; and for connected purposes. Documents published: none yet. 
- Status: provisional. Source: UK Parliament\, Bills site\, Reciprocal Cros
- s-Border Public Services Bill stages https://bills.parliament.uk/bills/42
- 49/stages
+DESCRIPTION:Flagged Local. A Bill to require the Secretary of State to pub
+ lish proposals for the reciprocal provision of health\, social and educat
+ ion services between persons in local authorities in England and Scotland
+ \, and England and Wales\; to require the Secretary of State to publish g
+ uidance about the storage\, sharing and use of individual data by and bet
+ ween public service providers in England and Scotland\, and England and W
+ ales\; to require certain public service providers to comply with such gu
+ idance\; and for connected purposes. Documents published: none yet. Statu
+ s: provisional. Source: UK Parliament\, Bills site\, Reciprocal Cross-Bor
+ der Public Services Bill stages https://bills.parliament.uk/bills/4249/st
+ ages
 URL:https://bills.parliament.uk/bills/4249/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1512,7 +1509,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consumer price inflation
@@ -1524,7 +1521,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Private rent and house prices
@@ -1536,7 +1533,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:e-invoicing@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on e-invoicing digital reporting
@@ -1550,7 +1547,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cbam-refinery-scope@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on extending the carbon border tax to refinery
@@ -1567,7 +1564,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:foreign-sovereign-tax@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on modernising the taxation of foreign soverei
@@ -1583,7 +1580,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:machine-games-duty@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on who is liable for Machine Games Duty
@@ -1597,7 +1594,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:Public sector finances
@@ -1609,7 +1606,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pension-trustees-duties-consultation@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
 SUMMARY:Consultation closes on pension trustees' investment and fiduciary 
@@ -1624,26 +1621,26 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4200-20936@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:[Amber] Commons second reading of the Welfare Reform Bill
-DESCRIPTION:Local economy bill. A Bill to make provision to restrict eligi
- bility for the Personal Independence Payment for those with certain menta
- l health conditions\; to require that assessments for certain welfare ben
- efits are conducted face to face\; to make provision to restrict the elig
- ibility of persons who are not British citizens to claim welfare benefits
- \; to make provision about fit notes in connection with welfare benefits\
- ; to provide for a two child limit on the child element of universal cred
- it\; and for connected purposes. Documents published: none yet. Status: p
- rovisional. Source: UK Parliament\, Bills site\, Welfare Reform Bill stag
- es https://bills.parliament.uk/bills/4200/stages
+DESCRIPTION:Flagged Local. A Bill to make provision to restrict eligibilit
+ y for the Personal Independence Payment for those with certain mental hea
+ lth conditions\; to require that assessments for certain welfare benefits
+  are conducted face to face\; to make provision to restrict the eligibili
+ ty of persons who are not British citizens to claim welfare benefits\; to
+  make provision about fit notes in connection with welfare benefits\; to 
+ provide for a two child limit on the child element of universal credit\; 
+ and for connected purposes. Documents published: none yet. Status: provis
+ ional. Source: UK Parliament\, Bills site\, Welfare Reform Bill stages ht
+ tps://bills.parliament.uk/bills/4200/stages
 URL:https://bills.parliament.uk/bills/4200/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:toms-cfe@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Call for evidence closes on the VAT treatment of travel services
@@ -1657,7 +1654,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2027-02-04@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
 SUMMARY:[Amber] Bank of England interest rate decision\, with Monetary Pol
@@ -1671,40 +1668,39 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4188-20910@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
 SUMMARY:[Amber] Commons second reading of the Electricity Works (Small Bus
  iness Compensation Proposals) Bill
-DESCRIPTION:Local economy bill. A Bill to require the Secretary of State t
- o publish proposals for a scheme to compensate small businesses affected 
- by road closures resulting from electricity works\; and for connected pur
- poses. Documents published: none yet. Status: provisional. Source: UK Par
- liament\, Bills site\, Electricity Works (Small Business Compensation Pro
- posals) Bill stages https://bills.parliament.uk/bills/4188/stages
+DESCRIPTION:Flagged Local. A Bill to require the Secretary of State to pub
+ lish proposals for a scheme to compensate small businesses affected by ro
+ ad closures resulting from electricity works\; and for connected purposes
+ . Documents published: none yet. Status: provisional. Source: UK Parliame
+ nt\, Bills site\, Electricity Works (Small Business Compensation Proposal
+ s) Bill stages https://bills.parliament.uk/bills/4188/stages
 URL:https://bills.parliament.uk/bills/4188/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4276-21127@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
 SUMMARY:[Amber] Commons second reading of the Home Cooling Bill
-DESCRIPTION:Local economy bill. A Bill to provide for the zero-rating of V
- AT in respect of certain home cooling measures\; to require the Secretary
-  of State to report to Parliament on the potential merits of providing fu
- nding to local authorities in England to enable them to make grants for h
- ome cooling measures\; and for connected purposes. Documents published: y
- es (4) (Bill text). Status: provisional. Source: UK Parliament\, Bills si
- te\, Home Cooling Bill stages https://bills.parliament.uk/bills/4276/stag
- es
+DESCRIPTION:Flagged Local. A Bill to provide for the zero-rating of VAT in
+  respect of certain home cooling measures\; to require the Secretary of S
+ tate to report to Parliament on the potential merits of providing funding
+  to local authorities in England to enable them to make grants for home c
+ ooling measures\; and for connected purposes. Documents published: yes (4
+ ) (Bill text). Status: provisional. Source: UK Parliament\, Bills site\, 
+ Home Cooling Bill stages https://bills.parliament.uk/bills/4276/stages
 URL:https://bills.parliament.uk/bills/4276/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpfirstquarterlyestimateukoctobertodecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270213
 SUMMARY:GDP first quarterly estimate
@@ -1717,7 +1713,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270213
 SUMMARY:GDP monthly estimate
@@ -1729,7 +1725,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1743,7 +1739,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-productivityflashestimateandoverviewukoctobertodecember2026andjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
 SUMMARY:[Amber] Productivity flash estimate\, October to December 2026 and
@@ -1758,7 +1754,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:Consumer price inflation
@@ -1770,7 +1766,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:Private rent and house prices
@@ -1783,7 +1779,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270219
 DTEND;VALUE=DATE:20270220
 SUMMARY:Public sector finances
@@ -1795,7 +1791,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-lowcarbonandrenewableenergyeconomyuk2025@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270224
 DTEND;VALUE=DATE:20270225
 SUMMARY:Low carbon and renewable energy economy\, 2025
@@ -1808,7 +1804,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-householdcostsindicesforukhouseholdgroupsoctobertodecember2026@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270225
 DTEND;VALUE=DATE:20270226
 SUMMARY:Household Costs Indices
@@ -1821,7 +1817,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pip-plan-backstop@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270226
 DTEND;VALUE=DATE:20270227
 SUMMARY:[Amber] Latest submission date for Phase 2 Pride in Place plans
@@ -1836,71 +1832,71 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4224-20984@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Caravan Site Licensing (Exem
  ption of Motor Homes) Bill
-DESCRIPTION:Local economy bill. A Bill to exempt motor homes from caravan 
- site licensing requirements\; and for connected purposes. Documents publi
- shed: none yet. Status: provisional. Source: UK Parliament\, Bills site\,
-  Caravan Site Licensing (Exemption of Motor Homes) Bill stages https://bi
- lls.parliament.uk/bills/4224/stages
+DESCRIPTION:Flagged Local. A Bill to exempt motor homes from caravan site 
+ licensing requirements\; and for connected purposes. Documents published:
+  none yet. Status: provisional. Source: UK Parliament\, Bills site\, Cara
+ van Site Licensing (Exemption of Motor Homes) Bill stages https://bills.p
+ arliament.uk/bills/4224/stages
 URL:https://bills.parliament.uk/bills/4224/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4243-21023@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Planning Application Consult
  ations (Mobile Network Operators) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision for the consultat
- ion of mobile network operators in relation to certain planning applicati
- ons\; and for connected purposes. Documents published: none yet. Status: 
- provisional. Source: UK Parliament\, Bills site\, Planning Application Co
- nsultations (Mobile Network Operators) Bill stages https://bills.parliame
- nt.uk/bills/4243/stages
+DESCRIPTION:Flagged Local. A Bill to make provision for the consultation o
+ f mobile network operators in relation to certain planning applications\;
+  and for connected purposes. Documents published: none yet. Status: provi
+ sional. Source: UK Parliament\, Bills site\, Planning Application Consult
+ ations (Mobile Network Operators) Bill stages https://bills.parliament.uk
+ /bills/4243/stages
 URL:https://bills.parliament.uk/bills/4243/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4299-21220@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Planning and Development (Co
  mmunity Infrastructure) Bill
-DESCRIPTION:Local economy bill. A Bill to require housing developers to co
- nstruct any planned community infrastructure before commencing constructi
- on of housing with which the planned community infrastructure is associat
- ed\; and for connected purposes. Documents published: none yet. Status: p
- rovisional. Source: UK Parliament\, Bills site\, Planning and Development
-  (Community Infrastructure) Bill stages https://bills.parliament.uk/bills
- /4299/stages
+DESCRIPTION:Flagged Local. A Bill to require housing developers to constru
+ ct any planned community infrastructure before commencing construction of
+  housing with which the planned community infrastructure is associated\; 
+ and for connected purposes. Documents published: none yet. Status: provis
+ ional. Source: UK Parliament\, Bills site\, Planning and Development (Com
+ munity Infrastructure) Bill stages https://bills.parliament.uk/bills/4299
+ /stages
 URL:https://bills.parliament.uk/bills/4299/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4187-20908@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Telecommunications (Fixed-te
  rm Contracts) Bill
-DESCRIPTION:Digital economy bill. A Bill to prohibit the increasing of cha
- rges payable under certain fixed-term telecommunications contracts within
-  the duration of those contracts\; and for connected purposes. Documents 
- published: none yet. Status: provisional. Source: UK Parliament\, Bills s
- ite\, Telecommunications (Fixed-term Contracts) Bill stages https://bills
- .parliament.uk/bills/4187/stages
+DESCRIPTION:Flagged Digital. A Bill to prohibit the increasing of charges 
+ payable under certain fixed-term telecommunications contracts within the 
+ duration of those contracts\; and for connected purposes. Documents publi
+ shed: none yet. Status: provisional. Source: UK Parliament\, Bills site\,
+  Telecommunications (Fixed-term Contracts) Bill stages https://bills.parl
+ iament.uk/bills/4187/stages
 URL:https://bills.parliament.uk/bills/4187/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270312
 SUMMARY:GDP monthly estimate
@@ -1912,22 +1908,22 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4269-21111@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:[Amber] Commons second reading of the Energy and Digital Infrastru
  cture (Planning) Bill
-DESCRIPTION:Local economy\, Digital economy bill. A Bill to make provision
-  about the planning of new energy and digital infrastructure\; and for co
- nnected purposes. Documents published: none yet. Status: provisional. Sou
- rce: UK Parliament\, Bills site\, Energy and Digital Infrastructure (Plan
- ning) Bill stages https://bills.parliament.uk/bills/4269/stages
+DESCRIPTION:Flagged Local\, Digital. A Bill to make provision about the pl
+ anning of new energy and digital infrastructure\; and for connected purpo
+ ses. Documents published: none yet. Status: provisional. Source: UK Parli
+ ament\, Bills site\, Energy and Digital Infrastructure (Planning) Bill st
+ ages https://bills.parliament.uk/bills/4269/stages
 URL:https://bills.parliament.uk/bills/4269/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1941,7 +1937,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2027-03-18@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270318
 DTEND;VALUE=DATE:20270319
 SUMMARY:Bank of England interest rate decision
@@ -1954,7 +1950,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:Public sector finances
@@ -1966,99 +1962,99 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4315-21286@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Developer Contributions (Inf
  rastructure Delivery) Bill
-DESCRIPTION:Local economy bill. A Bill to make provision about the use of 
- developer contributions for the delivery of local infrastructure\; to mak
- e provision about the powers and responsibilities of public authorities a
- nd other public bodies in relation to such contributions\; and to make fu
- rther provision in relation to such contributions. Documents published: n
- one yet. Status: provisional. Source: UK Parliament\, Bills site\, Develo
- per Contributions (Infrastructure Delivery) Bill stages https://bills.par
- liament.uk/bills/4315/stages
+DESCRIPTION:Flagged Local. A Bill to make provision about the use of devel
+ oper contributions for the delivery of local infrastructure\; to make pro
+ vision about the powers and responsibilities of public authorities and ot
+ her public bodies in relation to such contributions\; and to make further
+  provision in relation to such contributions. Documents published: none y
+ et. Status: provisional. Source: UK Parliament\, Bills site\, Developer C
+ ontributions (Infrastructure Delivery) Bill stages https://bills.parliame
+ nt.uk/bills/4315/stages
 URL:https://bills.parliament.uk/bills/4315/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4196-20926@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Hospitality (Value Added Tax
  ) Bill
-DESCRIPTION:Visitor economy bill. A Bill to reduce the rate of value added
-  tax for certain supplies relating to hospitality\; and for connected pur
- poses. Documents published: none yet. Status: provisional. Source: UK Par
- liament\, Bills site\, Hospitality (Value Added Tax) Bill stages https://
- bills.parliament.uk/bills/4196/stages
+DESCRIPTION:Flagged Visitor. A Bill to reduce the rate of value added tax 
+ for certain supplies relating to hospitality\; and for connected purposes
+ . Documents published: none yet. Status: provisional. Source: UK Parliame
+ nt\, Bills site\, Hospitality (Value Added Tax) Bill stages https://bills
+ .parliament.uk/bills/4196/stages
 URL:https://bills.parliament.uk/bills/4196/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4180-20894@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Mobile Homes Bill
-DESCRIPTION:Local economy bill. A Bill to amend the law relating to mobile
-  homes. Documents published: none yet. Status: provisional. Source: UK Pa
- rliament\, Bills site\, Mobile Homes Bill stages https://bills.parliament
- .uk/bills/4180/stages
+DESCRIPTION:Flagged Local. A Bill to amend the law relating to mobile home
+ s. Documents published: none yet. Status: provisional. Source: UK Parliam
+ ent\, Bills site\, Mobile Homes Bill stages https://bills.parliament.uk/b
+ ills/4180/stages
 URL:https://bills.parliament.uk/bills/4180/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4298-21218@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Rural Communities (Public Se
  rvices and Energy) Bill
-DESCRIPTION:Local economy bill. A Bill to require the Secretary of State t
- o carry out a review of the adequacy of local government funding for rura
- l communities\, and to require that review to consider the additional cos
- ts of delivering public services in sparsely populated areas\; to require
-  the Secretary of State to carry out a review of access to healthcare ser
- vices for rural communities\, and to require that review to consider the 
- availability of radiotherapy treatment in rural areas\; to require the Se
- cretary of State to publish guidance for healthcare providers and others 
- on reducing inequalities in access to health services between rural and u
- rban areas\; to make provision about energy efficiency standards for new 
- homes in rural communities\; to require the Secretary of State to carry o
- ut a review of support available to households in rural areas affected by
-  fuel poverty and reliance on off-grid heating\; and for connected purpos
- es. Documents published: none yet. Status: provisional. Source: UK Parlia
- ment\, Bills site\, Rural Communities (Public Services and Energy) Bill s
- tages https://bills.parliament.uk/bills/4298/stages
+DESCRIPTION:Flagged Local. A Bill to require the Secretary of State to car
+ ry out a review of the adequacy of local government funding for rural com
+ munities\, and to require that review to consider the additional costs of
+  delivering public services in sparsely populated areas\; to require the 
+ Secretary of State to carry out a review of access to healthcare services
+  for rural communities\, and to require that review to consider the avail
+ ability of radiotherapy treatment in rural areas\; to require the Secreta
+ ry of State to publish guidance for healthcare providers and others on re
+ ducing inequalities in access to health services between rural and urban 
+ areas\; to make provision about energy efficiency standards for new homes
+  in rural communities\; to require the Secretary of State to carry out a 
+ review of support available to households in rural areas affected by fuel
+  poverty and reliance on off-grid heating\; and for connected purposes. D
+ ocuments published: none yet. Status: provisional. Source: UK Parliament\
+ , Bills site\, Rural Communities (Public Services and Energy) Bill stages
+  https://bills.parliament.uk/bills/4298/stages
 URL:https://bills.parliament.uk/bills/4298/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4266-21105@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Short-term Let Accommodation
   Bill
-DESCRIPTION:Local economy\, Visitor economy bill. A Bill to make provision
-  for the licensing of short-term let accommodation\; to make provision ab
- out the marketing of short-term let accommodation\; to make provision abo
- ut planning permission in respect of short-term let accommodation\; to re
- quire the Secretary of State to publish guidance about the management of 
- short-term let accommodation\; to make provision about small business rat
- es relief for short-term let accommodation\; and for connected purposes. 
- Documents published: none yet. Status: provisional. Source: UK Parliament
- \, Bills site\, Short-term Let Accommodation Bill stages https://bills.pa
- rliament.uk/bills/4266/stages
+DESCRIPTION:Flagged Local\, Visitor. A Bill to make provision for the lice
+ nsing of short-term let accommodation\; to make provision about the marke
+ ting of short-term let accommodation\; to make provision about planning p
+ ermission in respect of short-term let accommodation\; to require the Sec
+ retary of State to publish guidance about the management of short-term le
+ t accommodation\; to make provision about small business rates relief for
+  short-term let accommodation\; and for connected purposes. Documents pub
+ lished: none yet. Status: provisional. Source: UK Parliament\, Bills site
+ \, Short-term Let Accommodation Bill stages https://bills.parliament.uk/b
+ ills/4266/stages
 URL:https://bills.parliament.uk/bills/4266/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270324
 DTEND;VALUE=DATE:20270325
 SUMMARY:Consumer price inflation
@@ -2070,7 +2066,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270324
 DTEND;VALUE=DATE:20270325
 SUMMARY:Private rent and house prices
@@ -2082,7 +2078,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:legacy-local-plan-deadline@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Extended deadline to submit legacy local plans for examination
@@ -2098,7 +2094,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
 SUMMARY:GDP monthly estimate
@@ -2110,7 +2106,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketapril2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -2124,7 +2120,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:Consumer price inflation
@@ -2136,7 +2132,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:Public sector finances
@@ -2148,7 +2144,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukapril2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:Private rent and house prices
@@ -2160,7 +2156,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2027-04-29@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270429
 DTEND;VALUE=DATE:20270430
 SUMMARY:Bank of England interest rate decision\, with Monetary Policy Repo
@@ -2174,7 +2170,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpfirstquarterlyestimateukjanuarytomarch2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270514
 DTEND;VALUE=DATE:20270515
 SUMMARY:GDP first quarterly estimate\, January to March 2027
@@ -2187,7 +2183,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20270514
 DTEND;VALUE=DATE:20270515
 SUMMARY:GDP monthly estimate
@@ -2199,7 +2195,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:hsra-fund-closes@gateshead-economic-intelligence
-DTSTAMP:20261111T103033Z
+DTSTAMP:20261111T104408Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:High Street Rental Auctions Fund closes\, or earlier if the money 
