@@ -315,13 +315,15 @@
      ],
      "2026-11": [
       {
-       "label": "Fri 6",
-       "status": "next"
+       "label": "Thu 12",
+       "status": "released",
+       "href": "policy/policy-update-2026-11.html"
       }
      ],
      "2026-12": [
       {
-       "label": "Fri 4"
+       "label": "Fri 4",
+       "status": "next"
       }
      ],
      "2027-01": [
@@ -488,6 +490,42 @@
     "housebuilding",
     "pride in place",
     "national care service",
+    "consultations",
+    "nemsa"
+   ]
+  },
+  {
+   "id": "policy-2026-11",
+   "title": "Policy update, November 2026",
+   "path": "policy/policy-update-2026-11.html",
+   "topic": "Policy",
+   "description": "Sixth edition, scan covering 2 October to 12 November 2026. The Budget wrote down the fiscal devolution mechanism, with mayors taking a 20% share of business rates from April 2027 and income tax from April 2028, the detail now waiting for the 2027-28 settlement and the Spending Review in 2027. A high streets strategy names Gateshead's Old Town Hall, the borough is allocated GBP 1.91m from the Derelict Buildings Fund, and the High Street Rental Auctions Fund opens the week of 23 November. Pubs get 35% rates relief from April 2027 and the RHL multipliers were corrected on 30 October. The Visitor Levy Bill was introduced, NEMSA's Events Fund closes to expressions of interest on 26 November, the Jobs Guarantee has a named North East delivery partner, and the Green Book discount rate fell to 3.0%.",
+   "sources": "Briefing · HTML · gov.uk · NE MSA",
+   "series": "policy-update",
+   "date": "2026-11-12",
+   "keywords": [
+    "policy",
+    "bulletin",
+    "fiscal devolution",
+    "budget",
+    "business rates",
+    "pubs relief",
+    "rhl multipliers",
+    "hope on the high street",
+    "derelict buildings fund",
+    "high street rental auctions",
+    "visitor levy",
+    "events fund",
+    "jobs guarantee",
+    "green book",
+    "place-based business cases",
+    "social value",
+    "ppn 026",
+    "co-operatives",
+    "ai",
+    "data centres",
+    "investment summit",
+    "household energy payment",
     "consultations",
     "nemsa"
    ]

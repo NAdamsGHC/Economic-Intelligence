@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Policy update, November 2026 · Gateshead Economic Intelligence</title>
+<style>
+/* Gateshead Economic Intelligence policy update, document skin.
+   Corporate tokens (PT Sans, #045a90, #252525 masthead, square corners) on a
+   PDF-viewer canvas, grey surround, white sheet, print-clean. Self-contained. */
+:root{
+  --gc-masthead:#252525; --gc-blue:#045a90; --gc-blue-dark:#0F3B5B; --gc-blue-light:#0772b4;
+  --gc-ink:#111; --gc-text:#333; --gc-panel:#f5f5f5; --gc-line:#e5e5e5; --gc-line-2:#ccc;
+  --gc-red:#d50000; --gc-canvas:#525659;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:var(--gc-canvas);color:var(--gc-text);line-height:1.6;}
+a{color:var(--gc-blue);}
+a:hover{color:var(--gc-blue-dark);}
+:focus-visible{outline:2px solid var(--gc-blue);outline-offset:2px;}
+
+.canvas{padding:28px 16px 56px;}
+.sheet{
+  max-width:880px;margin:0 auto;background:#fff;border-radius:0;
+  box-shadow:0 1px 3px rgba(0,0,0,.35),0 12px 40px rgba(0,0,0,.30);
+  padding:58px 68px 46px;
+}
+@media(max-width:720px){.sheet{padding:34px 22px 30px;}.canvas{padding:14px 6px 40px;}}
+
+.kicker{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gc-blue);}
+h1{font-size:31px;color:var(--gc-blue);line-height:1.15;margin:6px 0 10px;}
+.docmeta{font-size:13px;color:#5d6b7a;border-bottom:2px solid var(--gc-blue);padding-bottom:14px;margin-bottom:18px;}
+.docmeta b{color:var(--gc-ink);}
+.lede{font-size:14.5px;color:var(--gc-text);margin-bottom:8px;}
+
+h2{font-size:20px;color:var(--gc-blue);margin:34px 0 10px;line-height:1.25;scroll-margin-top:70px;}
+h3{font-size:15.5px;color:var(--gc-ink);margin:20px 0 6px;}
+p{font-size:15px;margin:0 0 12px;}
+strong{color:var(--gc-ink);}
+ul,ol{margin:0 0 12px 22px;font-size:15px;}
+li{margin-bottom:6px;}
+.small{font-size:12.5px;color:#5d6b7a;}
+
+/* Executive summary. 1.5 spacing, bold lead phrases link to sections */
+.execsum li{line-height:1.75;margin-bottom:10px;}
+.execsum a.lead{font-weight:700;text-decoration:underline;}
+
+/* Colour convention. Red marks an item with an action AND a deadline, nothing else. */
+.deadline,a.deadline{color:var(--gc-red);font-weight:700;}
+.key{border:1px solid #f3b7b7;border-left:5px solid var(--gc-red);background:#fdf3f3;
+  padding:12px 16px;margin:14px 0 18px;font-size:14px;color:#4a2424;}
+.key b,.key strong{color:var(--gc-red);}
+
+/* Neutral caveat / note panel */
+.note{background:var(--gc-panel);border:1px solid var(--gc-line);border-left:5px solid var(--gc-blue);
+  padding:12px 16px;margin:14px 0 18px;font-size:14px;}
+.note b{color:var(--gc-ink);}
+
+/* Implications block */
+.lens{background:var(--gc-panel);border:1px solid var(--gc-line);padding:16px 18px;margin:16px 0 20px;}
+.lens h4{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gc-blue);margin:0 0 8px;}
+.lens ul{margin-bottom:0;}
+.lens li{font-size:14px;}
+
+/* Objective tags */
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;border:1px solid var(--gc-line-2);
+  color:var(--gc-blue-dark);background:#fff;padding:1px 7px;margin-left:4px;vertical-align:middle;white-space:nowrap;}
+
+table{border-collapse:collapse;width:100%;margin:12px 0 18px;font-size:14px;}
+th{background:var(--gc-panel);color:var(--gc-ink);text-align:left;font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;}
+th,td{border:1px solid var(--gc-line);padding:8px 12px;vertical-align:top;}
+td.num{text-align:right;}
+caption{caption-side:bottom;font-size:12px;color:#5d6b7a;text-align:left;padding-top:6px;}
+
+.docfoot{border-top:2px solid var(--gc-blue);margin-top:34px;padding-top:14px;font-size:12.5px;color:#5d6b7a;}
+.sources li{font-size:13.5px;margin-bottom:4px;}
+
+@media print{
+  body{background:#fff;}
+  .canvas{padding:0;}
+  .sheet{box-shadow:none;max-width:none;padding:0;}
+  a{color:var(--gc-blue);text-decoration:none;}
+  h2{page-break-after:avoid;}
+  table,.lens,.note,.key{page-break-inside:avoid;}
+}
+
+/* Recurring update format (from October 2026). Dashboard, RAG markers, actions box, three-part items, folded tables */
+.dash{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 8px;}
+.dash th,.dash td{border:1px solid var(--gc-line);padding:8px 10px;text-align:left;vertical-align:top;}
+.dash th{background:var(--gc-panel);color:var(--gc-blue-dark);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+.dash th:nth-child(1){width:92px;}
+.dash th:nth-child(2){width:24%;}
+.dash th:nth-child(4){width:27%;}
+.dash td:nth-child(2) a{font-weight:700;color:var(--gc-blue);text-decoration:none;border-bottom:1px solid var(--gc-blue);}
+.dash tr:hover td{background:#fafcfd;}
+.rag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border:1px solid;white-space:nowrap;}
+.rag.r{background:#fdeaea;border-color:#c62828;color:#8c1c1c;}
+.rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
+.rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
+.actions{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);padding:14px 18px 6px;margin:18px 0 6px;}
+.actions h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+.actions ol{margin:0 0 10px 18px;font-size:14px;}
+.actions li{margin-bottom:7px;}
+.actions .by{font-weight:700;color:#8c1c1c;}
+.actions p.carry{font-size:12.5px;color:#5d6b7a;margin:0 0 10px;border-top:1px solid var(--gc-line);padding-top:8px;}
+.item{border:1px solid var(--gc-line);border-left:4px solid var(--gc-blue);padding:13px 17px;margin:0 0 14px;scroll-margin-top:20px;}
+.item.r{border-left-color:#c62828;}.item.a{border-left-color:#c9862a;}.item.g{border-left-color:#266427;}
+.item .when{font-size:11px;font-weight:700;color:#5d6b7a;text-transform:uppercase;letter-spacing:.5px;margin:0;}
+.item h3{font-size:16px;color:var(--gc-ink);margin:3px 0 8px;}
+.item h3 .rag{vertical-align:middle;margin-right:7px;}
+.item dl{margin:0;}
+.item dt{font-weight:700;color:var(--gc-blue-dark);font-size:12px;text-transform:uppercase;letter-spacing:.4px;margin-top:10px;}
+.item dt:first-child{margin-top:0;}
+.item dd{margin:3px 0 0;}
+.item dd p{font-size:14.5px;margin-bottom:8px;}
+.item dd ul li{font-size:14px;}
+.fold{border:1px solid var(--gc-line);margin:12px 0 16px;}
+.fold > summary{cursor:pointer;padding:11px 15px;background:var(--gc-panel);font-weight:700;color:var(--gc-blue-dark);font-size:14px;list-style:none;}
+.fold > summary::-webkit-details-marker{display:none;}
+.fold > summary::before{content:"B8";display:inline-block;margin-right:9px;color:var(--gc-blue);}
+.fold[open] > summary::before{content:"BE";}
+.fold .foldbody{padding:12px 15px 4px;}
+@media(max-width:640px){
+  .dash,.dash thead,.dash tbody,.dash th,.dash td,.dash tr{display:block;}
+  .dash thead{display:none;}
+  .dash tr{border:1px solid var(--gc-line);margin-bottom:10px;}
+  .dash td{border:0;border-bottom:1px solid var(--gc-line);}
+  .dash td:last-child{border-bottom:0;}
+  table{display:block;overflow-x:auto;}
+}
+@media print{.fold{border:0}.fold > summary{display:none}.fold .foldbody{padding:0}}
+</style>
+</head>
+<body>
+
+<!-- Gateshead · Economic Intelligence brand bar (self-contained; portable) -->
+<style>
+.gcbar{font-family:'PT Sans',Helvetica,Arial,sans-serif;background:#252525;color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap;
+  border-bottom:3px solid #045a90;position:relative;z-index:2000;}
+.gcbar *{box-sizing:border-box;}
+.gcbar a.gcbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+.gcbar .gcbar-mark{width:32px;height:32px;background:#045a90;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:16px;color:#fff;}
+.gcbar .gcbar-word{font-size:16px;font-weight:700;line-height:1.05;letter-spacing:.2px;}
+.gcbar .gcbar-word small{display:block;font-size:11px;font-weight:400;color:#cfd6dc;}
+.gcbar .gcbar-spacer{flex:1 1 auto;}
+.gcbar button{font-family:inherit;cursor:pointer;border-radius:0;line-height:1;}
+.gcbar .gcbar-copy{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid #6a7784;background:transparent;color:#cfd6dc;}
+.gcbar .gcbar-copy svg{width:15px;height:15px;}
+.gcbar .gcbar-copy:hover{border-color:#0772b4;color:#8fd0f5;}
+.gcbar .gcbar-copy.gcbar-copied{border-color:#4caf50;color:#a5d6a7;}
+.gcbar .gcbar-home{color:#cfd6dc;text-decoration:none;font-size:12px;}
+.gcbar .gcbar-home:hover{color:#fff;text-decoration:underline;}
+.gcbar-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(10px);
+  background:#252525;color:#fff;padding:10px 16px;font-size:13px;font-family:'PT Sans',Helvetica,Arial,sans-serif;
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:3000;}
+.gcbar-toast.gcbar-show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media print{.gcbar,.gcbar-toast{display:none !important;}}
+</style>
+<div class="gcbar" data-id="policy-2026-11">
+  <a class="gcbar-logo" href="../index.html" title="Back to the Economic Intelligence landing page">
+    <span class="gcbar-mark">G</span>
+    <span class="gcbar-word">Gateshead<small>Economic Intelligence</small></span>
+  </a>
+  <span class="gcbar-spacer"></span>
+  <a class="gcbar-home" href="../index.html">&lsaquo; All dashboards</a>
+  <button class="gcbar-copy" type="button" aria-label="Copy direct link to this document" title="Copy direct link to this document">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+<!-- gc-menu --><span class="gc-beta" title="This site is in beta. Products and layout may change, and errors are logged in the Performance Log">Beta</span><details class="gc-menu">
+<summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
+<nav class="gc-menu-panel" aria-label="Transparency">
+<p class="gc-menu-head">Transparency</p>
+<a href="../transparency/index.html">Transparency Statement</a>
+<a href="../transparency/runbook.html">Regular Reports Runbook</a>
+<a href="../transparency/performance-log.html">Performance Log</a>
+<a href="../transparency/library-evals.html">Document Library Evaluation</a>
+<a href="https://github.com/NAdamsGHC/Economic-Intelligence/blob/main/ANALYTICAL-ASSURANCE.md">Analytical Assurance Note</a>
+<p class="gc-menu-head gc-menu-sep">Best Practice</p>
+<a href="../transparency/best-practice.html">General Best Practice</a>
+<a href="../transparency/best-practice-councils.html">Best Practice in Local Authorities</a>
+</nav>
+</details>
+<style>
+.gc-menu{position:relative;margin-left:12px;font-family:'PT Sans',Helvetica,Arial,sans-serif;line-height:1.3;}
+.gc-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;height:30px;padding:0 12px;
+  border:1px solid #6a7784;color:#fff;font-size:13px;font-weight:700;letter-spacing:.3px;user-select:none;white-space:nowrap;}
+.gc-menu>summary::-webkit-details-marker{display:none;}
+.gc-menu>summary:hover,.gc-menu[open]>summary{border-color:#0772b4;color:#8fd0f5;}
+.gc-menu>summary:focus-visible{outline:2px solid #8fd0f5;outline-offset:2px;}
+.gc-menu-bars{display:inline-block;width:14px;height:2px;background:currentColor;box-shadow:0 -4px 0 currentColor,0 4px 0 currentColor;}
+.gc-menu-panel{position:absolute;right:0;top:calc(100% + 6px);z-index:1000;min-width:250px;background:#fff;
+  border:1px solid #ccc;border-top:3px solid #045a90;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:6px 0;}
+.gc-menu-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#6a7784;padding:6px 14px 4px;margin:0;}
+.gc-menu-sep{border-top:1px solid #e1e5ea;margin-top:6px;padding-top:10px;}
+.gc-menu-panel a{display:block;padding:8px 14px;color:#045a90;text-decoration:none;font-size:14px;font-weight:400;}
+.gc-menu-panel a:hover,.gc-menu-panel a:focus{background:#f0f6fb;color:#0F3B5B;}
+.gc-beta{display:inline-flex;align-items:center;height:22px;padding:0 8px;margin-left:12px;border:1px solid #f2b84b;color:#f2b84b;
+  font-family:'PT Sans',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;line-height:1;white-space:nowrap;cursor:default;}
+.gc-beta+.gc-menu{margin-left:10px;}
+@media(max-width:560px){.gc-menu{margin-left:auto;}.gc-beta{margin-left:auto;}.gc-beta+.gc-menu{margin-left:8px;}}
+</style>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<!-- /gc-menu -->
+</div>
+<script>
+(function(){
+  var bar=document.currentScript.previousElementSibling;
+  while(bar&&!bar.classList.contains('gcbar'))bar=bar.previousElementSibling;
+  if(!bar)return;
+  var toast;
+  function say(m){if(!toast){toast=document.createElement('div');toast.className='gcbar-toast';document.body.appendChild(toast);}
+    toast.textContent=m;toast.classList.add('gcbar-show');clearTimeout(say._t);say._t=setTimeout(function(){toast.classList.remove('gcbar-show');},1600);}
+  bar.querySelector('.gcbar-copy').addEventListener('click',function(){
+    var btn=this,url=location.origin+location.pathname;
+    var ok=function(){btn.classList.add('gcbar-copied');say('Link copied, opens this document directly');setTimeout(function(){btn.classList.remove('gcbar-copied');},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(ok,function(){leg(url);ok();});}else{leg(url);ok();}
+    function leg(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+
+<div class="canvas"><article class="sheet">
+<p class="kicker">Gateshead Economic Intelligence · Policy Update</p>
+<h1>Policy update, November 2026</h1>
+<p class="docmeta"><b>Sixth edition</b> · 12 November 2026 · public, compiled from published official sources · scan covers 2 October to 12 November 2026 · replaces the 2 October 2026 edition (retained in policy/)</p>
+
+<p class="lede">New and changed government and regional policy affecting Gateshead's economy. Findings are checked against the strategy and guidance documents we hold as current, listed with their status at the end. Sourced from gov.uk, North East Mayoral Strategic Authority (NEMSA) and parliament publications. Each item is graded by what it asks of us, and flagged Local, Digital or Visitor where it touches a Policy Advisor's objectives.</p>
+
+<p class="lede"><strong>The month in one line.</strong> The Budget on 28 October wrote down the fiscal devolution mechanism, with mayors taking a 20% share of business rates from April 2027 and income tax from April 2028, and the detail now waits for the 2027-28 settlement and the Spending Review in 2027. Alongside it came a high streets strategy that names Gateshead's Old Town Hall, £1.91m for the borough from the Derelict Buildings Fund, and a High Street Rental Auctions Fund that opens the week of 23 November. The Visitor Levy Bill was introduced on 4 November, the Jobs Guarantee has a named North East delivery partner, and the Green Book discount rate fell to 3.0%.</p>
+
+<h2 id="dashboard">This Month at a Glance</h2>
+<table class="dash">
+<thead><tr><th>Priority</th><th>What</th><th>What changed?</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><span class="rag r">Red</span></td><td><a href="#hsra">High Street Rental Auctions Fund</a></td><td>Up to £10m for vacancy registers, surveys and refurbishment. Opens week commencing 23 November, early applications prioritised</td><td>Regeneration colleagues decide whether to apply early</td></tr>
+<tr><td><span class="rag r">Red</span></td><td><a href="#events">NEMSA Events Fund</a></td><td>£10,000 to £500,000 for events from April 2027. Expressions of interest by 26 November</td><td>Pass to events, culture and venue colleagues</td></tr>
+<tr><td><span class="rag r">Red</span></td><td><a href="#bics">Industrial electricity costs</a></td><td>Registrations for the British Industrial Competitiveness Scheme close on 30 November</td><td>Business support to remind eligible manufacturers</td></tr>
+<tr><td><span class="rag r">Red</span></td><td><a href="#pip">Pride in Place Phase 2 plan</a></td><td>Plan due 30 November, or by 26 February 2027 if more time is needed</td><td>For the Beacon Lough and Wrekenton board</td></tr>
+<tr><td><span class="rag r">Red</span></td><td><a href="#consultations">Four consultations close before 4 December</a></td><td>School exclusions on 19 November, corporate tax on 21 November, Founders' Relief and corporate reporting on 30 November</td><td>No response proposed</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#fiscal">Fiscal devolution roadmap</a></td><td>Mayoral 20% business rates share from April 2027, income tax from April 2028, councils keep at least 70% by the end of the decade</td><td>Read the 2027-28 settlement when it lands</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#rates">Business rates for retail, hospitality and leisure</a></td><td>35% relief for pubs and higher small business thresholds from April 2027. Multipliers corrected on 30 October</td><td>Revenues and business support colleagues</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#highstreet">High streets strategy and Derelict Buildings Fund</a></td><td>Hope on the High Street published. Gateshead allocated £1.91m. Engagement and a building longlist expected by the end of 2026</td><td>Regeneration colleagues, by the end of 2026</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#levy">Visitor Levy Bill</a></td><td>Introduced on 4 November. No second reading date</td><td>None until NEMSA consults</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#srf">Newcastle Gateshead regeneration framework</a></td><td>Draft 25-year framework for the urban core goes to cabinets before public consultation</td><td>Respond when the consultation opens</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#jobs">Jobs Guarantee</a></td><td>North East and Tees Valley preferred applicant named. Rollout still 'later in 2026'</td><td>Employment support colleagues</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#green">Green Book and place-based business cases</a></td><td>Discount rate cut from 3.5% to 3.0%, and new guidance on place-based business cases</td><td>Anyone writing a business case</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#social">Social value and community wealth building</a></td><td>Social value guidance for central government, a procurement policy statement due March 2027, and £10m for co-operatives with NEMSA eligible</td><td>Procurement colleagues, by March 2027</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#ai">AI and digital</a></td><td>£30m local AI partnership pilots, none in the North East. Data centre policy statement consultation to 8 January</td><td>Digital colleagues</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#invest">International Investment Summit</a></td><td>Spring 2027. The Budget speech says Gateshead and the Budget document says Newcastle</td><td>Inward investment colleagues</td></tr>
+<tr><td><span class="rag a">Amber</span></td><td><a href="#energy">Household Energy Payment</a></td><td>£100 for bands A to D from January 2027, paid through council tax</td><td>Revenues colleagues</td></tr>
+<tr><td><span class="rag g">Green</span></td><td><a href="#skills">Skills and labour market</a></td><td>Milburn and Timms response by the end of 2026, more flexibility for colleges enrolling young people not in education, employment or training (NEET)</td><td>None</td></tr>
+<tr><td><span class="rag g">Green</span></td><td><a href="#centre">Centre of government</a></td><td>No Devolution White Paper. A Rewiring the State Delivery Plan is due before the end of the year</td><td>None</td></tr>
+</tbody>
+</table>
+<p class="small">Red means something is required of us before the next edition on 4 December. Amber means it will require something later, and the date is named where one is published. Green means noted, with no action expected. The marker always carries its word as well as its colour.</p>
+
+<div class="actions">
+<h3>Top Actions This Month</h3>
+<ol>
+<li>The <a href="#hsra">High Street Rental Auctions Fund</a> opens in the <span class="deadline">week commencing 23 November</span>. Applications are assessed on a rolling basis and early ones are prioritised, so applying in the opening weeks matters</li>
+<li>Expressions of interest for the <a class="deadline" href="https://www.northeast-ca.gov.uk/projects/events-fund">NEMSA Events Fund</a> are due by <span class="deadline">26 November</span>, to eventsfund@northeast-ca.gov.uk</li>
+<li>Registrations for the <a class="deadline" href="https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers">British Industrial Competitiveness Scheme</a> close on <span class="deadline">30 November</span>. Manufacturers that miss it lose the extra year of payment</li>
+<li>The Beacon Lough and Wrekenton <a href="#pip">Pride in Place</a> plan is due on <span class="deadline">30 November</span>, unless the board takes the extension to 26 February 2027</li>
+<li>Four consultations close before the next edition (<a href="#consultations">listed below</a>). None needs a response from us</li>
+</ol>
+</div>
+
+<h2 id="s1">1. Fiscal Devolution and the Centre</h2>
+
+<div class="item a" id="fiscal">
+<p class="when">28 October · HM Treasury · Local</p>
+<h3><span class="rag a">Amber</span>The Fiscal Devolution Mechanism Is Written Down, and the Detail Moves to 2027</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The Budget and the Fiscal Devolution Roadmap set out 'income tax assignment for all Mayors beginning in 2028; increased business rates retention, with Mayors retaining a 20% share of locally retained business rates from next year, and with local and regional government retaining 100% of business rates income by the end of the decade' (<a href="https://www.gov.uk/government/publications/budget-2026-document">Budget 2026</a>, para 4.60; <a href="https://www.gov.uk/government/publications/fiscal-devolution-roadmap">Fiscal Devolution Roadmap</a>, HM Treasury, 28 October 2026). Councils' own share rises 'to at least 70%', starting with mayoral strategic authorities receiving 'a 20% share of business rates from April 2027' (para 4.66). 'Fiscal devolution baselines will be set at the spending review in 2027' (para 4.60).</p>
+<p>The North East is in the first wave of mayoral Business Rates Retention Zones, 'subject to Full Business Case approval and legislation' (para 4.61). The Roadmap says the new mayoral share 'will not affect constituent councils' core funding'. Income tax is assigned on where taxpayers live, starting with the basic rate, and its final parameters wait for the Spending Review. Further detail on business rates comes in the 2027-28 Local Government Finance Settlement.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>Assigned income tax goes to NEMSA to replace its grants, and nothing passes to constituent councils by design. The questions that decide the money (baselines, resets and how the mayoral share is spent) are now for 2027.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Nothing before the next edition. The 2027-28 provisional settlement is the next point to read.</p></dd>
+</dl>
+</div>
+
+<div class="item g" id="centre">
+<p class="when">2 October to 12 November · Cabinet Office, Prime Minister's Office and HM Treasury</p>
+<h3><span class="rag g">Green</span>No Devolution White Paper, and Everything Else From the Centre</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The Devolution White Paper was not published with the Budget. The Budget instead says 'The Rewiring the State Delivery Plan will be published before the end of the year' (para 4.58). The <a href="https://www.gov.uk/government/speeches/rewiring-the-state-and-the-future-civil-service">Cabinet Secretary's annual lecture</a> on 10 November spoke of 'genuinely devolving power, not just delegating it', and said the Future Civil Service review will report to the Prime Minister before next summer. The 10 Year Plan and the Milburn Review's final report were not published in the window. The other policy items from the centre are folded away under Also Noted, at the end.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>The delivery plan is now the document that should say how devolution reaches constituent councils, if anything does.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Nothing for us this month.</p></dd>
+</dl>
+</div>
+
+<h2 id="s2">2. High Streets, Place and the Visitor Economy</h2>
+
+<div class="item r" id="hsra">
+<p class="when">28 October · MHCLG · Visitor</p>
+<h3><span class="rag r">Red</span>High Street Rental Auctions Fund Opens the Week of 23 November</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The <a href="https://www.gov.uk/government/publications/high-street-rental-auctions-grants-for-local-authorities/high-street-rental-auctions-fund-2026-to-2028-prospectus">High Street Rental Auctions Fund 2026 to 2028 prospectus</a> (MHCLG, updated 28 October 2026) offers up to £10m to local authorities with planning powers, for vacancy registers, market reports, property surveys and refurbishment. Refurbishment is limited to three premises per authority and capped at £200,000 a project. Applications open in the week commencing 23 November 2026 and close on 31 January 2028, or earlier if the money runs out. They are 'assessed on a rolling basis with early applications prioritised', and all funded work must finish by 31 March 2028.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>The fund pays for a vacancy register, which is the occupancy evidence the Visitor objectives need. Early applications are prioritised, so applying in the opening weeks matters.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Regeneration colleagues decide whether to apply, and if so, early.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="highstreet">
+<p class="when">28 October · MHCLG · Visitor, Local</p>
+<h3><span class="rag a">Amber</span>A High Streets Strategy Names Gateshead's Old Town Hall, and the Borough Gets £1.91m for Derelict Buildings</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p><a href="https://www.gov.uk/government/publications/hope-on-the-high-street">Hope on the High Street</a> (MHCLG, CP 1704, 28 October 2026) is the promised high streets strategy, with a '£210 million Community Assets Programme' (para 133). It includes £10m to speed up High Street Rental Auctions, a new Community Right to Buy with a £65m fund, a 'high streets first' principle for the public estate, and reform of Business Improvement Districts. MHCLG will track persistent vacancy, which the strategy puts above 8% in the North East. It names Gateshead directly, saying brownfield funding 'is supporting Capital and Centric's redevelopment of Gateshead's Old Town Hall and Civic Quarter' (para 168). Vape shops and adult gaming centres will need planning permission, subject to a consultation with no date yet.</p>
+<p>The <a href="https://www.gov.uk/government/publications/derelict-buildings-fund-methodology-note/derelict-buildings-fund-methodology-note">Derelict Buildings Fund methodology note</a> (MHCLG, 28 October 2026) allocates £120m of the £125m fund across 60 councils, ranked on employment deprivation and shared by population 'subject to a £1 million floor and a £3 million cap'. Gateshead receives £1.91m. In the North East, County Durham receives £3.00m, Sunderland £2.71m and South Tyneside £1.43m. The <a href="https://www.gov.uk/government/publications/derelict-buildings-fund-interim-guidance">interim guidance</a> expects councils to begin community engagement and start to longlist buildings by the end of 2026, with a first progress update to MHCLG by April 2027 and detailed guidance on project selection and funding profiles to follow. The fund runs from 2026 to 2030.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>The £1.91m comes without a bid, so the open question is which buildings it goes to, and the longlist starts before the end of the year. The national vacancy measure will become the yardstick the borough's centres are compared against.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Regeneration colleagues, for the community engagement and longlist due by the end of 2026.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="rates">
+<p class="when">28 and 30 October · HM Treasury and MHCLG · Visitor, Local</p>
+<h3><span class="rag a">Amber</span>Pubs Get 35% Rates Relief From April 2027, and the Multipliers Were Corrected Two Days After the Budget</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The Budget gives an 'extra 20% relief for pubs, social clubs and all but the very largest live music venues in England from 1 April 2027', bringing their total relief to 35% (para 3.21). For retail, hospitality and leisure (RHL) properties, small business rate relief thresholds rise 'to £18,000 for 100% relief (from £12,000) and £21,000 for tapered relief (from £15,000)', with a real-terms freeze on RHL bills in 2027-28 and 2028-29 (para 3.22). From April 2027 vape shops and adult gaming centres lose the RHL multipliers, and vape shops lose small business rate relief (para 3.25).</p>
+<p>MHCLG's <a href="https://www.gov.uk/government/publications/82026-details-of-the-budget-package-and-the-multipliers-for-20272028">business rates information letter 8/2026</a> was updated on 30 October 'to ensure that inflation adjustments are consistently applied to the RHL multipliers'. The 2027-28 multipliers are 49.7p standard, 44.7p small business, 44.5p standard RHL, 39.5p small business RHL and 52.5p high value. The letter commits to New Burdens funding for 'the reasonable costs, borne by local authorities for implementing the business rates measures', and from April 2027 to reimbursing councils' reasonable external legal costs when they lose cases that test a point of law. It says nothing on compensation for lost rates income.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>Three changes from April 2027 land on the same high street premises, and lower bills mean lower retained rates income. The letter covers implementation and legal costs, so how lost income is compensated is not yet stated. Anyone quoting the RHL multipliers from Budget day should use the corrected figures.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Revenues colleagues will have the letter. Business support colleagues can tell pubs and venues what changes in April.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="levy">
+<p class="when">4 November · MHCLG · Visitor</p>
+<h3><span class="rag a">Amber</span>The Visitor Levy Bill Is in Parliament</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The Visitor Levy (England) Bill was introduced in the Commons on 4 November (<a href="https://www.gov.uk/government/news/new-visitor-levy-powers-to-put-money-back-into-local-communities">MHCLG, 4 November 2026</a>). The levy is charged 'as a percentage rate of the cost of accommodation, rather than as a flat fee', and 'will only apply to the first 28 consecutive days of a stay'. In Foundation Strategic Authorities a levy needs unanimous support. Ten mayors have committed that any levy in their area would be no higher than 5%. The bill itself sets no cap. The North East Mayor is quoted supporting a levy. No second reading date is set, and revenue plans are expected by March 2028 (Fiscal Devolution Roadmap).</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>The levy would be set and spent by NEMSA. The borough's influence comes through NEMSA's consultation, which has to happen before any levy starts.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Nothing until NEMSA consults.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="srf">
+<p class="when">13 October · NEMSA · Visitor, Local</p>
+<h3><span class="rag a">Amber</span>A Draft 25-Year Framework for the Newcastle Gateshead Urban Core</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>NEMSA published a draft Strategic Regeneration Framework presenting 'a shared vision for the "urban core" of Newcastle and Gateshead over the next 25 years', including more than 3 million sq ft of additional commercial space, with Gateshead Quays named (<a href="https://www.northeast-ca.gov.uk/news/finance-and-investment/new-long-term-master-plan-for-the-heart-of-newcastle-gateshead-unveiled">NEMSA, 13 October 2026</a>). The draft goes to the cabinets of Newcastle City Council, Gateshead Council and NEMSA before a public consultation. No dates are published. The Budget speech also cited 'the urban regeneration in Gateshead Quayside, led by the Mayor of the North East' as the kind of project the new Good Growth Funds support.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>It is the long-term frame for Gateshead Quays and the town centre, and the consultation will be the place to put the Gateshead evidence.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Respond when the consultation opens.</p></dd>
+</dl>
+</div>
+
+<div class="item r" id="events">
+<p class="when">Updated 16 October · NEMSA · Visitor</p>
+<h3><span class="rag r">Red</span>NEMSA Events Fund Expressions of Interest Close on 26 November</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The <a href="https://www.northeast-ca.gov.uk/projects/events-fund">Mayor's Events Fund</a> (NEMSA, published 2 October, updated 16 October 2026) is an £11m three-year fund. Requests 'can range from £10,000 to £500,000' for 'events taking place between April 2027 and March 2029', with expressions of interest to eventsfund@northeast-ca.gov.uk by <span class="deadline">26 November 2026</span>. Shortlisted projects will be invited to develop a full business case. NEMSA's <a href="https://www.northeast-ca.gov.uk/projects/small-venues-fund">Small Venues Fund</a> also says phase one applications open in November 2026, for grants of £3,000 to £100,000, with no closing date published.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>Events can bring visitor activity to places outside the established hotspots, which is the Visitor objective, and the window closes before the next edition.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Events, culture and venue colleagues, so organisers in the borough know.</p></dd>
+</dl>
+</div>
+
+<div class="item r" id="pip">
+<p class="when">Unchanged since 17 September · MHCLG · Visitor, Local</p>
+<h3><span class="rag r">Red</span>Pride in Place Phase 2 Plan Due on 30 November</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>Nothing in the window, but the deadline falls before the next edition. Phase 2 boards from September 2025 'should submit their Pride in Place Plans to MHCLG for assessment and approval by 30 November 2026', or at any point up to 26 February 2027 if they need more time (<a href="https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places">MHCLG, updated 17 September 2026</a>). Hope on the High Street restates £20m per neighbourhood over the next decade.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>Beacon Lough and Wrekenton is in the September 2025 Phase 2 cohort, so the 30 November date applies.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>For the Beacon Lough and Wrekenton board and its council lead.</p></dd>
+</dl>
+</div>
+
+<h2 id="s3">3. Local Business and Investment</h2>
+
+<div class="item r" id="bics">
+<p class="when">Re-read 12 November · BIST · Local</p>
+<h3><span class="rag r">Red</span>Manufacturers Have Until 30 November to Register for Cheaper Electricity</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>Nothing in the window, but registration closes before the next edition. Manufacturers should 'sign up before registrations close on 30 November to receive support from April 2027', and 'Only those applying for BICS this year will be able to access the additional year of payment' (<a href="https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers">1 October 2026</a>). The Budget confirms support of 'up to 25% for over 10,000 energy-intensive businesses from April 2027' (para 3.10).</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>A firm that misses this window cannot recover the extra year of payment.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Business support colleagues, for a reminder to eligible manufacturers before 30 November.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="invest">
+<p class="when">28 October to 2 November · HM Treasury and BIST · Local</p>
+<h3><span class="rag a">Amber</span>An Investment Summit on Tyneside in Spring 2027, and Two Documents Disagree on Where</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The Budget speech says 'we will hold the next International Investment Summit in Gateshead in the Spring' (<a href="https://www.gov.uk/government/speeches/budget-2026-speech">transcript, 'exactly as it was delivered'</a>). The Budget document says it 'will take place in spring 2027 in Newcastle' (para 4.123). Neither has been corrected. Other investment and business support items from the Budget and since:</p>
+<ul>
+<li>A £700m Strategic Sites Accelerator for 'commercially viable sites with strong investor demand', with the North East among the regions being explored and no submission route yet (<a href="https://www.gov.uk/government/news/mayors-and-local-leaders-work-with-no10-north-to-drive-search-for-top-10-biggest-strategic-investment-sites-across-country">BIST, 2 November 2026</a>)</li>
+<li>Scale UK Connect for 200 scale-ups, with applications closing in January 2027 (<a href="https://www.gov.uk/government/news/britains-ambitious-scale-ups-backed-to-keep-growing-in-the-uk">BIST, 29 October 2026</a>)</li>
+<li>The trading allowance tripled to £3,000 from 6 April 2027, and a Young Entrepreneurs Allowance pilot 'shortly' (paras 4.100 and 4.104)</li>
+</ul></dd>
+<dt>Why it matters?</dt>
+<dd><p>Either way the summit is on Tyneside, which makes it the main near-term moment to put Gateshead's sites in front of investors. The venue should not be quoted as settled until one of the documents is corrected.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Inward investment colleagues. Business support colleagues can pass Scale UK Connect to growing firms before January.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="energy">
+<p class="when">28 and 29 October · HM Treasury and MHCLG</p>
+<h3><span class="rag a">Amber</span>A £100 Household Energy Payment Through Council Tax From January 2027</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>The Budget announces a '£100 payment for households in bands A-D in England from January 2027', plus £100m more for councils to give targeted support (paras 3.5 and 3.6). MHCLG issued <a href="https://www.gov.uk/government/publications/council-tax-information-letter-62026-household-energy-payment-2027">council tax information letter 6/2026</a> on 29 October with the operational detail.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>The council delivers the payment through council tax, and the £100m top-up is for councils to target further support locally.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Revenues colleagues will have the letter. Nothing for us.</p></dd>
+</dl>
+</div>
+
+<h2 id="s4">4. Labour Market and Skills</h2>
+
+<div class="item a" id="jobs">
+<p class="when">21 October · DWP</p>
+<h3><span class="rag a">Amber</span>The Jobs Guarantee Has a North East Delivery Partner</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>DWP added its preferred applicants for the national rollout, subject to signed grant agreements. For the 'North East and Tees Valley' it is Ingeus UK Ltd (<a href="https://www.gov.uk/government/publications/jobs-guarantee">Jobs Guarantee, DWP, updated 21 October 2026</a>). The page still says the national rollout 'will go live later in 2026'. The guarantee is a paid six-month job for 18 to 24 year olds on Universal Credit and looking for work for 18 months.</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>The guarantee is aimed at young people who have been looking for work for a long time, and employers will need to know who to approach in the North East once grant agreements are signed.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Employment support colleagues, ahead of go-live.</p></dd>
+</dl>
+</div>
+
+<div class="item g" id="skills">
+<p class="when">15 October to 11 November · DfE, DWP, BIST and the Prime Minister's Office</p>
+<h3><span class="rag g">Green</span>A Welfare Response by the End of the Year, and More Room for Colleges</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><ul>
+<li>The government will respond to the Milburn and Timms reviews 'before the end of this year', with 'A White Paper will follow early in 2027 ahead of legislation later that year' (Budget 2026, para 5.21).</li>
+<li>Colleges get funding certainty for enrolling young people who are NEET, more flexibility on English and maths hours, and local leaders a greater role in shaping 16 to 19 provision (<a href="https://www.gov.uk/government/news/colleges-put-at-heart-of-drive-to-get-young-people-learning">DfE, 11 November 2026</a>)</li>
+<li>Hospitality brands committed to 100,000 paid jobs over three years for NEET 18 to 24 year olds, with no regional breakdown (<a href="https://www.gov.uk/government/news/britains-biggest-hospitality-brands-partner-with-government-to-deliver-100000-jobs-for-neet-young-people">DWP, 15 October 2026</a>)</li>
+<li>Job adverts will have to 'say what you pay', with legislation 'as soon as possible' (<a href="https://www.gov.uk/government/news/new-say-what-you-pay-law-to-help-young-people-into-work">5 November 2026</a>)</li>
+<li>Industrial Strategy Jobs Plans for construction, professional and business services, and digital and technologies (<a href="https://www.gov.uk/government/publications/industrial-strategy-jobs-plans">19 to 21 October</a>), which give 'a common framework that Mayoral Strategic Authorities and local authorities can draw on alongside Local Skills Improvement Plans', and £100m over two years for mayoral apprenticeship services (Budget, para 5.22)</li>
+</ul></dd>
+<dt>Why it matters?</dt>
+<dd><p>16 to 19 provision keeps moving towards mayors. The hospitality commitment is an entry route for 18 to 24 year olds if the brands' Gateshead sites take part.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Nothing for us this month.</p></dd>
+</dl>
+</div>
+
+<h2 id="s5">5. Procurement, Community Wealth Building and Appraisal</h2>
+
+<div class="item a" id="social">
+<p class="when">9 October to 2 November · Cabinet Office, MHCLG and HM Treasury · Local</p>
+<h3><span class="rag a">Amber</span>Social Value Guidance Is Published, and the Statement That Binds Councils Comes in March 2027</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><ul>
+<li>Guidance on <a href="https://www.gov.uk/government/publications/ppn-026-the-social-value-model">PPN 026, the social value model</a>, was added on 28 October. The PPN itself (5 August 2026) applies to central government only, for procurements started from 1 January 2027, with minimum social value weightings of 10% for contracts of £1m to £5m and 20% above</li>
+<li>A new National Procurement Policy Statement, to be laid in March 2027, 'will prioritise delivery of high-quality jobs, fair pay and skills opportunities', and a UK supplier definition is due by January 2027 (Budget 2026, paras 4.115 and 4.116)</li>
+<li>The <a href="https://www.gov.uk/government/publications/local-growth-plans-england">Local Growth Plans guidance</a> section on social value was rewritten on 9 October. Mayoral authorities and constituent councils should 'align social value statements or strategies to their Local Growth Plan'</li>
+<li>A £10m <a href="https://www.gov.uk/government/publications/regional-co-operative-development-programme">Regional Co-operative Development Programme</a>, with NEMSA among the eligible authorities and details 'in due course' (MHCLG, 28 October 2026), and a new Co-operatives and Mutuals Champion</li>
+</ul></dd>
+<dt>Why it matters?</dt>
+<dd><p>The central government model is a ready template for the council's own social value framework, and the March 2027 statement is the instrument that reaches council procurement. The co-operative programme is funded and routes through NEMSA.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Procurement colleagues, before the statement is laid in March 2027.</p></dd>
+</dl>
+</div>
+
+<div class="item a" id="green">
+<p class="when">22 and 28 October · HM Treasury and the Prime Minister's Office · Visitor, Local</p>
+<h3><span class="rag a">Amber</span>The Green Book Discount Rate Falls to 3.0%, With New Guidance on Place-Based Business Cases</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><p>HM Treasury published a revised <a href="https://www.gov.uk/government/publications/the-green-book--2">Green Book</a> on 28 October, 'formalising the reduction in the discount rate from 3.5% to 3.0%' (Budget 2026, para 2.22), with updated supplementary guidance on discounting. New <a href="https://www.gov.uk/government/publications/guidance-on-developing-place-based-business-cases">guidance on developing place-based business cases</a> describes 'a new approach to appraisal that puts local objectives at the heart of decision making' (para 2.10).</p></dd>
+<dt>Why it matters?</dt>
+<dd><p>A lower discount rate gives more weight to benefits that arrive years later, which helps regeneration schemes. Place-based business cases are likely to be the format Derelict Buildings Fund and Good Growth Funds projects are judged in.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Anyone writing a business case should use the revised Green Book from now on.</p></dd>
+</dl>
+</div>
+
+<h2 id="s6">6. AI, Digital and the Testbed Objective</h2>
+
+<div class="item a" id="ai">
+<p class="when">20 October to 5 November · HM Treasury, BIST and the Cabinet Office · Digital</p>
+<h3><span class="rag a">Amber</span>Local AI Partnerships Start in Yorkshire, and Data Centres Get a Policy Statement</h3>
+<dl>
+<dt>What changed?</dt>
+<dd><ul>
+<li>The Budget provides '£30 million to pilot local partnerships, starting with West Yorkshire Combined Authority, South Yorkshire Mayoral Combined Authority, and York and North Yorkshire Combined Authority', working across councils 'to help small businesses grow' (para 4.135)</li>
+<li>A Data Centre Covenant expects strategic data centres to agree a Local Benefit Plan 'spent on local priorities, like transport, parks and town centres' (para 4.137). The <a href="https://www.gov.uk/government/consultations/draft-national-policy-statement-for-data-centres">draft National Policy Statement for Data Centres</a> is out for consultation until 8 January 2027</li>
+<li>The Digital and Technologies Jobs Plan (21 October) (<a href="https://www.gov.uk/government/publications/industrial-strategy-jobs-plans">Industrial Strategy Jobs Plans</a>) lists RTC North as the North East TechFirst school and college delivery contact, and the <a href="https://www.gov.uk/government/publications/ai-adoption-survey-2026">AI adoption survey 2026</a> was published on 29 October</li>
+<li>Who sponsors the North East AI Growth Zone after the science department's abolition is still not stated on any page</li>
+</ul></dd>
+<dt>Why it matters?</dt>
+<dd><p>The local AI partnership model (councils, small business adoption and skills together) is the testbed objective, and the North East is not in the first wave. Local Benefit Plans could apply to data centres at the AI Growth Zone sites near the borough.</p></dd>
+<dt>What should we do?</dt>
+<dd><p>Digital colleagues, ahead of any second wave and before the consultation closes on 8 January.</p></dd>
+</dl>
+</div>
+
+<h2 id="consultations">7. Current Consultations and Calls for Evidence</h2>
+<p>Every open consultation on our themes, soonest first. Closing dates were read from each page on 12 November 2026.</p>
+<table>
+<thead><tr><th>Consultation</th><th>Who</th><th>Why it matters here</th><th>Closes</th></tr></thead>
+<tbody>
+<tr><td><a href="https://www.gov.uk/government/calls-for-evidence/school-exclusion-reform">School exclusion reform</a> (call for evidence)</td><td>DfE</td><td>Upstream of the NEET pipeline. No response proposed</td><td><span class="deadline">19 Nov</span></td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/corporate-tax-simplification-for-business-investment">Corporate tax simplification for business investment</a></td><td>HM Treasury</td><td>Business investment incentives. No response proposed</td><td><span class="deadline">21 Nov</span></td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/founders-relief-technical-consultation">Founders' Relief, technical consultation</a></td><td>HM Treasury</td><td>Tax relief for founders of high-growth firms. No response proposed</td><td><span class="deadline">30 Nov</span></td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/modernising-corporate-reporting">Modernising corporate reporting</a></td><td>BIST</td><td>Reporting burden on small firms. No response proposed</td><td><span class="deadline">30 Nov</span></td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/regulating-technical-qualifications-in-t-levels">Regulating technical qualifications in T Levels</a></td><td>Ofqual</td><td>14 plus technical pathways</td><td>10 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/child-employment-regulatory-framework">Child employment regulatory framework</a></td><td>DfE</td><td>Saturday jobs in hospitality and retail. Visitor</td><td>13 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/our-approach-to-recognition-for-v-levels-foundation-certificates-and-occupational-certificates">Recognition for V Levels, Foundation and Occupational Certificates</a></td><td>Ofqual</td><td>14 plus technical pathways</td><td>17 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/amending-licensing-restrictions-for-18-and-19-year-old-bus-and-coach-drivers">Licensing for 18 and 19 year old bus and coach drivers</a></td><td>DfT</td><td>A job route for 18 and 19 year olds, and bus capacity</td><td>18 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/future-of-access-to-hm-land-registry-information">Future of access to HM Land Registry information</a></td><td>HM Land Registry</td><td>Ownership data for vacancy work. Visitor</td><td>22 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/post-16-level-2-and-3-qualifications-2028-health-and-care">Post-16 level 2 and 3 qualifications 2028, health and care</a></td><td>DfE</td><td>Care is a foundational sector and a skills plan priority</td><td>23 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/post-16-level-2-and-3-qualifications-2028-science">Post-16 level 2 and 3 qualifications 2028, science</a></td><td>DfE</td><td>14 plus technical pathways</td><td>23 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/shared-cycle-scheme-licensing">Shared cycle scheme licensing</a></td><td>DfT</td><td>A local licensing power over e-bikes in town centres. Visitor</td><td>31 Dec</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/reform-of-the-crichel-down-rules">Reform of the Crichel Down Rules</a></td><td>MHCLG</td><td>Land assembly for regeneration. Visitor, Local</td><td>6 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/draft-national-policy-statement-for-data-centres">Draft National Policy Statement for Data Centres</a></td><td>BIST</td><td>Local Benefit Plans near the AI Growth Zone sites. Digital</td><td>8 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/makework-pay-employment-status-reform-and-protections-for-the-self-employed">Employment status reform and the self-employed</a></td><td>BIST</td><td>Self-employment in the business base</td><td>8 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/calls-for-evidence/lle-how-and-when-loan-payments-are-made">Lifelong Learning Entitlement loan payments</a> (call for evidence)</td><td>DfE</td><td>Adult reskilling finance</td><td>11 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/machine-games-duty-changing-who-is-liable-for-the-duty">Machine Games Duty, who is liable</a></td><td>HMRC</td><td>Adult gaming centres on high streets. Visitor</td><td>20 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/e-invoicing-digital-reporting">E-invoicing and digital reporting</a></td><td>HMRC</td><td>Small firm admin and digital adoption. Digital</td><td>20 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/calls-for-evidence/vat-treatment-of-travel-services-in-relation-to-the-tour-operators-margin-scheme">VAT on travel services</a> (call for evidence)</td><td>HMRC</td><td>Tour operators in the visitor economy. Visitor</td><td>31 Jan</td></tr>
+<tr><td><a href="https://www.gov.uk/government/consultations/introducing-an-edtech-and-ai-product-safety-certification-scheme">EdTech and AI product safety certification</a></td><td>DfE</td><td>AI in education. Digital</td><td>4 Feb</td></tr>
+</tbody>
+<caption>The Common Ground Award (12 October), the Pathways to Work Innovation Fund (26 October), the Council Housebuilding Support Fund (2 November) and the consultations on mayoral planning powers, pubs and hotels valuation and standard section 106 agreements have all closed since the October edition.</caption>
+</table>
+
+<h2 id="forward">8. The Month Ahead</h2>
+<p>The dates that matter before the next edition on 4 December are the High Street Rental Auctions Fund opening in the week of 23 November, the Events Fund on 26 November, and the electricity scheme, Pride in Place plans and two consultations on 30 November. The UK labour market release is on 17 November, business demography on 19 November (provisional) and regional productivity on 24 November. The full forward look is in the <a href="../horizon/index.html">Horizon Calendar</a>.</p>
+
+<h2 id="checked">9. Theme Notes and the Full Watch Frame</h2>
+<details class="fold">
+<summary>Theme notes and what was checked · gov.uk feeds for 12 departments, 78 open consultations, NEMSA pages read by search</summary>
+<div class="foldbody">
+<table>
+<thead><tr><th>Theme</th><th>Position at 12 November 2026</th></tr></thead>
+<tbody>
+<tr><td>Procurement and social value</td><td>Changed. PPN 026 guidance published, a procurement policy statement due March 2027, Local Growth Plans social value section rewritten</td></tr>
+<tr><td>Community wealth building</td><td>Changed. £10m co-operative programme with NEMSA eligible, a Community Right to Buy with a £65m fund, and a proposed community stake in new renewable projects (DESNZ, 4 November)</td></tr>
+<tr><td>Anchor institutions</td><td>No change found</td></tr>
+<tr><td>AI and digital inclusion</td><td>Changed. Local AI partnership pilots outside the North East, data centre policy statement, AI Growth Zone sponsorship still unresolved</td></tr>
+<tr><td>Skills</td><td>Changed. More flexibility for colleges, Jobs Plans, mayoral apprenticeship services</td></tr>
+<tr><td>Productivity</td><td>Changed. Green Book discount rate, place-based business cases, Local Innovation Partnerships Fund devolved from 2028, Northern Growth Strategy response published without a date for a full strategy</td></tr>
+<tr><td>Local business news</td><td>Changed. Scale UK Connect, trading allowance, Strategic Sites Accelerator, pubs relief</td></tr>
+<tr><td>Visitor economy and spending</td><td>Changed. Visitor Levy Bill, Events Fund, Small Venues Fund. The Visitor Economy Growth Strategy is described as forthcoming, with no date</td></tr>
+<tr><td>High streets and placemaking</td><td>Changed. Hope on the High Street, Derelict Buildings Fund, High Street Rental Auctions Fund, urban core framework</td></tr>
+</tbody>
+</table>
+<p><strong>Checked and unchanged.</strong> Nothing was published in the window on the Devolution White Paper, the 10 Year Plan, the Milburn final report, a NEMSA bus franchising decision, consultation dates for the vape shop and adult gaming centre planning changes, a full Northern Growth Strategy, Young Futures Hubs, or AI Growth Zone sponsorship. The core reference set:</p>
+<ul>
+<li>Green Book. Changed, revised 28 October 2026 with the 3.0% discount rate</li>
+<li>Magenta Book, last updated 15 May 2026. Unchanged</li>
+<li>Aqua Book, 2025 edition. No update found in the window</li>
+<li>Code of Practice for Statistics. Nothing new from the Office for Statistics Regulation in the window</li>
+<li>Modern Industrial Strategy. No new sector plan. Quarterly update for July to September published 9 October, and Jobs Plans for three sectors</li>
+<li>NEMSA Local Growth Plan. The page was updated on 4 November and the download renamed to an updated plan. The page does not describe what changed</li>
+<li>Get Britain Working. No new framework document. Delivered through the Jobs Guarantee item above</li>
+<li>North East Local Skills Improvement Plan 2026 to 2029. Unchanged</li>
+<li>Gateshead corporate documents (Thrive, the Corporate Plan, the Economic Development Strategy and the Local Economic Assessment). Not re-read for this edition</li>
+</ul>
+<p>Department names follow gov.uk. The science department's page says it 'was replaced by' the Cabinet Office, the Department for Business, Innovation, Science and Trade (BIST) and the Department for Digital, Culture, Media and Sport.</p>
+</div>
+</details>
+
+<details class="fold">
+<summary>Also noted this month · 20 items with no action</summary>
+<div class="foldbody">
+<table>
+<thead><tr><th>Date</th><th>Source</th><th>What</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td>9 Oct</td><td>NEMSA</td><td><a href="https://www.northeast-ca.gov.uk/news/education-skills-and-inclusion/food-hubs-affordable-meals-and-vital-household-support-backed-in-latest-round-of-mayor-kim-s-opportunity-fund">Opportunity Fund round 4, 127 grants</a></td><td>Four Gateshead community groups funded. The fund reopens in the coming weeks</td></tr>
+<tr><td>9 Oct</td><td>BIST</td><td>Industrial Strategy quarterly update, July to September 2026</td><td>No new sector plan</td></tr>
+<tr><td>9 Oct</td><td>Prime Minister's Office</td><td>Local Innovation Partnerships Fund devolved to established mayors from 2028</td><td>Reaches NEMSA, not the borough</td></tr>
+<tr><td>16 Oct</td><td>DCMS</td><td>Local Covenant Partnerships Fund shortlist</td><td>County Durham and Sunderland shortlisted. Gateshead not included</td></tr>
+<tr><td>19 Oct</td><td>Cabinet Office</td><td>Test, Learn and Grow playbook, and one year on (21 October)</td><td>Method context</td></tr>
+<tr><td>22 Oct</td><td>Prime Minister's Office</td><td><a href="https://www.gov.uk/government/news/pm-puts-communities-first-in-government-investment-rules-shake-up">Communities first in investment rules</a></td><td>Trailed the Green Book changes</td></tr>
+<tr><td>23 Oct</td><td>DWP</td><td>WorkWell evaluation, early findings</td><td>Evidence for workplace health</td></tr>
+<tr><td>28 Oct</td><td>HM Treasury</td><td><a href="https://www.gov.uk/government/publications/northern-growth-strategy-case-for-change">Northern Growth Strategy, response to the invitation for views</a></td><td>No date for a full strategy and no North East content</td></tr>
+<tr><td>28 Oct</td><td>HM Treasury</td><td>Supporting local investment, an offer to places</td><td>Context for the Good Growth Funds</td></tr>
+<tr><td>28 Oct</td><td>HM Treasury</td><td>Electricity VAT relief extended to July 2027, gas standing charges abolished</td><td>Household costs</td></tr>
+<tr><td>29 Oct</td><td>MHCLG</td><td>Local government reorganisation minded-to letters</td><td>County areas only. No Gateshead exposure</td></tr>
+<tr><td>29 Oct</td><td>DWP</td><td>Get Britain Working labour market insights, October 2026</td><td>Context</td></tr>
+<tr><td>30 Oct</td><td>Cabinet Office</td><td>Places for Growth 2030</td><td>Civil service relocation context</td></tr>
+<tr><td>30 Oct</td><td>MHCLG</td><td>AI tools for faster planning decisions</td><td>PlanAssist in all councils by the end of 2027 (Budget, para 2.19). Digital</td></tr>
+<tr><td>2 Nov</td><td>Cabinet Office and HM Treasury</td><td>SME action plan 2025 to 2028</td><td>Central government spend targets</td></tr>
+<tr><td>3 Nov</td><td>DfT and MHCLG</td><td>Everitt Review terms of reference</td><td>How government and strategic authorities work together on local transport</td></tr>
+<tr><td>4 Nov</td><td>DESNZ</td><td><a href="https://www.gov.uk/government/news/energy-reforms-to-cut-bills-and-put-power-back-in-peoples-hands">Community stake of up to 20% in new renewable projects</a></td><td>Community wealth building. Local</td></tr>
+<tr><td>5 Nov</td><td>BIST</td><td>Business population estimates 2026</td><td>Statistics release</td></tr>
+<tr><td>11 Nov</td><td>DWP</td><td>Benefit and pension rates 2027-28</td><td>Household income context</td></tr>
+</tbody>
+</table>
+</div>
+</details>
+
+<h2 id="sources">10. Sources</h2>
+<ul class="sources">
+<li><a href="https://www.gov.uk/government/publications/budget-2026-document">Budget 2026</a> (HM Treasury, 28 October 2026), paras 2.10, 2.19, 2.22, 3.5, 3.6, 3.10, 3.21, 3.22, 3.25, 4.58, 4.60, 4.61, 4.66, 4.77, 4.100, 4.104, 4.115, 4.116, 4.123, 4.135, 4.137, 5.21, 5.22</li>
+<li><a href="https://www.gov.uk/government/publications/fiscal-devolution-roadmap">The Fiscal Devolution Roadmap</a> (HM Treasury, 28 October 2026) and <a href="https://www.gov.uk/government/speeches/budget-2026-speech">Budget 2026 speech</a> (28 October 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/82026-details-of-the-budget-package-and-the-multipliers-for-20272028">Business rates information letter 8/2026</a> (MHCLG, 28 October, updated 30 October 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/hope-on-the-high-street">Hope on the High Street</a> (MHCLG, 28 October 2026), the <a href="https://www.gov.uk/government/publications/derelict-buildings-fund-methodology-note/derelict-buildings-fund-methodology-note">Derelict Buildings Fund methodology note</a> and <a href="https://www.gov.uk/government/publications/derelict-buildings-fund-interim-guidance">interim guidance</a>, and the <a href="https://www.gov.uk/government/publications/high-street-rental-auctions-grants-for-local-authorities/high-street-rental-auctions-fund-2026-to-2028-prospectus">High Street Rental Auctions Fund prospectus</a> (MHCLG, 28 October 2026)</li>
+<li><a href="https://www.gov.uk/government/news/new-visitor-levy-powers-to-put-money-back-into-local-communities">New visitor levy powers</a> (MHCLG, 4 November 2026)</li>
+<li>NEMSA pages on the <a href="https://www.northeast-ca.gov.uk/news/finance-and-investment/new-long-term-master-plan-for-the-heart-of-newcastle-gateshead-unveiled">urban core framework</a> (13 October), <a href="https://www.northeast-ca.gov.uk/projects/events-fund">Events Fund</a> (updated 16 October), <a href="https://www.northeast-ca.gov.uk/projects/small-venues-fund">Small Venues Fund</a> (updated 19 October 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places">Pride in Place plans for Phase 2 places</a> (MHCLG, updated 17 September 2026)</li>
+<li><a href="https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers">British Industrial Competitiveness Scheme</a> (1 October 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/jobs-guarantee">Jobs Guarantee</a> (DWP, updated 21 October 2026)</li>
+<li><a href="https://www.gov.uk/government/news/colleges-put-at-heart-of-drive-to-get-young-people-learning">Colleges put at heart of drive to get young people learning</a> (DfE, 11 November 2026), <a href="https://www.gov.uk/government/news/britains-biggest-hospitality-brands-partner-with-government-to-deliver-100000-jobs-for-neet-young-people">hospitality partnership</a> (DWP, 15 October 2026), <a href="https://www.gov.uk/government/news/new-say-what-you-pay-law-to-help-young-people-into-work">say what you pay</a> (5 November 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/ppn-026-the-social-value-model">PPN 026</a> (Cabinet Office, guidance added 28 October 2026), <a href="https://www.gov.uk/government/publications/local-growth-plans-england">Local Growth Plans, England</a> (MHCLG, updated 9 October 2026), <a href="https://www.gov.uk/government/publications/regional-co-operative-development-programme">Regional Co-operative Development Programme</a> (MHCLG, 28 October 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/the-green-book--2">The Green Book</a> (HM Treasury, updated 28 October 2026) and <a href="https://www.gov.uk/government/publications/guidance-on-developing-place-based-business-cases">guidance on place-based business cases</a> (28 October 2026)</li>
+<li><a href="https://www.gov.uk/government/news/mayors-and-local-leaders-work-with-no10-north-to-drive-search-for-top-10-biggest-strategic-investment-sites-across-country">Strategic Sites Accelerator</a> (BIST, 2 November 2026) and <a href="https://www.gov.uk/government/news/britains-ambitious-scale-ups-backed-to-keep-growing-in-the-uk">Scale UK Connect</a> (BIST, 29 October 2026)</li>
+<li><a href="https://www.gov.uk/government/publications/council-tax-information-letter-62026-household-energy-payment-2027">Council tax information letter 6/2026</a> (MHCLG, 29 October 2026)</li>
+<li><a href="https://www.gov.uk/government/consultations/draft-national-policy-statement-for-data-centres">Draft National Policy Statement for Data Centres</a> (BIST, 28 October 2026) and <a href="https://www.gov.uk/government/publications/ai-adoption-survey-2026">AI adoption survey 2026</a> (29 October 2026)</li>
+<li>Closing dates for every consultation in section 7 read from its gov.uk page on 12 November 2026</li>
+</ul>
+
+<div class="docfoot">Prepared by Nathaniel Adams. This is an independent, unofficial product. Policy scan run 12 November 2026, covering 2 October to 12 November 2026, against the strategy and guidance documents we hold as current. Free public official sources only. Summaries are not legal advice, so check source documents before citing. Sixth edition, replacing the 2 October 2026 edition. Next edition Friday 4 December 2026.</div>
+
+</article></div>
+
+</body>
+</html>

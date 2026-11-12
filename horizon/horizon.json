@@ -1,6 +1,6 @@
 {
  "title": "Horizon Calendar",
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "window": {
   "from": "2026-09-28",
   "ons_to": "2027-05-14"
@@ -1464,6 +1464,22 @@
    "verified": "2026-11-09"
   },
   {
+   "id": "nemsa-events-fund-eoi",
+   "date": "2026-11-26",
+   "title": "Expressions of interest close for the NEMSA Events Fund",
+   "category": "funding",
+   "rag": "r",
+   "status": "confirmed",
+   "why": "Grants of £10,000 to £500,000 for events from April 2027 to March 2029, the most direct lever for spreading visitor activity beyond the established hotspots.",
+   "action": "Events, culture and venue colleagues, so organisers in the borough know",
+   "source": {
+    "name": "NEMSA, Mayor's Events Fund, updated 16 October 2026",
+    "url": "https://www.northeast-ca.gov.uk/projects/events-fund"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
+  },
+  {
    "id": "ons-householdcostsindicesforukhouseholdgroupsjulytoseptember2026",
    "date": "2026-11-27",
    "title": "Household Costs Indices",
@@ -1809,6 +1825,37 @@
    },
    "verified": "2026-11-09",
    "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "consult-modernising-corporate-reporting",
+   "date": "2026-11-30",
+   "title": "Consultation closes on modernising corporate reporting",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Reporting burden on small firms. No response proposed.",
+   "source": {
+    "name": "BIST, Modernising corporate reporting",
+    "url": "https://www.gov.uk/government/consultations/modernising-corporate-reporting"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
+  },
+  {
+   "id": "nemsa-small-venues-fund-opens",
+   "date": "2026-11-30",
+   "date_label": "November 2026",
+   "title": "NEMSA Small Venues Fund phase one opens",
+   "category": "funding",
+   "rag": "a",
+   "status": "expected",
+   "why": "Grants of £3,000 to £100,000 for small venues, with no closing date published yet.",
+   "source": {
+    "name": "NEMSA, Mayor's Small Venues Fund, updated 19 October 2026",
+    "url": "https://www.northeast-ca.gov.uk/projects/small-venues-fund"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
   },
   {
    "id": "ons-populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025",
@@ -2318,6 +2365,21 @@
    "first_logged": "whats-new-2026-10-19"
   },
   {
+   "id": "consult-ofqual-t-level-technical-qualifications",
+   "date": "2026-12-10",
+   "title": "Consultation closes on regulating technical qualifications in T Levels",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Part of the 14 plus technical pathways reform.",
+   "source": {
+    "name": "Ofqual, Regulating technical qualifications in T Levels",
+    "url": "https://www.gov.uk/government/consultations/regulating-technical-qualifications-in-t-levels"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
+  },
+  {
    "id": "ons-gdpmonthlyestimateukoctober2026",
    "date": "2026-12-11",
    "title": "GDP monthly estimate",
@@ -2519,6 +2581,21 @@
    "verified": "2026-11-09"
   },
   {
+   "id": "consult-ofqual-v-level-recognition",
+   "date": "2026-12-17",
+   "title": "Consultation closes on recognition for V Levels, Foundation and Occupational Certificates",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Part of the 14 plus technical pathways reform.",
+   "source": {
+    "name": "Ofqual, Our approach to recognition for V Levels, Foundation Certificates and Occupational Certificates",
+    "url": "https://www.gov.uk/government/consultations/our-approach-to-recognition-for-v-levels-foundation-certificates-and-occupational-certificates"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
+  },
+  {
    "id": "awaabs-law-prs-consultation",
    "date": "2026-12-18",
    "title": "Consultation closes on extending Awaab's Law to private rented tenancies and licences",
@@ -2532,6 +2609,21 @@
    },
    "verified": "2026-11-09",
    "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "consult-young-bus-coach-drivers",
+   "date": "2026-12-18",
+   "title": "Consultation closes on licensing for 18 and 19 year old bus and coach drivers",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Opens a job route for 18 and 19 year olds and adds bus driver capacity.",
+   "source": {
+    "name": "DfT, Amending licensing restrictions for 18- and 19-year-old bus and coach drivers",
+    "url": "https://www.gov.uk/government/consultations/amending-licensing-restrictions-for-18-and-19-year-old-bus-and-coach-drivers"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
   },
   {
    "id": "ons-publicsectorfinancesuknovember2026",
@@ -2594,6 +2686,21 @@
    },
    "verified": "2026-11-09",
    "first_logged": "horizon scan"
+  },
+  {
+   "id": "consult-post16-quals-2028-health-science",
+   "date": "2026-12-23",
+   "title": "Consultations close on post-16 level 2 and 3 qualifications for health and care and for science",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Care is a foundational sector and a North East skills plan priority.",
+   "source": {
+    "name": "DfE, Post-16 level 2 and 3 qualifications 2028, health and care (and science)",
+    "url": "https://www.gov.uk/government/consultations/post-16-level-2-and-3-qualifications-2028-health-and-care"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
   },
   {
    "id": "veterans-rough-sleeping-plans",
@@ -2756,6 +2863,37 @@
    "verified": "2026-11-09",
    "date_label": "Later in 2026",
    "first_logged": "whats-new-2026-08-31"
+  },
+  {
+   "id": "consult-shared-cycle-licensing",
+   "date": "2026-12-31",
+   "title": "Consultation closes on shared cycle scheme licensing",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "A local licensing power over shared e-bikes in town centres.",
+   "source": {
+    "name": "DfT, Shared cycle scheme licensing",
+    "url": "https://www.gov.uk/government/consultations/shared-cycle-scheme-licensing"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
+  },
+  {
+   "id": "dbf-engagement-longlist",
+   "date": "2026-12-31",
+   "date_label": "By the end of 2026",
+   "title": "Councils begin Derelict Buildings Fund community engagement and longlist buildings",
+   "category": "deadline",
+   "rag": "a",
+   "status": "expected",
+   "why": "Gateshead is allocated £1.91m. The interim guidance expects engagement and a building longlist to start by the end of 2026.",
+   "source": {
+    "name": "MHCLG, Derelict Buildings Fund interim guidance, 28 October 2026",
+    "url": "https://www.gov.uk/government/publications/derelict-buildings-fund-interim-guidance/derelict-buildings-fund-interim-guidance"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
   },
   {
    "id": "agc-planning-permission",
@@ -3624,6 +3762,22 @@
    "bill_documents": "None yet"
   },
   {
+   "id": "scale-uk-connect-applications",
+   "date": "2027-01-29",
+   "date_label": "January 2027",
+   "title": "Applications close for Scale UK Connect",
+   "category": "funding",
+   "rag": "a",
+   "status": "expected",
+   "why": "A programme for 200 scale-ups, with the cohort starting in February 2027. Business support can pass it to growing firms.",
+   "source": {
+    "name": "BIST, Britain's ambitious scale-ups backed to keep growing in the UK, 29 October 2026",
+    "url": "https://www.gov.uk/government/news/britains-ambitious-scale-ups-backed-to-keep-growing-in-the-uk"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
+  },
+  {
    "id": "toms-cfe",
    "date": "2027-01-31",
    "time": "09:30",
@@ -3699,6 +3853,21 @@
     "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates"
    },
    "verified": "2026-11-02"
+  },
+  {
+   "id": "consult-edtech-ai-certification",
+   "date": "2027-02-04",
+   "title": "Consultation closes on an EdTech and AI product safety certification scheme",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "AI in education, context for the Digital objective.",
+   "source": {
+    "name": "DfE, Introducing an EdTech and AI product safety certification scheme",
+    "url": "https://www.gov.uk/government/consultations/introducing-an-edtech-and-ai-product-safety-certification-scheme"
+   },
+   "verified": "2026-11-12",
+   "first_logged": "policy-update-2026-11"
   },
   {
    "id": "bill-4176-21275",
@@ -5536,6 +5705,26 @@
    "date": "2026-11-11",
    "run": "bills-sweep-setup",
    "note": "Parliamentary bills added to the calendar (Nathaniel, 11 November 2026). New script build/horizon/sweep_bills.py pulled all 201 bills in the 2026-27 session from the UK Parliament Bills API and added 149 future bill stages under the new 'bill' category. 34 are on the local, digital or visitor economy themes in bills_watch.json and carry amber. 8 are government bills off those themes (green). 107 are private members' and private bill stages off those themes (green, routine, hidden behind the toggle, kept off the .ics). All are provisional. Each item carries the bill's stage now and whether any documents are published."
+  },
+  {
+   "date": "2026-11-12",
+   "run": "policy-update-2026-11",
+   "note": "Forward dates harvested from the November 2026 Policy Update; consultation closing dates from each gov.uk page, NEMSA fund pages and the Derelict Buildings Fund interim guidance read on 12 November 2026.",
+   "added": [
+    "nemsa-events-fund-eoi",
+    "consult-modernising-corporate-reporting",
+    "consult-ofqual-t-level-technical-qualifications",
+    "consult-ofqual-v-level-recognition",
+    "consult-young-bus-coach-drivers",
+    "consult-post16-quals-2028-health-science",
+    "consult-shared-cycle-licensing",
+    "consult-edtech-ai-certification",
+    "nemsa-small-venues-fund-opens",
+    "dbf-engagement-longlist",
+    "scale-uk-connect-applications"
+   ],
+   "changed": [],
+   "removed": []
   }
  ],
  "archive": [
