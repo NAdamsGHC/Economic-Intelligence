@@ -679,6 +679,30 @@
    "what": "The plan's geography check was missing, so England's figure passed as Gateshead's. The freeze diff dropped every sentence after a paragraph was added above it. There was no score per chapter, and a rank's field size was never checked against the data",
    "fix": "Geography check added, with an unnamed area read as Gateshead and comparator sets kept apart. The diff pairs figures by id and wording, and labels stale and removed sentences. A score per chapter and the rank field check were added. Verification's final verdict is that REC is safe to use at Gate 2 with its score",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-54",
+   "found": "2026-11-05",
+   "product": "Crawcrook high street small area one-pager (Gateshead 002D)",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The draft described the IoD2025 wider barriers sub-domain as housing only, when it also covers broadband speed and GP access. It called a whole-LSOA fall in jobs a high street fall, compared the area with a 'national retail decline' it never showed, and wrote 'no growth' where BRES rounding only supports 'little or no growth'. Two reference links pointed to the wrong NOMIS datasets",
+   "fix": "Sub-domain wording completed from the IoD2025 technical report. The headline now uses retail and food and drink jobs in the four centre LSOAs, freshly pulled for 2015 and 2024, with England and Gateshead changes shown beside it. Wording hedged and attributed to our analysis, and links corrected to the small area population and BRES open access datasets",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-55",
+   "found": "2026-11-05",
+   "product": "Rewiring the State one-pager",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The draft said mayoral income would track the region's own tax base and that the floor and taper protect a weaker tax base. The Fiscal Devolution Roadmap sets bespoke starting allocations that allow for tax base strength, rewards growth relative to the average across mayoral authorities, and tapers gains to limit divergence. It also stated the 20% mayoral business rates share as settled when the Roadmap leaves open whether it covers all retained rates or growth only",
+   "fix": "Income tax model redescribed from Roadmap paragraphs 2.18 to 2.21 and labelled an 'emerging proposition'. Funding point reframed as relative growth, with only the floor as protection. The 20% share marked as proposed, subject to consultation, with the growth question raised for councils",
+   "status": "Closed"
   }
  ]
 }
