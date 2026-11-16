@@ -4,278 +4,41 @@ PRODID:-//Gateshead Economic Intelligence//Horizon Calendar//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Gateshead Horizon Calendar
 BEGIN:VEVENT
-UID:pathways-innovation-shortlist@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
-SUMMARY:Pathways to Work Innovation Fund shortlisting outcomes
-DESCRIPTION:Shortlisted bids then go through one-to-one refinement in Nove
- mber. Status: confirmed. Source: DWP\, Pathways to Work Innovation Fund a
- pplicant bid pack\, 28 September 2026 https://www.gov.uk/government/publi
- cations/pathways-to-work-innovation-fund-applicant-bid-pack
-URL:https://www.gov.uk/government/publications/pathways-to-work-innovation
- -fund-applicant-bid-pack
+UID:bill-4320-21328@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:[Amber] Commons programme motion of the Visitor Levy (England) Bil
+ l
+DESCRIPTION:Flagged Local\, Visitor. A Bill to Make provision for and in c
+ onnection with the imposition\, by strategic authorities\, of a new local
+  tax in respect of stays in residential accommodation. Documents publishe
+ d: yes (8) (Bill text\, Explanatory Notes\, Delegated Powers Memorandum\,
+  1 other). Status: provisional. Source: UK Parliament\, Bills site\, Visi
+ tor Levy (England) Bill stages https://bills.parliament.uk/bills/4320/sta
+ ges
+URL:https://bills.parliament.uk/bills/4320/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:wajc-16-2026-11-10@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
-SUMMARY:16th meeting of the UK-EU Withdrawal Agreement Joint Committee
-DESCRIPTION:Centre of government item with no direct local read. Status: c
- onfirmed. Source: Cabinet Office\, Agenda of the 16th meeting of the With
- drawal Agreement Joint Committee\, 10 November 2026 https://www.gov.uk/go
- vernment/publications/agenda-of-the-16th-meeting-of-the-withdrawal-agreem
- ent-joint-committee-10-november-2026
-URL:https://www.gov.uk/government/publications/agenda-of-the-16th-meeting-
- of-the-withdrawal-agreement-joint-committee-10-november-2026
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:pmi-natwest-uk-regional-growth-tracker-2026-11-11@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20261112
-SUMMARY:[Amber] NatWest UK Regional Growth Tracker
-DESCRIPTION:North East business activity for October\, the earliest region
- al read. Time: 00:01 UK. Status: confirmed. Source: S&P Global PMI releas
- e calendar https://www.pmi.spglobal.com/Public/Release/ReleaseDates?langu
- age=en
-URL:https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4124-21233@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20261112
-SUMMARY:Lords committee stage of the Health Bill
-DESCRIPTION:Government bill with no advisor flag. A Bill to make provision
-  about health and social care. This stage has 4 sittings scheduled\, the 
- last on 2026-11-25. Documents published: yes (263) (Bill text\, Explanato
- ry Notes\, Impact Assessment\, Library briefing\, Delegated Powers Memora
- ndum\, Committee report\, Written evidence\, 85 other). Status: provision
- al. Source: UK Parliament\, Bills site\, Health Bill stages https://bills
- .parliament.uk/bills/4124/stages
-URL:https://bills.parliament.uk/bills/4124/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:pm-veterans-rough-sleeping-letter@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20261112
-SUMMARY:[Amber] Prime Minister writes to councils in England asking for pl
- ans to accommodate veterans sleeping rough
-DESCRIPTION:Councils are asked to use part of the rough sleeping funding t
- o plan accommodation for any veterans sleeping rough before Christmas. St
- atus: confirmed. Source: No.10\, No one who has served our country should
-  sleep rough on our streets\, 7 November 2026 https://www.gov.uk/governme
- nt/news/no-one-who-has-served-our-country-should-sleep-rough-on-our-stree
- ts
-URL:https://www.gov.uk/government/news/no-one-who-has-served-our-country-s
- hould-sleep-rough-on-our-streets
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ons-gdpfirstquarterlyestimateukjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:GDP first quarterly estimate\, July to September 2026
-DESCRIPTION:National growth context for the quarterly monitor. Time: 07:00
-  UK. Status: confirmed. Source: ONS release calendar https://www.ons.gov.
- uk/releases/gdpfirstquarterlyestimateukjulytoseptember2026
-URL:https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukjulytosepte
- mber2026
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ons-gdpmonthlyestimateukseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:GDP monthly estimate
-DESCRIPTION:National growth context. Time: 07:00 UK. Status: confirmed. So
- urce: ONS release calendar https://www.ons.gov.uk/releases/gdpmonthlyesti
- mateukseptember2026
-URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukseptember2026
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:mhclg-la-capital-outturn-2026-11-12@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:Local authority capital expenditure and receipts\, 2025 to 2026 fi
- nal outturn
-DESCRIPTION:Council capital spending by authority. Time: 09:30 UK. Status:
-  confirmed. Source: MHCLG\, release announcement https://www.gov.uk/gover
- nment/statistics/announcements/local-authority-capital-expenditure-and-re
- ceipts-in-england-2025-to-2026-final-outturn
-URL:https://www.gov.uk/government/statistics/announcements/local-authority
- -capital-expenditure-and-receipts-in-england-2025-to-2026-final-outturn
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4305-21287@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:[Amber] Commons committee stage of the Building Safety (Remediatio
- n of Unsafe Cladding etc) Bill
-DESCRIPTION:Flagged Local. A Bill to make provision about fire safety in b
- uildings containing multiple dwellings\, including provision for the asse
- ssment and remediation of external walls that give rise to risks from fir
- e\, and the mitigation of such risks\, in taller buildings\; to make prov
- ision for the obtaining and recording of information about buildings cont
- aining residential accommodation\; to make provision about liabilities in
-  connection with unsafe construction products\; and to make other provisi
- on in connection with the safety and management of residential buildings.
-  This stage has 3 sittings scheduled\, the last on 2026-11-19. Documents 
- published: yes (15) (Bill text\, Explanatory Notes\, Impact Assessment\, 
- Library briefing\, Delegated Powers Memorandum\, 6 other). Status: provis
- ional. Source: UK Parliament\, Bills site\, Building Safety (Remediation 
- of Unsafe Cladding etc) Bill stages https://bills.parliament.uk/bills/430
- 5/stages
-URL:https://bills.parliament.uk/bills/4305/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4290-21253@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:Commons committee stage of the Highways (Financing) Bill
-DESCRIPTION:Government bill with no advisor flag. A Bill to Make provision
-  for licences authorising the charging of tolls in return for securing wo
- rks on trunk roads in England\; about the functions of holders of licence
- s\; about enforcement\; for a special administration regime for holders o
- f licences\; about the collection and enforcement of tolls charged under 
- other Acts\; and for connected purposes. This stage has 3 sittings schedu
- led\, the last on 2026-11-19. Documents published: yes (25) (Bill text\, 
- Explanatory Notes\, Impact Assessment\, Library briefing\, Delegated Powe
- rs Memorandum\, Written evidence\, 10 other). Status: provisional. Source
- : UK Parliament\, Bills site\, Highways (Financing) Bill stages https://b
- ills.parliament.uk/bills/4290/stages
-URL:https://bills.parliament.uk/bills/4290/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ons-shorttermletsthroughonlinecollaborativeeconomyplatformsukjuly2023tojune2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Short-term lets through online platforms\, July 2023 to Ju
- ne 2026
-DESCRIPTION:Part of the overnight-stay baseline the visitor levy work need
- s. Time: 09:30 UK. Status: confirmed. Source: ONS release calendar https:
- //www.ons.gov.uk/releases/shorttermletsthroughonlinecollaborativeeconomyp
- latformsukjuly2023tojune2026
-URL:https://www.ons.gov.uk/releases/shorttermletsthroughonlinecollaborativ
- eeconomyplatformsukjuly2023tojune2026
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4161-20850@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Commons second reading of the Homes and Planning Bill
-DESCRIPTION:Flagged Local. A Bill to make provision about the availability
-  of social\, affordable\, and intermediate market homes\; to make provisi
- on about the powers of local authorities and local planning authorities i
- n relation to homes and planning\; to make further provision in relation 
- to homes and planning\; and for connected purposes. Documents published: 
- yes (5) (Bill text\, Library briefing). Status: provisional. Source: UK P
- arliament\, Bills site\, Homes and Planning Bill stages https://bills.par
- liament.uk/bills/4161/stages
-URL:https://bills.parliament.uk/bills/4161/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4205-20946@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Commons second reading of the Hospitality Services (Value 
- Added Tax Exemption) Bill
-DESCRIPTION:Flagged Visitor. A Bill to exempt providers of catering and ac
- commodation services from VAT for fees and charges made in respect of the
-  provision of those services\; and for connected purposes. Documents publ
- ished: yes (4) (Bill text). Status: provisional. Source: UK Parliament\, 
- Bills site\, Hospitality Services (Value Added Tax Exemption) Bill stages
-  https://bills.parliament.uk/bills/4205/stages
-URL:https://bills.parliament.uk/bills/4205/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4201-20938@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Commons second reading of the Non-Domestic Rating (Retail\
- , Hospitality and Leisure) Bill
-DESCRIPTION:Flagged Local\, Visitor. A Bill to make provision about non-do
- mestic rating in respect of retail\, hospitality and leisure businesses\;
-  and for connected purposes. Documents published: yes (4) (Bill text). St
- atus: provisional. Source: UK Parliament\, Bills site\, Non-Domestic Rati
- ng (Retail\, Hospitality and Leisure) Bill stages https://bills.parliamen
- t.uk/bills/4201/stages
-URL:https://bills.parliament.uk/bills/4201/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4283-21161@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Commons second reading of the Road Safety Plans Bill
-DESCRIPTION:Flagged Local. A Bill to require local authorities in England 
- to prepare and publish a road safety plan in respect of each school in th
- eir area\; and for connected purposes. Documents published: yes (4) (Bill
-  text). Status: provisional. Source: UK Parliament\, Bills site\, Road Sa
- fety Plans Bill stages https://bills.parliament.uk/bills/4283/stages
-URL:https://bills.parliament.uk/bills/4283/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4313-21264@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Commons second reading of the Social Security (Marriage) B
- ill
-DESCRIPTION:Flagged Local. A Bill to prohibit the recognition of polygamou
- s marriages\, marriages within prohibited degrees\, and certain other mar
- riages between close relatives\, in the social security system. Documents
-  published: none yet. Status: provisional. Source: UK Parliament\, Bills 
- site\, Social Security (Marriage) Bill stages https://bills.parliament.uk
- /bills/4313/stages
-URL:https://bills.parliament.uk/bills/4313/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bill-4209-20952@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261114
-SUMMARY:[Amber] Commons second reading of the Tax Reliefs Bill
-DESCRIPTION:Flagged Local. A Bill to make provision about the relief of ta
- xation in respect of private education\, private healthcare\, mortgage in
- terest payments for primary residences\, certain transport costs relating
-  to employment and private pension contributions\; to make further provis
- ion relating to the relief of taxation\; and for connected purposes. Docu
- ments published: none yet. Status: provisional. Source: UK Parliament\, B
- ills site\, Tax Reliefs Bill stages https://bills.parliament.uk/bills/420
- 9/stages
-URL:https://bills.parliament.uk/bills/4209/stages
+UID:bill-4320-21303@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:[Amber] Commons second reading of the Visitor Levy (England) Bill
+DESCRIPTION:Flagged Local\, Visitor. A Bill to Make provision for and in c
+ onnection with the imposition\, by strategic authorities\, of a new local
+  tax in respect of stays in residential accommodation. Documents publishe
+ d: yes (8) (Bill text\, Explanatory Notes\, Delegated Powers Memorandum\,
+  1 other). Status: provisional. Source: UK Parliament\, Bills site\, Visi
+ tor Levy (England) Bill stages https://bills.parliament.uk/bills/4320/sta
+ ges
+URL:https://bills.parliament.uk/bills/4320/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4083-21266@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Lords committee stage of the Courts and Tribunals Bill
@@ -284,9 +47,9 @@ DESCRIPTION:Government bill with no advisor flag. A Bill to Make provision
  about the leadership of tribunals\; to amend section 1 of the Children Ac
  t 1989 to remove the presumption relating to the involvement of parents i
  n the life of a child\; and for connected purposes. Documents published: 
- yes (131) (Bill text\, Explanatory Notes\, Impact Assessment\, Library br
+ yes (133) (Bill text\, Explanatory Notes\, Impact Assessment\, Library br
  iefing\, Delegated Powers Memorandum\, Committee report\, Written evidenc
- e\, 63 other). Status: provisional. Source: UK Parliament\, Bills site\, 
+ e\, 65 other). Status: provisional. Source: UK Parliament\, Bills site\, 
  Courts and Tribunals Bill stages https://bills.parliament.uk/bills/4083/s
  tages
 URL:https://bills.parliament.uk/bills/4083/stages
@@ -294,7 +57,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketnovember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -308,7 +71,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-productivityflashestimateandoverviewukjulytoseptember2026andapriltojune2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:[Amber] Productivity flash estimate
@@ -321,8 +84,97 @@ URL:https://www.ons.gov.uk/releases/productivityflashestimateandoverviewuk
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4305-21287@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:[Amber] Commons committee stage of the Building Safety (Remediatio
+ n of Unsafe Cladding etc) Bill
+DESCRIPTION:Flagged Local. A Bill to make provision about fire safety in b
+ uildings containing multiple dwellings\, including provision for the asse
+ ssment and remediation of external walls that give rise to risks from fir
+ e\, and the mitigation of such risks\, in taller buildings\; to make prov
+ ision for the obtaining and recording of information about buildings cont
+ aining residential accommodation\; to make provision about liabilities in
+  connection with unsafe construction products\; and to make other provisi
+ on in connection with the safety and management of residential buildings.
+  This stage has 2 sittings scheduled\, the last on 2026-11-19. Documents 
+ published: yes (37) (Bill text\, Explanatory Notes\, Impact Assessment\, 
+ Library briefing\, Delegated Powers Memorandum\, Written evidence\, 13 ot
+ her). Status: provisional. Source: UK Parliament\, Bills site\, Building 
+ Safety (Remediation of Unsafe Cladding etc) Bill stages https://bills.par
+ liament.uk/bills/4305/stages
+URL:https://bills.parliament.uk/bills/4305/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bill-4290-21253@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Commons committee stage of the Highways (Financing) Bill
+DESCRIPTION:Government bill with no advisor flag. A Bill to Make provision
+  for licences authorising the charging of tolls in return for securing wo
+ rks on trunk roads in England\; about the functions of holders of licence
+ s\; about enforcement\; for a special administration regime for holders o
+ f licences\; about the collection and enforcement of tolls charged under 
+ other Acts\; and for connected purposes. This stage has 2 sittings schedu
+ led\, the last on 2026-11-19. Documents published: yes (30) (Bill text\, 
+ Explanatory Notes\, Impact Assessment\, Library briefing\, Delegated Powe
+ rs Memorandum\, Written evidence\, 13 other). Status: provisional. Source
+ : UK Parliament\, Bills site\, Highways (Financing) Bill stages https://b
+ ills.parliament.uk/bills/4290/stages
+URL:https://bills.parliament.uk/bills/4290/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bill-4254-21300@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Commons report stage of the Immigration and Asylum Bill
+DESCRIPTION:Government bill with no advisor flag. A Bill to Make provision
+  about immigration\, asylum and modern slavery\; and for connected purpos
+ es. Documents published: yes (141) (Bill text\, Explanatory Notes\, Impac
+ t Assessment\, Library briefing\, Delegated Powers Memorandum\, Written e
+ vidence\, 50 other). Status: provisional. Source: UK Parliament\, Bills s
+ ite\, Immigration and Asylum Bill stages https://bills.parliament.uk/bill
+ s/4254/stages
+URL:https://bills.parliament.uk/bills/4254/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:small-pots-consultation@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Consultation closes on small pension pots consolidation
+DESCRIPTION:Pensions\, no local read. Status: confirmed. Source: DWP\, Sma
+ ll Pots: a pathway for consolidation https://www.gov.uk/government/consul
+ tations/small-pots-a-pathway-for-consolidation
+URL:https://www.gov.uk/government/consultations/small-pots-a-pathway-for-c
+ onsolidation
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bill-4124-21233@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Lords committee stage of the Health Bill
+DESCRIPTION:Government bill with no advisor flag. A Bill to make provision
+  about health and social care. This stage has 3 sittings scheduled\, the 
+ last on 2026-11-25. Documents published: yes (266) (Bill text\, Explanato
+ ry Notes\, Impact Assessment\, Library briefing\, Delegated Powers Memora
+ ndum\, Committee report\, Written evidence\, 88 other). Status: provision
+ al. Source: UK Parliament\, Bills site\, Health Bill stages https://bills
+ .parliament.uk/bills/4124/stages
+URL:https://bills.parliament.uk/bills/4124/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:dwp-universal-credit-2026-11@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Universal Credit statistics\, quarterly release to 13 August 2026
@@ -336,7 +188,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukoctober2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Consumer price inflation
@@ -347,8 +199,26 @@ URL:https://www.ons.gov.uk/releases/consumerpriceinflationukoctober2026
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:nndr-retention-reset-data@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Additional data for the business rates retention reset published
+DESCRIPTION:Data on renewable energy disregarded amounts and designated ar
+ eas\, used in the business rates baseline calculation for the reset. Time
+ : 09:30 UK. Status: confirmed. Source: MHCLG\, National non-domestic rate
+ s 2026 to 2027: Additional data for business rates retention reset\, rele
+ ase announcement https://www.gov.uk/government/statistics/announcements/n
+ ational-non-domestic-rates-2026-to-2027-additional-data-for-business-rate
+ s-retentionreset
+URL:https://www.gov.uk/government/statistics/announcements/national-non-do
+ mestic-rates-2026-to-2027-additional-data-for-business-rates-retentionres
+ et
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:mhclg-council-taxbase-2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Council Taxbase 2026 in England
@@ -362,7 +232,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Private rent and house prices
@@ -375,23 +245,23 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4030-21281@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Lords report stage of the Railways Bill
 DESCRIPTION:Government bill with no advisor flag. A Bill to make provision
   about railways and railway services\; and for connected purposes. This s
  tage has 3 sittings scheduled\, the last on 2026-12-15. Documents publish
- ed: yes (243) (Bill text\, Explanatory Notes\, Impact Assessment\, Librar
+ ed: yes (247) (Bill text\, Explanatory Notes\, Impact Assessment\, Librar
  y briefing\, Delegated Powers Memorandum\, Committee report\, Written evi
- dence\, 178 other). Status: provisional. Source: UK Parliament\, Bills si
+ dence\, 181 other). Status: provisional. Source: UK Parliament\, Bills si
  te\, Railways Bill stages https://bills.parliament.uk/bills/4030/stages
 URL:https://bills.parliament.uk/bills/4030/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:school-exclusion-cfe@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Call for evidence closes on school exclusion reform
@@ -406,7 +276,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-businessdemography2025@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:[Amber] Business demography 2025
@@ -418,7 +288,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukoctober2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Public sector finances
@@ -430,7 +300,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:uk-eu-summit-2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Second UK-EU summit\, Brussels
@@ -444,7 +314,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:corporate-tax-simplification@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Consultation closes on corporate tax simplification for business i
@@ -460,7 +330,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pmi-uk-flash-pmi-2026-11-23@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:UK Flash PMI
@@ -472,7 +342,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ifg-devolab-health-inactivity@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Institute for Government event on how mayors can tackle health-rel
@@ -487,8 +357,21 @@ URL:https://www.instituteforgovernment.org.uk/event/devolab-7-health-relat
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4316-21306@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:Commons second reading of the Finance Bill
+DESCRIPTION:Government bill with no advisor flag. A Bill to make provision
+  in connection with finance. Documents published: yes (9) (Bill text\, Ex
+ planatory Notes). Status: provisional. Source: UK Parliament\, Bills site
+ \, Finance Bill stages https://bills.parliament.uk/bills/4316/stages
+URL:https://bills.parliament.uk/bills/4316/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:bill-4296-21307@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Lords committee stage of the Church Appointments (Repeal of Discri
@@ -507,7 +390,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4296-21308@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Lords report stage of the Church Appointments (Repeal of Discrimin
@@ -526,7 +409,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4296-21309@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Lords third reading of the Church Appointments (Repeal of Discrimi
@@ -545,7 +428,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-regionalandsubregionallabourproductivityuk2024@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:[Red] Regional and subregional labour productivity\, 2024
@@ -560,8 +443,47 @@ URL:https://www.ons.gov.uk/releases/regionalandsubregionallabourproductivi
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4065-21289@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Commons consideration of Lords amendments of the Armed Forces Bill
+DESCRIPTION:Government bill with no advisor flag. A Bill to continue the A
+ rmed Forces Act 2006\; to amend that Act and other enactments relating to
+  the armed forces\; to make provision about the reserve forces\; to make 
+ provision about visiting forces\; to make provision about the Ministry of
+  Defence Police\; to make provision about the defence functions of the Oi
+ l and Pipelines Agency\; to make provision about the protection of milita
+ ry remains\; and for connected purposes. Documents published: yes (111) (
+ Bill text\, Explanatory Notes\, Library briefing\, Delegated Powers Memor
+ andum\, Committee report\, 79 other). Status: provisional. Source: UK Par
+ liament\, Bills site\, Armed Forces Bill stages https://bills.parliament.
+ uk/bills/4065/stages
+URL:https://bills.parliament.uk/bills/4065/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bill-4035-21297@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:[Amber] Commons consideration of Lords amendments of the Cyber Sec
+ urity and Resilience (Network and Information Systems) Bill
+DESCRIPTION:Flagged Digital. A Bill to Make provision\, including provisio
+ n amending the Network and Information Systems Regulations 2018\, about t
+ he security and resilience of network and information systems used or rel
+ ied on in connection with the carrying on of essential activities. Docume
+ nts published: yes (179) (Bill text\, Explanatory Notes\, Impact Assessme
+ nt\, Library briefing\, Delegated Powers Memorandum\, Committee report\, 
+ Written evidence\, 99 other). Status: provisional. Source: UK Parliament\
+ , Bills site\, Cyber Security and Resilience (Network and Information Sys
+ tems) Bill stages https://bills.parliament.uk/bills/4035/stages
+URL:https://bills.parliament.uk/bills/4035/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:bill-4080-21212@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Lords committee stage of the Representation of the People Bill
@@ -581,9 +503,9 @@ DESCRIPTION:Government bill with no advisor flag. Make provision extending
  nd their sentencing\, where offences are aggravated by hostility towards 
  persons involved in elections\, referendums or recall petitions or holder
  s of such offices\; and for connected purposes. This stage has 4 sittings
-  scheduled\, the last on 2026-12-14. Documents published: yes (250) (Bill
+  scheduled\, the last on 2026-12-14. Documents published: yes (252) (Bill
   text\, Explanatory Notes\, Impact Assessment\, Library briefing\, Delega
- ted Powers Memorandum\, Committee report\, Written evidence\, 167 other).
+ ted Powers Memorandum\, Committee report\, Written evidence\, 169 other).
   Status: provisional. Source: UK Parliament\, Bills site\, Representation
   of the People Bill stages https://bills.parliament.uk/bills/4080/stages
 URL:https://bills.parliament.uk/bills/4080/stages
@@ -591,7 +513,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-net-additional-dwellings-2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:[Amber] Housing supply\, net additional dwellings\, England\, 2025
@@ -606,7 +528,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-provisionalpopulationestimatefortheukmid2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Provisional UK population estimate\, mid-2026
@@ -619,7 +541,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-youngpeoplenotineducationemploymentortrainingneetuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:[Amber] Young people not in education\, employment or training (NE
@@ -634,7 +556,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:nemsa-events-fund-eoi@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:[Red] Expressions of interest close for the NEMSA Events Fund
@@ -649,7 +571,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-longterminternationalmigrationprovisionalyearendingjune2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Long-term international migration\, year ending June 2026
@@ -662,7 +584,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-householdcostsindicesforukhouseholdgroupsjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Household Costs Indices
@@ -675,7 +597,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4310-21258@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Artificial Intelligence (Con
@@ -696,7 +618,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4295-21199@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Personal Data (Digital Twins
@@ -714,7 +636,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4248-21033@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:[Amber] Commons second reading of the Rural Public Transport Bill
@@ -730,24 +652,8 @@ URL:https://bills.parliament.uk/bills/4248/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:bill-4311-21260@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
-SUMMARY:[Amber] Commons second reading of the Utilities (Social Tariff) Bi
- ll
-DESCRIPTION:Flagged Digital. A Bill to require utility companies to provid
- e social tariffs for energy\, broadband and mobile bills to support custo
- mers who are disabled\, elderly or on a low income\; and for connected pu
- rposes. Documents published: none yet. Status: provisional. Source: UK Pa
- rliament\, Bills site\, Utilities (Social Tariff) Bill stages https://bil
- ls.parliament.uk/bills/4311/stages
-URL:https://bills.parliament.uk/bills/4311/stages
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:founders-relief@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Technical consultation closes on Founders' Relief
@@ -761,7 +667,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bics-registration-close@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:[Red] British Industrial Competitiveness Scheme applications close
@@ -780,7 +686,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:consult-modernising-corporate-reporting@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Consultation closes on modernising corporate reporting
@@ -793,7 +699,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pip-plan-beacon-lough@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:[Red] Pride in Place plans due from September 2025 Phase 2 boards
@@ -809,7 +715,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:[Amber] Small-area population estimates\, mid-2025
@@ -823,7 +729,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pmi-uk-manufacturing-pmi-2026-12-01@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:UK Manufacturing PMI
@@ -836,7 +742,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:state-pension-deferral-cfe@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Call for evidence closes on State Pension deferral
@@ -850,7 +756,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-workingandworklesshouseholdsintheukjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Working and workless households
@@ -862,8 +768,23 @@ URL:https://www.ons.gov.uk/releases/workingandworklesshouseholdsintheukjul
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4022-21268@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Lords second reading of the Northern Ireland Troubles Bill
+DESCRIPTION:Government bill with no advisor flag. A Bill to make new provi
+ sion to address the legacy of the Northern Ireland Troubles. Documents pu
+ blished: yes (164) (Bill text\, Explanatory Notes\, Library briefing\, De
+ legated Powers Memorandum\, 145 other). Status: provisional. Source: UK P
+ arliament\, Bills site\, Northern Ireland Troubles Bill stages https://bi
+ lls.parliament.uk/bills/4022/stages
+URL:https://bills.parliament.uk/bills/4022/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:bill-4208-20950@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Employment Bill
@@ -877,7 +798,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4190-20914@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Environmental Impact Assessm
@@ -898,7 +819,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4307-21247@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Flooding Bill
@@ -926,7 +847,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4260-21085@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:[Amber] Commons second reading of the Public Procurement (British 
@@ -942,7 +863,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-affordable-housing-supply-2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:[Amber] Affordable housing supply in England\, 2025 to 2026
@@ -956,8 +877,23 @@ URL:https://www.gov.uk/government/statistics/announcements/affordable-hous
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:planning-fees-dec-2026@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Planning application fees rise\, with a new flat fee of £310 for 
+ some prior approvals
+DESCRIPTION:Higher fees for developers and businesses applying for plannin
+ g permission in Gateshead\, paid to the council's planning service. Statu
+ s: confirmed. Source: MHCLG\, Planning fees: national increases from 8 De
+ cember 2026\, 10 November 2026 https://www.gov.uk/government/publications
+ /planning-application-fees
+URL:https://www.gov.uk/government/publications/planning-application-fees
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ons-trendsinukbusinessdynamismandproductivity2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Trends in UK business dynamism and productivity
@@ -970,7 +906,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wholesale-cfd@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Consultation closes on Wholesale Contracts for Difference
@@ -984,7 +920,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-lifeexpectancyforlocalareasoftheukbetween2001to2003and2023to2025@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Life expectancy for local areas\, 2023 to 2025
@@ -997,7 +933,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mhclg-live-table-1012-2026-12-10@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Update of Live Table 1012 on affordable housing supply
@@ -1012,7 +948,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:supported-housing-licensing-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Consultation closes on supported housing licensing regulations
@@ -1026,8 +962,22 @@ URL:https://www.gov.uk/government/consultations/supported-housing-licensin
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:connect-to-work-stats-dec-2026@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:[Amber] Connect to Work statistics\, reported below delivery area 
+ level for the first time
+DESCRIPTION:Reporting at Delivery Area Member level may give a Gateshead v
+ iew of the programme for the first time. Status: confirmed. Source: DWP\,
+  Connect to Work statistics collection page\, updated 12 November 2026 ht
+ tps://www.gov.uk/government/collections/connect-to-work-statistics
+URL:https://www.gov.uk/government/collections/connect-to-work-statistics
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:consult-ofqual-t-level-technical-qualifications@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Consultation closes on regulating technical qualifications in T Le
@@ -1042,7 +992,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukoctober2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:GDP monthly estimate
@@ -1054,7 +1004,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:child-employment-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Consultation closes on the child employment regulatory framework
@@ -1068,7 +1018,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:street-works-code@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Consultation closes on the street works and road works safety code
@@ -1083,7 +1033,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1097,7 +1047,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-internationaltradeinuknationsregionsandcities2024@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:International trade in UK nations\, regions and cities\, 2024
@@ -1110,7 +1060,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cdc-regs-2027-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Consultation closes on the Retirement Collective Money Purchase Sc
@@ -1126,7 +1076,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Consumer price inflation
@@ -1138,7 +1088,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-businessregisterandemploymentsurveybresrevisedresults2024fortheuk@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:[Amber] BRES\, provisional and revised results\, revised results 2
@@ -1155,7 +1105,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Private rent and house prices
@@ -1168,7 +1118,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev-charging-tenants-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Consultation closes on electric vehicle charging access for tenant
@@ -1185,7 +1135,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ev-charging-building-regs-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Consultation closes on electric vehicle charging in the building r
@@ -1202,7 +1152,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:dismissal-reengagement-code-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:Consultation closes on the revised code of practice on dismissal a
@@ -1218,7 +1168,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2026-12-17@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:[Amber] Bank of England interest rate decision
@@ -1234,7 +1184,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:consult-ofqual-v-level-recognition@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:Consultation closes on recognition for V Levels\, Foundation and O
@@ -1250,7 +1200,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:awaabs-law-prs-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:Consultation closes on extending Awaab's Law to private rented ten
@@ -1266,7 +1216,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:consult-young-bus-coach-drivers@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:Consultation closes on licensing for 18 and 19 year old bus and co
@@ -1282,7 +1232,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Public sector finances
@@ -1294,7 +1244,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:guided-retirement-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Consultation closes on guided retirement
@@ -1308,7 +1258,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:land-registry-consultations@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Consultations close on access to HM Land Registry information and 
@@ -1323,7 +1273,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:gas-network-costs-cfe@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Call for evidence closes on recovering gas network costs during th
@@ -1339,7 +1289,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:consult-post16-quals-2028-health-science@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Consultations close on post-16 level 2 and 3 qualifications for he
@@ -1354,7 +1304,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:consult-shared-cycle-licensing@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Consultation closes on shared cycle scheme licensing
@@ -1367,7 +1317,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cbam-start@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Carbon Border Adjustment Mechanism starts
@@ -1383,7 +1333,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ppn026-live@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:[Amber] PPN 026 social value model applies to new central governme
@@ -1398,7 +1348,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bus-fare-cap@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:£2 bus fare cap across England outside London
@@ -1412,7 +1362,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:crichel-down-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:Consultation closes on reform of the Crichel Down Rules
@@ -1426,8 +1376,25 @@ URL:https://www.gov.uk/government/consultations/reform-of-the-crichel-down
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:nemsa-srf-consultation@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:[Amber] Consultation closes on the draft Newcastle and Gateshead S
+ trategic Regeneration Framework
+DESCRIPTION:A 25-year plan for the urban core\, written jointly by the May
+ or\, NEMSA\, Newcastle City Council and Gateshead Council. One line of th
+ e page says 2026\, the other two say 2027. Status: confirmed. Source: NEM
+ SA\, Have your say on the future of Newcastle and Gateshead\, 6 November 
+ 2026 https://www.northeast-ca.gov.uk/news/have-your-say-on-the-future-of-
+ newcastle-and-gateshead
+URL:https://www.northeast-ca.gov.uk/news/have-your-say-on-the-future-of-ne
+ wcastle-and-gateshead
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:employment-status-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:[Amber] Consultation closes on employment status reform and protec
@@ -1445,7 +1412,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:data-centres-nps-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:Consultation closes on the draft National Policy Statement for Dat
@@ -1461,7 +1428,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:lle-loan-payments-cfe@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
 SUMMARY:Call for evidence closes on how Lifelong Learning Entitlement loan
@@ -1476,7 +1443,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateuknovember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:GDP monthly estimate
@@ -1488,7 +1455,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4170-20869@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Automated Online Software (A
@@ -1506,7 +1473,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4185-20904@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Battery Energy Storage (Plan
@@ -1526,7 +1493,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4232-21001@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Green Belt (Protection) Bill
@@ -1542,7 +1509,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4159-20844@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Heritage Public Houses Bill
@@ -1561,7 +1528,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4173-20875@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Planning (Solar Power Genera
@@ -1577,7 +1544,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4249-21035@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:[Amber] Commons second reading of the Reciprocal Cross-Border Publ
@@ -1598,7 +1565,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1612,7 +1579,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consumer price inflation
@@ -1624,7 +1591,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Private rent and house prices
@@ -1636,7 +1603,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:e-invoicing@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on e-invoicing digital reporting
@@ -1650,7 +1617,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cbam-refinery-scope@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on extending the carbon border tax to refinery
@@ -1667,7 +1634,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:foreign-sovereign-tax@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on modernising the taxation of foreign soverei
@@ -1683,7 +1650,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:machine-games-duty@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:Consultation closes on who is liable for Machine Games Duty
@@ -1697,7 +1664,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:Public sector finances
@@ -1709,7 +1676,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pension-trustees-duties-consultation@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
 SUMMARY:Consultation closes on pension trustees' investment and fiduciary 
@@ -1724,7 +1691,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4200-20936@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:[Amber] Commons second reading of the Welfare Reform Bill
@@ -1743,7 +1710,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:toms-cfe@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Call for evidence closes on the VAT treatment of travel services
@@ -1757,7 +1724,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2027-02-04@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
 SUMMARY:[Amber] Bank of England interest rate decision\, with Monetary Pol
@@ -1771,7 +1738,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:consult-edtech-ai-certification@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
 SUMMARY:Consultation closes on an EdTech and AI product safety certificati
@@ -1785,8 +1752,25 @@ URL:https://www.gov.uk/government/consultations/introducing-an-edtech-and-
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4326-21324@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270206
+SUMMARY:[Amber] Commons second reading of the Compulsory Purchase (Fees) B
+ ill
+DESCRIPTION:Flagged Local. A Bill to make provision about excluding legal 
+ and professional fees from compensation payable by local authorities to p
+ ersons whose properties are\, in certain circumstances\, subject to a com
+ pulsory purchase order\; and for connected purposes. Documents published:
+  none yet. Status: provisional. Source: UK Parliament\, Bills site\, Comp
+ ulsory Purchase (Fees) Bill stages https://bills.parliament.uk/bills/4326
+ /stages
+URL:https://bills.parliament.uk/bills/4326/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:bill-4188-20910@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
 SUMMARY:[Amber] Commons second reading of the Electricity Works (Small Bus
@@ -1802,7 +1786,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4276-21127@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270206
 SUMMARY:[Amber] Commons second reading of the Home Cooling Bill
@@ -1818,7 +1802,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpfirstquarterlyestimateukoctobertodecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270213
 SUMMARY:GDP first quarterly estimate
@@ -1831,7 +1815,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukdecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270213
 SUMMARY:GDP monthly estimate
@@ -1843,7 +1827,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -1857,7 +1841,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-productivityflashestimateandoverviewukoctobertodecember2026andjulytoseptember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270216
 DTEND;VALUE=DATE:20270217
 SUMMARY:[Amber] Productivity flash estimate\, October to December 2026 and
@@ -1872,7 +1856,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:Consumer price inflation
@@ -1884,7 +1868,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:Private rent and house prices
@@ -1897,7 +1881,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270219
 DTEND;VALUE=DATE:20270220
 SUMMARY:Public sector finances
@@ -1909,7 +1893,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-lowcarbonandrenewableenergyeconomyuk2025@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270224
 DTEND;VALUE=DATE:20270225
 SUMMARY:Low carbon and renewable energy economy\, 2025
@@ -1922,7 +1906,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-householdcostsindicesforukhouseholdgroupsoctobertodecember2026@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270225
 DTEND;VALUE=DATE:20270226
 SUMMARY:Household Costs Indices
@@ -1934,8 +1918,53 @@ URL:https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgro
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ons-youngpeoplenotineducationemploymentortrainingneetukfebruary2027@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270225
+DTEND;VALUE=DATE:20270226
+SUMMARY:[Amber] Young people not in education\, employment or training (NE
+ ET)
+DESCRIPTION:UK and regional NEET context for the youth employment thread. 
+ Time: 09:30 UK. Status: confirmed. Source: ONS release calendar https://w
+ ww.ons.gov.uk/releases/youngpeoplenotineducationemploymentortrainingneetu
+ kfebruary2027
+URL:https://www.ons.gov.uk/releases/youngpeoplenotineducationemploymentort
+ rainingneetukfebruary2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bill-4327-21327@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270227
+SUMMARY:[Amber] Commons second reading of the Residential Use Class (Plann
+ ing Permission) Bill
+DESCRIPTION:Flagged Local\, Visitor. A Bill to introduce a requirement for
+  a grant of planning permission to change a primary residential home to a
+  short-term let or secondary residential home in England\; and for connec
+ ted purposes. Documents published: none yet. Status: provisional. Source:
+  UK Parliament\, Bills site\, Residential Use Class (Planning Permission)
+  Bill stages https://bills.parliament.uk/bills/4327/stages
+URL:https://bills.parliament.uk/bills/4327/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bill-4283-21161@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270227
+SUMMARY:[Amber] Commons second reading of the Road Safety Plans Bill
+DESCRIPTION:Flagged Local. A Bill to require local authorities in England 
+ to prepare and publish a road safety plan in respect of each school in th
+ eir area\; and for connected purposes. Documents published: yes (4) (Bill
+  text). Status: provisional. Source: UK Parliament\, Bills site\, Road Sa
+ fety Plans Bill stages https://bills.parliament.uk/bills/4283/stages
+URL:https://bills.parliament.uk/bills/4283/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:pip-plan-backstop@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270226
 DTEND;VALUE=DATE:20270227
 SUMMARY:[Amber] Latest submission date for Phase 2 Pride in Place plans
@@ -1950,7 +1979,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4224-20984@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Caravan Site Licensing (Exem
@@ -1965,7 +1994,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4243-21023@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Planning Application Consult
@@ -1981,7 +2010,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4299-21220@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Planning and Development (Co
@@ -1998,7 +2027,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4187-20908@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:[Amber] Commons second reading of the Telecommunications (Fixed-te
@@ -2014,7 +2043,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukjanuary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270312
 SUMMARY:GDP monthly estimate
@@ -2026,7 +2055,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4269-21111@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:[Amber] Commons second reading of the Energy and Digital Infrastru
@@ -2041,7 +2070,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -2055,7 +2084,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2027-03-18@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270318
 DTEND;VALUE=DATE:20270319
 SUMMARY:Bank of England interest rate decision
@@ -2068,7 +2097,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:Public sector finances
@@ -2080,7 +2109,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4315-21286@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Developer Contributions (Inf
@@ -2098,7 +2127,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4196-20926@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Hospitality (Value Added Tax
@@ -2113,7 +2142,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4180-20894@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Mobile Homes Bill
@@ -2125,8 +2154,29 @@ URL:https://bills.parliament.uk/bills/4180/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4324-21322@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+SUMMARY:[Amber] Commons second reading of the Online Platforms (Regulation
+ ) Bill
+DESCRIPTION:Flagged Digital. A Bill to impose duties on providers of onlin
+ e platforms in relation to the prevention of harm arising from user-gener
+ ated content and interactions\; to make provision about transparency in c
+ ontent moderation\, algorithms and advertising practices\; to establish a
+  regulator of online platforms\; to make provision about the powers and d
+ uties of that regulator\, including provision relating to complaints\, in
+ vestigations\, penalties and redress\; to make consequential provision re
+ lating to the powers and duties of other regulators\; and for connected p
+ urposes. Documents published: none yet. Status: provisional. Source: UK P
+ arliament\, Bills site\, Online Platforms (Regulation) Bill stages https:
+ //bills.parliament.uk/bills/4324/stages
+URL:https://bills.parliament.uk/bills/4324/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:bill-4298-21218@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Rural Communities (Public Se
@@ -2152,7 +2202,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bill-4266-21105@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:[Amber] Commons second reading of the Short-term Let Accommodation
@@ -2171,8 +2221,24 @@ URL:https://bills.parliament.uk/bills/4266/stages
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:bill-4311-21260@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+SUMMARY:[Amber] Commons second reading of the Utilities (Social Tariff) Bi
+ ll
+DESCRIPTION:Flagged Digital. A Bill to require utility companies to provid
+ e social tariffs for energy\, broadband and mobile bills to support custo
+ mers who are disabled\, elderly or on a low income\; and for connected pu
+ rposes. Documents published: none yet. Status: provisional. Source: UK Pa
+ rliament\, Bills site\, Utilities (Social Tariff) Bill stages https://bil
+ ls.parliament.uk/bills/4311/stages
+URL:https://bills.parliament.uk/bills/4311/stages
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ons-consumerpriceinflationukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270324
 DTEND;VALUE=DATE:20270325
 SUMMARY:Consumer price inflation
@@ -2184,7 +2250,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270324
 DTEND;VALUE=DATE:20270325
 SUMMARY:Private rent and house prices
@@ -2196,7 +2262,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:legacy-local-plan-deadline@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Extended deadline to submit legacy local plans for examination
@@ -2211,8 +2277,37 @@ URL:https://www.gov.uk/government/publications/legacy-system-local-plan-ex
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:planning-fees-indexation-2027@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:Planning application fees rise by 3.5% under annual indexation
+DESCRIPTION:The first annual uprating of the new planning fees. Status: co
+ nfirmed. Source: MHCLG\, Planning fees: national increases from 8 Decembe
+ r 2026\, 10 November 2026 https://www.gov.uk/government/publications/plan
+ ning-application-fees
+URL:https://www.gov.uk/government/publications/planning-application-fees
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:leasehold-service-charges-2027@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:Stronger rights for leaseholders to challenge service charges take
+  effect
+DESCRIPTION:More than three million leaseholders in England gain stronger 
+ rights. Housing colleagues will want it\, with no direct economic read. S
+ tatus: confirmed. Source: MHCLG\, Flat owners handed massive boost to fig
+ ht rip-off service charges\, 11 November 2026 https://www.gov.uk/governme
+ nt/news/flat-owners-handed-massive-boost-to-fight-rip-off-service-charges
+URL:https://www.gov.uk/government/news/flat-owners-handed-massive-boost-to
+ -fight-rip-off-service-charges
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukfebruary2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
 SUMMARY:GDP monthly estimate
@@ -2224,7 +2319,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-uklabourmarketapril2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
 SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
@@ -2238,7 +2333,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-consumerpriceinflationukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:Consumer price inflation
@@ -2250,7 +2345,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-publicsectorfinancesukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:Public sector finances
@@ -2262,7 +2357,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-privaterentandhousepricesukapril2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:Private rent and house prices
@@ -2274,7 +2369,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:mpc-2027-04-29@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270429
 DTEND;VALUE=DATE:20270430
 SUMMARY:Bank of England interest rate decision\, with Monetary Policy Repo
@@ -2288,7 +2383,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpfirstquarterlyestimateukjanuarytomarch2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270514
 DTEND;VALUE=DATE:20270515
 SUMMARY:GDP first quarterly estimate\, January to March 2027
@@ -2301,7 +2396,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ons-gdpmonthlyestimateukmarch2027@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20270514
 DTEND;VALUE=DATE:20270515
 SUMMARY:GDP monthly estimate
@@ -2312,8 +2407,46 @@ URL:https://www.ons.gov.uk/releases/gdpmonthlyestimateukmarch2027
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ons-uklabourmarketmay2027@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270518
+DTEND;VALUE=DATE:20270519
+SUMMARY:[Amber] UK labour market\, with regional tables and PAYE Real Time
+  Information
+DESCRIPTION:Gateshead's claimant count and payrolled employees\, and the r
+ egional labour market tables. Time: 07:00 UK. Status: confirmed. Source: 
+ ONS release calendar https://www.ons.gov.uk/releases/uklabourmarketmay202
+ 7
+URL:https://www.ons.gov.uk/releases/uklabourmarketmay2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-consumerpriceinflationukapril2027@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270519
+DTEND;VALUE=DATE:20270520
+SUMMARY:Consumer price inflation
+DESCRIPTION:Feeds the cost-of-living index. Time: 07:00 UK. Status: confir
+ med. Source: ONS release calendar https://www.ons.gov.uk/releases/consume
+ rpriceinflationukapril2027
+URL:https://www.ons.gov.uk/releases/consumerpriceinflationukapril2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ons-privaterentandhousepricesukmay2027@gateshead-economic-intelligence
+DTSTAMP:20261116T080329Z
+DTSTART;VALUE=DATE:20270519
+DTEND;VALUE=DATE:20270520
+SUMMARY:Private rent and house prices
+DESCRIPTION:Local authority rents and house prices\, so a Gateshead cut. T
+ ime: 09:30 UK. Status: confirmed. Source: ONS release calendar https://ww
+ w.ons.gov.uk/releases/privaterentandhousepricesukmay2027
+URL:https://www.ons.gov.uk/releases/privaterentandhousepricesukmay2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:hsra-fund-closes@gateshead-economic-intelligence
-DTSTAMP:20261112T094252Z
+DTSTAMP:20261116T080329Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
 SUMMARY:High Street Rental Auctions Fund closes\, or earlier if the money 

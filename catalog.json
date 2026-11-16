@@ -159,10 +159,15 @@
       },
       {
        "label": "Mon 16",
+       "status": "released",
+       "href": "briefs/whats-new-2026-11-16.html"
+      },
+      {
+       "label": "Mon 23",
        "status": "next"
       },
       {
-       "label": "then every Mon"
+       "label": "Mon 30"
       }
      ],
      "2026-12": [
@@ -694,6 +699,41 @@
     "social value",
     "departmental log",
     "rag"
+   ]
+  },
+  {
+   "id": "whats-new-2026-11-16",
+   "title": "What's New, 16 November 2026",
+   "path": "briefs/whats-new-2026-11-16.html",
+   "topic": "What's New",
+   "description": "The weekly edition covering 9 to 16 November, eight days. 18 to 24 year olds out of work for 18 months on Universal Credit are to be guaranteed a funded six-month job from the end of November, with the qualifying period falling to 12 months from April 2027; the Milburn Review of youth inactivity is due this week. A late item: the draft Newcastle and Gateshead Strategic Regeneration Framework, a 25-year plan for the urban core written jointly by the Mayor, NEMSA and both councils, is out for consultation until 6 January 2027. The Cabinet Secretary puts devolution by default at the heart of the future Civil Service, with 100 civil servants matched to roles in Mayoral Strategic Authorities. Also colleges asked to bring 16 to 18 year olds back into education, short-term let guest nights in Gateshead up 11.6% in a year, UK GDP up 0.7% in the third quarter, planning fees rising from 8 December, British Industrial Competitiveness Scheme guidance, leaseholder rights with council duties from November 2028, and a business tax consultation closing on 21 November. No reds this week. The complete departmental log carries 176 rows, folded away rather than cut.",
+   "sources": "DWP, 90,000 young people furthest from work to be given guaranteed job, 14 November 2026; NEMSA, Have your say on the future of Newcastle and Gateshead, 6 November 2026; Cabinet Office, Rewiring the State and the Future Civil Service, 10 November 2026; DfE, Colleges put at heart of drive to get young people learning, 11 November 2026, and post-16 qualifications consultations; ONS, Short-term lets through online collaborative economy platforms, July 2023 to June 2026, and GDP first quarterly estimate, July to September 2026; MHCLG, Planning fees from 8 December 2026, and leasehold announcement of 11 November 2026; BIST, British Industrial Competitiveness Scheme business guidance; UK Parliament Bills API; gov.uk publications from No.10 and the Cabinet Office; gov.uk departmental feeds for BIST, DWP, MHCLG and DfE, and HM Treasury. All figures quoted as published, pulled 16 November 2026.",
+   "series": "whats-new",
+   "date": "2026-11-16",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "jobs guarantee",
+    "youth guarantee",
+    "young people",
+    "neet",
+    "milburn review",
+    "regeneration framework",
+    "urban core",
+    "devolution",
+    "civil service",
+    "colleges",
+    "v levels",
+    "short-term lets",
+    "visitor levy",
+    "gdp",
+    "planning fees",
+    "business rates",
+    "industrial energy costs",
+    "leaseholders",
+    "bills"
    ]
   },
   {
@@ -1601,5 +1641,5 @@
    "featured": false
   }
  ],
- "updated_at": "2026-11-09T09:05:00+00:00"
+ "updated_at": "2026-11-16T12:00:00+00:00"
 }

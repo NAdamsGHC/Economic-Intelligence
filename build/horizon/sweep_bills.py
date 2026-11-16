@@ -86,7 +86,8 @@ def get(path, tries=4):
 
 def current_session():
     items = get("Bills?SortOrder=DateUpdatedDescending&Take=50")["items"]
-    return max(max(b["includedSessionIds"]) for b in items)
+    # a bill can come back with no session ids (seen 16 November 2026); skip it rather than fail
+    return max(max(b["includedSessionIds"]) for b in items if b.get("includedSessionIds"))
 
 
 def words(stage):
