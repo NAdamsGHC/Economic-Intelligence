@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-12",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -702,6 +702,66 @@
    "found_by": "Verification",
    "what": "The draft said mayoral income would track the region's own tax base and that the floor and taper protect a weaker tax base. The Fiscal Devolution Roadmap sets bespoke starting allocations that allow for tax base strength, rewards growth relative to the average across mayoral authorities, and tapers gains to limit divergence. It also stated the 20% mayoral business rates share as settled when the Roadmap leaves open whether it covers all retained rates or growth only",
    "fix": "Income tax model redescribed from Roadmap paragraphs 2.18 to 2.21 and labelled an 'emerging proposition'. Funding point reframed as relative growth, with only the floor as protection. The 20% share marked as proposed, subject to consultation, with the growth question raised for councils",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-56",
+   "found": "2026-11-12",
+   "product": "Business rates and income tax scenarios, Gateshead and South Tyneside",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Data and analysis",
+   "found_by": "Verification",
+   "what": "The draft presented three open readings of the Fiscal Devolution Roadmap as settled: the mayoral share mechanism (a repeat of E-2026-55), councils' growth being protected as well as their core funding, and a neutral swap to 70% retention. Two NEMSA results rested on undisclosed choices: the 20% growth share escaped the levy, and the whole £48m Investment Fund (including £14m capital) was assumed swapped. One 'The budget states' bullet carried '49% now', which no document says",
+   "fix": "Levy applied to NEMSA's whole retained share (high case 2031-32 £13.2m to £11.6m). Alternative mayoral share reading, revenue-only swap and 97% safety net added as model and workbook options with sensitivity lines in the notes. Protection and neutral swap restated as assumptions. Attributions corrected, sources hyperlinked with editions",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-57",
+   "found": "2026-11-12",
+   "product": "Business rates and income tax scenarios, Gateshead and South Tyneside",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Review",
+   "what": "The notes used Baseline Funding Level, top-up, levy, safety net, reset and income tax assignment without explaining them, for officer readers agreed not to know the retention mechanics. Tables omitted the early years, the executive summary left out the central reset case and the open decisions, and the workbooks shipped without cached values",
+   "fix": "How the System Works section added, every table runs 2026-27 to 2031-32, central reset case and open decisions in the executive summary, who decides each open item named, workbooks saved from Excel with values and an own-forecast override row",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-58",
+   "found": "2026-11-12",
+   "product": "Business rates and income tax scenarios, Gateshead and South Tyneside",
+   "stage": "Draft",
+   "type": "Data handling",
+   "function": "Data and analysis",
+   "found_by": "Our own review while building",
+   "what": "The scenarios applied a reset at 100% retention to the reform only, never to the baseline, so the reset cases reported the effect of a reset as the effect of the reform. Every council was also given the same growth path, and Northumberland was modelled at 49% when it keeps 50% as it holds the fire share",
+   "fix": "Reset applied under both sets of rules, with its own effect reported separately. Each council's growth taken from its own NNDR3 within-list history. Northumberland's share taken from the key information table (50%, rising to 71%)",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-59",
+   "found": "2026-11-12",
+   "product": "Business rates and income tax report, all seven NEMSA councils",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Page 1 cited the MHCLG policy statement for a 2029-30 safety net and levy decision it does not mention. The body said Baseline Funding Levels are interim, when the reset statement fixes them and only the business rates baselines behind top-ups and tariffs are interim. Roadmap 3.3 was stretched to say the government could remove the income tax gain, and several model results were stated as fact",
+   "fix": "Policy statement claim rewritten to what paragraphs 78 and 132 say. Interim baselines corrected to business rates baselines (reset statement 2.3.1). Roadmap 3.3 quoted in full and the narrowing attributed to the taper and rolling resets. Model results restated with 'would'. Paragraph references corrected",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-60",
+   "found": "2026-11-12",
+   "product": "Business rates and income tax report, all seven NEMSA councils",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Review",
+   "what": "The income tax section gave each council's share in the central case only, against a brief asking for a range per council. Page 1 gave the income tax gain without saying most of it rests on our assumption about the grants replaced, and gave no figure for the reset",
+   "fix": "2031-32 table per council with low and high cases added for each basis. Page 1 now carries the grants assumption, the reset figure, the unswapped Local Growth Fund and the no-change-to-tax-bills point",
    "status": "Closed"
   }
  ]
