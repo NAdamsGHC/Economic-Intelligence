@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-17",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -762,6 +762,126 @@
    "found_by": "Review",
    "what": "The income tax section gave each council's share in the central case only, against a brief asking for a range per council. Page 1 gave the income tax gain without saying most of it rests on our assumption about the grants replaced, and gave no figure for the reset",
    "fix": "2031-32 table per council with low and high cases added for each basis. Page 1 now carries the grants assumption, the reset figure, the unswapped Local Growth Fund and the no-change-to-tax-bills point",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-61",
+   "found": "2026-11-16",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Process",
+   "function": "Production",
+   "found_by": "Review",
+   "what": "Bullet 15 (fiscal benefit of closing the claimant gap) was recoloured red, overriding Nathaniel's decision of 16 November that all six internal or unsourced bullets go orange. The reasoning was sound (the claimant rate is now at England's) but the change was made without asking",
+   "fix": "Put to Nathaniel as a decision on 17 November 2026 with a recommendation. He chose red, and the annex records his decision and keeps the GMCA per-claimant fallback",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-62",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Bullet 21 stated a 5% real rise in Gateshead residents' median weekly pay, April 2025 to April 2026. The council-level CV puts the interval on the change at about ±11 points, so the rise cannot be told apart from a fall",
+   "fix": "Bullet switched, by Nathaniel's decision, to the North East's real change from April 2019 to April 2026 (around 7%, ±4), similar to England's. Gateshead's own figure kept in the annex as not reliable",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-63",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Bullet 20 described Gateshead's 10th to 80th percentile pay spread as narrower than England's. The gap is within the survey's error",
+   "fix": "Comparison made neutral: the bullet states England's figure without a direction, and the annex records the test",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-64",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Source or edition",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The annex said BERD 2025's release date was to be announced. The ONS release calendar has it confirmed for 27 November 2026",
+   "fix": "Date corrected from the calendar. The annex now notes the North East's lowest rank rests on a narrow margin over Northern Ireland and must be rechecked on 27 November",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-65",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Annex row 18 said the APS no longer publishes an employment rate for people with a health condition lasting over 12 months. NOMIS NM_17_5 variable 1715 publishes it",
+   "fix": "Pulled the 16+ rate (Gateshead 50.5%, England 49.7%) and rewrote the reason. The red colour still holds",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-66",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Data handling",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Bullet 8 gave a high-growth share (4.8%) computed from a count of 40 rounded to the nearest 5, which cannot support a share",
+   "fix": "Share removed from the bullet, which now says a similar share to England's. The annex keeps the share with the rounding range",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-67",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Bullet 26 said Gateshead's 16-17 NEET or not known rate was below England's. That comes entirely from a low 'not known' rate. On NEET alone Gateshead is above England (4.3% against 3.4%)",
+   "fix": "Both measures now in the bullet, with the reason in the annex",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-68",
+   "found": "2026-11-17",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Bullet 30 said 26% of emissions came from business and the public sector. The figure counts industry, commercial and public sector only. Counting agriculture as business changes the comparison with England",
+   "fix": "Sectors named in the bullet. The annex gives the figure with agriculture included",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-69",
+   "found": "2026-11-16",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Process",
+   "function": "Production",
+   "found_by": "Review",
+   "what": "Hourly pay (bullets 6, 19 and 20) used gross pay including overtime, where the brief specified excluding overtime",
+   "fix": "Switched to ASHE Tables 7.6a and 8.6a, excluding overtime. Conclusions unchanged",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-70",
+   "found": "2026-11-16",
+   "product": "EDS Our Current Position refresh, colour-coded draft",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Review",
+   "what": "Bullet 7 dropped business deaths from the agreed births, deaths and survival measure, and bullet 13 compared survey-derived rates with no interval",
+   "fix": "Death rate added to bullet 7. An approximate interval derived for bullet 13 and its wording follows the tests",
    "status": "Closed"
   }
  ]
