@@ -85,6 +85,7 @@
 @media(max-width:560px){.gc-menu{margin-left:auto;}.gc-beta{margin-left:auto;}.gc-beta+.gc-menu{margin-left:8px;}}
 </style>
 <script>document.addEventListener('click',function(e){document.querySelectorAll('details.gc-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.gc-menu[open]').forEach(function(d){d.removeAttribute('open');});});</script>
+<script>/* external links open in a new tab */document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('target')||a.hasAttribute('download'))return;if(!/^https?:$/.test(a.protocol)||a.host===location.host)return;a.target='_blank';a.rel=(a.rel?a.rel+' ':'')+'noopener noreferrer';},true);</script>
 <!-- /gc-menu -->
   </div>
 </header>
