@@ -43,6 +43,22 @@
   .hz-controls input[type=search]{min-width:200px;flex:1 1 200px;max-width:320px;}
   .hz-controls label.tog{display:inline-flex;align-items:center;gap:6px;color:#41505e;cursor:pointer;}
   .hz-meta{font-size:12px;color:#6a7784;margin-bottom:8px;}
+  .hz-flags{border:1px solid var(--gc-line);padding:6px 12px 8px;margin:0 0 10px;font-size:13px;}
+  .hz-flags legend,.hz-types summary{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--gc-blue-dark);padding:0 4px;}
+  .hz-types{border:1px solid var(--gc-line);margin:0 0 14px;font-size:13px;}
+  .hz-types summary{cursor:pointer;padding:8px 10px;}
+  .hz-types summary span{font-weight:400;text-transform:none;letter-spacing:0;color:#6a7784;}
+  .hz-types > div{padding:0 12px 8px;}
+  .hz-types-act button{font:inherit;font-size:12px;border:0;background:none;color:var(--gc-blue);text-decoration:underline;cursor:pointer;padding:0 2px;}
+  #hz-cats,#hz-flagboxes{display:flex;flex-wrap:wrap;gap:6px 18px;}
+  #hz-cats label,#hz-flagboxes label{display:inline-flex;align-items:center;gap:5px;color:#41505e;cursor:pointer;}
+  #hz-cats small,#hz-flagboxes small{color:#6a7784;}
+  .hz-tag.fl{border-color:var(--gc-blue);color:var(--gc-blue);}
+  .hz-fav{font:inherit;font-size:17px;line-height:1;border:0;background:none;cursor:pointer;color:#9aa5b0;padding:0 2px;}
+  .hz-fav[aria-pressed="true"]{color:#c9862a;}
+  .hz-fav:hover,.hz-fav:focus-visible{color:#c9862a;}
+  .hz-chip .s{color:#c9862a;margin-right:2px;}
+  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 
   /* list view */
   .hz-month{margin-bottom:22px;}
@@ -166,7 +182,6 @@
       <button type="button" data-view="list" aria-pressed="true">List</button>
       <button type="button" data-view="month" aria-pressed="false">Month</button>
     </span>
-    <select id="hz-cat" aria-label="Filter by type"><option value="">All types</option></select>
     <select id="hz-rag" aria-label="Filter by priority">
       <option value="">All priorities</option>
       <option value="r">Red only</option>
@@ -174,7 +189,17 @@
     </select>
     <input type="search" id="hz-q" placeholder="Search, for example &ldquo;APS&rdquo; or &ldquo;Budget&rdquo;" aria-label="Search the calendar">
     <label class="tog"><input type="checkbox" id="hz-routine"> Show routine items</label>
+    <label class="tog"><input type="checkbox" id="hz-favonly"> Favourites only</label>
   </div>
+  <fieldset class="hz-flags">
+    <legend>Flagged</legend>
+    <div id="hz-flagboxes"></div>
+  </fieldset>
+  <details class="hz-types" id="hz-types">
+    <summary>Types <span id="hz-types-sum"></span></summary>
+    <div class="hz-types-act"><button type="button" data-types="all">Tick all</button> <button type="button" data-types="none">Untick all</button></div>
+    <div id="hz-cats"></div>
+  </details>
   <div class="hz-meta" id="hz-meta" aria-live="polite"></div>
   <div id="hz-view"></div>
 
@@ -187,6 +212,7 @@
     <p><b>Reading the priorities.</b> <span class="rag r">Red</span> means we need to act by or on the day. <span class="rag a">Amber</span> means the date feeds one of our products or needs preparation. <span class="rag g">Green</span> means noted, with no action expected.</p>
     <p><b>Reading the status.</b> Confirmed means the publisher has fixed the day. Provisional means the publisher has given a date that may still move. Expected means only a month or a season has been published, so the item sits in that month without a day. Release times are UK time.</p>
     <p><b>Coverage.</b> ONS releases are taken from the ONS release calendar to <span id="hz-onsto"></span>, filtered to the series we use. Business survey dates come from the S&amp;P Global calendar, which runs about a month ahead. Policy dates are taken from the government page linked on each item, never from press coverage. Bill stages are taken from the UK Parliament Bills site for every bill in the session. Bills on the local, digital and visitor economy are amber. Private members' and private bills off those themes count as routine items. Every bill stage is provisional, because Parliament only firms up its business a week or two ahead.</p>
+    <p><b>Flags and favourites.</b> A bill flagged local, digital or visitor touches one of those parts of the economy. Other covers every item without a flag. Untick a flag to hide its items. An item with two flags stays in view while either is ticked. Select the star beside any item to keep it as a favourite. Favourites are kept for a year in a cookie in your own browser, set for this page only. We do not read or collect them, and clearing your cookies clears them.</p>
     <p><a href="horizon.ics" download>Add the dated items to your own calendar (.ics)</a></p>
   </div>
 </main>
@@ -216,6 +242,37 @@
   function longDate(s) { var d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear(); }
   function shortDate(s) { var d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3); }
   function dated(x) { return !x.date_label; }
+
+  // Theme flags are written at the start of an item's "why", e.g. "Flagged Local, Digital. ..."
+  // (sweep_bills.py). Lift them out so they show as tag boxes, not running text.
+  var FLAG_RE = /^Flagged ((?:Local|Digital|Visitor)(?:, (?:Local|Digital|Visitor))*)\.\s*/;
+  ITEMS.forEach(function (x) {
+    var m = FLAG_RE.exec(x.why);
+    x.flags = m ? m[1].split(", ") : [];
+    x.whyText = m ? x.why.slice(m[0].length) : x.why;
+  });
+
+  // Favourites live in a first-party cookie on this browser only, one year, refreshed on each change.
+  // Scoped to this page's folder so it is not sent with requests for the rest of the site.
+  // Ids are [a-z0-9-] only, so "." separates them with no escaping. About 4,000 bytes holds roughly 150 favourites.
+  var FAV_COOKIE = "hz_favs", FAV_PATH = location.pathname.replace(/[^\/]*$/, "") || "/";
+  function readFavs() {
+    var m = document.cookie.match(new RegExp("(?:^|; )" + FAV_COOKIE + "=([^;]*)"));
+    var s = {};
+    if (m) m[1].split(".").forEach(function (id) { if (/^[a-z0-9-]+$/.test(id)) s[id] = true; });
+    return s;
+  }
+  var FAVS = readFavs(), FAV_FULL = "";
+  function writeFavs() {
+    // Drop ids no longer in the calendar so the cookie stays small.
+    var known = {}; ITEMS.forEach(function (x) { known[x.id] = true; });
+    var ids = Object.keys(FAVS).filter(function (id) { return known[id]; });
+    document.cookie = FAV_COOKIE + "=" + ids.join(".") + "; max-age=31536000; path=" + FAV_PATH + "; SameSite=Lax" +
+      (location.protocol === "https:" ? "; Secure" : "");
+    // Browsers refuse a cookie over about 4KB without saying so. Read it back and warn if it did not stick.
+    var saved = readFavs(), nSaved = ids.filter(function (id) { return saved[id]; }).length;
+    FAV_FULL = !ids.length || nSaved === ids.length ? "" : (!navigator.cookieEnabled || !nSaved ? "blocked" : "full");
+  }
 
   var TODAY = iso(new Date());
   var in30 = iso(addDays(new Date(), 30)), in60 = iso(addDays(new Date(), 60)), ago14 = iso(addDays(new Date(), -14));
@@ -254,13 +311,35 @@
   document.getElementById("hz-act").innerHTML = h;
 
   // ---- controls ----
-  var catSel = document.getElementById("hz-cat");
-  Object.keys(CATS).forEach(function (k) {
-    if (ITEMS.some(function (x) { return x.category === k; })) {
-      var o = document.createElement("option"); o.value = k; o.textContent = CATS[k]; catSel.appendChild(o);
-    }
-  });
-  var state = {view: "list", cat: "", rag: "", q: "", routine: false, month: TODAY.slice(0, 7)};
+  var catBox = document.getElementById("hz-cats");
+  var CAT_KEYS = Object.keys(CATS).filter(function (k) { return upcoming.some(function (x) { return x.category === k; }); });
+  catBox.innerHTML = CAT_KEYS.map(function (k) {
+    return '<label><input type="checkbox" value="' + esc(k) + '" checked> ' + esc(CATS[k]) + ' <small data-n="' + esc(k) + '"></small></label>';
+  }).join("");
+  // Counts follow the routine toggle, so a type's number matches the rows it shows.
+  function catCounts() {
+    catBox.querySelectorAll("[data-n]").forEach(function (s) {
+      s.textContent = "(" + upcoming.filter(function (x) { return x.category === s.dataset.n && (state.routine || !x.routine); }).length + ")";
+    });
+    flagBox.querySelectorAll("[data-fn]").forEach(function (s) {
+      s.textContent = "(" + upcoming.filter(function (x) { return flagKeys(x).indexOf(s.dataset.fn) >= 0 && (state.routine || !x.routine); }).length + ")";
+    });
+    var on = CAT_KEYS.filter(function (k) { return state.cats[k]; }).length;
+    document.getElementById("hz-types-sum").textContent = on === CAT_KEYS.length ? "(all " + on + " ticked)" : "(" + on + " of " + CAT_KEYS.length + " ticked)";
+  }
+
+  // Flag tick boxes: an item shows if any of its flags is ticked. "Other" is every item with no flag.
+  var FLAG_KEYS = ["Local", "Digital", "Visitor", "Other"];
+  function flagKeys(x) { return x.flags.length ? x.flags : ["Other"]; }
+  var flagBox = document.getElementById("hz-flagboxes");
+  flagBox.innerHTML = FLAG_KEYS.map(function (k) {
+    return '<label><input type="checkbox" value="' + k + '" checked> ' + k + ' <small data-fn="' + k + '"></small></label>';
+  }).join("");
+  function allFlags() { var s = {}; FLAG_KEYS.forEach(function (k) { s[k] = true; }); return s; }
+  function syncFlagBoxes() { flagBox.querySelectorAll("input").forEach(function (i) { i.checked = !!state.flags[i.value]; }); }
+  function allCats() { var s = {}; CAT_KEYS.forEach(function (k) { s[k] = true; }); return s; }
+  function syncCatBoxes() { catBox.querySelectorAll("input").forEach(function (i) { i.checked = !!state.cats[i.value]; }); }
+  var state = {view: "list", cats: allCats(), rag: "", q: "", routine: false, flags: allFlags(), favOnly: false, month: TODAY.slice(0, 7)};
   try { var sv = JSON.parse(localStorage.getItem("hz-state") || "{}"); if (sv.view) state.view = sv.view; if (sv.routine) state.routine = true; } catch (e) {}
   // Deep link from the landing-page widget, e.g. ?view=month&month=2026-10
   try {
@@ -273,15 +352,24 @@
   function save() { try { localStorage.setItem("hz-state", JSON.stringify({view: state.view, routine: state.routine})); } catch (e) {} }
 
   function match(x) {
-    if (state.cat && x.category !== state.cat) return false;
+    if (!state.cats[x.category]) return false;
+    if (!flagKeys(x).some(function (f) { return state.flags[f]; })) return false;
+    if (state.favOnly && !FAVS[x.id]) return false;
     if (state.rag === "r" && x.rag !== "r") return false;
     if (state.rag === "ra" && x.rag === "g") return false;
     if (!state.routine && x.routine) return false;
     if (state.q) {
-      var hay = (x.title + " " + x.why + " " + (x.action || "") + " " + x.source.name + " " + (CATS[x.category] || "")).toLowerCase();
+      var hay = (x.title + " " + x.why + " " + x.flags.join(" ") + " " + (x.action || "") + " " + x.source.name + " " + (CATS[x.category] || "")).toLowerCase();
       if (hay.indexOf(state.q) < 0) return false;
     }
     return true;
+  }
+
+  function favBtn(x) {
+    var on = !!FAVS[x.id];
+    return '<button type="button" class="hz-fav" data-fav="' + esc(x.id) + '" aria-pressed="' + on + '" aria-label="Favourite, ' +
+      esc(x.title) + '" title="' + (on ? "Remove from favourites" : "Add to favourites") + '">' +
+      (on ? "&#9733;" : "&#9734;") + "</button>";
   }
 
   function rowHTML(x, soon) {
@@ -292,11 +380,12 @@
       ? ' &middot; first logged in <a href="' + (/^policy-update/.test(x.first_logged) ? "../policy/" : "../briefs/") + esc(x.first_logged) + '.html">' + esc(x.first_logged.replace(/-/g, " ")) + "</a>" : "";
     return '<div class="hz-row ' + x.rag + (soon ? " soon" : "") + '" id="' + esc(x.id) + '">' +
       '<div class="hz-date">' + when + "</div>" +
-      '<div class="hz-body"><div class="top"><span class="rag ' + x.rag + '">' + RAGW[x.rag] + "</span>" +
+      '<div class="hz-body"><div class="top">' + favBtn(x) + '<span class="rag ' + x.rag + '">' + RAGW[x.rag] + "</span>" +
       '<a class="title" href="' + esc(x.source.url) + '">' + esc(x.title) + "</a>" +
       '<span class="hz-tag">' + esc(CATS[x.category] || x.category) + "</span>" +
-      '<span class="hz-tag st-' + x.status + '">' + (STW[x.status] || x.status) + "</span></div>" +
-      "<p>" + esc(x.why) + "</p>" +
+      '<span class="hz-tag st-' + x.status + '">' + (STW[x.status] || x.status) + "</span>" +
+      x.flags.map(function (f) { return '<span class="hz-tag fl">Flagged ' + esc(f.toLowerCase()) + "</span>"; }).join("") + "</div>" +
+      "<p>" + esc(x.whyText) + "</p>" +
       (x.action ? '<p class="act">' + esc(x.action) + "</p>" : "") +
       '<p class="src">Source: <a href="' + esc(x.source.url) + '">' + esc(x.source.name) + "</a>, checked " +
       longDate(x.verified).replace(/^\w+ /, "") + fl + "</p></div></div>";
@@ -341,6 +430,7 @@
         h += '<td class="' + (out ? "out" : "") + (k === TODAY ? " today" : "") + '"><div class="dn">' + d.getDate() + "</div>";
         if (!out) (byDay[k] || []).forEach(function (x) {
           h += '<a class="hz-chip ' + x.rag + '" href="#' + esc(x.id) + '" data-jump="' + esc(x.id) + '" title="' + esc(x.title + (x.time ? " (" + x.time + ")" : "")) + '">' +
+               (FAVS[x.id] ? '<span class="s" aria-hidden="true">&#9733;</span><span class="vh">Favourite. </span>' : "") +
                '<span class="w">' + RAGW[x.rag] + '</span><span class="t">' + esc(x.title) + "</span></a>";
         });
         h += "</td>";
@@ -359,8 +449,14 @@
   function render() {
     var list = upcoming.filter(match);
     var hidden = upcoming.filter(function (x) { return x.routine && !state.routine; }).length;
+    catCounts();
+    var nFav = upcoming.filter(function (x) { return FAVS[x.id]; }).length;
     document.getElementById("hz-meta").textContent = list.length + " of " + upcoming.length + " upcoming items shown" +
-      (hidden && !state.routine ? " (" + hidden + " routine items hidden)" : "");
+      (hidden && !state.routine ? " (" + hidden + " routine items hidden)" : "") +
+      (nFav ? ". " + nFav + (nFav === 1 ? " favourite" : " favourites") + " saved in this browser" : "") +
+      (state.favOnly && !nFav ? ". No favourites yet. Select the star beside an item to add it" : "") +
+      (FAV_FULL === "full" ? ". Your browser could not save the latest favourites, because the cookie is full. Remove some to save more" : "") +
+      (FAV_FULL === "blocked" ? ". Your browser is not saving cookies, so favourites last only until you leave the page" : "");
     document.querySelectorAll(".hz-seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.view === state.view ? "true" : "false"); });
     document.getElementById("hz-view").innerHTML = state.view === "month" ? monthView(list) : listView(list);
   }
@@ -368,7 +464,25 @@
   document.querySelectorAll(".hz-seg button").forEach(function (b) {
     b.addEventListener("click", function () { state.view = b.dataset.view; save(); render(); });
   });
-  catSel.addEventListener("change", function () { state.cat = catSel.value; render(); });
+  catBox.addEventListener("change", function (e) { if (e.target.type === "checkbox") { state.cats[e.target.value] = e.target.checked; render(); } });
+  document.querySelector(".hz-types-act").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-types]"); if (!b) return;
+    state.cats = b.dataset.types === "all" ? allCats() : {}; syncCatBoxes(); render();
+  });
+  flagBox.addEventListener("change", function (e) { if (e.target.type === "checkbox") { state.flags[e.target.value] = e.target.checked; render(); } });
+  document.getElementById("hz-favonly").addEventListener("change", function (e) { state.favOnly = e.target.checked; render(); });
+  // Star buttons sit in the list view and in "Recently passed".
+  document.querySelector("main").addEventListener("click", function (e) {
+    var f = e.target.closest("[data-fav]"); if (!f) return;
+    e.preventDefault(); e.stopPropagation();
+    var id = f.dataset.fav;
+    if (FAVS[id]) delete FAVS[id]; else FAVS[id] = true;
+    writeFavs(); render(); renderPassed();
+    // The row may have gone (favourites only). Then focus the item count, which says what changed.
+    var again = document.querySelector('[data-fav="' + id + '"]');
+    var meta = document.getElementById("hz-meta");
+    if (again) again.focus(); else { meta.setAttribute("tabindex", "-1"); meta.focus(); }
+  }, true);
   document.getElementById("hz-rag").addEventListener("change", function (e) { state.rag = e.target.value; render(); });
   document.getElementById("hz-q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); render(); });
   document.getElementById("hz-routine").addEventListener("change", function (e) { state.routine = e.target.checked; save(); render(); });
@@ -382,8 +496,9 @@
     if (j) {
       // Jumping from the grid switches to the list so the full entry is visible.
       e.preventDefault(); var id = j.dataset.jump;
-      state.view = "list"; state.cat = ""; state.rag = ""; state.q = "";
-      catSel.value = ""; document.getElementById("hz-rag").value = ""; document.getElementById("hz-q").value = "";
+      state.view = "list"; state.cats = allCats(); state.rag = ""; state.q = ""; state.flags = allFlags(); state.favOnly = false;
+      syncCatBoxes(); syncFlagBoxes(); document.getElementById("hz-rag").value = ""; document.getElementById("hz-q").value = "";
+      document.getElementById("hz-favonly").checked = false;
       var tgt = ITEMS.filter(function (x) { return x.id === id; })[0];
       if (tgt && tgt.routine) { state.routine = true; document.getElementById("hz-routine").checked = true; }
       render(); var el = document.getElementById(id); if (el) el.scrollIntoView({behavior: "smooth", block: "center"});
@@ -391,13 +506,14 @@
   });
 
   // ---- recently passed ----
-  var pw = document.getElementById("hz-passed-wrap");
-  if (!passed.length) pw.style.display = "none";
-  else {
+  function renderPassed() {
+    var pw = document.getElementById("hz-passed-wrap");
+    if (!passed.length) { pw.style.display = "none"; return; }
     document.getElementById("hz-passed-sum").textContent = "Recently passed, last 14 days (" + passed.length + ")";
     document.getElementById("hz-passed").innerHTML = passed.map(function (x) { return rowHTML(x, false); }).join("");
   }
 
+  renderPassed();
   render();
 })();
 </script>
