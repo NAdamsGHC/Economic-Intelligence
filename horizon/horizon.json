@@ -1,6 +1,6 @@
 {
  "title": "Horizon Calendar",
- "updated": "2026-11-16",
+ "updated": "2026-11-19",
  "window": {
   "from": "2026-09-28",
   "ons_to": "2027-05-21"
@@ -948,13 +948,14 @@
    "title": "Business demography 2025",
    "category": "data",
    "rag": "a",
-   "status": "provisional",
-   "why": "Local business births, deaths and survival.",
+   "status": "published",
+   "why": "Published. Gateshead's business births rose to 750 in 2025 and deaths fell to 610, and five-year survival for businesses born in 2020 is 41.3% against 37.5% for England.",
    "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/businessdemography2025"
+    "name": "ONS, Business Demography, UK reference tables, 2025 edition, 19 November 2026",
+    "url": "https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/datasets/businessdemographyreferencetable"
    },
-   "verified": "2026-11-09"
+   "verified": "2026-11-19",
+   "time": "09:30"
   },
   {
    "id": "school-exclusion-cfe",
@@ -1275,7 +1276,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/regionalandsubregionallabourproductivityuk2024"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-19",
    "time": "09:30",
    "action": "Re-run the productivity analysis on the day"
   },
@@ -1654,19 +1655,18 @@
   },
   {
    "id": "gva-2024-complete",
-   "date": "2026-11-30",
-   "date_label": "Overdue. ONS expected it within four to six weeks of 23 September 2026",
+   "date": "2026-11-13",
    "title": "Complete regional GVA dataset, with suppressed areas restored",
    "category": "data",
    "rag": "a",
-   "status": "expected",
-   "why": "Restores Wales and parts of South West England and Scotland, including seven of Gateshead's twenty statistical neighbours.",
+   "status": "published",
+   "why": "Published. ONS notice of 13 November 2026 says all datasets from the 23 September release are now complete for all areas, restoring seven of Gateshead's twenty statistical neighbours.",
    "action": "Rebuild the neighbour comparisons in the GVA 2024 dashboard",
    "source": {
-    "name": "ONS, Regional economic activity by GDP, UK: 1998 to 2024, 23 September 2026 (complete dataset within four to six weeks)",
+    "name": "ONS, Regional economic activity by gross domestic product, UK: 1998 to 2024, notice of 13 November 2026",
     "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2024"
    },
-   "verified": "2026-11-09",
+   "verified": "2026-11-19",
    "first_logged": "whats-new-2026-09-28"
   },
   {
@@ -2426,7 +2426,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketdecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-19",
    "time": "07:00"
   },
   {
@@ -2456,7 +2456,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationuknovember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-19",
    "time": "07:00",
    "routine": true
   },
@@ -2550,7 +2550,7 @@
     "name": "Bank of England, Monetary Policy Summary and minutes, November 2026 (next due 17 December 2026)",
     "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
    },
-   "verified": "2026-11-09"
+   "verified": "2026-11-19"
   },
   {
    "id": "dismissal-reengagement-code-consultation",
@@ -5826,6 +5826,22 @@
    },
    "verified": "2026-11-09",
    "first_logged": "whats-new-2026-09-28"
+  },
+  {
+   "id": "jobs-guarantee-gb-rollout",
+   "date": "2026-11-30",
+   "date_label": "From the end of November",
+   "title": "Jobs Guarantee rolls out across Great Britain",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "A fully funded six-month job for 18-24 year olds on Universal Credit and looking for work after 18 months out of work, falling to 12 months from April 2027.",
+   "source": {
+    "name": "DWP, 90,000 young people furthest from work to be given guaranteed job, no matter where they live, 14 November 2026",
+    "url": "https://www.gov.uk/government/news/90000-young-people-furthest-from-work-to-be-given-guaranteed-job-no-matter-where-they-live"
+   },
+   "verified": "2026-11-19",
+   "first_logged": "economic-update-2026-11"
   }
  ],
  "pending_verification": [
@@ -6003,6 +6019,14 @@
    "removed": [
     "1 pending entry promoted"
    ]
+  },
+  {
+   "date": "2026-11-19",
+   "run": "economic-update-2026-11",
+   "note": "Refresh from the November 2026 Monthly Economic Update. All but one of the edition's forward dates were already held. Re-read at source on 19 November: subregional productivity 2024 (24 November, release page, postponed from 5 November, holds), the December labour market release and the PAYE local authority tables (15 December, bulletin and workbook), consumer price inflation (16 December, October bulletin) and the Bank Rate decision (17 December, Bank of England page). Business Demography 2025 and the complete regional GVA dataset (ONS notice of 13 November) marked published, found by the pre-publish fact-check. One item added, the Jobs Guarantee rollout across Great Britain from the end of November (DWP, 14 November 2026). The 19 January labour market release keeps its earlier check.",
+   "added": 1,
+   "changed": 6,
+   "removed": 0
   }
  ],
  "archive": [

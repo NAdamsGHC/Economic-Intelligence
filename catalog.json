@@ -1,6 +1,6 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "9 November 2026",
+ "updated": "19 November 2026",
  "schedule": {
   "updated": "9 November 2026",
   "months": [
@@ -1020,6 +1020,35 @@
    ]
   },
   {
+   "id": "economic-update-2026-11",
+   "title": "Monthly Economic Update, November 2026",
+   "path": "briefs/economic-update-2026-11.html",
+   "topic": "Employment and labour market",
+   "description": "Data to October 2026, built on the labour market release of 17 November and Business Demography 2025. Gateshead's claimant count for October 2026 is 5,035, which is 4.0% of residents aged 16-64, up 205 on the year in the first estimate. Every first estimate since July has been revised down by between 110 and 145, and on the latest revised month, September 2026, the count is 4,940 against 4,935 a year earlier, which is flat, against rises of 1.4% in the North East and 1.0% in the United Kingdom. Even a typical revision would leave October up approximately 60 to 95 on the year, so the flat reading may not last. The record July to August step reported in September has gone on revision. On revised figures 18-24 is the only one of the three broad age bands rising, up 40 to 1,010. Young people also lead the rise in the region and the country, where older claimants are rising too. The Jobs Guarantee rolls out across Great Britain from the end of November. Business births rose to 750 in 2025 and deaths fell to 610, and five-year survival for businesses born in 2020 is 41.3% against 37.5% for England. No new local payroll figures until 15 December. Bank Rate rose to 4%, CPI inflation is 3.6% and UK vacancies are at their lowest outside the pandemic since 2014. With the key figures infographic and a what-to-watch list.",
+   "sources": "ONS claimant count by sex and age via NOMIS (NM_162_1), not seasonally adjusted, October 2026; ONS real time information statistics, seasonally adjusted, released 17 November 2026; ONS Business Demography reference tables, 2025 edition, released 19 November 2026; ONS labour market overview, November 2026; ONS consumer price inflation, October 2026; Bank of England Monetary Policy Summary, November 2026; DWP Jobs Guarantee announcement, 14 November 2026. All figures as published, pulled 19 November 2026. Revisions, like-for-like comparisons, shares and pay gaps are author's calculations from the published series.",
+   "series": "economic-update",
+   "date": "2026-11-19",
+   "keywords": [
+    "economic update",
+    "monthly",
+    "labour market",
+    "claimant count",
+    "revisions",
+    "youth",
+    "18-24",
+    "business demography",
+    "business births",
+    "business deaths",
+    "survival rates",
+    "payrolled employees",
+    "paye rti",
+    "inflation",
+    "bank rate",
+    "vacancies",
+    "key figures"
+   ]
+  },
+  {
    "id": "economic-update-2026-10",
    "title": "Quarterly Economic Update, October 2026",
    "path": "briefs/economic-update-2026-10.html",
@@ -1640,6 +1669,5 @@
    ],
    "featured": false
   }
- ],
- "updated_at": "2026-11-16T12:00:00+00:00"
+ ]
 }

@@ -1027,6 +1027,66 @@
    "what": "Said County Durham alone puts the NEMSA turnover shares well above Gateshead's; without County Durham the NEMSA share is still about 2.4%, twice Gateshead's 1.2%",
    "fix": "Corrected on the face of the 19 November version, with the open correction note",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-83",
+   "found": "2026-11-19",
+   "product": "Monthly Economic Update, November 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Said young people were the only age band with rising claims and that the same shape held nationally; true only of the three broad bands, with 45-49 up 75 in Gateshead and the 50 and over band rising in the North East and UK",
+   "fix": "Qualified to the three broad bands, with the regional and UK 50 and over rises stated",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-84",
+   "found": "2026-11-19",
+   "product": "Monthly Economic Update, November 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Read the August to October first estimates as drifting down without allowing for seasonality, and did not test that a typical revision would still leave October up on the year",
+   "fix": "Replaced with the revision range (October still approximately 60 to 95 up) and the upward path on revised months",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-85",
+   "found": "2026-11-19",
+   "product": "Monthly Economic Update, November 2026",
+   "stage": "Caught by checks",
+   "type": "Source or edition",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Listed the complete regional GVA dataset as still expected when the ONS had published it on 13 November 2026",
+   "fix": "Row removed; Horizon Calendar item marked published",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-86",
+   "found": "2026-11-19",
+   "product": "Monthly Economic Update, November 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Said every figure was pulled fresh on 19 November, but the earlier first estimates cannot be re-pulled",
+   "fix": "Assurance sentence reworded to separate current figures from first estimates as first published",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-87",
+   "found": "2026-11-19",
+   "product": "Monthly Economic Update, November 2026",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Left out the Jobs Guarantee rollout across Great Britain from the end of November, announced in the window, which reaches the claimant group the item covers",
+   "fix": "Added with the DWP source; added to the Horizon Calendar",
+   "status": "Closed"
   }
  ]
 }
