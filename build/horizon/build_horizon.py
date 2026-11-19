@@ -44,6 +44,8 @@ def validate(doc):
             errors.append(f"{where}: date or verified is not YYYY-MM-DD")
         if x.get("rag") not in RAGS:
             errors.append(f"{where}: rag must be r, a or g")
+        if x.get("rag") == "r" and not str(x.get("action", "")).strip():
+            errors.append(f"{where}: a red item must carry a suggested action")
         if x.get("status") not in STATUSES:
             errors.append(f"{where}: status must be one of {sorted(STATUSES)}")
         if x.get("category") not in cats:
@@ -83,7 +85,7 @@ def build_ics(doc):
             continue  # routine bill stages stay off the .ics, or it would carry a hundred private members' bill dates  # only items with a fixed day go into other people's calendars
         d = x["date"].replace("-", "")
         nxt = date.fromordinal(date.fromisoformat(x["date"]).toordinal() + 1).isoformat().replace("-", "")
-        desc = x["why"] + (" Action: " + x["action"] if x.get("action") else "") + \
+        desc = x["why"] + (" Suggested action: " + x["action"] if x.get("action") else "") + \
             (" Time: " + x["time"] + " UK." if x.get("time") else "") + \
             " Status: " + x["status"] + ". Source: " + x["source"]["name"] + " " + x["source"]["url"]
         lines += ["BEGIN:VEVENT", f"UID:{x['id']}@gateshead-economic-intelligence", f"DTSTAMP:{stamp}",

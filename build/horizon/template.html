@@ -28,12 +28,6 @@
   .rag.a{background:#fdf3e2;border-color:#c9862a;color:#7a5313;}
   .rag.g{background:#eaf3ea;border-color:#266427;color:#1d4d1e;}
 
-  .hz-act{border:1px solid var(--gc-line);border-top:4px solid #c62828;background:var(--gc-panel);padding:14px 18px 8px;margin:18px 0 4px;}
-  .hz-act h3{font-size:14px;color:var(--gc-blue-dark);margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px;}
-  .hz-act ol{margin:0 0 8px 18px;font-size:13.5px;}
-  .hz-act li{margin-bottom:7px;}
-  .hz-act .by{font-weight:700;color:#8c1c1c;}
-  .hz-act p.none{font-size:13.5px;color:#41505e;margin-bottom:8px;}
 
   .hz-controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:4px 0 14px;font-size:13px;}
   .hz-seg{display:inline-flex;border:1px solid var(--gc-blue);}
@@ -77,7 +71,8 @@
   .hz-tag.st-provisional,.hz-tag.st-expected{border-style:dashed;}
   .hz-tag.st-published{background:#eef2f6;}
   .hz-body p{font-size:13.5px;margin:3px 0 0;color:var(--gc-text);}
-  .hz-body p.act{color:#8c1c1c;font-weight:700;}
+  .hz-body p.act{color:var(--gc-ink);}
+  .hz-row.r .hz-body p.act{color:#8c1c1c;font-weight:700;}
   .hz-body p.src{font-size:12px;color:#6a7784;}
   .hz-body p.src a{color:#6a7784;}
 
@@ -131,8 +126,10 @@
     <a class="gc-home" href="../index.html">&lsaquo; All products</a>
   <!-- gc-menu --><span class="gc-beta" title="This site is in beta. Products and layout may change, and errors are logged in the Performance Log">Beta</span><details class="gc-menu">
 <summary aria-label="Open the site menu"><span class="gc-menu-bars" aria-hidden="true"></span>Menu</summary>
-<nav class="gc-menu-panel" aria-label="Transparency">
-<p class="gc-menu-head">Transparency</p>
+<nav class="gc-menu-panel" aria-label="Site menu">
+<p class="gc-menu-head">Our Work</p>
+<a href="../transparency/production-calendar.html">Production Calendar</a>
+<p class="gc-menu-head gc-menu-sep">Transparency</p>
 <a href="../transparency/index.html">Transparency Statement</a>
 <a href="../transparency/runbook.html">Regular Reports Runbook</a>
 <a href="../transparency/performance-log.html">Performance Log</a>
@@ -175,7 +172,6 @@
 
   <div class="hz-stats" id="hz-stats"></div>
 
-  <div class="hz-act" id="hz-act"></div>
 
   <h2>Calendar</h2>
   <div class="hz-controls">
@@ -210,7 +206,7 @@
   </details>
 
   <div class="hz-note">
-    <p><b>Reading the priorities.</b> <span class="rag r">Red</span> means we need to act by or on the day. <span class="rag a">Amber</span> means the date feeds one of our products or needs preparation. <span class="rag g">Green</span> means noted, with no action expected.</p>
+    <p><b>Reading the priorities.</b> <span class="rag r">Red</span> means something needs doing by or on the day, and every red item carries a suggested action. <span class="rag a">Amber</span> means the date feeds one of our products or needs preparation. <span class="rag g">Green</span> means noted, with no action expected.</p>
     <p><b>Reading the status.</b> Confirmed means the publisher has fixed the day. Provisional means the publisher has given a date that may still move. Expected means only a month or a season has been published, so the item sits in that month without a day. Release times are UK time.</p>
     <p><b>Coverage.</b> ONS releases are taken from the ONS release calendar to <span id="hz-onsto"></span>, filtered to the series we use. Business survey dates come from the S&amp;P Global calendar, which runs about a month ahead. Policy dates are taken from the government page linked on each item, never from press coverage. Bill stages are taken from the UK Parliament Bills site for every bill in the session. Bills on the local, digital and visitor economy are amber. Private members' and private bills off those themes count as routine items. Every bill stage is provisional, because Parliament only firms up its business a week or two ahead.</p>
     <p><b>Flags and favourites.</b> A bill flagged local, digital or visitor touches one of those parts of the economy. Other covers every item without a flag. Untick a flag to hide its items. An item with two flags stays in view while either is ticked. Select the star beside any item to keep it as a favourite. Favourites are kept for a year in a cookie in your own browser, set for this page only. We do not read or collect them, and clearing your cookies clears them.</p>
@@ -296,21 +292,6 @@
     '<div><b>' + closes.length + '</b><span>consultations, funding windows and deadlines closing in 60 days</span></div>' +
     '<div><b>' + upcoming.length + '</b><span>items tracked in total</span></div>';
 
-  // ---- act-on box: red items in the next 60 days, plus undated reds ----
-  var act = upcoming.filter(function (x) { return x.rag === "r" && (x.date <= in60 || !dated(x)); });
-  var h = '<h3>Act on These</h3>';
-  if (!act.length) h += '<p class="none">Nothing red in the next 60 days.</p>';
-  else {
-    h += "<ol>";
-    act.forEach(function (x) {
-      var when = dated(x) ? longDate(x.date) + (x.time ? ", " + x.time : "") : x.date_label;
-      h += '<li><span class="by">' + esc(when) + '</span>. <a href="' + esc(x.source.url) + '">' + esc(x.title) + "</a>" +
-           (x.action ? ". " + esc(x.action) : "") + "</li>";
-    });
-    h += "</ol>";
-  }
-  document.getElementById("hz-act").innerHTML = h;
-
   // ---- controls ----
   var catBox = document.getElementById("hz-cats");
   var CAT_KEYS = Object.keys(CATS).filter(function (k) { return upcoming.some(function (x) { return x.category === k; }); });
@@ -387,7 +368,7 @@
       '<span class="hz-tag st-' + x.status + '">' + (STW[x.status] || x.status) + "</span>" +
       x.flags.map(function (f) { return '<span class="hz-tag fl">Flagged ' + esc(f.toLowerCase()) + "</span>"; }).join("") + "</div>" +
       "<p>" + esc(x.whyText) + "</p>" +
-      (x.action ? '<p class="act">' + esc(x.action) + "</p>" : "") +
+      (x.action ? '<p class="act"><b>Suggested action.</b> ' + esc(x.action) + "</p>" : "") +
       '<p class="src">Source: <a href="' + esc(x.source.url) + '">' + esc(x.source.name) + "</a>, checked " +
       longDate(x.verified).replace(/^\w+ /, "") + fl + "</p></div></div>";
   }
