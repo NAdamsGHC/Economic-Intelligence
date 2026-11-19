@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-19",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -990,6 +990,42 @@
    "found_by": "Verification",
    "what": "The settlement's year-by-year confirmation, the social clubs' place in the pubs relief, and the March 2029 end date of all three relief measures were left out",
    "fix": "All added",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-80",
+   "found": "2026-11-19",
+   "product": "High-growth businesses reply, Business Demography 2025 refresh",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Said turnover-based high-growth counts only exist for 2024; ONS published district turnover-basis counts for earlier years (ad hocs 009663 and 14068)",
+   "fix": "Reworded to say the latest turnover-based counts are for 2024",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-81",
+   "found": "2026-11-19",
+   "product": "High-growth businesses reply, Business Demography 2025 refresh",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Stated Gateshead's 2025 high-growth rate as sixth of the seven NEMSA councils without saying the rank rests on counts control rounded to base 5, which cannot separate it from North Tyneside",
+   "fix": "Rank qualified; only South Tyneside is clearly lower",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-82",
+   "found": "2026-11-19",
+   "product": "High-growth businesses reply, 12 November 2026",
+   "stage": "Published",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Said County Durham alone puts the NEMSA turnover shares well above Gateshead's; without County Durham the NEMSA share is still about 2.4%, twice Gateshead's 1.2%",
+   "fix": "Corrected on the face of the 19 November version, with the open correction note",
    "status": "Closed"
   }
  ]
