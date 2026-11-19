@@ -883,6 +883,114 @@
    "what": "Bullet 7 dropped business deaths from the agreed births, deaths and survival measure, and bullet 13 compared survey-derived rates with no interval",
    "fix": "Death rate added to bullet 7. An approximate interval derived for bullet 13 and its wording follows the tests",
    "status": "Closed"
+  },
+  {
+   "id": "E-2026-71",
+   "found": "2026-11-17",
+   "product": "NEMSA business rates and income tax report, second draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "A page 1 bullet tied the year 70% starts and the next reset to the 2027 Spending Review, which no source does",
+   "fix": "Rewritten to say funding from 2029-30 is due at the Spending Review and no date is set for either",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-72",
+   "found": "2026-11-17",
+   "product": "NEMSA business rates and income tax report, second draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The income tax floor and mechanism were listed under what we know, though the Roadmap only proposes them",
+   "fix": "Restated as the Roadmap's proposal, with the floor quoted as 'could be around 95%'",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-73",
+   "found": "2026-11-17",
+   "product": "NEMSA business rates and income tax report, second draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Two parts of Roadmap paragraph 3.3 were fused into one quotation, and sharing with councils was put down to NEMSA rather than the Mayor",
+   "fix": "Quote corrected to the taper and rolling resets. Sharing now says the Mayor decides on NEMSA's behalf",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-74",
+   "found": "2026-11-17",
+   "product": "NEMSA business rates and income tax report, second draft",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Business rates growth was described as rates collected, when the measure is gross rates payable with tax rate rises taken out",
+   "fix": "Described as the business rates base before tax rate rises, and as gross rates payable in the method",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-75",
+   "found": "2026-11-17",
+   "product": "NEMSA business rates and income tax report, second draft",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The cut from 12 tables to 3 dropped the survey range on the per-penny estimate, the survey-error caveat on relative income growth, and method caveats (real growth for the mayoral 20%, interim baselines, the 97% safety net sensitivity)",
+   "fix": "Range, caveat and the three method points restored in plain words",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-76",
+   "found": "2026-11-17",
+   "product": "Rates and income tax devolution one-pager, and the 15-year illustration given in chat",
+   "stage": "Draft",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The income tax 'resets every five years' figure (approximately £0.5m a year for Gateshead) rested on our own snap-back rule, not the Roadmap's rolling reset, and was given in chat and in the one-pager draft without being labelled as an assumption",
+   "fix": "The one-pager leads with the no-reset figure and labels the snap-back as one possibility the Roadmap leaves open. The chat answer was corrected",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-77",
+   "found": "2026-11-17",
+   "product": "Rates and income tax devolution one-pager, and the 15-year illustration given in chat",
+   "stage": "Caught by checks",
+   "type": "Process",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Corrections from the morning's gate were lost when summarising: central-case qualifiers, 2029-30 as an assumption, the need basis, the Mayor deciding on NEMSA's behalf, wages and salaries, and a percentage comparison across price bases",
+   "fix": "All restored, and the comparison is restated in today's prices, per penny",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-78",
+   "found": "2026-11-17",
+   "product": "Rates and income tax devolution one-pager, timing rules and relief additions",
+   "stage": "Draft",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The timing bullet called the Roadmap's proposals 'rules' holding council funding still, under a heading that was untrue for NEMSA's 2028-29 business rates gain, and said approximately 320 properties 'gain more relief' when the count is an upper limit",
+   "fix": "Heading now council-only, the Roadmap described as proposals with its own wording, and the count given as 'up to approximately 320'",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-79",
+   "found": "2026-11-17",
+   "product": "Rates and income tax devolution one-pager, timing rules and relief additions",
+   "stage": "Draft",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The settlement's year-by-year confirmation, the social clubs' place in the pubs relief, and the March 2029 end date of all three relief measures were left out",
+   "fix": "All added",
+   "status": "Closed"
   }
  ]
 }
