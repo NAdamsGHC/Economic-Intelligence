@@ -1,6 +1,6 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "19 November 2026",
+ "updated": "23 November 2026",
  "schedule": {
   "updated": "9 November 2026",
   "months": [
@@ -699,6 +699,43 @@
     "social value",
     "departmental log",
     "rag"
+   ]
+  },
+  {
+   "id": "whats-new-2026-11-23",
+   "title": "What's New, 23 November 2026",
+   "path": "briefs/whats-new-2026-11-23.html",
+   "topic": "What's New",
+   "description": "The weekly edition covering 16 to 23 November, eight days. The Milburn Review proposes a Youth Opportunity Service in every place by 2029, with strategic authorities responsible for the participation system for 16 to 24 year olds, and the government backs its core, with locally led youth services from next year, a Youth Opportunities Unit reporting to the Prime Minister and a White Paper in the new year. High street rental auction funding now opens the week of 7 December. A catch-up item on the Industrial Strategy Advisory Council annual report of 5 November. Also the UK-EU Summit deals (carbon market link from 2028, food checks scrapped from March 2028), a 10-year Plan for Britain due next month, business births in Gateshead up to 750 in 2025, CPI at 3.6%, the new ONS productivity measure, the Visitor Levy Bill second reading, face-to-face banking to be protected in law, and the leasehold reform bill. Three deadlines before the next edition. The complete departmental log carries 209 rows, folded away rather than cut.",
+   "sources": "DWP, From a Welfare State to a Working State, and the government response, 17 November 2026; MHCLG, High Street Rental Auctions Fund prospectus, updated 19 November 2026; Industrial Strategy Advisory Council annual report 2026, 5 November 2026; Cabinet Office and No.10, UK/EU Summit 2026 key documents, 20 November 2026; No.10, PM speech at the Lord Mayor's Banquet, 16 November 2026; ONS, Business demography 2025, Consumer price inflation October 2026, and Labour productivity July to September 2026; HM Treasury, Access to Banking Services Review, 16 November 2026; UK Parliament Bills API; gov.uk publications from No.10 and the Cabinet Office; gov.uk departmental feeds for BIST, DWP, MHCLG and DfE, HM Treasury and the watched advisory bodies. All figures quoted as published, pulled 23 November 2026.",
+   "series": "whats-new",
+   "date": "2026-11-23",
+   "keywords": [
+    "whats new",
+    "weekly",
+    "round-up",
+    "releases",
+    "milburn review",
+    "young people",
+    "neet",
+    "youth opportunity service",
+    "jobs guarantee",
+    "high street rental auctions",
+    "high streets",
+    "industrial strategy advisory council",
+    "uk-eu summit",
+    "carbon border",
+    "emissions trading",
+    "plan for britain",
+    "devolution",
+    "business demography",
+    "business births",
+    "inflation",
+    "productivity",
+    "visitor levy",
+    "banking",
+    "leasehold",
+    "bills"
    ]
   },
   {

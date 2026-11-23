@@ -1,9 +1,9 @@
 {
  "title": "Horizon Calendar",
- "updated": "2026-11-19",
+ "updated": "2026-11-23",
  "window": {
   "from": "2026-09-28",
-  "ons_to": "2027-05-21"
+  "ons_to": "2027-05-28"
  },
  "categories": {
   "data": "Data release",
@@ -18,151 +18,6 @@
   "bill": "Bill stage in Parliament"
  },
  "items": [
-  {
-   "id": "pmi-uk-manufacturing-pmi-2026-11-02",
-   "date": "2026-11-02",
-   "time": "09:30",
-   "title": "UK Manufacturing PMI",
-   "category": "survey",
-   "rag": "g",
-   "status": "published",
-   "why": "National manufacturing conditions, including the split by firm size.",
-   "source": {
-    "name": "S&P Global, PMI release calendar",
-    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
-   },
-   "verified": "2026-11-02",
-   "routine": true,
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "chsf-close",
-   "date": "2026-11-02",
-   "title": "Council Housebuilding Support Fund bidding window closes",
-   "category": "funding",
-   "rag": "r",
-   "status": "published",
-   "why": "Support for councils to increase housebuilding. Applicants hear from November 2026, and further windows are expected in April 2027 and April 2028. One proposal per council in each window, up to £300,000 (guidance updated 7 October 2026).",
-   "source": {
-    "name": "MHCLG, Council Housebuilding Support Fund: how to apply",
-    "url": "https://www.gov.uk/guidance/council-housebuilding-support-fund-how-to-apply"
-   },
-   "verified": "2026-11-02",
-   "time": "14:00",
-   "action": "Ask housing and development colleagues whether Gateshead is bidding",
-   "first_logged": "whats-new-2026-09-21"
-  },
-  {
-   "id": "dwp-employment-disabled-people-2026",
-   "date": "2026-11-04",
-   "time": "09:30",
-   "title": "The Employment of Disabled People 2026",
-   "category": "data",
-   "rag": "g",
-   "status": "published",
-   "why": "Disability employment rates, context for the inactivity work.",
-   "source": {
-    "name": "DWP statistics announcement",
-    "url": "https://www.gov.uk/government/statistics/announcements/the-employment-of-disabled-people-2026"
-   },
-   "verified": "2026-11-09",
-   "first_logged": "whats-new-2026-10-14"
-  },
-  {
-   "id": "pmi-uk-services-pmi-2026-11-04",
-   "date": "2026-11-04",
-   "time": "09:30",
-   "title": "UK Services PMI",
-   "category": "survey",
-   "rag": "g",
-   "status": "published",
-   "why": "National services activity for October.",
-   "source": {
-    "name": "S&P Global PMI release calendar",
-    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
-   },
-   "routine": true,
-   "verified": "2026-11-02",
-   "first_logged": "whats-new-2026-10-19"
-  },
-  {
-   "id": "mpc-2026-11-05",
-   "date": "2026-11-05",
-   "title": "Bank of England interest rate decision, with Monetary Policy Report",
-   "category": "monetary",
-   "rag": "a",
-   "status": "published",
-   "why": "Bank Rate rose by 0.25 percentage points to 4% on a vote of 8 to 1, with one member voting for 4.25%. The Bank now expects CPI inflation to rise to around 5% by the middle of next year.",
-   "source": {
-    "name": "Bank of England, Monetary Policy Summary and minutes, November 2026, 5 November 2026",
-    "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
-   },
-   "verified": "2026-11-09"
-  },
-  {
-   "id": "dbt-business-population-2026",
-   "date": "2026-11-05",
-   "time": "09:30",
-   "title": "Business population estimates 2026",
-   "category": "data",
-   "rag": "g",
-   "status": "published",
-   "why": "Private sector business counts for the UK and regions, including the unregistered businesses that UK Business Counts leaves out. North East context for the business base.",
-   "source": {
-    "name": "DBT, Business population estimates 2026, release announcement",
-    "url": "https://www.gov.uk/government/statistics/announcements/business-population-estimates-2026"
-   },
-   "verified": "2026-11-09",
-   "first_logged": "whats-new-2026-10-02"
-  },
-  {
-   "id": "ons-localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024",
-   "date": "2026-11-05",
-   "title": "Local sites and employees linked to international trade in services",
-   "category": "data",
-   "rag": "g",
-   "status": "published",
-   "why": "Subnational trade exposure.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024"
-   },
-   "verified": "2026-11-09",
-   "time": "09:30"
-  },
-  {
-   "id": "pmi-uk-construction-pmi-2026-11-05",
-   "date": "2026-11-05",
-   "time": "09:30",
-   "title": "UK Construction PMI",
-   "category": "survey",
-   "rag": "g",
-   "status": "published",
-   "why": "National construction activity for October.",
-   "source": {
-    "name": "S&P Global PMI release calendar",
-    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
-   },
-   "routine": true,
-   "verified": "2026-11-02",
-   "first_logged": "whats-new-2026-10-19"
-  },
-  {
-   "id": "ai-clean-energy-cfe",
-   "date": "2026-11-06",
-   "time": "23:45",
-   "title": "Call for evidence closes on an AI-enabled clean energy system",
-   "category": "consultation",
-   "rag": "g",
-   "status": "published",
-   "why": "Context for the AI testbed objective. No response is proposed.",
-   "source": {
-    "name": "DESNZ, Vision for an AI-enabled clean energy system, 8 September 2026",
-    "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system"
-   },
-   "verified": "2026-11-09",
-   "first_logged": "policy-update-2026-10"
-  },
   {
    "id": "pathways-innovation-shortlist",
    "date": "2026-11-09",
@@ -674,6 +529,22 @@
    "bill_documents": "None yet"
   },
   {
+   "id": "gva-2024-complete",
+   "date": "2026-11-13",
+   "title": "Complete regional GVA dataset, with suppressed areas restored",
+   "category": "data",
+   "rag": "a",
+   "status": "published",
+   "why": "Published. ONS notice of 13 November 2026 says all datasets from the 23 September release are now complete for all areas, restoring seven of Gateshead's twenty statistical neighbours.",
+   "action": "Rebuild the neighbour comparisons in the GVA 2024 dashboard",
+   "source": {
+    "name": "ONS, Regional economic activity by gross domestic product, UK: 1998 to 2024, notice of 13 November 2026",
+    "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2024"
+   },
+   "verified": "2026-11-19",
+   "first_logged": "whats-new-2026-09-28"
+  },
+  {
    "id": "ons-shorttermletsthroughonlinecollaborativeeconomyplatformsukjuly2023tojune2026",
    "date": "2026-11-13",
    "title": "Short-term lets through online platforms, July 2023 to June 2026",
@@ -694,7 +565,7 @@
    "title": "Lords committee stage of the Courts and Tribunals Bill",
    "category": "bill",
    "rag": "g",
-   "status": "provisional",
+   "status": "published",
    "why": "Government bill with no advisor flag. A Bill to Make provision in relation to criminal courts in England and Wales; to make provision about the leadership of tribunals; to amend section 1 of the Children Act 1989 to remove the presumption relating to the involvement of parents in the life of a child; and for connected purposes. Documents published: yes (133) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 65 other).",
    "source": {
     "name": "UK Parliament, Bills site, Courts and Tribunals Bill stages",
@@ -710,7 +581,7 @@
    "title": "Commons second reading of the Visitor Levy (England) Bill",
    "category": "bill",
    "rag": "a",
-   "status": "provisional",
+   "status": "published",
    "why": "Flagged Local, Visitor. A Bill to Make provision for and in connection with the imposition, by strategic authorities, of a new local tax in respect of stays in residential accommodation. Documents published: yes (8) (Bill text, Explanatory Notes, Delegated Powers Memorandum, 1 other).",
    "source": {
     "name": "UK Parliament, Bills site, Visitor Levy (England) Bill stages",
@@ -726,7 +597,7 @@
    "title": "Commons programme motion of the Visitor Levy (England) Bill",
    "category": "bill",
    "rag": "a",
-   "status": "provisional",
+   "status": "published",
    "why": "Flagged Local, Visitor. A Bill to Make provision for and in connection with the imposition, by strategic authorities, of a new local tax in respect of stays in residential accommodation. Documents published: yes (8) (Bill text, Explanatory Notes, Delegated Powers Memorandum, 1 other).",
    "source": {
     "name": "UK Parliament, Bills site, Visitor Levy (England) Bill stages",
@@ -737,28 +608,12 @@
    "bill_documents": "Yes (8)"
   },
   {
-   "id": "bill-4124-21233",
-   "date": "2026-11-17",
-   "title": "Lords committee stage of the Health Bill",
-   "category": "bill",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Government bill with no advisor flag. A Bill to make provision about health and social care. This stage has 3 sittings scheduled, the last on 2026-11-25. Documents published: yes (266) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 88 other).",
-   "source": {
-    "name": "UK Parliament, Bills site, Health Bill stages",
-    "url": "https://bills.parliament.uk/bills/4124/stages"
-   },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Lords committee stage",
-   "bill_documents": "Yes (266)"
-  },
-  {
    "id": "bill-4254-21300",
    "date": "2026-11-17",
    "title": "Commons report stage of the Immigration and Asylum Bill",
    "category": "bill",
    "rag": "g",
-   "status": "provisional",
+   "status": "published",
    "why": "Government bill with no advisor flag. A Bill to Make provision about immigration, asylum and modern slavery; and for connected purposes. Documents published: yes (141) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Written evidence, 50 other).",
    "source": {
     "name": "UK Parliament, Bills site, Immigration and Asylum Bill stages",
@@ -769,51 +624,34 @@
    "bill_documents": "Yes (141)"
   },
   {
-   "id": "bill-4290-21253",
-   "date": "2026-11-17",
-   "title": "Commons committee stage of the Highways (Financing) Bill",
-   "category": "bill",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Government bill with no advisor flag. A Bill to Make provision for licences authorising the charging of tolls in return for securing works on trunk roads in England; about the functions of holders of licences; about enforcement; for a special administration regime for holders of licences; about the collection and enforcement of tolls charged under other Acts; and for connected purposes. This stage has 2 sittings scheduled, the last on 2026-11-19. Documents published: yes (30) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Written evidence, 13 other).",
-   "source": {
-    "name": "UK Parliament, Bills site, Highways (Financing) Bill stages",
-    "url": "https://bills.parliament.uk/bills/4290/stages"
-   },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons committee stage",
-   "bill_documents": "Yes (30)"
-  },
-  {
-   "id": "bill-4305-21287",
-   "date": "2026-11-17",
-   "title": "Commons committee stage of the Building Safety (Remediation of Unsafe Cladding etc) Bill",
-   "category": "bill",
-   "rag": "a",
-   "status": "provisional",
-   "why": "Flagged Local. A Bill to make provision about fire safety in buildings containing multiple dwellings, including provision for the assessment and remediation of external walls that give rise to risks from fire, and the mitigation of such risks, in taller buildings; to make provision for the obtaining and recording of information about buildings containing residential accommodation; to make provision about liabilities in connection with unsafe construction products; and to make other provision in connection with the safety and management of residential buildings. This stage has 2 sittings scheduled, the last on 2026-11-19. Documents published: yes (37) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Written evidence, 13 other).",
-   "source": {
-    "name": "UK Parliament, Bills site, Building Safety (Remediation of Unsafe Cladding etc) Bill stages",
-    "url": "https://bills.parliament.uk/bills/4305/stages"
-   },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons committee stage",
-   "bill_documents": "Yes (37)"
-  },
-  {
    "id": "dwp-universal-credit-2026-11",
    "date": "2026-11-17",
    "title": "Universal Credit statistics, quarterly release to 13 August 2026",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Quarterly Universal Credit people, households and deductions, with local authority breakdowns through Stat-Xplore.",
    "source": {
     "name": "DWP, Universal Credit statistics collection, updated 2 October 2026",
     "url": "https://www.gov.uk/government/collections/universal-credit-statistics"
    },
-   "verified": "2026-11-09",
+   "verified": "2026-11-23",
    "first_logged": "whats-new-2026-10-02"
+  },
+  {
+   "id": "milburn-review-report",
+   "date": "2026-11-17",
+   "title": "Milburn Review of rising youth inactivity reports",
+   "category": "policy",
+   "rag": "a",
+   "status": "published",
+   "why": "The review sets the case for the job guarantee and any bigger role for mayors in employment support, which matters for Gateshead's 18 to 24 year olds.",
+   "source": {
+    "name": "DWP, From a Welfare State to a Working State: a new settlement for the next generation, 17 November 2026",
+    "url": "https://www.gov.uk/government/publications/from-a-welfare-state-to-a-working-state-a-new-settlement-for-the-next-generation"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-16"
   },
   {
    "id": "small-pots-consultation",
@@ -821,7 +659,7 @@
    "title": "Consultation closes on small pension pots consolidation",
    "category": "consultation",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Pensions, no local read.",
    "routine": true,
    "source": {
@@ -832,18 +670,33 @@
    "first_logged": "whats-new-2026-11-16"
   },
   {
+   "id": "young-people-work-final",
+   "date": "2026-11-17",
+   "title": "Young people and work review final report",
+   "category": "policy",
+   "rag": "a",
+   "status": "published",
+   "why": "The final report will set out what a participation system for early adulthood should look like. Feeds our NEET work.",
+   "source": {
+    "name": "DWP, From a Welfare State to a Working State: a new settlement for the next generation, 17 November 2026",
+    "url": "https://www.gov.uk/government/publications/from-a-welfare-state-to-a-working-state-a-new-settlement-for-the-next-generation"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-08-31"
+  },
+  {
    "id": "ons-uklabourmarketnovember2026",
    "date": "2026-11-17",
    "title": "UK labour market, with regional tables and PAYE Real Time Information",
    "category": "data",
    "rag": "a",
-   "status": "confirmed",
+   "status": "published",
    "why": "Gateshead's claimant count and payrolled employees, and the regional labour market tables.",
    "source": {
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketnovember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -852,7 +705,7 @@
    "title": "Productivity flash estimate",
    "category": "data",
    "rag": "a",
-   "status": "confirmed",
+   "status": "published",
    "why": "First release on the new component method for the whole economy.",
    "source": {
     "name": "ONS release calendar",
@@ -862,28 +715,12 @@
    "time": "09:30"
   },
   {
-   "id": "bill-4030-21281",
-   "date": "2026-11-18",
-   "title": "Lords report stage of the Railways Bill",
-   "category": "bill",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Government bill with no advisor flag. A Bill to make provision about railways and railway services; and for connected purposes. This stage has 3 sittings scheduled, the last on 2026-12-15. Documents published: yes (247) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 181 other).",
-   "source": {
-    "name": "UK Parliament, Bills site, Railways Bill stages",
-    "url": "https://bills.parliament.uk/bills/4030/stages"
-   },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Lords report stage",
-   "bill_documents": "Yes (247)"
-  },
-  {
    "id": "ons-consumerpriceinflationukoctober2026",
    "date": "2026-11-18",
    "title": "Consumer price inflation",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Feeds the cost-of-living index.",
    "source": {
     "name": "ONS release calendar",
@@ -900,7 +737,7 @@
    "title": "Council Taxbase 2026 in England",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Properties liable for council tax at September 2026, by council and band.",
    "source": {
     "name": "MHCLG, Council Taxbase 2026 in England, release announcement",
@@ -917,13 +754,13 @@
    "title": "Additional data for the business rates retention reset published",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Data on renewable energy disregarded amounts and designated areas, used in the business rates baseline calculation for the reset.",
    "source": {
     "name": "MHCLG, National non-domestic rates 2026 to 2027: Additional data for business rates retention reset, release announcement",
     "url": "https://www.gov.uk/government/statistics/announcements/national-non-domestic-rates-2026-to-2027-additional-data-for-business-rates-retentionreset"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "first_logged": "whats-new-2026-11-16"
   },
   {
@@ -932,7 +769,7 @@
    "title": "Private rent and house prices",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Local authority rents and house prices, so a Gateshead cut.",
    "source": {
     "name": "ONS release calendar",
@@ -964,7 +801,7 @@
    "title": "Call for evidence closes on school exclusion reform",
    "category": "consultation",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Exclusion and absence are linked to young people becoming NEET. A matter for education colleagues.",
    "source": {
     "name": "DfE, School exclusion reform, call for evidence, 15 October 2026",
@@ -979,7 +816,7 @@
    "title": "Lords second reading of the European Union (Withdrawal Arrangements) Bill [HL]",
    "category": "bill",
    "rag": "g",
-   "status": "provisional",
+   "status": "published",
    "why": "Private members' (Lords) bill with no advisor flag. A Bill to make provision to modify the effect on domestic law of arrangements relating to the withdrawal of the United Kingdom from the European Union; and for connected purposes. Documents published: yes (1) (Bill text).",
    "source": {
     "name": "UK Parliament, Bills site, European Union (Withdrawal Arrangements) Bill [HL] stages",
@@ -996,7 +833,7 @@
    "title": "Lords second reading of the Corporate Waste Responsibility Bill [HL]",
    "category": "bill",
    "rag": "g",
-   "status": "provisional",
+   "status": "published",
    "why": "Private members' (Lords) bill with no advisor flag. A Bill to require large companies to appoint a named director responsible for compliance with statutory waste duty of care obligations; to make such companies financially responsible for the clean-up and clearance of waste they have generated or controlled where that waste is mismanaged and the duty of care has not been discharged; and for connected purposes. Documents published: yes (2) (Bill text, Committee report).",
    "source": {
     "name": "UK Parliament, Bills site, Corporate Waste Responsibility Bill [HL] stages",
@@ -1013,7 +850,7 @@
    "title": "Lords second reading of the Complications from Abortions (Annual Report) Bill [HL]",
    "category": "bill",
    "rag": "g",
-   "status": "provisional",
+   "status": "published",
    "why": "Private members' (Lords) bill with no advisor flag. A Bill to require the Secretary of State to publish an annual report on complications from abortions in England; and for connected purposes. Documents published: yes (1) (Bill text).",
    "source": {
     "name": "UK Parliament, Bills site, Complications from Abortions (Annual Report) Bill [HL] stages",
@@ -1025,34 +862,18 @@
    "routine": true
   },
   {
-   "id": "milburn-review-report",
-   "date": "2026-11-20",
-   "date_label": "Week of 16 November 2026",
-   "title": "Milburn Review of rising youth inactivity reports",
-   "category": "policy",
-   "rag": "a",
-   "status": "expected",
-   "why": "The review sets the case for the job guarantee and any bigger role for mayors in employment support, which matters for Gateshead's 18 to 24 year olds.",
-   "source": {
-    "name": "DWP, 90,000 young people furthest from work to be given guaranteed job, no matter where they live, 14 November 2026",
-    "url": "https://www.gov.uk/government/news/90000-young-people-furthest-from-work-to-be-given-guaranteed-job-no-matter-where-they-live"
-   },
-   "verified": "2026-11-16",
-   "first_logged": "whats-new-2026-11-16"
-  },
-  {
    "id": "uk-eu-summit-2026",
    "date": "2026-11-20",
    "title": "Second UK-EU summit, Brussels",
    "category": "policy",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Possible deals on trade costs and red tape for businesses.",
    "source": {
     "name": "No.10, Prime Minister to attend UK-EU summit in Brussels on 20 November, 12 October 2026",
     "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
    },
-   "verified": "2026-11-09",
+   "verified": "2026-11-23",
    "first_logged": "whats-new-2026-10-14"
   },
   {
@@ -1061,7 +882,7 @@
    "title": "Public sector finances",
    "category": "data",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Fiscal backdrop.",
    "source": {
     "name": "ONS release calendar",
@@ -1078,7 +899,7 @@
    "title": "Consultation closes on corporate tax simplification for business investment",
    "category": "consultation",
    "rag": "g",
-   "status": "confirmed",
+   "status": "published",
    "why": "Changes to how business investment is treated for tax. Relevant to the investment case for firms in the borough.",
    "source": {
     "name": "HM Treasury, opened 28 October 2026",
@@ -1088,21 +909,20 @@
    "first_logged": "horizon scan"
   },
   {
-   "id": "bill-4142-21209",
+   "id": "bill-4124-21233",
    "date": "2026-11-23",
-   "title": "Lords committee stage of the Creative Education Access Bill [HL]",
+   "title": "Lords committee stage of the Health Bill",
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (Lords) bill with no advisor flag. A Bill to make provision for a minimum standard of access to creative and cultural education in state-funded schools in England and Wales; to promote partnerships between schools and the creative sector; and for connected purposes. Documents published: yes (3) (Bill text, Library briefing, Committee report).",
+   "why": "Government bill with no advisor flag. A Bill to make provision about health and social care. This stage has 3 sittings scheduled, the last on 2026-12-08. Documents published: yes (270) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 91 other).",
    "source": {
-    "name": "UK Parliament, Bills site, Creative Education Access Bill [HL] stages",
-    "url": "https://bills.parliament.uk/bills/4142/stages"
+    "name": "UK Parliament, Bills site, Health Bill stages",
+    "url": "https://bills.parliament.uk/bills/4124/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Lords committee stage",
-   "bill_documents": "Yes (3)",
-   "routine": true
+   "bill_documents": "Yes (270)"
   },
   {
    "id": "bill-4296-21307",
@@ -1116,7 +936,7 @@
     "name": "UK Parliament, Bills site, Church Appointments (Repeal of Discriminatory Provision) Bill stages",
     "url": "https://bills.parliament.uk/bills/4296/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Lords committee stage",
    "bill_documents": "Yes (14)"
   },
@@ -1132,7 +952,7 @@
     "name": "UK Parliament, Bills site, Church Appointments (Repeal of Discriminatory Provision) Bill stages",
     "url": "https://bills.parliament.uk/bills/4296/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Lords committee stage",
    "bill_documents": "Yes (14)"
   },
@@ -1148,7 +968,7 @@
     "name": "UK Parliament, Bills site, Church Appointments (Repeal of Discriminatory Provision) Bill stages",
     "url": "https://bills.parliament.uk/bills/4296/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Lords committee stage",
    "bill_documents": "Yes (14)"
   },
@@ -1164,25 +984,25 @@
     "name": "UK Parliament, Bills site, Finance Bill stages",
     "url": "https://bills.parliament.uk/bills/4316/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (9)"
   },
   {
-   "id": "hsra-fund-opens",
+   "id": "bill-4316-21352",
    "date": "2026-11-23",
-   "date_label": "Week of 23 November 2026",
-   "title": "High Street Rental Auctions Fund opens to councils, with early applications prioritised",
-   "category": "funding",
-   "rag": "a",
-   "status": "expected",
-   "why": "Up to £10 million for councils to use rental auction powers on long-empty high street units. Applications are assessed on a rolling basis, so applying early matters more than the closing date.",
+   "title": "Commons programme motion of the Finance Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Government bill with no advisor flag. A Bill to make provision in connection with finance. Documents published: yes (9) (Bill text, Explanatory Notes).",
    "source": {
-    "name": "MHCLG, High Street Rental Auctions Fund 2026 to 2028 prospectus, 28 October 2026",
-    "url": "https://www.gov.uk/government/publications/high-street-rental-auctions-grants-for-local-authorities/high-street-rental-auctions-fund-2026-to-2028-prospectus"
+    "name": "UK Parliament, Bills site, Finance Bill stages",
+    "url": "https://bills.parliament.uk/bills/4316/stages"
    },
-   "verified": "2026-11-09",
-   "first_logged": "whats-new-2026-11-03"
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "Yes (9)"
   },
   {
    "id": "pmi-uk-flash-pmi-2026-11-23",
@@ -1223,14 +1043,30 @@
    "category": "bill",
    "rag": "a",
    "status": "provisional",
-   "why": "Flagged Digital. A Bill to Make provision, including provision amending the Network and Information Systems Regulations 2018, about the security and resilience of network and information systems used or relied on in connection with the carrying on of essential activities. Documents published: yes (179) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 99 other).",
+   "why": "Flagged Digital. A Bill to Make provision, including provision amending the Network and Information Systems Regulations 2018, about the security and resilience of network and information systems used or relied on in connection with the carrying on of essential activities. Documents published: yes (185) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 105 other).",
    "source": {
     "name": "UK Parliament, Bills site, Cyber Security and Resilience (Network and Information Systems) Bill stages",
     "url": "https://bills.parliament.uk/bills/4035/stages"
    },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons consideration of Lords amendments",
-   "bill_documents": "Yes (179)"
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons programme motion",
+   "bill_documents": "Yes (185)"
+  },
+  {
+   "id": "bill-4035-21354",
+   "date": "2026-11-24",
+   "title": "Commons programme motion of the Cyber Security and Resilience (Network and Information Systems) Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Digital. A Bill to Make provision, including provision amending the Network and Information Systems Regulations 2018, about the security and resilience of network and information systems used or relied on in connection with the carrying on of essential activities. Documents published: yes (185) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 105 other).",
+   "source": {
+    "name": "UK Parliament, Bills site, Cyber Security and Resilience (Network and Information Systems) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4035/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons programme motion",
+   "bill_documents": "Yes (185)"
   },
   {
    "id": "bill-4065-21289",
@@ -1239,14 +1075,30 @@
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Government bill with no advisor flag. A Bill to continue the Armed Forces Act 2006; to amend that Act and other enactments relating to the armed forces; to make provision about the reserve forces; to make provision about visiting forces; to make provision about the Ministry of Defence Police; to make provision about the defence functions of the Oil and Pipelines Agency; to make provision about the protection of military remains; and for connected purposes. Documents published: yes (111) (Bill text, Explanatory Notes, Library briefing, Delegated Powers Memorandum, Committee report, 79 other).",
+   "why": "Government bill with no advisor flag. A Bill to continue the Armed Forces Act 2006; to amend that Act and other enactments relating to the armed forces; to make provision about the reserve forces; to make provision about visiting forces; to make provision about the Ministry of Defence Police; to make provision about the defence functions of the Oil and Pipelines Agency; to make provision about the protection of military remains; and for connected purposes. Documents published: yes (117) (Bill text, Explanatory Notes, Library briefing, Delegated Powers Memorandum, Committee report, 85 other).",
    "source": {
     "name": "UK Parliament, Bills site, Armed Forces Bill stages",
     "url": "https://bills.parliament.uk/bills/4065/stages"
    },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons consideration of Lords amendments",
-   "bill_documents": "Yes (111)"
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons programme motion",
+   "bill_documents": "Yes (117)"
+  },
+  {
+   "id": "bill-4065-21353",
+   "date": "2026-11-24",
+   "title": "Commons programme motion of the Armed Forces Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Government bill with no advisor flag. A Bill to continue the Armed Forces Act 2006; to amend that Act and other enactments relating to the armed forces; to make provision about the reserve forces; to make provision about visiting forces; to make provision about the Ministry of Defence Police; to make provision about the defence functions of the Oil and Pipelines Agency; to make provision about the protection of military remains; and for connected purposes. Documents published: yes (117) (Bill text, Explanatory Notes, Library briefing, Delegated Powers Memorandum, Committee report, 85 other).",
+   "source": {
+    "name": "UK Parliament, Bills site, Armed Forces Bill stages",
+    "url": "https://bills.parliament.uk/bills/4065/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons programme motion",
+   "bill_documents": "Yes (117)"
   },
   {
    "id": "bill-4080-21212",
@@ -1255,14 +1107,62 @@
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Government bill with no advisor flag. Make provision extending the right to vote to 16 and 17 year olds; to make provision about the registration of voters; to make provision about the administration and conduct of elections, referendums and recall petitions; to make provision about election agents’ addresses; to make provision about political expenditure and political donations; to make provision about information to be included in electronic campaigning material; to make provision about offences and civil sanctions in connection with elections, referendums and recall petitions and with donations and expenditure for political purposes; to repeal provision about the designation of a strategy and policy statement for the Electoral Commission; to make provision about the disclosure of information by the Electoral Commission; to make provision about the disqualification of offenders for holding elective offices, and their sentencing, where offences are aggravated by hostility towards persons involved in elections, referendums or recall petitions or holders of such offices; and for connected purposes. This stage has 4 sittings scheduled, the last on 2026-12-14. Documents published: yes (252) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 169 other).",
+   "why": "Government bill with no advisor flag. Make provision extending the right to vote to 16 and 17 year olds; to make provision about the registration of voters; to make provision about the administration and conduct of elections, referendums and recall petitions; to make provision about election agents’ addresses; to make provision about political expenditure and political donations; to make provision about information to be included in electronic campaigning material; to make provision about offences and civil sanctions in connection with elections, referendums and recall petitions and with donations and expenditure for political purposes; to repeal provision about the designation of a strategy and policy statement for the Electoral Commission; to make provision about the disclosure of information by the Electoral Commission; to make provision about the disqualification of offenders for holding elective offices, and their sentencing, where offences are aggravated by hostility towards persons involved in elections, referendums or recall petitions or holders of such offices; and for connected purposes. This stage has 5 sittings scheduled, the last on 2026-12-16. Documents published: yes (257) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 172 other).",
    "source": {
     "name": "UK Parliament, Bills site, Representation of the People Bill stages",
     "url": "https://bills.parliament.uk/bills/4080/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Lords committee stage",
-   "bill_documents": "Yes (252)"
+   "bill_documents": "Yes (257)"
+  },
+  {
+   "id": "bill-4129-21315",
+   "date": "2026-11-24",
+   "title": "Commons committee stage of the Financial Services and Markets Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Government bill with no advisor flag. A Bill to make provision about the regulation of financial services and markets; and for connected purposes. This stage has 6 sittings scheduled, the last on 2026-12-15. Documents published: yes (87) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, 68 other).",
+   "source": {
+    "name": "UK Parliament, Bills site, Financial Services and Markets Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4129/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons committee stage",
+   "bill_documents": "Yes (87)"
+  },
+  {
+   "id": "bill-4290-21253",
+   "date": "2026-11-24",
+   "title": "Commons committee stage of the Highways (Financing) Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Government bill with no advisor flag. A Bill to Make provision for licences authorising the charging of tolls in return for securing works on trunk roads in England; about the functions of holders of licences; about enforcement; for a special administration regime for holders of licences; about the collection and enforcement of tolls charged under other Acts; and for connected purposes. This stage has 2 sittings scheduled, the last on 2026-11-26. Documents published: yes (38) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Written evidence, 17 other).",
+   "source": {
+    "name": "UK Parliament, Bills site, Highways (Financing) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4290/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons committee stage",
+   "bill_documents": "Yes (38)"
+  },
+  {
+   "id": "bill-4305-21287",
+   "date": "2026-11-24",
+   "title": "Commons committee stage of the Building Safety (Remediation of Unsafe Cladding etc) Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Local. A Bill to make provision about fire safety in buildings containing multiple dwellings, including provision for the assessment and remediation of external walls that give rise to risks from fire, and the mitigation of such risks, in taller buildings; to make provision for the obtaining and recording of information about buildings containing residential accommodation; to make provision about liabilities in connection with unsafe construction products; and to make other provision in connection with the safety and management of residential buildings. This stage has 2 sittings scheduled, the last on 2026-11-26. Documents published: yes (59) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Written evidence, 24 other).",
+   "source": {
+    "name": "UK Parliament, Bills site, Building Safety (Remediation of Unsafe Cladding etc) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4305/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons committee stage",
+   "bill_documents": "Yes (59)"
   },
   {
    "id": "ons-regionalandsubregionallabourproductivityuk2024",
@@ -1276,25 +1176,9 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/regionalandsubregionallabourproductivityuk2024"
    },
-   "verified": "2026-11-19",
+   "verified": "2026-11-23",
    "time": "09:30",
    "action": "Re-run the productivity analysis on the day"
-  },
-  {
-   "id": "dfe-fe-skills-2026-11",
-   "date": "2026-11-26",
-   "date_label": "November 2026",
-   "title": "Further education and skills statistics, November 2026",
-   "category": "data",
-   "rag": "a",
-   "status": "expected",
-   "why": "Apprenticeship starts and further education participation, with local authority detail.",
-   "source": {
-    "name": "DfE statistics announcement",
-    "url": "https://www.gov.uk/government/statistics/announcements/further-education-and-skills-november-2026"
-   },
-   "verified": "2026-11-09",
-   "first_logged": "whats-new-2026-10-14"
   },
   {
    "id": "nemsa-events-fund-eoi",
@@ -1309,22 +1193,8 @@
     "name": "NEMSA, Mayor's Events Fund, updated 16 October 2026",
     "url": "https://www.northeast-ca.gov.uk/projects/events-fund"
    },
-   "verified": "2026-11-12",
+   "verified": "2026-11-23",
    "first_logged": "policy-update-2026-11"
-  },
-  {
-   "id": "ons-longterminternationalmigrationprovisionalyearendingjune2026",
-   "date": "2026-11-26",
-   "title": "Long-term international migration, year ending June 2026",
-   "category": "data",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Population change context.",
-   "source": {
-    "name": "ONS release calendar",
-    "url": "https://www.ons.gov.uk/releases/longterminternationalmigrationprovisionalyearendingjune2026"
-   },
-   "verified": "2026-11-16"
   },
   {
    "id": "mhclg-net-additional-dwellings-2026",
@@ -1343,6 +1213,21 @@
    "first_logged": "whats-new-2026-10-26"
   },
   {
+   "id": "ons-longterminternationalmigrationprovisionalyearendingjune2026",
+   "date": "2026-11-26",
+   "title": "Long-term international migration, year ending June 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Population change context.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/longterminternationalmigrationprovisionalyearendingjune2026"
+   },
+   "verified": "2026-11-23",
+   "time": "09:30"
+  },
+  {
    "id": "ons-provisionalpopulationestimatefortheukmid2026",
    "date": "2026-11-26",
    "title": "Provisional UK population estimate, mid-2026",
@@ -1354,7 +1239,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/provisionalpopulationestimatefortheukmid2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -1369,24 +1254,24 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/youngpeoplenotineducationemploymentortrainingneetuknovember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
    "id": "bill-4163-20854",
    "date": "2026-11-27",
-   "title": "Commons second reading of the Strategic Litigation Against Public Participation Bill",
+   "title": "Commons second reading of the Strategic Litigation Against Public Participation (No. 2) Bill",
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (ballot) bill with no advisor flag. A Bill to make provision about the use of litigation to suppress freedom of speech. Documents published: none yet.",
+   "why": "Private members' (ballot) bill with no advisor flag. A Bill to make provision about the use of litigation to suppress freedom of speech. Documents published: yes (4) (Bill text).",
    "source": {
-    "name": "UK Parliament, Bills site, Strategic Litigation Against Public Participation Bill stages",
+    "name": "UK Parliament, Bills site, Strategic Litigation Against Public Participation (No. 2) Bill stages",
     "url": "https://bills.parliament.uk/bills/4163/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet",
+   "bill_documents": "Yes (4)",
    "routine": true
   },
   {
@@ -1401,7 +1286,7 @@
     "name": "UK Parliament, Bills site, Emergency and Life-saving Skills (Schools) Bill stages",
     "url": "https://bills.parliament.uk/bills/4165/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -1413,14 +1298,14 @@
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (ballot) bill with no advisor flag. A Bill to require the indication of country of origin for ceramic products; and for connected purposes. Documents published: none yet.",
+   "why": "Private members' (ballot) bill with no advisor flag. A Bill to require the indication of country of origin for ceramic products; and for connected purposes. Documents published: yes (4) (Bill text).",
    "source": {
     "name": "UK Parliament, Bills site, Ceramics (Country of Origin Marking) Bill stages",
     "url": "https://bills.parliament.uk/bills/4166/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet",
+   "bill_documents": "Yes (4)",
    "routine": true
   },
   {
@@ -1435,7 +1320,7 @@
     "name": "UK Parliament, Bills site, Northern Ireland Troubles (Criminal Investigations etc) Bill stages",
     "url": "https://bills.parliament.uk/bills/4167/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -1452,7 +1337,7 @@
     "name": "UK Parliament, Bills site, Hospice Funding Bill stages",
     "url": "https://bills.parliament.uk/bills/4178/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1469,7 +1354,7 @@
     "name": "UK Parliament, Bills site, Civil Aviation Authority (Ombudsman) Bill stages",
     "url": "https://bills.parliament.uk/bills/4247/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1481,14 +1366,14 @@
    "category": "bill",
    "rag": "a",
    "status": "provisional",
-   "why": "Flagged Local. A Bill to make provision for a minimum level of bus and rail services in rural areas; to require the Secretary of State to consult users and prospective users of local rail and bus transportation about the provision of those services; to require the Secretary of State to review the provision of rail services to rural areas; and for connected purposes. Documents published: none yet.",
+   "why": "Flagged Local. A Bill to make provision for a minimum level of bus and rail services in rural areas; to require the Secretary of State to consult users and prospective users of local rail and bus transportation about the provision of those services; to require the Secretary of State to review the provision of rail services to rural areas; and for connected purposes. Documents published: yes (4) (Bill text).",
    "source": {
     "name": "UK Parliament, Bills site, Rural Public Transport Bill stages",
     "url": "https://bills.parliament.uk/bills/4248/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet"
+   "bill_documents": "Yes (4)"
   },
   {
    "id": "bill-4258-21068",
@@ -1502,7 +1387,7 @@
     "name": "UK Parliament, Bills site, Controlled Drugs (Procedure for Specification) Bill stages",
     "url": "https://bills.parliament.uk/bills/4258/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (7)",
    "routine": true
@@ -1519,7 +1404,7 @@
     "name": "UK Parliament, Bills site, Illegal Trading (Temporary Closure of Premises) Bill stages",
     "url": "https://bills.parliament.uk/bills/4287/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1536,7 +1421,7 @@
     "name": "UK Parliament, Bills site, Artificial Superintelligence Bill stages",
     "url": "https://bills.parliament.uk/bills/4288/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1553,7 +1438,7 @@
     "name": "UK Parliament, Bills site, Personal Data (Digital Twins) Bill stages",
     "url": "https://bills.parliament.uk/bills/4295/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -1569,43 +1454,27 @@
     "name": "UK Parliament, Bills site, Barbers and Hairdressers (Registration) Bill stages",
     "url": "https://bills.parliament.uk/bills/4297/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
   },
   {
-   "id": "bill-4308-21249",
+   "id": "bill-4332-21344",
    "date": "2026-11-27",
-   "title": "Commons second reading of the Armed Forces Compensation Scheme and War Pension Scheme (Report) Bill",
+   "title": "Commons second reading of the Powers of Attorney Bill",
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (presentation) bill with no advisor flag. A Bill to require the Secretary of State to report to Parliament on the potential merits of disregarding compensation received under the War Pension Scheme and Armed Forces Compensation Scheme for the purpose of calculating entitlement to Pension Credit and to other means-tested benefits for which such payments are not disregarded in full; and for connected purposes. Documents published: none yet.",
+   "why": "Private members' (presentation) bill with no advisor flag. A Bill to make provision about lasting powers of attorney; and for connected purposes. Documents published: none yet.",
    "source": {
-    "name": "UK Parliament, Bills site, Armed Forces Compensation Scheme and War Pension Scheme (Report) Bill stages",
-    "url": "https://bills.parliament.uk/bills/4308/stages"
+    "name": "UK Parliament, Bills site, Powers of Attorney Bill stages",
+    "url": "https://bills.parliament.uk/bills/4332/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
-  },
-  {
-   "id": "bill-4310-21258",
-   "date": "2026-11-27",
-   "title": "Commons second reading of the Artificial Intelligence (Consent and Misuse) Bill",
-   "category": "bill",
-   "rag": "a",
-   "status": "provisional",
-   "why": "Flagged Digital. A Bill to make provision about a requirement for consent to generate a likeness of a person using, or with the assistance of, artificial intelligence; to make further provision relating to that requirement; to make provision about civil action in circumstances where that requirement is not met; to make provision about offences relating to the creating or dissemination of such likenesses; to make provision about duties on providers of artificial intelligence technology in relation to misuse of that technology to generate likenesses; and for connected purposes. Documents published: none yet.",
-   "source": {
-    "name": "UK Parliament, Bills site, Artificial Intelligence (Consent and Misuse) Bill stages",
-    "url": "https://bills.parliament.uk/bills/4310/stages"
-   },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet"
   },
   {
    "id": "ons-householdcostsindicesforukhouseholdgroupsjulytoseptember2026",
@@ -1619,7 +1488,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsjulytoseptember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -1635,8 +1504,24 @@
     "name": "BIST, Applications open for scheme to slash electricity bills for over 10,000 manufacturers, 1 October 2026",
     "url": "https://www.gov.uk/government/news/applications-open-for-scheme-to-slash-electricity-bills-for-over-10000-manufacturers"
    },
-   "verified": "2026-11-09",
+   "verified": "2026-11-23",
    "first_logged": "whats-new-2026-10-02"
+  },
+  {
+   "id": "bill-4316-21342",
+   "date": "2026-11-30",
+   "title": "Commons committee of the whole House of the Finance Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Government bill with no advisor flag. A Bill to make provision in connection with finance. This stage has 2 sittings scheduled, the last on 2026-12-01. Documents published: yes (9) (Bill text, Explanatory Notes).",
+   "source": {
+    "name": "UK Parliament, Bills site, Finance Bill stages",
+    "url": "https://bills.parliament.uk/bills/4316/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "Yes (9)"
   },
   {
    "id": "consult-modernising-corporate-reporting",
@@ -1654,20 +1539,20 @@
    "first_logged": "policy-update-2026-11"
   },
   {
-   "id": "gva-2024-complete",
-   "date": "2026-11-13",
-   "title": "Complete regional GVA dataset, with suppressed areas restored",
-   "category": "data",
+   "id": "jobs-guarantee-gb-rollout",
+   "date": "2026-11-30",
+   "date_label": "From the end of November",
+   "title": "Jobs Guarantee rolls out across Great Britain",
+   "category": "policy",
    "rag": "a",
-   "status": "published",
-   "why": "Published. ONS notice of 13 November 2026 says all datasets from the 23 September release are now complete for all areas, restoring seven of Gateshead's twenty statistical neighbours.",
-   "action": "Rebuild the neighbour comparisons in the GVA 2024 dashboard",
+   "status": "expected",
+   "why": "A fully funded six-month job for 18-24 year olds on Universal Credit and looking for work after 18 months out of work, falling to 12 months from April 2027.",
    "source": {
-    "name": "ONS, Regional economic activity by gross domestic product, UK: 1998 to 2024, notice of 13 November 2026",
-    "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2024"
+    "name": "DWP, 90,000 young people furthest from work to be given guaranteed job, no matter where they live, 14 November 2026",
+    "url": "https://www.gov.uk/government/news/90000-young-people-furthest-from-work-to-be-given-guaranteed-job-no-matter-where-they-live"
    },
-   "verified": "2026-11-19",
-   "first_logged": "whats-new-2026-09-28"
+   "verified": "2026-11-23",
+   "first_logged": "economic-update-2026-11"
   },
   {
    "id": "jobs-guarantee-national",
@@ -1681,7 +1566,7 @@
     "name": "DWP, 90,000 young people furthest from work to be given guaranteed job, no matter where they live, 14 November 2026",
     "url": "https://www.gov.uk/government/news/90000-young-people-furthest-from-work-to-be-given-guaranteed-job-no-matter-where-they-live"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "date_label": "End of November 2026",
    "action": "Size both eligible Gateshead cohorts and find out when the North East partner starts taking referrals",
    "first_logged": "whats-new-2026-09-21"
@@ -1730,7 +1615,7 @@
     "name": "MHCLG, Pride in Place Programme: plans for Phase 2 places",
     "url": "https://www.gov.uk/government/publications/pride-in-place-programme-pride-in-place-plans-for-phase-2-places"
    },
-   "verified": "2026-11-09",
+   "verified": "2026-11-23",
    "action": "Offer the board a small-area evidence pack for its ten-year plan",
    "first_logged": "whats-new-2026-09-21"
   },
@@ -1751,21 +1636,20 @@
    "first_logged": "horizon scan"
   },
   {
-   "id": "bill-4139-21280",
+   "id": "bill-4083-21319",
    "date": "2026-12-01",
-   "title": "Lords committee stage of the British Sovereignty Protection (Chagos Islands) Bill [HL]",
+   "title": "Lords report stage of the Courts and Tribunals Bill",
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (Lords) bill with no advisor flag. A Bill to affirm and protect the sovereignty of the United Kingdom over the Chagos Islands and the British Indian Ocean Territory; to make provision restricting the cession or transfer of sovereignty without the approval of Parliament and without the consent of the Chagossian people; to provide for the protection of the Territory’s strategic and defence importance; and for connected purposes. Documents published: yes (3) (Bill text, Library briefing, Committee report).",
+   "why": "Government bill with no advisor flag. A Bill to Make provision in relation to criminal courts in England and Wales; to make provision about the leadership of tribunals; to amend section 1 of the Children Act 1989 to remove the presumption relating to the involvement of parents in the life of a child; and for connected purposes. Documents published: yes (134) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 66 other).",
    "source": {
-    "name": "UK Parliament, Bills site, British Sovereignty Protection (Chagos Islands) Bill [HL] stages",
-    "url": "https://bills.parliament.uk/bills/4139/stages"
+    "name": "UK Parliament, Bills site, Courts and Tribunals Bill stages",
+    "url": "https://bills.parliament.uk/bills/4083/stages"
    },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Lords committee stage",
-   "bill_documents": "Yes (3)",
-   "routine": true
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords report stage",
+   "bill_documents": "Yes (134)"
   },
   {
    "id": "common-ground-outcomes",
@@ -1794,7 +1678,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/populationestimatesbyoutputareaselectoralhealthandothergeographiesenglandandwalesmid2025"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -1837,14 +1721,14 @@
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Government bill with no advisor flag. A Bill to make new provision to address the legacy of the Northern Ireland Troubles. Documents published: yes (164) (Bill text, Explanatory Notes, Library briefing, Delegated Powers Memorandum, 145 other).",
+   "why": "Government bill with no advisor flag. A Bill to make new provision to address the legacy of the Northern Ireland Troubles. Documents published: yes (165) (Bill text, Explanatory Notes, Library briefing, Delegated Powers Memorandum, 145 other).",
    "source": {
     "name": "UK Parliament, Bills site, Northern Ireland Troubles Bill stages",
     "url": "https://bills.parliament.uk/bills/4022/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Lords second reading",
-   "bill_documents": "Yes (164)"
+   "bill_documents": "Yes (165)"
   },
   {
    "id": "ons-workingandworklesshouseholdsintheukjulytoseptember2026",
@@ -1858,7 +1742,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/workingandworklesshouseholdsintheukjulytoseptember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -1873,7 +1757,7 @@
     "name": "UK Parliament, Bills site, Domestic Abuse Protection Orders (Amendment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4164/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1885,14 +1769,14 @@
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (ballot) bill with no advisor flag. A Bill to make provision about fireworks; and for connected purposes. Documents published: none yet.",
+   "why": "Private members' (ballot) bill with no advisor flag. A Bill to make provision about fireworks; and for connected purposes. Documents published: yes (4) (Bill text).",
    "source": {
     "name": "UK Parliament, Bills site, Fireworks Bill stages",
     "url": "https://bills.parliament.uk/bills/4168/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet",
+   "bill_documents": "Yes (4)",
    "routine": true
   },
   {
@@ -1907,7 +1791,7 @@
     "name": "UK Parliament, Bills site, Relationships and Sex Education (Further Education Sector) Bill stages",
     "url": "https://bills.parliament.uk/bills/4171/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1924,7 +1808,7 @@
     "name": "UK Parliament, Bills site, Work Experience (Schools) Bill stages",
     "url": "https://bills.parliament.uk/bills/4179/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1941,7 +1825,7 @@
     "name": "UK Parliament, Bills site, Gaza (Independent Public Inquiry) Bill stages",
     "url": "https://bills.parliament.uk/bills/4183/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -1958,7 +1842,7 @@
     "name": "UK Parliament, Bills site, Environmental Impact Assessment (Downstream Emissions) Bill stages",
     "url": "https://bills.parliament.uk/bills/4190/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -1974,7 +1858,7 @@
     "name": "UK Parliament, Bills site, Heritage Trees Bill stages",
     "url": "https://bills.parliament.uk/bills/4195/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -1991,7 +1875,7 @@
     "name": "UK Parliament, Bills site, National Police Chiefs' Council (Guidance) Bill stages",
     "url": "https://bills.parliament.uk/bills/4202/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -2008,7 +1892,7 @@
     "name": "UK Parliament, Bills site, Employment Bill stages",
     "url": "https://bills.parliament.uk/bills/4208/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -2024,7 +1908,7 @@
     "name": "UK Parliament, Bills site, Domestic Energy (Value Added Tax) Bill stages",
     "url": "https://bills.parliament.uk/bills/4229/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -2041,7 +1925,7 @@
     "name": "UK Parliament, Bills site, Exemption from Value Added Tax (Listed Places of Worship) Bill stages",
     "url": "https://bills.parliament.uk/bills/4230/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -2058,7 +1942,7 @@
     "name": "UK Parliament, Bills site, Fur (Import and Sale) Bill stages",
     "url": "https://bills.parliament.uk/bills/4250/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -2075,7 +1959,7 @@
     "name": "UK Parliament, Bills site, Domestic Abuse (Pets etc) Bill stages",
     "url": "https://bills.parliament.uk/bills/4251/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -2092,7 +1976,7 @@
     "name": "UK Parliament, Bills site, Water Regulation Bill stages",
     "url": "https://bills.parliament.uk/bills/4255/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Withdrawn 2026-11-11",
    "bill_documents": "None yet",
    "routine": true
@@ -2109,7 +1993,7 @@
     "name": "UK Parliament, Bills site, Public Procurement (British Goods and Services) Bill stages",
     "url": "https://bills.parliament.uk/bills/4260/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)"
   },
@@ -2125,7 +2009,7 @@
     "name": "UK Parliament, Bills site, Early Release of Prisoners (Restriction) Bill stages",
     "url": "https://bills.parliament.uk/bills/4262/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -2137,14 +2021,14 @@
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (presentation) bill with no advisor flag. A Bill to make provision about the public ownership and delivery of certain services and utilities by public or not-for-profit enterprises; to establish a body corporate to be known as the Office for Public Value; to confer functions on that body; and for connected purposes. Documents published: none yet.",
+   "why": "Private members' (presentation) bill with no advisor flag. A Bill to make provision about the public ownership and delivery of certain services and utilities by public or not-for-profit enterprises; to establish a body corporate to be known as the Office for Public Value; to confer functions on that body; and for connected purposes. Documents published: yes (6) (Bill text, Explanatory Notes).",
    "source": {
     "name": "UK Parliament, Bills site, Utilities and Services Bill stages",
     "url": "https://bills.parliament.uk/bills/4294/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet",
+   "bill_documents": "Yes (6)",
    "routine": true
   },
   {
@@ -2159,43 +2043,57 @@
     "name": "UK Parliament, Bills site, Flooding Bill stages",
     "url": "https://bills.parliament.uk/bills/4307/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
   {
-   "id": "bill-4312-21262",
-   "date": "2026-12-04",
-   "title": "Commons second reading of the Perinatal Mental Health Assessments Bill",
+   "id": "bill-4019-21270",
+   "date": "2026-12-07",
+   "title": "Lords report stage of the Public Office (Accountability) Bill",
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (presentation) bill with no advisor flag. A Bill to require the provision of mental health assessments in NHS antenatal care for the purpose of identifying those at risk of perinatal mental health problems and making referrals to appropriate support; and for connected purposes. Documents published: yes (4) (Bill text).",
+   "why": "Government bill with no advisor flag. A Bill to Impose a duty on public authorities and public officials to act with candour, transparency and frankness; to make provision for the enforcement of that duty in their dealings with inquiries and investigations; to require public authorities to promote and take steps to maintain ethical conduct within all parts of the authority; to create an offence in relation to public authorities and public officials who mislead the public; to create further offences in relation to the misconduct of persons who hold public office and to abolish the common law offence of misconduct in public office; to make provision enabling persons to participate at inquiries and investigations where the conduct of public authorities may be in issue; and for connected purposes. Documents published: yes (162) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 113 other).",
    "source": {
-    "name": "UK Parliament, Bills site, Perinatal Mental Health Assessments Bill stages",
-    "url": "https://bills.parliament.uk/bills/4312/stages"
+    "name": "UK Parliament, Bills site, Public Office (Accountability) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4019/stages"
    },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons second reading",
-   "bill_documents": "Yes (4)",
-   "routine": true
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords report stage",
+   "bill_documents": "Yes (162)"
   },
   {
-   "id": "bill-4318-21295",
-   "date": "2026-12-04",
-   "title": "Commons second reading of the Submarine Recycling Strategy Bill",
+   "id": "hsra-fund-opens",
+   "date": "2026-12-07",
+   "date_label": "Week of 7 December 2026",
+   "title": "High Street Rental Auctions Fund opens to councils, with funds awarded on a rolling basis",
+   "category": "funding",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Up to £10 million for councils to use rental auction powers on long-empty high street units. Applications are assessed on a rolling basis, so applying early matters more than the closing date.",
+   "source": {
+    "name": "MHCLG, High Street Rental Auctions Fund 2026 to 2028 prospectus, updated 19 November 2026",
+    "url": "https://www.gov.uk/government/publications/high-street-rental-auctions-grants-for-local-authorities/high-street-rental-auctions-fund-2026-to-2028-prospectus"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-03"
+  },
+  {
+   "id": "bill-4030-21281",
+   "date": "2026-12-08",
+   "title": "Lords report stage of the Railways Bill",
    "category": "bill",
    "rag": "g",
    "status": "provisional",
-   "why": "Private members' (ten minute rule) bill with no advisor flag. A Bill to require the Secretary of State to prepare and publish a strategy for recycling decommissioned submarines; and for connected purposes. Documents published: none yet.",
+   "why": "Government bill with no advisor flag. A Bill to make provision about railways and railway services; and for connected purposes. Documents published: yes (252) (Bill text, Explanatory Notes, Impact Assessment, Library briefing, Delegated Powers Memorandum, Committee report, Written evidence, 186 other).",
    "source": {
-    "name": "UK Parliament, Bills site, Submarine Recycling Strategy Bill stages",
-    "url": "https://bills.parliament.uk/bills/4318/stages"
+    "name": "UK Parliament, Bills site, Railways Bill stages",
+    "url": "https://bills.parliament.uk/bills/4030/stages"
    },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet",
-   "routine": true
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords report stage",
+   "bill_documents": "Yes (252)"
   },
   {
    "id": "planning-fees-dec-2026",
@@ -2240,7 +2138,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/theuktourismsatelliteaccountuktsa2024"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "date_label": "December 2026 to January 2027"
   },
   {
@@ -2255,7 +2153,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/trendsinukbusinessdynamismandproductivity2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -2305,6 +2203,22 @@
    "first_logged": "policy-update-2026-11"
   },
   {
+   "id": "dfe-fe-skills-2026-11",
+   "date": "2026-12-10",
+   "title": "Further education and skills statistics, November 2026",
+   "category": "data",
+   "rag": "a",
+   "status": "confirmed",
+   "why": "Apprenticeship starts and further education participation, with local authority detail.",
+   "source": {
+    "name": "DfE, Further education and skills: November 2026, release announcement (rescheduled 9 November 2026)",
+    "url": "https://www.gov.uk/government/statistics/announcements/further-education-and-skills-november-2026"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-10-14",
+   "time": "09:30"
+  },
+  {
    "id": "mhclg-live-table-1012-2026-12-10",
    "date": "2026-12-10",
    "time": "09:30",
@@ -2333,7 +2247,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/lifeexpectancyforlocalareasoftheukbetween2001to2003and2023to2025"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -2353,6 +2267,74 @@
    "first_logged": "whats-new-2026-10-19"
   },
   {
+   "id": "bill-4145-21320",
+   "date": "2026-12-11",
+   "title": "Lords third reading of the Youth Justice Board for England and Wales (Restoration of Powers and Responsibilities) Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (Lords) bill with no advisor flag. A Bill to restore the powers and responsibilities of the Youth Justice Board for England and Wales; and for connected purposes. Documents published: yes (3) (Bill text, Library briefing, Committee report).",
+   "source": {
+    "name": "UK Parliament, Bills site, Youth Justice Board for England and Wales (Restoration of Powers and Responsibilities) Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4145/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords third reading",
+   "bill_documents": "Yes (3)",
+   "routine": true
+  },
+  {
+   "id": "bill-4148-20822",
+   "date": "2026-12-11",
+   "title": "Lords second reading of the Regulated Professions (Freedom of Speech) Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (Lords) bill with no advisor flag. A Bill to protect the freedom of expression of professionally regulated individuals; to impose duties of neutrality on professional regulatory bodies; and to restrict the imposition by such bodies of mandatory training or education of a political, ideological, or social nature. Documents published: yes (2) (Bill text, Committee report).",
+   "source": {
+    "name": "UK Parliament, Bills site, Regulated Professions (Freedom of Speech) Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4148/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords second reading",
+   "bill_documents": "Yes (2)",
+   "routine": true
+  },
+  {
+   "id": "bill-4149-20829",
+   "date": "2026-12-11",
+   "title": "Lords second reading of the Mental Health Support (Sentence of Detention and Imprisonment for Public Protection) Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (Lords) bill with no advisor flag. A bill to make provision to ensure the mental health needs of individuals sentenced to detention and imprisonment for public protection are met; and for connected purposes. Documents published: yes (2) (Committee report, 1 other).",
+   "source": {
+    "name": "UK Parliament, Bills site, Mental Health Support (Sentence of Detention and Imprisonment for Public Protection) Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4149/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords second reading",
+   "bill_documents": "Yes (2)",
+   "routine": true
+  },
+  {
+   "id": "bill-4150-20831",
+   "date": "2026-12-11",
+   "title": "Lords second reading of the Health and Disability Benefits Reform Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (Lords) bill with no advisor flag. A Bill to reform the assessment process for health-related and disability benefits in England and Wales, including the minimum age at which applicants can be assessed and the nature of assessment appointments; and for connected purposes. Documents published: yes (1) (Bill text).",
+   "source": {
+    "name": "UK Parliament, Bills site, Health and Disability Benefits Reform Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4150/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Lords second reading",
+   "bill_documents": "Yes (1)",
+   "routine": true
+  },
+  {
    "id": "ons-gdpmonthlyestimateukoctober2026",
    "date": "2026-12-11",
    "title": "GDP monthly estimate",
@@ -2364,7 +2346,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukoctober2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -2426,7 +2408,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketdecember2026"
    },
-   "verified": "2026-11-19",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -2441,7 +2423,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/internationaltradeinuknationsregionsandcities2024"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -2456,7 +2438,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationuknovember2026"
    },
-   "verified": "2026-11-19",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -2472,7 +2454,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/businessregisterandemploymentsurveybresrevisedresults2024fortheuk"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -2487,7 +2469,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukdecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30",
    "routine": true
   },
@@ -2553,6 +2535,38 @@
    "verified": "2026-11-19"
   },
   {
+   "id": "national-survey-of-businesses-wave-2",
+   "date": "2026-12-17",
+   "time": "09:30",
+   "title": "National Survey of Businesses, wave 2",
+   "category": "survey",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "The second wave of a new quarterly survey of business experiences and challenges, fieldwork September to November 2026.",
+   "source": {
+    "name": "BIST, National Survey of Businesses Wave 2, release announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/national-survey-of-businesses-wave-2"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
+   "id": "skills-england-occupations-in-demand-2026",
+   "date": "2026-12-17",
+   "time": "09:30",
+   "title": "Skills England, occupations in demand 2026",
+   "category": "data",
+   "rag": "a",
+   "status": "confirmed",
+   "why": "The national read on which occupations are in shortage, which feeds skills planning for the borough and the NEMSA skills offer.",
+   "source": {
+    "name": "Skills England, Occupations in demand: 2026, release announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/occupations-in-demand-2026"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
    "id": "dismissal-reengagement-code-consultation",
    "date": "2026-12-17",
    "time": "23:59",
@@ -2599,6 +2613,22 @@
    "first_logged": "policy-update-2026-11"
   },
   {
+   "id": "tpr-future-review-cfe",
+   "date": "2026-12-21",
+   "title": "Call for evidence closes on the Pensions Regulator future review",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Pensions, no local read.",
+   "routine": true,
+   "source": {
+    "name": "DWP, The Pensions Regulator Future Review: Call for Evidence",
+    "url": "https://www.gov.uk/government/calls-for-evidence/the-pensions-regulator-future-review-call-for-evidence"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
    "id": "guided-retirement-consultation",
    "date": "2026-12-22",
    "title": "Consultation closes on guided retirement",
@@ -2640,7 +2670,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesuknovember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -2691,6 +2721,21 @@
    },
    "verified": "2026-11-09",
    "first_logged": "whats-new-2026-11-09"
+  },
+  {
+   "id": "planning-data-standard-consultation",
+   "date": "2026-12-30",
+   "title": "Consultation closes on a data standard for planning applications",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Planning process, no direct economic read.",
+   "source": {
+    "name": "MHCLG, Data standard for planning applications",
+    "url": "https://www.gov.uk/government/consultations/data-standard-for-planning-applications"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
   },
   {
    "id": "consult-shared-cycle-licensing",
@@ -2773,22 +2818,6 @@
    "first_logged": "horizon scan"
   },
   {
-   "id": "milburn-timms-response",
-   "date": "2026-12-31",
-   "date_label": "Before the end of 2026",
-   "title": "Government response to the Milburn and Timms reviews",
-   "category": "policy",
-   "rag": "a",
-   "status": "expected",
-   "why": "Covers young people and work and the PIP review. Feeds our NEET work, where Gateshead is most exposed at 18 to 24.",
-   "source": {
-    "name": "HM Treasury, Budget 2026, 28 October 2026, para 5.21",
-    "url": "https://www.gov.uk/government/publications/budget-2026-document"
-   },
-   "verified": "2026-11-09",
-   "first_logged": "horizon scan"
-  },
-  {
    "id": "ons-businessregisterandemploymentsurveybresprovisionalresults2025revisedresults2024",
    "date": "2026-12-31",
    "title": "BRES, provisional 2025 and revised 2024",
@@ -2802,6 +2831,22 @@
    },
    "verified": "2026-11-09",
    "date_label": "Date to be announced. The 18 November release was cancelled for further quality assurance"
+  },
+  {
+   "id": "plan-for-britain",
+   "date": "2026-12-31",
+   "date_label": "December 2026",
+   "title": "Government publishes its 10-year Plan for Britain",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "Described as a 10-year roadmap to put power into every postcode. It will frame the Rewiring the State Delivery Plan and the youth reforms, and what they mean for NEMSA and the council.",
+   "source": {
+    "name": "No.10, PM speech at the Lord Mayor's Banquet, 16 November 2026",
+    "url": "https://www.gov.uk/government/speeches/pm-speech-at-the-lord-mayors-banquet-16-november-2026"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
   },
   {
    "id": "rewiring-delivery-plan",
@@ -2834,22 +2879,6 @@
    },
    "verified": "2026-11-09",
    "first_logged": "whats-new-2026-09-28"
-  },
-  {
-   "id": "young-people-work-final",
-   "date": "2026-12-31",
-   "title": "Young people and work review final report",
-   "category": "policy",
-   "rag": "a",
-   "status": "expected",
-   "why": "The final report will set out what a participation system for early adulthood should look like. Feeds our NEET work.",
-   "source": {
-    "name": "Young people and work: interim report, 10 August 2026",
-    "url": "https://www.gov.uk/government/publications/young-people-and-work-interim-report"
-   },
-   "verified": "2026-11-09",
-   "date_label": "Later in 2026",
-   "first_logged": "whats-new-2026-08-31"
   },
   {
    "id": "agc-planning-permission",
@@ -2959,6 +2988,21 @@
    "first_logged": "whats-new-2026-11-16"
   },
   {
+   "id": "consult-post16-quals-2028-enterprise",
+   "date": "2027-01-08",
+   "title": "Consultation closes on post-16 qualifications from 2028 in enterprise and professional services",
+   "category": "consultation",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Shapes the post-16 technical offer in business subjects. Skills colleagues may want to respond.",
+   "source": {
+    "name": "DfE, Post-16 level 2 and 3 qualifications 2028: enterprise and professional services",
+    "url": "https://www.gov.uk/government/consultations/post-16-level-2-and-3-qualifications-2028-enterprise-and-professional-services"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
    "id": "data-centres-nps-consultation",
    "date": "2027-01-08",
    "title": "Consultation closes on the draft National Policy Statement for Data Centres",
@@ -3034,7 +3078,7 @@
     "name": "UK Parliament, Bills site, Heritage Public Houses Bill stages",
     "url": "https://bills.parliament.uk/bills/4159/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)"
   },
@@ -3050,7 +3094,7 @@
     "name": "UK Parliament, Bills site, First Cousins (Prohibited Relationships) Bill stages",
     "url": "https://bills.parliament.uk/bills/4162/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3067,7 +3111,7 @@
     "name": "UK Parliament, Bills site, Automated Online Software (Access and Transparency) Bill stages",
     "url": "https://bills.parliament.uk/bills/4170/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (6)"
   },
@@ -3083,7 +3127,7 @@
     "name": "UK Parliament, Bills site, Planning (Solar Power Generation) Bill stages",
     "url": "https://bills.parliament.uk/bills/4173/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -3099,7 +3143,7 @@
     "name": "UK Parliament, Bills site, Battery Energy Storage (Planning and Regulation) Bill stages",
     "url": "https://bills.parliament.uk/bills/4185/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -3115,7 +3159,7 @@
     "name": "UK Parliament, Bills site, Pets (Microchips) Bill stages",
     "url": "https://bills.parliament.uk/bills/4191/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3132,7 +3176,7 @@
     "name": "UK Parliament, Bills site, Ponds (Permitted Development) Bill stages",
     "url": "https://bills.parliament.uk/bills/4198/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -3149,7 +3193,7 @@
     "name": "UK Parliament, Bills site, Vaccine Damage Payment Scheme (UK Covid-19 Inquiry) Bill stages",
     "url": "https://bills.parliament.uk/bills/4203/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3166,7 +3210,7 @@
     "name": "UK Parliament, Bills site, Climate Change Act 2008 (Repeal) Bill stages",
     "url": "https://bills.parliament.uk/bills/4204/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3183,7 +3227,7 @@
     "name": "UK Parliament, Bills site, Covid-19 Vaccine Damage Bill stages",
     "url": "https://bills.parliament.uk/bills/4226/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3200,7 +3244,7 @@
     "name": "UK Parliament, Bills site, Exemption from Value Added Tax (Public Electric Vehicle Charging Points) Bill stages",
     "url": "https://bills.parliament.uk/bills/4231/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3217,7 +3261,7 @@
     "name": "UK Parliament, Bills site, Green Belt (Protection) Bill stages",
     "url": "https://bills.parliament.uk/bills/4232/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -3233,7 +3277,7 @@
     "name": "UK Parliament, Bills site, European Convention on Human Rights (Notification of Withdrawal) Bill stages",
     "url": "https://bills.parliament.uk/bills/4242/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -3250,7 +3294,7 @@
     "name": "UK Parliament, Bills site, Reciprocal Cross-Border Public Services Bill stages",
     "url": "https://bills.parliament.uk/bills/4249/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -3266,7 +3310,7 @@
     "name": "UK Parliament, Bills site, General Medical Council (Fitness to Practise) Rules (Amendment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4272/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3283,7 +3327,7 @@
     "name": "UK Parliament, Bills site, Access to Elected Office Fund (Report) Bill stages",
     "url": "https://bills.parliament.uk/bills/4273/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3300,7 +3344,7 @@
     "name": "UK Parliament, Bills site, Street Works (Penalties for Utility Companies) Bill Bill stages",
     "url": "https://bills.parliament.uk/bills/4274/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3317,7 +3361,7 @@
     "name": "UK Parliament, Bills site, Chalk Streams (Sewerage Investment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4275/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3334,7 +3378,7 @@
     "name": "UK Parliament, Bills site, Vehicle Emissions Trading Schemes Order 2023 (Revocation) Bill stages",
     "url": "https://bills.parliament.uk/bills/4281/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3351,7 +3395,7 @@
     "name": "UK Parliament, Bills site, Student Finance (Review) Bill stages",
     "url": "https://bills.parliament.uk/bills/4300/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3368,7 +3412,7 @@
     "name": "UK Parliament, Bills site, Multi-Academy Trusts (Governance) Bill stages",
     "url": "https://bills.parliament.uk/bills/4314/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3385,7 +3429,24 @@
     "name": "UK Parliament, Bills site, Animal Shelters (Licensing) Bill stages",
     "url": "https://bills.parliament.uk/bills/4317/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet",
+   "routine": true
+  },
+  {
+   "id": "bill-4318-21295",
+   "date": "2027-01-15",
+   "title": "Commons second reading of the Submarine Recycling Strategy Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (ten minute rule) bill with no advisor flag. A Bill to require the Secretary of State to prepare and publish a strategy for recycling decommissioned submarines; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Submarine Recycling Strategy Bill stages",
+    "url": "https://bills.parliament.uk/bills/4318/stages"
+   },
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3402,10 +3463,59 @@
     "name": "UK Parliament, Bills site, Food Labelling (Halal and Kosher Meat) Bill stages",
     "url": "https://bills.parliament.uk/bills/4321/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
+  },
+  {
+   "id": "bill-4328-21332",
+   "date": "2027-01-15",
+   "title": "Commons second reading of the Images (Non-consensual Recording and Distribution) Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (presentation) bill with no advisor flag. A Bill to create offences relating to the non-consensual recording of images of a person, and relating to the distribution of any such images with the purpose of obtaining sexual gratification or of causing alarm, humiliation or distress to that person; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Images (Non-consensual Recording and Distribution) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4328/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet",
+   "routine": true
+  },
+  {
+   "id": "bill-4330-21336",
+   "date": "2027-01-15",
+   "title": "Commons second reading of the Safety of Nurseries (CCTV) Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Digital. A Bill to require the use of closed-circuit television (CCTV) in nurseries; to make provision about the retention, storage, disclosure and review of such CCTV recordings; to make provision about minimum standards and auditing requirements for digital devices used to access CCTV recordings in such settings; and for connected purposes Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Safety of Nurseries (CCTV) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4330/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet"
+  },
+  {
+   "id": "bill-4334-21348",
+   "date": "2027-01-15",
+   "title": "Commons second reading of the Park Homes Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Local. A Bill to make provision about park homes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Park Homes Bill stages",
+    "url": "https://bills.parliament.uk/bills/4334/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet"
   },
   {
    "id": "business-north-east-launch",
@@ -3442,6 +3552,22 @@
    "first_logged": "horizon scan"
   },
   {
+   "id": "uk-harmonised-deprivation",
+   "date": "2027-01-15",
+   "date_label": "December 2026 to January 2027",
+   "title": "UK-harmonised small-area measures of income deprivation and employment deprivation",
+   "category": "data",
+   "rag": "a",
+   "status": "expected",
+   "why": "Small-area income and employment deprivation on a common UK basis, a comparison the English indices cannot give.",
+   "source": {
+    "name": "MHCLG, UK-harmonised measures of income deprivation and employment deprivation, release announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/uk-harmonised-measures-of-income-deprivation-and-employment-deprivation"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
    "id": "ons-gdpmonthlyestimateuknovember2026",
    "date": "2027-01-15",
    "title": "GDP monthly estimate",
@@ -3453,7 +3579,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateuknovember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -3469,7 +3595,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketjanuary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -3484,7 +3610,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukdecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -3500,7 +3626,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukjanuary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "routine": true,
    "time": "09:30"
   },
@@ -3580,7 +3706,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/estimatesofgreenjobsukseptember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "date_label": "January 2027"
   },
   {
@@ -3595,7 +3721,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukdecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -3642,7 +3768,7 @@
     "name": "UK Parliament, Bills site, Group-based Child Sexual Offences (Mandatory Life Sentences) Bill stages",
     "url": "https://bills.parliament.uk/bills/4169/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3659,7 +3785,7 @@
     "name": "UK Parliament, Bills site, Welfare Reform Bill stages",
     "url": "https://bills.parliament.uk/bills/4200/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -3675,7 +3801,7 @@
     "name": "UK Parliament, Bills site, Vehicles (Registration) Bill stages",
     "url": "https://bills.parliament.uk/bills/4213/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3692,7 +3818,7 @@
     "name": "UK Parliament, Bills site, Child Savings Accounts (Mental Capacity and Disability) Bill stages",
     "url": "https://bills.parliament.uk/bills/4256/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3709,26 +3835,9 @@
     "name": "UK Parliament, Bills site, Outdoor Education Bill stages",
     "url": "https://bills.parliament.uk/bills/4259/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
-   "routine": true
-  },
-  {
-   "id": "bill-4261-21088",
-   "date": "2027-01-29",
-   "title": "Commons second reading of the Mental Capacity (Duty to Assess) Bill",
-   "category": "bill",
-   "rag": "g",
-   "status": "provisional",
-   "why": "Private members' (ten minute rule) bill with no advisor flag. A Bill to require persons discharging functions on behalf of certain other persons to assess the mental capacity of those persons in specified circumstances; and for connected purposes. Documents published: none yet.",
-   "source": {
-    "name": "UK Parliament, Bills site, Mental Capacity (Duty to Assess) Bill stages",
-    "url": "https://bills.parliament.uk/bills/4261/stages"
-   },
-   "verified": "2026-11-16",
-   "bill_stage_now": "Commons second reading",
-   "bill_documents": "None yet",
    "routine": true
   },
   {
@@ -3743,10 +3852,26 @@
     "name": "UK Parliament, Bills site, Neurodivergence (Screening and Teacher Training) Bill stages",
     "url": "https://bills.parliament.uk/bills/4265/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Withdrawn 2026-07-15",
    "bill_documents": "None yet",
    "routine": true
+  },
+  {
+   "id": "bill-4310-21258",
+   "date": "2027-01-29",
+   "title": "Commons second reading of the Artificial Intelligence (Consent and Misuse) Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Digital. A Bill to make provision about a requirement for consent to generate a likeness of a person using, or with the assistance of, artificial intelligence; to make further provision relating to that requirement; to make provision about civil action in circumstances where that requirement is not met; to make provision about offences relating to the creating or dissemination of such likenesses; to make provision about duties on providers of artificial intelligence technology in relation to misuse of that technology to generate likenesses; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Artificial Intelligence (Consent and Misuse) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4310/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet"
   },
   {
    "id": "scale-uk-connect-applications",
@@ -3868,7 +3993,7 @@
     "name": "UK Parliament, Bills site, Child-like Sexual Abuse Dolls (Offences) Bill stages",
     "url": "https://bills.parliament.uk/bills/4176/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons report stage",
    "bill_documents": "Yes (8)",
    "routine": true
@@ -3885,7 +4010,7 @@
     "name": "UK Parliament, Bills site, Electricity Works (Small Business Compensation Proposals) Bill stages",
     "url": "https://bills.parliament.uk/bills/4188/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -3901,7 +4026,7 @@
     "name": "UK Parliament, Bills site, Domestic Building Works (Consumer Protection) Bill stages",
     "url": "https://bills.parliament.uk/bills/4197/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3918,7 +4043,7 @@
     "name": "UK Parliament, Bills site, Consumer Insurance (Disclosure and Representations) Bill stages",
     "url": "https://bills.parliament.uk/bills/4210/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3935,7 +4060,7 @@
     "name": "UK Parliament, Bills site, Health Insurance (Exemption from Insurance Premium Tax) Bill stages",
     "url": "https://bills.parliament.uk/bills/4233/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3952,7 +4077,7 @@
     "name": "UK Parliament, Bills site, Highways Act 1980 (Amendment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4234/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -3969,7 +4094,7 @@
     "name": "UK Parliament, Bills site, Lobular Breast Cancer Bill stages",
     "url": "https://bills.parliament.uk/bills/4246/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -3986,9 +4111,26 @@
     "name": "UK Parliament, Bills site, Home Cooling Bill stages",
     "url": "https://bills.parliament.uk/bills/4276/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)"
+  },
+  {
+   "id": "bill-4308-21249",
+   "date": "2027-02-05",
+   "title": "Commons second reading of the Armed Forces Compensation Scheme and War Pension Scheme (Report) Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (presentation) bill with no advisor flag. A Bill to require the Secretary of State to report to Parliament on the potential merits of disregarding compensation received under the War Pension Scheme and Armed Forces Compensation Scheme for the purpose of calculating entitlement to Pension Credit and to other means-tested benefits for which such payments are not disregarded in full; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Armed Forces Compensation Scheme and War Pension Scheme (Report) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4308/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet",
+   "routine": true
   },
   {
    "id": "bill-4326-21324",
@@ -4002,7 +4144,7 @@
     "name": "UK Parliament, Bills site, Compulsory Purchase (Fees) Bill stages",
     "url": "https://bills.parliament.uk/bills/4326/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4018,7 +4160,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukoctobertodecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -4033,7 +4175,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukdecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -4147,7 +4289,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketfebruary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -4177,7 +4319,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukjanuary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "routine": true,
    "time": "07:00"
   },
@@ -4193,7 +4335,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukfebruary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30",
    "routine": true
   },
@@ -4209,7 +4351,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukjanuary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -4225,7 +4367,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/lowcarbonandrenewableenergyeconomyuk2025"
    },
-   "verified": "2026-11-16"
+   "verified": "2026-11-23"
   },
   {
    "id": "ons-householdcostsindicesforukhouseholdgroupsoctobertodecember2026",
@@ -4239,7 +4381,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsoctobertodecember2026"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -4254,7 +4396,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/youngpeoplenotineducationemploymentortrainingneetukfebruary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30"
   },
   {
@@ -4269,7 +4411,7 @@
     "name": "UK Parliament, Bills site, UK Food Labelling (Country of Origin) Bill stages",
     "url": "https://bills.parliament.uk/bills/4192/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4286,7 +4428,7 @@
     "name": "UK Parliament, Bills site, Anonymity of Suspects Bill stages",
     "url": "https://bills.parliament.uk/bills/4217/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4303,7 +4445,7 @@
     "name": "UK Parliament, Bills site, Arm's-Length Bodies (Review) Bill stages",
     "url": "https://bills.parliament.uk/bills/4218/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4320,7 +4462,7 @@
     "name": "UK Parliament, Bills site, National Health Service Co-Funding and Co-Payment Bill stages",
     "url": "https://bills.parliament.uk/bills/4236/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4337,7 +4479,7 @@
     "name": "UK Parliament, Bills site, Freedom of Information Act 2000 (Amendment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4267/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -4354,7 +4496,7 @@
     "name": "UK Parliament, Bills site, Members of Parliament (Prohibition of Second Jobs) (Motion) Bill stages",
     "url": "https://bills.parliament.uk/bills/4270/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -4371,7 +4513,7 @@
     "name": "UK Parliament, Bills site, Road Safety Plans Bill stages",
     "url": "https://bills.parliament.uk/bills/4283/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)"
   },
@@ -4387,7 +4529,7 @@
     "name": "UK Parliament, Bills site, Climate Change Act 2008 (Repeal) (No. 2) Bill stages",
     "url": "https://bills.parliament.uk/bills/4284/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4404,7 +4546,7 @@
     "name": "UK Parliament, Bills site, Residential Use Class (Planning Permission) Bill stages",
     "url": "https://bills.parliament.uk/bills/4327/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4423,6 +4565,37 @@
    "verified": "2026-09-28"
   },
   {
+   "id": "milburn-timms-response",
+   "date": "2027-02-28",
+   "date_label": "New year 2027",
+   "title": "Welfare White Paper responding to the Milburn and Timms reviews",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "The government will set out next steps on welfare reform in the coming weeks and publish a White Paper in the new year, followed by legislation. Feeds our NEET work, where Gateshead is most exposed at 18 to 24.",
+   "source": {
+    "name": "DWP, Government commits to new settlement for young people and to invest in success rather than pay for failure, 17 November 2026",
+    "url": "https://www.gov.uk/government/news/government-commits-to-new-settlement-for-young-people-and-to-invest-in-success-rather-than-pay-for-failure"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "horizon scan"
+  },
+  {
+   "id": "ons-workingandworklesshouseholdsintheukoctobertodecember2026",
+   "date": "2027-03-03",
+   "title": "Working and workless households, October to December 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Household worklessness context.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/workingandworklesshouseholdsintheukoctobertodecember2026"
+   },
+   "verified": "2026-11-23",
+   "time": "09:30"
+  },
+  {
    "id": "bill-4187-20908",
    "date": "2027-03-05",
    "title": "Commons second reading of the Telecommunications (Fixed-term Contracts) Bill",
@@ -4434,7 +4607,7 @@
     "name": "UK Parliament, Bills site, Telecommunications (Fixed-term Contracts) Bill stages",
     "url": "https://bills.parliament.uk/bills/4187/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4450,7 +4623,7 @@
     "name": "UK Parliament, Bills site, Public Sector Equality Duty (Repeal) Bill stages",
     "url": "https://bills.parliament.uk/bills/4189/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4467,7 +4640,7 @@
     "name": "UK Parliament, Bills site, Caravan Site Licensing (Exemption of Motor Homes) Bill stages",
     "url": "https://bills.parliament.uk/bills/4224/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4483,7 +4656,7 @@
     "name": "UK Parliament, Bills site, Children’s Clothing (Value Added Tax) Bill stages",
     "url": "https://bills.parliament.uk/bills/4225/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4500,7 +4673,7 @@
     "name": "UK Parliament, Bills site, NHS England (Alternative Treatment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4237/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4517,7 +4690,7 @@
     "name": "UK Parliament, Bills site, Public Health (Control of Disease) Act 1984 (Amendment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4238/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4534,7 +4707,7 @@
     "name": "UK Parliament, Bills site, Planning Application Consultations (Mobile Network Operators) Bill stages",
     "url": "https://bills.parliament.uk/bills/4243/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4550,7 +4723,7 @@
     "name": "UK Parliament, Bills site, Leisure and Fitness Facilities (Value Added Tax) Bill stages",
     "url": "https://bills.parliament.uk/bills/4244/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4567,7 +4740,7 @@
     "name": "UK Parliament, Bills site, Hong Kong Economic and Trade Office Act 1996 (Repeal) Bill stages",
     "url": "https://bills.parliament.uk/bills/4245/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4584,9 +4757,26 @@
     "name": "UK Parliament, Bills site, Planning and Development (Community Infrastructure) Bill stages",
     "url": "https://bills.parliament.uk/bills/4299/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
+  },
+  {
+   "id": "bill-4312-21262",
+   "date": "2027-03-05",
+   "title": "Commons second reading of the Perinatal Mental Health Assessments Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (presentation) bill with no advisor flag. A Bill to require the provision of mental health assessments in NHS antenatal care for the purpose of identifying those at risk of perinatal mental health problems and making referrals to appropriate support; and for connected purposes. Documents published: yes (4) (Bill text).",
+   "source": {
+    "name": "UK Parliament, Bills site, Perinatal Mental Health Assessments Bill stages",
+    "url": "https://bills.parliament.uk/bills/4312/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "Yes (4)",
+   "routine": true
   },
   {
    "id": "bill-4322-21311",
@@ -4600,7 +4790,7 @@
     "name": "UK Parliament, Bills site, Fashion Supply Chain (Code and Adjudicator) Bill stages",
     "url": "https://bills.parliament.uk/bills/4322/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4617,7 +4807,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukjanuary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -4633,7 +4823,7 @@
     "name": "UK Parliament, Bills site, Dementia (Specialist Support) Bill stages",
     "url": "https://bills.parliament.uk/bills/4182/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4650,7 +4840,7 @@
     "name": "UK Parliament, Bills site, Chalk Streams (UNESCO Natural World Heritage Site) Bill stages",
     "url": "https://bills.parliament.uk/bills/4193/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4667,7 +4857,7 @@
     "name": "UK Parliament, Bills site, Illegal Immigration (Offences) Bill stages",
     "url": "https://bills.parliament.uk/bills/4235/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4684,7 +4874,7 @@
     "name": "UK Parliament, Bills site, Regulatory Impact Assessments Bill stages",
     "url": "https://bills.parliament.uk/bills/4239/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4701,7 +4891,7 @@
     "name": "UK Parliament, Bills site, Medical Services (Rural Areas) Bill stages",
     "url": "https://bills.parliament.uk/bills/4257/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4718,7 +4908,7 @@
     "name": "UK Parliament, Bills site, Energy and Digital Infrastructure (Planning) Bill stages",
     "url": "https://bills.parliament.uk/bills/4269/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4734,10 +4924,42 @@
     "name": "UK Parliament, Bills site, Military Operations Bill stages",
     "url": "https://bills.parliament.uk/bills/4286/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
+  },
+  {
+   "id": "bill-4329-21333",
+   "date": "2027-03-12",
+   "title": "Commons first reading of the Abattoir Services Etc. Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Local. A Bill to make provision about the designation of abattoir services as Critical National Infrastructure; to place a duty on certain persons to ensure the provision of adequate meat production infrastructure, including abattoir services; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Abattoir Services Etc. Bill stages",
+    "url": "https://bills.parliament.uk/bills/4329/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons first reading",
+   "bill_documents": "None yet"
+  },
+  {
+   "id": "bill-4329-21334",
+   "date": "2027-03-12",
+   "title": "Commons second reading of the Abattoir Services Etc. Bill",
+   "category": "bill",
+   "rag": "a",
+   "status": "provisional",
+   "why": "Flagged Local. A Bill to make provision about the designation of abattoir services as Critical National Infrastructure; to place a duty on certain persons to ensure the provision of adequate meat production infrastructure, including abattoir services; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Abattoir Services Etc. Bill stages",
+    "url": "https://bills.parliament.uk/bills/4329/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons first reading",
+   "bill_documents": "None yet"
   },
   {
    "id": "npps-2027",
@@ -4783,7 +5005,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketmarch2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -4812,7 +5034,7 @@
     "name": "UK Parliament, Bills site, Mobile Homes Bill stages",
     "url": "https://bills.parliament.uk/bills/4180/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4828,7 +5050,7 @@
     "name": "UK Parliament, Bills site, In-Person Banking Services Bill stages",
     "url": "https://bills.parliament.uk/bills/4181/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -4845,7 +5067,7 @@
     "name": "UK Parliament, Bills site, Scotland (Independence Referendum) Bill stages",
     "url": "https://bills.parliament.uk/bills/4194/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -4862,7 +5084,7 @@
     "name": "UK Parliament, Bills site, Hospitality (Value Added Tax) Bill stages",
     "url": "https://bills.parliament.uk/bills/4196/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4878,7 +5100,7 @@
     "name": "UK Parliament, Bills site, Rule of Law (Enforcement by Public Authorities) Bill stages",
     "url": "https://bills.parliament.uk/bills/4240/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4895,7 +5117,7 @@
     "name": "UK Parliament, Bills site, Vaccine Damage Payments Act 1979 (Review) Bill stages",
     "url": "https://bills.parliament.uk/bills/4241/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4912,7 +5134,24 @@
     "name": "UK Parliament, Bills site, Occupied Palestinian Territory (Trade with Israeli Settlements) Bill stages",
     "url": "https://bills.parliament.uk/bills/4252/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet",
+   "routine": true
+  },
+  {
+   "id": "bill-4261-21088",
+   "date": "2027-03-19",
+   "title": "Commons second reading of the Mental Capacity (Duty to Assess) Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (ten minute rule) bill with no advisor flag. A Bill to require persons discharging functions on behalf of certain other persons to assess the mental capacity of those persons in specified circumstances; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Mental Capacity (Duty to Assess) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4261/stages"
+   },
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4929,7 +5168,7 @@
     "name": "UK Parliament, Bills site, Maximum Workplace Temperature Bill stages",
     "url": "https://bills.parliament.uk/bills/4263/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4946,7 +5185,7 @@
     "name": "UK Parliament, Bills site, Short-term Let Accommodation Bill stages",
     "url": "https://bills.parliament.uk/bills/4266/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -4962,7 +5201,7 @@
     "name": "UK Parliament, Bills site, Hunting Act 2004 (Amendment) Bill stages",
     "url": "https://bills.parliament.uk/bills/4268/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "Yes (4)",
    "routine": true
@@ -4979,7 +5218,7 @@
     "name": "UK Parliament, Bills site, Greyhound Racing Bill stages",
     "url": "https://bills.parliament.uk/bills/4282/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -4996,7 +5235,7 @@
     "name": "UK Parliament, Bills site, Rural Communities (Public Services and Energy) Bill stages",
     "url": "https://bills.parliament.uk/bills/4298/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -5012,7 +5251,7 @@
     "name": "UK Parliament, Bills site, Hares Bill stages",
     "url": "https://bills.parliament.uk/bills/4306/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -5029,7 +5268,7 @@
     "name": "UK Parliament, Bills site, Wet Wipes (Labelling, Sale and Marketing) Bill stages",
     "url": "https://bills.parliament.uk/bills/4309/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -5046,7 +5285,7 @@
     "name": "UK Parliament, Bills site, Utilities (Social Tariff) Bill stages",
     "url": "https://bills.parliament.uk/bills/4311/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -5062,7 +5301,7 @@
     "name": "UK Parliament, Bills site, Developer Contributions (Infrastructure Delivery) Bill stages",
     "url": "https://bills.parliament.uk/bills/4315/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
   },
@@ -5078,9 +5317,26 @@
     "name": "UK Parliament, Bills site, Online Platforms (Regulation) Bill stages",
     "url": "https://bills.parliament.uk/bills/4324/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet"
+  },
+  {
+   "id": "bill-4333-21346",
+   "date": "2027-03-19",
+   "title": "Commons second reading of the Future Generations (Policy Impact) Bill",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (presentation) bill with no advisor flag. A Bill to require public bodies to have regard to the impacts of policy decisions on future generations and the sustainable development principle; to require the assessment and measurement of the long-term effects of such decisions; to provide for reports to Parliament; and for connected purposes. Documents published: none yet.",
+   "source": {
+    "name": "UK Parliament, Bills site, Future Generations (Policy Impact) Bill stages",
+    "url": "https://bills.parliament.uk/bills/4333/stages"
+   },
+   "verified": "2026-11-23",
+   "bill_stage_now": "Commons second reading",
+   "bill_documents": "None yet",
+   "routine": true
   },
   {
    "id": "ons-publicsectorfinancesukfebruary2027",
@@ -5094,7 +5350,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukfebruary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -5110,7 +5366,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukfebruary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "routine": true,
    "time": "07:00"
   },
@@ -5126,7 +5382,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukmarch2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30",
    "routine": true
   },
@@ -5315,7 +5571,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukfebruary2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -5331,7 +5587,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketapril2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -5346,7 +5602,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukmarch2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -5362,7 +5618,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukmarch2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -5378,7 +5634,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukapril2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "routine": true,
    "time": "09:30"
   },
@@ -5394,7 +5650,7 @@
     "name": "UK Parliament, Bills site, English Ethnic Identity (Census Particulars) Bill stages",
     "url": "https://bills.parliament.uk/bills/4323/stages"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "bill_stage_now": "Commons second reading",
    "bill_documents": "None yet",
    "routine": true
@@ -5556,7 +5812,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpfirstquarterlyestimateukjanuarytomarch2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -5571,7 +5827,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/gdpmonthlyestimateukmarch2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -5603,7 +5859,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/uklabourmarketmay2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00"
   },
   {
@@ -5618,7 +5874,7 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/consumerpriceinflationukapril2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "07:00",
    "routine": true
   },
@@ -5634,9 +5890,54 @@
     "name": "ONS release calendar",
     "url": "https://www.ons.gov.uk/releases/privaterentandhousepricesukmay2027"
    },
-   "verified": "2026-11-16",
+   "verified": "2026-11-23",
    "time": "09:30",
    "routine": true
+  },
+  {
+   "id": "ons-publicsectorfinancesukapril2027",
+   "date": "2027-05-25",
+   "title": "Public sector finances",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Fiscal backdrop.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukapril2027"
+   },
+   "verified": "2026-11-23",
+   "time": "07:00",
+   "routine": true
+  },
+  {
+   "id": "ons-longterminternationalmigrationprovisionalyearendingdecember2026",
+   "date": "2027-05-27",
+   "title": "Long-term international migration, year ending December 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Population change context.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/longterminternationalmigrationprovisionalyearendingdecember2026"
+   },
+   "verified": "2026-11-23"
+  },
+  {
+   "id": "ons-householdcostsindicesforukhouseholdgroupsjanuarytomarch2027",
+   "date": "2027-05-28",
+   "title": "Household Costs Indices, January to March 2027",
+   "category": "data",
+   "rag": "g",
+   "status": "confirmed",
+   "why": "Feeds the cost-of-living index.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/householdcostsindicesforukhouseholdgroupsjanuarytomarch2027"
+   },
+   "verified": "2026-11-23",
+   "time": "09:30"
   },
   {
    "id": "civil-service-review-2027",
@@ -5653,6 +5954,22 @@
    },
    "verified": "2026-11-16",
    "first_logged": "whats-new-2026-11-16"
+  },
+  {
+   "id": "local-youth-services-2027",
+   "date": "2027-06-30",
+   "date_label": "From 2027",
+   "title": "Locally led youth services start to roll out, shaped by mayors and local leaders",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "The government's first step on the Milburn Review. For 18 to 24 year olds not in education or work it becomes the main route into support, which is where Gateshead is most exposed.",
+   "source": {
+    "name": "DWP, Government commits to new settlement for young people and to invest in success rather than pay for failure, 17 November 2026",
+    "url": "https://www.gov.uk/government/news/government-commits-to-new-settlement-for-young-people-and-to-invest-in-success-rather-than-pay-for-failure"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
   },
   {
    "id": "spending-review-2027",
@@ -5733,6 +6050,22 @@
    "date_label": "November 2027"
   },
   {
+   "id": "cost-control-framework-sr2027",
+   "date": "2027-12-31",
+   "date_label": "2027 Spending Review",
+   "title": "Comprehensive Cost Control Framework for industrial electricity costs introduced at the 2027 Spending Review",
+   "category": "policy",
+   "rag": "a",
+   "status": "expected",
+   "why": "The Industrial Strategy Advisory Council looks to it to bring down energy costs for manufacturers over 10 years, which matters to the borough's energy-intensive firms.",
+   "source": {
+    "name": "HM Treasury, Budget 2026, 28 October 2026",
+    "url": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
    "id": "strategic-authorities-2027",
    "date": "2027-12-31",
    "title": "Every area to have, or be establishing, a strategic authority",
@@ -5748,6 +6081,21 @@
    "date_label": "End of 2027"
   },
   {
+   "id": "uk-eu-ets-link",
+   "date": "2028-01-01",
+   "title": "UK and EU emissions trading schemes linked, exempting steel and aluminium exports from the EU carbon border tax",
+   "category": "policy",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Removes the EU carbon border tax on about £6.5 billion of UK exports, including steel and aluminium, a cost for manufacturers selling metals into the EU. Legislation is due in 2027.",
+   "source": {
+    "name": "Cabinet Office, UK/EU Summit 2026 key documents (explainers), 20 November 2026",
+    "url": "https://www.gov.uk/government/publications/ukeu-summit-2026-key-documents"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
+  },
+  {
    "id": "hsra-fund-closes",
    "date": "2028-01-31",
    "title": "High Street Rental Auctions Fund closes, or earlier if the money is allocated",
@@ -5761,6 +6109,21 @@
    },
    "verified": "2026-11-03",
    "first_logged": "whats-new-2026-11-03"
+  },
+  {
+   "id": "uk-eu-sps-agreement",
+   "date": "2028-03-01",
+   "title": "UK-EU food and drink agreement applies, ending most checks and Export Health Certificates",
+   "category": "policy",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Cuts costs for food producers and wholesalers trading with the EU. It applies subject to UK and EU procedures, through a European Partnership Bill.",
+   "source": {
+    "name": "Cabinet Office, UK/EU Summit 2026 key documents (explainers), 20 November 2026",
+    "url": "https://www.gov.uk/government/publications/ukeu-summit-2026-key-documents"
+   },
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
   },
   {
    "id": "visitor-levy-plans",
@@ -5828,20 +6191,20 @@
    "first_logged": "whats-new-2026-09-28"
   },
   {
-   "id": "jobs-guarantee-gb-rollout",
-   "date": "2026-11-30",
-   "date_label": "From the end of November",
-   "title": "Jobs Guarantee rolls out across Great Britain",
+   "id": "uk-eu-youth-experience-scheme",
+   "date": "2030-01-31",
+   "date_label": "No later than January 2030",
+   "title": "First young people travel under the UK-EU Youth Experience Scheme",
    "category": "policy",
-   "rag": "a",
+   "rag": "g",
    "status": "expected",
-   "why": "A fully funded six-month job for 18-24 year olds on Universal Credit and looking for work after 18 months out of work, falling to 12 months from April 2027.",
+   "why": "18 to 31 year olds can live, work and study in the EU for up to three years, and EU young people here. No direct local read.",
    "source": {
-    "name": "DWP, 90,000 young people furthest from work to be given guaranteed job, no matter where they live, 14 November 2026",
-    "url": "https://www.gov.uk/government/news/90000-young-people-furthest-from-work-to-be-given-guaranteed-job-no-matter-where-they-live"
+    "name": "Cabinet Office, UK/EU Summit 2026 key documents, Youth Experience Scheme explainer, 20 November 2026",
+    "url": "https://www.gov.uk/government/publications/ukeu-summit-2026-key-documents"
    },
-   "verified": "2026-11-19",
-   "first_logged": "economic-update-2026-11"
+   "verified": "2026-11-23",
+   "first_logged": "whats-new-2026-11-23"
   }
  ],
  "pending_verification": [
@@ -6027,6 +6390,34 @@
    "added": 1,
    "changed": 6,
    "removed": 0
+  },
+  {
+   "date": "2026-11-23",
+   "run": "whats-new-2026-11-23",
+   "note": "ONS sweep (4 added, 1 changed, 9 retired to archive) and bills sweep both applied. Hand-added from the edition, all verified at source on 23 November 2026: the Plan for Britain (No.10, next month), locally led youth services from 2027 (government response to the Milburn Review), the UK-EU carbon market link (1 January 2028) and food agreement (1 March 2028), Skills England occupations in demand and the National Survey of Businesses wave 2 (both 17 December), UK-harmonised deprivation measures, two consultations and a call for evidence, and the rental auctions fund deadline. Moved: rental auctions fund opening to the week of 7 December, and the Milburn and Timms response to a White Paper in the new year. The Milburn Review and the young people and work final report marked published on 17 November. Red deadlines before 30 November re-read at source and unchanged. After the pre-publish check: further education and skills statistics moved to 10 December, and the Cost Control Framework (2027 Spending Review) and the Youth Experience Scheme added.",
+   "added": [
+    "plan-for-britain",
+    "local-youth-services-2027",
+    "uk-eu-ets-link",
+    "uk-eu-sps-agreement",
+    "skills-england-occupations-in-demand-2026",
+    "national-survey-of-businesses-wave-2",
+    "uk-harmonised-deprivation",
+    "planning-data-standard-consultation",
+    "consult-post16-quals-2028-enterprise",
+    "tpr-future-review-cfe",
+    "cost-control-framework-sr2027",
+    "uk-eu-youth-experience-scheme"
+   ],
+   "changed": [
+    "milburn-review-report: expected -> published 17 November 2026",
+    "uk-eu-summit-2026: marked published",
+    "hsra-fund-opens: week of 23 November -> week of 7 December 2026",
+    "milburn-timms-response: before the end of 2026 -> White Paper in the new year 2027",
+    "young-people-work-final: expected -> published 17 November 2026",
+    "dfe-fe-skills-2026-11: 26 November -> 10 December 2026 (found by the pre-publish check)"
+   ],
+   "removed": []
   }
  ],
  "archive": [
@@ -6771,6 +7162,187 @@
    "verified": "2026-11-09",
    "date_label": "From November 2026",
    "first_logged": "policy-update-2026-07"
+  },
+  {
+   "id": "pmi-uk-manufacturing-pmi-2026-11-02",
+   "date": "2026-11-02",
+   "time": "09:30",
+   "title": "UK Manufacturing PMI",
+   "category": "survey",
+   "rag": "g",
+   "status": "published",
+   "why": "National manufacturing conditions, including the split by firm size.",
+   "source": {
+    "name": "S&P Global, PMI release calendar",
+    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
+   },
+   "verified": "2026-11-02",
+   "routine": true,
+   "first_logged": "whats-new-2026-10-02"
+  },
+  {
+   "id": "chsf-close",
+   "date": "2026-11-02",
+   "title": "Council Housebuilding Support Fund bidding window closes",
+   "category": "funding",
+   "rag": "r",
+   "status": "published",
+   "why": "Support for councils to increase housebuilding. Applicants hear from November 2026, and further windows are expected in April 2027 and April 2028. One proposal per council in each window, up to £300,000 (guidance updated 7 October 2026).",
+   "source": {
+    "name": "MHCLG, Council Housebuilding Support Fund: how to apply",
+    "url": "https://www.gov.uk/guidance/council-housebuilding-support-fund-how-to-apply"
+   },
+   "verified": "2026-11-02",
+   "time": "14:00",
+   "action": "Ask housing and development colleagues whether Gateshead is bidding",
+   "first_logged": "whats-new-2026-09-21"
+  },
+  {
+   "id": "dwp-employment-disabled-people-2026",
+   "date": "2026-11-04",
+   "time": "09:30",
+   "title": "The Employment of Disabled People 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "published",
+   "why": "Disability employment rates, context for the inactivity work.",
+   "source": {
+    "name": "DWP statistics announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/the-employment-of-disabled-people-2026"
+   },
+   "verified": "2026-11-09",
+   "first_logged": "whats-new-2026-10-14"
+  },
+  {
+   "id": "pmi-uk-services-pmi-2026-11-04",
+   "date": "2026-11-04",
+   "time": "09:30",
+   "title": "UK Services PMI",
+   "category": "survey",
+   "rag": "g",
+   "status": "published",
+   "why": "National services activity for October.",
+   "source": {
+    "name": "S&P Global PMI release calendar",
+    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
+   },
+   "routine": true,
+   "verified": "2026-11-02",
+   "first_logged": "whats-new-2026-10-19"
+  },
+  {
+   "id": "mpc-2026-11-05",
+   "date": "2026-11-05",
+   "title": "Bank of England interest rate decision, with Monetary Policy Report",
+   "category": "monetary",
+   "rag": "a",
+   "status": "published",
+   "why": "Bank Rate rose by 0.25 percentage points to 4% on a vote of 8 to 1, with one member voting for 4.25%. The Bank now expects CPI inflation to rise to around 5% by the middle of next year.",
+   "source": {
+    "name": "Bank of England, Monetary Policy Summary and minutes, November 2026, 5 November 2026",
+    "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
+   },
+   "verified": "2026-11-09"
+  },
+  {
+   "id": "dbt-business-population-2026",
+   "date": "2026-11-05",
+   "time": "09:30",
+   "title": "Business population estimates 2026",
+   "category": "data",
+   "rag": "g",
+   "status": "published",
+   "why": "Private sector business counts for the UK and regions, including the unregistered businesses that UK Business Counts leaves out. North East context for the business base.",
+   "source": {
+    "name": "DBT, Business population estimates 2026, release announcement",
+    "url": "https://www.gov.uk/government/statistics/announcements/business-population-estimates-2026"
+   },
+   "verified": "2026-11-09",
+   "first_logged": "whats-new-2026-10-02"
+  },
+  {
+   "id": "ons-localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024",
+   "date": "2026-11-05",
+   "title": "Local sites and employees linked to international trade in services",
+   "category": "data",
+   "rag": "g",
+   "status": "published",
+   "why": "Subnational trade exposure.",
+   "source": {
+    "name": "ONS release calendar",
+    "url": "https://www.ons.gov.uk/releases/localsitesandnumbersofemployeeslinkedtocompaniesinvolvedininternationaltradeinservicesbysubnationalareasoftheuk2024"
+   },
+   "verified": "2026-11-09",
+   "time": "09:30"
+  },
+  {
+   "id": "pmi-uk-construction-pmi-2026-11-05",
+   "date": "2026-11-05",
+   "time": "09:30",
+   "title": "UK Construction PMI",
+   "category": "survey",
+   "rag": "g",
+   "status": "published",
+   "why": "National construction activity for October.",
+   "source": {
+    "name": "S&P Global PMI release calendar",
+    "url": "https://www.pmi.spglobal.com/Public/Release/ReleaseDates?language=en"
+   },
+   "routine": true,
+   "verified": "2026-11-02",
+   "first_logged": "whats-new-2026-10-19"
+  },
+  {
+   "id": "ai-clean-energy-cfe",
+   "date": "2026-11-06",
+   "time": "23:45",
+   "title": "Call for evidence closes on an AI-enabled clean energy system",
+   "category": "consultation",
+   "rag": "g",
+   "status": "published",
+   "why": "Context for the AI testbed objective. No response is proposed.",
+   "source": {
+    "name": "DESNZ, Vision for an AI-enabled clean energy system, 8 September 2026",
+    "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system"
+   },
+   "verified": "2026-11-09",
+   "first_logged": "policy-update-2026-10"
+  },
+  {
+   "id": "bill-4142-21209",
+   "date": "2026-11-23",
+   "title": "Lords committee stage of the Creative Education Access Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (Lords) bill with no advisor flag. A Bill to make provision for a minimum standard of access to creative and cultural education in state-funded schools in England and Wales; to promote partnerships between schools and the creative sector; and for connected purposes. Documents published: yes (3) (Bill text, Library briefing, Committee report).",
+   "source": {
+    "name": "UK Parliament, Bills site, Creative Education Access Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4142/stages"
+   },
+   "verified": "2026-11-16",
+   "bill_stage_now": "Lords committee stage",
+   "bill_documents": "Yes (3)",
+   "routine": true,
+   "retired": "Dropped from the Bills site schedule before its date, found 2026-11-23"
+  },
+  {
+   "id": "bill-4139-21280",
+   "date": "2026-12-01",
+   "title": "Lords committee stage of the British Sovereignty Protection (Chagos Islands) Bill [HL]",
+   "category": "bill",
+   "rag": "g",
+   "status": "provisional",
+   "why": "Private members' (Lords) bill with no advisor flag. A Bill to affirm and protect the sovereignty of the United Kingdom over the Chagos Islands and the British Indian Ocean Territory; to make provision restricting the cession or transfer of sovereignty without the approval of Parliament and without the consent of the Chagossian people; to provide for the protection of the Territory’s strategic and defence importance; and for connected purposes. Documents published: yes (3) (Bill text, Library briefing, Committee report).",
+   "source": {
+    "name": "UK Parliament, Bills site, British Sovereignty Protection (Chagos Islands) Bill [HL] stages",
+    "url": "https://bills.parliament.uk/bills/4139/stages"
+   },
+   "verified": "2026-11-16",
+   "bill_stage_now": "Lords committee stage",
+   "bill_documents": "Yes (3)",
+   "routine": true,
+   "retired": "Dropped from the Bills site schedule before its date, found 2026-11-23"
   }
  ]
 }
