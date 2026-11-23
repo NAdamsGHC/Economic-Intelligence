@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-23",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -1086,6 +1086,54 @@
    "found_by": "Verification",
    "what": "Left out the Jobs Guarantee rollout across Great Britain from the end of November, announced in the window, which reaches the claimant group the item covers",
    "fix": "Added with the DWP source; added to the Horizon Calendar",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-88",
+   "found": "2026-11-23",
+   "product": "What's New, 23 November 2026",
+   "stage": "Caught by checks",
+   "type": "Source or edition",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Coming Up gave 26 November for the further education and skills statistics, which DfE moved to 10 December on 9 November. The held Horizon Calendar date was not re-checked",
+   "fix": "Moved to 10 December in the edition and on the Horizon Calendar",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-89",
+   "found": "2026-11-23",
+   "product": "What's New, 23 November 2026",
+   "stage": "Caught by checks",
+   "type": "Code or reference",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "The departmental log reconciliation undercounted HM Treasury rows (22, not 27) and watched-body rows (6, not 7) because the build matched only the first listed organisation",
+   "fix": "Counts corrected in the build script and the reconciliation reworded",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-90",
+   "found": "2026-11-23",
+   "product": "What's New, 23 November 2026",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Said Gateshead is most exposed among 18 to 24 year olds, with no published figure behind it, resting on our own earlier work",
+   "fix": "Replaced with what the review itself says about responsibility falling away after age 18",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-91",
+   "found": "2026-11-23",
+   "product": "What's New, 23 November 2026",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Left out the October claimant count and the private rent and house prices release, both with Gateshead figures and both trailed in the previous edition's Coming Up",
+   "fix": "Claimant count item added from a fresh NOMIS pull, with the rents release noted",
    "status": "Closed"
   }
  ]
