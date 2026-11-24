@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "rules_from": "2026-10-16",
  "about": "Every material error found in our work, who or what produced it, how it was found and what changed. Register rule P10. The page transparency/performance-log.html is generated from this file by build/transparency/build_performance_log.py. Never edit an entry after it is written except to close it.",
  "functions": {
@@ -1134,6 +1134,54 @@
    "found_by": "Verification",
    "what": "Left out the October claimant count and the private rent and house prices release, both with Gateshead figures and both trailed in the previous edition's Coming Up",
    "fix": "Claimant count item added from a fresh NOMIS pull, with the rents release noted",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-92",
+   "found": "2026-11-24",
+   "product": "Gateshead Productivity 2024 dashboard",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Data and analysis",
+   "found_by": "Verification",
+   "what": "Headlined an indicative real output per hour fall of 4.4% since 2019 (KPI, ranks and conclusion) when the unsmoothed series swings with the base year: from 2018 it is a rise of 7.1%",
+   "fix": "Real KPI and ranks withdrawn. The narrative and charts now show both base years and say real change cannot be measured reliably",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-93",
+   "found": "2026-11-24",
+   "product": "Gateshead Productivity 2024 dashboard",
+   "stage": "Caught by checks",
+   "type": "Unsupported claim",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Said the component approach lifts pound levels in every year (false for 2007), called 15 coded combined authority areas all of England's (London not published as one), and said neighbours 'started in a similar position'",
+   "fix": "Reworded to almost every year, the coded areas with London noted, and economies similar to Gateshead's",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-94",
+   "found": "2026-11-24",
+   "product": "Gateshead Productivity 2024 dashboard",
+   "stage": "Caught by checks",
+   "type": "Process",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "About tab said the build checks the real method against the published NEMSA series, but the check was only a printout in an analysis script",
+   "fix": "Assert added to build_data.py (largest gap 0.38 index points), with a note that it does not test one authority's volatility",
+   "status": "Closed"
+  },
+  {
+   "id": "E-2026-95",
+   "found": "2026-11-24",
+   "product": "Gateshead Productivity 2024 dashboard",
+   "stage": "Caught by checks",
+   "type": "Completeness",
+   "function": "Production",
+   "found_by": "Verification",
+   "what": "Left out the ONS caveat that its hours measure is transitional, the per job change since 2019, Gateshead's slowest cash growth of the NEMSA seven and its second-largest index fall in the North East, the pharmaceutical allocation caveat, and tied ranks",
+   "fix": "All added. Ranks now share a place on ties",
    "status": "Closed"
   }
  ]

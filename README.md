@@ -14,8 +14,9 @@ Comparator groups used throughout: the **NEMSA seven** (the seven councils of th
 
 | ONS topic | Dashboard | Theme | Size |
 |---|---|---|---|
-| **Economy** | [NOMIS Quick Look](economy/nomis-quick-look.html) | The most-run NOMIS queries for Gateshead answered on one page - claimant count, BRES employees, jobs density, population estimates, UK Business Counts and the Annual Population Survey at their latest published vintage, with full breakdowns, confidence intervals drawn on every survey estimate, one-click copy in the house citation format, and a vintage flag on every dataset | 72 KB |
+| **Economy** | [NOMIS Quick Look](economy/nomis-quick-look.html) | The most-run NOMIS queries for Gateshead answered on one page - claimant count, BRES employees, jobs density, population estimates, UK Business Counts and the Annual Population Survey at their latest published edition, with full breakdowns, confidence intervals drawn on every survey estimate, one-click copy in the house citation format, and a edition flag on every dataset | 72 KB |
 | **Economy** | [GVA 2024](economy/gva-2024.html) | Balanced GVA 1998–2024 (23 September 2026 release) in cash and real terms, industry structure, NEMSA seven and statistical neighbours, all-authority league table, revisions against the previous edition | 385 KB |
+| **Economy** | [Productivity 2024](economy/productivity-2024.html) | GVA per hour worked and per filled job 2002–2024 (24 November 2026 release), trends explorer, growth by period, rankings of every UK authority, NEMSA seven, wider North East and statistical neighbours, revisions, written narrative | 768 KB |
 | **Economy** | [Productivity & GVA](economy/productivity.html) | Balanced GVA (current price & real), output per hour / per job, sectors, concentration risk, benchmarking vs NE / UK / statistical neighbours | 0.49 MB |
 | **Economy** | [GDHI — explorer + per-head benchmarking](economy/gdhi.html) | Gross Disposable Household Income — official per-head benchmarking 1997–2023 (NEMSA seven, ONS economic statistical neighbours, 361-LAD league table) plus the small-area explorer: UK regional accounts, LSOA choropleth, inequality | 9.4 MB |
 | **Economy** | [ELS scorecard — all local indicators](economy/els-scorecard.html) ⭐ | Every ONS Explore Local Statistics indicator with Gateshead data — 88 indicators, 10 domains — ranked/quartiled vs all UK LADs, benchmarked vs England/UK, NE, the NEMSA seven and statistical neighbours, with per-indicator Explore view | 290 KB |
@@ -24,7 +25,7 @@ Comparator groups used throughout: the **NEMSA seven** (the seven councils of th
 | **People, population and community** | [Gateshead Built-Up Areas](people-population-community/built-up-areas.html) | Population, house prices, employment, visitor economy for 7 BUAs inside Gateshead | 1.35 MB |
 | **People, population and community** | [Gateshead Deprivation (IMD 2025)](people-population-community/indices-of-deprivation-2025.html) | Indices of Deprivation 2025 — 22 wards & 126 neighbourhoods ranked, domain ranks, social-value targeting matrix | 0.66 MB |
 | **Employment and labour market** | [Employer Skills Survey 2024](employment-labour-market/employer-skills-survey-2024.html) | DfE ESS 2024 — North East vs England's 9 regions: vacancies, skills gaps, training, apprenticeships, future skill needs, AI | 36 KB |
-| **Performance and outcomes** | [Local Outcomes Framework comparator](performance-outcomes/lgof-comparator.html) ⭐ | Gateshead on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) — all 16 outcomes, 112 live metrics assembled from 12 publishers' own releases into 137 series, against six switchable comparator groups. Median, rank, quintile and a CI-based better/worse reading per metric across all 132 English single-tier authorities; ranked comparator charts with confidence whiskers, trends, and a data-currency panel from the quarterly vintage sweep. A comparator, not a performance assessment | 1.05 MB |
+| **Performance and outcomes** | [Local Outcomes Framework comparator](performance-outcomes/lgof-comparator.html) ⭐ | Gateshead on MHCLG's Local Outcomes Framework (first edition, 1 July 2026) — all 16 outcomes, 112 live metrics assembled from 12 publishers' own releases into 137 series, against six switchable comparator groups. Median, rank, quintile and a CI-based better/worse reading per metric across all 132 English single-tier authorities; ranked comparator charts with confidence whiskers, trends, and a data-currency panel from the quarterly edition sweep. A comparator, not a performance assessment | 1.05 MB |
 
 ---
 
@@ -43,7 +44,24 @@ Gateshead's gross value added from 1998 to 2024, built on the ONS balanced GVA r
 | National League | Distribution of real growth across every local authority with data, fastest and slowest, sortable league table |
 | Revisions | This edition against the previous one (published 17 April 2025) for Gateshead and the NEMSA seven |
 
-ONS has suppressed the whole series for 51 of 361 local authorities (all of Wales and parts of South West England and Scotland) while it fixes an error converting to ITL25 geography, and expects to publish the complete dataset within four to six weeks. Seven of Gateshead's twenty economic neighbours are affected. They are shown as suppressed and left out of every rank. The build is `pipelines/gva-2024` (`build_data.py` then `bundle.py`), so the complete dataset drops in by re-running it. Productivity for 2024 is due on 5 November 2026.
+ONS has suppressed the whole series for 51 of 361 local authorities (all of Wales and parts of South West England and Scotland) while it fixes an error converting to ITL25 geography, and expects to publish the complete dataset within four to six weeks. Seven of Gateshead's twenty economic neighbours are affected. They are shown as suppressed and left out of every rank. The build is `pipelines/gva-2024` (`build_data.py` then `bundle.py`), so the complete dataset drops in by re-running it. Productivity for 2024 is in the Productivity 2024 dashboard.
+
+## Economy - Productivity 2024 dashboard
+
+[`economy/productivity-2024.html`](economy/productivity-2024.html)
+
+Gateshead's labour productivity from 2002 to 2024, built on the ONS release Regional and subregional labour productivity, UK: 2024 (24 November 2026). The release adds 2024, revises every earlier year and is the first to constrain local hours and jobs to the ONS component approach to UK labour input, which raises pound levels in almost every year. That is why this is a separate product from the 2023 Productivity & GVA dashboard rather than an update to it.
+
+| Tab | What it shows |
+|---|---|
+| Overview | Headline figures, the UK = 100 index against the NEMSA area and North East region, Gateshead's England rank over time, generated key findings |
+| Narrative | A written account of the release for Gateshead, every number generated from the embedded data |
+| Trends | Explorer with eight measures, four comparator groups, a group median and any UK authority added by name, plus labour input and hours per job |
+| Growth | Growth by period for any measure and comparator group, a real growth decomposition (GVA, hours, output per hour) and the indicative real series |
+| Rankings | Distribution across English authorities, English combined authorities, and a filterable, sortable league table of every UK authority |
+| Revisions | This edition against the previous one (19 June 2025) for Gateshead, the wider North East and the statistical neighbours |
+
+Local authority figures are published current price and smoothed only. Real growth for local authorities is our indicative calculation (chained volume GVA from the complete September 2026 regional accounts over published hours) and is labelled as such everywhere. The build is `pipelines/productivity-2024` (`build_data.py` then `bundle.py`).
 
 ## Economy — Productivity & GVA dashboard
 
@@ -77,7 +95,7 @@ Interactive dashboard of **Gateshead's productivity and gross value added**, bui
 
 ### Designed for the 2024 update
 
-GVA and productivity currently run to **2023**; ONS refreshes balanced GVA (spring) and subregional productivity (summer) annually, so 2024 is expected mid-2026. BRES already runs to **2024** and UKBC to **2025**. Every chart reads its latest year from the embedded data and the narrative text is generated from it, so a new vintage drops in by re-running the build — no design changes.
+GVA and productivity currently run to **2023**; ONS refreshes balanced GVA (spring) and subregional productivity (summer) annually, so 2024 is expected mid-2026. BRES already runs to **2024** and UKBC to **2025**. Every chart reads its latest year from the embedded data and the narrative text is generated from it, so a new edition drops in by re-running the build — no design changes.
 
 ### Notes & caveats
 

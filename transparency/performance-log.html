@@ -64,7 +64,7 @@
 <main class="tp-wrap">
 <p class="tp-kicker">Transparency</p>
 <h1>Performance Log</h1>
-<p class="tp-byline">Last updated 23 November 2026</p>
+<p class="tp-byline">Last updated 24 November 2026</p>
 <p class="tp-lede">Every material error found in our work, how it was found and what changed as a result. Errors caught before publication sit alongside those that reached a published product, because our checks are only worth something if we can show what they catch.</p>
 
 <h2>How the Log Works</h2>
@@ -82,18 +82,62 @@
 <div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>Since</th><th>Reason</th><th>Status</th></tr></thead><tbody><tr><td>Production</td><td>24 October 2026</td><td>Repeat entries of the same kind within 90 days: Code or reference (E-2026-21, 22), Unsupported claim (E-2026-19, 23, 26, 27, 28, 32, 34, 36), Completeness (E-2026-20, 30, 31, 35), Source or edition (E-2026-24, 37). The threshold was first met on 24 October 2026 and recorded late, on 30 October 2026</td><td>Active</td></tr></tbody></table></div>
 <h2>Summary</h2>
 <div class="tp-tiles">
-<div><b>91</b><span>errors logged</span></div>
+<div><b>95</b><span>errors logged</span></div>
 <div><b>11</b><span>reached a published product</span></div>
 <div><b>21</b><span>reached the site owner and stopped there</span></div>
-<div><b>59</b><span>caught by our own checks first</span></div>
+<div><b>63</b><span>caught by our own checks first</span></div>
 <div><b>1</b><span>still open</span></div>
 </div>
 
 <h3>Errors by Function</h3>
-<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>2</td><td>2</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>4</td><td>14</td><td>54</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
+<div class="tp-scroll"><table class="tp-table"><thead><tr><th>Function</th><th>What it does</th><th>Published</th><th>Draft</th><th>Caught by checks</th></tr></thead><tbody><tr><td>Manager</td><td>Plans the work, routes it and holds the rules</td><td>0</td><td>2</td><td>0</td></tr><tr><td>Data and analysis</td><td>Pulls official data, benchmarks, models and forecasts</td><td>3</td><td>2</td><td>3</td></tr><tr><td>Scanning</td><td>Sweeps data releases, policy changes and forward dates</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Policy</td><td>Interprets policy and writes the policy products</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Production</td><td>Drafts documents, dashboards and slides</td><td>4</td><td>14</td><td>57</td></tr><tr><td>Not recorded</td><td>The record at the time did not say which function produced it</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
 
 <h2>Entries</h2>
 <p>Newest first. Entries found before 16 October 2026 were reconstructed from our working records when the log started, so they are as complete as those records allow. Probation counts errors from 16 October 2026 onward.</p>
+<article class="tp-entry caught" id="E-2026-95">
+<div class="meta"><b>E-2026-95</b><span>Found 24 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Gateshead Productivity 2024 dashboard</h3>
+<dl>
+<dt>What</dt><dd>Left out the ONS caveat that its hours measure is transitional, the per job change since 2019, Gateshead's slowest cash growth of the NEMSA seven and its second-largest index fall in the North East, the pharmaceutical allocation caveat, and tied ranks</dd>
+<dt>Kind</dt><dd>Completeness</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>All added. Ranks now share a place on ties</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-94">
+<div class="meta"><b>E-2026-94</b><span>Found 24 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Gateshead Productivity 2024 dashboard</h3>
+<dl>
+<dt>What</dt><dd>About tab said the build checks the real method against the published NEMSA series, but the check was only a printout in an analysis script</dd>
+<dt>Kind</dt><dd>Process</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Assert added to build_data.py (largest gap 0.38 index points), with a note that it does not test one authority's volatility</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-93">
+<div class="meta"><b>E-2026-93</b><span>Found 24 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Gateshead Productivity 2024 dashboard</h3>
+<dl>
+<dt>What</dt><dd>Said the component approach lifts pound levels in every year (false for 2007), called 15 coded combined authority areas all of England's (London not published as one), and said neighbours 'started in a similar position'</dd>
+<dt>Kind</dt><dd>Unsupported claim</dd>
+<dt>Function</dt><dd>Production</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Reworded to almost every year, the coded areas with London noted, and economies similar to Gateshead's</dd>
+</dl>
+</article>
+<article class="tp-entry caught" id="E-2026-92">
+<div class="meta"><b>E-2026-92</b><span>Found 24 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
+<h3>Gateshead Productivity 2024 dashboard</h3>
+<dl>
+<dt>What</dt><dd>Headlined an indicative real output per hour fall of 4.4% since 2019 (KPI, ranks and conclusion) when the unsmoothed series swings with the base year: from 2018 it is a rise of 7.1%</dd>
+<dt>Kind</dt><dd>Unsupported claim</dd>
+<dt>Function</dt><dd>Data and analysis</dd>
+<dt>Found by</dt><dd>Verification</dd>
+<dt>What changed</dt><dd>Real KPI and ranks withdrawn. The narrative and charts now show both base years and say real change cannot be measured reliably</dd>
+</dl>
+</article>
 <article class="tp-entry caught" id="E-2026-91">
 <div class="meta"><b>E-2026-91</b><span>Found 23 November 2026</span><span class="tp-tag caught">Caught by checks</span><span class="tp-tag closed">Closed</span></div>
 <h3>What's New, 23 November 2026</h3>

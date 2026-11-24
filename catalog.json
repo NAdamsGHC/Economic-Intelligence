@@ -1,6 +1,6 @@
 {
  "site": "https://nadamsghc.github.io/Economic-Intelligence",
- "updated": "23 November 2026",
+ "updated": "24 November 2026",
  "schedule": {
   "updated": "9 November 2026",
   "months": [
@@ -1488,7 +1488,7 @@
    "title": "Gateshead GVA 2024",
    "path": "economy/gva-2024.html",
    "topic": "Economy",
-   "description": "Gateshead's gross value added from 1998 to 2024, built on the ONS balanced GVA release of 23 September 2026, which adds 2024 and revises every earlier year. Gateshead's GVA at current basic prices for 2024 is £5,221m. Real GVA grew around 0.7% in 2024 and is around 4.2% below its 2019 level, against around 4.5% above for the UK. Covers cash and real growth, industry structure, the NEMSA seven, the ONS economic statistical neighbours, a league table of every local authority with data and what the revisions changed. ONS has suppressed 51 local authorities, including seven of Gateshead's twenty neighbours, while it fixes a geography error. Productivity for 2024 follows on 5 November 2026.",
+   "description": "Gateshead's gross value added from 1998 to 2024, built on the ONS balanced GVA release of 23 September 2026, which adds 2024 and revises every earlier year. Gateshead's GVA at current basic prices for 2024 is £5,221m. Real GVA grew around 0.7% in 2024 and is around 4.2% below its 2019 level, against around 4.5% above for the UK. Covers cash and real growth, industry structure, the NEMSA seven, the ONS economic statistical neighbours, a league table of every local authority with data and what the revisions changed. ONS has suppressed 51 local authorities, including seven of Gateshead's twenty neighbours, while it fixes a geography error. Productivity for 2024 is in the Gateshead Productivity 2024 dashboard.",
    "sources": "ONS balanced GVA and regional GDP, 23 September 2026 · NOMIS BRES and UK Business Counts",
    "keywords": [
     "gva",
@@ -1509,11 +1509,38 @@
    "pinned": false
   },
   {
+   "id": "productivity-2024",
+   "title": "Gateshead Productivity 2024",
+   "path": "economy/productivity-2024.html",
+   "topic": "Economy",
+   "description": "Gateshead's output per hour and per job from 2002 to 2024, built on the ONS subregional productivity release of 24 November 2026, which adds 2024 and revises every earlier year. Gateshead's GVA per hour worked (current price, smoothed) for 2024 is £35.91, an index of 75.34 against the UK, ranking 261st of 295 English local authorities. Covers trends, growth, rankings and revisions against the NEMSA seven, the wider North East and the ONS economic statistical neighbours, with filters, a league table of every authority and a written narrative. Real growth for local authorities is our indicative calculation, because ONS does not publish it.",
+   "sources": "ONS subregional and regional labour productivity, 24 November 2026 · ONS balanced GVA, 23 September 2026",
+   "keywords": [
+    "productivity",
+    "gva per hour",
+    "output per hour",
+    "gva per job",
+    "output per job",
+    "2024",
+    "economy",
+    "hours worked",
+    "rankings",
+    "nemsa",
+    "north east",
+    "tees valley",
+    "statistical neighbours",
+    "revisions",
+    "component approach",
+    "labour productivity"
+   ],
+   "pinned": false
+  },
+  {
    "id": "productivity",
    "title": "Gateshead Productivity & GVA",
    "path": "economy/productivity.html",
    "topic": "Economy",
-   "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Runs on the previous ONS edition (data to 2023). GVA for 2024 is in the Gateshead GVA 2024 dashboard, and productivity for 2024 is due on 5 November 2026.",
+   "description": "The borough's £5bn economy — GVA in current prices and real terms, output per hour and per job, sectoral structure and concentration risk. Benchmarked against the North East, the UK and Gateshead's ONS economic statistical neighbours, with NOMIS business and employment counts. Runs on the previous ONS edition (data to 2023). GVA for 2024 is in the Gateshead GVA 2024 dashboard, and productivity for 2024 is in the Gateshead Productivity 2024 dashboard.",
    "sources": "ONS balanced GVA & subregional productivity · NOMIS",
    "keywords": [
     "gva",

@@ -8,9 +8,10 @@ This note applies the **Aqua Book (2025)** framework — proportionate quality a
 - [`economy/gdhi.html`](economy/gdhi.html) — GDHI per head benchmarking, 1997–2023, and the small-area GDHI explorer, 2010–2023 (the per-head benchmarking previously sat in a separate `gdhi-per-head.html`, merged into this product in July 2026)
 - [`economy/productivity.html`](economy/productivity.html) — GVA and productivity position, 1998–2023, with the statistical-neighbour scorecard and UK league table
 - [`economy/gva-2024.html`](economy/gva-2024.html) - GVA position, 1998–2024, on the 23 September 2026 edition, with NEMSA and statistical-neighbour benchmarking, a league table and a revisions comparison (added 24 September 2026)
+- [`economy/productivity-2024.html`](economy/productivity-2024.html) - productivity position, 2002–2024, on the 24 November 2026 edition, with NEMSA, wider North East and statistical-neighbour benchmarking, rankings, revisions and a narrative (added 24 November 2026)
 - [`performance-outcomes/lgof-comparator.html`](performance-outcomes/lgof-comparator.html) — Gateshead's position on MHCLG's Local Outcomes Framework (first edition, 1 July 2026), 112 live metrics rendered as 137 series against six comparator groups (added 30 July 2026)
 
-Last updated: 30 July 2026.
+Last updated: 24 November 2026.
 
 ---
 
@@ -75,6 +76,17 @@ The Business Map and its assumptions C1 to C9 were withdrawn from the site on 16
 | D1 | GVA and productivity series quoted **exactly as published** by ONS — regional GVA (balanced) by industry for local authorities (April 2025 release, data to 2023) and subregional productivity by local authority district (19 June 2025 release, data to 2023). No re-derivation where an official figure exists. | Next vintages: LAD GVA 2024 around September 2026, subregional productivity 2024 on 5 November 2026, both with back-series revisions — rebuild, don't append. |
 | D2 | The **business base total is the published UKBC figure** (5,580 enterprises, 2025), not the sum of the disclosure-rounded size bands (5,575). Size-band shares are computed on the band sum, so they remain internally consistent. | Corrected 28 July 2026; the difference is disclosure rounding, not error. |
 | D3 | The statistical-neighbour scorecard resolves **all 20 economic neighbours**, including Barnsley (E08000016) and Newry, Mourne and Down (N09000010), both added from source on 28 July 2026 after the July verification pass found Barnsley carried a non-existent code (E08000038) and Newry missing from the areas dictionary. | Newry's 2023 per-job and jobs values are suppressed at source; the series ends 2022 for those two measures and the table shows the last published value. |
+
+### Productivity 2024 dashboard (added 24 November 2026)
+
+| # | Assumption / judgement | Basis and risk |
+|---|---|---|
+| P1 | Output per hour, output per job, index values, hours and jobs quoted **exactly as published** by ONS in the 24 November 2026 edition. Ranks, growth rates, medians, hours per job, revisions and the value of the gap are our calculations and are labelled as such. | These are official statistics in development. ONS says revisions are typically largest for the previous year, because of new input data. |
+| P2 | **Indicative real output per hour** for local authorities divides chained volume GVA (2023 money value, complete September 2026 regional accounts) by published productivity hours. It is unsmoothed, so it carries **no headline, KPI or rank**. It appears only on the Growth tab and in the Narrative with both a 2018 and a 2019 base. | ONS does not publish real terms productivity for local authorities because the data are too volatile. Gateshead shows why: its real GVA jumped around 7% in 2019 and fell back in 2020, so its real output per hour fell around 4.4% from a 2019 base but rose around 7.1% from 2018 (UK 4.3% and 4.8%). The pre-publish check caught a headline built on the 2019 base, and it was withdrawn. The build asserts that the method, applied to the seven NEMSA councils together, tracks the published NEMSA chained volume series to within half an index point in every year (largest gap 0.38). That check is on seven councils together, so it does not test one authority's volatility. |
+| P3 | **NEMSA is the published combined authority row** (E47000014, labelled "North East" by ONS), not a sum or average of councils. | The build checks the seven councils' hours add to the published NEMSA hours in every year. |
+| P4 | **Ranks are out of authorities with published figures**: 295 in England and 360 in the UK (the Isles of Scilly are not published). Northern Ireland has no 2024 per job figure at local level. | Denominators are printed with every rank. |
+| P5 | **No error bars**. ONS publishes no confidence intervals for these modelled estimates. | Stated on every chart note and in the caveats, with the advice not to read small differences between areas. |
+| P6 | **Editions are never mixed.** The previous edition appears only on the Revisions tab. | The component approach lifted pound levels by around 10% for Gateshead in 2023, so earlier products quoting £32.16 are on the previous edition. |
 
 ### GVA 2024 dashboard (added 24 September 2026)
 
